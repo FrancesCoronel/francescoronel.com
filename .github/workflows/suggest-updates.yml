@@ -1,0 +1,45 @@
+name: Suggest Page Updates
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/blog/**"
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "Number of days to look back"
+        default: "90"
+
+jobs:
+  suggest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Analyze recent posts
+        run: |
+          node scripts/suggest-page-updates.js --days ${{ github.event.inputs.days || '90' }}
+
+      - name: Create issue with suggestions
+        if: hashFiles('page-update-suggestions.md') != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          REPORT=$(cat page-update-suggestions.md)
+          # Only create issue if there are actual suggestions
+          if echo "$REPORT" | grep -q "##"; then
+            gh issue create \
+              --title "📋 Page update suggestions ($(date +%Y-%m-%d))" \
+              --body "$REPORT" \
+              --label "content,automated"
+          fi

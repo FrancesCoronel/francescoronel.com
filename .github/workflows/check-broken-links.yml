@@ -1,0 +1,26 @@
+name: Check Broken Links
+
+on:
+  pull_request:
+    paths:
+      - "content/**"
+      - "app/**"
+  push:
+    branches: [main]
+    paths:
+      - "content/**"
+  workflow_dispatch:
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check for broken links
+        run: node scripts/check-broken-links.js

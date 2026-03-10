@@ -32,6 +32,17 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.local.example
+
+# WordPress export
+scripts/wordpress-export.xml
+
+# pagefind (regenerated at build time)
+/public/pagefind
+
+# lighthouse reports
+lighthouse-report.html
+.lighthouseci
 
 # vercel
 .vercel
@@ -39,3 +50,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated reports
+page-update-suggestions.md
+
+*storybook.log
+storybook-static

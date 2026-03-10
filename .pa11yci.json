@@ -1,0 +1,18 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "timeout": 10000,
+    "wait": 1000
+  },
+  "urls": [
+    "http://localhost:3000/",
+    "http://localhost:3000/about",
+    "http://localhost:3000/blog",
+    "http://localhost:3000/contact",
+    "http://localhost:3000/speaking",
+    "http://localhost:3000/mentoring",
+    "http://localhost:3000/testimonials",
+    "http://localhost:3000/organizations",
+    "http://localhost:3000/organizations/slack"
+  ]
+}

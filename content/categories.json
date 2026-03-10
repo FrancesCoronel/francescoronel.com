@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Awards",
+    "slug": "awards",
+    "color": "#efb920",
+    "fontColor": "#202020",
+    "emoji": "🎉",
+    "image": "/images/categories/awards.png",
+    "description": ""
+  },
+  {
+    "name": "Blog",
+    "slug": "blog",
+    "color": "#efb920",
+    "fontColor": "#202020",
+    "emoji": "💡",
+    "image": "/images/categories/blog.png",
+    "description": ""
+  },
+  {
+    "name": "Education",
+    "slug": "education",
+    "color": "#365c71",
+    "fontColor": "#ffffff",
+    "emoji": "🎓",
+    "image": "/images/categories/education.png",
+    "description": ""
+  },
+  {
+    "name": "Events",
+    "slug": "events",
+    "color": "#365c71",
+    "fontColor": "#ffffff",
+    "emoji": "📍",
+    "image": "/images/categories/events.png",
+    "description": ""
+  },
+  {
+    "name": "Experience",
+    "slug": "experience",
+    "color": "#9e2b25",
+    "fontColor": "#ffffff",
+    "emoji": "💻",
+    "image": "/images/categories/experience.png",
+    "description": ""
+  },
+  {
+    "name": "Freelancing",
+    "slug": "freelancing",
+    "color": "#365c71",
+    "fontColor": "#ffffff",
+    "emoji": "👍",
+    "image": "/images/categories/freelancing.png",
+    "description": ""
+  },
+  {
+    "name": "Mentoring",
+    "slug": "mentoring",
+    "color": "#0d6445",
+    "fontColor": "#ffffff",
+    "emoji": "👏",
+    "image": "/images/categories/mentoring.png",
+    "description": ""
+  },
+  {
+    "name": "Newsletter",
+    "slug": "newsletter",
+    "color": "#655269",
+    "fontColor": "#ffffff",
+    "emoji": "📮",
+    "image": "/images/categories/newsletter.png",
+    "description": ""
+  },
+  {
+    "name": "Philanthrophy",
+    "slug": "philanthrophy",
+    "color": "#442b48",
+    "fontColor": "#ffffff",
+    "emoji": "💛",
+    "image": "/images/categories/philanthropy.png",
+    "description": ""
+  },
+  {
+    "name": "Podcast",
+    "slug": "podcast",
+    "color": "#442b48",
+    "fontColor": "#ffffff",
+    "emoji": "👑",
+    "image": "/images/categories/podcast.png",
+    "description": ""
+  },
+  {
+    "name": "Portfolio",
+    "slug": "portfolio",
+    "color": "#dacec8",
+    "fontColor": "#202020",
+    "emoji": "🛠️",
+    "image": "/images/categories/portfolio.png",
+    "description": ""
+  },
+  {
+    "name": "Press",
+    "slug": "press",
+    "color": "#1d6076",
+    "fontColor": "#ffffff",
+    "emoji": "📰",
+    "image": "/images/categories/press.png",
+    "description": ""
+  },
+  {
+    "name": "Programs",
+    "slug": "programs",
+    "color": "#efb920",
+    "fontColor": "#202020",
+    "emoji": "🌱",
+    "image": "/images/categories/programs.png",
+    "description": ""
+  },
+  {
+    "name": "Speaking",
+    "slug": "speaking",
+    "color": "#1d6076",
+    "fontColor": "#ffffff",
+    "emoji": "📣",
+    "image": "/images/categories/speaking.png",
+    "description": ""
+  }
+]

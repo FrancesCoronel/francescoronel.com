@@ -1,0 +1,132 @@
+---
+title: "Skills Report Redesign"
+slug: "skills-report-redesign"
+date: "2022-08-02"
+excerpt: "I redesigned the Skills Report which is a crucial Byteboard artifact used by clients to make decisions about their candidates."
+featuredImage: "/images/organizations/byteboard.png"
+categories: ["portfolio"]
+tags: ["byteboard","design-systems","react","typescript"]
+organizations: ["byteboard", "asana"]
+skills: []
+source: "wordpress"
+---
+
+April 26 to August 2 (roughly 3 months)
+
+This was my first major project at Byteboard after joining on February 22, so I had a lot to learn!
+
+I led the charge of redesigning the Skills Report from scratch. Most of the code had not been touched for nearly 4 years.
+
+I also updated the design system for the client platform in tandem.
+
+Managed project timeline and milestones using Asana.
+
+Technologies used: React, Firebase, TypeScript, MUI.
+
+- [Background](https://fvcproductions39789812.wordpress.com/2022/08/02/skills-report-redesign/#h-background)
+- [Preview](https://fvcproductions39789812.wordpress.com/2022/08/02/skills-report-redesign/#preview)
+- [Feedback](https://fvcproductions39789812.wordpress.com/2022/08/02/skills-report-redesign/#h-feedback)
+- [Understanding the Skills Report](https://fvcproductions39789812.wordpress.com/2022/08/02/skills-report-redesign/#understanding-the-skills-report)
+[Summary Section](https://fvcproductions39789812.wordpress.com/2022/08/02/skills-report-redesign/#summary-section)- [Design Exercise (Part 1) Summary](https://fvcproductions39789812.wordpress.com/2022/08/02/skills-report-redesign/#design-exercise-part-1-summary)- [Code Implementation (Part 2) Summary](https://fvcproductions39789812.wordpress.com/2022/08/02/skills-report-redesign/#code-implementation-part-2-summary)- [Other Key Features](https://fvcproductions39789812.wordpress.com/2022/08/02/skills-report-redesign/#other-key-features)
+- [Email Launch](https://fvcproductions39789812.wordpress.com/2022/08/02/skills-report-redesign/#h-email-launch)
+
+## Background
+
+This long-awaited launch came after many months of incorporating helpful feedback from our clients, which generated the following goals we used in the process:
+
+- **Increased transparency** into Byteboard's evaluation system, including more detail about how specific skills are assessed
+
+- Provide more insightful **highlights of candidate behaviors**, especially to help inform decisions about candidates that require 'More Review'
+
+- **Improve readability** of the report, with an updated Skills Map and cleaner, more organized grader notes
+
+This update is part of our ongoing goal to provide accurate and actionable recommendations about candidates.
+
+## Preview
+
+![](/images/wp-uploads/327b1-screenshot-2022-11-15-at-12.11.25-am.png?w=1024&h=573)
+
+![](/images/wp-uploads/7a180-Byteboard-design-system.png?w=1024&h=640)
+
+![](/images/wp-uploads/c4e57-Byteboard-local.png?w=1024&h=574)
+
+![](/images/wp-uploads/5f387-skills-report-redesign-walkthrough.gif?w=1024&h=751)
+
+![](/images/wp-uploads/ebdc0-evolution-skills-report-redesign.jpg?w=1024&h=882)
+
+![](/images/wp-uploads/37429-Byteboard-client-portal-redacted_dot_app.png?w=1024&h=579)
+
+![](/images/wp-uploads/e9e62-skills_report_new_layout_photo-1024x695-1.jpg)
+
+![](/images/wp-uploads/7aeee-skills-map.png?w=1024&h=643)
+
+![](/images/wp-uploads/974e0-design-exericse.png?w=1024&h=434)
+
+![](/images/wp-uploads/766cf-coding-exercise.png?w=1024&h=456)
+
+## Feedback
+
+> 
+Huge congrats to everyone who worked on or helped out with the skills report redesign - after a monumental effort, this change is now live to all our customers! 
+
+This was a long-planned improvement to our product that significantly improves usability of the skills report as well as matures our code and design practices around design systems, visual consistency, and mobile friendliness. 
+
+> 
+The new report scorecard is *so* much better. Thank you for the work here, it makes my job much easier.
+
+> 
+[Client Redacted] loves the new SR (Skills Report) format and the Skills Map especially as a supplement to identify interview focus areas for their other interview stage.
+
+## Understanding the Skills Report
+
+The skills report is the primary resource we provide you that describes a candidates’ performance on the Byteboard Interview.
+
+It contains three sections:
+
+- **Summary:** The summary provides a high-level overview of the candidate’s performance, including the Skills Map featured above.
+
+- **Design Exercise (Part 1) Summary:** Provides detail on how the candidate performed on the first part of the interview, which is a simulated technical design document where candidates reply to comments from coworkers and provide their recommendation on technical questions.
+
+- **Code Implementation (Part 2) Summary:** Provides detail on how the candidate performed on the second part of the interview, where they begin implementing, in code, the project they discussed in the first part.
+
+The Skills Report is generated using structured evaluation rubrics and feedback from trained Byteboard Graders who review a candidate’s work. 
+
+### Summary Section
+
+The primary feature of the Summary section is the **Byteboard Recommendation**. 
+
+Byteboard makes Recommendations at three levels:
+
+- **Strong** candidates are those that we recommend moving forward with and continuing to interview.
+
+- **Poor** candidates are those we recommend no longer continuing to interview.
+
+- **More Review** candidates are those that we recommend that your team takes a closer look at to determine next steps. Over time, as we calibrate your Byteboard recommendations, you'll usually see fewer candidates marked as More Review.
+
+The **Skills Map** is our presentation of the candidate’s performance on necessary engineering skills, which are grouped into the six categories.
+
+### Design Exercise (Part 1) Summary
+
+The Design Exercise (Part 1) Summary offers additional detail about a candidate's’ performance on the first part of the interview. 
+
+At the top you can see **Key Takeaways** that affect the candidate’s overall recommendation and scores pertaining to following sections of the exercise:
+
+- **Conclusion**: The recommendation that the candidate makes for the technical decision in question.
+
+- **Communication and Sense of Collaboration:** The overall communication skills demonstrated by the candidate throughout the Design Exercise, including tone and asking questions of colleagues.
+
+- **Domain-Specific Knowledge:** Highlights the areas specific to the type of interview that the candidate was assigned (e.g., Software Engineering, Mobile Engineering).
+
+### Code Implementation (Part 2) Summary
+
+The Code Implementation (Part 2) Summary offers a similar structure of feedback to the Part 1 summary. **Key Takeaways** provide insight into the performance on each task candidates are asked to complete. 
+
+These takeaways focus on the items that affect the overall scores, such as how much progress the candidate made and the correctness of their solution.
+
+### Other Key Features
+
+By default, the Skills Report is anonymized to reduce opportunities for bias and there is minimal information about this candidate’s specific interview process included. 
+
+## Email Launch
+
+[https://mailchi.mp/byteboard/its-finally-here-Byteboard-skills-report-updates-for-your-team?e=c7bb91c995](https://mailchi.mp/byteboard/its-finally-here-Byteboard-skills-report-updates-for-your-team?e=c7bb91c995)

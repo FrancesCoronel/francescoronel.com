@@ -1,0 +1,1212 @@
+[
+  {
+    "source": "/blog/eye-on-ai",
+    "destination": "/blog/1-on-a1",
+    "permanent": true
+  },
+  {
+    "source": "/blog/goldman-sachs-business-challenge",
+    "destination": "/blog/10000-small-businesses-student-challenge-winner",
+    "permanent": true
+  },
+  {
+    "source": "/blog/80-20-software-consulting",
+    "destination": "/blog/8020-software-consulting",
+    "permanent": true
+  },
+  {
+    "source": "/blog/fullstack-future",
+    "destination": "/blog/a-fullstack-future",
+    "permanent": true
+  },
+  {
+    "source": "/blog/ai-intl-map",
+    "destination": "/blog/a-i-international-google-map",
+    "permanent": true
+  },
+  {
+    "source": "/blog/ai-movies",
+    "destination": "/blog/a-i-movies",
+    "permanent": true
+  },
+  {
+    "source": "/blog/a-little-poetry-never-hurt-anyone",
+    "destination": "/blog/desiring-the-casual",
+    "permanent": true
+  },
+  {
+    "source": "/blog/a-vegas-tale-2",
+    "destination": "/blog/a-vegas-tale",
+    "permanent": true
+  },
+  {
+    "source": "/blog/aaai-2015-month-left",
+    "destination": "/blog/aaai-2015-winter-conference-a-month-left",
+    "permanent": true
+  },
+  {
+    "source": "/blog/abc7-news",
+    "destination": "/blog/abc7-news-latino-heritage-month",
+    "permanent": true
+  },
+  {
+    "source": "/blog/typescript-101-studio-session",
+    "destination": "/blog/accenture-liquid-studio-session",
+    "permanent": true
+  },
+  {
+    "source": "/blog/accenture-swe",
+    "destination": "/blog/accenture-liquid-studio",
+    "permanent": true
+  },
+  {
+    "source": "/blog/design-inc",
+    "destination": "/blog/accepted-to-design-inc",
+    "permanent": true
+  },
+  {
+    "source": "/blog/damehood-through-hollow-knight",
+    "destination": "/blog/achieving-dame-hood-through-hollow-knight",
+    "permanent": true
+  },
+  {
+    "source": "/blog/acm",
+    "destination": "/blog/acmhu",
+    "permanent": true
+  },
+  {
+    "source": "/blog/granny-told-me",
+    "destination": "/blog/ah-life",
+    "permanent": true
+  },
+  {
+    "source": "/blog/ai-internships",
+    "destination": "/blog/undergrad-a-i-internships",
+    "permanent": true
+  },
+  {
+    "source": "/blog/alexa-hackathon",
+    "destination": "/blog/amazon-alexa-hackathon",
+    "permanent": true
+  },
+  {
+    "source": "/blog/alterconf",
+    "destination": "/blog/alterconf-nyc",
+    "permanent": true
+  },
+  {
+    "source": "/blog/alter-conf",
+    "destination": "/blog/alterconf-nyc",
+    "permanent": true
+  },
+  {
+    "source": "/blog/alternative-cs-programs",
+    "destination": "/blog/alternative-programs-to-a-cs-degree",
+    "permanent": true
+  },
+  {
+    "source": "/blog/alumni-society",
+    "destination": "/blog/alumni-society-member-spotlight",
+    "permanent": true
+  },
+  {
+    "source": "/blog/amplify-newsletter",
+    "destination": "/blog/amplify-issue-10",
+    "permanent": true
+  },
+  {
+    "source": "/blog/intro-for-cs-majors",
+    "destination": "/blog/an-intro-for-cs-majors",
+    "permanent": true
+  },
+  {
+    "source": "/blog/annelise-thorsen",
+    "destination": "/blog/undisclosed-female",
+    "permanent": true
+  },
+  {
+    "source": "/blog/new-medium-blog",
+    "destination": "/blog/announcing-my-new-medium-blog",
+    "permanent": true
+  },
+  {
+    "source": "/blog/applaud-her",
+    "destination": "/blog/women-who-code-newsletter-code-review",
+    "permanent": true
+  },
+  {
+    "source": "/blog/apprenticeships-me",
+    "destination": "/blog/apprenticeships-me-revamped-design",
+    "permanent": true
+  },
+  {
+    "source": "/blog/cornell-tech-hci-and-design",
+    "destination": "/blog/assignment-3-hci-design-cornell-tech",
+    "permanent": true
+  },
+  {
+    "source": "/blog/awesome-web-dev-tips-fullstack-academy",
+    "destination": "/blog/fullstack-academy-awesome-web-dev-tips-tricks",
+    "permanent": true
+  },
+  {
+    "source": "/blog/become-a-tech-queen",
+    "destination": "/blog/become-a-tech-queen-deprecated-march-2020",
+    "permanent": true
+  },
+  {
+    "source": "/blog/best-20-pick-up-lines",
+    "destination": "/blog/the-best-20-pick-up-lines",
+    "permanent": true
+  },
+  {
+    "source": "/blog/black-apple",
+    "destination": "/blog/the-black-apple",
+    "permanent": true
+  },
+  {
+    "source": "/blog/blue-and-gray",
+    "destination": "/blog/blue-and-gray-blue-and-gray",
+    "permanent": true
+  },
+  {
+    "source": "/blog/bootcamp-me",
+    "destination": "/blog/bootcampme-program",
+    "permanent": true
+  },
+  {
+    "source": "/blog/treehouse-breakfast",
+    "destination": "/blog/breakfast-with-friends",
+    "permanent": true
+  },
+  {
+    "source": "/blog/career-path",
+    "destination": "/blog/breaking-into-tech",
+    "permanent": true
+  },
+  {
+    "source": "/blog/brief-thoughts-best-bootcamps-switchup",
+    "destination": "/blog/brief-thoughts-on-switchups-best-bootcamps-list",
+    "permanent": true
+  },
+  {
+    "source": "/blog/business-card",
+    "destination": "/blog/leh-business-card",
+    "permanent": true
+  },
+  {
+    "source": "/blog/c-plus-plus-bits-array-manipulation",
+    "destination": "/blog/c-bits-array-manipulation",
+    "permanent": true
+  },
+  {
+    "source": "/blog/c-plus-plus-bits-clothing-sizes",
+    "destination": "/blog/c-bits-clothing-sizes",
+    "permanent": true
+  },
+  {
+    "source": "/blog/c-plus-plus-bits-solid-geometry",
+    "destination": "/blog/c-bits-solid-geometry",
+    "permanent": true
+  },
+  {
+    "source": "/blog/c-plus-plus-bits-time-measurements",
+    "destination": "/blog/c-bits-time-measurements",
+    "permanent": true
+  },
+  {
+    "source": "/blog/capwic",
+    "destination": "/blog/capital-region-women-in-computing-conference",
+    "permanent": true
+  },
+  {
+    "source": "/blog/itunes-music-february-2015",
+    "destination": "/blog/cataloging-my-itunes-music",
+    "permanent": true
+  },
+  {
+    "source": "/blog/cause-a-scene-conference",
+    "destination": "/blog/causeascene-conf-san-francisco",
+    "permanent": true
+  },
+  {
+    "source": "/blog/change-your-icons-yosemite",
+    "destination": "/blog/change-your-icons-on-yosemite-with-scripting",
+    "permanent": true
+  },
+  {
+    "source": "/blog/chrome-dev-summit",
+    "destination": "/blog/chrome-dev-summit-2017",
+    "permanent": true
+  },
+  {
+    "source": "/blog/chrome-material-theme",
+    "destination": "/blog/chrome-theme-materialize",
+    "permanent": true
+  },
+  {
+    "source": "/blog/code-2040.md",
+    "destination": "/blog/code2040",
+    "permanent": true
+  },
+  {
+    "source": "/blog/code-like-a-girl",
+    "destination": "/blog/code-like-a-girl-q-how-can-i-get-paid-to-mentor-others",
+    "permanent": true
+  },
+  {
+    "source": "/blog/code-now",
+    "destination": "/blog/codenow",
+    "permanent": true
+  },
+  {
+    "source": "/blog/codeland-cfp-reviewer",
+    "destination": "/blog/codeland-2019-programming-committee-member",
+    "permanent": true
+  },
+  {
+    "source": "/blog/codenewbie-podcast",
+    "destination": "/blog/codenewbie-podcast-what-are-progressive-web-apps",
+    "permanent": true
+  },
+  {
+    "source": "/blog/coding-bootcamps-map",
+    "destination": "/blog/map-of-coding-bootcamps",
+    "permanent": true
+  },
+  {
+    "source": "/blog/coding-interview-tips-and-tricks",
+    "destination": "/blog/job-interview-tips-and-tricks",
+    "permanent": true
+  },
+  {
+    "source": "/blog/interview-with-kim-crayton",
+    "destination": "/blog/community-engineering-report-podcast-interview-with-kim-crayton",
+    "permanent": true
+  },
+  {
+    "source": "/blog/connect-women-who-code",
+    "destination": "/blog/women-who-code-connect",
+    "permanent": true
+  },
+  {
+    "source": "/blog/cornell-tech-connective-media",
+    "destination": "/blog/connective-media",
+    "permanent": true
+  },
+  {
+    "source": "/blog/spotify-to-mp3",
+    "destination": "/blog/convert-a-spotify-playlist-to-mp3-files",
+    "permanent": true
+  },
+  {
+    "source": "/blog/cornell-tech-design-thinking",
+    "destination": "/blog/pathfinder",
+    "permanent": true
+  },
+  {
+    "source": "/blog/cornell-tech-mamabear-launch-plan",
+    "destination": "/blog/mamabear-launch-plan",
+    "permanent": true
+  },
+  {
+    "source": "/blog/cornell-tech-privacy-digital-age",
+    "destination": "/blog/cornell-tech-privacy-in-the-digital-age-sukromia",
+    "permanent": true
+  },
+  {
+    "source": "/blog/cornell-tech-startup-studio",
+    "destination": "/blog/startup-studio",
+    "permanent": true
+  },
+  {
+    "source": "/blog/coro-fellows-program-selection-day",
+    "destination": "/blog/coro-northern-californias-fellows-program-selection-day",
+    "permanent": true
+  },
+  {
+    "source": "/blog/coro-fellows",
+    "destination": "/blog/coro-fellows-tour-with-qa-at-slack",
+    "permanent": true
+  },
+  {
+    "source": "/blog/must-read-bootcamp-blogs",
+    "destination": "/blog/course-report-6-must-read-bootcamp-blogs",
+    "permanent": true
+  },
+  {
+    "source": "/blog/cover-letter-templates",
+    "destination": "/blog/random-cover-letter-templates",
+    "permanent": true
+  },
+  {
+    "source": "/blog/cra-scholarship",
+    "destination": "/blog/scholarship-recipient-cra-women-grad-cohort-workshop",
+    "permanent": true
+  },
+  {
+    "source": "/blog/cs-hu",
+    "destination": "/blog/cshu",
+    "permanent": true
+  },
+  {
+    "source": "/blog/css-conf-eu",
+    "destination": "/blog/cssconf-eu-2019",
+    "permanent": true
+  },
+  {
+    "source": "/blog/daily-co",
+    "destination": "/blog/daily-co-testimonial",
+    "permanent": true
+  },
+  {
+    "source": "/blog/github-user-research-interview",
+    "destination": "/blog/december-focus-group-for-github",
+    "permanent": true
+  },
+  {
+    "source": "/blog/design-hackathon",
+    "destination": "/blog/designhackathon-the-meggs-case",
+    "permanent": true
+  },
+  {
+    "source": "/blog/my-designlab-experience",
+    "destination": "/blog/designlab-2",
+    "permanent": true
+  },
+  {
+    "source": "/blog/diablo-valley-college",
+    "destination": "/blog/diablo-valley-college-tour-with-qa-at-slack",
+    "permanent": true
+  },
+  {
+    "source": "/blog/done-with-school",
+    "destination": "/blog/i-am-done-with-school",
+    "permanent": true
+  },
+  {
+    "source": "/blog/el-capitan----strict--yosemite----strict",
+    "destination": "/blog/el-capitan-strict-yosemite-strict",
+    "permanent": true
+  },
+  {
+    "source": "/blog/el-capitan-is-strict-yosemite-is-not-strict",
+    "destination": "/blog/el-capitan-strict-yosemite-strict",
+    "permanent": true
+  },
+  {
+    "source": "/blog/email-clients-overview",
+    "destination": "/blog/email-clients",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tech-queens-frances-coronel",
+    "destination": "/blog/episode-1-an-introduction",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tech-queens-michell-brito",
+    "destination": "/blog/episode-10-michell-brito",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tech-queens-elena-astilleros",
+    "destination": "/blog/episode-11-elena-astilleros",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tech-queens-jamie-renee-williams",
+    "destination": "/blog/episode-12-jamie-renee-williams",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tech-queens-christina-ou",
+    "destination": "/blog/episode-13-christina-ou",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tech-queens-marciana-davis",
+    "destination": "/blog/episode-14-marciana-davis",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tech-queens-alexis-lucio",
+    "destination": "/blog/episode-15-alexis-lucio",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tech-queens-anisha-jain",
+    "destination": "/blog/episode-2-anisha-jain",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tech-queens-lupita-davila",
+    "destination": "/blog/episode-3-lupita-davila",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tech-queens-ebonne-cabarrus",
+    "destination": "/blog/episode-4-ebonne-cabarrus",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tech-queens-anisha-carter",
+    "destination": "/blog/episode-5-anisha-carter",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tech-queens-helena-jaramillo",
+    "destination": "/blog/episode-6-helena-jaramillo",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tech-queens-faith-chikwekwe",
+    "destination": "/blog/episode-7-faith-chikwekwe",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tech-queens-pia-zaragoza",
+    "destination": "/blog/episode-8-pia-zaragoza",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tech-queens-napiya-nubuya",
+    "destination": "/blog/episode-9-napiya-nubuya",
+    "permanent": true
+  },
+  {
+    "source": "/blog/everyday-apocalypse",
+    "destination": "/blog/your-everyday-apocalypse",
+    "permanent": true
+  },
+  {
+    "source": "/blog/hackny-finalist",
+    "destination": "/blog/finalist-hackny-fellowship-program",
+    "permanent": true
+  },
+  {
+    "source": "/blog/finalist-kpcb",
+    "destination": "/blog/finalist-kpcb-product-fellows-program",
+    "permanent": true
+  },
+  {
+    "source": "/blog/finalist-pennapps",
+    "destination": "/blog/finalist-pennapps-fellows-program",
+    "permanent": true
+  },
+  {
+    "source": "/blog/fluent-conf",
+    "destination": "/blog/fluent-conference",
+    "permanent": true
+  },
+  {
+    "source": "/blog/frances-7",
+    "destination": "/blog/project-prometheus-frances-7",
+    "permanent": true
+  },
+  {
+    "source": "/blog/full-of-them",
+    "destination": "/blog/when-you-realize-the-internet-is-full-of-trolls",
+    "permanent": true
+  },
+  {
+    "source": "/blog/fullstack-academy---blog-post-banners",
+    "destination": "/blog/fullstack-academy-blog-post-banners",
+    "permanent": true
+  },
+  {
+    "source": "/blog/fullstack-academy-3",
+    "destination": "/blog/fullstack-academy-2",
+    "permanent": true
+  },
+  {
+    "source": "/blog/fullstack-academy-ambassador",
+    "destination": "/blog/fullstack-academy-2",
+    "permanent": true
+  },
+  {
+    "source": "/blog/fullstack-academy",
+    "destination": "/blog/fullstack-academy-2",
+    "permanent": true
+  },
+  {
+    "source": "/blog/party-activities",
+    "destination": "/blog/funsies-party-activities-pamphlet",
+    "permanent": true
+  },
+  {
+    "source": "/blog/fvcproductions-logo",
+    "destination": "/blog/fvcproductions-logo-design",
+    "permanent": true
+  },
+  {
+    "source": "/blog/new-logo-fvcproductions",
+    "destination": "/blog/fvcproductions-logo-redesign",
+    "permanent": true
+  },
+  {
+    "source": "/blog/updated-logo",
+    "destination": "/blog/fvcproductions-updated-logo",
+    "permanent": true
+  },
+  {
+    "source": "/blog/game-has-changed",
+    "destination": "/blog/the-game-has-changed",
+    "permanent": true
+  },
+  {
+    "source": "/blog/gdg-devfest-sf",
+    "destination": "/blog/gdg-devfest-sf-2018",
+    "permanent": true
+  },
+  {
+    "source": "/blog/general-assembly-intro-to-coding",
+    "destination": "/blog/intro-to-coding-html-css",
+    "permanent": true
+  },
+  {
+    "source": "/blog/so-you-want-to-be-a-tech-wizard",
+    "destination": "/blog/general-assembly-so-you-want-to-be-a-tech-wizard",
+    "permanent": true
+  },
+  {
+    "source": "/blog/girl-develop-it-2",
+    "destination": "/blog/girl-develop-it",
+    "permanent": true
+  },
+  {
+    "source": "/blog/github-repos-mashup",
+    "destination": "/blog/github-mashup",
+    "permanent": true
+  },
+  {
+    "source": "/blog/giving-back-2",
+    "destination": "/blog/giving-back",
+    "permanent": true
+  },
+  {
+    "source": "/blog/go-beyond-resumes",
+    "destination": "/blog/go-beyond-resumes-live-episode",
+    "permanent": true
+  },
+  {
+    "source": "/blog/women-techmakers-summit",
+    "destination": "/blog/google-women-techmakers-summit",
+    "permanent": true
+  },
+  {
+    "source": "/blog/grad-programs-mba-mscs",
+    "destination": "/blog/mba-mscs-grad-programs",
+    "permanent": true
+  },
+  {
+    "source": "/blog/guessing-game",
+    "destination": "/blog/the-guessing-game",
+    "permanent": true
+  },
+  {
+    "source": "/blog/telegraph-track-hack-reactor",
+    "destination": "/blog/hack-reactor-telegraph-track",
+    "permanent": true
+  },
+  {
+    "source": "/blog/hack-to-help",
+    "destination": "/blog/hack-to-help-hampton-roads",
+    "permanent": true
+  },
+  {
+    "source": "/blog/hack-ysu",
+    "destination": "/blog/hackysu-2017",
+    "permanent": true
+  },
+  {
+    "source": "/blog/hacku",
+    "destination": "/blog/hacku-4",
+    "permanent": true
+  },
+  {
+    "source": "/blog/hu-summer",
+    "destination": "/blog/hampton-university-summer-2011",
+    "permanent": true
+  },
+  {
+    "source": "/blog/hh-event-asana",
+    "destination": "/blog/real-talk-finding-your-voice-in-tech",
+    "permanent": true
+  },
+  {
+    "source": "/blog/old-essays-on-technology",
+    "destination": "/blog/how-texting-has-an-impact-on-relationships",
+    "permanent": true
+  },
+  {
+    "source": "/blog/life-at-home",
+    "destination": "/blog/hoya-hacks-life-at-home",
+    "permanent": true
+  },
+  {
+    "source": "/blog/huge-design",
+    "destination": "/blog/huge-school-application-2017",
+    "permanent": true
+  },
+  {
+    "source": "/blog/hugoma-theme",
+    "destination": "/blog/hugoma",
+    "permanent": true
+  },
+  {
+    "source": "/blog/im-obsessed-with-labs",
+    "destination": "/blog/im-obsessed-with-labs-f3e5b",
+    "permanent": true
+  },
+  {
+    "source": "/blog/obsessed-with-labs",
+    "destination": "/blog/im-obsessed-with-labs-f3e5b",
+    "permanent": true
+  },
+  {
+    "source": "/blog/speaker-training",
+    "destination": "/blog/impact-leadership-communication-program",
+    "permanent": true
+  },
+  {
+    "source": "/blog/nova-hackathon",
+    "destination": "/blog/innovation-hackathon",
+    "permanent": true
+  },
+  {
+    "source": "/blog/inspiration-to-code",
+    "destination": "/blog/what-influenced-and-inspired-you-to-learn-how-to-code",
+    "permanent": true
+  },
+  {
+    "source": "/blog/integrating-school-emails-airmail",
+    "destination": "/blog/integrating-your-school-emails-with-airmail",
+    "permanent": true
+  },
+  {
+    "source": "/blog/interview-bitmaker-labs",
+    "destination": "/blog/interview-with-bitmaker-labs",
+    "permanent": true
+  },
+  {
+    "source": "/blog/interview-coding-dojo",
+    "destination": "/blog/interview-with-coding-dojo",
+    "permanent": true
+  },
+  {
+    "source": "/blog/interview-coding-house",
+    "destination": "/blog/interview-with-coding-house",
+    "permanent": true
+  },
+  {
+    "source": "/blog/interview-devleague",
+    "destination": "/blog/interview-with-devleague",
+    "permanent": true
+  },
+  {
+    "source": "/blog/interview-fullstack-academy",
+    "destination": "/blog/interview-with-fullstack-academy-of-code",
+    "permanent": true
+  },
+  {
+    "source": "/blog/interview-hack-reactor",
+    "destination": "/blog/interview-with-hack-reactor",
+    "permanent": true
+  },
+  {
+    "source": "/blog/interview-maker-square",
+    "destination": "/blog/interview-with-makersquare",
+    "permanent": true
+  },
+  {
+    "source": "/blog/kapor-capital-interview",
+    "destination": "/blog/interview-with-kapor-capital-summer-associate-2017",
+    "permanent": true
+  },
+  {
+    "source": "/blog/op-smile-isce",
+    "destination": "/blog/isce-2011",
+    "permanent": true
+  },
+  {
+    "source": "/blog/op-smile-islc",
+    "destination": "/blog/islc-2013",
+    "permanent": true
+  },
+  {
+    "source": "/blog/jacobs-study-abroad",
+    "destination": "/blog/jacobs-university-bremen-fall-2013",
+    "permanent": true
+  },
+  {
+    "source": "/blog/jamstack-hackathon-app",
+    "destination": "/blog/jamstack-2018-hackathon-application",
+    "permanent": true
+  },
+  {
+    "source": "/blog/java-bits-1",
+    "destination": "/blog/java-bits-getting-started",
+    "permanent": true
+  },
+  {
+    "source": "/blog/jeopardy-template",
+    "destination": "/blog/jeopardy-template-keynote-and-google-slides",
+    "permanent": true
+  },
+  {
+    "source": "/blog/js-conf-eu",
+    "destination": "/blog/jsconf-eu-2019",
+    "permanent": true
+  },
+  {
+    "source": "/blog/july-15",
+    "destination": "/blog/july-15th",
+    "permanent": true
+  },
+  {
+    "source": "/blog/keeping-track-of-tv-shows",
+    "destination": "/blog/tv-shows",
+    "permanent": true
+  },
+  {
+    "source": "/blog/last-mile",
+    "destination": "/blog/the-next-chapter",
+    "permanent": true
+  },
+  {
+    "source": "/blog/latina-geeks-national-stem-day",
+    "destination": "/blog/latinageeks-national-stem-day-latinas-breaking-down-barriers-in-technology",
+    "permanent": true
+  },
+  {
+    "source": "/blog/latinx-collective",
+    "destination": "/blog/the-latinx-collective-issue-19",
+    "permanent": true
+  },
+  {
+    "source": "/blog/latinx-level-up",
+    "destination": "/blog/latinx-level-up-program",
+    "permanent": true
+  },
+  {
+    "source": "/blog/launch-todo-app-laravel",
+    "destination": "/blog/launch-a-todo-app-using-laravel-homestead",
+    "permanent": true
+  },
+  {
+    "source": "/blog/lean-in",
+    "destination": "/blog/lean-in-leaders-conference",
+    "permanent": true
+  },
+  {
+    "source": "/blog/limbo-review",
+    "destination": "/blog/review-limbo",
+    "permanent": true
+  },
+  {
+    "source": "/blog/linked-lists-study-guide",
+    "destination": "/blog/study-guide-linked-lists",
+    "permanent": true
+  },
+  {
+    "source": "/blog/new-tech-queens-host",
+    "destination": "/blog/looking-for-the-next-host-of-tech-queens",
+    "permanent": true
+  },
+  {
+    "source": "/blog/mariela-smith",
+    "destination": "/blog/mariela-p-smith",
+    "permanent": true
+  },
+  {
+    "source": "/blog/memorable-experiences-in-gaming",
+    "destination": "/blog/my-most-memorable-experiences-in-gaming",
+    "permanent": true
+  },
+  {
+    "source": "/blog/mentoring-programs",
+    "destination": "/blog/paid-tech-mentoring-programs",
+    "permanent": true
+  },
+  {
+    "source": "/blog/mindot-tour",
+    "destination": "/blog/mindot-tour-2",
+    "permanent": true
+  },
+  {
+    "source": "/blog/netflix-mothers-day-card",
+    "destination": "/blog/mothers-day-card-netflix-subscription",
+    "permanent": true
+  },
+  {
+    "source": "/blog/my-cups-of-tea-from-2013",
+    "destination": "/blog/my-cups-of-tea-2013",
+    "permanent": true
+  },
+  {
+    "source": "/blog/shecoded",
+    "destination": "/blog/nevertheless-frances-coded",
+    "permanent": true
+  },
+  {
+    "source": "/blog/new-blog",
+    "destination": "/blog/new-blog-new-problems",
+    "permanent": true
+  },
+  {
+    "source": "/blog/new-epoch-new-exploits-%f0%9f%98%88",
+    "destination": "/blog/new-epoch-new-exploits-f0-9f-98-88",
+    "permanent": true
+  },
+  {
+    "source": "/blog/new-epoch-new-exploits",
+    "destination": "/blog/new-epoch-new-exploits-f0-9f-98-88",
+    "permanent": true
+  },
+  {
+    "source": "/blog/new-wordpress-theme---tdeditor",
+    "destination": "/blog/new-wordpress-theme-tdeditor",
+    "permanent": true
+  },
+  {
+    "source": "/blog/nyibsrc",
+    "destination": "/blog/new-york-international-business-and-social-science-research-conference",
+    "permanent": true
+  },
+  {
+    "source": "/blog/nothing-to-envy",
+    "destination": "/blog/nothing-to-envy-book-review",
+    "permanent": true
+  },
+  {
+    "source": "/blog/npm-camp",
+    "destination": "/blog/npmcamp",
+    "permanent": true
+  },
+  {
+    "source": "/blog/npower-women-in-tech",
+    "destination": "/blog/women-in-tech-fireside-chat-mixer",
+    "permanent": true
+  },
+  {
+    "source": "/blog/npower-workwell",
+    "destination": "/blog/npower-x-workwell-womens-round-table",
+    "permanent": true
+  },
+  {
+    "source": "/blog/nyc-media-lab-resumes",
+    "destination": "/blog/nyc-media-lab-resume-feature",
+    "permanent": true
+  },
+  {
+    "source": "/blog/oca-sf",
+    "destination": "/blog/oca-sf-professional-development-program",
+    "permanent": true
+  },
+  {
+    "source": "/blog/odu-summer",
+    "destination": "/blog/old-dominion-university-summer-2014",
+    "permanent": true
+  },
+  {
+    "source": "/blog/one-week-left-of-fullstack",
+    "destination": "/blog/one-week-of-fullstack-left",
+    "permanent": true
+  },
+  {
+    "source": "/blog/onward-maintainer-framework",
+    "destination": "/blog/onward-a-framework-for-maintaining-maintainers",
+    "permanent": true
+  },
+  {
+    "source": "/blog/op-smile-medical-mission",
+    "destination": "/blog/operation-smile-medical-mission",
+    "permanent": true
+  },
+  {
+    "source": "/blog/op-smile-mission-training",
+    "destination": "/blog/operation-smile-mission-training-workshop",
+    "permanent": true
+  },
+  {
+    "source": "/blog/op-smile",
+    "destination": "/blog/operation-smile",
+    "permanent": true
+  },
+  {
+    "source": "/blog/pacific-shores-shuttle",
+    "destination": "/blog/pacific-shores-shuttle-app",
+    "permanent": true
+  },
+  {
+    "source": "/blog/women-in-open-source",
+    "destination": "/blog/panel-women-in-open-source",
+    "permanent": true
+  },
+  {
+    "source": "/blog/pocit",
+    "destination": "/blog/people-of-color-in-tech-interview",
+    "permanent": true
+  },
+  {
+    "source": "/blog/ted-2023",
+    "destination": "/blog/peter-weyland-at-ted2023",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tapad-interview",
+    "destination": "/blog/pm-interview-with-tapad",
+    "permanent": true
+  },
+  {
+    "source": "/blog/popcorn-time",
+    "destination": "/blog/popcorn-time-icons",
+    "permanent": true
+  },
+  {
+    "source": "/blog/potluck-invite",
+    "destination": "/blog/pre-mothers-day-potluck-invite",
+    "permanent": true
+  },
+  {
+    "source": "/blog/prateek-kumar",
+    "destination": "/blog/prateek-kumar-2",
+    "permanent": true
+  },
+  {
+    "source": "/blog/prepare-for-coding-bootcamps",
+    "destination": "/blog/preparing-for-coding-bootcamps",
+    "permanent": true
+  },
+  {
+    "source": "/blog/pride-and-prejudice",
+    "destination": "/blog/pride-and-prejudice-english-project",
+    "permanent": true
+  },
+  {
+    "source": "/blog/project-alloy",
+    "destination": "/blog/project-alloy-grant-recipient",
+    "permanent": true
+  },
+  {
+    "source": "/blog/python-bits-1",
+    "destination": "/blog/python-bits-getting-started",
+    "permanent": true
+  },
+  {
+    "source": "/blog/quora-recognitions",
+    "destination": "/blog/quora-writer-recognitions",
+    "permanent": true
+  },
+  {
+    "source": "/blog/raindrop-icon",
+    "destination": "/blog/raindrop-circular-icon",
+    "permanent": true
+  },
+  {
+    "source": "/blog/readme-template",
+    "destination": "/blog/readme-template-for-github",
+    "permanent": true
+  },
+  {
+    "source": "/blog/reset-launchpad-with-sorty",
+    "destination": "/blog/reset-your-launchpad-with-sorty",
+    "permanent": true
+  },
+  {
+    "source": "/blog/respect---logo-competition",
+    "destination": "/blog/respect-logo-competition",
+    "permanent": true
+  },
+  {
+    "source": "/blog/school-for-field-studies-tanzania",
+    "destination": "/blog/school-for-field-studies-wildlife-research-techniques-tanzania",
+    "permanent": true
+  },
+  {
+    "source": "/blog/silicon-valley-leadership-summit",
+    "destination": "/blog/silicon-valley-latino-leadership-summit",
+    "permanent": true
+  },
+  {
+    "source": "/blog/slack-front-end",
+    "destination": "/blog/slack-fe-developers",
+    "permanent": true
+  },
+  {
+    "source": "/blog/slack-wotw",
+    "destination": "/blog/wotw-at-slack",
+    "permanent": true
+  },
+  {
+    "source": "/blog/smash-academy-at-stanford-%f0%9f%8e%93",
+    "destination": "/blog/smash-academy-at-stanford-f0-9f-8e-93",
+    "permanent": true
+  },
+  {
+    "source": "/blog/smash-academy",
+    "destination": "/blog/smash-academy-at-stanford-f0-9f-8e-93",
+    "permanent": true
+  },
+  {
+    "source": "/blog/speakerdeck-icon",
+    "destination": "/blog/speaker-deck-icon",
+    "permanent": true
+  },
+  {
+    "source": "/blog/stellares",
+    "destination": "/blog/stellares-feedback-session",
+    "permanent": true
+  },
+  {
+    "source": "/blog/steven-universe-favorite-episodes",
+    "destination": "/blog/steven-universe-my-favorite-episodes",
+    "permanent": true
+  },
+  {
+    "source": "/blog/strangeloop",
+    "destination": "/blog/strange-loop",
+    "permanent": true
+  },
+  {
+    "source": "/blog/strikingly",
+    "destination": "/blog/strikingly-website",
+    "permanent": true
+  },
+  {
+    "source": "/blog/strive",
+    "destination": "/blog/strive-community-update-spotlights",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tales-from-the-script",
+    "destination": "/blog/tales-from-the-script-podcast",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tapia-conference",
+    "destination": "/blog/tapia-2016",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tcc-summer",
+    "destination": "/blog/tidewater-community-college-summer-2010",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tech-intersections",
+    "destination": "/blog/tech-intersections-2019",
+    "permanent": true
+  },
+  {
+    "source": "/blog/web-dev-and-web-design-slides-fullstack-academy",
+    "destination": "/blog/tech-talk-fullstack-academy",
+    "permanent": true
+  },
+  {
+    "source": "/blog/techhire-oakland",
+    "destination": "/blog/techhire-oakland-volunteer-model",
+    "permanent": true
+  },
+  {
+    "source": "/blog/the-best-50-insults-i-found-online",
+    "destination": "/blog/the-best-50-insults",
+    "permanent": true
+  },
+  {
+    "source": "/blog/the-how-tos-when-it-comes-to-java-array",
+    "destination": "/blog/the-how-tos-when-it-comes-to-defining-assigning-and-printing-a-java-array",
+    "permanent": true
+  },
+  {
+    "source": "/blog/the-interconnectedness-of-social-networking-sites-and-us",
+    "destination": "/blog/the-interconnectedness-of-social-networking-sites",
+    "permanent": true
+  },
+  {
+    "source": "/blog/thinkful-mentor",
+    "destination": "/blog/thinkful",
+    "permanent": true
+  },
+  {
+    "source": "/blog/top-10-code-school",
+    "destination": "/blog/top-10-on-code-school",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tower-3.0",
+    "destination": "/blog/tower-3-0-testimonial",
+    "permanent": true
+  },
+  {
+    "source": "/blog/tsconf",
+    "destination": "/blog/tsconf-2018",
+    "permanent": true
+  },
+  {
+    "source": "/blog/twilio-after-hours-mi-gente",
+    "destination": "/blog/twilioafterhours-mi-gente-entrepreneurship-in-its-many-forms",
+    "permanent": true
+  },
+  {
+    "source": "/blog/twilio-champion",
+    "destination": "/blog/twilio-champions",
+    "permanent": true
+  },
+  {
+    "source": "/blog/twilio-signal",
+    "destination": "/blog/twilios-signal",
+    "permanent": true
+  },
+  {
+    "source": "/blog/unidos-us",
+    "destination": "/blog/unidosus",
+    "permanent": true
+  },
+  {
+    "source": "/blog/useful-hugo-snippets",
+    "destination": "/blog/useful-hugo-bulma-snippets",
+    "permanent": true
+  },
+  {
+    "source": "/blog/vsgc",
+    "destination": "/blog/vsgc-2015",
+    "permanent": true
+  },
+  {
+    "source": "/blog/we-rise-tech",
+    "destination": "/blog/we-rise-tech-conference",
+    "permanent": true
+  },
+  {
+    "source": "/blog/week-20",
+    "destination": "/blog/week-20-as-in-20-weeks-prior",
+    "permanent": true
+  },
+  {
+    "source": "/blog/west-leadership-summit",
+    "destination": "/blog/west-aaerg-haerg-leadership-summit",
+    "permanent": true
+  },
+  {
+    "source": "/blog/what-makes-you-feel-better",
+    "destination": "/blog/what-makes-you-feel-better-when-you-are-in-a-bad-mood",
+    "permanent": true
+  },
+  {
+    "source": "/blog/what-to-do-week-negative-8",
+    "destination": "/blog/what-to-do-what-to-do-week-8",
+    "permanent": true
+  },
+  {
+    "source": "/blog/women-impact-tech",
+    "destination": "/blog/women-impact-tech-san-francisco",
+    "permanent": true
+  },
+  {
+    "source": "/blog/wwc",
+    "destination": "/blog/women-who-code-hackathon",
+    "permanent": true
+  }
+]

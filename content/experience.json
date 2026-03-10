@@ -1,0 +1,430 @@
+[
+  {
+    "title": "Senior Software Engineer, Messaging",
+    "slug": "senior-software-engineer-messaging",
+    "company": "Slack",
+    "companyLogo": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/64ada0d56ff0228892106628_Organization%20Logos%20for%20Webflow.png",
+    "companyUrl": "https://slack.com",
+    "location": "Remote",
+    "startDate": "2025-06-23T00:00:00.000Z",
+    "endDate": null,
+    "description": "Building features on Slack's Messaging team to improve the world's best platform for async collaboration—currently focused on Sidebar Systems.",
+    "highlights": [
+      "Currently on the Sidebar Systems < Messaging < Slack Core Experience team where I'm focused on improving the best in class messaging platform for getting work done."
+    ],
+    "skills": [
+      "typescript",
+      "hack",
+      "react"
+    ]
+  },
+  {
+    "title": "Engineering Manager, Lists",
+    "slug": "engineering-manager-lists",
+    "company": "Slack",
+    "companyLogo": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/64ada0d56ff0228892106628_Organization%20Logos%20for%20Webflow.png",
+    "companyUrl": "https://slack.com",
+    "location": "Remote",
+    "startDate": "2025-01-01T00:00:00.000Z",
+    "endDate": "2025-06-20T00:00:00.000Z",
+    "description": "Explored the Engineering Manager path at Slack, leading a team of three engineers on the Lists team under the Productivity pillar.",
+    "highlights": [
+      "Shipped high-impact features like Bundled Tasks (Task Lists, Subtasks, Programmatic Reminders), contributing to FY26 Q1 goals",
+      "Drove Enterprise Reliability efforts and led our Trust initiative (focused on accessibility, performance, and reliability)",
+      "Ran customer love sprints, quarterly retros, and monthly team syncs to foster team culture and iteration",
+      "Co-created our quarterly roadmap and aligned engineering priorities with Slack’s FY26 V2MOM",
+      "Organized our Productivity Onsite with 125+ attendees across Product, Design, and Engineering"
+    ],
+    "skills": [
+      "engineering-management"
+    ]
+  },
+  {
+    "title": "Senior Software Engineer, Lists",
+    "slug": "slack-lists",
+    "company": "Slack",
+    "companyLogo": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/64ada0d56ff0228892106628_Organization%20Logos%20for%20Webflow.png",
+    "companyUrl": "https://slack.com",
+    "location": "Remote",
+    "startDate": "2023-09-18T00:00:00.000Z",
+    "endDate": "2024-12-31T00:00:00.000Z",
+    "description": "I am excited to return to Slack as a Senior Software Engineer on the Lists team where we're making it easier than ever to manage projects and tasks.",
+    "highlights": [
+      "Returned to Slack as a Senior Software Engineer on the Lists team, building features to make project and task management easier within Slack",
+      "Shipped improvements to Slack Lists that streamlined how teams organize, track, and manage work directly in Slack",
+      "Contributed to the Productivity pillar’s roadmap across multiple quarterly planning cycles"
+    ],
+    "skills": [
+      "hack",
+      "html",
+      "typescript",
+      "react"
+    ]
+  },
+  {
+    "title": "Software Engineer, Customer Acquisition",
+    "slug": "slack-customer-acquisition",
+    "company": "Slack",
+    "companyLogo": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/64ada0d56ff0228892106628_Organization%20Logos%20for%20Webflow.png",
+    "companyUrl": "https://slack.com",
+    "location": "San Francisco, CA",
+    "startDate": "2018-06-01T00:00:00.000Z",
+    "endDate": "2022-02-01T00:00:00.000Z",
+    "description": "Improved Slack.com usability, performance, accessibility; led key projects, mentored interns, boosted lead generation, and championed D&I initiatives.",
+    "highlights": [
+      "Slack is where work flows. It's where the people you need, the information you share, and the tools you use come together to get things done.",
+      "In this role, I worked on a cross-functional team and used my deep understanding of web technologies to improve the Slack.com experience with a key focus on usability, performance, and accessibility.",
+      "Developed the top 3 pages visited by sales leads creators — Homepage, Contact Sales, and Enterprise",
+      "Technical lead for a cross-functional team of 5 engineers responsible for the Salesforce & Slack acquisition web updates",
+      "Mentored my team's first summer engineering intern and received positive feedback from my pillar's director",
+      "Lead developer and maintainer for the Contact Sales form — the largest driver of lead generation on the web",
+      "Helped generate 11K+ unique leads, 500K+ visits, a 99.7% success rate, and $85 million+ in pipeline revenue generated (~90% of all marketing pipeline revenue comes from Slack.com, and ~80% of that is from this form) through one year of the contact sales form",
+      "Influenced $15M in the pipeline and 7.7M web impressions as lead engineer for Reinvent Work campaign",
+      "Awarded a spot bonus for my leadership work in organizing a team offsite that received a lot of positive feedback on the format and content",
+      "Recognized with a company award (\"Win of the Week\") for setting up React training with the creator of React Router for over 30 senior+ engineers",
+      "Awarded a merit bonus for my leadership work with the Fuego ERG which I co-founded and led during the pandemic",
+      "Organized 13+ workshops for the Fuego ERG, with active membership increasing by 4x",
+      "Led one of the largest D&I recruiting events — \"Turning Failure Into Fuego\" for Earthtones ERG",
+      "Organized personal branding workshop starring my co-worker Mina Markham for Earthtones ERG"
+    ],
+    "skills": [
+      "hack",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Managing Partner",
+    "slug": "coronel-estates-llc",
+    "company": "The Coronel Estates",
+    "companyLogo": "https://cdn.prod.website-files.com/63b0b035359373d0cc473202/64cd82a69d9dd1b588c594e8_The%20Coronel%20Estates.png",
+    "companyUrl": "https://www.linkedin.com/company/coronelrealty/",
+    "location": "Hybrid",
+    "startDate": "2023-07-03T00:00:00.000Z",
+    "endDate": "2023-12-29T00:00:00.000Z",
+    "description": "Honoring my father's legacy by managing The Coronel Estates, a family portfolio of rental properties. I handled initial legal, financial, and operational tasks.",
+    "highlights": [
+      "Started by my late father, Dr. Francisco Coronel, The Coronel Estates is a portfolio of rental properties that my family manages.",
+      "I helped with the initial legal, financial, and operational tasks that were necessary after my father passed away.",
+      "We all continue to honor my father’s legacy that he worked so hard to build."
+    ],
+    "skills": [
+      "real-estate-management"
+    ]
+  },
+  {
+    "title": "Senior Software Engineer",
+    "slug": "jupiterone",
+    "company": "JupiterOne",
+    "companyLogo": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/65a5d8d856cc76bb6d8c3a71_jupiterone-logo.png",
+    "companyUrl": "https://www.jupiterone.com/",
+    "location": "Remote",
+    "startDate": "2023-02-01T00:00:00.000Z",
+    "endDate": "2023-04-01T00:00:00.000Z",
+    "description": "At JupiterOne, I developed compliance features, fixed critical bugs, enhanced our design system, and proposed new standards, driving quality and innovation.",
+    "highlights": [
+      "JupiterOne is building a cloud-native software platform to deliver knowledge, transparency, and confidence to every digital operation in every organization, large or small.",
+      "I was offered a design system engineering role but due to business needs, I ended up working on the compliance team, which manages a customer's ability to import and manage any compliance standard or framework as a set of controls or requirements.",
+      "Developed and implemented net new features for the Compliance Platform, such as updating the evidence view to make it easier for users to interact with",
+      "Fixed a bug where dropdown values weren't loading due to an Apollo query issue",
+      "Conducted comprehensive documentation and testing of new components, ensuring high-quality standards were met in all aspects of software development",
+      "Contributed to the ongoing evolution of Juno, the company's in-house design system, by adding new status options for the data table built on top of MUI",
+      "Proposed a new standard for automatic React importing to the frontend forum, demonstrating thought leadership and innovative thinking in software engineering practices",
+      "Experience with Material UI and JSS",
+      "Familiar with GraphQL and Apollo GraphQL library",
+      "Experience with full-stack development",
+      "Exposure to Typescript",
+      "Familiarity with Storybook",
+      "Exposure to MicroFrontend Architecture"
+    ],
+    "skills": [
+      "react",
+      "typescript",
+      "design-systems"
+    ]
+  },
+  {
+    "title": "Senior Software Engineer",
+    "slug": "byteboard",
+    "company": "Byteboard",
+    "companyLogo": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/65a5d9c6fc13da520f9b3aa4_byteboard-logo.png",
+    "companyUrl": "https://byteboard.dev/",
+    "location": "Remote",
+    "startDate": "2022-02-01T00:00:00.000Z",
+    "endDate": "2023-01-01T00:00:00.000Z",
+    "description": "At Byteboard, I built features with React, redesigned dashboards, improved interview flows for 20K+ candidates, and developed a new design system.",
+    "highlights": [
+      "Byteboard is a startup focused on recreating the technical interview experience to be more effective, efficient, and equitable for all.",
+      "I joined as the 10th hire and 3rd software engineer after Byteboard spun out from Google in October 2021.",
+      "I worked with React, TypeScript, Next.js, MUI, and Firebase to add user-facing features.",
+      "Redesigned dashboard with 4 conditional states to efficiently manage candidate data",
+      "Improved top-of-funnel flow resulting in a better interview experience for 20K+ yearly candidates",
+      "Enabled self-serve abilities for 60+ clients to perform interview actions on candidates more efficiently",
+      "Introduced redesign of skills report view and received 4 positive client testimonials",
+      "Developed a new design system to streamline component reuse across a team of 5 engineers",
+      "Building new product features from start to finish, working cross-functionally through project conception, research, implementation, release, and maintenance",
+      "Improving performance and reliability and polishing existing features",
+      "Developing internal tools to support simplicity and productivity for the whole team",
+      "Participating in planning to help shape the product and vision over the long term"
+    ],
+    "skills": [
+      "typescript",
+      "react",
+      "design-systems"
+    ]
+  },
+  {
+    "title": "Lead Instructor",
+    "slug": "fullstack-academy",
+    "company": "Fullstack Academy",
+    "companyLogo": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/65a5d8e504a7429ebe6e2b5e_fullstack-academy-logo%20(1).png",
+    "companyUrl": "https://www.fullstackacademy.com/",
+    "location": "Remote",
+    "startDate": "2023-01-30T00:00:00.000Z",
+    "endDate": "2023-05-01T00:00:00.000Z",
+    "description": "At Fullstack Academy, I taught frontend foundations to Amazon employees through Career Choice, coming full circle as an alum. Left in May to focus on family.",
+    "highlights": [
+      "Fullstack Academy offers tuition-free coding and cybersecurity bootcamps for eligible Amazon associates through Career Choice benefits.",
+      "I went full circle and taught aspiring software engineers through Fullstack Academy, the coding bootcamp I attended during college.",
+      "I taught frontend foundations to Amazon fulfillment employees through the Amazon Career Choice partnership for a few hours weekly.",
+      "Left in May to focus on family."
+    ],
+    "skills": [
+      "javascript",
+      "html",
+      "teaching",
+      "css"
+    ]
+  },
+  {
+    "title": "Software Engineering Mentor",
+    "slug": "formation",
+    "company": "Formation",
+    "companyLogo": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/6456ab5b09c5e167e0151392_Formation.png",
+    "companyUrl": "https://formation.dev",
+    "location": "Remote",
+    "startDate": "2023-03-06T00:00:00.000Z",
+    "endDate": null,
+    "description": "Completed 131 sessions (Mar '23–'25) with a rating of 4.9/5. Specialize in resume review and behavioral interviews. Led Latinx Fellows Resource Group.",
+    "highlights": [
+      "Formation is a virtual fellowship program for software engineers who seek impactful roles and career growth at the most innovative tech companies in the industry.",
+      "I do freelancing for Formation as a Fellow Mentor.",
+      "I specialize in group and 1:1 technical behavioral mock interview prep and seed development sessions.",
+      "As a mentor, I perform technical behavioral interviews for fellows either in groups or one-on-one for a few hours a week.",
+      "These technical behavioral interviews deep dive into someone’s engineering work history and technical challenges.",
+      "I also lead the FRG (Fellows Resource Group) for Latinx fellows of Formation.",
+      "As of 2025, I have completed 131 group or 1:1 sessions with a rating of 4.9/5 since joining in March 2023."
+    ],
+    "skills": [
+      "mentoring",
+      "interviewing"
+    ]
+  },
+  {
+    "title": "Executive Director",
+    "slug": "techqueria-executive-director",
+    "company": "Techqueria",
+    "companyLogo": "/images/organizations/techqueria.png",
+    "companyUrl": "https://techqueria.org",
+    "location": "Remote",
+    "startDate": "2020-01-01T00:00:00.000Z",
+    "endDate": "2021-05-01T00:00:00.000Z",
+    "description": "Led operations for the largest community of Latinx in Tech as a 501(c)(3) nonprofit. Managed partnerships, fundraising, community programs, and ERG consulting.",
+    "highlights": [
+      "Techqueria is a 501(c)(3) nonprofit that serves the largest community of Latinx in Tech in the US",
+      "Oversaw strategy, partnerships, and day-to-day operations for a community of 10,000+ members",
+      "Managed ERG consulting partnerships with companies like Google, GitHub, and Salesforce",
+      "Organized virtual events and community programs during the pandemic",
+      "Featured on ABC7 News for my leadership work with Techqueria"
+    ],
+    "skills": [
+      "engineering-management",
+      "mentoring"
+    ]
+  },
+  {
+    "title": "Software Engineering Mentor",
+    "slug": "springboard-2020",
+    "company": "Springboard",
+    "companyLogo": "/images/organizations/springboard.png",
+    "companyUrl": "https://www.springboard.com/",
+    "location": "Remote",
+    "startDate": "2020-06-01T00:00:00.000Z",
+    "endDate": "2021-07-01T00:00:00.000Z",
+    "description": "Mentored software engineering bootcamp students through Springboard's career-track program, providing weekly 1:1 sessions on web development and career prep.",
+    "highlights": [
+      "Provided weekly 1:1 mentorship sessions to bootcamp students",
+      "Reviewed student projects and provided technical feedback",
+      "Guided students through job search preparation and technical interviews"
+    ],
+    "skills": [
+      "mentoring",
+      "teaching",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Front End Web Development Curriculum Developer",
+    "slug": "udacity-curriculum-developer",
+    "company": "Udacity",
+    "companyLogo": "/images/organizations/udacity.png",
+    "companyUrl": "https://udacity.com",
+    "location": "Remote",
+    "startDate": "2019-05-01T00:00:00.000Z",
+    "endDate": "2019-07-01T00:00:00.000Z",
+    "description": "Developed curriculum content for Udacity's Front End Web Development Nanodegree program.",
+    "highlights": [
+      "Created and reviewed course content for Udacity's Front End Web Development Nanodegree",
+      "Ensured curriculum aligned with current industry standards and best practices"
+    ],
+    "skills": [
+      "teaching",
+      "javascript",
+      "html",
+      "css"
+    ]
+  },
+  {
+    "title": "Web Development Course Instructor",
+    "slug": "general-assembly-instructor",
+    "company": "General Assembly",
+    "companyLogo": "/images/organizations/general-assembly.jpg",
+    "companyUrl": "https://generalassemb.ly/",
+    "location": "San Francisco, CA",
+    "startDate": "2019-01-01T00:00:00.000Z",
+    "endDate": "2019-06-01T00:00:00.000Z",
+    "description": "Taught web development courses at General Assembly's San Francisco campus, covering HTML, CSS, JavaScript, and modern frameworks.",
+    "highlights": [
+      "Taught part-time web development courses to career-changers and aspiring developers",
+      "Covered HTML, CSS, JavaScript, and introductory React",
+      "Provided hands-on mentorship and code reviews for student projects"
+    ],
+    "skills": [
+      "teaching",
+      "javascript",
+      "html",
+      "css"
+    ]
+  },
+  {
+    "title": "Web Development Technical Mentor",
+    "slug": "thinkful-mentor",
+    "company": "Thinkful",
+    "companyLogo": "/images/organizations/thinkful.png",
+    "companyUrl": "https://www.thinkful.com/",
+    "location": "Remote",
+    "startDate": "2018-02-01T00:00:00.000Z",
+    "endDate": "2018-05-01T00:00:00.000Z",
+    "description": "Mentored aspiring web developers through Thinkful's online bootcamp, providing weekly 1:1 sessions on JavaScript, HTML/CSS, and career guidance.",
+    "highlights": [
+      "Provided weekly 1:1 mentorship to bootcamp students learning full-stack web development",
+      "Reviewed code submissions and provided detailed feedback on student projects",
+      "Guided students on best practices in JavaScript, HTML, CSS, and jQuery"
+    ],
+    "skills": [
+      "mentoring",
+      "teaching",
+      "javascript"
+    ]
+  },
+  {
+    "title": "Software Engineer, Product",
+    "slug": "accenture-software-engineer",
+    "company": "Accenture",
+    "companyLogo": "/images/organizations/accenture.png",
+    "companyUrl": "https://www.accenture.com/",
+    "location": "San Francisco, CA",
+    "startDate": "2017-06-01T00:00:00.000Z",
+    "endDate": "2018-05-01T00:00:00.000Z",
+    "description": "Full-time software engineer at Accenture's Liquid Studio in San Francisco, building products for enterprise clients using modern web technologies and emerging tech.",
+    "highlights": [
+      "Worked at the Accenture Liquid Studio, a rapid application development lab focused on emerging technologies",
+      "Built client-facing web applications using JavaScript, React, and Node.js",
+      "Collaborated with cross-functional teams to deliver digital transformation projects for enterprise clients"
+    ],
+    "skills": [
+      "javascript",
+      "react"
+    ]
+  },
+  {
+    "title": "Summer of Code Ambassador",
+    "slug": "fullstack-academy-ambassador",
+    "company": "Fullstack Academy",
+    "companyLogo": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/65a5d8e504a7429ebe6e2b5e_fullstack-academy-logo%20(1).png",
+    "companyUrl": "https://www.fullstackacademy.com/",
+    "location": "New York, NY",
+    "startDate": "2016-12-01T00:00:00.000Z",
+    "endDate": "2017-05-01T00:00:00.000Z",
+    "description": "Served as a Summer of Code Ambassador for Fullstack Academy, promoting their coding bootcamp programs and mentoring prospective students.",
+    "highlights": [
+      "Promoted Fullstack Academy's Summer of Code program to prospective students",
+      "Mentored and guided applicants through the admissions process",
+      "Represented Fullstack Academy at events and info sessions"
+    ],
+    "skills": [
+      "mentoring",
+      "branding"
+    ]
+  },
+  {
+    "title": "Software Engineering Intern, AR/VR",
+    "slug": "accenture-intern",
+    "company": "Accenture",
+    "companyLogo": "/images/organizations/accenture.png",
+    "companyUrl": "https://www.accenture.com/",
+    "location": "San Francisco, CA",
+    "startDate": "2016-06-01T00:00:00.000Z",
+    "endDate": "2016-08-01T00:00:00.000Z",
+    "description": "Software engineering intern at Accenture's Liquid Studio in San Francisco, working on AR/VR prototypes and emerging technology projects.",
+    "highlights": [
+      "Successfully led the design, development, and testing of AR/VR apps using Unity for enterprise clients at the Accenture Liquid Studio",
+      "Developed and launched a mobile-first website utilizing Handlebars to showcase device inventory effectively",
+      "Built proof-of-concept demos and prototypes for client presentations using emerging technologies"
+    ],
+    "skills": [
+      "javascript"
+    ]
+  },
+  {
+    "title": "Software Engineering Mentor",
+    "slug": "springboard-2023",
+    "company": "Springboard",
+    "companyLogo": "/images/organizations/springboard.png",
+    "companyUrl": "https://www.springboard.com/",
+    "location": "Remote",
+    "startDate": "2023-01-01T00:00:00.000Z",
+    "endDate": "2023-05-01T00:00:00.000Z",
+    "description": "Returned to Springboard to mentor a new cohort of software engineering bootcamp students through weekly 1:1 sessions.",
+    "highlights": [
+      "Provided weekly 1:1 mentorship sessions to bootcamp students",
+      "Reviewed student projects and code submissions with detailed technical feedback",
+      "Guided students on career preparation and technical interview skills"
+    ],
+    "skills": [
+      "mentoring",
+      "teaching"
+    ]
+  },
+  {
+    "title": "Frontend Developer",
+    "slug": "8020-software-consulting",
+    "company": "80|20 Software Consulting",
+    "companyLogo": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/66496e679f2c52421a50b1ac_8020.png",
+    "companyUrl": "https://8020consulting.com/",
+    "location": "Norfolk, VA",
+    "startDate": "2015-11-24T00:00:00.000Z",
+    "endDate": "2016-02-05T00:00:00.000Z",
+    "description": "Front End Developer at 80|20, Norfolk. Prototyped UIs, developed on WordPress, and enhanced web projects with HTML/CSS/JS. Active in the tech community.",
+    "highlights": [
+      "prototyped mobile/web user interfaces for client projects",
+      "helped develop/design in-house website creation platform using modern web technologies such as HTML/CSS/JS",
+      "consulted clients on how to improve their Wordpress based websites",
+      "gained skills in fullstack web development by working with large scale web projects"
+    ],
+    "skills": [
+      "wordpress",
+      "web-design",
+      "angular"
+    ]
+  }
+]

@@ -1,0 +1,138 @@
+---
+title: "DocuSign Demo App"
+slug: "docusign-demo-app"
+date: "2018-02-15"
+excerpt: ""
+featuredImage: "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0cb49fa11f338333d8_docusign.jpeg"
+categories: ["portfolio"]
+tags: ["code-insights"]
+organizations: []
+skills: []
+source: "Webflow"
+---
+
+### I created this demo app using PowerForms to try and impress the developer evangelism team at DocuSign.
+
+## Update - Feb 27
+
+I applied for a “Developer Evangelist” job at DocuSign and was one of two finalists. I did not end up getting the job and actually felt a much less qualified candidate was able to get the job due to bias but overall, they had a really engaging interview process and everyone was super nice so kudos to DocuSign. The work you can find below was part of my attempt to better convince the developer evangelism team that I’d be a good fit. I have since removed the PowerForm that I created but [the PowerForm looked like this](https://i.imgur.com/2pYbvXr.png).I also created a presentation for this interview on [**Demystifying Meltdown & Spectre**](https://www.fvcproductions.com/2018/02/16/demystifying-meltdown--spectre/).More details on my unsucessful but engaging interview process [can be found on Glassdoor](https://www.glassdoor.com/Interview/DocuSign-Interview-RVW19450031.htm).https://www.glassdoor.com/Interview/DocuSign-Interview-RVW19450031.htm
+
+### Creating Your Own PowerForm
+
+Check out the DocuSign documentation for [how to create your first PowerForm](https://support.docusign.com/guides/ndse-user-guide-using-powerforms).The code is really simple and looks like the following for this site:
+
+#### HTML
+
+<div>
+
+<form>
+
+<div>
+
+<input
+
+        autocomplete="on"
+
+        type="text"
+
+        name="name"
+
+        placeholder="Your name"
+
+      />
+
+</div>
+
+<div>
+
+<input
+
+        autocomplete="on"
+
+        type="email"
+
+        name="email"
+
+        placeholder="Your email"
+
+      />
+
+</div>
+
+<div>
+
+      You didn't fill out the form entirely. Try filling it out? 😅
+
+</div>
+
+<ul>
+
+<li>
+
+<button onclick="docuSign()">
+
+          Support Frances 🎉
+
+</button>
+
+</li>
+
+</ul>
+
+</form>
+
+</div>
+
+#### JavaScript
+> Note that I am using jQuery as a dependency.
+// initially hide warning message
+
+$(".warning-message").hide();
+
+// open in new tab
+
+function openInNewTab(url) \{
+
+  var win = window.open(url, "_blank");
+
+  win.focus();
+
+\}
+
+// DocuSign
+
+function docuSign() \{
+
+  if (!$("#applicantEmail").val() || !$("#applicantName").val()) \{
+
+    // if no values, show warning message
+
+    $(".warning-message").show();
+
+  \} else \{
+
+    // set PowerForm url
+
+    var url =
+
+      "https://demo.docusign.net/Member/PowerFormSigning.aspx? PowerFormId=18bd5af0-3a6f-4d59-9400-82d7be18cc2e";
+
+    // set email
+
+    url += "&Applicant_Email=" + encodeURIComponent($("#applicantEmail").val());
+
+    // set name
+
+    url +=
+
+      "&Applicant_UserName=" + encodeURIComponent($("#applicantName").val());
+
+    // set updated URL
+
+    openInNewTab(url);
+
+  \}
+
+\}There’s also this useful YouTube video that gives a technical overview of how PowerForms work.
+> Thanks Aaron & Dewey for the useful tutorial!
+https://youtu.be/YlHORJFj5C4

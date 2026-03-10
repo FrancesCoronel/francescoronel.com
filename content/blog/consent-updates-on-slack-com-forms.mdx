@@ -1,0 +1,45 @@
+---
+title: "Consent Updates on Slack.com Forms"
+slug: "consent-updates-on-slack-com-forms"
+date: "2021-09-17"
+excerpt: "Developed a resusable component to capture user's consent across all forms on Slack.com, starting with the Contact Sales form."
+featuredImage: "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f4f34a33d78c1aa4332_Slack.com-Consent-Updates-for-Forms.png"
+categories: ["portfolio"]
+tags: ["code-insights"]
+organizations: ["slack"]
+skills: []
+source: "Webflow"
+---
+
+Once [Slack was acquired by Salesforce](https://francescoronel.com/2022/07/01/salesforce-day-1-web-campaign/), we needed to update our logic for privacy policy and marketing consent to reflect what Salesforce's forms used and what regions they served.
+
+Three distinct groups needed to be considered as part of the logic for this new reusable component that could then be plugged into any form.
+
+I used [Hack](https://hacklang.org/) for both the frontend and backend development of this new component and vanilla JavaScript for dynamically changing the form field's visibility.
+
+The logic was decided by the country the user selected.
+
+I first implemented this in the contact sales form, which [I initially developed](https://francescoronel.com/2018/12/10/contact-sales-form/) and is one of the most popular lead generation sources on Slack.com. 
+
+The user's consent data also had to be piped into Salesforce to be processed and routed correctly.
+
+## Requirements Grouping
+
+Below is a sample of the spreadsheet that I was given showing a mapping of the countries' consent requirements. 
+
+This conditional consent country data was stored in a library on the backend that the frontend could then read.
+![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f5034a33d8b6faa4333_requirements-grouping-1024x142.png)
+### Group A
+
+No prior consent is required for processing and/or marketing. Applied to most countries.
+![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f5034a33d4c3caa4334_group-a-1024x248.png)
+### Group B
+
+Prior consent is required for marketing. Applied to countries with more robust privacy consent laws.
+![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f5034a33d1174aa4335_group-b-1024x355.png)
+### Group C
+
+Prior consent is required for processing the data and/or marketing. This only applies to Japan.
+
+Slightly trickier to test since the checkbox for processing the data had to be checked to submit.
+![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f5034a33dfe95aa433c_group-c-1024x458.png)

@@ -1,0 +1,474 @@
+[
+  {
+    "name": "Stanford University",
+    "slug": "stanford-university",
+    "logo": "/images/organizations/stanford-university.png",
+    "url": "https://www.stanford.edu/",
+    "type": "community",
+    "description": "Stanford University, located in the heart of Silicon Valley, is a world-renowned institution known for innovation, entrepreneurship, and academic excellence. Its mission is to promote research, discovery, and leadership that make a global impact. 🌍"
+  },
+  {
+    "name": "Integral Ad Science",
+    "slug": "integral-ad-science",
+    "logo": "/images/organizations/integral-ad-science.png",
+    "url": "https://integralads.com/",
+    "type": "community",
+    "description": "Integral Ad Science (IAS) is a global ad-tech company that delivers actionable data and verification solutions to advertisers, publishers and platforms. They help ensure ads are viewable, fraud-free and placed in brand-safe, contextually suitable environments across screens and formats"
+  },
+  {
+    "name": "Girls Who Code",
+    "slug": "girls-who-code",
+    "logo": "/images/organizations/girls-who-code.png",
+    "url": "https://girlswhocode.com/",
+    "type": "community",
+    "description": "Girls Who Code is a nonprofit organization working to close the gender gap in technology. Through clubs, summer programs, and college initiatives, they empower young women to pursue computer science and become leaders in tech."
+  },
+  {
+    "name": "Ripple",
+    "slug": "ripple",
+    "logo": "/images/organizations/ripple.png",
+    "url": "https://ripple.com/",
+    "type": "community",
+    "description": "Ripple is a fintech company using blockchain to power instant, affordable, and transparent global payments. With solutions like XRP and RLUSD, Ripple helps businesses and banks move money across borders faster and smarter—reshaping finance for the digital age. 🌍💸"
+  },
+  {
+    "name": "Sourcegraph",
+    "slug": "sourcegraph",
+    "logo": "/images/organizations/sourcegraph.jpg",
+    "url": "https://sourcegraph.com/",
+    "type": "community",
+    "description": "Sourcegraph is a code intelligence platform that helps developers explore, understand, and automate large codebases using AI. With tools like Cody and Code Search, Sourcegraph makes it easier to navigate, refactor, and scale software development across teams and repos."
+  },
+  {
+    "name": "Doximity",
+    "slug": "doximity",
+    "logo": "/images/organizations/doximity.png",
+    "url": "https://doximity.com",
+    "type": "community",
+    "description": "Doximity is the largest professional network for healthcare professionals in the U.S., connecting over 80% of physicians and 50% of nurse practitioners and physician assistants. It offers tools for communication, telehealth, career growth, and staying informed with curated medical news and resources"
+  },
+  {
+    "name": "Project Alloy",
+    "slug": "project-alloy",
+    "logo": "/images/organizations/project-alloy.png",
+    "url": "https://projectalloy.org",
+    "type": "community",
+    "description": "Project Alloy aims to build a more inclusive technical community by offering financial grants and resources to underrepresented individuals in tech. Incorporated as a nonprofit in 2017, it facilitated its first major initiative by sponsoring 123 grantees to attend the Strange Loop conference."
+  },
+  {
+    "name": "Course Report",
+    "slug": "course-report",
+    "logo": "/images/organizations/course-report.png",
+    "url": "https://coursereport.com",
+    "type": "community",
+    "description": "Course Report is an online platform where you can match with coding bootcamps, choose the school that's right for you, and research coding bootcamp reviews all in one place."
+  },
+  {
+    "name": "Elpha",
+    "slug": "elpha",
+    "logo": "/images/organizations/elpha.png",
+    "url": "",
+    "type": "community",
+    "description": "Elpha is an online network of 100K+ women in engineering, product, sales, design, venture, marketing and more. It's a space for women in tech to talk about whatever we want."
+  },
+  {
+    "name": "GitHub",
+    "slug": "github",
+    "logo": "/images/organizations/github.png",
+    "url": "https://github.com",
+    "type": "community",
+    "description": "GitHub is a leading platform for software development and collaboration. It enables developers to host and review code, manage projects, and build software together using Git, all while fostering a vibrant open-source community."
+  },
+  {
+    "name": "Tech Intersections",
+    "slug": "tech-intersections",
+    "logo": "/images/organizations/tech-intersections.png",
+    "url": "https://techintersections.org",
+    "type": "community",
+    "description": "Tech Intersections provides a space for the women of color most underrepresented in tech to come together and learn from each other’s successes, challenges, and experiences. "
+  },
+  {
+    "name": "Udacity",
+    "slug": "udacity",
+    "logo": "/images/organizations/udacity.png",
+    "url": "https://udacity.com",
+    "type": "community",
+    "description": "Udacity is an online learning platform offering career-focused nanodegree programs in tech and business, built with industry leaders like Google and Amazon. It features flexible, self-paced courses, hands-on projects, and career support to help learners gain job-ready skills in fields like AI, data "
+  },
+  {
+    "name": "Tidewater Community College",
+    "slug": "tidewater-community-college",
+    "logo": "/images/organizations/tidewater-community-college.png",
+    "url": "https://www.tcc.edu/",
+    "type": "community",
+    "description": "Tidewater Community College (TCC) is a public community college in Virginia. It offers a wide range of programs and has campuses across the Hampton Roads region."
+  },
+  {
+    "name": "Old Dominion University",
+    "slug": "old-dominion-university",
+    "logo": "/images/organizations/old-dominion-university.png",
+    "url": "https://www.odu.edu/",
+    "type": "community",
+    "description": "Old Dominion University (ODU) is a public research university in Norfolk, Virginia. It offers diverse programs and has satellite campuses in the Hampton Roads area."
+  },
+  {
+    "name": "Jacobs University Bremen",
+    "slug": "jacobs-university-bremen",
+    "logo": "/images/organizations/jacobs-university-bremen.png",
+    "url": "https://constructor.university/",
+    "type": "community",
+    "description": "Jacobs University Bremen is a private international research university with a residential campus in Bremen, Germany. It offers diverse programs and a vibrant community."
+  },
+  {
+    "name": "Ghent School",
+    "slug": "ghent-school",
+    "logo": "/images/organizations/ghent-school.png",
+    "url": "https://www.npsk12.com/ghent",
+    "type": "community",
+    "description": "Ghent School is a public school located in Norfolk, VA. It's where I went for elementary and middle school. Ghent School's mission is to develop students who are highly motivated, mature, and self-confident."
+  },
+  {
+    "name": "Sabio",
+    "slug": "sabio",
+    "logo": "/images/organizations/sabio.png",
+    "url": "",
+    "type": "community",
+    "description": "Sabio Coding Bootcamp empowers individuals to transform their lives through intensive, industry-focused coding education. Offering comprehensive programs in web development, software engineering, and more, Sabio equips students with the skills and mentorship needed to thrive in the tech industry. 🚀"
+  },
+  {
+    "name": "Techqueria",
+    "slug": "techqueria",
+    "logo": "/images/organizations/techqueria.png",
+    "url": "https://techqueria.org",
+    "type": "community",
+    "description": "Techqueria is a vibrant community of Latinx professionals in tech, dedicated to empowering and elevating Latinx talent. Through networking, resources, and mentorship, Techqueria fosters growth, innovation, and diversity, creating a supportive environment where members thrive and excel. 🌮"
+  },
+  {
+    "name": "ABC7 News",
+    "slug": "abc7-news",
+    "logo": "/images/organizations/abc7-news.png",
+    "url": "https://abc7.com/",
+    "type": "community",
+    "description": "KABC-TV (channel 7) is a television station in Los Angeles, California, United States, serving as the West Coast flagship of the ABC network. Owned and operated by the network's ABC Owned Television Stations division, the station maintains studios in the Grand Central Business Centre of Glendale, an"
+  },
+  {
+    "name": "Goldman Sachs",
+    "slug": "goldman-sachs",
+    "logo": "/images/organizations/goldman-sachs.png",
+    "url": "https://www.goldmansachs.com/",
+    "type": "community",
+    "description": "Goldman Sachs is a leading global investment banking, securities, and investment management firm that provides a wide range of financial services to a substantial and diversified client base, including corporations, financial institutions, governments, and individuals."
+  },
+  {
+    "name": "JupiterOne",
+    "slug": "jupiterone",
+    "logo": "/images/organizations/jupiterone.png",
+    "url": "https://www.jupiterone.com/",
+    "type": "community",
+    "description": "JupiterOne is a cyber asset analysis platform for cybersecurity designed to continuously collect, connect, and analyze asset data so security teams can see and secure their entire attack surface through a single platform."
+  },
+  {
+    "name": "Fullstack Academy",
+    "slug": "fullstack-academy",
+    "logo": "/images/organizations/fullstack-academy.png",
+    "url": "https://www.fullstackacademy.com/",
+    "type": "community",
+    "description": "Fullstack Academy is an immersive software engineering coding bootcamp located in New York City. Students of the full-time flagship course learn full stack JavaScript over the course of a 13-week, on-campus program. "
+  },
+  {
+    "name": "Hampton University",
+    "slug": "hampton-university",
+    "logo": "/images/organizations/hampton-university.png",
+    "url": "https://home.hamptonu.edu",
+    "type": "community",
+    "description": "Hampton University is a private historically Black research university in Hampton, Virginia. Founded in 1868 as an institute of higher learning for newly freed people, Hampton University has grown into one of the nation's top-ranked colleges and universities."
+  },
+  {
+    "name": "The Coronel Estates",
+    "slug": "the-coronel-estates-llc",
+    "logo": "/images/organizations/the-coronel-estates-llc.png",
+    "url": "https://www.linkedin.com/company/coronelrealty/",
+    "type": "community",
+    "description": "The Coronel Estates is a family-owned residential real estate portfolio spread across Virginia, Chicago, and California. We aim to honor our father's indelible legacy and perpetuate the intergenerational wealth he worked so hard to initiate."
+  },
+  {
+    "name": "Cornell Tech",
+    "slug": "cornell-tech",
+    "logo": "/images/organizations/cornell-tech.png",
+    "url": "https://tech.cornell.edu/",
+    "type": "community",
+    "description": "Cornell Tech is a pioneering graduate school in NYC that merges technology, business, and design to foster innovation. It offers cutting-edge programs, fosters interdisciplinary collaboration, and empowers students to tackle real-world challenges in areas like computer science, and engineering."
+  },
+  {
+    "name": "Commsor",
+    "slug": "commsor",
+    "logo": "/images/organizations/commsor.png",
+    "url": "https://www.commsor.com/",
+    "type": "community",
+    "description": "Commsor is a comprehensive community management platform that empowers organizations to build, engage, and measure vibrant communities. It provides advanced tools for communication, analytics, and member insights, enabling businesses to foster meaningful connections and drive growth."
+  },
+  {
+    "name": "CodeNewbie",
+    "slug": "codenewbie",
+    "logo": "/images/organizations/codenewbie.png",
+    "url": "https://www.codenewbie.org/",
+    "type": "community",
+    "description": "CodeNewbie is a supportive online community for aspiring programmers of all levels. It offers resources, discussions, and mentorship opportunities to help beginners kick-start their coding journey and foster a thriving tech community."
+  },
+  {
+    "name": "CodeNation",
+    "slug": "codenation",
+    "logo": "/images/organizations/codenation.png",
+    "url": "https://codenation.org/",
+    "type": "community",
+    "description": "CodeNation is a leading tech education nonprofit organization that empowers young minds with coding skills. They offer immersive programs and resources to bridge the digital divide and prepare future innovators for the tech industry."
+  },
+  {
+    "name": "CMX Academy",
+    "slug": "cmx-academy",
+    "logo": "/images/organizations/cmx-academy.png",
+    "url": "https://www.cmxhub.com/academy",
+    "type": "community",
+    "description": "CMX Academy is an innovative online learning platform that offers comprehensive courses on community management, empowering individuals with skills to build thriving online communities."
+  },
+  {
+    "name": "Canvas",
+    "slug": "canvas",
+    "logo": "/images/organizations/canvas.png",
+    "url": "https://www.canvas.net/",
+    "type": "community",
+    "description": "Canvas is an innovative online learning platform that offers a diverse range of courses and programs. It provides a user-friendly interface, interactive content, and collaborative tools, making education accessible and engaging for learners worldwide."
+  },
+  {
+    "name": "Byteboard",
+    "slug": "byteboard",
+    "logo": "/images/organizations/byteboard.png",
+    "url": "https://byteboard.dev/",
+    "type": "community",
+    "description": "Byteboard is a cutting-edge online coding platform that challenges and evaluates developers' skills through real-world coding assessments. It offers a seamless and efficient way for companies to identify top tech talent and for candidates to showcase their abilities."
+  },
+  {
+    "name": "BuiltIn",
+    "slug": "builtin",
+    "logo": "/images/organizations/builtin.png",
+    "url": "https://builtin.com/",
+    "type": "community",
+    "description": "BuiltIn is a comprehensive platform connecting tech professionals with innovative companies. It offers a curated job board, in-depth articles, and a supportive community, fostering growth and collaboration in the tech industry."
+  },
+  {
+    "name": "BrightTALK",
+    "slug": "brighttalk",
+    "logo": "/images/organizations/brighttalk.png",
+    "url": "https://www.brighttalk.com/",
+    "type": "community",
+    "description": "BrightTALK is a leading platform for professionals to discover, learn, and share insights through webinars and videos. Connect with experts, expand your knowledge, and engage in discussions on various topics, all in one convenient place."
+  },
+  {
+    "name": "BootUp",
+    "slug": "bootup",
+    "logo": "/images/organizations/bootup.png",
+    "url": "https://bootuppd.org/",
+    "type": "community",
+    "description": "BootUP PD is an innovative online platform that offers professional development courses for educators, empowering them with cutting-edge tools and strategies to enhance their teaching practices and engage students effectively."
+  },
+  {
+    "name": "BeyondTrust",
+    "slug": "beyondtrust",
+    "logo": "/images/organizations/beyondtrust.png",
+    "url": "https://www.beyondtrust.com/",
+    "type": "community",
+    "description": "BeyondTrust is a leading cybersecurity company offering privileged access management and vulnerability management solutions to protect organizations from internal and external threats."
+  },
+  {
+    "name": "BetterUp",
+    "slug": "betterup",
+    "logo": "/images/organizations/betterup.png",
+    "url": "https://www.betterup.com/",
+    "type": "community",
+    "description": "BetterUp is a cutting-edge platform that empowers individuals to reach their full potential through personalized coaching, professional development, and well-being support."
+  },
+  {
+    "name": "BeLatina",
+    "slug": "belatina",
+    "logo": "/images/organizations/belatina.png",
+    "url": "https://belatina.com/",
+    "type": "community",
+    "description": "Belatina.com is a vibrant online platform amplifying the voices and stories of Latinx communities. It offers engaging content, from news and culture to social issues, empowering readers with diverse perspectives and fostering a sense of unity and understanding."
+  },
+  {
+    "name": "Athenahealth",
+    "slug": "athenahealth",
+    "logo": "/images/organizations/athenahealth.png",
+    "url": "https://www.athenahealth.com/",
+    "type": "community",
+    "description": "Athenahealth is a leading healthcare technology company offering cloud-based solutions for medical practices. They streamline workflows, improve patient care, and enhance financial outcomes through their innovative platform."
+  },
+  {
+    "name": "Association of Computing Machinery",
+    "slug": "association-of-computing-machinery",
+    "logo": "/images/organizations/association-of-computing-machinery.png",
+    "url": "https://www.acm.org/",
+    "type": "community",
+    "description": "The Association of Computing Machinery (ACM) is a leading international organization in the field of computer science, promoting research, education, and collaboration among professionals."
+  },
+  {
+    "name": "Aspen Institute Latinos and Society Program (AILAS)",
+    "slug": "aspen-institute-latinos-and-society-program-ailas",
+    "logo": "/images/organizations/aspen-institute-latinos-and-society-program-ailas.png",
+    "url": "https://www.aspeninstitute.org/programs/aspen-institute-latinos-and-society/",
+    "type": "community",
+    "description": "The Aspen Institute Latinos and Society Program (AILAS) empowers Latino leaders, fosters dialogue, and advances policies to address the diverse challenges and opportunities facing Latino communities."
+  },
+  {
+    "name": "Aspen Institute",
+    "slug": "aspen-institute",
+    "logo": "/images/organizations/aspen-institute.png",
+    "url": "https://www.aspeninstitute.org/",
+    "type": "community",
+    "description": "The Aspen Institute is a non-profit organization fostering leadership and policy-based dialogue to address critical issues in society. Through its programs and seminars, it aims to promote values-based leadership and inclusive solutions for a more equitable and sustainable future."
+  },
+  {
+    "name": "Asana",
+    "slug": "asana",
+    "logo": "/images/organizations/asana.png",
+    "url": "https://asana.com/",
+    "type": "community",
+    "description": "Asana is a powerful project management tool that helps teams stay organized, collaborate effectively, and track their work progress. It offers a user-friendly interface, task assignment, deadline tracking, and integration with other productivity apps."
+  },
+  {
+    "name": "AMEOT",
+    "slug": "ameot",
+    "logo": "/images/organizations/ameot.png",
+    "url": "https://ameot.com/",
+    "type": "community",
+    "description": "AMEOT is a cutting-edge technology platform that leverages artificial intelligence and data analytics to optimize organizational processes, enhance efficiency, and drive business growth."
+  },
+  {
+    "name": "AlterConf",
+    "slug": "alterconf",
+    "logo": "/images/organizations/alterconf.png",
+    "url": "https://alterconf.com/",
+    "type": "community",
+    "description": "AlterConf is a dynamic conference fostering inclusivity and diversity in the tech industry. It showcases marginalized voices and explores topics like accessibility, mental health, and intersectionality."
+  },
+  {
+    "name": "Airtable",
+    "slug": "airtable",
+    "logo": "/images/organizations/airtable.png",
+    "url": "https://www.airtable.com/",
+    "type": "community",
+    "description": "Airtable is a versatile cloud-based collaboration platform that combines the functionality of a spreadsheet with the power of a database. It allows users to organize, track, and analyze data flexibly and intuitively, making it ideal for project management, CRM, content planning, and more."
+  },
+  {
+    "name": "Accenture",
+    "slug": "accenture",
+    "logo": "/images/organizations/accenture.png",
+    "url": "https://www.accenture.com/us-en",
+    "type": "community",
+    "description": "Accenture is a leading global professional services company that offers a wide range of services in strategy, consulting, technology, and operations. With expertise in diverse industries, Accenture helps clients navigate digital transformation and achieve business success through innovative solution"
+  },
+  {
+    "name": "AAAI",
+    "slug": "aaai",
+    "logo": "/images/organizations/aaai.png",
+    "url": "https://aaai.org/about-aaai/",
+    "type": "community",
+    "description": "AAAI (Association for the Advancement of Artificial Intelligence) is a prestigious organization at the forefront of AI research and development. It brings together experts from academia, industry, and government to explore cutting-edge advancements in artificial intelligence and cognitive science."
+  },
+  {
+    "name": "80|20 Software Consulting",
+    "slug": "80-20-software-consulting",
+    "logo": "/images/organizations/80-20-software-consulting.png",
+    "url": "https://8020consulting.com/",
+    "type": "community",
+    "description": "80|20 Software Consulting is a leading firm specializing in software solutions and strategic guidance. With a unique focus on efficiency, they help businesses achieve optimal results by leveraging the 80/20 principle. "
+  },
+  {
+    "name": "Slack",
+    "slug": "slack",
+    "logo": "/images/organizations/slack.png",
+    "url": "https://slack.com",
+    "type": "community",
+    "description": "Slack is a collaboration hub, streamlining team communication with real-time messaging, file sharing, and powerful integrations. With organized channels, searchable archives, and user-friendly interface, it boosts productivity and fosters teamwork for organizations of all sizes."
+  },
+  {
+    "name": "Formation",
+    "slug": "formation",
+    "logo": "/images/organizations/formation.png",
+    "url": "https://formation.dev",
+    "type": "community",
+    "description": "Formation is a virtual fellowship program for software engineers who seek impactful roles and career growth at the most innovative tech companies in the industry. "
+  },
+  {
+    "name": "Dreamforce",
+    "slug": "dreamforce",
+    "logo": "/images/organizations/dreamforce.png",
+    "url": "https://www.salesforce.com/dreamforce/",
+    "type": "conference",
+    "description": "Salesforce's annual flagship conference bringing together the global Salesforce community."
+  },
+  {
+    "name": "Pluralsight",
+    "slug": "pluralsight",
+    "logo": "/images/organizations/pluralsight.png",
+    "url": "https://www.pluralsight.com/",
+    "type": "media",
+    "description": "Online learning platform for technology skills."
+  },
+  {
+    "name": "Unidos US",
+    "slug": "unidos-us",
+    "logo": "/images/organizations/unidos-us.png",
+    "url": "https://www.unidosus.org/",
+    "type": "community",
+    "description": "The largest national Hispanic civil rights and advocacy organization in the United States."
+  },
+  {
+    "name": "LTX Fest",
+    "slug": "ltx-fest",
+    "logo": "/images/organizations/ltx-fest.png",
+    "url": "https://ltxfest.com/",
+    "type": "conference",
+    "description": "A celebration of Latinx culture, innovation, and community."
+  },
+  {
+    "name": "Coro Northern California",
+    "slug": "coro-northern-california",
+    "logo": "/images/organizations/coro-northern-california.png",
+    "url": "https://coronorcal.org/",
+    "type": "community",
+    "description": "Leadership development organization for civic engagement in Northern California."
+  },
+  {
+    "name": "Women Who Code",
+    "slug": "women-who-code",
+    "logo": "/images/organizations/women-who-code.png",
+    "url": "https://www.womenwhocode.com/",
+    "type": "community",
+    "description": "Global nonprofit dedicated to inspiring women to excel in technology careers."
+  },
+  {
+    "name": "SMASH",
+    "slug": "smash",
+    "logo": "/images/organizations/smash.png",
+    "url": "https://www.smash.org/",
+    "type": "community",
+    "description": "STEM-intensive college preparatory program for students of color."
+  },
+  {
+    "name": "Somos",
+    "slug": "somos",
+    "logo": "/images/organizations/somos.png",
+    "url": "https://somos.community",
+    "type": "community",
+    "description": "Latinx community organization."
+  },
+  {
+    "name": "Outco",
+    "slug": "outco",
+    "logo": "/images/organizations/outco.png",
+    "url": "https://outco.io/",
+    "type": "community",
+    "description": "Interview preparation and career coaching program for software engineers."
+  }
+]

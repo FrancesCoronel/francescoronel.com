@@ -1,0 +1,140 @@
+[
+  {
+    "institution": "Tidewater Community College",
+    "slug": "tidewater-community-college-summer-2010",
+    "degree": "Dual Enrollment - Algebra & Accounting",
+    "field": "",
+    "logo": "/images/organizations/tidewater-community-college.png",
+    "url": "https://tcc.edu/",
+    "startDate": "2010-05-01T00:00:00.000Z",
+    "endDate": "2010-08-13T00:00:00.000Z",
+    "description": "Through TCC's dual enrollment program, I enrolled in 2 different courses in the summer of 2010.",
+    "honors": [
+      "MTH 158 - College Algebra (A-)",
+      "ACC 211 - Principles of Accounting I (B)"
+    ]
+  },
+  {
+    "institution": "Tidewater Community College",
+    "slug": "tidewater-community-college-summer-2013",
+    "degree": "Dual Enrollment - Astronomy, Computing, Philosophy & Sociology",
+    "field": "",
+    "logo": "/images/organizations/tidewater-community-college.png",
+    "url": "https://tcc.edu/",
+    "startDate": "2013-05-01T00:00:00.000Z",
+    "endDate": "2013-08-16T00:00:00.000Z",
+    "description": "Through TCC's dual enrollment program, I enrolled in 4 different courses that I found interesting and thought would be fun to take over the summer.",
+    "honors": [
+      "NAS 132 - Astronomy II",
+      "CSC 110 - Introduction to Computing in C++",
+      "PHI 101 - Introduction to Philosophy I",
+      "SOC 201 - Introduction to Sociology (AUDIT)"
+    ]
+  },
+  {
+    "institution": "Hampton University",
+    "slug": "hampton-university-summer-2011",
+    "degree": "Dual Enrollment - Zoology & Calculus",
+    "field": "",
+    "logo": "/images/organizations/hampton-university.png",
+    "url": "https://hamptonu.edu/",
+    "startDate": "2011-05-01T00:00:00.000Z",
+    "endDate": "2011-08-12T00:00:00.000Z",
+    "description": "I took two courses over the summer of 2011 through Hampton University's dual enrollment program.",
+    "honors": [
+      "BIO 220 - General Zoology (A-)",
+      "MAT 130 - Calculus (AUDIT)"
+    ]
+  },
+  {
+    "institution": "Hampton University",
+    "slug": "hampton-university-summer-2014",
+    "degree": "Summer Course - Computer Programming II",
+    "field": "",
+    "logo": "/images/organizations/hampton-university.png",
+    "url": "https://hamptonu.edu/",
+    "startDate": "2014-06-01T00:00:00.000Z",
+    "endDate": "2014-08-01T00:00:00.000Z",
+    "description": "Took Programming II over the summer.",
+    "honors": [
+      "CSC 152 - Computer Programming II"
+    ]
+  },
+  {
+    "institution": "Old Dominion University",
+    "slug": "old-dominion-university-summer-2014",
+    "degree": "Dual Enrollment - Calculus II",
+    "field": "",
+    "logo": "/images/organizations/old-dominion-university.png",
+    "url": "https://odu.edu/",
+    "startDate": "2014-07-01T00:00:00.000Z",
+    "endDate": "2014-08-01T00:00:00.000Z",
+    "description": "Took Calculus II at Old Dominion University during summer 2014 through their dual enrollment program.\n",
+    "honors": [
+      "MATH 212 - Calculus II"
+    ]
+  },
+  {
+    "institution": "Hampton University",
+    "slug": "hampton-university",
+    "degree": "Bachelor of Science in Computer Science",
+    "field": "Computer Science",
+    "logo": "/images/organizations/hampton-university.png",
+    "url": "https://hamptonu.edu/",
+    "startDate": "2014-01-12T00:00:00.000Z",
+    "endDate": "2016-05-04T00:00:00.000Z",
+    "description": "Graduated Summa Cum Laude. Full-ride merit scholarship. Top GPA in computer science department. Dean's List. Awarded multiple conference scholarships.",
+    "honors": [
+      "Summa Cum Laude",
+      "Highest GPA in CS Department (3.54)",
+      "142 credits completed (50 from dual enrollment/AP)",
+      "Dean's List - 2014, 2015, 2016",
+      "Full-ride merit scholarship",
+      "STEM Bridge Scholarship (Virginia Space Grant Consortium)",
+      "Top Undergraduate Departmental Award",
+      "ACM@HU Student Chapter (Treasurer & Web Master)",
+      "Google Scholarship for ACM Richard Tapia Conference",
+      "AAAI Conference Scholarship",
+      "STARS Leadership Corps (Peer Tutor & Mentor)",
+      "Upsilon Pi Epsilon Honor Society",
+      "Golden Key International Honour Society (Top 15%)"
+    ]
+  },
+  {
+    "institution": "Jacobs University Bremen",
+    "slug": "jacobs-university-bremen",
+    "degree": "Study Abroad - Computer Science",
+    "field": "Computer Science",
+    "logo": "/images/organizations/jacobs-university-bremen.png",
+    "url": "https://www.jacobs-university.de/",
+    "startDate": "2013-08-27T00:00:00.000Z",
+    "endDate": "2013-12-22T00:00:00.000Z",
+    "description": "Studied abroad at Jacobs University, Bremen. Earned merit scholarship, joined CS club, excelled in courses. Featured in student newspaper. 🎓",
+    "honors": [
+      "Merit-based scholarship",
+      "Computer Science Club member",
+      "Featured poem in Pulse of the World student newspaper",
+      "Courses: Single Variable Calculus, General CS I, Computer Architecture, Programming in Python I, General Biology/Neuroscience I"
+    ]
+  },
+  {
+    "institution": "Cornell Tech",
+    "slug": "cornell-tech",
+    "degree": "Master of Engineering in Computer Science",
+    "field": "Computer Science",
+    "logo": "/images/organizations/cornell-tech.png",
+    "url": "https://tech.cornell.edu/",
+    "startDate": "2016-08-23T00:00:00.000Z",
+    "endDate": "2017-05-23T00:00:00.000Z",
+    "description": "Led development at Cornell Tech with NY Times on commenter diversity. Built Mora startup. Excelled in CS topics. Simons Fellow.",
+    "honors": [
+      "James H. and Marilyn H. Simons Graduate Fellow (merit scholarship covering 25% of tuition)",
+      "Lead developer for NY Times collaboration on commenter diversity (Product Studio)",
+      "Built Mora startup for foster care analytics (Startup Studio)",
+      "Selected for Cornell Tech Student Panel for prospective students",
+      "Best Presentation in Grizzly Room (Product Studio Sprint 3)",
+      "WiTNY (Women in Technology and Entrepreneurship in New York)",
+      "Coursework in HCI & Design, Connective Media, Privacy in the Digital Age, Product Management, Security & Privacy"
+    ]
+  }
+]

@@ -1,26 +1,116 @@
 @import "tailwindcss";
 
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Colors — warm navy/horchata palette */
+  --color-navy-50: #f0f1f5;
+  --color-navy-100: #d9dce6;
+  --color-navy-200: #b3b9cd;
+  --color-navy-300: #8d96b4;
+  --color-navy-400: #67739b;
+  --color-navy-500: #4a5578;
+  --color-navy-600: #3b4461;
+  --color-navy-700: #2c334a;
+  --color-navy-800: #1e2233;
+  --color-navy-900: #141726;
+  --color-navy-950: #0b0d17;
+
+  --color-horchata-50: #fdf8f3;
+  --color-horchata-100: #f9ede0;
+  --color-horchata-200: #f3dbc1;
+  --color-horchata-300: #ecc9a2;
+  --color-horchata-400: #e5b783;
+  --color-horchata-500: #dfa564;
+  --color-horchata-600: #c98e4e;
+  --color-horchata-700: #a6743f;
+  --color-horchata-800: #835b31;
+  --color-horchata-900: #604223;
+  --color-horchata-950: #3d2a16;
+
+  --color-accent: #e5b783;
+  --color-accent-dark: #c98e4e;
+
+  /* Typography — Latina Essential for everything */
+  --font-latina: "Latina Essential", sans-serif;
+  --font-cabin: "Cabin", sans-serif;
+  --font-sans: var(--font-latina);
+
+  /* Font size scale — 20px minimum baseline, aggressive heading scale */
+  --text-xs: 1.25rem;         /* 20px (floor) — dates, meta, badges */
+  --text-xs--line-height: 1.75rem;
+  --text-sm: 1.25rem;         /* 20px (floor) — card body, captions */
+  --text-sm--line-height: 1.75rem;
+  --text-base: 1.375rem;      /* 22px — standard body text */
+  --text-base--line-height: 2rem;
+  --text-lg: 1.75rem;         /* 28px — card titles, sub-headings */
+  --text-lg--line-height: 2.25rem;
+  --text-xl: 2rem;            /* 32px — section titles */
+  --text-xl--line-height: 2.5rem;
+  --text-2xl: 2.375rem;       /* 38px — page sub-headings */
+  --text-2xl--line-height: 2.875rem;
+  --text-3xl: 2.875rem;       /* 46px — page titles */
+  --text-3xl--line-height: 3.375rem;
+  --text-4xl: 3.5rem;         /* 56px — hero headings */
+  --text-4xl--line-height: 4rem;
+  --text-5xl: 4.25rem;        /* 68px — large hero text */
+  --text-5xl--line-height: 4.75rem;
+
+  /* Spacing / sizing tokens */
+  --container-max: 1200px;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fdf8f3;
+  --foreground: #1e2233;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #141726;
+  --foreground: #f9ede0;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-latina);
+}
+
+/* Ensure inputs are at least 16px to prevent iOS zoom */
+input, textarea, select {
+  font-size: max(1rem, inherit);
+}
+
+/* Prose overrides for blog posts */
+.prose {
+  --tw-prose-body: var(--foreground);
+  --tw-prose-headings: var(--foreground);
+  --tw-prose-links: var(--color-horchata-600);
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--color-horchata-500);
+  outline-offset: 2px;
 }

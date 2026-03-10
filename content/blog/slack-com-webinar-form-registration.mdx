@@ -1,0 +1,30 @@
+---
+title: "Slack.com Webinar Form Registration"
+slug: "slack-com-webinar-form-registration"
+date: "2022-02-09"
+excerpt: "I was tasked with revamping the webinar form registration flow on Slack.com. This was my last project at Slack."
+featuredImage: "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f49b49fa19df883351c_Slack.com-Webinar-Registration.png"
+categories: ["portfolio"]
+tags: ["code-insights"]
+organizations: ["slack"]
+skills: []
+source: "Webflow"
+---
+
+Previously, we would show a button redirecting the user to an ON24-hosted event page where the user could fill in the info to register for a webinar.
+
+The goal was to revamp this flow and have the user flow to register for a webinar be baked into Slack.com directly, so it was more white-labeled and streamlined and ideally lead to a high conversion rate on signups.
+
+- Technologies used: Hack, Less.
+- Integrated the [ON24 REST API](https://on24support.force.com/Support/s/article/Connect-ON24-REST-API) on the backend to pass in form field data to Salesforce and ON24 databases
+- Integrated with [AddEvent API](https://www.addevent.com/documentation/events-api) to generate calendar event links
+- Added ability to modify registration
+
+## Preview
+
+Example webinar
+![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f52b49fa1552a833539_Slack-101-How-to-use-Slack-Slack-1-666x1024.png)
+Example, with form filled out
+![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f49b49fa12e76833523_Screenshot-2022-11-07-at-9.32.20-PM-370x1024.png)
+Once the form is filled out, the user is redirected to the same page with the form replaced with the confirmation dialog.
+![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f49b49fa12ca8833522_Screenshot-2022-11-07-at-9.32.30-PM-614x1024.png)

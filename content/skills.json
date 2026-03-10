@@ -1,0 +1,121 @@
+[
+  {
+    "name": "Engineering Management",
+    "slug": "engineering-management",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Angular",
+    "slug": "angular",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "React",
+    "slug": "react",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Teaching",
+    "slug": "teaching",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Web Design",
+    "slug": "web-design",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "WordPress",
+    "slug": "wordpress",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Branding",
+    "slug": "branding",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Design Systems",
+    "slug": "design-systems",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Chrome Dev Tools",
+    "slug": "chrome-dev-tools",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "CSS",
+    "slug": "css",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "HTML",
+    "slug": "html",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "TypeScript",
+    "slug": "typescript",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Real Estate Management",
+    "slug": "real-estate-management",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Interviewing",
+    "slug": "interviewing",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Mentoring",
+    "slug": "mentoring",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "JavaScript",
+    "slug": "javascript",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Hack",
+    "slug": "hack",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  }
+]

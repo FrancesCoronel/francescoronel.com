@@ -1,0 +1,254 @@
+---
+title: "Pluralsight LIVE 2020"
+slug: "pluralsight-live-2020"
+date: "2020-10-16"
+excerpt: "I was invited back to the Pluralsight LIVE event 2020 as a speaker with my topic being \"The Unexpecting Beauty & Complexity of Web Forms.\""
+featuredImage: "https://cdn.prod.website-files.com/63b0b035359373d0cc473202/63b28f3d08650b4c06d4c89f_Pluralsight-LIVE-2020-1.png"
+categories: ["events","speaking"]
+tags: ["event-recap"]
+organizations: ["pluralsight", "slack"]
+skills: []
+source: "Webflow"
+---
+
+I was invited back to the[ Pluralsight LIVE event 2020](https://www.pluralsight.com/live) as a speaker, where I provided a pre-recorded presentation on "The Unexpecting Beauty & Complexity of Web Forms."
+
+## Table of contents
+
+- [Overview](#h-overview)
+- [Video](#h-video)
+- [PDF](#h-pdf)
+- [Images](#h-images)
+- [Transcript](#h-transcript)
+- [Hello Pluralsight!](#hello-pluralsight)
+- [First, an overview of forms on Slack.com](#first-an-overview-of-forms-on-slack-com)
+- [Essential Features for Forms](#essential-features-for-forms)
+- [HTML Attributes 📝](#html-attributes)
+- [Data Analytics](#data-analytics)
+- [Success State](#success-state)
+- [i18n & Localization](#i18n-localization)
+- [Validating Fields](#validating-fields)
+- [Rate Limiting](#rate-limiting)
+- [Custom Routing](#custom-routing)
+- [Aftermath](#aftermath)
+- [Testing](#testing)
+- [Small Improvements ️](#small-improvements)
+- [Experiments](#experiments)
+- [Closing Words](#closing-words)
+- [Thank You](#thank-you)
+
+## Overview
+
+Together, we’ll explore the must-add features Slack uses to build web forms that generate leads for successful deals and reflect on the impact they’ve had.
+
+## Video
+
+- [Pluralsight Live 2020](https://www.pluralsight.com/courses/pluralsight-live-2020-web-forms)
+
+https://videopress.com/v/x84xKnTu?resizeToParent=true&cover=true&posterUrl=https%3A%2F%2Fvideos.files.wordpress.com%2Fx84xKnTu%2Fvideo-and-perosn_mp4.scrubthumb-1.jpg&preloadContent=metadata&useAverageColor=true
+
+Pluralsight Live 2020 Video
+
+## PDF
+
+[The Unsuspecting Beauty & Complexity of Web FormsDownload](https://francescoronel.com/wp-content/uploads/2020/10/The-Unsuspecting-Beauty-Complexity-of-Web-Forms.pdf)
+
+[The Unsuspecting Beauty & Complexity of Web Forms - Presenter NotesDownload](https://francescoronel.com/wp-content/uploads/2020/10/The-Unsuspecting-Beauty-Complexity-of-Web-Forms-Presenter-Notes.pdf)
+
+## Images
+![](https://cdn.prod.website-files.com/63b0b035359373d0cc473202/63b28f3e08650b2cf2d4c8a4_Screen-Shot-2020-10-13-at-5.24.00-PM-1024x356.png)![](https://cdn.prod.website-files.com/63b0b035359373d0cc473202/63b28f3d08650b2dadd4c8a1_Screen-Shot-2020-10-13-at-5.24.16-PM-1024x597.png)![](https://cdn.prod.website-files.com/63b0b035359373d0cc473202/63b28f3d08650b00dad4c8a0_Screen-Shot-2020-10-06-at-11.50.51-AM-1024x270.png)
+## Transcript
+
+### Hello Pluralsight!
+
+My name is Frances Coronel and I'm a software engineer on the web team at Slack where my goal is to make your work life simpler, more pleasant and more productive.
+
+If you're not familiar with Slack, it's basically this collaboration hub that acts like your new HQ bringing all the right people, information, and tools together to get work done.
+
+In this talk, I'll be deep diving into the unsuspecting beauty and complexity of web forms! Huzzah!
+
+Now, a form on a website may seem like a pretty trifling thing. A couple of text fields, a submit button, and you’re good to go, right? #lifeisgood
+
+**Wrong! Forms are beautiful and complex creatures.**
+
+You must dive beneath the surface and explore all the beautiful features that can help create a truly powerful form/lead generator/moneymaker.
+
+Together, we’ll explore the **must-add features** Slack uses to build web forms that generate leads for successful deals and reflect on the **impact** they’ve had.
+
+### First, an overview of forms on [Slack.com](http://Slack.com)
+
+Forms are part of a bigger picture at Slack: a massive pipeline that brings in sales, marketing, customer support, and engineering all under one umbrella.
+
+Hundreds of users submit our forms every week. Hundreds also try to spam us, but we’re pretty good at blocking them (more on security features later).
+
+After you submit a form on [Slack.com](http://Slack.com), the submission gets routed to the proper channel — Salesforce or Zendesk — depending on the info you provided.
+
+If it arrives in Zendesk, it’s typically a customer support inquiry and our fantastic support team will work to make sure you get an answer ASAP.
+
+If it’s a sales lead, it gets piped to Salesforce where it’s assigned to a relevant sales rep from across the world (we’re global after all!). We have a dedicated Salesforce team that set us up with custom workflows for these incoming leads. Our sales team will then work with you to discuss how we can make your working life simpler, more pleasant, and more productive. You’ll realize: Wow, Slack is fantastic! How did I live without it? And that’s when you’ll know you’re at the end of the “Contact Sales” funnel.
+
+As part of the Customer Acquisition team, I’ve helped build out the “Contact Sales” form, which has accounted for almost half of all leads from conversational marketing efforts since its launch in December 2018. Similarly, I worked on the partner referral and contact forms, which have driven millions in revenue from enterprise clients.
+
+From these efforts, I’ve become the official form expert on my team and want to pay it forward by sharing my knowledge.
+
+### **Essential Features for Forms**
+
+Let’s dive into some must-have features for any web form, especially those meant for lead generation:
+
+- HTML Attributes
+- Data Analytics
+- Success State
+- i18n & Localization
+- Field Validation
+- Rate Limiting
+- Custom Routing
+
+### HTML Attributes 📝
+
+[According to MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input), the <input> element is one of the most powerful and sophisticated in HTML due to the sheer number of input types and attributes. Much like Netflix, it looks simple but there’s a lot going on in the background.
+
+Here’s a sample input field we use to capture a potential customers email address in the Contact Sales form:
+
+Let’s explore each of the ten attributes I’ve configured here to better understand them:
+
+- class — We use Spacesuit as our design system on [Slack.com](http://slack.com/), which uses classes to define how elements are presented.
+- required — Some fields are always going to be needed, others not so much. If a field is marked as required, the user can’t submit the form unless they fill out the field.
+- type — This is the type of element to display and how the input behaves depends heavily on this. There are many options and it’s essential to choose the most relevant one based on the type of data you’re trying to accept. Only use text if it makes the most sense.
+- id —We use this to query the field with JavaScript. Remember, every field should have a unique id!
+- name — This attribute acts as the key for the field data we send to the server. Our Hack backend will use it to find and validate the field so it can be sent to the proper channel via the Salesforce & Zendesk APIs.
+- value — This attribute lets us prefill input fields when we know something about the user already, like their email address if they’re already signed into Slack.
+- autocomplete — Okay, so maybe they’re not logged in. We can still help users fill out the form faster by using the autocomplete feature built into the browser. You can test this out in Chrome using chrome://settings/addresses.
+- placeholder — This is what we show by default to help the user understand what should be submitted, like [example@acme.com](mailto:example@acme.com).
+- data-value-missing — This is where you can define a custom error message when the value provided is missing. That way, even if you don’t have any frontend validation setup with JS, you can customize your error messages through HTML5. If it’s not a required field, this error message won’t appear even if configured because it’s not a blocker to submitting the form.
+- data-value-invalid — Similar to the previous attribute, this customizes the error messaging if the input is invalid. You can do this via JS, but HTML5 automatically does some of this based on the type of attribute you defined earlier. Since we set the field type attribute as an email, any other kind of data like a URL will be marked as invalid.
+
+### **Data Analytics**
+
+On your team, you may have someone whose job is to use data collected from your forms to ideate on strategies to better the user experience and investigate potential leaks in the sales funnel.
+
+If you dive into a subset of form submissions, you can look at the data and better understand the current user experience. For example, let’s say that of every 100 users that submit your form: 80 succeed, 10 fail to fill out the company size field and 10 abandon the form mid-way.
+
+Of the 80 that succeed, only 20 submissions end up as qualified leads for sales, and 2 of those qualified leads become closed deals, indicating that the conversion rate from all submissions is about 2% or 10% if looking at just qualified leads.
+
+The only way to have a high-level overview of the pipeline is by configuring all your form fields with your company’s data analytics platform of choice. This will pipe information back to you as the customer is filling in the form, not just when they’ve submitted it. At Slack, we have our own data warehouse that contains a historical record of events like these and supplemental information we’ve optimized for complex analytics over large amounts of data.
+
+The failed submissions can be analyzed, and we can draw conclusions to try and close the gap, such as:
+
+- Having more intuitive error messages
+- Tweaking the design to make fields easier to fill out
+- Dropping a required field if many users struggle with it
+- Refining customer support or sales workflows for faster response times
+
+### **Success State**
+
+Imagine submitting a form but nothing happens. That would drive me crazy! Maybe you’d try spamming the submit button ten times before giving up and forgetting about it. That’s why it’s crucial to have a success state that makes it clear to the user that we got their submission and they can move on with their day.
+
+When someone fills out the sales form, we redirect them to a separate thank you page and even include some customized text if they have cookies enabled.
+
+In the future, we plan to take this one step further and send customized emails to each lead after they submit.
+
+### **i18n & Localization**
+
+Slack is global, which means our forms need to reflect that with dedicated localization practices.
+
+[Internationalization](https://www.w3.org/International/questions/qa-i18n), or “i18n”, is the process of building [Slack.com](http://Slack.com) to support multiple languages. [Localization](https://slackhq.com/how-we-localize-slack) is the process of adapting [Slack.com](http://Slack.com) for a specific region or language by translating text or adding locale-specific content. Internationalization enables localization to happen.
+
+Because i18n is built into our web application, I can create just one form that will then be translated into all nine languages we support. We translate the text across the various locales that [Slack.com](http://Slack.com) supports and adapt our imagery and layout for specific regions:
+
+- English (US): [https://slack.com/contact-sales](https://slack.com/contact-sales)
+- Spanish (Latin America): [https://slack.com/intl/es-la/contact-sales](https://slack.com/intl/es-la/contact-sales)
+- Portuguese: [https://slack.com/intl/pt-br/contact-sales](https://slack.com/intl/pt-br/contact-sales)
+- German: [https://slack.com/intl/de-de/contact-sales](https://slack.com/intl/de-de/contact-sales)
+- Spanish (Spain): [https://slack.com/intl/es-es/contact-sales](https://slack.com/intl/es-es/contact-sales)
+- French: [https://slack.com/intl/fr-fr/contact-sales](https://slack.com/intl/fr-fr/contact-sales)
+- English (UK): [https://slack.com/intl/en-gb/contact-sales](https://slack.com/intl/en-gb/contact-sales)
+- Japanese: [https://slack.com/intl/ja-jp/contact-sales](https://slack.com/intl/ja-jp/contact-sales)
+- English (India): [https://slack.com/intl/en-in/contact-sales](https://slack.com/intl/en-in/contact-sales)
+
+For example, in Japan, we show our Japanese customer logos and also switch the first name and last name fields so that the last name or family name comes first, as is customary in Japan.
+
+### **Validating Fields**
+
+You’ve probably interacted with at least one form today already. Maybe it was a simple form like a user login or a more complex form like “Become a Slack Partner,” which is the most extensive form on [Slack.com](http://Slack.com) with anywhere from 18 to 26 required fields. When you were filling out the form, maybe you got messages like this “This field is required,” “Please enter a valid email,” “Please select at least one region,” “Please agree to the Terms and Conditions”, etc.
+
+Isn’t it frustrating when forms don’t give immediate feedback? We’ve all been through this: you carefully fill in every field and click submit only to be thrown back to the start. Thankfully, we can add instant field validation so users don’t have to submit before they see potential error messages.
+
+All these forms pass data to a server, but before that data can be submitted it’s vital to ensure all the necessary fields are filled out and in the correct format. Client-side or frontend form validation comes in very handy here.
+
+By setting up form validation, your users will have a less stressful experience: the form will catch invalid data and let them know right then and there. If we wait until the data reaches our server before letting them know, there’s a considerable delay in that feedback. There’s the time it takes for a round trip to your server, and the possibility that your user has scrolled past the field with the problem.
+
+The worst-case scenario is when you try to fill out a form with no validation, and there’s no error to tell you what you’ve done wrong. There are two different types of client-side validation you can set up: built-in form through HTML5 (like the kind we covered above) and JavaScript.
+
+For security measures, you shouldn’t rely on client-side validation alone. Server-side validation is important since malicious users can easily disable JavaScript and bypass the client.
+
+Things get complicated when you have to set up conditional validation, meaning you configure the JavaScript for the form to require specific fields only when others are selected. To handle this gracefully it’s ideal to have clean, well documented, and [DRY](https://www.wikiwand.com/en/Don%27t_repeat_yourself) HTML code.
+
+### **Rate Limiting**
+
+Rate limiting controls the amount of traffic to or from a network. We configure it so that any user who tries to fill out our forms more than a few times per minute from the same IP address will have to fill out a [reCAPTCHA](https://www.google.com/recaptcha/about/).
+
+reCAPTCHA uses an advanced risk analysis engine and adaptive challenges to keep automated software from engaging in abusive activities.
+
+### **Custom Routing**
+
+Of course, all our form submissions pipe directly into a Slack channel (because duh), but that’s just child’s play! With the Contact Sales form, we go a step further and pipe the submission to Zendesk or Salesforce too, depending on the input we’ve received from the user.
+
+We also include relevant metadata such as their Slack user ID and team ID if a user is already logged in, Zendesk tags, the particular ad campaign they came from if applicable, and anything else we might find useful. This extra information helps our support team have better context as to where the user is coming from which leads to requests being solved faster.
+
+### **Aftermath**
+
+Okay, cool, so you’ve shipped a robust form. Now what? It turns out — a lot! This year, we had a large health company fighting COVID-19 upgrade to Slack’s plus plan in a multi-million dollar deal. Guess where they reached out first? The Contact Sales form!
+
+This form attracts ~20K visits in any given month and accounts for 25% to 35% of all our leads. Some months, it accounts for almost 50%!
+
+Of course, the numbers go both ways. It’s not all sunshine and rainbows. What happens if a user is struggling to submit the form or it’s broken even for a minute? How many hundreds of potential leads, and therefore thousands of potential dollars, have we lost?
+
+Clearly we need to make sure our forms are bulletproof before they go live. How do we do this?
+
+### **Testing**
+
+The best way to quell anxiety as a developer is to test, test, and test some more. Become good friends with your QA team — shout out to Ilaria and Natalie! After all, they’re the ones with eagle eyes and they’ll be able to help you catch any nasty bugs before they hit production. Eat those bugs up!
+
+If you don’t have a dedicated QA team, you can create a checklist [like this one](https://www.qed42.com/blog/checklist-web-form-testing) to perform manual testing yourself.
+
+#### **Small Improvements ️**
+
+**With great power comes great responsibility,** so after you launch your form it’s time to focus on maintaining it and making small improvements that can have a massive impact.
+
+Don’t just deploy your new form, celebrate, and be done with it. Pump your fist in the air, dance to Drake’s latest hit, then immediately set up a triage channel so relevant stakeholders from across support, sales, marketing, and other relevant departments can provide feedback, flag potential bugs, and ideate on how to make improvements.
+
+For example, if a user is reaching out to us with a product question, we route them to our Customer Success (CS) team. This team handles hundreds of requests via Zendesk every day, so any useful info we can provide them about a form submission can significantly decrease back and forth as they follow up with a user. We got a request to include a tag in the submission to Zendesk if the user didn’t provide enough additional details. This allowed the CS team to create an automated workflow to help get back to folks faster.
+
+#### **Experiments**
+
+As you maintain the form, you can also try out different things through A/B tests to see what yields the best result. After all, an improvement that makes it easier for 10% of users to submit the form faster can lead to a 10% increase in contract value generated.
+
+Below is an experiment we ran in [Optimizely](https://www.optimizely.com/) (a leading progressive delivery & experimentation platform) to test if calling out required fields with asterisks will help with the conversion rate. Turns out, it does so we’ll be making that change soon!
+
+### **Closing Words**
+
+So go forth and build your forms, friends.
+
+In summary, when building million-dollar forms, you want to make sure you:
+
+- Set up your HTML attributes to capture and validate all the necessary information you need from your users
+- Analyze data to ensure a seamless user experience
+- Create a useful success state
+- Localize your content for different international audiences
+- Prevent spam with rate-limiting
+- Customize where submissions go depending on the input
+- Test, test, test
+- Continuously iterate
+- Experiment with small improvements
+
+After all, there is no gold pot at the end of the rainbow unless you made the rainbow. 📝 💰 🌈
+
+Me after shipping a form on [Slack.com](http://slack.com/)
+
+### Thank You
+
+And that's that!
+
+I hope this helps you create more effective forms that leads to a great experience for your users.
+
+Ultimately, the best experience is when you don't have to even have to give it a second thought and can just click submit.

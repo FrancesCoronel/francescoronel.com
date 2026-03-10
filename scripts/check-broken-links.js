@@ -1,0 +1,206 @@
+#!/usr/bin/env node
+
+/**
+ * Checks for broken internal links across all MDX blog posts and JSON data files.
+ * Validates that:
+ * - Internal hrefs (starting with /) point to existing routes
+ * - Organization slugs in blog frontmatter exist in organizations.json
+ * - Category/tag slugs in frontmatter exist in their respective JSON files
+ *
+ * Usage: node scripts/check-broken-links.js
+ * Exit code 1 if broken links found (for CI use)
+ */
+
+const fs = require("fs");
+const path = require("path");
+
+const contentDir = path.join(__dirname, "..", "content");
+const appDir = path.join(__dirname, "..", "app");
+
+// Load all known slugs
+const orgs = JSON.parse(
+  fs.readFileSync(path.join(contentDir, "organizations.json"), "utf8")
+);
+const categories = JSON.parse(
+  fs.readFileSync(path.join(contentDir, "categories.json"), "utf8")
+);
+const tags = JSON.parse(
+  fs.readFileSync(path.join(contentDir, "tags.json"), "utf8")
+);
+const testimonials = JSON.parse(
+  fs.readFileSync(path.join(contentDir, "testimonials.json"), "utf8")
+);
+const experiences = JSON.parse(
+  fs.readFileSync(path.join(contentDir, "experience.json"), "utf8")
+);
+const education = JSON.parse(
+  fs.readFileSync(path.join(contentDir, "education.json"), "utf8")
+);
+const awards = JSON.parse(
+  fs.readFileSync(path.join(contentDir, "awards.json"), "utf8")
+);
+
+const orgSlugs = new Set(orgs.map((o) => o.slug));
+const categorySlugs = new Set(categories.map((c) => c.slug));
+const tagSlugs = new Set(tags.map((t) => t.slug));
+
+// Load blog post slugs
+const blogDir = path.join(contentDir, "blog");
+const blogFiles = fs.readdirSync(blogDir).filter((f) => f.endsWith(".mdx"));
+const blogSlugs = new Set(blogFiles.map((f) => f.replace(".mdx", "")));
+
+// Build set of valid routes
+const validRoutes = new Set([
+  "/",
+  "/about",
+  "/blog",
+  "/contact",
+  "/speaking",
+  "/mentoring",
+  "/testimonials",
+  "/organizations",
+  "/categories",
+  "/tags",
+  "/uses",
+  "/feed",
+  "/sitemap.xml",
+  "/for-llms",
+  "/design-system",
+  "/awards",
+  "/experience",
+  "/education",
+]);
+
+// Add dynamic routes
+for (const slug of blogSlugs) validRoutes.add(`/blog/${slug}`);
+for (const slug of orgSlugs) validRoutes.add(`/organizations/${slug}`);
+for (const slug of categorySlugs) validRoutes.add(`/categories/${slug}`);
+for (const slug of tagSlugs) validRoutes.add(`/tags/${slug}`);
+for (const exp of experiences) validRoutes.add(`/experience/${exp.slug}`);
+for (const edu of education) validRoutes.add(`/education/${edu.slug}`);
+for (const award of awards) validRoutes.add(`/awards/${award.slug}`);
+
+const errors = [];
+
+// Check blog post frontmatter references
+for (const f of blogFiles) {
+  const content = fs.readFileSync(path.join(blogDir, f), "utf8");
+  const fm = content.match(/^---\n([\s\S]*?)\n---/);
+  if (!fm) continue;
+
+  const slug = f.replace(".mdx", "");
+
+  // Check organizations
+  const orgMatch = fm[1].match(/^organizations:\s*\[(.*?)\]/m);
+  if (orgMatch) {
+    const orgList = orgMatch[1]
+      .split(",")
+      .map((s) => s.trim().replace(/"/g, ""))
+      .filter(Boolean);
+    for (const org of orgList) {
+      if (!orgSlugs.has(org)) {
+        errors.push({
+          file: `content/blog/${f}`,
+          type: "organization",
+          ref: org,
+          message: `Organization slug "${org}" not found in organizations.json`,
+        });
+      }
+    }
+  }
+
+  // Check categories
+  const catMatch = fm[1].match(/^categories:\s*\[(.*?)\]/m);
+  if (catMatch) {
+    const catList = catMatch[1]
+      .split(",")
+      .map((s) => s.trim().replace(/"/g, ""))
+      .filter(Boolean);
+    for (const cat of catList) {
+      if (!categorySlugs.has(cat)) {
+        errors.push({
+          file: `content/blog/${f}`,
+          type: "category",
+          ref: cat,
+          message: `Category slug "${cat}" not found in categories.json`,
+        });
+      }
+    }
+  }
+
+  // Check internal links in body (only page routes, not images or protocol-relative URLs)
+  const body = content.slice(fm[0].length);
+  const linkPattern = /\[.*?\]\((\/[^)]+)\)/g;
+  let match;
+  while ((match = linkPattern.exec(body)) !== null) {
+    const raw = match[1].trim();
+    // Skip protocol-relative URLs (//example.com)
+    if (raw.startsWith("//")) continue;
+    // Skip image/asset paths
+    if (raw.startsWith("/images/")) continue;
+    // Skip script embeds and other static assets
+    if (raw.match(/\.(js|css|jpg|jpeg|png|gif|svg|webp|pdf|mp4|mp3)(\?|$|")/i)) continue;
+    const href = raw.split("#")[0].split("?")[0]; // strip hash and query
+    if (href && !validRoutes.has(href)) {
+      errors.push({
+        file: `content/blog/${f}`,
+        type: "internal-link",
+        ref: href,
+        message: `Internal link "${href}" does not match any known route`,
+      });
+    }
+  }
+}
+
+// Check JSON data cross-references (testimonial orgs are informational — warn only)
+const warnings = [];
+for (const testimonial of testimonials) {
+  if (testimonial.organization) {
+    const orgExists = orgs.some(
+      (o) =>
+        o.name === testimonial.organization ||
+        o.slug === testimonial.organization
+    );
+    if (!orgExists) {
+      warnings.push(
+        `Testimonial by "${testimonial.name}" references external organization "${testimonial.organization}"`
+      );
+    }
+  }
+}
+
+// Report results
+if (warnings.length > 0) {
+  console.log(`Warnings (${warnings.length}):`);
+  for (const w of warnings) {
+    console.log(`  ⚠ ${w}`);
+  }
+  console.log("");
+}
+
+if (errors.length === 0) {
+  console.log("No broken links found!");
+  console.log(
+    `Checked: ${blogFiles.length} blog posts, ${validRoutes.size} valid routes`
+  );
+  process.exit(0);
+} else {
+  console.log(`Found ${errors.length} broken link(s):\n`);
+
+  // Group by type
+  const byType = {};
+  for (const e of errors) {
+    if (!byType[e.type]) byType[e.type] = [];
+    byType[e.type].push(e);
+  }
+
+  for (const [type, typeErrors] of Object.entries(byType)) {
+    console.log(`=== ${type.toUpperCase()} (${typeErrors.length}) ===`);
+    for (const e of typeErrors) {
+      console.log(`  ${e.file}: ${e.message}`);
+    }
+    console.log("");
+  }
+
+  process.exit(1);
+}

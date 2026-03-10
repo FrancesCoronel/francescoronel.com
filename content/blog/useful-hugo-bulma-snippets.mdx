@@ -1,0 +1,448 @@
+---
+title: "Useful Hugo & Bulma Snippets"
+slug: "useful-hugo-bulma-snippets"
+date: "2019-03-10"
+excerpt: ""
+featuredImage: "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28ef52091f1db0e728ff8_RFitS9U.png"
+categories: ["blog"]
+tags: ["developer-tips"]
+organizations: []
+skills: []
+source: "Webflow"
+---
+
+## A couple of useful Hugo snippets used with the Bulma CSS framework. 🧠
+
+## Speaking Engagements
+
+<!-- Speaking Category -->
+
+\{\{ $speaking := ($.Site. Taxonomies.categories.speaking).Pages \}\}
+
+<!-- Upcoming Events -->
+
+\{\{ $upcomingEvents := where $speaking "Date" "ge" now \}\}
+
+<!-- Past Events -->
+
+\{\{ $pastEvents := where $speaking "Date" "lt" now \}\}
+
+<!-- Show Upcoming Events -->
+
+\{\{ if (len $upcomingEvents) "ge" 1 \}\}
+
+<h2>
+
+  ⏳️ \{\{ len $upcomingEvents \}\} Upcoming \{\{ if gt (len $upcomingEvents) 1
+
+  \}\}Events\{\{ else \}\}Event\{\{ end \}\}
+
+</h2>
+
+<div>
+
+  \{\{ range $upcomingEvents. ByDate. Reverse \}\}
+
+<div
+
+>
+
+    \{\{ partial "card.html" . \}\}
+
+</div>
+
+  \{\{ end \}\}
+
+</div>
+
+\{\{ end \}\}
+
+<!-- Show Past Events -->
+
+<h2>⌛️ \{\{ len $pastEvents \}\} Past Events</h2>
+
+<div>
+
+  \{\{ range $pastEvents. ByDate. Reverse \}\}
+
+<div
+
+>
+
+    \{\{ partial "card.html" . \}\}
+
+</div>
+
+  \{\{ end \}\}
+
+</div>
+
+## Archive
+
+\{\{ $regularPages := .Site. RegularPages \}\}
+
+<div>
+
+<h2>
+
+    ✒️ I've written about \{\{ len $regularPages \}\} different things so far.
+
+</h2>
+
+<!-- Pages -->
+
+  \{\{ range $regularPages. GroupByDate "2006" \}\}
+
+<!-- Line Separator - Year -->
+
+<!-- Check for No Date -->
+
+  \{\{ if not (eq .Key "0001") \}\}
+
+<!-- Year -->
+
+<h3>\{\{ .Key \}\}</h3>
+
+<!-- Table -->
+
+<table>
+
+<tbody>
+
+      \{\{ range .Pages \}\}
+
+<tr>
+
+<td>\{\{ dateFormat "January 2" .Date \}\}</td>
+
+<td><a href="\{\{ .RelPermalink \}\}">\{\{ .Title \}\}</a></td>
+
+</tr>
+
+      \{\{ end \}\}
+
+</tbody>
+
+</table>
+
+  \{\{ end \}\}
+
+<!-- End - Range - Year -->
+
+  \{\{ end \}\}
+
+<!-- End Message -->
+
+  \{\{ partial "content/list/end-message.html" . \}\}
+
+</div>
+
+## Navbar
+
+\{\{ $currentPage := . \}\}
+
+<nav role="navigation" aria-label="main navigation">
+
+<div>
+
+<!-- Brand -->
+
+<div>
+
+<!-- Logo -->
+
+<a href="\{\{ "/" | absLangURL \}\}">
+
+<img loading="lazy" data-src="/assets/img/logos/logo-square.png" src="/assets/img/logos/logo-square.png" height="128" alt="\{\{ .Title \}\}">
+
+</a>
+
+<!-- Left Icons -->
+
+<!-- Hidden on Desktop, Mobile Only -->
+
+<div>
+
+<div>
+
+          \{\{ range .Site. Menus.social \}\}
+
+<a href="\{\{ .Permalink \}\}" target="_blank" rel="noopener">
+
+            \{\{ if .Identifier \}\}<i alt="\{\{ .Name \}\}" title="\{\{ .Name \}\}"></i>\{\{ end \}\}
+
+</a>
+
+          \{\{ end \}\}
+
+</div>
+
+</div>
+
+<!-- Hamburger Menu -->
+
+<a role="button" aria-label="menu" aria-expanded="false" data-target="navMenu">
+
+<span aria-hidden="true"></span>
+
+<span aria-hidden="true"></span>
+
+<span aria-hidden="true"></span>
+
+</a>
+
+</div>
+
+<!-- Main Menu -->
+
+<div>
+
+<div>
+
+        \{\{ range .Site. Menus.main \}\}
+
+        \{\{ if .HasChildren \}\}
+
+<div>
+
+<a href="\{\{ .Permalink | relLangURL \}\}">
+
+            \{\{ if .Identifier \}\}<i alt="\{\{ .Name \}\}"></i> \{\{ end \}\}\{\{- .Name -\}\}
+
+</a>
+
+<div>
+
+            \{\{ range .Children \}\}
+
+<a href="\{\{ .Permalink | relLangURL \}\}">
+
+              \{\{ if .Identifier \}\}<i alt="\{\{ .Name \}\}"></i>\{\{ end \}\} \{\{ .Name \}\}
+
+</a>
+
+            \{\{ end \}\}
+
+</div>
+
+</div>
+
+        \{\{ else \}\}
+
+<a href="\{\{ .Permalink | absLangURL \}\}">
+
+          \{\{- if .Identifier -\}\}<i alt="\{\{ .Name \}\}"></i>\{\{- end -\}\} \{\{ .Name \}\}
+
+</a>
+
+        \{\{ end \}\}
+
+        \{\{ end \}\}
+
+</div>
+
+<!-- Social Icons -->
+
+<div>
+
+<div>
+
+<div>
+
+            \{\{ range .Site. Menus.social \}\}
+
+<a href="\{\{ .Permalink \}\}" target="_blank" rel="noopener">
+
+              \{\{ if .Identifier \}\}<i alt="\{\{ .Name \}\}" title="\{\{ .Name \}\}"></i>\{\{ end \}\}
+
+</a>
+
+            \{\{ end \}\}
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</nav>
+
+## Tags & Categories
+
+\{\{ if or (or (.Params.tags) (.Params.categories)) \}\}
+
+<!-- Taxonomy -->
+
+<div>
+
+<!-- Categories -->
+
+  \{\{ if .Params.categories \}\}
+
+<div>
+
+<h3><a href="/categories/"> 📂 \{\{ i18n "categories" \}\}</a></h3>
+
+<ul>
+
+      \{\{ range $category := .Params.categories \}\}
+
+<li>
+
+<a href="/categories/\{\{ $category | urlize \}\}/" title="\{\{ $category \}\}">
+
+          \{\{ $category \}\}
+
+</a>
+
+</li>
+
+      \{\{ end \}\}
+
+</ul>
+
+</div>
+
+  \{\{ end \}\}
+
+<!-- Tags -->
+
+  \{\{ if .Params.tags \}\}
+
+<div>
+
+<h3><a href="/tags/"> 📌 \{\{ i18n "tags" \}\}</a></h3>
+
+<ul>
+
+      \{\{ range $tag := .Params.tags \}\}
+
+<li>
+
+<a href="/tags/\{\{ $tag | urlize \}\}/" title="\{\{ $tag \}\}"> \{\{ $tag \}\} </a>
+
+</li>
+
+      \{\{ end \}\}
+
+</ul>
+
+</div>
+
+  \{\{ end \}\}
+
+</div>
+
+\{\{ end \}\}
+
+## SEO
+
+<!-- Series -->
+
+<!-- Add prefetch and prerender on section pages. Works especially well for articles or blog posts in a series -->
+
+\{\{ if .IsPage \}\}
+
+<!-- Previous Section -->
+
+\{\{ if .PrevInSection \}\}
+
+<link rel="prefetch" href="\{\{ .PrevInSection. Permalink \}\}" />
+
+<link rel="prerender" href="\{\{ .PrevInSection. Permalink \}\}" />
+
+<link rel="prev" href="\{\{ .PrevInSection. Permalink \}\}" /> \{\{ end \}\}
+
+<!-- Next Section -->
+
+\{\{ if .NextInSection \}\}
+
+<link rel="prefetch" href="\{\{ .NextInSection. Permalink \}\}" />
+
+<link rel="prerender" href="\{\{ .NextInSection. Permalink \}\}" />
+
+<link rel="next" href="\{\{ .NextInSection. Permalink \}\}" /> \{\{ end \}\} \{\{ end \}\}
+
+<!-- Canonical -->
+
+<link rel="canonical" href="\{\{ .Permalink | safeURL \}\}" />
+
+<!-- Alternative Output -->
+
+\{\{ range .AlternativeOutputFormats -\}\} \{\{ printf `<link
+
+  rel="%s"
+
+  type="%s"
+
+  href="%s"
+
+  title="%s"
+
+/>` .Rel .MediaType. Type .Permalink $.Site. Title | safeHTML \}\} \{\{ end -\}\}
+
+## Show Posts From Specific Category
+
+<!-- Variables -->
+
+\{\{ $blog := ($.Site. Taxonomies.categories.blog).Pages \}\}
+
+<!-- Blog -->
+
+<p>\{\{ len $blog\}\} blog posts written</p>
+
+<div>
+
+  \{\{ range $blog \}\} \{\{ if .Date. Before now \}\}
+
+<div
+
+>
+
+    \{\{ partial "card.html" . \}\}
+
+</div>
+
+  \{\{ end \}\} \{\{ end \}\}
+
+</div>
+
+## Table of Contents
+
+\{\{- if .Params.toc \}\}
+
+<aside>
+
+<p>Table of Contents</p>
+
+<div>
+
+    \{\{ .TableOfContents \}\}
+
+</div>
+
+</aside>
+
+\{\{- end \}\}
+
+## Param Date
+
+\{\{ $recDate := time .Params.recordingDate \}\}
+
+<!-- Recording Date -->
+
+\{\{- if .Params.recordingDate \}\}
+
+<p>
+
+<span>🎤</span>\{\{ if le $recDate now \}\}Recorded\{\{ else
+
+  \}\}Recording\{\{ end \}\} \{\{ dateFormat "January 2, 2006" .Params.recordingDate \}\}
+
+</p>
+
+\{\{- end \}\}

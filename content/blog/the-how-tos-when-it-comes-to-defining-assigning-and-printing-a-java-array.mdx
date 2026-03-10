@@ -1,0 +1,50 @@
+---
+title: "The How-Tos When It Comes To Defining, Assigning, And Printing A Java Array"
+slug: "the-how-tos-when-it-comes-to-defining-assigning-and-printing-a-java-array"
+date: "2014-08-09"
+excerpt: ""
+featuredImage: "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f052091f177ec729125_fi0RL37-1.jpeg"
+categories: ["blog"]
+tags: ["code-insights"]
+organizations: []
+skills: []
+source: "Webflow"
+---
+
+### How to define, assign, and print an array using Java. 🔃
+
+Defining an array (character type) of a size 3 called arraychar [] array = new char[10]Ask user to enter 10 characters and assign each of the characters into the arrayfor (int i = 0; i < array.length; i++)
+
+  array[i] = keyboard.next().charAt(0);Use the data in array to reverse a list called reverse so that the first element in the list called array is the last element in reversefor (int i = 0; i < array.length; i++)
+
+  reverse[reverse.length – i] = array[i];Write the first use way to use *for-loop* to print out all elements in the list called reversefor (int i = 0; i < reverse.length; i++)
+
+  System.out.print(reverse[i] + " " );Write the second use way to use *for-loop* to print out all elements in the list called reversefor (char value : reverse)
+
+  System.out.print(value + " ");Define a 3 by 4 floating point values array, called scoresdouble [][] scores = new double [3][4];Assign the value for each cell in the array called scores to columnIndex * 20 / rowIndexfor (int row = 0; row < scores.length; row++)
+
+  for (int col = 0; col < scores[row].length; col++)
+
+    scores[row][col] = col * 20 / (double) row;Print all the values in the array called scoresfor (int row = 0; row < scores.length; row++) \{
+
+  for (int col = 0; col < scores[row].length; col++)
+
+    System.out.print (scores[row][col] + "\t");
+
+  System.out.println();
+
+\}Write a findMax method which finds the maximum value in the data stored in scoresstatic double findMax(double [][] scores) \{
+
+  double max = scores[0][0];
+
+  for (int row = 0; row < scores.length; row++)
+
+    for (int col = 0; col < scores[row].length; col++)
+
+      if (scores[row][col] > max)
+
+        max = myScores[row][col];
+
+  return max;
+
+\}
