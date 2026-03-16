@@ -4,8 +4,9 @@ import { SessionsTable } from "@/components/ui/sessions-table";
 
 export const metadata: Metadata = buildMetadata({
   title: "Mentoring Sessions",
-  description: "Browse 820+ mentoring sessions with software engineers — filterable by year, type, and source.",
+  description: "Browse 738+ mentoring sessions with software engineers — filterable by year, type, and source.",
   path: "/mentoring/sessions",
+  robots: { index: false, follow: false },
 });
 
 export default function MentoringSessionsPage() {
@@ -18,7 +19,7 @@ export default function MentoringSessionsPage() {
         Sessions Log 🗂️
       </h1>
       <p className="mt-2 text-navy-500 dark:text-white/60">
-        Every session I can account for — Calendly (2015–2023), Formation (2023–present), and cal.com (live). Names are visible in your browser but not indexed by search engines.
+        Every session I can account for — Calendly (2015–2023), Formation (2023–present), Leland (2026–present), and cal.com (live). Names are visible in your browser but not indexed by search engines.
       </p>
       <div className="mt-8">
         <SessionsTable />
