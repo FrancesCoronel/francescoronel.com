@@ -51,6 +51,7 @@ export default function OrganizationsPage() {
         name: org.name,
         slug: org.slug,
         logo: org.logo,
+        url: org.url,
         totalRefs,
       };
     })
