@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import mentoringData from "@/content/mentoring-sessions.json";
-import callsData from "@/content/mentoring-calls.json";
+import { MentoringStats } from "@/components/ui/mentoring-stats";
 
 interface Session {
   date: string;
@@ -23,9 +23,6 @@ const { _meta, sessions: historicalSessions } = mentoringData as {
   };
   sessions: Session[];
 };
-
-const YEAR_ORDER = Object.keys(_meta.byYear).sort();
-const MAX_BY_YEAR = Math.max(...Object.values(_meta.byYear));
 
 export function MentoringSessionsFeed() {
   const [liveSessions, setLiveSessions] = useState<Session[]>([]);
@@ -63,31 +60,8 @@ export function MentoringSessionsFeed() {
         </h2>
 
         {/* Stats row */}
-        <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
-          <div className="rounded-xl border border-horchata-200 bg-white p-4 dark:border-navy-700 dark:bg-navy-900">
-            <p className="text-3xl font-bold text-horchata-600 dark:text-horchata-400">
-              {totalCount}+
-            </p>
-            <p className="mt-0.5 text-xs text-navy-500 dark:text-white/60">
-              Mentoring sessions
-            </p>
-          </div>
-          <div className="rounded-xl border border-horchata-200 bg-white p-4 dark:border-navy-700 dark:bg-navy-900">
-            <p className="text-3xl font-bold text-horchata-600 dark:text-horchata-400">
-              {YEAR_ORDER.length}
-            </p>
-            <p className="mt-0.5 text-xs text-navy-500 dark:text-white/60">
-              Years of mentoring
-            </p>
-          </div>
-          <div className="rounded-xl border border-horchata-200 bg-white p-4 dark:border-navy-700 dark:bg-navy-900">
-            <p className="text-3xl font-bold text-horchata-600 dark:text-horchata-400">
-              {callsData._meta.totalHours}h
-            </p>
-            <p className="mt-0.5 text-xs text-navy-500 dark:text-white/60">
-              Logged hours
-            </p>
-          </div>
+        <div className="mt-6">
+          <MentoringStats totalSessions={totalCount} />
         </div>
 
         {/* Activity bar chart by year */}

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import mentoringData from "@/content/mentoring-sessions.json";
+import { MentoringStats } from "@/components/ui/mentoring-stats";
 
 interface Session {
   date: string;
@@ -143,40 +144,7 @@ export function SessionsTable() {
   return (
     <div>
       {/* Stats row */}
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-        <div className="rounded-xl border border-horchata-200 bg-white p-4 dark:border-navy-700 dark:bg-navy-800">
-          <p className="text-3xl font-bold text-horchata-600 dark:text-horchata-400">
-            {totalCount}+
-          </p>
-          <p className="mt-0.5 text-xs text-navy-500 dark:text-white/60">
-            Total sessions
-          </p>
-        </div>
-        <div className="rounded-xl border border-horchata-200 bg-white p-4 dark:border-navy-700 dark:bg-navy-800">
-          <p className="text-3xl font-bold text-horchata-600 dark:text-horchata-400">
-            {_meta.uniqueMentees}+
-          </p>
-          <p className="mt-0.5 text-xs text-navy-500 dark:text-white/60">
-            Unique mentees
-          </p>
-        </div>
-        <div className="rounded-xl border border-horchata-200 bg-white p-4 dark:border-navy-700 dark:bg-navy-800">
-          <p className="text-3xl font-bold text-horchata-600 dark:text-horchata-400">
-            {YEAR_ORDER.length}
-          </p>
-          <p className="mt-0.5 text-xs text-navy-500 dark:text-white/60">
-            Years of mentoring
-          </p>
-        </div>
-        <div className="rounded-xl border border-horchata-200 bg-white p-4 dark:border-navy-700 dark:bg-navy-800">
-          <p className="text-3xl font-bold text-horchata-600 dark:text-horchata-400">
-            {Math.round(_meta.totalMinutes / 60)}h
-          </p>
-          <p className="mt-0.5 text-xs text-navy-500 dark:text-white/60">
-            Hours logged
-          </p>
-        </div>
-      </div>
+      <MentoringStats totalSessions={totalCount} />
 
       {/* Activity bar chart by year */}
       <div className="mt-8">

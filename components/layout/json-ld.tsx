@@ -50,7 +50,6 @@ export function PersonJsonLd() {
       `https://linkedin.com/in/${siteConfig.social.linkedin}`,
       `https://twitter.com/${siteConfig.social.twitter.replace("@", "")}`,
       "https://youtube.com/@fvcproductions",
-      "https://instagram.com/fvcproductions",
     ],
   };
 
