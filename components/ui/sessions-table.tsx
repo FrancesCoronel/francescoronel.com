@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useState } from "react";
 import mentoringData from "@/content/mentoring-sessions.json";
-import callsData from "@/content/mentoring-calls.json";
 
 interface Session {
   date: string;
@@ -11,6 +10,7 @@ interface Session {
   eventTypeName: string;
   topic: string | null;
   source?: string;
+  durationMinutes?: number;
 }
 
 // Normalize raw types to 3 display categories
@@ -57,6 +57,9 @@ function formatDate(dateStr: string) {
 const { _meta, sessions: historicalSessions } = mentoringData as {
   _meta: {
     totalSessions: number;
+    totalMinutes: number;
+    totalHours: number;
+    uniqueMentees: number;
     byYear: Record<string, number>;
     byType: Record<string, number>;
     dateRange: { start: string; end: string };
@@ -140,13 +143,21 @@ export function SessionsTable() {
   return (
     <div>
       {/* Stats row */}
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
         <div className="rounded-xl border border-horchata-200 bg-white p-4 dark:border-navy-700 dark:bg-navy-800">
           <p className="text-3xl font-bold text-horchata-600 dark:text-horchata-400">
             {totalCount}+
           </p>
           <p className="mt-0.5 text-xs text-navy-500 dark:text-white/60">
-            Mentoring sessions
+            Total sessions
+          </p>
+        </div>
+        <div className="rounded-xl border border-horchata-200 bg-white p-4 dark:border-navy-700 dark:bg-navy-800">
+          <p className="text-3xl font-bold text-horchata-600 dark:text-horchata-400">
+            {_meta.uniqueMentees}+
+          </p>
+          <p className="mt-0.5 text-xs text-navy-500 dark:text-white/60">
+            Unique mentees
           </p>
         </div>
         <div className="rounded-xl border border-horchata-200 bg-white p-4 dark:border-navy-700 dark:bg-navy-800">
@@ -159,10 +170,10 @@ export function SessionsTable() {
         </div>
         <div className="rounded-xl border border-horchata-200 bg-white p-4 dark:border-navy-700 dark:bg-navy-800">
           <p className="text-3xl font-bold text-horchata-600 dark:text-horchata-400">
-            {callsData._meta.totalHours}h
+            {Math.round(_meta.totalMinutes / 60)}h
           </p>
           <p className="mt-0.5 text-xs text-navy-500 dark:text-white/60">
-            Logged hours
+            Hours logged
           </p>
         </div>
       </div>
@@ -264,7 +275,11 @@ export function SessionsTable() {
                     {session.name}
                   </td>
                   <td className="max-w-xs px-4 py-2.5 text-navy-500 dark:text-white/50">
-                    <span className="line-clamp-1">{topic ?? "—"}</span>
+                    {topic ? (
+                      <span className="line-clamp-1 cursor-help" title={topic}>{topic}</span>
+                    ) : (
+                      <span>—</span>
+                    )}
                   </td>
                   <td className="px-4 py-2.5">
                     <span className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${CATEGORY_COLORS[category]}`}>

@@ -6,6 +6,7 @@ import { BlogCard } from "@/components/ui/blog-card";
 import { Timeline } from "@/components/ui/timeline";
 import {
   getAllBlogPosts,
+  getBlogPostsByCategory,
   getExperiences,
   getEducation,
   getCategoryMaps,
@@ -29,6 +30,7 @@ export default function HomePage() {
   const activeProjects = getProjects().filter((p) => p.status === "active").slice(0, 4);
   const allPosts = getAllBlogPosts();
   const mentoringSessionCount = (mentoringData as { _meta: { totalSessions: number } })._meta.totalSessions;
+  const speakingCount = getBlogPostsByCategory("speaking").length;
   const startYear = 2017; // First full-time engineering role (Accenture)
   const currentYear = new Date().getFullYear();
   const yearsOfExperience = currentYear - startYear;
@@ -246,7 +248,7 @@ export default function HomePage() {
             {[
               { stat: `${mentoringSessionCount}+`, label: "Mentoring sessions logged" },
               { stat: `${allPosts.length}+`, label: "Blog posts published" },
-              { stat: "100+", label: "Speaking events since 2015" },
+              { stat: `${speakingCount}+`, label: "Speaking events since 2015" },
               { stat: `${yearsOfExperience}+`, label: "Years of full-time experience" },
             ].map(({ stat, label }) => (
               <div key={label}>

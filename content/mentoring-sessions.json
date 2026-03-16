@@ -29,7 +29,10 @@
       "mentoring": 35,
       "partner": 94,
       "podcast": 5
-    }
+    },
+    "totalMinutes": 16725,
+    "totalHours": 278.8,
+    "uniqueMentees": 498
   },
   "sessions": [
     {
@@ -38,7 +41,8 @@
       "type": "mentoring",
       "eventTypeName": "Seeds Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2026-02-13",
@@ -46,7 +50,8 @@
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Diego Sigaran",
       "topic": null,
-      "source": "cal.com"
+      "source": "cal.com",
+      "durationMinutes": 30
     },
     {
       "date": "2026-01-22",
@@ -54,7 +59,8 @@
       "type": "interview",
       "eventTypeName": "Hiring Manager Interview Workout with Frances: Giving/Receiving Feedback",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2026-01-15",
@@ -62,7 +68,8 @@
       "type": "interview",
       "eventTypeName": "Hiring Manager Interview Workout with Frances: Giving/Receiving Feedback",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2026-01-07",
@@ -70,7 +77,8 @@
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Keith Tugcu",
       "topic": null,
-      "source": "cal.com"
+      "source": "cal.com",
+      "durationMinutes": 30
     },
     {
       "date": "2026-01-06",
@@ -78,7 +86,8 @@
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Enea Xharja",
       "topic": null,
-      "source": "cal.com"
+      "source": "cal.com",
+      "durationMinutes": 30
     },
     {
       "date": "2025-10-30",
@@ -86,7 +95,8 @@
       "type": "mentoring",
       "eventTypeName": "Seeds Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-10-07",
@@ -94,7 +104,8 @@
       "type": "mentoring",
       "eventTypeName": "Seeds Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-09-09",
@@ -102,7 +113,8 @@
       "type": "mentoring",
       "eventTypeName": "LinkedIn Review Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-09-04",
@@ -110,7 +122,8 @@
       "type": "interview",
       "eventTypeName": "Mock Hiring Manager Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-08-11",
@@ -118,7 +131,8 @@
       "type": "mentoring",
       "eventTypeName": "Seeds Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-07-30",
@@ -126,7 +140,8 @@
       "type": "interview",
       "eventTypeName": "Mock Hiring Manager Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-07-21",
@@ -134,7 +149,8 @@
       "type": "mentoring",
       "eventTypeName": "Seeds Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-07-17",
@@ -142,7 +158,8 @@
       "type": "interview",
       "eventTypeName": "Mock Hiring Manager Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-06-25",
@@ -150,7 +167,8 @@
       "type": "interview",
       "eventTypeName": "Hiring Manager Interview Workout with Frances: Self Direction",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-06-11",
@@ -158,7 +176,8 @@
       "type": "interview",
       "eventTypeName": "Mock Hiring Manager Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-06-09",
@@ -166,7 +185,8 @@
       "type": "interview",
       "eventTypeName": "Hiring Manager Interview Workout with Frances: Initiative & Ownership",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-06-07",
@@ -174,7 +194,8 @@
       "type": "mentoring",
       "eventTypeName": "1-Hour Mentoring Call \u2014 Frances Coronel <> Sunny",
       "topic": null,
-      "source": "cal.com"
+      "source": "cal.com",
+      "durationMinutes": 60
     },
     {
       "date": "2025-06-03",
@@ -182,7 +203,8 @@
       "type": "mentoring",
       "eventTypeName": "Seeds Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-05-19",
@@ -190,7 +212,8 @@
       "type": "interview",
       "eventTypeName": "Mock Hiring Manager Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-05-13",
@@ -198,7 +221,8 @@
       "type": "mentoring",
       "eventTypeName": "1-Hour Mentoring Call \u2014 Frances Coronel <> Sunny",
       "topic": null,
-      "source": "cal.com"
+      "source": "cal.com",
+      "durationMinutes": 60
     },
     {
       "date": "2025-05-12",
@@ -206,7 +230,8 @@
       "type": "interview",
       "eventTypeName": "Hiring Manager Interview Workout with Frances: Initiative & Ownership",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-05-02",
@@ -214,7 +239,8 @@
       "type": "interview",
       "eventTypeName": "Mock Hiring Manager Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-04-29",
@@ -222,7 +248,8 @@
       "type": "interview",
       "eventTypeName": "Mock Hiring Manager Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-04-08",
@@ -230,7 +257,8 @@
       "type": "mentoring",
       "eventTypeName": "1-Hour Mentoring Call \u2014 Frances Coronel <> Sunny",
       "topic": null,
-      "source": "cal.com"
+      "source": "cal.com",
+      "durationMinutes": 60
     },
     {
       "date": "2025-04-08",
@@ -238,7 +266,8 @@
       "type": "interview",
       "eventTypeName": "Mock Hiring Manager Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-04-01",
@@ -246,7 +275,8 @@
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Anwana Ntofon",
       "topic": null,
-      "source": "cal.com"
+      "source": "cal.com",
+      "durationMinutes": 30
     },
     {
       "date": "2025-02-21",
@@ -254,7 +284,8 @@
       "type": "mentoring",
       "eventTypeName": "Lilly Beede <> Frances Coronel | GNC Mentoring Session",
       "topic": null,
-      "source": "cal.com"
+      "source": "cal.com",
+      "durationMinutes": 30
     },
     {
       "date": "2025-02-21",
@@ -262,7 +293,8 @@
       "type": "interview",
       "eventTypeName": "Mock Hiring Manager Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-02-19",
@@ -270,7 +302,8 @@
       "type": "interview",
       "eventTypeName": "Hiring Manager Interview Workout with Frances: Self Direction",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-02-18",
@@ -278,7 +311,8 @@
       "type": "mentoring",
       "eventTypeName": "1-Hour Mentoring Call \u2014 Frances Coronel <> Sunny",
       "topic": null,
-      "source": "cal.com"
+      "source": "cal.com",
+      "durationMinutes": 60
     },
     {
       "date": "2025-02-18",
@@ -286,7 +320,8 @@
       "type": "mentoring",
       "eventTypeName": "Seed Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-02-17",
@@ -294,7 +329,8 @@
       "type": "mentoring",
       "eventTypeName": "1-Hour Mentoring Call \u2014 Frances Coronel <> Sunny",
       "topic": null,
-      "source": "cal.com"
+      "source": "cal.com",
+      "durationMinutes": 60
     },
     {
       "date": "2025-02-15",
@@ -302,7 +338,8 @@
       "type": "mentoring",
       "eventTypeName": "1-Hour Mentoring Call \u2014 Frances Coronel <> Sunny",
       "topic": null,
-      "source": "cal.com"
+      "source": "cal.com",
+      "durationMinutes": 60
     },
     {
       "date": "2025-02-08",
@@ -310,7 +347,8 @@
       "type": "interview",
       "eventTypeName": "Mock Hiring Manager Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-02-05",
@@ -318,7 +356,8 @@
       "type": "mentoring",
       "eventTypeName": "Seed Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-02-03",
@@ -326,7 +365,8 @@
       "type": "interview",
       "eventTypeName": "Hiring Manager Interview Workout with Frances: Communication",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-02-03",
@@ -334,7 +374,8 @@
       "type": "mentoring",
       "eventTypeName": "Seed Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-01-31",
@@ -342,7 +383,8 @@
       "type": "mentoring",
       "eventTypeName": "Seed Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-01-30",
@@ -350,7 +392,8 @@
       "type": "mentoring",
       "eventTypeName": "Seed Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-01-24",
@@ -358,7 +401,8 @@
       "type": "mentoring",
       "eventTypeName": "Seed Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-01-20",
@@ -366,7 +410,8 @@
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Daisy",
       "topic": null,
-      "source": "cal.com"
+      "source": "cal.com",
+      "durationMinutes": 30
     },
     {
       "date": "2025-01-19",
@@ -374,7 +419,8 @@
       "type": "mentoring",
       "eventTypeName": "Seed Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-01-17",
@@ -382,7 +428,8 @@
       "type": "interview",
       "eventTypeName": "Mock Hiring Manager Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-01-15",
@@ -390,7 +437,8 @@
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Kateri Gutierrez",
       "topic": null,
-      "source": "cal.com"
+      "source": "cal.com",
+      "durationMinutes": 30
     },
     {
       "date": "2025-01-10",
@@ -398,7 +446,8 @@
       "type": "mentoring",
       "eventTypeName": "Seed Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2025-01-06",
@@ -406,7 +455,8 @@
       "type": "mentoring",
       "eventTypeName": "Seed Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-12-09",
@@ -414,7 +464,8 @@
       "type": "mentoring",
       "eventTypeName": "Seed Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-11-14",
@@ -422,7 +473,8 @@
       "type": "interview",
       "eventTypeName": "Hiring Manager Interview Workout with Frances: Self Direction",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-11-11",
@@ -430,7 +482,8 @@
       "type": "mentoring",
       "eventTypeName": "Lilly Beede <> Frances Coronel | GNC Mentoring Session",
       "topic": null,
-      "source": "cal.com"
+      "source": "cal.com",
+      "durationMinutes": 30
     },
     {
       "date": "2024-11-04",
@@ -438,7 +491,8 @@
       "type": "mentoring",
       "eventTypeName": "Seed Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-10-21",
@@ -446,7 +500,8 @@
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Karen Zapata",
       "topic": null,
-      "source": "cal.com"
+      "source": "cal.com",
+      "durationMinutes": 30
     },
     {
       "date": "2024-10-18",
@@ -454,7 +509,8 @@
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Karen Zapata",
       "topic": null,
-      "source": "cal.com"
+      "source": "cal.com",
+      "durationMinutes": 30
     },
     {
       "date": "2024-10-08",
@@ -462,7 +518,8 @@
       "type": "mentoring",
       "eventTypeName": "Lilly Beede <> Frances Coronel | GNC Mentoring Session",
       "topic": null,
-      "source": "cal.com"
+      "source": "cal.com",
+      "durationMinutes": 30
     },
     {
       "date": "2024-09-17",
@@ -470,7 +527,8 @@
       "type": "interview",
       "eventTypeName": "Mock Hiring Manager Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-08-30",
@@ -478,7 +536,8 @@
       "type": "interview",
       "eventTypeName": "Mock Hiring Manager Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-08-29",
@@ -486,7 +545,8 @@
       "type": "interview",
       "eventTypeName": "Hiring Manager Interview Workout with Frances: Growth Mindset",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-08-22",
@@ -494,7 +554,8 @@
       "type": "interview",
       "eventTypeName": "Hiring Manager Interview Workout with Frances: Communication",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-08-21",
@@ -502,7 +563,8 @@
       "type": "interview",
       "eventTypeName": "Mock Hiring Manager Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-08-20",
@@ -510,7 +572,8 @@
       "type": "mentoring",
       "eventTypeName": "Seed Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-08-19",
@@ -518,7 +581,8 @@
       "type": "interview",
       "eventTypeName": "Mock Hiring Manager Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-06-07",
@@ -526,7 +590,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-05-31",
@@ -534,7 +599,8 @@
       "type": "mentoring",
       "eventTypeName": "Seed Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-05-28",
@@ -542,7 +608,8 @@
       "type": "community",
       "eventTypeName": "Latinx FRG Meeting",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-05-25",
@@ -550,7 +617,8 @@
       "type": "mentoring",
       "eventTypeName": "Live Coding (Front End) with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-05-24",
@@ -558,7 +626,8 @@
       "type": "mentoring",
       "eventTypeName": "Seed Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-05-21",
@@ -566,7 +635,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-05-18",
@@ -574,7 +644,8 @@
       "type": "mentoring",
       "eventTypeName": "Seed Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-05-18",
@@ -582,7 +653,8 @@
       "type": "mentoring",
       "eventTypeName": "Seed Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-04-27",
@@ -590,7 +662,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-04-27",
@@ -598,7 +671,8 @@
       "type": "mentoring",
       "eventTypeName": "Seed Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-04-23",
@@ -606,7 +680,8 @@
       "type": "community",
       "eventTypeName": "Latinx FRG Meeting",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-04-05",
@@ -614,7 +689,8 @@
       "type": "community",
       "eventTypeName": "Latinx FRG Meeting",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-04-05",
@@ -622,7 +698,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-03-23",
@@ -630,7 +707,8 @@
       "type": "mentoring",
       "eventTypeName": "Technical Behavioral Studio with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-03-22",
@@ -638,7 +716,8 @@
       "type": "mentoring",
       "eventTypeName": "Seed Development Session with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-03-22",
@@ -646,7 +725,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-03-15",
@@ -654,7 +734,8 @@
       "type": "mentoring",
       "eventTypeName": "Technical Behavioral Studio with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-02-10",
@@ -662,7 +743,8 @@
       "type": "mentoring",
       "eventTypeName": "Technical Behavioral Studio with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-02-03",
@@ -670,7 +752,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-02-02",
@@ -678,7 +761,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-02-02",
@@ -686,7 +770,8 @@
       "type": "community",
       "eventTypeName": "Latinx FRG Meeting",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-01-27",
@@ -694,7 +779,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-01-23",
@@ -702,7 +788,8 @@
       "type": "community",
       "eventTypeName": "Latinx FRG Meeting",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-01-20",
@@ -710,7 +797,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-01-19",
@@ -718,7 +806,8 @@
       "type": "mentoring",
       "eventTypeName": "Technical Behavioral Studio with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-01-19",
@@ -726,7 +815,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-01-13",
@@ -734,7 +824,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-01-06",
@@ -742,7 +833,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2024-01-04",
@@ -750,7 +842,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-12-20",
@@ -758,7 +851,8 @@
       "type": "mentoring",
       "eventTypeName": "Technical Behavioral Studio with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-12-12",
@@ -766,7 +860,8 @@
       "type": "community",
       "eventTypeName": "Latinx FRG Meeting",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-12-06",
@@ -774,7 +869,8 @@
       "type": "mentoring",
       "eventTypeName": "Technical Behavioral Studio with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-12-02",
@@ -782,7 +878,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-11-14",
@@ -790,14 +887,16 @@
       "type": "community",
       "eventTypeName": "Latinx FRG Meeting",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-11-10",
       "name": "Christina C.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Handover your site!"
+      "topic": "Handover your site!",
+      "durationMinutes": 30
     },
     {
       "date": "2023-09-12",
@@ -805,14 +904,16 @@
       "type": "mentoring",
       "eventTypeName": "Technical Behavioral Studio with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-09-12",
       "name": "Angelica R.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Just a coffee chat to get to know each other!"
+      "topic": "Just a coffee chat to get to know each other!",
+      "durationMinutes": 30
     },
     {
       "date": "2023-08-18",
@@ -820,7 +921,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-08-17",
@@ -828,7 +930,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-08-16",
@@ -836,7 +939,8 @@
       "type": "mentoring",
       "eventTypeName": "Technical Behavioral Studio with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-08-15",
@@ -844,7 +948,8 @@
       "type": "community",
       "eventTypeName": "Latinx FRG Meeting",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-08-15",
@@ -852,7 +957,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-08-15",
@@ -860,28 +966,32 @@
       "type": "mentoring",
       "eventTypeName": "Technical Behavioral Studio with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-08-15",
       "name": "Elizabeth P.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Intros and Airbnb!"
+      "topic": "Intros and Airbnb!",
+      "durationMinutes": 30
     },
     {
       "date": "2023-08-14",
       "name": "Vimal S.",
       "type": "interview",
       "eventTypeName": "60 Minute Interview",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 60
     },
     {
       "date": "2023-08-14",
       "name": "Alexandra V.",
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call ($30)",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-08-04",
@@ -889,7 +999,8 @@
       "type": "mentoring",
       "eventTypeName": "Technical Behavioral Studio with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-08-02",
@@ -897,14 +1008,16 @@
       "type": "mentoring",
       "eventTypeName": "Technical Behavioral Studio with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-07-31",
       "name": "Ronny S.",
       "type": "interview",
       "eventTypeName": "30-Minute Interview",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-07-26",
@@ -912,7 +1025,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-07-26",
@@ -920,7 +1034,8 @@
       "type": "mentoring",
       "eventTypeName": "Technical Behavioral Studio with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-07-25",
@@ -928,7 +1043,8 @@
       "type": "community",
       "eventTypeName": "Latinx FRG Meeting",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-07-25",
@@ -936,14 +1052,16 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-07-25",
       "name": "Eloy L.",
       "type": "interview",
       "eventTypeName": "30-Minute Interview",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-07-20",
@@ -951,14 +1069,16 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-06-16",
       "name": "Ashley D.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Latina Dev and contributing to project"
+      "topic": "Latina Dev and contributing to project",
+      "durationMinutes": 30
     },
     {
       "date": "2023-06-15",
@@ -966,14 +1086,16 @@
       "type": "mentoring",
       "eventTypeName": "Technical Behavioral Studio with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-06-13",
       "name": "Ronny S.",
       "type": "interview",
       "eventTypeName": "30-Minute Interview",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-06-06",
@@ -981,35 +1103,40 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-06-06",
       "name": "Fernanda P.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "'- I'm actually happy chatting on any sort of platform, Frances! Whatever is easiest for you!\n- I guess we can just chat about where we left off on Discord DM's! Thank you as well!"
+      "topic": "'- I'm actually happy chatting on any sort of platform, Frances! Whatever is easiest for you!\n- I guess we can just chat about where we left off on Discord DM's! Thank you as well!",
+      "durationMinutes": 30
     },
     {
       "date": "2023-06-05",
       "name": "Hector R.",
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call ($30)",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-30",
       "name": "Veronique S.",
       "type": "interview",
       "eventTypeName": "30-Minute Interview",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-29",
       "name": "Stephanie H.",
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call (Prepaid)",
-      "topic": "I\u2019ll be wrapping up week 2 at Reddit! I\u2019ll follow up with some bullets points in advance of our call."
+      "topic": "I\u2019ll be wrapping up week 2 at Reddit! I\u2019ll follow up with some bullets points in advance of our call.",
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-25",
@@ -1017,14 +1144,16 @@
       "type": "mentoring",
       "eventTypeName": "Technical Behavioral Studio with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-23",
       "name": "Victoria O.",
       "type": "interview",
       "eventTypeName": "30-Minute Interview",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-22",
@@ -1032,14 +1161,16 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-22",
       "name": "Noel C.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Meet & Greet."
+      "topic": "Meet & Greet.",
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-19",
@@ -1047,14 +1178,16 @@
       "type": "mentoring",
       "eventTypeName": "Technical Behavioral Studio with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-19",
       "name": "Melody M.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Opportunities at Observablehq.com for Senior Engineering leadership.  We spoke several years ago when you were at slack."
+      "topic": "Opportunities at Observablehq.com for Senior Engineering leadership.  We spoke several years ago when you were at slack.",
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-18",
@@ -1062,21 +1195,24 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-18",
       "name": "Michael A.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Post-Asana reconnection"
+      "topic": "Post-Asana reconnection",
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-18",
       "name": "Chase T.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Adding details to the email that I'll be sending you via email (ctenen@hubspot.com). Thanks!"
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-16",
@@ -1084,7 +1220,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-16",
@@ -1092,7 +1229,8 @@
       "type": "mentoring",
       "eventTypeName": "Technical Behavioral Studio with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-15",
@@ -1100,7 +1238,8 @@
       "type": "mentoring",
       "eventTypeName": "Technical Behavioral Studio with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-15",
@@ -1108,7 +1247,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-12",
@@ -1116,7 +1256,8 @@
       "type": "mentoring",
       "eventTypeName": "Technical Behavioral Studio with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-12",
@@ -1124,14 +1265,16 @@
       "type": "mentoring",
       "eventTypeName": "Technical Behavioral Studio with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-12",
       "name": "Aaron S.",
       "type": "interview",
       "eventTypeName": "30-Minute Interview",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-11",
@@ -1139,7 +1282,8 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-11",
@@ -1147,4060 +1291,4640 @@
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
-      "source": "formation"
+      "source": "formation",
+      "durationMinutes": 30
     },
     {
       "date": "2023-05-11",
       "name": "Stephanie H.",
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call (Prepaid)",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-04-11",
       "name": "Christina C.",
       "type": "chat-long",
       "eventTypeName": "60-Minute Chat",
-      "topic": "Branding exercise"
+      "topic": "Branding exercise",
+      "durationMinutes": 60
     },
     {
       "date": "2023-03-31",
       "name": "Hua Szu Y.",
       "type": "mentoring",
       "eventTypeName": "Mentoring for Black & Latinx Women Software Engineers",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-03-28",
       "name": "Andrea V.",
       "type": "mentoring",
       "eventTypeName": "Mentoring for Black & Latinx Women Software Engineers",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-03-28",
       "name": "Stephanie H.",
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call ($30)",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-03-24",
       "name": "Hayley M.",
       "type": "mentoring",
       "eventTypeName": "Mentoring for Black & Latinx Women Software Engineers",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-03-24",
       "name": "Christina C.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Proposal follow up"
+      "topic": "Proposal follow up",
+      "durationMinutes": 30
     },
     {
       "date": "2023-03-23",
       "name": "Mia D.",
       "type": "mentoring",
       "eventTypeName": "Mentoring for Black & Latinx Women Software Engineers",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-03-21",
       "name": "Evelyn R.",
       "type": "mentoring",
       "eventTypeName": "Mentoring for Black & Latinx Women Software Engineers",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-03-20",
       "name": "Eliseida G.",
       "type": "mentoring",
       "eventTypeName": "Mentoring for Black & Latinx Women Software Engineers",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-03-17",
       "name": "Melany d.",
       "type": "mentoring",
       "eventTypeName": "Mentoring for Black & Latinx Women Software Engineers",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-03-16",
       "name": "Nayely M.",
       "type": "mentoring",
       "eventTypeName": "Mentoring for Black & Latinx Women Software Engineers",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-03-14",
       "name": "Maria G.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Learn more about potential opportunity to work together!"
+      "topic": "Learn more about potential opportunity to work together!",
+      "durationMinutes": 30
     },
     {
       "date": "2023-03-14",
       "name": "Kate D.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "To meet each other and discuss the possibility of collaborating with you to start and lead our LBGTQ+ FRG at Formation."
+      "topic": "To meet each other and discuss the possibility of collaborating with you to start and lead our LBGTQ+ FRG at Formation.",
+      "durationMinutes": 30
     },
     {
       "date": "2023-03-10",
       "name": "Keila L.",
       "type": "mentoring",
       "eventTypeName": "Mentoring for Black & Latinx Women Software Engineers",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-03-10",
       "name": "Kaela W.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Proposal follow up!"
+      "topic": "Proposal follow up!",
+      "durationMinutes": 30
     },
     {
       "date": "2023-03-09",
       "name": "Mariama M.",
       "type": "mentoring",
       "eventTypeName": "Mentoring for Black & Latinx Women Software Engineers",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-03-06",
       "name": "Thelma B.",
       "type": "mentoring",
       "eventTypeName": "Mentoring for Black & Latinx Women Software Engineers",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-02-28",
       "name": "Vicki D.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Informational interview to learn more about your career and the field of software engineering"
+      "topic": "Informational interview to learn more about your career and the field of software engineering",
+      "durationMinutes": 30
     },
     {
       "date": "2023-02-24",
       "name": "Natalia W.",
       "type": "mentoring",
       "eventTypeName": "Mentoring for Black & Latinx Women Software Engineers",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-02-24",
       "name": "Jennifer H.",
       "type": "mentoring",
       "eventTypeName": "Mentoring for Black & Latinx Women Software Engineers",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-02-24",
       "name": "Glenda Z.",
       "type": "mentoring",
       "eventTypeName": "Mentoring for Black & Latinx Women Software Engineers",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-02-22",
       "name": "Anna S.",
       "type": "mentoring",
       "eventTypeName": "Mentoring for Black & Latinx Women Software Engineers",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-02-22",
       "name": "Samantha R.",
       "type": "mentoring",
       "eventTypeName": "Mentoring for Black & Latinx Women Software Engineers",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-02-16",
       "name": "Jasmin G.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Website Help :)"
+      "topic": "Website Help :)",
+      "durationMinutes": 30
     },
     {
       "date": "2023-02-13",
       "name": "Milca J.",
       "type": "mentoring",
       "eventTypeName": "Mentoring for Black & Latinx Women Software Engineers",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-02-13",
       "name": "Stephanie G.",
       "type": "mentoring",
       "eventTypeName": "Mentoring for Black & Latinx Women Software Engineers",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-02-13",
       "name": "Isis N.",
       "type": "mentoring",
       "eventTypeName": "Mentoring for Black & Latinx Women Software Engineers",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-02-02",
       "name": "Jasmin G.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "esta vida loca"
+      "topic": "esta vida loca",
+      "durationMinutes": 30
     },
     {
       "date": "2023-01-30",
       "name": "Lauren S.",
       "type": "interview",
       "eventTypeName": "30-Minute Interview",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-01-24",
       "name": "Ranee B.",
       "type": "interview",
       "eventTypeName": "30-Minute Interview",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-01-23",
       "name": "Ei-Nyung C.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Let's talk about our panel for Tech Intersections! I can do earlier if you want, say the Thursday the week before."
+      "topic": "Let's talk about our panel for Tech Intersections! I can do earlier if you want, say the Thursday the week before.",
+      "durationMinutes": 30
     },
     {
       "date": "2023-01-23",
       "name": "Carly T.",
       "type": "interview",
       "eventTypeName": "30-Minute Interview",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-01-23",
       "name": "Aaron S.",
       "type": "interview",
       "eventTypeName": "30-Minute Interview",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-01-23",
       "name": "Toby E.",
       "type": "chat-30",
       "eventTypeName": "Chezie meeting",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-01-18",
       "name": "Cameron K.",
       "type": "interview",
       "eventTypeName": "30-Minute Interview",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-01-17",
       "name": "Dan A.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "The Sr. Front End SWE role at BreakLine Education"
+      "topic": "The Sr. Front End SWE role at BreakLine Education",
+      "durationMinutes": 30
     },
     {
       "date": "2023-01-17",
       "name": "Rica R.",
       "type": "interview",
       "eventTypeName": "30-Minute Interview",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2023-01-12",
       "name": "Ryan M.",
       "type": "interview",
       "eventTypeName": "30-Minute Interview",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2022-12-15",
       "name": "Mary D.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Short interview for GitHub ReadMe Podcast"
+      "topic": "Short interview for GitHub ReadMe Podcast",
+      "durationMinutes": 30
     },
     {
       "date": "2022-12-13",
       "name": "Gabriella C.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Interested in contributing to the Latinas Who Code Directory!"
+      "topic": "Interested in contributing to the Latinas Who Code Directory!",
+      "durationMinutes": 30
     },
     {
       "date": "2022-12-13",
       "name": "Francisco C.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Speaking opportunity at Notion \ud83d\ude4c"
+      "topic": "Speaking opportunity at Notion \ud83d\ude4c",
+      "durationMinutes": 30
     },
     {
       "date": "2022-12-06",
       "name": "mariana g.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Engineering career as a woman\nFront end Vs Backend\nPython VS. Rubby VS. app languages\nVR,AR and metaverse\nPortfolio building"
+      "topic": "Engineering career as a woman\nFront end Vs Backend\nPython VS. Rubby VS. app languages\nVR,AR and metaverse\nPortfolio building",
+      "durationMinutes": 30
     },
     {
       "date": "2022-11-29",
       "name": "Samson M.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "I have 5 years of FE experience and I\u2019m ready to move on to a Senior role. Unfortunately I was just laid off so I\u2019d like some help being groomed for a senior role! Thank you!"
+      "topic": "I have 5 years of FE experience and I\u2019m ready to move on to a Senior role. Unfortunately I was just laid off so I\u2019d like some help being groomed for a senior role! Thank you!",
+      "durationMinutes": 30
     },
     {
       "date": "2022-11-28",
       "name": "David M.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Opportunities to collaborate and also mentorships.\n\nLooking forward to meeting you\n\nBest Regards, \n\nDavid"
+      "topic": "Opportunities to collaborate and also mentorships.\n\nLooking forward to meeting you\n\nBest Regards, \n\nDavid",
+      "durationMinutes": 30
     },
     {
       "date": "2022-11-15",
       "name": "Ei-Nyung C.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Lets talk about our January Tech Intersections Panel!"
+      "topic": "Lets talk about our January Tech Intersections Panel!",
+      "durationMinutes": 30
     },
     {
       "date": "2022-11-15",
       "name": "Ashlyn N.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Introductory Call"
+      "topic": "Introductory Call",
+      "durationMinutes": 30
     },
     {
       "date": "2022-11-11",
       "name": "Ana P.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Two Latina Software Engineers Talk Coding Bootcamps"
+      "topic": "Two Latina Software Engineers Talk Coding Bootcamps",
+      "durationMinutes": 30
     },
     {
       "date": "2022-11-11",
       "name": "Andrew L.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Seeking a head of engineering!"
+      "topic": "Seeking a head of engineering!",
+      "durationMinutes": 30
     },
     {
       "date": "2022-11-10",
       "name": "Frank U.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2022-11-03",
       "name": "Mary R.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Github"
+      "topic": "Github",
+      "durationMinutes": 30
     },
     {
       "date": "2022-10-28",
       "name": "Dahlia M.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Angeles Investors - https://angelesinvestors.com/"
+      "topic": "Angeles Investors - https://angelesinvestors.com/",
+      "durationMinutes": 30
     },
     {
       "date": "2022-10-25",
       "name": "Aysha A.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "The best way to break into tech as a WOC"
+      "topic": "The best way to break into tech as a WOC",
+      "durationMinutes": 30
     },
     {
       "date": "2022-10-24",
       "name": "Alicia H.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Hiring great talent for Liveblocks!"
+      "topic": "Hiring great talent for Liveblocks!",
+      "durationMinutes": 30
     },
     {
       "date": "2022-10-20",
       "name": "Yanira G.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "HOPE!"
+      "topic": "HOPE!",
+      "durationMinutes": 30
     },
     {
       "date": "2022-10-14",
       "name": "Karina N.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2022-10-13",
       "name": "Jiaqi S.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Catchup"
+      "topic": "Catchup",
+      "durationMinutes": 30
     },
     {
       "date": "2022-10-11",
       "name": "Lavie R.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Learn more about Byteboard, your experience working there"
+      "topic": "Learn more about Byteboard, your experience working there",
+      "durationMinutes": 30
     },
     {
       "date": "2022-10-10",
       "name": "ABRAHAM M.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Software Engineering Career Advice"
+      "topic": "Software Engineering Career Advice",
+      "durationMinutes": 30
     },
     {
       "date": "2022-10-10",
       "name": "Brenda H.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2022-10-10",
       "name": "Daniel A.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2022-10-07",
       "name": "Nafisa H.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "A follow-up to our conversation about sharing my story and career goals, while also maintaining credibility as a software engineer."
+      "topic": "A follow-up to our conversation about sharing my story and career goals, while also maintaining credibility as a software engineer.",
+      "durationMinutes": 30
     },
     {
       "date": "2022-10-06",
       "name": "Phyllis W.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Initial meeting to connect."
+      "topic": "Initial meeting to connect.",
+      "durationMinutes": 30
     },
     {
       "date": "2022-10-03",
       "name": "Jitendra S.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "career growth"
+      "topic": "career growth",
+      "durationMinutes": 30
     },
     {
       "date": "2022-09-29",
       "name": "Nafisa H.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2022-09-26",
       "name": "B C.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Emerging tech and worker financial security"
+      "topic": "Emerging tech and worker financial security",
+      "durationMinutes": 30
     },
     {
       "date": "2022-09-22",
       "name": "Gabriela R.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2022-09-22",
       "name": "Lucy R.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2022-09-20",
       "name": "Rosi Q.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Latinx Heritage month"
+      "topic": "Latinx Heritage month",
+      "durationMinutes": 30
     },
     {
       "date": "2022-09-19",
       "name": "Melisa I.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Test Run for LinkedIn live event for Latina engineers with Riverside.FM"
+      "topic": "Test Run for LinkedIn live event for Latina engineers with Riverside.FM",
+      "durationMinutes": 30
     },
     {
       "date": "2022-08-16",
       "name": "Damien E.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "To Discuss latinx talent and the best ways to foster the growth potential of that market."
+      "topic": "To Discuss latinx talent and the best ways to foster the growth potential of that market.",
+      "durationMinutes": 30
     },
     {
       "date": "2022-05-23",
       "name": "Mike t.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Job opportunities and work at byteboard."
+      "topic": "Job opportunities and work at byteboard.",
+      "durationMinutes": 30
     },
     {
       "date": "2022-05-18",
       "name": "Dawn K.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2022-04-25",
       "name": "Toby E.",
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call ($30)",
-      "topic": "Help finding a software engineer for Chezie. \n\nPotential intros, salary and comp expectations, where to look, and updates to the job description"
+      "topic": "Help finding a software engineer for Chezie. \n\nPotential intros, salary and comp expectations, where to look, and updates to the job description",
+      "durationMinutes": 30
     },
     {
       "date": "2022-04-25",
       "name": "Jasmin G.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "offboarding"
+      "topic": "offboarding",
+      "durationMinutes": 30
     },
     {
       "date": "2022-04-19",
       "name": "Julia M.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2022-04-14",
       "name": "Kenneth G.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Latin@s in tech"
+      "topic": "Latin@s in tech",
+      "durationMinutes": 30
     },
     {
       "date": "2022-04-06",
       "name": "Sarah L.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "techqueria"
+      "topic": "techqueria",
+      "durationMinutes": 30
     },
     {
       "date": "2022-03-30",
       "name": "Melissa B.",
       "type": "chat-long",
       "eventTypeName": "45-Minute Chat",
-      "topic": "Developer Story interview for The ReadME Project Zoom Link: https://github.zoom.us/j/6390588505?pwd=WTV4ZG9tQklOWmNCQXhYbkJNeE13Zz09"
+      "topic": null,
+      "durationMinutes": 45
     },
     {
       "date": "2022-03-30",
       "name": "Sarah L.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Would love to hear about your experience at Techqueria!"
+      "topic": "Would love to hear about your experience at Techqueria!",
+      "durationMinutes": 30
     },
     {
       "date": "2022-03-17",
       "name": "Marco L.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Techqueria context"
+      "topic": "Techqueria context",
+      "durationMinutes": 30
     },
     {
       "date": "2022-02-24",
       "name": "Aimara R.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Career opportunities at Slack"
+      "topic": "Career opportunities at Slack",
+      "durationMinutes": 30
     },
     {
       "date": "2022-02-24",
       "name": "Josh T.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Catch up call"
+      "topic": "Catch up call",
+      "durationMinutes": 30
     },
     {
       "date": "2022-02-22",
       "name": "Natalie A.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Mindot Plans 2022"
+      "topic": "Mindot Plans 2022",
+      "durationMinutes": 30
     },
     {
       "date": "2022-02-21",
       "name": "Victor B.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Internship opportunities, networking in STEM and talking about future career opportunities, and general advice as a Latino in STEM!"
+      "topic": "Internship opportunities, networking in STEM and talking about future career opportunities, and general advice as a Latino in STEM!",
+      "durationMinutes": 30
     },
     {
       "date": "2022-02-04",
       "name": "Sanaa S.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "The Google Developer Student Club Diversity Panel!"
+      "topic": "The Google Developer Student Club Diversity Panel!",
+      "durationMinutes": 30
     },
     {
       "date": "2022-02-03",
       "name": "Dominique P.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Connect :)"
+      "topic": "Connect :)",
+      "durationMinutes": 30
     },
     {
       "date": "2022-02-02",
       "name": "Audrey G.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Talk about your experience at Slack and your ERG leadership."
+      "topic": "Talk about your experience at Slack and your ERG leadership.",
+      "durationMinutes": 30
     },
     {
       "date": "2022-02-01",
       "name": "Jesse H.",
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call ($30)",
-      "topic": "I want the best advice on recruiting a technical cofounder from the perspective of a tech veteran."
+      "topic": "I want the best advice on recruiting a technical cofounder from the perspective of a tech veteran.",
+      "durationMinutes": 30
     },
     {
       "date": "2022-01-31",
       "name": "Linda W.",
       "type": "chat-long",
       "eventTypeName": "60-Minute Chat",
-      "topic": "https://docs.google.com/document/d/10CKFl84huktQczhOCGUSzm0NO_J66B1ukhQLSXhihRM/edit#heading=h.ogb3wcv3msd9"
+      "topic": "https://docs.google.com/document/d/10CKFl84huktQczhOCGUSzm0NO_J66B1ukhQLSXhihRM/edit#heading=h.ogb3wcv3msd9",
+      "durationMinutes": 60
     },
     {
       "date": "2022-01-20",
       "name": "Linda W.",
       "type": "chat-long",
       "eventTypeName": "60-Minute Chat",
-      "topic": "https://docs.google.com/document/d/10CKFl84huktQczhOCGUSzm0NO_J66B1ukhQLSXhihRM/edit?usp=sharing\n\nFeel free to add questions that you want to cover!"
+      "topic": "https://docs.google.com/document/d/10CKFl84huktQczhOCGUSzm0NO_J66B1ukhQLSXhihRM/edit?usp=sharing\n\nFeel free to add questions that you want to cover!",
+      "durationMinutes": 60
     },
     {
       "date": "2022-01-19",
       "name": "Arturo V.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "So many things!\n1. Say hello :)\n2. Chat about Alza (startup) and \n3. Meet Frances!"
+      "topic": "So many things!\n1. Say hello :)\n2. Chat about Alza (startup) and \n3. Meet Frances!",
+      "durationMinutes": 30
     },
     {
       "date": "2022-01-07",
       "name": "Shannon T.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Potential interviews with Descript"
+      "topic": "Potential interviews with Descript",
+      "durationMinutes": 30
     },
     {
       "date": "2022-01-05",
       "name": "Michael P.",
       "type": "chat-15",
       "eventTypeName": "15-Minute Chat",
-      "topic": "interview onsite prep!"
+      "topic": "interview onsite prep!",
+      "durationMinutes": 15
     },
     {
       "date": "2021-12-27",
       "name": "Amelia L.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2021-12-23",
       "name": "Zachary S.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "BCG Platinion Engineer Opportunity"
+      "topic": "BCG Platinion Engineer Opportunity",
+      "durationMinutes": 30
     },
     {
       "date": "2021-12-23",
       "name": "Tyson S.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Techqueria background for trademark opposition proceeding"
+      "topic": "Techqueria background for trademark opposition proceeding",
+      "durationMinutes": 30
     },
     {
       "date": "2021-12-23",
       "name": "Tom H.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Otter and the software engineering positions."
+      "topic": "Otter and the software engineering positions.",
+      "durationMinutes": 30
     },
     {
       "date": "2021-12-21",
       "name": "Andrea G.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Intro to BCG Gamma X - BCG's forward-deployed engineering team"
+      "topic": "Intro to BCG Gamma X - BCG's forward-deployed engineering team",
+      "durationMinutes": 30
     },
     {
       "date": "2021-12-17",
       "name": "Tristan L.",
       "type": "chat-long",
       "eventTypeName": "60-Minute Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 60
     },
     {
       "date": "2021-12-17",
       "name": "Michael B.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Chatting about some Front End positions!! - Mike Bidak"
+      "topic": "Chatting about some Front End positions!! - Mike Bidak",
+      "durationMinutes": 30
     },
     {
       "date": "2021-12-14",
       "name": "Dawn W.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Senior Software Engineer role at Textio"
+      "topic": "Senior Software Engineer role at Textio",
+      "durationMinutes": 30
     },
     {
       "date": "2021-12-08",
       "name": "Sean G.",
       "type": "chat-15",
       "eventTypeName": "15-Minute Chat",
-      "topic": "Quick chat before Thursday project walkthrough"
+      "topic": "Quick chat before Thursday project walkthrough",
+      "durationMinutes": 15
     },
     {
       "date": "2021-12-08",
       "name": "Jake E.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Discuss professional background, interests and professional wants, along with information around Slalom Build and potential opportunities."
+      "topic": "Discuss professional background, interests and professional wants, along with information around Slalom Build and potential opportunities.",
+      "durationMinutes": 30
     },
     {
       "date": "2021-12-07",
       "name": "Talya K.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "You joining our team at Made Renovation!"
+      "topic": "You joining our team at Made Renovation!",
+      "durationMinutes": 30
     },
     {
       "date": "2021-12-02",
       "name": "Fanny B.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Opportunities at Slalom"
+      "topic": "Opportunities at Slalom",
+      "durationMinutes": 30
     },
     {
       "date": "2021-11-30",
       "name": "Mariana S.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Interview prep"
+      "topic": "Interview prep",
+      "durationMinutes": 30
     },
     {
       "date": "2021-11-30",
       "name": "Nikhil M.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Hi :) I am looking forward to getting to know you and telling you more about mutinyhq.com, our team, and our technical challenges!"
+      "topic": "Hi :) I am looking forward to getting to know you and telling you more about mutinyhq.com, our team, and our technical challenges!",
+      "durationMinutes": 30
     },
     {
       "date": "2021-11-15",
       "name": "Kalila B.",
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call ($30)",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2021-11-12",
       "name": "Francisco O.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Getting involved in Techqueria"
+      "topic": "Getting involved in Techqueria",
+      "durationMinutes": 30
     },
     {
       "date": "2021-11-03",
       "name": "Margarita C.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "TM"
+      "topic": "TM",
+      "durationMinutes": 30
     },
     {
       "date": "2021-11-01",
       "name": "Jose R.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Opportunities to partner with the Integral Ad Science (IAS) Latinx ERG"
+      "topic": "Opportunities to partner with the Integral Ad Science (IAS) Latinx ERG",
+      "durationMinutes": 30
     },
     {
       "date": "2021-10-26",
       "name": "Sharon S.",
       "type": "mentoring",
       "eventTypeName": "60-Minute Mentoring Call ($60)",
-      "topic": "Resume Review Check part 2!"
+      "topic": "Resume Review Check part 2!",
+      "durationMinutes": 60
     },
     {
       "date": "2021-10-26",
       "name": "Yara L.",
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call ($30)",
-      "topic": "Hi Frances,\nI would like to learn more about your Slack experience.\n\nThanks,\nYara"
+      "topic": "Hi Frances,\nI would like to learn more about your Slack experience.\n\nThanks,\nYara",
+      "durationMinutes": 30
     },
     {
       "date": "2021-10-13",
       "name": "Nicholas G.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Slack Culture"
+      "topic": "Slack Culture",
+      "durationMinutes": 30
     },
     {
       "date": "2021-10-08",
       "name": "Dahianna V.",
       "type": "chat-30",
       "eventTypeName": "Sync on Talk with Frances | GSA",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2021-10-04",
       "name": "Karen M.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Hispanic Heritage Month and doing a feature highlighting you!"
+      "topic": "Hispanic Heritage Month and doing a feature highlighting you!",
+      "durationMinutes": 30
     },
     {
       "date": "2021-09-07",
       "name": "Mario R.",
       "type": "chat-15",
       "eventTypeName": "15-Minute Chat",
-      "topic": "Nava PBC Speaking Event"
+      "topic": "Nava PBC Speaking Event",
+      "durationMinutes": 15
     },
     {
       "date": "2021-09-06",
       "name": "Angela R.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "I'd like to learn more about your life and how you got started public speaking!"
+      "topic": "I'd like to learn more about your life and how you got started public speaking!",
+      "durationMinutes": 30
     },
     {
       "date": "2021-09-06",
       "name": "Sharon S.",
       "type": "mentoring",
       "eventTypeName": "45-Minute Mentoring Call ($40)",
-      "topic": "Help with the slack application process !"
+      "topic": "Help with the slack application process !",
+      "durationMinutes": 45
     },
     {
       "date": "2021-09-03",
       "name": "Niveditha (Nivy) K.",
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call ($30)",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2021-08-31",
       "name": "Julie S.",
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call ($30)",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2021-08-31",
       "name": "Lisa P.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Fireside chat during Hispanic Heritage Month for Pearson Education employees. Possible session topics: \n-building and strengthening a Latinx ERG\n-Latinx professionals in STEM/your career journey"
+      "topic": "Fireside chat during Hispanic Heritage Month for Pearson Education employees. Possible session topics: \n-building and strengthening a Latinx ERG\n-Latinx professionals in STEM/your career journey",
+      "durationMinutes": 30
     },
     {
       "date": "2021-08-30",
       "name": "Emma T.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Discussing the Senior FrontEnd/Senior FullStack opportunity with NerdWallet"
+      "topic": "Discussing the Senior FrontEnd/Senior FullStack opportunity with NerdWallet",
+      "durationMinutes": 30
     },
     {
       "date": "2021-08-30",
       "name": "David M.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Overall Connection on Techqueria Board & personal touch base."
+      "topic": "Overall Connection on Techqueria Board & personal touch base.",
+      "durationMinutes": 30
     },
     {
       "date": "2021-08-30",
       "name": "Victoria P.",
       "type": "chat-15",
       "eventTypeName": "15-Minute Chat",
-      "topic": "Rescheduling digit chat"
+      "topic": "Rescheduling digit chat",
+      "durationMinutes": 15
     },
     {
       "date": "2021-08-30",
       "name": "Mireya R.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Latinx ERG networking and resources"
+      "topic": "Latinx ERG networking and resources",
+      "durationMinutes": 30
     },
     {
       "date": "2021-08-27",
       "name": "Alexandra R.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Intro, best ways to get involved"
+      "topic": "Intro, best ways to get involved",
+      "durationMinutes": 30
     },
     {
       "date": "2021-08-26",
       "name": "Sharon S.",
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call ($30)",
-      "topic": "I want to learn more about Slack and what specifically you do"
+      "topic": "I want to learn more about Slack and what specifically you do",
+      "durationMinutes": 30
     },
     {
       "date": "2021-08-25",
       "name": "Victoria P.",
       "type": "chat-15",
       "eventTypeName": "15-Minute Chat",
-      "topic": "QA on Digit's Amplify [X] Voices speaker series"
+      "topic": "QA on Digit's Amplify [X] Voices speaker series",
+      "durationMinutes": 15
     },
     {
       "date": "2021-08-25",
       "name": "Brian L.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "My experience at Launchdarkly"
+      "topic": "My experience at Launchdarkly",
+      "durationMinutes": 30
     },
     {
       "date": "2021-08-24",
       "name": "Masharika M.",
       "type": "chat-long",
       "eventTypeName": "45-Minute Call ($35)",
-      "topic": "Guidance and wisdom on the process of preparing for, seeking, selecting, and partnering with a freelance software developer in the context of an entrepreneurial project"
+      "topic": "Guidance and wisdom on the process of preparing for, seeking, selecting, and partnering with a freelance software developer in the context of an entrepreneurial project",
+      "durationMinutes": 45
     },
     {
       "date": "2021-08-24",
       "name": "Christian M.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Techqueria advisory board support."
+      "topic": "Techqueria advisory board support.",
+      "durationMinutes": 30
     },
     {
       "date": "2021-08-20",
       "name": "Amaka O.",
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call ($30)",
-      "topic": "Transitioning to Data Analytics/Science or UX Research\nSuggestions on narrowing the right bootcamp"
+      "topic": "Transitioning to Data Analytics/Science or UX Research\nSuggestions on narrowing the right bootcamp",
+      "durationMinutes": 30
     },
     {
       "date": "2021-08-20",
       "name": "Amber Z.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Sr Front End Engineering position at Mode https://boards.greenhouse.io/modeanalytics/jobs/3190973"
+      "topic": "Sr Front End Engineering position at Mode https://boards.greenhouse.io/modeanalytics/jobs/3190973",
+      "durationMinutes": 30
     },
     {
       "date": "2021-08-18",
       "name": "Michell B.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Tower the git client"
+      "topic": "Tower the git client",
+      "durationMinutes": 30
     },
     {
       "date": "2021-08-16",
       "name": "Todd S.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Your candidacy for our Senior Frontend Engineer - Authoring Tools Lead position."
+      "topic": "Your candidacy for our Senior Frontend Engineer - Authoring Tools Lead position.",
+      "durationMinutes": 30
     },
     {
       "date": "2021-08-16",
       "name": "Nikki A.",
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2021-08-13",
       "name": "Sairina M.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Just saying, \"hi,\" from the Canvas Mentorship Accelerator :)"
+      "topic": "Just saying, \"hi,\" from the Canvas Mentorship Accelerator :)",
+      "durationMinutes": 30
     },
     {
       "date": "2021-08-13",
       "name": "Francisco M.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "General chapter updates"
+      "topic": "General chapter updates",
+      "durationMinutes": 30
     },
     {
       "date": "2021-08-10",
       "name": "Malin R.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "My website"
+      "topic": "My website",
+      "durationMinutes": 30
     },
     {
       "date": "2021-08-09",
       "name": "Luis F.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Your journey into tech, Techqueria, Diversity & Equity in the tech space for marginalized communities"
+      "topic": "Your journey into tech, Techqueria, Diversity & Equity in the tech space for marginalized communities",
+      "durationMinutes": 15
     },
     {
       "date": "2021-08-09",
       "name": "Jeremy E.",
       "type": "chat-long",
       "eventTypeName": "45-Minute Call ($35)",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 45
     },
     {
       "date": "2021-08-05",
       "name": "Keyla M.",
       "type": "chat-long",
       "eventTypeName": "45-Minute Call ($35)",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 45
     },
     {
       "date": "2021-08-03",
       "name": "Francisco S.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Techqueria Tech lead onboarding"
+      "topic": "Techqueria Tech lead onboarding",
+      "durationMinutes": 30
     },
     {
       "date": "2021-08-02",
       "name": "Jill W.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Software engineer role @ Otter"
+      "topic": "Software engineer role @ Otter",
+      "durationMinutes": 30
     },
     {
       "date": "2021-07-29",
       "name": "Jassmin F.",
       "type": "chat-30",
       "eventTypeName": "30-Min Call ($20)",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2021-07-27",
       "name": "Angelines Y.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Experience getting in the industry and into Slack."
+      "topic": "Experience getting in the industry and into Slack.",
+      "durationMinutes": 30
     },
     {
       "date": "2021-07-27",
       "name": "Lisa R.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "D&I and your experience in the tech industry\ud83d\ude0a"
+      "topic": "D&I and your experience in the tech industry\ud83d\ude0a",
+      "durationMinutes": 30
     },
     {
       "date": "2021-07-23",
       "name": "Levi W.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "Qualtrics use cases for Techqueria, potential service exchange"
+      "topic": "Qualtrics use cases for Techqueria, potential service exchange",
+      "durationMinutes": 30
     },
     {
       "date": "2021-07-22",
       "name": "Andrew C.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "Get to know each other a bit more"
+      "topic": "Get to know each other a bit more",
+      "durationMinutes": 30
     },
     {
       "date": "2021-07-20",
       "name": "Mark M.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Techqueria Phase 2 Updates"
+      "topic": "Techqueria Phase 2 Updates",
+      "durationMinutes": 30
     },
     {
       "date": "2021-07-19",
       "name": "Freddy R.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "Meet and greet and connect"
+      "topic": "Meet and greet and connect",
+      "durationMinutes": 30
     },
     {
       "date": "2021-07-14",
       "name": "Diana S.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Technology Lead Volunteer"
+      "topic": "Technology Lead Volunteer",
+      "durationMinutes": 30
     },
     {
       "date": "2021-07-13",
       "name": "Michell B.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Technology Lead onboarding 1/2"
+      "topic": "Technology Lead onboarding 1/2",
+      "durationMinutes": 30
     },
     {
       "date": "2021-07-12",
       "name": "Michell B.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Tech lead onboarding 2/2"
+      "topic": "Tech lead onboarding 2/2",
+      "durationMinutes": 30
     },
     {
       "date": "2021-07-06",
       "name": "Nicole A.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Excited to catch up on all things Bevy and share new product updates!"
+      "topic": "Excited to catch up on all things Bevy and share new product updates!",
+      "durationMinutes": 30
     },
     {
       "date": "2021-07-05",
       "name": "Sylvia J.",
       "type": "chat-30",
       "eventTypeName": "30-Min Call ($20)",
-      "topic": "I would like to share an idea with you.  It relates to my project - Insider Career Conversations \nwww.tiktok.com/@juarezconsultinginc/video/6969735149219040518"
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2021-06-07",
       "name": "Maite M.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Hi Frances,\n\nThanks for getting in touch. Looking forward to chatting with you about Techqueria and all of the great stuff you're doing in the sector and in your community."
+      "topic": "Hi Frances,\n\nThanks for getting in touch. Looking forward to chatting with you about Techqueria and all of the great stuff you're doing in the sector and in your community.",
+      "durationMinutes": 30
     },
     {
       "date": "2021-06-02",
       "name": "Katie H.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Quick meet and greet!"
+      "topic": "Quick meet and greet!",
+      "durationMinutes": 15
     },
     {
       "date": "2021-06-02",
       "name": "Isabel S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Call ($10)",
-      "topic": "Resources and advices to hire developers in the latino community with heavy background in tech."
+      "topic": "Resources and advices to hire developers in the latino community with heavy background in tech.",
+      "durationMinutes": 15
     },
     {
       "date": "2021-06-01",
       "name": "Alejandro R.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Connecting after the Aspen roundtable"
+      "topic": "Connecting after the Aspen roundtable",
+      "durationMinutes": 30
     },
     {
       "date": "2021-06-01",
       "name": "D'Andre P.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Coaching session"
+      "topic": "Coaching session",
+      "durationMinutes": 30
     },
     {
       "date": "2021-05-27",
       "name": "Kathy B.",
       "type": "chat-30",
       "eventTypeName": "Luna Training Session",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2021-05-25",
       "name": "Marco L.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Network, talk about DEI in Tech, about growing our collective network."
+      "topic": "Network, talk about DEI in Tech, about growing our collective network.",
+      "durationMinutes": 30
     },
     {
       "date": "2021-05-24",
       "name": "Chloe R.",
       "type": "chat-30",
       "eventTypeName": "20-Min Chat",
-      "topic": "Consultation"
+      "topic": "Consultation",
+      "durationMinutes": 30
     },
     {
       "date": "2021-05-21",
       "name": "Renee R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Your experience at Slack"
+      "topic": "Your experience at Slack",
+      "durationMinutes": 15
     },
     {
       "date": "2021-05-18",
       "name": "Arianna T.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "Connecting via Coro WIL re \"tech for social change\" space"
+      "topic": "Connecting via Coro WIL re \"tech for social change\" space",
+      "durationMinutes": 30
     },
     {
       "date": "2021-05-17",
       "name": "Anghel D.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "working at slack. Software Dev advice. Job hunt advice."
+      "topic": "working at slack. Software Dev advice. Job hunt advice.",
+      "durationMinutes": 30
     },
     {
       "date": "2021-05-10",
       "name": "Mia B.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Techeria's project management needs"
+      "topic": "Techeria's project management needs",
+      "durationMinutes": 30
     },
     {
       "date": "2021-05-06",
       "name": "Cari P.",
       "type": "chat-30",
       "eventTypeName": "Important 30-Min Chat",
-      "topic": "Cari transitioning the Miami Chapter role"
+      "topic": "Cari transitioning the Miami Chapter role",
+      "durationMinutes": 30
     },
     {
       "date": "2021-05-05",
       "name": "Mitzuy L.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "I look forward to discussing how my experience and skillsets can support Techqueria's efforts in uplifting Latinx's voices and visibility in tech!"
+      "topic": "I look forward to discussing how my experience and skillsets can support Techqueria's efforts in uplifting Latinx's voices and visibility in tech!",
+      "durationMinutes": 30
     },
     {
       "date": "2021-05-03",
       "name": "marianna p.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Coro Board"
+      "topic": "Coro Board",
+      "durationMinutes": 15
     },
     {
       "date": "2021-05-03",
       "name": "Jose A.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "Techqueria Leadership Best Practices. I'll have specific questions ready for this chat."
+      "topic": "Techqueria Leadership Best Practices. I'll have specific questions ready for this chat.",
+      "durationMinutes": 30
     },
     {
       "date": "2021-04-29",
       "name": "Chloe Q.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "DSC TechX Talk Event"
+      "topic": "DSC TechX Talk Event",
+      "durationMinutes": 30
     },
     {
       "date": "2021-04-28",
       "name": "Anne K.",
       "type": "chat-30",
       "eventTypeName": "Important 30-Min Chat",
-      "topic": "This is an interview for a project on how Techqueria promotes diversity in STEM careers."
+      "topic": "This is an interview for a project on how Techqueria promotes diversity in STEM careers.",
+      "durationMinutes": 30
     },
     {
       "date": "2021-04-27",
       "name": "Nicole A.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Bevy Sync"
+      "topic": "Bevy Sync",
+      "durationMinutes": 30
     },
     {
       "date": "2021-04-26",
       "name": "Dennisse C.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2021-04-22",
       "name": "Conrad H.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "ED role description"
+      "topic": "ED role description",
+      "durationMinutes": 30
     },
     {
       "date": "2021-04-20",
       "name": "Christina T.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Techqueria & DEI at Slack"
+      "topic": "Techqueria & DEI at Slack",
+      "durationMinutes": 30
     },
     {
       "date": "2021-04-20",
       "name": "Jose F.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "Podcast partnerships"
+      "topic": "Podcast partnerships",
+      "durationMinutes": 30
     },
     {
       "date": "2021-04-19",
       "name": "Tona R.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "Finalize OKR's, DIT/TQ collaboration, and other"
+      "topic": "Finalize OKR's, DIT/TQ collaboration, and other",
+      "durationMinutes": 30
     },
     {
       "date": "2021-04-19",
       "name": "Francisco C.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "Notion interview process!"
+      "topic": "Notion interview process!",
+      "durationMinutes": 30
     },
     {
       "date": "2021-04-19",
       "name": "Alexis L.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "Catch up!"
+      "topic": "Catch up!",
+      "durationMinutes": 30
     },
     {
       "date": "2021-04-09",
       "name": "Diana S.",
       "type": "chat-30",
       "eventTypeName": "30-Min Call ($20)",
-      "topic": "How is it working at Slack?  Any tips on the application process for Slack? If there is time, how did you get started with Techqueria?"
+      "topic": "How is it working at Slack?  Any tips on the application process for Slack? If there is time, how did you get started with Techqueria?",
+      "durationMinutes": 30
     },
     {
       "date": "2021-04-08",
       "name": "Maybelline P.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "On boarding with Techqueria for social media lead fellowship"
+      "topic": "On boarding with Techqueria for social media lead fellowship",
+      "durationMinutes": 30
     },
     {
       "date": "2021-04-06",
       "name": "Sam K.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Explore possibilities to mutually support increasing Latinx talent in tech"
+      "topic": "Explore possibilities to mutually support increasing Latinx talent in tech",
+      "durationMinutes": 30
     },
     {
       "date": "2021-04-06",
       "name": "Tona R.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "Payments:\n-Stipends for DIT Lead & DIT Fellow\n-DIT expense reimbursement\n-Payment process for future coordinator\n\n+Other"
+      "topic": "Payments:\n-Stipends for DIT Lead & DIT Fellow\n-DIT expense reimbursement\n-Payment process for future coordinator\n\n+Other",
+      "durationMinutes": 30
     },
     {
       "date": "2021-03-31",
       "name": "Esteban U.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "Organizarion / Board capacity building"
+      "topic": "Organizarion / Board capacity building",
+      "durationMinutes": 30
     },
     {
       "date": "2021-03-29",
       "name": "Alejandro C.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "tech industry advice"
+      "topic": "tech industry advice",
+      "durationMinutes": 30
     },
     {
       "date": "2021-03-10",
       "name": "Enrique G.",
       "type": "chat-15",
       "eventTypeName": "15-Min Call ($10)",
-      "topic": "I\u2019m a CS + Math student at a liberal arts college in California quarantined at home in Mexico City.\nI graduate in May and want to talk about how junior\nLatinx folks should break into tech"
+      "topic": "I\u2019m a CS + Math student at a liberal arts college in California quarantined at home in Mexico City.\nI graduate in May and want to talk about how junior\nLatinx folks should break into tech",
+      "durationMinutes": 15
     },
     {
       "date": "2021-03-09",
       "name": "Jessica T.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Interview about your experience as a software engineer."
+      "topic": "Interview about your experience as a software engineer.",
+      "durationMinutes": 30
     },
     {
       "date": "2021-03-08",
       "name": "Pranav B.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Dots helps Slack community managers save time and better understand engagement. https://dots.community/ \n\nExcited to learn about how Techqueria manages it's Slack community!"
+      "topic": "Dots helps Slack community managers save time and better understand engagement. https://dots.community/ \n\nExcited to learn about how Techqueria manages it's Slack community!",
+      "durationMinutes": 30
     },
     {
       "date": "2021-03-02",
       "name": "Christian A.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2021-02-18",
       "name": "Tomi O.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "Typeform"
+      "topic": "Typeform",
+      "durationMinutes": 30
     },
     {
       "date": "2021-02-17",
       "name": "Peter R.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "Coding"
+      "topic": "Coding",
+      "durationMinutes": 30
     },
     {
       "date": "2021-02-04",
       "name": "Peter R.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "JS problems test"
+      "topic": "JS problems test",
+      "durationMinutes": 30
     },
     {
       "date": "2021-01-28",
       "name": "Jonathan S.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "Techqueria/Folger Levin"
+      "topic": "Techqueria/Folger Levin",
+      "durationMinutes": 30
     },
     {
       "date": "2021-01-26",
       "name": "Anthony C.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2021-01-26",
       "name": "Gema R.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Barriers of LatinX"
+      "topic": "Barriers of LatinX",
+      "durationMinutes": 30
     },
     {
       "date": "2021-01-25",
       "name": "gissela m.",
       "type": "chat-30",
       "eventTypeName": "30-Min Call ($20)",
-      "topic": "I want to receive clarity about how to market myself better to receive gigs as an independent contractor and overall just an introductory chat."
+      "topic": "I want to receive clarity about how to market myself better to receive gigs as an independent contractor and overall just an introductory chat.",
+      "durationMinutes": 30
     },
     {
       "date": "2021-01-21",
       "name": "Gema R.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "The challenges that Hispanic and Latinx people are facing in Tech."
+      "topic": "The challenges that Hispanic and Latinx people are facing in Tech.",
+      "durationMinutes": 30
     },
     {
       "date": "2021-01-21",
       "name": "Abby S.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "General get to know eachother!"
+      "topic": "General get to know eachother!",
+      "durationMinutes": 30
     },
     {
       "date": "2021-01-14",
       "name": "Gema R.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "The challenges that Hispanic and Latinx people are facing in Tech."
+      "topic": "The challenges that Hispanic and Latinx people are facing in Tech.",
+      "durationMinutes": 30
     },
     {
       "date": "2021-01-12",
       "name": "Karla X.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "At WideOrbit we are working on starting ERGs and we want to talk to other people who have any experience with being involved in an ERGs. Any info will help us get things started. Thanks!"
+      "topic": "At WideOrbit we are working on starting ERGs and we want to talk to other people who have any experience with being involved in an ERGs. Any info will help us get things started. Thanks!",
+      "durationMinutes": 30
     },
     {
       "date": "2021-01-12",
       "name": "Esteban U.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "ED role"
+      "topic": "ED role",
+      "durationMinutes": 30
     },
     {
       "date": "2020-12-15",
       "name": "Carina C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "I would like to learn more about your journey to Slack and how you enjoy it there."
+      "topic": "I would like to learn more about your journey to Slack and how you enjoy it there.",
+      "durationMinutes": 15
     },
     {
       "date": "2020-12-10",
       "name": "Amy S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "ERG's! From inception to tactics and beyond."
+      "topic": "ERG's! From inception to tactics and beyond.",
+      "durationMinutes": 15
     },
     {
       "date": "2020-11-19",
       "name": "Yajaira O.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Hi, \n\nMy name is Yajaira Ortega and I am very excited to have the opportunity to meet you. Thank you for taking time out of your day."
+      "topic": "Hi, \n\nMy name is Yajaira Ortega and I am very excited to have the opportunity to meet you. Thank you for taking time out of your day.",
+      "durationMinutes": 30
     },
     {
       "date": "2020-11-18",
       "name": "Jason N.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "Techqueria and Concrete Rose partnership"
+      "topic": "Techqueria and Concrete Rose partnership",
+      "durationMinutes": 30
     },
     {
       "date": "2020-11-11",
       "name": "Minden B.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Board Climate Survey"
+      "topic": "Board Climate Survey",
+      "durationMinutes": 30
     },
     {
       "date": "2020-11-09",
       "name": "Alexis L.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "HI FRANCES <3 I want to catch up, give you some news on my end, and learn more about how to get involved in Techqueria! :)"
+      "topic": "HI FRANCES <3 I want to catch up, give you some news on my end, and learn more about how to get involved in Techqueria! :)",
+      "durationMinutes": 30
     },
     {
       "date": "2020-11-09",
       "name": "Isaac F.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "tech"
+      "topic": "tech",
+      "durationMinutes": 15
     },
     {
       "date": "2020-11-09",
       "name": "Gary G.",
       "type": "chat-30",
       "eventTypeName": "[Use Sparingly] High Priority 30-Min Chat",
-      "topic": "Items for discussion:\ncommunity moderation + politics channel\nJosh no longer part of Out in Tech\nAbel's involvement in Techqueria + Out in Tech\nOut in Tech's new website - so amazing"
+      "topic": "Items for discussion:\ncommunity moderation + politics channel\nJosh no longer part of Out in Tech\nAbel's involvement in Techqueria + Out in Tech\nOut in Tech's new website - so amazing",
+      "durationMinutes": 30
     },
     {
       "date": "2020-10-26",
       "name": "Lia T.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Affinity Groups"
+      "topic": "Affinity Groups",
+      "durationMinutes": 15
     },
     {
       "date": "2020-10-26",
       "name": "J Z.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Anything. Like to get to know more about you."
+      "topic": "Anything. Like to get to know more about you.",
+      "durationMinutes": 15
     },
     {
       "date": "2020-10-20",
       "name": "Jose E.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Kicking off the Houston chapter of TQ :)"
+      "topic": "Kicking off the Houston chapter of TQ :)",
+      "durationMinutes": 30
     },
     {
       "date": "2020-10-20",
       "name": "Jeremy H.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Call agenda:\n-Introductions\n-Understand your current impact initiatives\n-Overview of NationSwell with a focus on the Council\n-Recommended next steps"
+      "topic": "Call agenda:\n-Introductions\n-Understand your current impact initiatives\n-Overview of NationSwell with a focus on the Council\n-Recommended next steps",
+      "durationMinutes": 30
     },
     {
       "date": "2020-10-19",
       "name": "Ben R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "NACD member services, how we support boards and company leaders"
+      "topic": "NACD member services, how we support boards and company leaders",
+      "durationMinutes": 15
     },
     {
       "date": "2020-10-13",
       "name": "Jeremy E.",
       "type": "chat-30",
       "eventTypeName": "30-Min Call ($20)",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2020-10-12",
       "name": "Edgar T.",
       "type": "chat-30",
       "eventTypeName": "30-Min Call ($20)",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2020-10-06",
       "name": "Paola Q.",
       "type": "chat-15",
       "eventTypeName": "15 Minute Summit Sync",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-10-06",
       "name": "Stephanie M.",
       "type": "chat-15",
       "eventTypeName": "15 Minute Summit Sync",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-10-05",
       "name": "Lorena V.",
       "type": "chat-15",
       "eventTypeName": "15 Minute Summit Sync",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-10-02",
       "name": "Karina C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Techqueria\u2019s Google Ads plan"
+      "topic": "Techqueria\u2019s Google Ads plan",
+      "durationMinutes": 15
     },
     {
       "date": "2020-09-25",
       "name": "Sal R.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Events role"
+      "topic": "Events role",
+      "durationMinutes": 30
     },
     {
       "date": "2020-09-24",
       "name": "Michael U.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "ADELANTE Episode"
+      "topic": "ADELANTE Episode",
+      "durationMinutes": 15
     },
     {
       "date": "2020-09-24",
       "name": "Giancarlo C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Know more about Techqueria from a team member's perspective."
+      "topic": "Know more about Techqueria from a team member's perspective.",
+      "durationMinutes": 15
     },
     {
       "date": "2020-09-22",
       "name": "Mariela H.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-09-22",
       "name": "Rajiv M.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Inclusion & belonging"
+      "topic": "Inclusion & belonging",
+      "durationMinutes": 30
     },
     {
       "date": "2020-09-21",
       "name": "Hannah S.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Speaking at Airtable"
+      "topic": "Speaking at Airtable",
+      "durationMinutes": 30
     },
     {
       "date": "2020-09-16",
       "name": "Michael u.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "ADELANTE Episode Prep"
+      "topic": "ADELANTE Episode Prep",
+      "durationMinutes": 15
     },
     {
       "date": "2020-09-16",
       "name": "Jasmine S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Call ($10)",
-      "topic": "Learn more about how Techqueria has been able to grow and scale it's community."
+      "topic": "Learn more about how Techqueria has been able to grow and scale it's community.",
+      "durationMinutes": 15
     },
     {
       "date": "2020-09-08",
       "name": "Josh T.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Catch up!"
+      "topic": "Catch up!",
+      "durationMinutes": 15
     },
     {
       "date": "2020-09-04",
       "name": "Anne G.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Lcf website"
+      "topic": "Lcf website",
+      "durationMinutes": 15
     },
     {
       "date": "2020-09-03",
       "name": "Mac R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Community stuff for Community Club!"
+      "topic": "Community stuff for Community Club!",
+      "durationMinutes": 15
     },
     {
       "date": "2020-08-27",
       "name": "Marie M.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 30
     },
     {
       "date": "2020-08-21",
       "name": "Kyle H.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Discuss Slack OAuth"
+      "topic": "Discuss Slack OAuth",
+      "durationMinutes": 15
     },
     {
       "date": "2020-08-19",
       "name": "Marie M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Recording an interview for the All Turtles podcast series on racism in the tech industry."
+      "topic": "Recording an interview for the All Turtles podcast series on racism in the tech industry.",
+      "durationMinutes": 15
     },
     {
       "date": "2020-08-18",
       "name": "Ewa Z.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Partnership options for Zendesk with Techqueria"
+      "topic": "Partnership options for Zendesk with Techqueria",
+      "durationMinutes": 15
     },
     {
       "date": "2020-08-17",
       "name": "Madison M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Techqueria app"
+      "topic": "Techqueria app",
+      "durationMinutes": 15
     },
     {
       "date": "2020-08-17",
       "name": "Anna G.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Latino Community Foundation - Giving Circle webpages."
+      "topic": "Latino Community Foundation - Giving Circle webpages.",
+      "durationMinutes": 15
     },
     {
       "date": "2020-08-14",
       "name": "Indira G.",
       "type": "chat-30",
       "eventTypeName": "30-Min Call ($20)",
-      "topic": "'- How/what to contribute to D&I initiatives\n- Tech Interview preparation resources"
+      "topic": "'- How/what to contribute to D&I initiatives\n- Tech Interview preparation resources",
+      "durationMinutes": 30
     },
     {
       "date": "2020-08-14",
       "name": "Conrad H.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Learnings about Commsor and Slack communities"
+      "topic": "Learnings about Commsor and Slack communities",
+      "durationMinutes": 15
     },
     {
       "date": "2020-08-12",
       "name": "Karina C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "AdWords for Non-Profits"
+      "topic": "AdWords for Non-Profits",
+      "durationMinutes": 15
     },
     {
       "date": "2020-08-07",
       "name": "Kyle H.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Slack OAuth"
+      "topic": "Slack OAuth",
+      "durationMinutes": 15
     },
     {
       "date": "2020-08-06",
       "name": "Tanya M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Community growth / potential event collab"
+      "topic": "Community growth / potential event collab",
+      "durationMinutes": 15
     },
     {
       "date": "2020-08-04",
       "name": "Erick Z.",
       "type": "mentoring",
       "eventTypeName": "30-Min Career Advice ($20)",
-      "topic": "Career advice on how to break into tech when not having a technical background"
+      "topic": "Career advice on how to break into tech when not having a technical background",
+      "durationMinutes": 30
     },
     {
       "date": "2020-07-30",
       "name": "Ted G.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Job board + talent network for Techqueria"
+      "topic": "Job board + talent network for Techqueria",
+      "durationMinutes": 15
     },
     {
       "date": "2020-07-29",
       "name": "Fabiola C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Would love to get to know you, hear more about Techqueria, and how I can be more involved."
+      "topic": "Would love to get to know you, hear more about Techqueria, and how I can be more involved.",
+      "durationMinutes": 15
     },
     {
       "date": "2020-07-28",
       "name": "Lina P.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "Auth0 Contact Request"
+      "topic": "Auth0 Contact Request",
+      "durationMinutes": 30
     },
     {
       "date": "2020-07-16",
       "name": "Chris T.",
       "type": "chat-30",
       "eventTypeName": "High Priority 30-Min Chat",
-      "topic": "National Latinos in Tech Giving Circle through Techqueria"
+      "topic": "National Latinos in Tech Giving Circle through Techqueria",
+      "durationMinutes": 30
     },
     {
       "date": "2020-07-15",
       "name": "Yasir A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Call ($10)",
-      "topic": "How to get an app featured on Slack App Store"
+      "topic": "How to get an app featured on Slack App Store",
+      "durationMinutes": 15
     },
     {
       "date": "2020-07-13",
       "name": "Gabriela M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Intro to Slack ($10)",
-      "topic": "Backend software engineer"
+      "topic": "Backend software engineer",
+      "durationMinutes": 15
     },
     {
       "date": "2020-06-30",
       "name": "Kathia R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-06-30",
       "name": "Vianni B.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-06-29",
       "name": "Adriana M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-06-25",
       "name": "Michael T.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "General catch up!"
+      "topic": "General catch up!",
+      "durationMinutes": 15
     },
     {
       "date": "2020-06-23",
       "name": "Christina O.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-06-22",
       "name": "James V.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-06-18",
       "name": "Sandra P.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-06-10",
       "name": "Mary S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-06-10",
       "name": "Tremayne S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-29",
       "name": "Jehron P.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-28",
       "name": "Nicole T.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-28",
       "name": "Ligia K.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-27",
       "name": "Alexis L.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-27",
       "name": "Troy C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-26",
       "name": "Carlos M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-26",
       "name": "Starlyn S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-26",
       "name": "Rodrigo A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-22",
       "name": "Julio M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-20",
       "name": "Frank V.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-19",
       "name": "Mary R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-14",
       "name": "Wendy M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-13",
       "name": "Linda B.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-13",
       "name": "Abel Q.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-12",
       "name": "Cynthia B.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-12",
       "name": "Azucena A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-12",
       "name": "Oscar R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-11",
       "name": "Carlos M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-07",
       "name": "Oscar R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-04",
       "name": "Joel-Lehi O.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-05-01",
       "name": "Ana Lucia G.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-04-22",
       "name": "Allegra M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-04-21",
       "name": "Luke M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-04-08",
       "name": "Karina G.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-04-07",
       "name": "Cari P.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-03-31",
       "name": "Damita C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-03-26",
       "name": "Anusha S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-03-25",
       "name": "Carolina C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-03-25",
       "name": "Matheus M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-03-24",
       "name": "Diana P.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-03-18",
       "name": "Jessica L.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-03-16",
       "name": "Beth M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-03-12",
       "name": "Andrea M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-03-10",
       "name": "Abraham G.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-03-09",
       "name": "Andrea F.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-02-28",
       "name": "Carlos M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-02-24",
       "name": "Chloe P.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-02-21",
       "name": "Shashi J.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-02-21",
       "name": "Narubi M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-02-20",
       "name": "Carlos M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-02-18",
       "name": "Brian T.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-02-17",
       "name": "Andrea C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-02-13",
       "name": "Javier D.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-02-11",
       "name": "Martin V.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-02-10",
       "name": "Maritza A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-02-10",
       "name": "Gerry F.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-02-06",
       "name": "Michael U.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-01-29",
       "name": "Darlene S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-01-28",
       "name": "Edward B.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-01-24",
       "name": "Josh T.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-01-22",
       "name": "Michael U.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-01-21",
       "name": "Sal R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-01-17",
       "name": "Pablo M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-01-16",
       "name": "Abel Q.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-01-10",
       "name": "Francisco C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-01-09",
       "name": "Felipe V.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-01-08",
       "name": "Allie R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2020-01-03",
       "name": "Francisco C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-12-16",
       "name": "Lisa S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-12-11",
       "name": "Jazmin M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-12-10",
       "name": "Erika N.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-11-25",
       "name": "Yurena G.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-11-25",
       "name": "Andrei C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-11-25",
       "name": "Jazmin M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-11-19",
       "name": "Vianni B.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-11-18",
       "name": "Emily B.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-11-14",
       "name": "Amy W.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-11-13",
       "name": "Amanda V.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-11-13",
       "name": "Samantha C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-11-12",
       "name": "Jewels S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-11-11",
       "name": "Michael U.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-10-31",
       "name": "Nnenna (CORO) O.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-10-31",
       "name": "Nigel R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-10-31",
       "name": "Carolina O.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-10-29",
       "name": "Whitney C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-10-29",
       "name": "Katy M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-10-28",
       "name": "Krystal F.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-10-24",
       "name": "Jessica R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-10-21",
       "name": "Dolimer R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-10-18",
       "name": "Abel Q.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-10-17",
       "name": "Sofia V.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-10-17",
       "name": "Ilder B.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-10-16",
       "name": "Joann A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-10-16",
       "name": "Bianca M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-10-15",
       "name": "Trish G.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-10-14",
       "name": "Steven K.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-10-11",
       "name": "Franco S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-10-01",
       "name": "Luis L.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-10-01",
       "name": "Melody M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-10-01",
       "name": "Celeste R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-09-30",
       "name": "Fernando Augusto L.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-09-26",
       "name": "Nikhil S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-09-26",
       "name": "Ana P.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-09-24",
       "name": "Hanna C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-09-23",
       "name": "Michelle C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-09-20",
       "name": "Jennifer P.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-09-19",
       "name": "Carlo G.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-09-18",
       "name": "Swati K.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-09-16",
       "name": "Antonio A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-09-12",
       "name": "Mayra U.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-09-12",
       "name": "Juliet R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-09-11",
       "name": "Annelise H.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-09-06",
       "name": "Susie G.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-09-05",
       "name": "Maria Antonia H.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-09-04",
       "name": "Erin D.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-09-04",
       "name": "barbara a.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-09-03",
       "name": "Bob S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-09-02",
       "name": "Ellie M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-08-29",
       "name": "Sonja O.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-08-29",
       "name": "Marcela S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-08-23",
       "name": "Jacob M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-08-22",
       "name": "Dennis C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-08-20",
       "name": "Nina R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-08-15",
       "name": "Juliet R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-08-13",
       "name": "Gabriela R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-08-09",
       "name": "kanjamad B.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-31",
       "name": "Marciana D.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-31",
       "name": "Molly S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-30",
       "name": "Ramu A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-30",
       "name": "Catherine A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-25",
       "name": "Gabriela R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-24",
       "name": "Marliz C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-24",
       "name": "Jewels S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-18",
       "name": "Faith C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-17",
       "name": "Keila G.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-17",
       "name": "Valerie S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-17",
       "name": "Luis C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-16",
       "name": "Jamie W.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-16",
       "name": "Coral S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-15",
       "name": "Napiya N.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-15",
       "name": "Gabrielle C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-12",
       "name": "Debi P.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-10",
       "name": "Faith C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-10",
       "name": "Cara L.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-09",
       "name": "Vanessa A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-08",
       "name": "Elena A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-02",
       "name": "Marisabel J.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-02",
       "name": "Luis C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-07-01",
       "name": "Kelley S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-06-28",
       "name": "Gabrielle C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-06-27",
       "name": "cecili R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-06-24",
       "name": "Michell B.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-06-24",
       "name": "Simran A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-06-19",
       "name": "Joan W.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-06-17",
       "name": "Madison M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-06-17",
       "name": "Ryan C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-06-13",
       "name": "Jasmine V.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-06-13",
       "name": "Sashko S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-06-11",
       "name": "Achidi S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-06-11",
       "name": "Janet L.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-06-10",
       "name": "Michelle C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-05-24",
       "name": "Christina O.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-05-22",
       "name": "Lauren C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-05-15",
       "name": "Cecilia C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-05-13",
       "name": "Stephanie C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Tech Queens Podcast"
+      "topic": "Tech Queens Podcast",
+      "durationMinutes": 15
     },
     {
       "date": "2019-05-08",
       "name": "Irma M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-05-03",
       "name": "Felipe V.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-05-02",
       "name": "Tanya G.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Tech Queens podcast"
+      "topic": "Tech Queens podcast",
+      "durationMinutes": 15
     },
     {
       "date": "2019-05-02",
       "name": "Jose F.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "podcasts"
+      "topic": "podcasts",
+      "durationMinutes": 15
     },
     {
       "date": "2019-04-26",
       "name": "Pauly Q.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-04-26",
       "name": "Dale D.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-04-25",
       "name": "Erika C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Latinx in tech, learning more, and seeing how I can help!"
+      "topic": "Latinx in tech, learning more, and seeing how I can help!",
+      "durationMinutes": 15
     },
     {
       "date": "2019-04-24",
       "name": "Catherine A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Tech Queens"
+      "topic": "Tech Queens",
+      "durationMinutes": 15
     },
     {
       "date": "2019-04-24",
       "name": "Victor A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "NPower - Women in Tech Event"
+      "topic": "NPower - Women in Tech Event",
+      "durationMinutes": 15
     },
     {
       "date": "2019-04-24",
       "name": "Anna G.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Scheduling a call with Joan C. Williams for an interview for the Women of Color in Computing Collaborative study"
+      "topic": "Scheduling a call with Joan C. Williams for an interview for the Women of Color in Computing Collaborative study",
+      "durationMinutes": 15
     },
     {
       "date": "2019-04-22",
       "name": "Zane S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Strive Leadership Circles"
+      "topic": "Strive Leadership Circles",
+      "durationMinutes": 15
     },
     {
       "date": "2019-04-19",
       "name": "Itzel M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Tech Queens Podcast"
+      "topic": "Tech Queens Podcast",
+      "durationMinutes": 15
     },
     {
       "date": "2019-04-18",
       "name": "Mari Z.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Podcast 510 333 5140"
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-04-17",
       "name": "Daniela B.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Tech Queens!"
+      "topic": "Tech Queens!",
+      "durationMinutes": 15
     },
     {
       "date": "2019-04-16",
       "name": "Elisabeth M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "The Latinx Collective events"
+      "topic": "The Latinx Collective events",
+      "durationMinutes": 15
     },
     {
       "date": "2019-04-11",
       "name": "Amber S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Career and software engineering advice as a fellow bootcamp grad and woman of color!"
+      "topic": "Career and software engineering advice as a fellow bootcamp grad and woman of color!",
+      "durationMinutes": 15
     },
     {
       "date": "2019-04-10",
       "name": "Faith C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Tech Queens"
+      "topic": "Tech Queens",
+      "durationMinutes": 15
     },
     {
       "date": "2019-04-09",
       "name": "Rubi V.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Just get to know each other since we're both going to be working on Techqueria"
+      "topic": "Just get to know each other since we're both going to be working on Techqueria",
+      "durationMinutes": 15
     },
     {
       "date": "2019-04-09",
       "name": "Jesselle H.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "TechQueens Podcast! HR Support/Equity, Diversity and Inclusion practices and tools and tricks for navigating the difficult conversations with managers, leaders, and others."
+      "topic": "TechQueens Podcast! HR Support/Equity, Diversity and Inclusion practices and tools and tricks for navigating the difficult conversations with managers, leaders, and others.",
+      "durationMinutes": 15
     },
     {
       "date": "2019-04-08",
       "name": "Paul D.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Career and life advice! :) \n\nThanks so much for making time"
+      "topic": "Career and life advice! :) \n\nThanks so much for making time",
+      "durationMinutes": 15
     },
     {
       "date": "2019-04-04",
       "name": "Alexis L.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Tech Queens Podcast and whatever chisme comes from that :) I can also tell you how our first Cafecito at Splunk went!"
+      "topic": "Tech Queens Podcast and whatever chisme comes from that :) I can also tell you how our first Cafecito at Splunk went!",
+      "durationMinutes": 15
     },
     {
       "date": "2019-04-02",
       "name": "Enrique N.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Career Advice :')"
+      "topic": "Career Advice :')",
+      "durationMinutes": 15
     },
     {
       "date": "2019-04-02",
       "name": "Anisha C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Your podcast!"
+      "topic": "Your podcast!",
+      "durationMinutes": 15
     },
     {
       "date": "2019-03-29",
       "name": "Pia Z.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Congratulations on Tech Queens! Looking forward to learning more about it and participating!"
+      "topic": "Congratulations on Tech Queens! Looking forward to learning more about it and participating!",
+      "durationMinutes": 15
     },
     {
       "date": "2019-03-29",
       "name": "Simran K.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Connect on new opportunities / interview process"
+      "topic": "Connect on new opportunities / interview process",
+      "durationMinutes": 15
     },
     {
       "date": "2019-03-28",
       "name": "Roya L.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Hi Frances! I would love to chat with you about my app I am building, it's called Make Me Up. I have a pitch deck with all the information about it, and would be happy to send it to you."
+      "topic": "Hi Frances! I would love to chat with you about my app I am building, it's called Make Me Up. I have a pitch deck with all the information about it, and would be happy to send it to you.",
+      "durationMinutes": 15
     },
     {
       "date": "2019-03-28",
       "name": "Stephanie C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "TechQueens podcast"
+      "topic": "TechQueens podcast",
+      "durationMinutes": 15
     },
     {
       "date": "2019-03-27",
       "name": "Ebonne C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "This is about your Tech Queens Podcast."
+      "topic": "This is about your Tech Queens Podcast.",
+      "durationMinutes": 15
     },
     {
       "date": "2019-03-25",
       "name": "Cherri H.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Hi Frances,\n\nI'd love to meet and hear more about your journey with software engineering! \n\nThanks!"
+      "topic": "Hi Frances,\n\nI'd love to meet and hear more about your journey with software engineering! \n\nThanks!",
+      "durationMinutes": 15
     },
     {
       "date": "2019-03-20",
       "name": "Matthew M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Thank you so much again for your time, I would love to talk about career guidance over coffee, looking forward to it"
+      "topic": "Thank you so much again for your time, I would love to talk about career guidance over coffee, looking forward to it",
+      "durationMinutes": 15
     },
     {
       "date": "2019-03-20",
       "name": "Anisha J.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Potentially being a part of TechQueens podcast."
+      "topic": "Potentially being a part of TechQueens podcast.",
+      "durationMinutes": 15
     },
     {
       "date": "2019-03-18",
       "name": "Lupita D.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Podcast"
+      "topic": "Podcast",
+      "durationMinutes": 15
     },
     {
       "date": "2019-03-13",
       "name": "Tigran S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Coffee + #GoBeyondResumes"
+      "topic": "Coffee + #GoBeyondResumes",
+      "durationMinutes": 15
     },
     {
       "date": "2019-03-11",
       "name": "Stephen L.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Learning more about Slack"
+      "topic": "Learning more about Slack",
+      "durationMinutes": 15
     },
     {
       "date": "2019-03-06",
       "name": "Mari Z.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Coro connection and working in tech :) \nLooks like our offices are close to each other so I'll swing by yours, and we can decide if we want to go out or hang there."
+      "topic": "Coro connection and working in tech :) \nLooks like our offices are close to each other so I'll swing by yours, and we can decide if we want to go out or hang there.",
+      "durationMinutes": 15
     },
     {
       "date": "2019-02-26",
       "name": "Kiara A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "WOC in Tech article"
+      "topic": "WOC in Tech article",
+      "durationMinutes": 15
     },
     {
       "date": "2019-02-21",
       "name": "Erika C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Interview with Coro Fellows"
+      "topic": "Interview with Coro Fellows",
+      "durationMinutes": 15
     },
     {
       "date": "2019-01-22",
       "name": "Timothy P.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "CW Programming"
+      "topic": "CW Programming",
+      "durationMinutes": 15
     },
     {
       "date": "2019-01-18",
       "name": "SImran A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "'+15145773150"
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2019-01-16",
       "name": "Adriana F.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Collaboration"
+      "topic": "Collaboration",
+      "durationMinutes": 15
     },
     {
       "date": "2018-12-12",
       "name": "Adriana F.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Podcast"
+      "topic": "Podcast",
+      "durationMinutes": 15
     },
     {
       "date": "2018-11-16",
       "name": "Jasmine A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Mentorship session"
+      "topic": "Mentorship session",
+      "durationMinutes": 15
     },
     {
       "date": "2018-11-14",
       "name": "Ivy T.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Grace Hopper fellow having some questions about working at Slack (I also provide my phone number below just in case)"
+      "topic": "Grace Hopper fellow having some questions about working at Slack (I also provide my phone number below just in case)",
+      "durationMinutes": 15
     },
     {
       "date": "2018-11-14",
       "name": "Larissa S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "What it's like at Slack!"
+      "topic": "What it's like at Slack!",
+      "durationMinutes": 15
     },
     {
       "date": "2018-11-09",
       "name": "Jared F.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "User research interview with Y Combinator about your experience getting a job as an engineer."
+      "topic": "User research interview with Y Combinator about your experience getting a job as an engineer.",
+      "durationMinutes": 15
     },
     {
       "date": "2018-11-09",
       "name": "Anna g.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Experiences at slack/team structure"
+      "topic": "Experiences at slack/team structure",
+      "durationMinutes": 15
     },
     {
       "date": "2018-11-08",
       "name": "Carly G.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Tour of Slack"
+      "topic": "Tour of Slack",
+      "durationMinutes": 15
     },
     {
       "date": "2018-11-07",
       "name": "Brian M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "I'd like to learn more about your professional experiences and seek out any advice I can implement as I forge my own career path."
+      "topic": "I'd like to learn more about your professional experiences and seek out any advice I can implement as I forge my own career path.",
+      "durationMinutes": 15
     },
     {
       "date": "2018-10-19",
       "name": "Abel R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Your trajectory through the tech industry and what you're working on at Slack. Mini-tour @ Slack HQ if possible."
+      "topic": "Your trajectory through the tech industry and what you're working on at Slack. Mini-tour @ Slack HQ if possible.",
+      "durationMinutes": 15
     },
     {
       "date": "2018-10-11",
       "name": "Jasmine A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Make School Student - Potential mentorship"
+      "topic": "Make School Student - Potential mentorship",
+      "durationMinutes": 15
     },
     {
       "date": "2018-10-10",
       "name": "Annelise T.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Slack/Resources"
+      "topic": "Slack/Resources",
+      "durationMinutes": 15
     },
     {
       "date": "2018-10-08",
       "name": "Abel",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Re-schedule original call from Thursday. (Chat about Slack company, product, dev.. working in tech)"
+      "topic": "Re-schedule original call from Thursday. (Chat about Slack company, product, dev.. working in tech)",
+      "durationMinutes": 15
     },
     {
       "date": "2018-10-01",
       "name": "Kanjamad B.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Phone Call (Use phone # from link)"
+      "topic": "Phone Call (Use phone # from link)",
+      "durationMinutes": 15
     },
     {
       "date": "2018-09-26",
       "name": "Prateek K.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Phone Call (Use phone # from link)"
+      "topic": "Phone Call (Use phone # from link)",
+      "durationMinutes": 15
     },
     {
       "date": "2018-09-20",
       "name": "Homum A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Phone Call"
+      "topic": "Phone Call",
+      "durationMinutes": 15
     },
     {
       "date": "2018-09-12",
       "name": "javier l.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Phone Call"
+      "topic": "Phone Call",
+      "durationMinutes": 15
     },
     {
       "date": "2018-09-12",
       "name": "Shruti R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Phone Call"
+      "topic": "Phone Call",
+      "durationMinutes": 15
     },
     {
       "date": "2018-09-11",
       "name": "Puneet S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Phone Call"
+      "topic": "Phone Call",
+      "durationMinutes": 15
     },
     {
       "date": "2018-09-10",
       "name": "Olof J.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Video Call"
+      "topic": "Video Call",
+      "durationMinutes": 15
     },
     {
       "date": "2018-09-07",
       "name": "Mariela P.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "In Person"
+      "topic": "In Person",
+      "durationMinutes": 15
     },
     {
       "date": "2018-09-06",
       "name": "Gordon W.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Phone Call"
+      "topic": "Phone Call",
+      "durationMinutes": 15
     },
     {
       "date": "2018-09-05",
       "name": "Laura H.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Phone Call"
+      "topic": "Phone Call",
+      "durationMinutes": 15
     },
     {
       "date": "2018-09-05",
       "name": "Rishabh J.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Phone Call"
+      "topic": "Phone Call",
+      "durationMinutes": 15
     },
     {
       "date": "2018-08-30",
       "name": "Meghan M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Video Call"
+      "topic": "Video Call",
+      "durationMinutes": 15
     },
     {
       "date": "2018-08-20",
       "name": "Mia P.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Phone Call"
+      "topic": "Phone Call",
+      "durationMinutes": 15
     },
     {
       "date": "2018-08-20",
       "name": "Kanad B.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "In Person"
+      "topic": "In Person",
+      "durationMinutes": 15
     },
     {
       "date": "2018-08-08",
       "name": "Masharika M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Phone Call"
+      "topic": "Phone Call",
+      "durationMinutes": 15
     },
     {
       "date": "2018-08-07",
       "name": "Michael T.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Phone Call"
+      "topic": "Phone Call",
+      "durationMinutes": 15
     },
     {
       "date": "2018-07-18",
       "name": "Traci G.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "PM roles @ Slack"
+      "topic": "PM roles @ Slack",
+      "durationMinutes": 15
     },
     {
       "date": "2018-07-08",
       "name": "Kevin C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Guest Speak at event on 28th July in Palo Alto"
+      "topic": "Guest Speak at event on 28th July in Palo Alto",
+      "durationMinutes": 15
     },
     {
       "date": "2018-07-08",
       "name": "Amy H.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Your work at Slack"
+      "topic": "Your work at Slack",
+      "durationMinutes": 15
     },
     {
       "date": "2018-07-07",
       "name": "Tessa",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "remote coffee chat"
+      "topic": "remote coffee chat",
+      "durationMinutes": 15
     },
     {
       "date": "2018-07-07",
       "name": "Jannine C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Slack fall internships"
+      "topic": "Slack fall internships",
+      "durationMinutes": 15
     },
     {
       "date": "2018-07-05",
       "name": "Alan L.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "6153065873"
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2018-05-22",
       "name": "Joydeep G.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "'-General stuff about tech"
+      "topic": "'-General stuff about tech",
+      "durationMinutes": 15
     },
     {
       "date": "2018-05-21",
       "name": "Alex R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Help interviewing for engineering roles"
+      "topic": "Help interviewing for engineering roles",
+      "durationMinutes": 15
     },
     {
       "date": "2018-05-01",
       "name": "Valeria O.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "From Out of Office - I'm having issues getting my first job as a developer."
+      "topic": "From Out of Office - I'm having issues getting my first job as a developer.",
+      "durationMinutes": 15
     },
     {
       "date": "2018-04-23",
       "name": "Melhjingoy D.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "6467053439"
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2018-04-20",
       "name": "Melhjingoy D.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "6467053439"
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2018-04-17",
       "name": "Melhjingoy D.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "6467053439"
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2018-04-16",
       "name": "Andrea P.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "DTS Engineer role"
+      "topic": "DTS Engineer role",
+      "durationMinutes": 15
     },
     {
       "date": "2018-04-10",
       "name": "Adrienne U.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Diversity in tech"
+      "topic": "Diversity in tech",
+      "durationMinutes": 15
     },
     {
       "date": "2018-04-10",
       "name": "Melhjingoy D.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "6467053439"
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2018-04-09",
       "name": "Melhjingoy D.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "6467053439"
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2018-04-06",
       "name": "Melhjingoy D.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "6467053439"
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2018-04-06",
       "name": "kelsey0",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "job opportunity"
+      "topic": "job opportunity",
+      "durationMinutes": 15
     },
     {
       "date": "2018-04-06",
       "name": "Molly",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Hi Frances, I'd love to learn more about your background in software development and the types of roles you are interested in. I look forward to chatting with you!"
+      "topic": "Hi Frances, I'd love to learn more about your background in software development and the types of roles you are interested in. I look forward to chatting with you!",
+      "durationMinutes": 15
     },
     {
       "date": "2018-04-05",
       "name": "Melhjingoy D.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "6467053439"
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2018-03-27",
       "name": "Vanessa A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Apple and Williams Sonoma"
+      "topic": "Apple and Williams Sonoma",
+      "durationMinutes": 15
     },
     {
       "date": "2018-03-23",
       "name": "Melhjingoy D.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "6467053439"
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2018-03-20",
       "name": "Melhjingoy D.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "6467053439"
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2018-03-17",
       "name": "Melhjingoy D.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "6467053439"
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2018-03-16",
       "name": "Melhjingoy D.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "1 on 1"
+      "topic": "1 on 1",
+      "durationMinutes": 15
     },
     {
       "date": "2018-03-15",
       "name": "carole W.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Interview technical evangelist"
+      "topic": "Interview technical evangelist",
+      "durationMinutes": 15
     },
     {
       "date": "2018-03-15",
       "name": "PJ C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "7604557037"
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2018-03-09",
       "name": "Angela J.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Coding bootcamps, hackathons, and experiences in formal CS education vs informal"
+      "topic": "Coding bootcamps, hackathons, and experiences in formal CS education vs informal",
+      "durationMinutes": 15
     },
     {
       "date": "2018-03-09",
       "name": "Melhjingoy D.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Thinkful mentor session!"
+      "topic": "Thinkful mentor session!",
+      "durationMinutes": 15
     },
     {
       "date": "2018-03-05",
       "name": "Melhjingoy D.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "6467053439"
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2018-02-26",
       "name": "Sarah C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Slalom San Francisco Opportunities"
+      "topic": "Slalom San Francisco Opportunities",
+      "durationMinutes": 15
     },
     {
       "date": "2018-02-16",
       "name": "Adilene C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Professional dev feedback"
+      "topic": "Professional dev feedback",
+      "durationMinutes": 15
     },
     {
       "date": "2018-02-09",
       "name": "Erika C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Passage ai and you!"
+      "topic": "Passage ai and you!",
+      "durationMinutes": 15
     },
     {
       "date": "2018-02-08",
       "name": "Allison C.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Online Call"
+      "topic": "Online Call",
+      "durationMinutes": 15
     },
     {
       "date": "2018-02-07",
       "name": "Justin L.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Rescheduling"
+      "topic": "Rescheduling",
+      "durationMinutes": 15
     },
     {
       "date": "2018-02-06",
       "name": "Crshonda W.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Developer opening"
+      "topic": "Developer opening",
+      "durationMinutes": 15
     },
     {
       "date": "2018-02-01",
       "name": "Stephen M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Developer Evangelism role here at DocuSign"
+      "topic": "Developer Evangelism role here at DocuSign",
+      "durationMinutes": 15
     },
     {
       "date": "2018-01-24",
       "name": "Adil M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Experience at Fullstack Academy and how to approach next steps after graduation."
+      "topic": "Experience at Fullstack Academy and how to approach next steps after graduation.",
+      "durationMinutes": 15
     },
     {
       "date": "2017-07-10",
       "name": "Jenise A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Cornell Tech"
+      "topic": "Cornell Tech",
+      "durationMinutes": 15
     },
     {
       "date": "2017-06-01",
       "name": "Jayden S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Your application to 8th Light"
+      "topic": "Your application to 8th Light",
+      "durationMinutes": 15
     },
     {
       "date": "2017-05-31",
       "name": "Kelaiya P.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "explore awesome macOS apps & plugins\nbookmark useful dev websites & Chrome extensions"
+      "topic": "explore awesome macOS apps & plugins\nbookmark useful dev websites & Chrome extensions",
+      "durationMinutes": 15
     },
     {
       "date": "2017-05-30",
       "name": "Eric O.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Interview feedback"
+      "topic": "Interview feedback",
+      "durationMinutes": 15
     },
     {
       "date": "2017-05-23",
       "name": "Kelaiya P.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Text Editor, Terminal, Git, Github, Overview on MEAN stack"
+      "topic": "Text Editor, Terminal, Git, Github, Overview on MEAN stack",
+      "durationMinutes": 15
     },
     {
       "date": "2017-05-14",
       "name": "Akua W.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "I'm Akua Walters, Head of Business Development at Startup Robot, We are hosting this awesome event in Jamaica called Hacker Hostel and we would love to talk to you about possibly being a mentor"
+      "topic": "I'm Akua Walters, Head of Business Development at Startup Robot, We are hosting this awesome event in Jamaica called Hacker Hostel and we would love to talk to you about possibly being a mentor",
+      "durationMinutes": 15
     },
     {
       "date": "2017-05-12",
       "name": "Jenna B.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "PM internship"
+      "topic": "PM internship",
+      "durationMinutes": 15
     },
     {
       "date": "2017-05-01",
       "name": "Nicolette N.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Tech Evangelist role @ BuzzFeed"
+      "topic": "Tech Evangelist role @ BuzzFeed",
+      "durationMinutes": 15
     },
     {
       "date": "2017-04-27",
       "name": "Emily S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "MoveMeant"
+      "topic": "MoveMeant",
+      "durationMinutes": 15
     },
     {
       "date": "2017-04-26",
       "name": "Alex A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Onsite Meeting With Galvanize"
+      "topic": "Onsite Meeting With Galvanize",
+      "durationMinutes": 15
     },
     {
       "date": "2017-04-21",
       "name": "Savasti A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Career opportunities within our Education Institute."
+      "topic": "Career opportunities within our Education Institute.",
+      "durationMinutes": 15
     },
     {
       "date": "2017-04-19",
       "name": "Allison L.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Binti & your interests"
+      "topic": "Binti & your interests",
+      "durationMinutes": 15
     },
     {
       "date": "2017-04-17",
       "name": "Gabe K.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Binti intro call."
+      "topic": "Binti intro call.",
+      "durationMinutes": 15
     },
     {
       "date": "2017-04-04",
       "name": "Alex A.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "NY Associate Instructor Opportunity"
+      "topic": "NY Associate Instructor Opportunity",
+      "durationMinutes": 15
     },
     {
       "date": "2017-02-27",
       "name": "Rich M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Job opportunities"
+      "topic": "Job opportunities",
+      "durationMinutes": 15
     },
     {
       "date": "2017-02-10",
       "name": "Hang S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "hackNY ;)"
+      "topic": "hackNY ;)",
+      "durationMinutes": 15
     },
     {
       "date": "2017-02-10",
       "name": "Theresa S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Career in it and transitioning yo new career"
+      "topic": "Career in it and transitioning yo new career",
+      "durationMinutes": 15
     },
     {
       "date": "2017-02-09",
       "name": "Maura S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Opportunity at Gigster"
+      "topic": "Opportunity at Gigster",
+      "durationMinutes": 15
     },
     {
       "date": "2017-01-19",
       "name": "Kelaiya P.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Background and personal experiences at Fullstack Academy; Logistical questions about the program and the interview process"
+      "topic": "Background and personal experiences at Fullstack Academy; Logistical questions about the program and the interview process",
+      "durationMinutes": 15
     },
     {
       "date": "2017-01-01",
       "name": "Eunji S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Fullstack Academy's Summer of Code program/ interview process"
+      "topic": "Fullstack Academy's Summer of Code program/ interview process",
+      "durationMinutes": 15
     },
     {
       "date": "2016-10-25",
       "name": "Joseph P.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Your experience using Code School and Pluralsight."
+      "topic": "Your experience using Code School and Pluralsight.",
+      "durationMinutes": 15
     },
     {
       "date": "2016-10-05",
       "name": "Brenda S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Getting into a coding bootcamp"
+      "topic": "Getting into a coding bootcamp",
+      "durationMinutes": 15
     },
     {
       "date": "2016-08-26",
       "name": "Samuel L.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Discussing the internship search after FullStack Academy as well as interview prep."
+      "topic": "Discussing the internship search after FullStack Academy as well as interview prep.",
+      "durationMinutes": 15
     },
     {
       "date": "2016-06-05",
       "name": "Pak c.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "MS"
+      "topic": "MS",
+      "durationMinutes": 15
     },
     {
       "date": "2016-06-05",
       "name": "Lavie R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Getting into Grace Hopper"
+      "topic": "Getting into Grace Hopper",
+      "durationMinutes": 15
     },
     {
       "date": "2016-06-03",
       "name": "Wen T.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Skype"
+      "topic": "Skype",
+      "durationMinutes": 15
     },
     {
       "date": "2016-06-01",
       "name": "Wen T.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "bootcamp interview prep"
+      "topic": "bootcamp interview prep",
+      "durationMinutes": 15
     },
     {
       "date": "2016-05-31",
       "name": "Wen T.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Fullstack Academy Admission interview. Thank you, thank you, thank you"
+      "topic": "Fullstack Academy Admission interview. Thank you, thank you, thank you",
+      "durationMinutes": 15
     },
     {
       "date": "2016-05-29",
       "name": "Lavie R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Getting into Grace Hopper :)"
+      "topic": "Getting into Grace Hopper :)",
+      "durationMinutes": 15
     },
     {
       "date": "2016-05-16",
       "name": "Pak c.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "algo"
+      "topic": "algo",
+      "durationMinutes": 15
     },
     {
       "date": "2016-05-07",
       "name": "Lavie R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Session 4"
+      "topic": "Session 4",
+      "durationMinutes": 15
     },
     {
       "date": "2016-04-24",
       "name": "Lavie R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Session 3 :)"
+      "topic": "Session 3 :)",
+      "durationMinutes": 15
     },
     {
       "date": "2016-04-23",
       "name": "Lavie R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Session 3"
+      "topic": "Session 3",
+      "durationMinutes": 15
     },
     {
       "date": "2016-04-21",
       "name": "Rachel M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "design program at Make School"
+      "topic": "design program at Make School",
+      "durationMinutes": 15
     },
     {
       "date": "2016-04-21",
       "name": "Leslie K.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "make school awesomeness"
+      "topic": "make school awesomeness",
+      "durationMinutes": 15
     },
     {
       "date": "2016-04-20",
       "name": "Pak c.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "pre-work"
+      "topic": "pre-work",
+      "durationMinutes": 15
     },
     {
       "date": "2016-04-17",
       "name": "Pak c.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Pre-work"
+      "topic": "Pre-work",
+      "durationMinutes": 15
     },
     {
       "date": "2016-04-17",
       "name": "Lavie R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Session 2"
+      "topic": "Session 2",
+      "durationMinutes": 15
     },
     {
       "date": "2016-04-16",
       "name": "Lavie R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Session 2!"
+      "topic": "Session 2!",
+      "durationMinutes": 15
     },
     {
       "date": "2016-04-14",
       "name": "Lavie R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Session 2 :)"
+      "topic": "Session 2 :)",
+      "durationMinutes": 15
     },
     {
       "date": "2016-04-13",
       "name": "Angel R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Some more FSA stuff!"
+      "topic": "Some more FSA stuff!",
+      "durationMinutes": 15
     },
     {
       "date": "2016-04-09",
       "name": "Jiaqi S.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Life"
+      "topic": "Life",
+      "durationMinutes": 15
     },
     {
       "date": "2016-04-08",
       "name": "Adrian W.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Make School"
+      "topic": "Make School",
+      "durationMinutes": 15
     },
     {
       "date": "2016-04-07",
       "name": "Lavie R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "web development"
+      "topic": "web development",
+      "durationMinutes": 15
     },
     {
       "date": "2016-04-06",
       "name": "Adrian W.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Make School"
+      "topic": "Make School",
+      "durationMinutes": 15
     },
     {
       "date": "2016-04-05",
       "name": "Adrian W.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Make School"
+      "topic": "Make School",
+      "durationMinutes": 15
     },
     {
       "date": "2016-04-04",
       "name": "Adrian W.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Make School"
+      "topic": "Make School",
+      "durationMinutes": 15
     },
     {
       "date": "2016-04-03",
       "name": "Pak c.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "next step for Coding camp"
+      "topic": "next step for Coding camp",
+      "durationMinutes": 15
     },
     {
       "date": "2016-03-29",
       "name": "Pak c.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "How to get ready"
+      "topic": "How to get ready",
+      "durationMinutes": 15
     },
     {
       "date": "2016-03-28",
       "name": "Pak c.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Level up in coding"
+      "topic": "Level up in coding",
+      "durationMinutes": 15
     },
     {
       "date": "2016-02-19",
       "name": "Liz E.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Summer of Code Q&A!"
+      "topic": "Summer of Code Q&A!",
+      "durationMinutes": 15
     },
     {
       "date": "2016-02-10",
       "name": "Angel R.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Fullstack Academy!!"
+      "topic": "Fullstack Academy!!",
+      "durationMinutes": 15
     },
     {
       "date": "2016-01-24",
       "name": "Thomas M.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "tech talks"
+      "topic": "tech talks",
+      "durationMinutes": 15
     },
     {
       "date": "2016-01-23",
       "name": "thomas m.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
-      "topic": "Tech Talks"
+      "topic": "Tech Talks",
+      "durationMinutes": 15
     },
     {
       "date": "2015-05-22",
       "name": "Kalima M.",
       "type": "chat-15",
       "eventTypeName": "15 Minute Chat",
-      "topic": null
+      "topic": null,
+      "durationMinutes": 15
     },
     {
       "date": "2026-01-12",
@@ -5208,7 +5932,8 @@
       "type": "chat-15",
       "eventTypeName": "Leland Intro Call",
       "topic": null,
-      "source": "leland"
+      "source": "leland",
+      "durationMinutes": 15
     },
     {
       "date": "2026-02-02",
@@ -5216,7 +5941,8 @@
       "type": "chat-15",
       "eventTypeName": "Leland Intro Call",
       "topic": null,
-      "source": "leland"
+      "source": "leland",
+      "durationMinutes": 15
     },
     {
       "date": "2026-02-02",
@@ -5224,7 +5950,8 @@
       "type": "chat-15",
       "eventTypeName": "Leland Intro Call",
       "topic": null,
-      "source": "leland"
+      "source": "leland",
+      "durationMinutes": 15
     },
     {
       "date": "2026-02-09",
@@ -5232,7 +5959,8 @@
       "type": "chat-15",
       "eventTypeName": "Leland Intro Call",
       "topic": null,
-      "source": "leland"
+      "source": "leland",
+      "durationMinutes": 15
     },
     {
       "date": "2026-02-09",
@@ -5240,7 +5968,8 @@
       "type": "chat-15",
       "eventTypeName": "Leland Intro Call",
       "topic": null,
-      "source": "leland"
+      "source": "leland",
+      "durationMinutes": 15
     },
     {
       "date": "2026-02-09",
@@ -5248,7 +5977,8 @@
       "type": "chat-15",
       "eventTypeName": "Leland Intro Call",
       "topic": null,
-      "source": "leland"
+      "source": "leland",
+      "durationMinutes": 15
     },
     {
       "date": "2026-02-12",
@@ -5256,7 +5986,8 @@
       "type": "chat-15",
       "eventTypeName": "Leland Intro Call",
       "topic": null,
-      "source": "leland"
+      "source": "leland",
+      "durationMinutes": 15
     },
     {
       "date": "2026-02-12",
@@ -5264,7 +5995,8 @@
       "type": "chat-15",
       "eventTypeName": "Leland Intro Call",
       "topic": null,
-      "source": "leland"
+      "source": "leland",
+      "durationMinutes": 15
     },
     {
       "date": "2026-02-12",
@@ -5272,7 +6004,8 @@
       "type": "chat-15",
       "eventTypeName": "Leland Intro Call",
       "topic": null,
-      "source": "leland"
+      "source": "leland",
+      "durationMinutes": 15
     },
     {
       "date": "2026-02-16",
@@ -5280,7 +6013,8 @@
       "type": "chat-30",
       "eventTypeName": "Leland Coaching Session",
       "topic": null,
-      "source": "leland"
+      "source": "leland",
+      "durationMinutes": 30
     }
   ]
 }
