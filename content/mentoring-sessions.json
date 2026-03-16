@@ -5,12 +5,12 @@
       "start": "2015-05-22",
       "end": "2026-02-26"
     },
-    "totalSessions": 735,
+    "totalSessions": 731,
     "byYear": {
       "2015": 1,
-      "2016": 37,
+      "2016": 34,
       "2017": 20,
-      "2018": 67,
+      "2018": 66,
       "2019": 137,
       "2020": 115,
       "2021": 112,
@@ -4707,13 +4707,6 @@
     },
     {
       "date": "2018-03-20",
-      "name": "Ben C.",
-      "type": "chat-15",
-      "eventTypeName": "15-Min Chat",
-      "topic": "Potential job opportunities with Google"
-    },
-    {
-      "date": "2018-03-20",
       "name": "Melhjingoy D.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
@@ -4963,27 +4956,6 @@
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
       "topic": "Fullstack Academy's Summer of Code program/ interview process"
-    },
-    {
-      "date": "2016-12-28",
-      "name": "christina c.",
-      "type": "chat-15",
-      "eventTypeName": "15-Min Chat",
-      "topic": "Google opportunity"
-    },
-    {
-      "date": "2016-10-27",
-      "name": "Stephen L.",
-      "type": "chat-15",
-      "eventTypeName": "15-Min Chat",
-      "topic": "Wintership at The Foundry"
-    },
-    {
-      "date": "2016-10-27",
-      "name": "Anna M.",
-      "type": "chat-15",
-      "eventTypeName": "15-Min Chat",
-      "topic": "Position with AmEx"
     },
     {
       "date": "2016-10-25",
