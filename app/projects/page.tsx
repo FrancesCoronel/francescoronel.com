@@ -67,6 +67,11 @@ function ProjectCard({ project }: { project: ReturnType<typeof getProjects>[numb
               🔴 Abandoned
             </span>
           )}
+          {project.status === "archived" && (
+            <span className="rounded-full bg-gray-100 px-2 py-0.5 text-[10px] font-medium text-gray-400 dark:bg-navy-700 dark:text-white/40">
+              📦 Archived
+            </span>
+          )}
         </div>
       </div>
 
