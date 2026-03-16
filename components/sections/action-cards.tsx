@@ -17,7 +17,7 @@ const defaultCards: CtaCard[] = [
     label: "Mentoring",
     description: "Book a 1:1 session with me",
     href: "/mentoring",
-    image: "/images/assets/mentoring-cta.webp",
+    image: "/images/assets/speaking-hero-image.webp",
   },
   {
     label: "Speaking",
@@ -29,13 +29,13 @@ const defaultCards: CtaCard[] = [
     label: "Projects",
     description: "Browse my projects and work",
     href: "/projects",
-    image: "/images/assets/newsletter-cta.webp",
+    image: "/images/assets/rocket-illustration.webp",
   },
   {
     label: "Blog",
     description: "Read my latest posts and insights",
     href: "/blog",
-    image: "/images/assets/frances-memoji-nice-job.png",
+    image: "/images/assets/newsletter-cta.webp",
   },
 ];
 
