@@ -177,7 +177,7 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
             <button
               type="button"
               onClick={onClose}
-              className="ml-2 rounded-md bg-horchata-100 px-2 py-1 text-xs font-medium text-navy-500 dark:bg-navy-700 dark:text-horchata-400"
+              className="ml-2 hidden rounded-md bg-horchata-100 px-2 py-1 text-xs font-medium text-navy-500 sm:block dark:bg-navy-700 dark:text-horchata-400"
             >
               ESC
             </button>
