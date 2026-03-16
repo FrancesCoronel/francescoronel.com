@@ -14,7 +14,10 @@
       "Hosts the community on a pro Slack workspace and deploys via Vercel's open source plan",
       "GitHub: github.com/Latina-Dev/latina-dev"
     ],
-    "skills": ["open-source", "community-building"],
+    "skills": [
+      "open-source",
+      "community-building"
+    ],
     "status": "active",
     "organization": "latina-dev"
   },
@@ -32,7 +35,9 @@
       "Open-source directory helping people find tech apprenticeships",
       "Listed on Product Hunt: producthunt.com/posts/apprenticeships-me"
     ],
-    "skills": ["open-source"],
+    "skills": [
+      "open-source"
+    ],
     "status": "active",
     "organization": "apprenticeships-me"
   },
@@ -50,13 +55,16 @@
       "Founded and hosted Tech Queens, the first podcast exclusively focused on women of color in tech",
       "Interviewed engineers, designers, and leaders from underrepresented backgrounds across the industry"
     ],
-    "skills": ["community-building", "public-speaking"],
+    "skills": [
+      "community-building",
+      "public-speaking"
+    ],
     "organization": "tech-queens"
   },
   {
     "title": "Jake the Dog Key Hand",
     "slug": "jake-the-dog-key-hand",
-    "tagline": "Best Device Privacy Hack — Kent Hack Enough",
+    "tagline": "Best Device Privacy Hack \u2014 Kent Hack Enough",
     "logo": "/images/organizations/kent-hack-enough.png",
     "url": "https://devpost.com/software/jake-the-dog-key-hand-security-corp-whdm9v",
     "startDate": "2016-10-01T00:00:00.000Z",
@@ -89,7 +97,7 @@
   {
     "title": "Ammalia",
     "slug": "ammalia-treehacks-2016",
-    "tagline": "Best Use of Dropbox API & Best Social Impact — TreeHacks 2016",
+    "tagline": "Best Use of Dropbox API & Best Social Impact \u2014 TreeHacks 2016",
     "logo": "/images/organizations/stanford-university.png",
     "url": "http://devpost.com/software/ammalia",
     "startDate": "2016-02-01T00:00:00.000Z",
@@ -111,14 +119,17 @@
     "startDate": "2021-06-01T00:00:00.000Z",
     "endDate": "2021-07-31T00:00:00.000Z",
     "category": "work-project",
-    "description": "Lead developer for the Salesforce Day 1 web campaign — a coordinated set of web updates launched to coincide with Slack's acquisition by Salesforce.",
+    "description": "Lead developer for the Salesforce Day 1 web campaign \u2014 a coordinated set of web updates launched to coincide with Slack's acquisition by Salesforce.",
     "highlights": [
       "Led coordinated web updates across Slack.com for Day One of the Salesforce acquisition",
       "Delivered a brand-new landing page showcasing the best of both Slack and Salesforce",
       "Used Houston to roll out changes across the site simultaneously, including About, Homepage, Sales Solutions, Contact Sales, and legal pages",
       "Collaborated with Activation and Purchase Experience teams on billing and legal language updates"
     ],
-    "skills": ["growth-engineering", "javascript"],
+    "skills": [
+      "growth-engineering",
+      "javascript"
+    ],
     "organization": "slack"
   },
   {
@@ -131,13 +142,16 @@
     "endDate": "2023-06-01T00:00:00.000Z",
     "category": "side-project",
     "status": "abandoned",
-    "description": "A personal data project to catalog every contestant, episode, and result from Netflix's Nailed It! — the baking competition show where amateur bakers try (and gloriously fail) to recreate elaborate cakes. Never finished, but the data was fun to collect.",
+    "description": "A personal data project to catalog every contestant, episode, and result from Netflix's Nailed It! \u2014 the baking competition show where amateur bakers try (and gloriously fail) to recreate elaborate cakes. Never finished, but the data was fun to collect.",
     "highlights": [
       "Tracked 11 contestants across 4 episodes in a structured database",
       "Recorded contestant demographics, round results, and episode metadata",
-      "Never shipped — but remains a monument to ambitious side projects"
+      "Never shipped \u2014 but remains a monument to ambitious side projects"
     ],
-    "skills": ["data", "open-source"]
+    "skills": [
+      "data",
+      "open-source"
+    ]
   },
   {
     "title": "Hire Me",
@@ -149,13 +163,16 @@
     "endDate": null,
     "category": "open-source",
     "status": "active",
-    "description": "An open-source resource site with tips, templates, and strategies for landing a job in tech — from resume writing to interview prep to offer negotiation.",
+    "description": "An open-source resource site with tips, templates, and strategies for landing a job in tech \u2014 from resume writing to interview prep to offer negotiation.",
     "highlights": [
       "Public GitHub repo with curated job search resources",
       "Covers resume optimization, portfolio tips, interview prep, and salary negotiation",
-      "GitHub: github.com/FrancesCoronel/hire-me — live at engjobsearch.com"
+      "GitHub: github.com/FrancesCoronel/hire-me \u2014 live at engjobsearch.com"
     ],
-    "skills": ["open-source", "career-advice"]
+    "skills": [
+      "open-source",
+      "career-advice"
+    ]
   },
   {
     "title": "TSP.gov Redesign",
@@ -173,6 +190,110 @@
       "Focused on improved information architecture and accessibility",
       "GitHub: github.com/FrancesCoronel/tsp-gov"
     ],
-    "skills": ["web-design", "html", "css"]
+    "skills": [
+      "web-design",
+      "html",
+      "css"
+    ]
+  },
+  {
+    "title": "Diversify Me",
+    "slug": "diversify-me",
+    "tagline": "Tech conferences that provide diversity travel grants",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/diversify-me",
+    "startDate": "2016-01-01T00:00:00.000Z",
+    "endDate": null,
+    "category": "open-source",
+    "status": "active",
+    "description": "A community-maintained list of tech conferences that offer diversity travel grants and scholarships \u2014 helping underrepresented engineers attend events they could not otherwise afford.",
+    "highlights": [
+      "237+ GitHub stars",
+      "Covers conferences worldwide offering diversity scholarships and travel grants",
+      "GitHub: github.com/FrancesCoronel/diversify-me"
+    ],
+    "skills": [
+      "open-source",
+      "community-building"
+    ]
+  },
+  {
+    "title": "NYT Comm",
+    "slug": "nyt-comm",
+    "tagline": "Product Studio project with The New York Times at Cornell Tech",
+    "logo": "/images/organizations/new-york-times.png",
+    "url": "https://francescoronel.github.io/nyt-comm",
+    "startDate": "2016-09-01T00:00:00.000Z",
+    "endDate": "2016-12-31T00:00:00.000Z",
+    "category": "side-project",
+    "status": "archived",
+    "description": "Product Studio project at Cornell Tech in partnership with The New York Times \u2014 built a product concept around community-driven news.",
+    "highlights": [
+      "Built during Cornell Tech Product Studio, Fall 2016",
+      "122+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/nyt-comm"
+    ],
+    "skills": [],
+    "organization": "cornell-tech"
+  },
+  {
+    "title": "Cover Letter Templates",
+    "slug": "cover-letter-templates",
+    "tagline": "Open-source cover letter templates for tech job applications",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/cover-letter-templates",
+    "startDate": "2017-01-01T00:00:00.000Z",
+    "endDate": null,
+    "category": "open-source",
+    "status": "archived",
+    "description": "A collection of cover letter templates created over the years, open-sourced for anyone to use in their tech job search.",
+    "highlights": [
+      "29+ GitHub stars",
+      "Covers various roles and experience levels",
+      "GitHub: github.com/FrancesCoronel/cover-letter-templates"
+    ],
+    "skills": [
+      "open-source",
+      "career-advice"
+    ]
+  },
+  {
+    "title": "Dotfiles",
+    "slug": "dotfiles",
+    "tagline": "Custom start script and dotfiles for new Mac laptops",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/dotfiles",
+    "startDate": "2016-01-01T00:00:00.000Z",
+    "endDate": null,
+    "category": "open-source",
+    "status": "active",
+    "description": "Personal dotfiles and laptop setup script \u2014 Alfred preferences, terminal themes, and dev environment config for spinning up a new Mac quickly.",
+    "highlights": [
+      "27+ GitHub stars",
+      "Covers Alfred, Starship, terminal themes, and dev tooling",
+      "GitHub: github.com/FrancesCoronel/dotfiles"
+    ],
+    "skills": [
+      "open-source"
+    ]
+  },
+  {
+    "title": "Automator Workflows",
+    "slug": "automator-workflows",
+    "tagline": "Custom macOS Automator workflows",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/automator-workflows",
+    "startDate": "2016-01-01T00:00:00.000Z",
+    "endDate": null,
+    "category": "open-source",
+    "status": "archived",
+    "description": "A collection of custom macOS Automator workflows to automate repetitive tasks on the desktop.",
+    "highlights": [
+      "26+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/automator-workflows"
+    ],
+    "skills": [
+      "open-source"
+    ]
   }
 ]
