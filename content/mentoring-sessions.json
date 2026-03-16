@@ -5,7 +5,7 @@
       "start": "2015-05-22",
       "end": "2026-02-26"
     },
-    "totalSessions": 741,
+    "totalSessions": 738,
     "byYear": {
       "2015": 1,
       "2016": 37,
@@ -13,7 +13,7 @@
       "2018": 67,
       "2019": 137,
       "2020": 115,
-      "2021": 116,
+      "2021": 113,
       "2022": 55,
       "2023": 93,
       "2024": 43,
@@ -1822,20 +1822,6 @@
       "topic": "interview onsite prep!"
     },
     {
-      "date": "2021-12-30",
-      "name": "Leslie C.",
-      "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Pando offer"
-    },
-    {
-      "date": "2021-12-28",
-      "name": "BARBRA G.",
-      "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Pando"
-    },
-    {
       "date": "2021-12-27",
       "name": "Amelia L.",
       "type": "chat-30",
@@ -1918,13 +1904,6 @@
       "type": "chat-30",
       "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "topic": "Opportunities at Slalom"
-    },
-    {
-      "date": "2021-12-01",
-      "name": "Leslie C.",
-      "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Pando! (pandohr.com)"
     },
     {
       "date": "2021-11-30",
