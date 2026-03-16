@@ -36,25 +36,15 @@ export default function ContactPage() {
       {/* Section 2: Contact Form — dark */}
       <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-2xl px-6">
-          <div className="flex items-center gap-4">
-            <Image
-              src="/images/assets/heart-chat-bubble.webp"
-              alt=""
-              width={80}
-              height={80}
-              className="h-[80px] w-[80px] shrink-0 object-contain drop-shadow-lg"
-              aria-hidden="true"
-            />
-            <h2 className="text-3xl font-bold text-navy-900 dark:text-horchata-100">
-              Send me a message
-            </h2>
-          </div>
+          <h2 className="text-3xl font-bold text-navy-900 dark:text-horchata-100">
+            Send me a message 💌
+          </h2>
           <ContactForm />
         </div>
       </section>
 
       {/* CTA Banner */}
-      <ConnectCTA variant="follow" />
+      <ConnectCTA variant="contact" />
     </>
   );
 }

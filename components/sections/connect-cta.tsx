@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-type CTAVariant = "default" | "speaking" | "mentoring" | "follow" | "hire";
+type CTAVariant = "default" | "speaking" | "mentoring" | "follow" | "hire" | "contact";
 
 const variants: Record<
   CTAVariant,
@@ -23,7 +23,7 @@ const variants: Record<
     primaryHref: "/contact",
     secondaryLabel: "Book Mentoring",
     secondaryHref: "/mentoring",
-    image: "/images/assets/calendar-connect.webp",
+    image: "/images/assets/rocket-illustration.webp",
   },
   speaking: {
     heading: "Want Me to Speak? \uD83C\uDF99\uFE0F",
@@ -33,7 +33,7 @@ const variants: Record<
     primaryHref: "/contact",
     secondaryLabel: "Follow on LinkedIn",
     secondaryHref: "https://www.linkedin.com/in/francescoronel",
-    image: "/images/assets/calendar-connect.webp",
+    image: "/images/assets/speaking-microphone.png",
   },
   mentoring: {
     heading: "Level Up Your Career \uD83D\uDE80",
@@ -43,7 +43,7 @@ const variants: Record<
     primaryHref: "https://cal.com/francescoronel/mentoring",
     secondaryLabel: "Get in Touch",
     secondaryHref: "/contact",
-    image: "/images/assets/mentoring-cta.webp",
+    image: "/images/assets/speaking-hero-image.webp",
   },
   follow: {
     heading: "Stay in the Loop \u270D\uD83C\uDFFD",
@@ -53,7 +53,7 @@ const variants: Record<
     primaryHref: "https://www.linkedin.com/in/francescoronel",
     secondaryLabel: "Book Mentoring",
     secondaryHref: "/mentoring",
-    image: "/images/assets/mentoring-cta.webp",
+    image: "/images/assets/newsletter-cta.webp",
   },
   hire: {
     heading: "Let\u2019s Work Together \uD83D\uDCBC",
@@ -64,6 +64,16 @@ const variants: Record<
     secondaryLabel: "Book Me to Speak",
     secondaryHref: "/speaking",
     image: "/images/assets/calendar-connect.webp",
+  },
+  contact: {
+    heading: "Let\u2019s Connect \uD83D\uDC9C",
+    description:
+      "Have a question, a speaking invite, or just want to say hi? I\u2019d love to hear from you.",
+    primaryLabel: "Send a Message",
+    primaryHref: "/contact",
+    secondaryLabel: "Book Mentoring",
+    secondaryHref: "/mentoring",
+    image: "/images/assets/heart-chat-bubble.webp",
   },
 };
 

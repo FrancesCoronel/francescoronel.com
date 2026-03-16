@@ -14,16 +14,16 @@ interface ActionCardsProps {
 
 const defaultCards: CtaCard[] = [
   {
-    label: "Mentoring",
-    description: "Book a 1:1 session with me",
-    href: "/mentoring",
-    image: "/images/assets/speaking-hero-image.webp",
+    label: "About",
+    description: "Learn more about me and my story",
+    href: "/about",
+    image: "/images/assets/frances-slack.jpg",
   },
   {
-    label: "Speaking",
-    description: "Hire me for your next event",
-    href: "/speaking",
-    image: "/images/assets/speaking-microphone.png",
+    label: "Blog",
+    description: "Read my latest posts and insights",
+    href: "/blog",
+    image: "/images/assets/newsletter-cta.webp",
   },
   {
     label: "Projects",
@@ -32,16 +32,28 @@ const defaultCards: CtaCard[] = [
     image: "/images/assets/rocket-illustration.webp",
   },
   {
-    label: "Blog",
-    description: "Read my latest posts and insights",
-    href: "/blog",
-    image: "/images/assets/newsletter-cta.webp",
+    label: "Speaking",
+    description: "Hire me for your next event",
+    href: "/speaking",
+    image: "/images/assets/speaking-microphone.png",
+  },
+  {
+    label: "Mentoring",
+    description: "Book a 1:1 session with me",
+    href: "/mentoring",
+    image: "/images/assets/speaking-hero-image.webp",
+  },
+  {
+    label: "Contact",
+    description: "Get in touch with me",
+    href: "/contact",
+    image: "/images/assets/heart-chat-bubble.webp",
   },
 ];
 
 export function ActionCards({ cards = defaultCards }: ActionCardsProps) {
   return (
-    <div className="grid gap-4 sm:grid-cols-2">
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {cards.map((cta) => (
         <Link
           key={cta.label}
