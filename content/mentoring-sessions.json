@@ -5,7 +5,7 @@
       "start": "2015-05-22",
       "end": "2026-02-26"
     },
-    "totalSessions": 738,
+    "totalSessions": 735,
     "byYear": {
       "2015": 1,
       "2016": 37,
@@ -13,9 +13,9 @@
       "2018": 67,
       "2019": 137,
       "2020": 115,
-      "2021": 113,
+      "2021": 112,
       "2022": 55,
-      "2023": 93,
+      "2023": 91,
       "2024": 43,
       "2025": 41,
       "2026": 16
@@ -998,20 +998,6 @@
       "topic": null
     },
     {
-      "date": "2023-06-05",
-      "name": "Wealthfront ..",
-      "type": "interview",
-      "eventTypeName": "60 Minute Interview",
-      "topic": null
-    },
-    {
-      "date": "2023-05-30",
-      "name": "Wealth F.",
-      "type": "interview",
-      "eventTypeName": "45-Minute Interview",
-      "topic": null
-    },
-    {
       "date": "2023-05-30",
       "name": "Veronique S.",
       "type": "interview",
@@ -1988,13 +1974,6 @@
       "type": "chat-15",
       "eventTypeName": "15-Minute Chat",
       "topic": "Nava PBC Speaking Event"
-    },
-    {
-      "date": "2021-09-07",
-      "name": "Landon N.",
-      "type": "interview",
-      "eventTypeName": "Landon <> Frances | Technical Interview",
-      "topic": null
     },
     {
       "date": "2021-09-06",

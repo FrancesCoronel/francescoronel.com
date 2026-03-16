@@ -29,7 +29,7 @@ export default function HomePage() {
   const activeProjects = getProjects().filter((p) => p.status === "active").slice(0, 4);
   const allPosts = getAllBlogPosts();
   const mentoringSessionCount = (mentoringData as { _meta: { totalSessions: number } })._meta.totalSessions;
-  const startYear = 2015;
+  const startYear = 2017; // First full-time engineering role (Accenture)
   const currentYear = new Date().getFullYear();
   const yearsOfExperience = currentYear - startYear;
   const experiences = getExperiences().filter((exp) => {
@@ -247,7 +247,7 @@ export default function HomePage() {
               { stat: `${mentoringSessionCount}+`, label: "Mentoring sessions logged" },
               { stat: `${allPosts.length}+`, label: "Blog posts published" },
               { stat: "100+", label: "Speaking events since 2015" },
-              { stat: `${yearsOfExperience}+`, label: "Years of experience" },
+              { stat: `${yearsOfExperience}+`, label: "Years of full-time experience" },
             ].map(({ stat, label }) => (
               <div key={label}>
                 <p className="text-5xl font-black text-navy-900 dark:text-horchata-100">{stat}</p>
