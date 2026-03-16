@@ -17,7 +17,7 @@ const defaultCards: CtaCard[] = [
     label: "About",
     description: "Learn more about me and my story",
     href: "/about",
-    image: "/images/assets/frances-slack.jpg",
+    image: "/images/assets/memoji-laptop.png",
   },
   {
     label: "Blog",
