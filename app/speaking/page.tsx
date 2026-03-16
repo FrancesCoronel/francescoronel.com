@@ -82,7 +82,7 @@ export default function SpeakingPage() {
       {/* Hero */}
       <PageHeader
         label="Events"
-        heading="Speaking 💬"
+        heading="Speaking 🎤"
         description="I've spoken at 100+ events on diverse topics ranging from driving D&I in the tech industry to community building — covering TypeScript, Progressive Web Apps, JavaScript, and more."
         aside={
           <Image
