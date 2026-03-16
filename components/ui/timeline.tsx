@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
-import { resolveImageUrl } from "@/lib/cloudinary";
+import { OrgLogo } from "@/components/ui/org-logo";
 import { formatDateRange } from "@/lib/utils";
 
 interface TimelineItem {
@@ -8,6 +7,7 @@ interface TimelineItem {
   subtitle: string;
   subtitleHref?: string;
   logo: string;
+  orgUrl?: string;
   slug: string;
   startDate: string;
   endDate: string | null;
@@ -22,19 +22,14 @@ export function Timeline({ items, dark }: { items: TimelineItem[]; dark?: boolea
         <div key={item.slug} className="relative">
           {/* Dot on the timeline */}
           <div className={`absolute -left-16 top-0 h-12 w-12 overflow-hidden rounded-full border-2 ${dark ? "border-horchata-600 bg-navy-700" : "border-horchata-400 bg-white dark:border-horchata-600 dark:bg-navy-700"}`}>
-            {item.logo ? (
-              <Image
-                src={resolveImageUrl(item.logo)}
-                alt=""
-                width={48}
-                height={48}
-                className="h-full w-full rounded-full object-contain p-1.5"
-              />
-            ) : (
-              <div className={`flex h-full w-full items-center justify-center text-sm font-bold ${dark ? "text-horchata-400" : "text-horchata-600 dark:text-horchata-400"}`}>
-                {item.subtitle.charAt(0)}
-              </div>
-            )}
+            <OrgLogo
+              src={item.logo}
+              orgUrl={item.orgUrl}
+              name={item.subtitle}
+              size={48}
+              className="h-full w-full rounded-full object-contain p-1.5"
+              avatarClassName={`h-full w-full text-sm font-bold ${dark ? "text-horchata-400" : "text-horchata-600 dark:text-horchata-400"}`}
+            />
           </div>
 
           <div>

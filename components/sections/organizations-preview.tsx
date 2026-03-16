@@ -1,11 +1,11 @@
-import Image from "next/image";
 import Link from "next/link";
-import { resolveImageUrl } from "@/lib/cloudinary";
+import { OrgLogo } from "@/components/ui/org-logo";
 
 interface OrgPreview {
   slug: string;
   name: string;
   logo: string;
+  url?: string;
 }
 
 interface OrganizationsPreviewProps {
@@ -43,12 +43,13 @@ export function OrganizationsPreview({
               href={`/organizations/${org.slug}`}
               className="flex flex-col items-center justify-center gap-3 rounded-xl border border-horchata-200 bg-white p-5 text-center transition-shadow hover:shadow-lg dark:border-navy-700 dark:bg-navy-800"
             >
-              <Image
-                src={resolveImageUrl(org.logo)}
-                alt={org.name}
-                width={80}
-                height={80}
+              <OrgLogo
+                src={org.logo}
+                orgUrl={org.url}
+                name={org.name}
+                size={64}
                 className="h-16 w-16 rounded-xl object-contain"
+                avatarClassName="h-16 w-16 text-xl"
               />
               <p className="text-sm font-medium text-navy-900 dark:text-horchata-100">
                 {org.name}

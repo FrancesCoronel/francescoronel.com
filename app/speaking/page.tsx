@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getBlogPostsByCategory, getOrganizations, getTestimonials, getCategoryMaps } from "@/lib/content";
 import { SpeakingListClient } from "@/components/ui/speaking-list-client";
-import { resolveImageUrl } from "@/lib/cloudinary";
+import { OrgLogo } from "@/components/ui/org-logo";
 import { buildMetadata } from "@/lib/metadata";
 import { PageHeader } from "@/components/ui/page-header";
 import { TestimonialsPreview } from "@/components/sections/testimonials-preview";
@@ -159,21 +159,16 @@ export default function SpeakingPage() {
                   className="group cursor-pointer overflow-hidden rounded-2xl border border-horchata-200 bg-white transition-all hover:border-horchata-400 hover:shadow-lg dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
                 >
                   <div className="flex items-start gap-4 p-5">
-                    {talk.logo ? (
-                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg bg-horchata-50 dark:bg-navy-700">
-                        <Image
-                          src={resolveImageUrl(talk.logo)}
-                          alt={talk.org}
-                          width={40}
-                          height={40}
-                          className="h-8 w-8 object-contain"
-                        />
-                      </div>
-                    ) : (
-                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-horchata-100 text-base font-bold text-horchata-600 dark:bg-navy-700 dark:text-horchata-400">
-                        {talk.org[0]}
-                      </div>
-                    )}
+                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg bg-horchata-50 dark:bg-navy-700">
+                      <OrgLogo
+                        src={talk.logo}
+                        orgUrl={talk.orgUrl}
+                        name={talk.org}
+                        size={32}
+                        className="h-8 w-8 object-contain"
+                        avatarClassName="h-8 w-8 text-sm"
+                      />
+                    </div>
                     <div>
                       <p className="text-xs font-medium text-navy-500 dark:text-horchata-400">
                         {talk.org}
