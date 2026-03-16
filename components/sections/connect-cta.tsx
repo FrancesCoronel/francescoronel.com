@@ -39,8 +39,8 @@ const variants: Record<
     heading: "Level Up Your Career \uD83D\uDE80",
     description:
       "Whether you\u2019re prepping for interviews, navigating a career transition, or leveling up as an engineer \u2014 I\u2019m here to help.",
-    primaryLabel: "Book Mentoring",
-    primaryHref: "/mentoring",
+    primaryLabel: "Book a Session",
+    primaryHref: "https://cal.com/francescoronel/mentoring",
     secondaryLabel: "Get in Touch",
     secondaryHref: "/contact",
     image: "/images/assets/mentoring-cta.webp",

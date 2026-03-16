@@ -60,7 +60,7 @@ export function BlogListClient({
               setActiveCategory(null);
               setPage(1);
             }}
-            className={`cursor-pointer rounded-full px-3 py-1 text-xs font-medium transition-colors ${
+            className={`inline-flex cursor-pointer items-center rounded-full px-3 py-1 text-xs font-medium transition-colors ${
               !activeCategory
                 ? "bg-horchata-700 text-white dark:bg-horchata-500 dark:text-navy-900"
                 : "bg-horchata-100 text-horchata-800 hover:bg-horchata-200 dark:bg-navy-700 dark:text-white/70"

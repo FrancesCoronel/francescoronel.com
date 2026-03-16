@@ -97,7 +97,7 @@ export default async function ExperiencePage({ params }: PageProps) {
           {exp.skills.map((skill) => (
             <span
               key={skill}
-              className="rounded-full bg-horchata-700 px-3 py-1 text-xs font-medium text-white dark:bg-navy-600 dark:text-white"
+              className="inline-flex items-center rounded-full bg-horchata-700 px-3 py-1 text-xs font-medium text-white dark:bg-navy-600 dark:text-white"
             >
               {skill}
             </span>

@@ -19,6 +19,7 @@ const OPTIMIZED_HOSTS = new Set([
   "pbs.twimg.com",
   "i.ytimg.com",
   "github.com",
+  "avatars.githubusercontent.com",
   "encrypted-tbn0.gstatic.com",
   "www.scdn.co",
   "www.themebeta.com",

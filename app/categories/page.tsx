@@ -13,9 +13,14 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function CategoriesPage() {
-  const categories = getCategories()
+  const allCategories = getCategories();
+  const categories = allCategories
     .filter((c) => (c.count ?? 0) > 0)
-    .sort((a, b) => (b.count ?? 0) - (a.count ?? 0));
+    .sort((a, b) => {
+      if (a.slug === "uncategorized") return 1;
+      if (b.slug === "uncategorized") return -1;
+      return (b.count ?? 0) - (a.count ?? 0);
+    });
 
   return (
     <>
@@ -25,14 +30,14 @@ export default function CategoriesPage() {
         description="Browse blog posts organized by topic."
       />
 
-      <section className="py-16 md:py-20">
+      <section className="bg-horchata-100 py-16 md:py-20 dark:bg-navy-800">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {categories.map((cat) => (
               <Link
                 key={cat.slug}
                 href={`/categories/${cat.slug}`}
-                className="group flex cursor-pointer items-center justify-between rounded-2xl border border-horchata-200 bg-white p-5 transition-all hover:border-horchata-400 hover:shadow-lg dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
+                className="group flex cursor-pointer items-center justify-between rounded-2xl border border-horchata-200 bg-white p-5 transition-all hover:border-horchata-400 hover:shadow-lg dark:border-navy-700 dark:hover:border-navy-500"
               >
                 <div>
                   <h2 className="flex items-center gap-2 text-lg font-bold text-navy-900 group-hover:text-horchata-600 dark:text-horchata-100">
@@ -52,7 +57,7 @@ export default function CategoriesPage() {
                     </p>
                   )}
                 </div>
-                <span className="ml-4 flex shrink-0 items-center justify-center rounded-full bg-horchata-200 px-3 py-1.5 text-sm font-medium leading-none text-navy-700 dark:bg-navy-600 dark:text-white/70">
+                <span className="ml-4 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-horchata-400 text-sm font-medium text-navy-900 dark:bg-navy-500 dark:text-white">
                   {cat.count}
                 </span>
               </Link>

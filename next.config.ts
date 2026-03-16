@@ -39,6 +39,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "pbs.twimg.com" },
       { protocol: "https", hostname: "i.ytimg.com" },
       { protocol: "https", hostname: "github.com" },
+      { protocol: "https", hostname: "avatars.githubusercontent.com" },
       { protocol: "https", hostname: "encrypted-tbn0.gstatic.com" },
       { protocol: "https", hostname: "www.scdn.co" },
       { protocol: "https", hostname: "www.themebeta.com" },
@@ -133,6 +134,38 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      // ── Webflow-only categories (not in new site) ─────────
+      // These were Webflow CMS category slugs that don't map to any new category.
+      // Google has indexed them — redirect to /blog to preserve link equity.
+      {
+        source: "/categories/cultura",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/categories/code-career",
+        destination: "/blog",
+        permanent: true,
+      },
+
+      // ── WordPress upload/admin paths ──────────────────────
+      // Old WordPress file paths — redirect to home so they don't 404 and bleed crawl budget
+      {
+        source: "/wp-content/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/wp-includes/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/wp-admin/:path*",
+        destination: "/",
+        permanent: true,
+      },
+
       // ── Trailing slash normalization ──────────────────────
       {
         source: "/blog/:slug/",
@@ -203,6 +236,81 @@ const nextConfig: NextConfig = {
         destination: "/blog",
         permanent: true,
       },
+
+      // ── Experience/Education blog posts → detail pages ────
+      {
+        source: "/blog/slack-swe",
+        destination: "/experience/slack-customer-acquisition",
+        permanent: true,
+      },
+      {
+        source: "/blog/accenture-liquid-studio-summer-2016",
+        destination: "/experience/accenture-intern",
+        permanent: true,
+      },
+      {
+        source: "/blog/8020-software-consulting",
+        destination: "/experience/8020-software-consulting",
+        permanent: true,
+      },
+      {
+        source: "/blog/cornell-tech",
+        destination: "/education/cornell-tech",
+        permanent: true,
+      },
+      {
+        source: "/blog/hampton-university",
+        destination: "/education/hampton-university",
+        permanent: true,
+      },
+      {
+        source: "/blog/jacobs-university-bremen-fall-2013",
+        destination: "/education/jacobs-university-bremen",
+        permanent: true,
+      },
+      {
+        source: "/blog/hampton-university-summer-2011",
+        destination: "/education/hampton-university-summer-2011",
+        permanent: true,
+      },
+      {
+        source: "/blog/hampton-university-summer-2014",
+        destination: "/education/hampton-university-summer-2014",
+        permanent: true,
+      },
+      {
+        source: "/blog/old-dominion-university-summer-2014",
+        destination: "/education/old-dominion-university-summer-2014",
+        permanent: true,
+      },
+      {
+        source: "/blog/tidewater-community-college-summer-2010",
+        destination: "/education/tidewater-community-college-summer-2010",
+        permanent: true,
+      },
+      {
+        source: "/blog/tidewater-community-college-summer-2013",
+        destination: "/education/tidewater-community-college-summer-2013",
+        permanent: true,
+      },
+
+      // ── Mentee posts consolidated to /mentoring ───────────
+      ...[
+        "abel-regaldo", "adil-minocherhomjee", "adilene-constante", "amber-sharma",
+        "brenda-sukh", "brian-martinez", "carly-gordon", "cherri-hartigan",
+        "enrique-novoa", "eunji-song", "jasmine-anderson", "kanad-bahalkar",
+        "kelaiya-parikah", "lavie-ruan", "linda-xiong", "lupita-davila",
+        "mariela-p-smith", "matthew-ma", "maximilian-hofer", "melhjingoy-david",
+        "mike-jonas", "neil-scheuermann", "oscar-parra", "pak-chu",
+        "paul-do", "pauly-quintero", "ronnie-brown", "roya-lofti",
+        "simran-anand", "simran-kaur-anand", "steven-shen",
+        "theerut-foongkiatcharoen", "undisclosed-female", "undisclosed-male",
+        "valeria-oshiro", "wen-tran",
+      ].map((slug) => ({
+        source: `/blog/${slug}`,
+        destination: "/mentoring",
+        permanent: true,
+      })),
 
       // ── Dedup redirects: old slugs → canonical slugs ──────
       ...dedupRedirects,

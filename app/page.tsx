@@ -32,7 +32,7 @@ export default function HomePage() {
     if (t.includes("instructor")) return false;
     if (t.includes("curriculum")) return false;
     return true;
-  });
+  }).slice(0, 3);
   const education = getEducation().filter(
     (edu) =>
       edu.degree.includes("Bachelor") || edu.degree.includes("Master")
@@ -165,7 +165,7 @@ export default function HomePage() {
                       {formatDateRange(edu.startDate, edu.endDate)}
                     </p>
                     {edu.description && (
-                      <p className="mt-2 line-clamp-2 text-sm text-navy-500 dark:text-horchata-400">
+                      <p className="mt-2 text-sm text-navy-500 dark:text-horchata-400">
                         {edu.description}
                       </p>
                     )}
@@ -176,6 +176,24 @@ export default function HomePage() {
           </div>
         </section>
       )}
+
+      {/* Stats */}
+      <section className="py-16 md:py-20">
+        <div className="mx-auto max-w-[var(--container-max)] px-6">
+          <div className="grid gap-8 sm:grid-cols-3 text-center">
+            {[
+              { stat: "250+", label: "Engineers mentored" },
+              { stat: "100+", label: "Speaking events since 2015" },
+              { stat: "10+", label: "Years of experience" },
+            ].map(({ stat, label }) => (
+              <div key={label}>
+                <p className="text-5xl font-black text-navy-900 dark:text-horchata-100">{stat}</p>
+                <p className="mt-2 text-sm text-navy-500 dark:text-white/60">{label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Banner */}
       <ConnectCTA />

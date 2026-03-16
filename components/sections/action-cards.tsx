@@ -9,7 +9,7 @@ interface CtaCard {
 }
 
 interface ActionCardsProps {
-  cards: CtaCard[];
+  cards?: CtaCard[];
 }
 
 const defaultCards: CtaCard[] = [
@@ -26,16 +26,22 @@ const defaultCards: CtaCard[] = [
     image: "/images/assets/speaking-microphone.png",
   },
   {
+    label: "Portfolio",
+    description: "Browse my projects and work",
+    href: "/portfolio",
+    image: "/images/assets/newsletter-cta.webp",
+  },
+  {
     label: "Blog",
     description: "Read my latest posts and insights",
     href: "/blog",
-    image: "/images/assets/newsletter-cta.webp",
+    image: "/images/assets/frances-memoji-nice-job.png",
   },
 ];
 
 export function ActionCards({ cards = defaultCards }: ActionCardsProps) {
   return (
-    <div className="grid gap-4 sm:grid-cols-3">
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {cards.map((cta) => (
         <Link
           key={cta.label}

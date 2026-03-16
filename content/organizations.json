@@ -1,5 +1,29 @@
 [
   {
+    "name": "Latina Dev",
+    "slug": "latina-dev",
+    "logo": "https://avatars.githubusercontent.com/u/93738374",
+    "url": "https://latina.dev/",
+    "type": "community",
+    "description": "Latina Dev is an open-source directory of Latina software engineers at the student, IC, and leadership levels to increase visibility and access to valuable opportunities."
+  },
+  {
+    "name": "Apprenticeships.me",
+    "slug": "apprenticeships-me",
+    "logo": "https://ph-files.imgix.net/9ef5b2d3-42c1-4e7a-a8af-4f40523fe9a5.png",
+    "url": "https://apprenticeships.me/",
+    "type": "community",
+    "description": "Apprenticeships.me is a directory of apprenticeships in the tech industry to help people find new careers by learning from the industry itself."
+  },
+  {
+    "name": "Tech Queens",
+    "slug": "tech-queens",
+    "logo": "/images/organizations/tech-queens.png",
+    "url": "https://anchor.fm/tech-queens",
+    "type": "community",
+    "description": "Tech Queens is the first and only podcast that focuses solely on the stories and advice shared by women of color in tech."
+  },
+  {
     "name": "Stanford University",
     "slug": "stanford-university",
     "logo": "/images/organizations/stanford-university.png",
@@ -395,7 +419,7 @@
     "name": "Formation",
     "slug": "formation",
     "logo": "/images/organizations/formation.png",
-    "url": "https://formation.dev",
+    "url": "https://formation.dev/c/kGjgfnF7",
     "type": "community",
     "description": "Formation is a virtual fellowship program for software engineers who seek impactful roles and career growth at the most innovative tech companies in the industry. "
   },

@@ -11,6 +11,7 @@ export const metadata: Metadata = buildMetadata({
     "All the sweet things folks have had to say about their experience working with Frances Coronel.",
   path: "/testimonials",
   ogImage: "/images/og/mentoring.png",
+  robots: { index: false, follow: false },
 });
 
 export default function TestimonialsPage() {

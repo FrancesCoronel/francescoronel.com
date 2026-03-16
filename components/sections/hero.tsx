@@ -6,6 +6,7 @@ const descriptors = [
   { text: "Speaker & Mentor", emoji: "🚀" },
   { text: "Proud Peruvian-American", emoji: "🇵🇪" },
   { text: "Corgi Mom to Luna & Sueño", emoji: "🐾" },
+  { text: "Latinos 40 Under 40 — SF/Silicon Valley", emoji: "🌉" },
 ];
 
 export function Hero() {

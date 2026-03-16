@@ -41,6 +41,7 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
   const [pagefind, setPagefind] = useState<{
     search: (q: string) => Promise<PagefindResponse>;
   } | null>(null);
+  const [pagefindError, setPagefindError] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const debounceRef = useRef<ReturnType<typeof setTimeout>>(null);
   const router = useRouter();
@@ -56,7 +57,7 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
         await pf.init();
         setPagefind(pf);
       } catch {
-        // Pagefind not available in dev mode
+        setPagefindError(true);
       }
     })();
   }, []);
@@ -210,11 +211,22 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
                   ))}
                 </ul>
               ) : (
-                !loading &&
-                pagefind && (
-                  <p className="px-4 py-8 text-center text-sm text-navy-500 dark:text-horchata-400">
-                    No results for &ldquo;{query}&rdquo;
-                  </p>
+                !loading && (
+                  pagefindError ? (
+                    <p className="px-4 py-8 text-center text-sm text-navy-500 dark:text-horchata-400">
+                      Search requires a production build. Run{" "}
+                      <code className="rounded bg-horchata-100 px-1 dark:bg-navy-700">npm run build</code>{" "}
+                      to enable search.
+                    </p>
+                  ) : pagefind ? (
+                    <p className="px-4 py-8 text-center text-sm text-navy-500 dark:text-horchata-400">
+                      No results for &ldquo;{query}&rdquo;
+                    </p>
+                  ) : (
+                    <p className="px-4 py-8 text-center text-sm text-navy-500 dark:text-horchata-400">
+                      Loading search index&hellip;
+                    </p>
+                  )
                 )
               )}
             </div>

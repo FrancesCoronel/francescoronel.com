@@ -1,0 +1,254 @@
+[
+  {
+    "name": "Ronnie Brown",
+    "slug": "ronnie-brown",
+    "linkedin": "https://www.linkedin.com/in/ronniejbrown/",
+    "date": "2015-03-11",
+    "note": "Fullstack Academy admissions and bootcamp prep"
+  },
+  {
+    "name": "Mike Jonas",
+    "slug": "mike-jonas",
+    "linkedin": null,
+    "date": "2015-11-06",
+    "note": "Email with coding bootcamp interview advice to prep for Hack Reactor"
+  },
+  {
+    "name": "Pak Chu",
+    "slug": "pak-chu",
+    "linkedin": "https://www.linkedin.com/in/pak-chu-60a35b42/",
+    "date": "2016-05-24",
+    "note": "Coding bootcamp prep for MakerSquare NYC"
+  },
+  {
+    "name": "Wen Tran",
+    "slug": "wen-tran",
+    "linkedin": null,
+    "date": "2016-06-06",
+    "note": "Coding bootcamp prep and tech career guidance"
+  },
+  {
+    "name": "Lavie Ruan",
+    "slug": "lavie-ruan",
+    "linkedin": "https://www.linkedin.com/in/laviemaru/",
+    "date": "2016-08-01",
+    "note": "Web development environment and career guidance"
+  },
+  {
+    "name": "Brenda Sukh",
+    "slug": "brenda-sukh",
+    "linkedin": "https://www.linkedin.com/in/brenda-sukh-7273b7147/",
+    "date": "2016-10-05",
+    "note": "Video chat about getting into a coding bootcamp"
+  },
+  {
+    "name": "Maximilian Hofer",
+    "slug": "maximilian-hofer",
+    "linkedin": "https://www.linkedin.com/in/mwhofer/",
+    "date": "2016-12-29",
+    "note": "Cornell Tech interviews and housing discussion"
+  },
+  {
+    "name": "Eunji Song",
+    "slug": "eunji-song",
+    "linkedin": "https://www.linkedin.com/in/eunji-angie-song-91b25187/",
+    "date": "2016-12-31",
+    "note": "Fullstack Academy's Summer of Code program"
+  },
+  {
+    "name": "Theerut Foongkiatcharoen",
+    "slug": "theerut-foongkiatcharoen",
+    "linkedin": "https://www.linkedin.com/in/theerut-foongkiatcharoen/",
+    "date": "2017-03-21",
+    "note": "Fullstack Academy admissions process"
+  },
+  {
+    "name": "Kelaiya Parikah",
+    "slug": "kelaiya-parikah",
+    "linkedin": "https://www.linkedin.com/in/kelaiya-parikh/",
+    "date": "2017-05-23",
+    "note": "Mentored incoming Grace Hopper student as Fullstack Academy ambassador"
+  },
+  {
+    "name": "Steven Shen",
+    "slug": "steven-shen",
+    "linkedin": "https://www.linkedin.com/in/steeveshen/",
+    "date": "2018-02-06",
+    "note": "Prep for Fullstack Academy"
+  },
+  {
+    "name": "Adilene Constante",
+    "slug": "adilene-constante",
+    "linkedin": "https://www.linkedin.com/in/adiconstante/",
+    "date": "2018-02-21",
+    "note": "Job search advice, resume and LinkedIn review"
+  },
+  {
+    "name": "Melhjingoy David",
+    "slug": "melhjingoy-david",
+    "linkedin": "https://www.linkedin.com/in/carlymgordon/",
+    "date": "2018-04-23",
+    "note": "16 sessions of video chat through Thinkful"
+  },
+  {
+    "name": "Valeria Oshiro",
+    "slug": "valeria-oshiro",
+    "linkedin": "https://www.linkedin.com/in/valeriaoshiro/",
+    "date": "2018-05-01",
+    "note": "Phone call through Out of Office Hours"
+  },
+  {
+    "name": "Linda Xiong",
+    "slug": "linda-xiong",
+    "linkedin": "https://www.linkedin.com/in/linda-xiong-82b485116/",
+    "date": "2018-07-27",
+    "note": "Career path and job search advice"
+  },
+  {
+    "name": "Lupita Davila",
+    "slug": "lupita-davila",
+    "linkedin": null,
+    "date": "2018-09-04",
+    "note": "Career guidance"
+  },
+  {
+    "name": "Mariela P. Smith",
+    "slug": "mariela-p-smith",
+    "linkedin": "https://www.linkedin.com/in/marielapsmith/",
+    "date": "2018-09-13",
+    "note": "Career guidance"
+  },
+  {
+    "name": "Adil Minocherhomjee",
+    "slug": "adil-minocherhomjee",
+    "linkedin": "https://www.linkedin.com/in/adilminocherhomjee/",
+    "date": "2018-01-25",
+    "note": "Getting the most out of the Fullstack Academy experience"
+  },
+  {
+    "name": "Kanad Bahalkar",
+    "slug": "kanad-bahalkar",
+    "linkedin": "https://www.linkedin.com/in/kanadbahalkar/",
+    "date": "2018-08-20",
+    "note": "User research interview on design and development workflow"
+  },
+  {
+    "name": "Anonymous",
+    "slug": "undisclosed-male",
+    "linkedin": null,
+    "date": "2018-08-26",
+    "note": "Internships after Fullstack Academy"
+  },
+  {
+    "name": "Abel Regaldo",
+    "slug": "abel-regaldo",
+    "linkedin": "https://www.linkedin.com/in/abelregalado/",
+    "date": "2018-10-19",
+    "note": "Career path discussion"
+  },
+  {
+    "name": "Jasmine Anderson",
+    "slug": "jasmine-anderson",
+    "linkedin": "https://www.linkedin.com/in/jasmine-anderson-tech/",
+    "date": "2018-10-11",
+    "note": "Career path and software engineering journey"
+  },
+  {
+    "name": "Anonymous",
+    "slug": "undisclosed-female",
+    "linkedin": null,
+    "date": "2018-10-10",
+    "note": "Resume review and career advice"
+  },
+  {
+    "name": "Oscar Parra",
+    "slug": "oscar-parra",
+    "linkedin": "https://www.linkedin.com/in/ogparra/",
+    "date": "2018-10-14",
+    "note": "Career path discussion"
+  },
+  {
+    "name": "Brian Martinez",
+    "slug": "brian-martinez",
+    "linkedin": "https://www.linkedin.com/in/brianmartinez25/",
+    "date": "2018-11-07",
+    "note": "Career advice"
+  },
+  {
+    "name": "Carly Gordon",
+    "slug": "carly-gordon",
+    "linkedin": "https://www.linkedin.com/in/carlymgordon/",
+    "date": "2018-11-08",
+    "note": "Career path guidance"
+  },
+  {
+    "name": "Neil Scheuermann",
+    "slug": "neil-scheuermann",
+    "linkedin": "https://www.linkedin.com/in/neil-scheuermann/",
+    "date": "2019-01-05",
+    "note": "Career advice and resources"
+  },
+  {
+    "name": "Simran Anand",
+    "slug": "simran-anand",
+    "linkedin": "https://www.linkedin.com/in/mansimrananand/",
+    "date": "2019-01-18",
+    "note": "Tech career navigation and internship guidance"
+  },
+  {
+    "name": "Simran Kaur Anand",
+    "slug": "simran-kaur-anand",
+    "linkedin": null,
+    "date": "2019-02-17",
+    "note": "University career path and roles in tech"
+  },
+  {
+    "name": "Matthew Ma",
+    "slug": "matthew-ma",
+    "linkedin": "https://www.linkedin.com/in/matthew-ma-compsci/",
+    "date": "2019-03-20",
+    "note": "Career and job search guidance"
+  },
+  {
+    "name": "Cherri Hartigan",
+    "slug": "cherri-hartigan",
+    "linkedin": "https://www.linkedin.com/in/cherri-hartigan/",
+    "date": "2019-03-25",
+    "note": "Career path discussion"
+  },
+  {
+    "name": "Roya Lofti",
+    "slug": "roya-lofti",
+    "linkedin": "https://www.linkedin.com/in/roya-lotfi-06609a17b/",
+    "date": "2019-03-28",
+    "note": "Tech industry advice"
+  },
+  {
+    "name": "Enrique Novoa",
+    "slug": "enrique-novoa",
+    "linkedin": "https://www.linkedin.com/in/enrique-novoa/",
+    "date": "2019-04-02",
+    "note": "Career and job search advice"
+  },
+  {
+    "name": "Paul Do",
+    "slug": "paul-do",
+    "linkedin": "https://www.linkedin.com/in/pauldo-/",
+    "date": "2019-04-08",
+    "note": "Career and job search guidance"
+  },
+  {
+    "name": "Amber Sharma",
+    "slug": "amber-sharma",
+    "linkedin": "https://www.linkedin.com/in/apsharma/",
+    "date": "2019-04-11",
+    "note": "Software engineering advice as a fellow bootcamp grad and woman of color"
+  },
+  {
+    "name": "Pauly Quintero",
+    "slug": "pauly-quintero",
+    "linkedin": "https://www.linkedin.com/in/pauly-quintero/",
+    "date": "2019-04-26",
+    "note": "Career and job search guidance for Latinas entering tech"
+  }
+]

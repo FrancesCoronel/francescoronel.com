@@ -37,10 +37,12 @@ export function MemojiSection({ memojis = defaultMemojis }: MemojiSectionProps) 
         </div>
         <div className="grid grid-cols-2 place-items-center gap-4 pb-8 sm:grid-cols-3 md:grid-cols-5 md:gap-6">
           {memojis.map((memoji) => (
-            <div
+            <a
               key={memoji.src}
-              className="group relative flex-shrink-0 transition-transform duration-200 hover:scale-110"
-              title={memoji.mood}
+              href={memoji.src}
+              download
+              title={`Download: ${memoji.mood}`}
+              className="group relative flex-shrink-0 cursor-pointer transition-transform duration-200 hover:scale-110"
             >
               <Image
                 src={memoji.src}
@@ -52,7 +54,7 @@ export function MemojiSection({ memojis = defaultMemojis }: MemojiSectionProps) 
               <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-horchata-700 px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 dark:bg-horchata-500 dark:text-navy-900">
                 {memoji.mood}
               </span>
-            </div>
+            </a>
           ))}
         </div>
       </div>

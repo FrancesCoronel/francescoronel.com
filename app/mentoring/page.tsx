@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getTestimonials } from "@/lib/content";
+import mentees from "@/content/mentees.json";
 import { TestimonialsPreview } from "@/components/sections/testimonials-preview";
 import { buildMetadata } from "@/lib/metadata";
 import { CalEmbed } from "@/components/ui/cal-embed";
@@ -23,6 +24,7 @@ const pricingTiers = [
     description: "Quick career check-in or focused Q&A",
     href: "https://cal.com/francescoronel/mentoring",
     cta: "Book a call",
+    featured: true,
   },
   {
     price: "$70",
@@ -30,7 +32,6 @@ const pricingTiers = [
     description: "Deep dive on career strategy, interview prep, or portfolio review",
     href: "https://cal.com/francescoronel/mentoring-hour",
     cta: "Book a call",
-    featured: true,
   },
   {
     price: "$200",
@@ -140,7 +141,7 @@ export default function MentoringPage() {
       </PageHeader>
 
       {/* Pricing Tiers */}
-      <section className="py-16 md:py-20">
+      <section className="bg-horchata-100 py-16 md:py-20 dark:bg-navy-800">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <h2 className="text-center text-2xl font-bold text-navy-900 dark:text-horchata-100">
             Pricing
@@ -271,6 +272,52 @@ export default function MentoringPage() {
                     </li>
                   ))}
                 </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* People I've Mentored */}
+      <section className="bg-horchata-100 py-16 md:py-20 dark:bg-navy-800">
+        <div className="mx-auto max-w-[var(--container-max)] px-6">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+            Track Record
+          </p>
+          <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+            People I&apos;ve Mentored 🤝
+          </h2>
+          <p className="mt-2 text-sm text-navy-600 dark:text-white/70">
+            I&apos;ve mentored 250+ engineers since 2016 — here are some of the people I&apos;ve had the pleasure of working with.
+          </p>
+          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {mentees.map((mentee) => (
+              <div
+                key={mentee.slug}
+                className="flex items-start gap-3 rounded-xl border border-horchata-200 bg-white p-4 dark:border-navy-700"
+              >
+                <div className="min-w-0 flex-1">
+                  {mentee.linkedin ? (
+                    <a
+                      href={mentee.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-semibold text-navy-900 underline decoration-horchata-300 underline-offset-2 hover:text-horchata-600 dark:text-horchata-100 dark:decoration-navy-500 dark:hover:text-horchata-400"
+                    >
+                      {mentee.name}
+                    </a>
+                  ) : (
+                    <span className="text-sm font-semibold text-navy-900 dark:text-horchata-100">
+                      {mentee.name}
+                    </span>
+                  )}
+                  <p className="mt-0.5 text-xs text-navy-500 dark:text-white/60">
+                    {mentee.note}
+                  </p>
+                </div>
+                <span className="shrink-0 text-xs text-navy-400 dark:text-white/40">
+                  {new Date(mentee.date).getFullYear()}
+                </span>
               </div>
             ))}
           </div>

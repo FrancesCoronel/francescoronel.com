@@ -111,10 +111,12 @@
     "endDate": "2013-12-22T00:00:00.000Z",
     "description": "Studied abroad at Jacobs University, Bremen. Earned merit scholarship, joined CS club, excelled in courses. Featured in student newspaper. 🎓",
     "honors": [
-      "Merit-based scholarship",
+      "Merit-based scholarship ($10K annual)",
       "Computer Science Club member",
-      "Featured poem in Pulse of the World student newspaper",
-      "Courses: Single Variable Calculus, General CS I, Computer Architecture, Programming in Python I, General Biology/Neuroscience I"
+      "Marketing for social events; performed in 'The Chinese Wall' play",
+      "Featured poem in Pulse of the World student newspaper (Issue 11, October 2013)",
+      "Mandatory courses: Single Variable Calculus, General CS I, NatSciLab Unit CS I, Computer Architecture, General Biology/Neuroscience I",
+      "Electives: NatSciLab Unit Programming in Python I, German A1.1, General Environmental Science I, Business Etiquette Seminar"
     ]
   },
   {
@@ -128,13 +130,16 @@
     "endDate": "2017-05-23T00:00:00.000Z",
     "description": "Led development at Cornell Tech with NY Times on commenter diversity. Built Mora startup. Excelled in CS topics. Simons Fellow.",
     "honors": [
+      "Magna Cum Laude",
+      "Graduated at age 21",
       "James H. and Marilyn H. Simons Graduate Fellow (merit scholarship covering 25% of tuition)",
       "Lead developer for NY Times collaboration on commenter diversity (Product Studio)",
       "Built Mora startup for foster care analytics (Startup Studio)",
       "Selected for Cornell Tech Student Panel for prospective students",
       "Best Presentation in Grizzly Room (Product Studio Sprint 3)",
       "WiTNY (Women in Technology and Entrepreneurship in New York)",
-      "Coursework in HCI & Design, Connective Media, Privacy in the Digital Age, Product Management, Security & Privacy"
+      "Fall 2016 courses: Startup Systems Design & Engineering, Physical Computing, Security & Privacy in the Wild, Product Studio, Startup Ideas, Conversations in the Studio, Business for Tech, Leadership for Studio",
+      "Spring 2017 courses: Conversations in the Studio, Design Thinking, Leadership for Studio, Women in Leadership, HCI & Design, Product Management, Privacy in the Digital Age, Connective Media Systems & Tech, Startup Studio"
     ]
   }
 ]

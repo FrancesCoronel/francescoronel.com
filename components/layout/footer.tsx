@@ -72,6 +72,7 @@ const footerNav = [
     links: [
       { href: "/about", label: "About" },
       { href: "/blog", label: "Blog" },
+      { href: "/portfolio", label: "Portfolio" },
       { href: "/speaking", label: "Speaking" },
       { href: "/mentoring", label: "Mentoring" },
       { href: "/contact", label: "Contact" },
@@ -80,6 +81,7 @@ const footerNav = [
   {
     heading: "Explore",
     links: [
+      { href: "/now", label: "Now" },
       { href: "/organizations", label: "Organizations" },
       { href: "/testimonials", label: "Testimonials" },
       { href: "/categories", label: "Categories" },

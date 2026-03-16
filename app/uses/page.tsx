@@ -160,10 +160,10 @@ const plugins = [
   },
 ];
 
-const categoryImages: Record<string, string> = {
-  Slack: "/images/tools/slack.png",
-  Git: "/images/tools/github.png",
-  Writing: "/images/assets/memoji-lightbulb.png",
+const categoryIcons: Record<string, { image?: string; emoji?: string }> = {
+  Slack: { image: "/images/tools/slack.png" },
+  Git: { image: "/images/tools/github.png" },
+  Writing: { emoji: "✍️" },
 };
 
 const skills = [
@@ -392,7 +392,7 @@ export default function UsesPage() {
                     <p className="mt-1 text-sm text-navy-600 dark:text-white/70">
                       {server.description}
                     </p>
-                    <span className="mt-3 inline-block rounded-full bg-horchata-200 px-2.5 py-0.5 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-white/70">
+                    <span className="mt-3 inline-flex items-center rounded-full bg-horchata-200 px-2.5 py-0.5 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-white/70">
                       {server.tools} tool{server.tools !== 1 ? "s" : ""}
                     </span>
                   </div>
@@ -446,6 +446,7 @@ export default function UsesPage() {
                         height={14}
                         className="h-3.5 w-3.5 object-contain"
                         aria-hidden="true"
+                        unoptimized
                       />
                       {plugin.source}
                     </span>
@@ -481,16 +482,21 @@ export default function UsesPage() {
                       {skill.command}
                     </code>
                     <span className="inline-flex items-center gap-1.5 rounded-full bg-horchata-200 px-2.5 py-0.5 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-white/70">
-                      {categoryImages[skill.category] && (
+                      {categoryIcons[skill.category]?.image ? (
                         <Image
-                          src={categoryImages[skill.category]}
+                          src={categoryIcons[skill.category].image!}
                           alt=""
                           width={14}
                           height={14}
                           className="h-3.5 w-3.5 object-contain"
                           aria-hidden="true"
+                          unoptimized
                         />
-                      )}
+                      ) : categoryIcons[skill.category]?.emoji ? (
+                        <span className="text-[10px] leading-none" aria-hidden="true">
+                          {categoryIcons[skill.category].emoji}
+                        </span>
+                      ) : null}
                       {skill.category}
                     </span>
                   </div>
@@ -513,7 +519,7 @@ export default function UsesPage() {
                 className="group flex items-center gap-4 p-5 transition-colors hover:bg-horchata-50 first:rounded-t-2xl last:rounded-b-2xl dark:hover:bg-navy-700"
               >
                 <span className="text-xl">{hook.icon}</span>
-                <span className="flex-shrink-0 rounded-full bg-horchata-200 px-2.5 py-1 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-white/70">
+                <span className="inline-flex flex-shrink-0 items-center rounded-full bg-horchata-200 px-2.5 py-1 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-white/70">
                   {hook.event}
                 </span>
                 <code className="flex-shrink-0 text-xs text-navy-500 dark:text-horchata-400">

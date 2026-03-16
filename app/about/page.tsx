@@ -7,7 +7,9 @@ import {
   getOrganizationsByActivity,
   getOrganizationByName,
   getTestimonials,
+  EXCLUDED_FROM_FEATURED_ORGS,
 } from "@/lib/content";
+import skills from "@/content/skills.json";
 import { buildMetadata } from "@/lib/metadata";
 import { PageHeader } from "@/components/ui/page-header";
 import { BioSection } from "@/components/sections/bio-section";
@@ -60,11 +62,9 @@ const bioVariants = [
           people get work done more efficiently.
         </p>
         <p>
-          Right now, I work at{" "}
-          Slack on the Messaging team,
-          where I focus on frontend architecture, notifications, and
-          sidebar systems — key parts of how teams stay connected and
-          productive every day.
+          Right now, I work at Slack on the <strong>Messaging team</strong>,
+          where I&apos;m focused on frontend architecture, notifications, and sidebar systems —
+          the foundation of how teams communicate and collaborate every day.
         </p>
         <p>
           Beyond my day-to-day engineering work, I&apos;m passionate about{" "}
@@ -74,12 +74,10 @@ const bioVariants = [
           spoken at over 100 events.
         </p>
         <p>
-          As a proud{" "}
-          Peruvian-American, I care deeply about creating
+          As a proud Peruvian-American, I care deeply about creating
           more visibility and access for underrepresented communities in
-          engineering and leadership roles. I grew up
-          in Norfolk, Virginia, and now live in the{" "}
-          Bay Area with my two Corgis.
+          engineering and leadership roles. I grew up in Norfolk, Virginia,
+          and now live in the Bay Area with my two Corgis and my boyfriend Andrew.
         </p>
       </>
     ),
@@ -98,16 +96,21 @@ const bioVariants = [
           that help millions of people get work done more efficiently.
         </p>
         <p>
-          Beyond her engineering work, Frances is deeply committed to{" "}
+          She currently works at Slack on the <strong>Messaging team</strong>,
+          focused on frontend architecture, notifications, and sidebar systems —
+          the foundation of how teams communicate and collaborate every day.
+        </p>
+        <p>
+          Beyond her engineering work, Frances is deeply committed to
           mentorship, community building, and representation in tech.
           She has mentored hundreds of aspiring and experienced engineers
-          through programs like Formation.
+          through programs like Formation, served as Executive Director of Techqueria,
+          and spoken at over 100 events.
         </p>
         <p>
           Originally from Norfolk, Virginia,
           Frances now calls the Bay Area home, where she
-          lives with her two Corgis, Luna and{" "}
-          Sueño.
+          lives with her two Corgis, Luna and Sueño, and her boyfriend Andrew.
         </p>
       </>
     ),
@@ -170,7 +173,9 @@ export default function AboutPage() {
   const experiences = getExperiences();
   const education = getEducation();
   const awards = getAwards();
-  const organizations = getOrganizationsByActivity().filter((o) => o.logo).slice(0, 10);
+  const organizations = getOrganizationsByActivity()
+    .filter((o) => o.logo && !EXCLUDED_FROM_FEATURED_ORGS.has(o.slug))
+    .slice(0, 10);
   const testimonials = getTestimonials()
     .filter((t) => t.featured)
     .slice(0, 3);
@@ -269,6 +274,28 @@ export default function AboutPage() {
 
       {/* Awards */}
       <AwardsSection awards={awards} blogPostMap={awardBlogPosts} />
+
+      {/* Skills */}
+      <section className="py-16 md:py-20">
+        <div className="mx-auto max-w-[var(--container-max)] px-6">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+            Expertise
+          </p>
+          <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+            Skills &amp; Technologies 🛠️
+          </h2>
+          <div className="mt-8 flex flex-wrap gap-2">
+            {skills.map((skill) => (
+              <span
+                key={skill.slug}
+                className="rounded-full border border-horchata-200 bg-white px-4 py-1.5 text-sm font-medium text-navy-700 dark:border-navy-700 dark:text-horchata-200"
+              >
+                {skill.name}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Organizations */}
       <OrganizationsPreview organizations={organizations} />

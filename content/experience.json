@@ -8,15 +8,136 @@
     "location": "Remote",
     "startDate": "2025-06-23T00:00:00.000Z",
     "endDate": null,
-    "description": "Building features on Slack's Messaging team to improve the world's best platform for async collaboration—currently focused on Sidebar Systems.",
+    "description": "Currently on the Sidebar Systems team, focused on building the best in class messaging platform for getting work done. Sidebar Systems → Messaging → Slack Core Experience → Slack → Salesforce.",
     "highlights": [
-      "Currently on the Sidebar Systems < Messaging < Slack Core Experience team where I'm focused on improving the best in class messaging platform for getting work done."
+      "Frontend Lead for Notifications 2.0, a core rebuild of Slack's notification preferences system, unifying four legacy mental models into a single, scalable architecture used by millions of users; Drove 5× increase in settings engagement (20K → 110K users) and improved default behaviors, reducing channel override usage by 5.6%; Led cross-functional coordination across frontend, backend, iOS, and Android for a highly coupled system migration",
+      "Recognized subject-matter expert for Sidebar Systems, triaging feedback, delivering rapid fixes, and unblocking teams across Messaging",
+      "Project DRI for multiple high-visibility launches including Advanced Notifications Modal, Sidebar Section Header Updates, and Sidebar Visual Updates, with strong accessibility and performance focus",
+      "Authored reusable frontend patterns, specs, and templates adopted across multiple teams, raising quality and consistency for sidebar development"
     ],
     "skills": [
       "typescript",
       "hack",
       "react"
     ]
+  },
+  {
+    "title": "Founder & Maintainer",
+    "slug": "latina-dev",
+    "company": "Latina Dev",
+    "companyLogo": "https://avatars.githubusercontent.com/u/93738374",
+    "companyUrl": "https://latina.dev/",
+    "location": "Remote",
+    "startDate": "2022-10-01T00:00:00.000Z",
+    "endDate": null,
+    "description": "Latina Dev is an open-source directory of Latina software engineers at the student, IC, and leadership levels to increase visibility and access to valuable opportunities.",
+    "highlights": [
+      "Built and maintain an open-source directory at latina.dev to increase visibility for Latina software engineers",
+      "Hosts the community on a pro Slack workspace and deploys via Vercel's open source plan",
+      "GitHub: github.com/Latina-Dev/latina-dev"
+    ],
+    "skills": [
+      "open-source",
+      "community-building"
+    ]
+  },
+  {
+    "title": "Apprenticeships.me",
+    "slug": "apprenticeships-me",
+    "company": "Apprenticeships.me",
+    "companyLogo": "https://ph-files.imgix.net/9ef5b2d3-42c1-4e7a-a8af-4f40523fe9a5.png",
+    "companyUrl": "https://apprenticeships.me/",
+    "location": "Remote",
+    "startDate": "2019-05-01T00:00:00.000Z",
+    "endDate": null,
+    "description": "Apprenticeships.me is a directory of apprenticeships in the tech industry. Now you can find a new career by learning from the industry itself.",
+    "highlights": [
+      "Open-source directory helping people find tech apprenticeships",
+      "Listed on Product Hunt: producthunt.com/posts/apprenticeships-me"
+    ],
+    "skills": ["open-source"]
+  },
+  {
+    "title": "Tech Queens Podcast",
+    "slug": "tech-queens",
+    "company": "Tech Queens",
+    "companyLogo": "/images/organizations/tech-queens.png",
+    "companyUrl": "https://anchor.fm/tech-queens",
+    "location": "Remote",
+    "startDate": "2019-03-01T00:00:00.000Z",
+    "endDate": "2020-03-01T00:00:00.000Z",
+    "description": "Tech Queens is the first and only podcast that focuses solely on the stories and advice shared by women of color in tech.",
+    "highlights": [
+      "Founded and hosted Tech Queens, the first podcast exclusively focused on women of color in tech",
+      "Interviewed engineers, designers, and leaders from underrepresented backgrounds across the industry"
+    ],
+    "skills": ["community-building", "public-speaking"]
+  },
+  {
+    "title": "Jake the Dog Key Hand",
+    "slug": "jake-the-dog-key-hand",
+    "company": "Kent Hack Enough",
+    "companyLogo": "",
+    "companyUrl": "https://devpost.com/software/jake-the-dog-key-hand-security-corp-whdm9v",
+    "location": "Remote",
+    "startDate": "2016-10-01T00:00:00.000Z",
+    "endDate": "2016-10-31T00:00:00.000Z",
+    "description": "Hackathon project built at Kent Hack Enough, which brings hackers from all over the nation together to learn something new, party hard, and create something awesome.",
+    "highlights": [
+      "Built at Kent Hack Enough hackathon",
+      "Devpost: devpost.com/software/jake-the-dog-key-hand-security-corp-whdm9v"
+    ],
+    "skills": []
+  },
+  {
+    "title": "MEGGS | #DesignHackathon 2016",
+    "slug": "meggs-design-hackathon-2016",
+    "company": "My Social Canvas DesignHackathon",
+    "companyLogo": "",
+    "companyUrl": "http://devpost.com/software/meggs",
+    "location": "New York, NY",
+    "startDate": "2016-10-01T00:00:00.000Z",
+    "endDate": "2016-10-31T00:00:00.000Z",
+    "description": "The My Social Canvas DesignHackathon brings together students pursuing degrees in fashion, graphic design, technology, and business to increase awareness, participation, and funding for girls in STEM programs.",
+    "highlights": [
+      "Built at My Social Canvas DesignHackathon 2016",
+      "Devpost: devpost.com/software/meggs"
+    ],
+    "skills": []
+  },
+  {
+    "title": "Ammalia | TreeHacks 2016",
+    "slug": "ammalia-treehacks-2016",
+    "company": "TreeHacks",
+    "companyLogo": "/images/organizations/stanford-university.png",
+    "companyUrl": "http://devpost.com/software/ammalia",
+    "location": "Stanford, CA",
+    "startDate": "2016-02-01T00:00:00.000Z",
+    "endDate": "2016-02-28T00:00:00.000Z",
+    "description": "TreeHacks is Stanford University's official national hackathon. In 2016, they brought in over 670 hackers with a 50/50 gender ratio, the first major student-run hackathon to do so.",
+    "highlights": [
+      "Built Ammalia at TreeHacks 2016, Stanford's national hackathon",
+      "Devpost: devpost.com/software/ammalia"
+    ],
+    "skills": []
+  },
+  {
+    "title": "Salesforce Day 1 Web Campaign",
+    "slug": "salesforce-day-1-web-campaign",
+    "company": "Slack",
+    "companyLogo": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/64ada0d56ff0228892106628_Organization%20Logos%20for%20Webflow.png",
+    "companyUrl": "https://slack.com/about/slack-salesforce",
+    "location": "Remote",
+    "startDate": "2021-06-01T00:00:00.000Z",
+    "endDate": "2021-07-31T00:00:00.000Z",
+    "description": "Lead developer for the Salesforce Day 1 web campaign — a coordinated set of web updates launched to coincide with Slack's acquisition by Salesforce.",
+    "highlights": [
+      "Led coordinated web updates across Slack.com for Day One of the Salesforce acquisition",
+      "Delivered a brand-new landing page showcasing the best of both Slack and Salesforce",
+      "Used Houston to roll out changes across the site simultaneously, including About, Homepage, Sales Solutions, Contact Sales, and legal pages",
+      "Collaborated with Activation and Purchase Experience teams on billing and legal language updates"
+    ],
+    "skills": ["growth-engineering", "javascript"]
   },
   {
     "title": "Engineering Manager, Lists",
@@ -48,11 +169,16 @@
     "location": "Remote",
     "startDate": "2023-09-18T00:00:00.000Z",
     "endDate": "2024-12-31T00:00:00.000Z",
-    "description": "I am excited to return to Slack as a Senior Software Engineer on the Lists team where we're making it easier than ever to manage projects and tasks.",
+    "description": "Returned to Slack as a Senior Software Engineer on the Lists team, building features to make project and task management easier within Slack.",
     "highlights": [
-      "Returned to Slack as a Senior Software Engineer on the Lists team, building features to make project and task management easier within Slack",
-      "Shipped improvements to Slack Lists that streamlined how teams organize, track, and manage work directly in Slack",
-      "Contributed to the Productivity pillar’s roadmap across multiple quarterly planning cycles"
+      "Led architecture, execution, and delivery of advanced list customization features: filtering, sorting, grouping by field, hiding fields, managing views, and toggling view type",
+      "Developed process improvements adopted team-wide (e.g. project planning templates, bug bash docs)",
+      "Served as subject matter expert for list customization and interactive UI patterns",
+      "Delivered complex UI work with pixel-perfect quality, accessibility, animations, and internationalization support",
+      "Collaborated cross-functionally to drive reliability and performance improvements, including high-priority fixes for large enterprise customers",
+      "Mentored engineers (peer mentorship and FE mentorship program), supported engineering onboarding and documentation",
+      "Authored Lists engineering onboarding docs and FE best practices",
+      "Standardized TypeScript import organization practices across Slack engineering team"
     ],
     "skills": [
       "hack",
@@ -85,11 +211,13 @@
       "Awarded a merit bonus for my leadership work with the Fuego ERG which I co-founded and led during the pandemic",
       "Organized 13+ workshops for the Fuego ERG, with active membership increasing by 4x",
       "Led one of the largest D&I recruiting events — \"Turning Failure Into Fuego\" for Earthtones ERG",
-      "Organized personal branding workshop starring my co-worker Mina Markham for Earthtones ERG"
+      "Organized personal branding workshop starring my co-worker Mina Markham for Earthtones ERG",
+      "Early tech stack: PHP (controllers), vanilla JS/CSS (view), MySQL (model), Smarty and Handlebars (templates), XHP"
     ],
     "skills": [
       "hack",
-      "javascript"
+      "javascript",
+      "php"
     ]
   },
   {
@@ -200,7 +328,7 @@
     "slug": "formation",
     "company": "Formation",
     "companyLogo": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/6456ab5b09c5e167e0151392_Formation.png",
-    "companyUrl": "https://formation.dev",
+    "companyUrl": "https://formation.dev/c/kGjgfnF7",
     "location": "Remote",
     "startDate": "2023-03-06T00:00:00.000Z",
     "endDate": null,
@@ -228,13 +356,15 @@
     "location": "Remote",
     "startDate": "2020-01-01T00:00:00.000Z",
     "endDate": "2021-05-01T00:00:00.000Z",
-    "description": "Led operations for the largest community of Latinx in Tech as a 501(c)(3) nonprofit. Managed partnerships, fundraising, community programs, and ERG consulting.",
+    "description": "First paid staff member of Techqueria, serving as Executive Director of the nonprofit that serves the largest global community of Latinx professionals in tech. Grew from 8,500 to 15,000+ members and 3,000 to nearly 10,000 Slack members. Quadrupled revenue to $220K+ in 2020.",
     "highlights": [
-      "Techqueria is a 501(c)(3) nonprofit that serves the largest community of Latinx in Tech in the US",
-      "Oversaw strategy, partnerships, and day-to-day operations for a community of 10,000+ members",
-      "Managed ERG consulting partnerships with companies like Google, GitHub, and Salesforce",
-      "Organized virtual events and community programs during the pandemic",
-      "Featured on ABC7 News for my leadership work with Techqueria"
+      "First paid staff member for the nonprofit",
+      "Managed a group of 5+ staff and 30+ volunteers",
+      "Led the launch of the annual LHM Summit in 2020 which had over 1,400 attendees",
+      "Oversaw 400% growth in members in 2019",
+      "Spearheaded new corporate partner strategy leading to 370% increase in gross profit from 2019 to 2020",
+      "Drove a 1,300% increase in visits to Techqueria's web properties from 2019 to 2020",
+      "Awarded Sentry's $10K Open Source Grant to work on the website of Techqueria in 2018"
     ],
     "skills": [
       "engineering-management",
@@ -335,15 +465,16 @@
     "location": "San Francisco, CA",
     "startDate": "2017-06-01T00:00:00.000Z",
     "endDate": "2018-05-01T00:00:00.000Z",
-    "description": "Full-time software engineer at Accenture's Liquid Studio in San Francisco, building products for enterprise clients using modern web technologies and emerging tech.",
+    "description": "Full-time software engineer at Accenture's Liquid Studio in San Francisco, building products for enterprise clients using Angular and TypeScript.",
     "highlights": [
-      "Worked at the Accenture Liquid Studio, a rapid application development lab focused on emerging technologies",
-      "Built client-facing web applications using JavaScript, React, and Node.js",
-      "Collaborated with cross-functional teams to deliver digital transformation projects for enterprise clients"
+      "Developed and tested hundreds of reusable components using Angular and TypeScript, resulting in increased app modularity",
+      "Communicated 1:1 with stakeholders from large enterprise clients such as Kaiser Permanente and T-Mobile, demonstrating my ability to develop strong working relationships",
+      "Played an integral role in implementing new standards for development and testing, utilizing tools like Karma, Jira, and Sass"
     ],
     "skills": [
       "javascript",
-      "react"
+      "angular",
+      "typescript"
     ]
   },
   {
@@ -372,17 +503,22 @@
     "company": "Accenture",
     "companyLogo": "/images/organizations/accenture.png",
     "companyUrl": "https://www.accenture.com/",
-    "location": "San Francisco, CA",
+    "location": "Redwood City, CA",
     "startDate": "2016-06-01T00:00:00.000Z",
-    "endDate": "2016-08-01T00:00:00.000Z",
-    "description": "Software engineering intern at Accenture's Liquid Studio in San Francisco, working on AR/VR prototypes and emerging technology projects.",
+    "endDate": "2016-08-12T00:00:00.000Z",
+    "description": "AR/VR Software Engineering Intern on the Wearables Team at Accenture's Liquid Studio in Redwood City, CA. Designed, developed, and tested AR/VR apps using Unity for enterprise clients.",
     "highlights": [
-      "Successfully led the design, development, and testing of AR/VR apps using Unity for enterprise clients at the Accenture Liquid Studio",
-      "Developed and launched a mobile-first website utilizing Handlebars to showcase device inventory effectively",
-      "Built proof-of-concept demos and prototypes for client presentations using emerging technologies"
+      "Aided in managing the wearables hardware and client demos",
+      "Designed, developed, and tested various AR/VR apps using Unity for enterprise clients",
+      "Developed Bash scripts to automate APK installations and testing on wearable devices",
+      "Developed a mobile-first website using Handlebars to showcase device inventory",
+      "Gained hands-on experience with a wide range of enterprise wearable devices including HoloLens, Google Glass, Google Tango, Apple Watch, Vuzix, Epson, Moto 360, and Samsung Gear",
+      "Improved technical skills in Unity, C#, JavaScript, Sketch, Xcode, and Safari for Developers"
     ],
     "skills": [
-      "javascript"
+      "javascript",
+      "unity",
+      "csharp"
     ]
   },
   {

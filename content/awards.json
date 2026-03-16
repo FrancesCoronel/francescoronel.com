@@ -115,5 +115,131 @@
     "description": "Won Best Use of Dropbox API and Best Social Impact Prize at TreeHacks, Stanford University's annual hackathon.",
     "image": "",
     "url": ""
+  },
+  {
+    "title": "Women Impact Tech SF",
+    "slug": "women-impact-tech-sf",
+    "organization": "Andiamo",
+    "date": "2019-01-15",
+    "description": "Selected for this invite-only event uniting 500 elite female engineers in Silicon Valley with cutting-edge tech companies.",
+    "image": "",
+    "url": ""
+  },
+  {
+    "title": "Diversity Scholarship Recipient — JSConf Hawaiʻi 2019",
+    "slug": "jsconf-hawaii-2019-diversity-scholarship",
+    "organization": "JSConf",
+    "date": "2018-08-01",
+    "description": "Awarded a diversity scholarship to attend JSConf Hawaiʻi 2019.",
+    "image": "",
+    "url": "https://jsconfhi.com/"
+  },
+  {
+    "title": "Diversity Scholarship Recipient — TSConf 2018",
+    "slug": "tsconf-2018-diversity-scholarship",
+    "organization": "SitePen",
+    "date": "2018-02-01",
+    "description": "Awarded a diversity scholarship to attend TSConf 2018, the TypeScript conference.",
+    "image": "",
+    "url": "https://tsconf.io/"
+  },
+  {
+    "title": "Third Place — Alexa Hackathon",
+    "slug": "alexa-hackathon-third-place",
+    "organization": "Amazon + Accenture",
+    "date": "2017-07-01",
+    "description": "Won third place at an Alexa hackathon hosted by Amazon and Accenture.",
+    "image": "",
+    "url": ""
+  },
+  {
+    "title": "James H. and Marilyn H. Simons Graduate Fellowship",
+    "slug": "simons-graduate-fellowship",
+    "organization": "Cornell University",
+    "date": "2016-08-01",
+    "description": "Awarded the James H. and Marilyn H. Simons Graduate Fellowship at Cornell Tech.",
+    "image": "",
+    "url": "https://tech.cornell.edu/"
+  },
+  {
+    "title": "Scholarship Recipient — ACM Richard Tapia Celebration of Diversity in Computing 2016",
+    "slug": "acm-tapia-2016-scholarship",
+    "organization": "Tapia Conference",
+    "date": "2016-08-01",
+    "description": "Awarded a scholarship to attend the ACM Richard Tapia Celebration of Diversity in Computing Conference 2016.",
+    "image": "",
+    "url": "https://tapiaconference.cmd-it.org/"
+  },
+  {
+    "title": "Diversity Scholarship Recipient — npmCamp",
+    "slug": "npmcamp-diversity-scholarship",
+    "organization": "npm",
+    "date": "2016-05-01",
+    "description": "Awarded a diversity scholarship to attend npmCamp.",
+    "image": "",
+    "url": "https://www.npmjs.com/"
+  },
+  {
+    "title": "Valedictorian — Computer Science Department",
+    "slug": "valedictorian-computer-science-hampton",
+    "organization": "Hampton University",
+    "date": "2016-05-07",
+    "description": "Graduated as the Computer Science Department Valedictorian from Hampton University.",
+    "image": "",
+    "url": "https://hamptonu.edu/"
+  },
+  {
+    "title": "STEM Bridge Scholarship Recipient",
+    "slug": "stem-bridge-scholarship-vsgc",
+    "organization": "Virginia Space Grant Consortium",
+    "date": "2016-04-01",
+    "description": "Awarded the STEM Bridge Scholarship by the Virginia Space Grant Consortium.",
+    "image": "",
+    "url": "https://vsgc.odu.edu/"
+  },
+  {
+    "title": "Diversity Scholarship Recipient — Fluent Conf 2016",
+    "slug": "fluent-conf-2016-diversity-scholarship",
+    "organization": "O'Reilly",
+    "date": "2016-01-01",
+    "description": "Awarded a diversity scholarship to attend O'Reilly Fluent Conference 2016.",
+    "image": "",
+    "url": "https://www.oreilly.com/"
+  },
+  {
+    "title": "Diversity Scholarship Recipient — React.js Conf 2016",
+    "slug": "reactjs-conf-2016-diversity-scholarship",
+    "organization": "Facebook",
+    "date": "2015-12-01",
+    "description": "Awarded a diversity scholarship to attend React.js Conf 2016.",
+    "image": "",
+    "url": "https://reactjs.org/"
+  },
+  {
+    "title": "Scholarship Recipient — ACM Richard Tapia Celebration of Diversity in Computing 2015",
+    "slug": "acm-tapia-2015-scholarship",
+    "organization": "Google",
+    "date": "2015-08-01",
+    "description": "Awarded a Google-sponsored scholarship to attend the ACM Richard Tapia Celebration of Diversity in Computing Conference 2015.",
+    "image": "",
+    "url": "https://tapiaconference.cmd-it.org/"
+  },
+  {
+    "title": "Innovation Honor Award — Maury High School",
+    "slug": "innovation-honor-award-maury",
+    "organization": "The American High School Innovation Foundation",
+    "date": "2013-06-01",
+    "description": "Received the Innovation Honor Award from The American High School Innovation Foundation at Maury High School.",
+    "image": "",
+    "url": ""
+  },
+  {
+    "title": "Third Place — Grade 11 Book Review Contest",
+    "slug": "book-review-contest-third-place",
+    "organization": "Friends of the Norfolk Public Library",
+    "date": "2012-05-01",
+    "description": "Won third place in the Grade 11 Book Review Contest hosted by Friends of the Norfolk Public Library.",
+    "image": "",
+    "url": ""
   }
 ]

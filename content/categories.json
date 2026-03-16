@@ -18,30 +18,12 @@
     "description": ""
   },
   {
-    "name": "Education",
-    "slug": "education",
-    "color": "#365c71",
-    "fontColor": "#ffffff",
-    "emoji": "🎓",
-    "image": "/images/categories/education.png",
-    "description": ""
-  },
-  {
     "name": "Events",
     "slug": "events",
     "color": "#365c71",
     "fontColor": "#ffffff",
     "emoji": "📍",
     "image": "/images/categories/events.png",
-    "description": ""
-  },
-  {
-    "name": "Experience",
-    "slug": "experience",
-    "color": "#9e2b25",
-    "fontColor": "#ffffff",
-    "emoji": "💻",
-    "image": "/images/categories/experience.png",
     "description": ""
   },
   {

@@ -66,6 +66,9 @@ export function getAllBlogPosts(): BlogPost[] {
 }
 
 export function getBlogPostsByCategory(categorySlug: string): BlogPost[] {
+  if (categorySlug === "uncategorized") {
+    return getAllBlogPosts().filter((post) => post.categories.length === 0);
+  }
   return getAllBlogPosts().filter((post) =>
     post.categories.includes(categorySlug)
   );
@@ -97,7 +100,9 @@ export function getSkills(): Skill[] {
 }
 
 export function getAwards(): Award[] {
-  return loadJSON<Award>("awards.json");
+  return loadJSON<Award>("awards.json").sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
 }
 
 export function getExperiences(): WorkExperience[] {
@@ -117,10 +122,22 @@ export function getEducation(): Education[] {
 export function getCategories(): Category[] {
   const categories = loadJSON<Category>("categories.json");
   const posts = getAllBlogPosts();
-  return categories.map((cat) => ({
+  const withCounts = categories.map((cat) => ({
     ...cat,
     count: posts.filter((p) => p.categories.includes(cat.slug)).length,
   }));
+  const uncategorizedCount = posts.filter((p) => p.categories.length === 0).length;
+  withCounts.push({
+    name: "Uncategorized",
+    slug: "uncategorized",
+    color: "#888888",
+    fontColor: "#ffffff",
+    emoji: "📁",
+    image: "",
+    description: "Posts without a category.",
+    count: uncategorizedCount,
+  });
+  return withCounts;
 }
 
 export function getCategoryMaps() {
@@ -140,6 +157,13 @@ export function getTags(): Tag[] {
     count: posts.filter((p) => p.tags.includes(tag.slug)).length,
   }));
 }
+
+/** Organizations excluded from featured/preview sections (still exist for detail pages) */
+export const EXCLUDED_FROM_FEATURED_ORGS = new Set([
+  "accenture",
+  "byteboard",
+  "jupiterone",
+]);
 
 /** Get organizations sorted by number of blog post references (most active first) */
 export function getOrganizationsByActivity(): Organization[] {

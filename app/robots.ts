@@ -7,6 +7,8 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        // Block old WordPress upload paths — these no longer exist and waste crawl budget
+        disallow: ["/wp-content/", "/wp-includes/", "/wp-admin/"],
       },
       // Explicitly allow AI crawlers
       {

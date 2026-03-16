@@ -4,6 +4,7 @@ import {
   getExperiences,
   getOrganizations,
   getSkills,
+  EXCLUDED_FROM_FEATURED_ORGS,
 } from "@/lib/content";
 import { siteConfig, buildMetadata } from "@/lib/metadata";
 
@@ -107,15 +108,18 @@ export default function ForLlmsPage() {
       <section>
         <h2>Associated Organizations</h2>
         <ul>
-          {organizations.slice(0, 20).map((org) => (
-            <li key={org.slug}>
-              {org.url ? <a href={org.url}>{org.name}</a> : org.name}
-            </li>
-          ))}
-          {organizations.length > 20 && (
+          {organizations
+            .filter((org) => !EXCLUDED_FROM_FEATURED_ORGS.has(org.slug))
+            .slice(0, 20)
+            .map((org) => (
+              <li key={org.slug}>
+                {org.url ? <a href={org.url}>{org.name}</a> : org.name}
+              </li>
+            ))}
+          {organizations.filter((org) => !EXCLUDED_FROM_FEATURED_ORGS.has(org.slug)).length > 20 && (
             <li>
               <a href={`${siteConfig.siteUrl}/organizations`}>
-                ...and {organizations.length - 20} more
+                ...and {organizations.filter((org) => !EXCLUDED_FROM_FEATURED_ORGS.has(org.slug)).length - 20} more
               </a>
             </li>
           )}

@@ -117,5 +117,173 @@
     "category": "",
     "icon": "",
     "proficiency": 0
+  },
+  {
+    "name": "PHP",
+    "slug": "php",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Unity",
+    "slug": "unity",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "C#",
+    "slug": "csharp",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Next.js",
+    "slug": "next",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Node.js",
+    "slug": "nodejs",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Storybook",
+    "slug": "storybook",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "MUI",
+    "slug": "mui",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Figma",
+    "slug": "figma",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Jira",
+    "slug": "jira",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "GraphQL",
+    "slug": "graphql",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Git",
+    "slug": "git",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Bootstrap",
+    "slug": "bootstrap",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Sass",
+    "slug": "sass",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Notion",
+    "slug": "notion",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Growth Engineering",
+    "slug": "growth-engineering",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Product Engineering",
+    "slug": "product-engineering",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Web Accessibility",
+    "slug": "web-accessibility",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Lead Generation",
+    "slug": "lead-generation",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Agile",
+    "slug": "agile",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Public Speaking",
+    "slug": "public-speaking",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Project Management",
+    "slug": "project-management",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "SEO",
+    "slug": "seo",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Open Source",
+    "slug": "open-source",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Community Building",
+    "slug": "community-building",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
   }
 ]
