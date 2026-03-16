@@ -59,17 +59,17 @@ function ProjectCard({ project }: { project: ReturnType<typeof getProjects>[numb
           </span>
           {project.status === "active" && (
             <span className="rounded-full bg-green-100 px-2 py-0.5 text-[10px] font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">
-              Active
+              🟢 Active
             </span>
           )}
           {project.status === "abandoned" && (
             <span className="rounded-full bg-red-100 px-2 py-0.5 text-[10px] font-medium text-red-500 dark:bg-red-900/30 dark:text-red-400">
-              Abandoned
+              🔴 Abandoned
             </span>
           )}
           {project.status === "archived" && (
             <span className="rounded-full bg-gray-100 px-2 py-0.5 text-[10px] font-medium text-gray-400 dark:bg-navy-700 dark:text-white/40">
-              Archived
+              📦 Archived
             </span>
           )}
         </div>
