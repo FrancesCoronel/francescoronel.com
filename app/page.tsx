@@ -18,6 +18,7 @@ import { buildMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import Image from "next/image";
 import mentoringData from "@/content/mentoring-sessions.json";
+import { getMultipleRepoStars } from "@/lib/github";
 
 export const metadata: Metadata = buildMetadata({
   path: "/",
@@ -25,7 +26,7 @@ export const metadata: Metadata = buildMetadata({
   ogImage: "/images/og/home.png",
 });
 
-export default function HomePage() {
+export default async function HomePage() {
   const recentPosts = getAllBlogPosts().slice(0, 4);
   const activeProjects = getProjects().filter((p) => p.status === "active").slice(0, 4);
   const allPosts = getAllBlogPosts();
@@ -48,6 +49,12 @@ export default function HomePage() {
       edu.degree.includes("Bachelor") || edu.degree.includes("Master")
   );
   const { categoryImages } = getCategoryMaps();
+
+  // Fetch GitHub stars for active projects
+  const activeProjectRepos = Object.fromEntries(
+    activeProjects.filter((p) => p.github).map((p) => [p.slug, p.github as string])
+  );
+  const activeProjectStars = await getMultipleRepoStars(activeProjectRepos);
 
   return (
     <>
@@ -232,6 +239,12 @@ export default function HomePage() {
                     <p className="mt-0.5 text-sm text-navy-500 dark:text-white/60 line-clamp-2">
                       {project.tagline}
                     </p>
+                    {activeProjectStars[project.slug] != null && (
+                      <span className="mt-1 flex items-center gap-1 text-xs text-navy-400 dark:text-white/40">
+                        <svg className="h-3 w-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        {(activeProjectStars[project.slug] as number).toLocaleString()}
+                      </span>
+                    )}
                   </div>
                   <svg className="mt-1 h-4 w-4 flex-shrink-0 text-horchata-400 group-hover:text-horchata-600 dark:text-navy-500 dark:group-hover:text-horchata-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
                 </Link>

@@ -55,6 +55,11 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // ── Blog posts migrated to testimonials ───────────────
+      { source: "/blog/chris-lanus", destination: "/testimonials/chris-lanus", permanent: true },
+      { source: "/blog/gabriel-rowe", destination: "/testimonials/gabriel-rowe", permanent: true },
+      { source: "/blog/franklin-lee", destination: "/testimonials/franklin-lee", permanent: true },
+      { source: "/blog/angel-riera", destination: "/testimonials/angel-riera", permanent: true },
       // ── Webflow CMS template URL patterns ─────────────────
       {
         source: "/detail_blog/:slug",
@@ -244,6 +249,28 @@ const nextConfig: NextConfig = {
         destination: "/projects/salesforce-day-1-web-campaign",
         permanent: true,
       },
+
+      // ── Blog posts migrated to projects ──────────────────
+      // Slack work projects
+      { source: "/blog/contact-sales-form", destination: "/projects/contact-sales-form", permanent: true },
+      { source: "/blog/slack-interactive-demo-homepage", destination: "/projects/slack-interactive-demo-homepage", permanent: true },
+      { source: "/blog/slack-native-app-homepage", destination: "/projects/slack-native-app-homepage", permanent: true },
+      { source: "/blog/slack-immersive-homepage", destination: "/projects/slack-immersive-homepage", permanent: true },
+      { source: "/blog/slack-simplified-homepage", destination: "/projects/slack-simplified-homepage", permanent: true },
+      { source: "/blog/university-recruiting-page", destination: "/projects/university-recruiting-page", permanent: true },
+      { source: "/blog/new-enterprise-page", destination: "/projects/slack-enterprise-page", permanent: true },
+      { source: "/blog/refreshed-downloads-experience-on-slack-com", destination: "/projects/slack-downloads-page", permanent: true },
+      { source: "/blog/slack-partner-referral-form", destination: "/projects/slack-partner-referral-form", permanent: true },
+      { source: "/blog/consent-updates-on-slack-com-forms", destination: "/projects/slack-com-consent-updates", permanent: true },
+      { source: "/blog/slack-com-webinar-form-registration", destination: "/projects/slack-com-webinar-form", permanent: true },
+      { source: "/blog/lists-feature-launch-files-column", destination: "/projects/slack-lists-files-column", permanent: true },
+      // Byteboard work projects
+      { source: "/blog/skills-report-redesign", destination: "/projects/byteboard-skills-report-redesign", permanent: true },
+      { source: "/blog/client-platform-candidate-actions", destination: "/projects/byteboard-candidate-actions", permanent: true },
+      { source: "/blog/pre-interview-comms-interview-hub-revamp", destination: "/projects/byteboard-interview-hub", permanent: true },
+      { source: "/blog/zero-state-dashboard", destination: "/projects/byteboard-zero-state-dashboard", permanent: true },
+      // Techqueria projects
+      { source: "/blog/techquerias-job-board", destination: "/projects/techqueria-job-board", permanent: true },
 
       // ── Projects moved from /experience to /projects ─────
       { source: "/experience/latina-dev", destination: "/projects/latina-dev", permanent: true },

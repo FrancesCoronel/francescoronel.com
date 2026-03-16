@@ -5,6 +5,13 @@ export const revalidate = 300; // revalidate every 5 minutes
 // Only fetch these specific mentoring event type IDs
 const MENTORING_EVENT_TYPE_IDS = new Set([22726, 995648, 1195730, 995707, 995711]);
 
+interface CalPayment {
+  amount: number;        // in cents
+  currency: string;
+  success: boolean;
+  refunded?: boolean;
+}
+
 interface CalBooking {
   id: number;
   title: string;
@@ -14,6 +21,7 @@ interface CalBooking {
   eventTypeId?: number;
   attendees?: Array<{ name: string; email: string }>;
   responses?: Record<string, { label: string; value: string | string[] }>;
+  payment?: CalPayment[];
 }
 
 function obfuscateName(fullName: string): string {
@@ -84,6 +92,15 @@ export async function GET() {
           }
         }
 
+        // Extract cost from cal.com payment (Stripe integration — amount is in cents)
+        const successfulPayment = b.payment?.find((p) => p.success && !p.refunded);
+        const cost = successfulPayment ? successfulPayment.amount / 100 : undefined;
+
+        // Calculate duration from start/end times
+        const durationMinutes = b.startTime && b.endTime
+          ? Math.round((new Date(b.endTime).getTime() - new Date(b.startTime).getTime()) / 60000)
+          : undefined;
+
         return {
           date: b.startTime.split("T")[0],
           name: obfuscateName(attendeeName),
@@ -91,6 +108,8 @@ export async function GET() {
           eventTypeName: b.title,
           topic: topic ?? null,
           source: "cal.com" as const,
+          ...(cost !== undefined && { cost }),
+          ...(durationMinutes !== undefined && { durationMinutes }),
         };
       })
       .sort((a, b) => b.date.localeCompare(a.date));

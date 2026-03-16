@@ -1,0 +1,52 @@
+[
+  {
+    "name": "In Your Face!",
+    "season": 1,
+    "episode": 6,
+    "guestJudge": "Jay Chandrasekhar",
+    "contestants": ["Kyle Levonian", "Kymberli Talton", "Anabell Pica"],
+    "round1Challenge": "",
+    "round1Prize": "",
+    "round2Challenge": ""
+  },
+  {
+    "name": "First Date to Life Mate",
+    "season": 1,
+    "episode": 1,
+    "guestJudge": "Sylvia",
+    "contestants": ["Heather Creekmore", "Michael Marchesan", "Elena Timman"],
+    "round1Challenge": "Cake Pops",
+    "round1Prize": "",
+    "round2Challenge": "Wedding Cake"
+  },
+  {
+    "name": "Cobra Kai",
+    "season": 7,
+    "episode": 1,
+    "guestJudge": "Mary",
+    "contestants": ["LaJeanne", "Gianni", "Candice"],
+    "round1Challenge": "Snake Pretzel",
+    "round1Prize": "Baking Set",
+    "round2Challenge": "Halloween Dance Fight Cake"
+  },
+  {
+    "name": "Fantasyland",
+    "season": 1,
+    "episode": 2,
+    "guestJudge": "Zac Young",
+    "contestants": [],
+    "round1Challenge": "",
+    "round1Prize": "",
+    "round2Challenge": ""
+  },
+  {
+    "name": "Umbrella Academy",
+    "season": 7,
+    "episode": 3,
+    "guestJudge": "Emmy Raver-Lapan",
+    "contestants": ["Erica", "Tao", "Charles"],
+    "round1Challenge": "Action Figure Donuts",
+    "round1Prize": "",
+    "round2Challenge": ""
+  }
+]

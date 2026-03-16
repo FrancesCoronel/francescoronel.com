@@ -40,20 +40,19 @@ export function OrgLogo({
   const clearbitUrl = getClearbitLogoUrl(orgUrl);
   const resolvedSrc = src ? resolveImageUrl(src) : null;
 
-  const initial: FallbackState = clearbitUrl
-    ? "clearbit"
-    : resolvedSrc
+  // If a stored logo is defined, use it exclusively — no Clearbit.
+  // Only use Clearbit when no stored logo is provided.
+  const initial: FallbackState = resolvedSrc
     ? "original"
+    : clearbitUrl
+    ? "clearbit"
     : "letter";
 
   const [state, setState] = useState<FallbackState>(initial);
 
   function handleError() {
-    if (state === "clearbit" && resolvedSrc) {
-      setState("original");
-    } else {
-      setState("letter");
-    }
+    // Never fall through to Clearbit if a stored logo was defined
+    setState("letter");
   }
 
   if (state === "letter") {
@@ -68,7 +67,7 @@ export function OrgLogo({
     );
   }
 
-  const imgSrc = state === "clearbit" ? clearbitUrl! : resolvedSrc!;
+  const imgSrc = state === "original" ? resolvedSrc! : clearbitUrl!;
 
   return (
     <Image

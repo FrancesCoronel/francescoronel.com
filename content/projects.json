@@ -19,7 +19,8 @@
       "community-building"
     ],
     "status": "active",
-    "organization": "latina-dev"
+    "organization": "latina-dev",
+    "github": "Latina-Dev/latina-dev"
   },
   {
     "title": "Apprenticeships.me",
@@ -39,7 +40,8 @@
       "open-source"
     ],
     "status": "active",
-    "organization": "apprenticeships-me"
+    "organization": "apprenticeships-me",
+    "github": "FrancesCoronel/apprenticeships"
   },
   {
     "title": "Tech Queens Podcast",
@@ -64,7 +66,7 @@
   {
     "title": "Jake the Dog Key Hand",
     "slug": "jake-the-dog-key-hand",
-    "tagline": "Best Device Privacy Hack \u2014 Kent Hack Enough",
+    "tagline": "Best Device Privacy Hack — Kent Hack Enough",
     "logo": "/images/organizations/kent-hack-enough.png",
     "url": "https://devpost.com/software/jake-the-dog-key-hand-security-corp-whdm9v",
     "startDate": "2016-10-01T00:00:00.000Z",
@@ -97,7 +99,7 @@
   {
     "title": "Ammalia",
     "slug": "ammalia-treehacks-2016",
-    "tagline": "Best Use of Dropbox API & Best Social Impact \u2014 TreeHacks 2016",
+    "tagline": "Best Use of Dropbox API & Best Social Impact — TreeHacks 2016",
     "logo": "/images/organizations/stanford-university.png",
     "url": "http://devpost.com/software/ammalia",
     "startDate": "2016-02-01T00:00:00.000Z",
@@ -114,12 +116,12 @@
     "title": "Salesforce Day 1 Web Campaign",
     "slug": "salesforce-day-1-web-campaign",
     "tagline": "Lead developer for Slack's Salesforce acquisition web launch",
-    "logo": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/64ada0d56ff0228892106628_Organization%20Logos%20for%20Webflow.png",
+    "logo": "/images/organizations/slack.png",
     "url": "https://slack.com/about/slack-salesforce",
     "startDate": "2021-06-01T00:00:00.000Z",
     "endDate": "2021-07-31T00:00:00.000Z",
     "category": "work-project",
-    "description": "Lead developer for the Salesforce Day 1 web campaign \u2014 a coordinated set of web updates launched to coincide with Slack's acquisition by Salesforce.",
+    "description": "Lead developer for the Salesforce Day 1 web campaign — a coordinated set of web updates launched to coincide with Slack's acquisition by Salesforce.",
     "highlights": [
       "Led coordinated web updates across Slack.com for Day One of the Salesforce acquisition",
       "Delivered a brand-new landing page showcasing the best of both Slack and Salesforce",
@@ -130,7 +132,8 @@
       "growth-engineering",
       "javascript"
     ],
-    "organization": "slack"
+    "organization": "slack",
+    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/64ada0d56ff0228892106628_Organization%20Logos%20for%20Webflow.png"
   },
   {
     "title": "Nailed It! Netflix Contestant Tracker",
@@ -142,11 +145,11 @@
     "endDate": "2023-06-01T00:00:00.000Z",
     "category": "side-project",
     "status": "abandoned",
-    "description": "A personal data project to catalog every contestant, episode, and result from Netflix's Nailed It! \u2014 the baking competition show where amateur bakers try (and gloriously fail) to recreate elaborate cakes. Never finished, but the data was fun to collect.",
+    "description": "A personal data project to catalog every contestant, episode, and result from Netflix's Nailed It! — the baking competition show where amateur bakers try (and gloriously fail) to recreate elaborate cakes. Never finished, but the data was fun to collect.",
     "highlights": [
       "Tracked 11 contestants across 4 episodes in a structured database",
       "Recorded contestant demographics, round results, and episode metadata",
-      "Never shipped \u2014 but remains a monument to ambitious side projects"
+      "Never shipped — but remains a monument to ambitious side projects"
     ],
     "skills": [
       "data",
@@ -163,16 +166,17 @@
     "endDate": null,
     "category": "open-source",
     "status": "active",
-    "description": "An open-source resource site with tips, templates, and strategies for landing a job in tech \u2014 from resume writing to interview prep to offer negotiation.",
+    "description": "An open-source resource site with tips, templates, and strategies for landing a job in tech — from resume writing to interview prep to offer negotiation.",
     "highlights": [
       "Public GitHub repo with curated job search resources",
       "Covers resume optimization, portfolio tips, interview prep, and salary negotiation",
-      "GitHub: github.com/FrancesCoronel/hire-me \u2014 live at engjobsearch.com"
+      "GitHub: github.com/FrancesCoronel/hire-me — live at engjobsearch.com"
     ],
     "skills": [
       "open-source",
       "career-advice"
-    ]
+    ],
+    "github": "FrancesCoronel/hire-me"
   },
   {
     "title": "TSP.gov Redesign",
@@ -194,7 +198,8 @@
       "web-design",
       "html",
       "css"
-    ]
+    ],
+    "github": "FrancesCoronel/tsp-gov"
   },
   {
     "title": "Diversify Me",
@@ -206,7 +211,7 @@
     "endDate": null,
     "category": "open-source",
     "status": "active",
-    "description": "A community-maintained list of tech conferences that offer diversity travel grants and scholarships \u2014 helping underrepresented engineers attend events they could not otherwise afford.",
+    "description": "A community-maintained list of tech conferences that offer diversity travel grants and scholarships — helping underrepresented engineers attend events they could not otherwise afford.",
     "highlights": [
       "237+ GitHub stars",
       "Covers conferences worldwide offering diversity scholarships and travel grants",
@@ -215,7 +220,8 @@
     "skills": [
       "open-source",
       "community-building"
-    ]
+    ],
+    "github": "FrancesCoronel/diversify-me"
   },
   {
     "title": "NYT Comm",
@@ -227,14 +233,15 @@
     "endDate": "2016-12-31T00:00:00.000Z",
     "category": "side-project",
     "status": "archived",
-    "description": "Product Studio project at Cornell Tech in partnership with The New York Times \u2014 built a product concept around community-driven news.",
+    "description": "Product Studio project at Cornell Tech in partnership with The New York Times — built a product concept around community-driven news.",
     "highlights": [
       "Built during Cornell Tech Product Studio, Fall 2016",
       "122+ GitHub stars",
       "GitHub: github.com/FrancesCoronel/nyt-comm"
     ],
     "skills": [],
-    "organization": "cornell-tech"
+    "organization": "cornell-tech",
+    "github": "FrancesCoronel/nyt-comm"
   },
   {
     "title": "Cover Letter Templates",
@@ -255,7 +262,8 @@
     "skills": [
       "open-source",
       "career-advice"
-    ]
+    ],
+    "github": "FrancesCoronel/cover-letter-templates"
   },
   {
     "title": "Dotfiles",
@@ -267,7 +275,7 @@
     "endDate": null,
     "category": "open-source",
     "status": "active",
-    "description": "Personal dotfiles and laptop setup script \u2014 Alfred preferences, terminal themes, and dev environment config for spinning up a new Mac quickly.",
+    "description": "Personal dotfiles and laptop setup script — Alfred preferences, terminal themes, and dev environment config for spinning up a new Mac quickly.",
     "highlights": [
       "27+ GitHub stars",
       "Covers Alfred, Starship, terminal themes, and dev tooling",
@@ -275,7 +283,8 @@
     ],
     "skills": [
       "open-source"
-    ]
+    ],
+    "github": "FrancesCoronel/dotfiles"
   },
   {
     "title": "Automator Workflows",
@@ -294,6 +303,421 @@
     ],
     "skills": [
       "open-source"
-    ]
+    ],
+    "github": "FrancesCoronel/automator-workflows"
+  },
+  {
+    "title": "Slack.com Contact Sales Form",
+    "slug": "contact-sales-form",
+    "tagline": "Lead developer and maintainer for one of Slack's largest drivers of lead generation",
+    "logo": "/images/organizations/slack.png",
+    "url": "https://slack.com/contact-sales",
+    "startDate": "2018-12-01T00:00:00.000Z",
+    "endDate": "2022-02-01T00:00:00.000Z",
+    "category": "work-project",
+    "status": "archived",
+    "description": "Lead developer and maintainer for the Contact Sales form on Slack.com — one of the largest drivers of lead generation on the site. Built and maintained the form from initial launch through multiple versions, experiments, and the Salesforce acquisition.",
+    "highlights": [
+      "2nd most popular page visited by sales leads creators in 2021",
+      "11K+ unique leads, 600K+ visits, 99.7% success rate on first attempt",
+      "$60M+ in pipeline revenue generated",
+      "~80% of all Slack.com marketing pipeline revenue traced through this form",
+      "Features: honeypot, instantaneous field validation, localization, autofill, smart routing to Salesforce/Zendesk"
+    ],
+    "skills": [
+      "growth-engineering",
+      "javascript",
+      "html",
+      "css"
+    ],
+    "organization": "slack",
+    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f4459086bc3288417ce_Blog-Post-Slack.com-Contact-Sales-Form.png"
+  },
+  {
+    "title": "Slack Interactive Demo Homepage",
+    "slug": "slack-interactive-demo-homepage",
+    "tagline": "Homepage experiment with progressive product UI reveal and interactive demo",
+    "logo": "/images/organizations/slack.png",
+    "url": "https://slack.com",
+    "startDate": "2020-06-01T00:00:00.000Z",
+    "endDate": "2020-09-01T00:00:00.000Z",
+    "category": "work-project",
+    "status": "archived",
+    "description": "Launched a new Slack.com homepage experiment for new prospects that leaned into channels, progressively revealed product UIs, and allowed visitors to experience an interactive demo. Rolled out across all locales and performed significantly stronger for engagement on contact sales form submissions and page link CTAs.",
+    "highlights": [
+      "Launched across all locales for new prospects",
+      "Significantly stronger engagement on contact sales form submissions and page link CTAs",
+      "Featured multi-language variants: English, French, Spanish, German, Japanese"
+    ],
+    "skills": [
+      "growth-engineering",
+      "javascript",
+      "html",
+      "css"
+    ],
+    "organization": "slack"
+  },
+  {
+    "title": "Slack Native App Homepage",
+    "slug": "slack-native-app-homepage",
+    "tagline": "Homepage variant focused on increasing mobile app downloads",
+    "logo": "/images/organizations/slack.png",
+    "url": "https://slack.com",
+    "startDate": "2020-10-01T00:00:00.000Z",
+    "endDate": "2020-10-31T00:00:00.000Z",
+    "category": "work-project",
+    "status": "archived",
+    "description": "Launched a new Slack.com homepage variant targeting mobile users with the goal of increasing downloads of the Slack native app.",
+    "highlights": [
+      "Optimized for mobile app download conversion",
+      "Launched as an A/B experiment targeting mobile prospects"
+    ],
+    "skills": [
+      "growth-engineering",
+      "javascript",
+      "html",
+      "css"
+    ],
+    "organization": "slack",
+    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f3bedd8f5590b160985_Screen-Shot-2020-11-08-at-8.21.09-PM.png"
+  },
+  {
+    "title": "Slack Immersive Homepage",
+    "slug": "slack-immersive-homepage",
+    "tagline": "Bold, animated homepage experiment guiding prospects through a Slack tour",
+    "logo": "/images/organizations/slack.png",
+    "url": "https://slack.com",
+    "startDate": "2021-01-01T00:00:00.000Z",
+    "endDate": "2021-02-01T00:00:00.000Z",
+    "category": "work-project",
+    "status": "archived",
+    "description": "Helped launch an immersive Slack.com homepage experiment that takes prospects through a simple guided tour of Slack with subtle animations and real-life customer examples tailored by business size. Rolled out initially as an experiment for signed-out English users on desktop.",
+    "highlights": [
+      "Used GSAP by GreenSock for smooth animations",
+      "Featured Slack Connect front and center",
+      "Rolled out as a signed-out English desktop experiment"
+    ],
+    "skills": [
+      "growth-engineering",
+      "javascript"
+    ],
+    "organization": "slack"
+  },
+  {
+    "title": "Slack Simplified Homepage",
+    "slug": "slack-simplified-homepage",
+    "tagline": "Simplified Slack.com homepage variant",
+    "logo": "/images/organizations/slack.png",
+    "url": "https://slack.com",
+    "startDate": "2020-09-01T00:00:00.000Z",
+    "endDate": "2020-09-30T00:00:00.000Z",
+    "category": "work-project",
+    "status": "archived",
+    "description": "Launched a simplified version of the Slack.com homepage as an A/B experiment to improve comprehension and reduce cognitive load for new prospects.",
+    "highlights": [
+      "Launched as an A/B experiment against the existing homepage",
+      "Optimized for prospect comprehension and conversion"
+    ],
+    "skills": [
+      "growth-engineering",
+      "javascript",
+      "html",
+      "css"
+    ],
+    "organization": "slack",
+    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f3bdd9044bdc6f5eb4d_Screen-Shot-2020-11-08-at-8.23.37-PM.png"
+  },
+  {
+    "title": "Slack University Recruiting Page",
+    "slug": "university-recruiting-page",
+    "tagline": "Pixel-perfect, mobile-friendly recruiting page for Slack interns",
+    "logo": "/images/organizations/slack.png",
+    "url": "https://slack.com/careers",
+    "startDate": "2018-08-01T00:00:00.000Z",
+    "endDate": "2018-08-31T00:00:00.000Z",
+    "category": "work-project",
+    "status": "archived",
+    "description": "One of my first projects at Slack — collaborated with the university recruiting team to build a pixel-perfect, mobile-friendly recruiting page to attract top intern talent and position Slack as a leading tech company.",
+    "highlights": [
+      "First major project at Slack",
+      "Collaborated closely with the university recruiting team",
+      "Ensured full mobile responsiveness across all viewports"
+    ],
+    "skills": [
+      "html",
+      "javascript",
+      "css"
+    ],
+    "organization": "slack",
+    "image": "https://cdn.prod.website-files.com/63b0b035359373d0cc473202/63b28f433b0afb6c93484557_2018-08-11-university-recruiting-mobile.png"
+  },
+  {
+    "title": "Slack Enterprise Page Redesign",
+    "slug": "slack-enterprise-page",
+    "tagline": "Redesigned enterprise page launched across all Slack.com locales",
+    "logo": "/images/organizations/slack.png",
+    "url": "https://slack.com/enterprise",
+    "startDate": "2020-08-01T00:00:00.000Z",
+    "endDate": "2020-08-31T00:00:00.000Z",
+    "category": "work-project",
+    "status": "archived",
+    "description": "Redesigned Slack's enterprise page and launched it across all locales worldwide. The revamp established parity between the site, sales cycle, customer success, and various prospect and customer touchpoints, targeting a 5% MQL lift on Contact Sales form fills.",
+    "highlights": [
+      "Launched across 9+ locales including English, Spanish, Portuguese, German, French, Japanese",
+      "Targeted 5% MQL lift on Contact Sales form fills",
+      "Established parity across sales cycle and customer success touchpoints"
+    ],
+    "skills": [
+      "growth-engineering",
+      "javascript",
+      "html",
+      "css"
+    ],
+    "organization": "slack",
+    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f4308650bcb04d4c8c1_new-enterprise-page-top-section.png"
+  },
+  {
+    "title": "Slack Downloads Page Refresh",
+    "slug": "slack-downloads-page",
+    "tagline": "Redesigned download pages for Slack apps on Mac, Windows & Linux",
+    "logo": "/images/organizations/slack.png",
+    "url": "https://slack.com/downloads/mac",
+    "startDate": "2021-02-01T00:00:00.000Z",
+    "endDate": "2021-02-28T00:00:00.000Z",
+    "category": "work-project",
+    "status": "archived",
+    "description": "Released refreshed download pages for Slack apps on Mac, Windows, and Linux across all languages and viewports. Initially released as an A/B test to 50% of English desktop users, then rolled out globally. Streamlines the user experience and raises awareness of mobile apps.",
+    "highlights": [
+      "Launched as A/B test to 50% of English desktop users, then rolled out globally",
+      "Covers Mac, Windows, and Linux download pages",
+      "Raises awareness of Slack mobile apps alongside desktop downloads"
+    ],
+    "skills": [
+      "growth-engineering",
+      "javascript",
+      "html",
+      "css"
+    ],
+    "organization": "slack",
+    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f4e3214e82e5ba64df7_Downloads-Page.png"
+  },
+  {
+    "title": "Slack Partner Referral Form",
+    "slug": "slack-partner-referral-form",
+    "tagline": "Self-serve referral form for authorized Slack partners",
+    "logo": "/images/organizations/slack.png",
+    "url": "https://slack.com",
+    "startDate": "2019-07-01T00:00:00.000Z",
+    "endDate": "2019-07-31T00:00:00.000Z",
+    "category": "work-project",
+    "status": "archived",
+    "description": "Built a referral form for authorized Slack partners to submit qualified customer referrals in exchange for commission fees. Integrates closely with Salesforce with strict eligibility requirements for qualified leads.",
+    "highlights": [
+      "Integrates with Salesforce for lead routing",
+      "Strict eligibility: 250+ employees, net new opportunity, decision maker involvement",
+      "Enables passive revenue generation through partner channel"
+    ],
+    "skills": [
+      "growth-engineering",
+      "javascript"
+    ],
+    "organization": "slack",
+    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f441504f936dd103677_Blog-Post-Slack-Partner-Referral-Form.png"
+  },
+  {
+    "title": "Slack.com Consent Updates for Forms",
+    "slug": "slack-com-consent-updates",
+    "tagline": "Reusable privacy consent component across all Slack.com forms",
+    "logo": "/images/organizations/slack.png",
+    "url": "https://slack.com/contact-sales",
+    "startDate": "2021-07-01T00:00:00.000Z",
+    "endDate": "2021-09-01T00:00:00.000Z",
+    "category": "work-project",
+    "status": "archived",
+    "description": "Developed a reusable consent component to capture user privacy and marketing consent across all forms on Slack.com following the Salesforce acquisition. Built in Hack (frontend and backend) with conditional logic based on country-level privacy requirements (GDPR, Japan-specific rules), piping consent data into Salesforce.",
+    "highlights": [
+      "Covers three consent tiers: no prior consent, marketing consent, and data processing consent (Japan)",
+      "Built in Hack with vanilla JavaScript for dynamic field visibility",
+      "Pipes consent data into Salesforce for proper routing",
+      "First deployed on the Contact Sales form, then reused across all forms"
+    ],
+    "skills": [
+      "growth-engineering",
+      "javascript"
+    ],
+    "organization": "slack",
+    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f4f34a33d78c1aa4332_Slack.com-Consent-Updates-for-Forms.png"
+  },
+  {
+    "title": "Slack.com Webinar Form Registration",
+    "slug": "slack-com-webinar-form",
+    "tagline": "White-labeled webinar registration flow integrated into Slack.com",
+    "logo": "/images/organizations/slack.png",
+    "url": "https://slack.com",
+    "startDate": "2022-01-01T00:00:00.000Z",
+    "endDate": "2022-02-28T00:00:00.000Z",
+    "category": "work-project",
+    "status": "archived",
+    "description": "Revamped the webinar registration flow on Slack.com from an external ON24-hosted redirect into a fully white-labeled, in-page experience. Last project at Slack. Integrated the ON24 REST API and AddEvent API for calendar invites.",
+    "highlights": [
+      "Replaced external ON24 redirect with a seamless in-page registration form",
+      "Integrated ON24 REST API and AddEvent API for calendar event links",
+      "Added ability for users to modify their registration after signing up",
+      "Built in Hack and Less"
+    ],
+    "skills": [
+      "growth-engineering",
+      "javascript"
+    ],
+    "organization": "slack",
+    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f49b49fa19df883351c_Slack.com-Webinar-Registration.png"
+  },
+  {
+    "title": "Slack Lists: Files Column",
+    "slug": "slack-lists-files-column",
+    "tagline": "Introduced the File Column type for Slack Lists",
+    "logo": "/images/organizations/slack.png",
+    "url": "https://slack.com/features/task-list",
+    "startDate": "2024-07-08T00:00:00.000Z",
+    "endDate": "2024-08-14T00:00:00.000Z",
+    "category": "work-project",
+    "status": "archived",
+    "description": "Shipped the File Column Type for Slack Lists — allowing users to attach and manage files (images, PDFs, videos, and more) directly within list items across desktop and mobile. Features include multi-file attachment (up to 10), hover previews, lightbox view, recent files menu, and full cross-platform sync.",
+    "highlights": [
+      "Launched to all Pro, Business+, and Enterprise teams by August 14, 2024",
+      "Supports up to 10 files per list item across all major file types",
+      "Works across desktop, iOS, and Android with consistent sync",
+      "Implemented lazy loading for performance and optimized keyboard navigation for accessibility",
+      "Used Slack's internal file API for seamless integration"
+    ],
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "organization": "slack",
+    "image": "https://cdn.prod.website-files.com/63b0b035359373d0cc473202/67145cb1e4e4bac79738b6d5_Blog%20Banner%20design%20(2).png"
+  },
+  {
+    "title": "Byteboard Skills Report Redesign",
+    "slug": "byteboard-skills-report-redesign",
+    "tagline": "Full redesign of Byteboard's core candidate evaluation artifact",
+    "logo": "/images/organizations/byteboard.png",
+    "url": "https://byteboard.dev",
+    "startDate": "2022-04-26T00:00:00.000Z",
+    "endDate": "2022-08-02T00:00:00.000Z",
+    "category": "work-project",
+    "status": "archived",
+    "description": "Led the complete redesign of Byteboard's Skills Report — the primary artifact clients use to evaluate candidates — from scratch. First major project at Byteboard after joining in February 2022. Updated the design system for the client platform in tandem. Technologies: React, Firebase, TypeScript, MUI.",
+    "highlights": [
+      "Skills Report code hadn't been touched in nearly 4 years",
+      "Updated design system and refactored codebase for maintainability",
+      "Goals: increased transparency, better candidate behavior highlights, improved readability",
+      "Received strong client praise: \"The new report scorecard is so much better. Thank you for the work here, it makes my job much easier.\"",
+      "Managed project timeline and milestones using Asana"
+    ],
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "organization": "byteboard"
+  },
+  {
+    "title": "Byteboard Client Platform Candidate Actions",
+    "slug": "byteboard-candidate-actions",
+    "tagline": "Self-serve candidate management tooling for Byteboard clients",
+    "logo": "/images/organizations/byteboard.png",
+    "url": "https://byteboard.dev",
+    "startDate": "2022-08-01T00:00:00.000Z",
+    "endDate": "2022-09-22T00:00:00.000Z",
+    "category": "work-project",
+    "status": "archived",
+    "description": "Developed a full self-serve candidate management experience for Byteboard's client platform. Previously, clients had nearly zero visibility or control once an interview was sent — now they can edit deadlines, send reminders, request support, and view a full interview event timeline.",
+    "highlights": [
+      "Seven conditional views based on candidate invitation state",
+      "New timeline component tracking all events on a candidate",
+      "5+ new user action components (edit deadline, send reminder, request support, etc.)",
+      "Reduced manual workload for the GTM team",
+      "Shared in Byteboard's Q4 2022 product newsletter"
+    ],
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "organization": "byteboard",
+    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f55b49fa146c8833555_Client-Platform-Candidate-Actions.png"
+  },
+  {
+    "title": "Byteboard Pre-Interview Comms & Interview Hub",
+    "slug": "byteboard-interview-hub",
+    "tagline": "Redesigned candidate pre-interview experience to increase motivation and completion rates",
+    "logo": "/images/organizations/byteboard.png",
+    "url": "https://mailchi.mp/byteboard/byteboard-product-newsletter-q4-2022",
+    "startDate": "2022-10-01T00:00:00.000Z",
+    "endDate": "2022-11-10T00:00:00.000Z",
+    "category": "work-project",
+    "status": "archived",
+    "description": "Developed a complete refresh of the candidate pre-interview experience for Byteboard, including an updated invitation email and a new Interview Hub landing page. Goal: reduce time from invite to submission and increase candidate motivation by setting clear expectations and reducing interview anxiety.",
+    "highlights": [
+      "Updated candidate invitation email to set expectations and reduce uncertainty",
+      "New Interview Hub helps candidates see priority steps at a glance",
+      "Includes optional pre-interview breathing exercise to reduce anxiety",
+      "Shared in Byteboard's Q4 2022 product newsletter"
+    ],
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "organization": "byteboard",
+    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/65ee40168dc418fda4797b56_63b28f55e03dc5388f29976f_interview-hub-welcome.png"
+  },
+  {
+    "title": "Byteboard Zero State Dashboard",
+    "slug": "byteboard-zero-state-dashboard",
+    "tagline": "New-client dashboard experience to reduce churn at Byteboard",
+    "logo": "/images/organizations/byteboard.png",
+    "url": "https://byteboard.dev",
+    "startDate": "2022-11-14T00:00:00.000Z",
+    "endDate": "2022-12-06T00:00:00.000Z",
+    "category": "work-project",
+    "status": "archived",
+    "description": "Designed and built a zero state dashboard for Byteboard's client portal to reduce churn by providing immediate value before the first 10 reports are ready. Refactored the dashboard from a 1,000+ line monolithic file into modular, reusable React components. Technologies: React, Redux, TypeScript, MUI.",
+    "highlights": [
+      "Refactored 1,000+ line dashboard into modular components (main page reduced to 200 lines)",
+      "Created reusable DashboardCard, DashboardColumn, DashboardFilterBar components",
+      "Supports multiple dashboard states beyond zero state",
+      "Project ran November 14 to December 6, 2022",
+      "Managed using Asana; designed using Figma with UX designer"
+    ],
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "organization": "byteboard"
+  },
+  {
+    "title": "Techqueria Job Board",
+    "slug": "techqueria-job-board",
+    "tagline": "Built a self-serve job board for Techqueria's community of 50,000+ Latinx tech professionals",
+    "logo": "/images/organizations/techqueria.png",
+    "url": "https://techqueria.org/jobs",
+    "startDate": "2021-01-01T00:00:00.000Z",
+    "endDate": "2021-05-03T00:00:00.000Z",
+    "category": "side-project",
+    "status": "archived",
+    "description": "Built Techqueria's job board as part of a full website migration from Hugo to WordPress, in collaboration with the WordPress Special Projects team. The board enabled self-serve job posting, candidate resume submission, and auto-piping of new posts to the Slack #jobs channel, generating passive revenue for the nonprofit.",
+    "highlights": [
+      "700+ page views in first 28 days after launch",
+      "3,670+ candidates in resume bank by September 2021",
+      "Designed job board icons, managed Slack channel integration",
+      "Used WP Job Manager plugin with custom enhancements",
+      "Airtable resume bank integrated with Slack channel notifications",
+      "Generated new passive revenue stream for Techqueria as a nonprofit"
+    ],
+    "skills": [
+      "community-building",
+      "javascript"
+    ],
+    "organization": "techqueria",
+    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f4f10dd57285e4cc3c1_Techqueria-Job-Board.png"
   }
 ]

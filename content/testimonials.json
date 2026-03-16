@@ -403,5 +403,41 @@
     "quote": "Frances was kind enough to meet with me and provide guidance during my job search. They were thorough and empathetic and provided insightful advice tailored to my situation. This showed me that they were engaged and genuine in their role as a mentor. I am confident that Frances would make a great asset to any team.",
     "image": "",
     "featured": false
+  },
+  {
+    "name": "Chris Lanus",
+    "slug": "chris-lanus",
+    "role": "Front-End Developer",
+    "organization": "Fullstack Academy",
+    "quote": "When I was researching bootcamps, I ended up finding your blog detailing your time and experience at Fullstack. Your blog was a fantastic resource in helping me choose to pursue the bootcamp path, and Fullstack specifically, as I was deciding if/how to make a career transition from high school educator to software developer. Thought you might appreciate knowing that your words were read and were influential!",
+    "image": "",
+    "featured": false
+  },
+  {
+    "name": "Gabriel Rowe",
+    "slug": "gabriel-rowe",
+    "role": "Software Engineer",
+    "organization": "Fullstack Academy",
+    "quote": "I have been following your work ever since I first started considering going to Fullstack Academy a couple of years ago. I just wanted to say thank you for all of the content you post — it has been incredibly helpful!",
+    "image": "",
+    "featured": false
+  },
+  {
+    "name": "Franklin Lee",
+    "slug": "franklin-lee",
+    "role": "Software Engineer",
+    "organization": "Fullstack Academy",
+    "quote": "Your blog helped me make my decision to join Fullstack Academy and I always wanted to say hello!",
+    "image": "",
+    "featured": false
+  },
+  {
+    "name": "Angel Riera",
+    "slug": "angel-riera",
+    "role": "Software Engineer",
+    "organization": "Fullstack Academy",
+    "quote": "I don't know if you remember me but we Skyped a while ago. You were nice enough to let me ask you questions and get advice on the application process for Fullstack. I went into the admissions process with way more confidence and I got in! So thank you, you were extremely helpful.\n\nIt's Angel again and I just graduated from FSA this past Friday. I made it! Again I can't thank you enough for prepping me for the admissions process and all your help since then. This was one of the most challenging and satisfying 3 months I've experienced.",
+    "image": "",
+    "featured": false
   }
 ]

@@ -1,0 +1,134 @@
+[
+  {
+    "name": "Kyle Levonian",
+    "gender": "Male",
+    "race": "White",
+    "occupation": "UPS Supervisor",
+    "round1Loser": false,
+    "round1Winner": false,
+    "round2Winner": false,
+    "episode": "In Your Face!",
+    "notes": ""
+  },
+  {
+    "name": "Anabell Pica",
+    "gender": "Female",
+    "race": "Latinx",
+    "occupation": "Fashion Designer",
+    "round1Loser": false,
+    "round1Winner": false,
+    "round2Winner": true,
+    "episode": "In Your Face!",
+    "notes": ""
+  },
+  {
+    "name": "Kymberli Talton",
+    "gender": "Female",
+    "race": "Black",
+    "occupation": "Accessory Designer",
+    "round1Loser": false,
+    "round1Winner": false,
+    "round2Winner": false,
+    "episode": "In Your Face!",
+    "notes": ""
+  },
+  {
+    "name": "Heather Creekmore",
+    "gender": "Female",
+    "race": "White",
+    "occupation": "Blogger",
+    "round1Loser": false,
+    "round1Winner": true,
+    "round2Winner": false,
+    "episode": "First Date to Life Mate",
+    "notes": ""
+  },
+  {
+    "name": "Michael Marchesan",
+    "gender": "Male",
+    "race": "White",
+    "occupation": "Math Tutor",
+    "round1Loser": false,
+    "round1Winner": false,
+    "round2Winner": false,
+    "episode": "First Date to Life Mate",
+    "notes": ""
+  },
+  {
+    "name": "Elena Timman",
+    "gender": "Female",
+    "race": "White",
+    "occupation": "Social Media Coordinator",
+    "round1Loser": true,
+    "round1Winner": false,
+    "round2Winner": true,
+    "episode": "First Date to Life Mate",
+    "notes": ""
+  },
+  {
+    "name": "LaJeanne",
+    "gender": "Female",
+    "race": "Black",
+    "occupation": "Computer Science Middle School Teacher",
+    "round1Loser": false,
+    "round1Winner": true,
+    "round2Winner": false,
+    "episode": "Cobra Kai",
+    "notes": "Judges said it was first time they had actual cake in 6 years"
+  },
+  {
+    "name": "Gianni",
+    "gender": "Male",
+    "race": "White",
+    "occupation": "Actor",
+    "round1Loser": false,
+    "round1Winner": false,
+    "round2Winner": false,
+    "episode": "Cobra Kai",
+    "notes": ""
+  },
+  {
+    "name": "Candice",
+    "gender": "Female",
+    "race": "White",
+    "occupation": "Animal Hoarder",
+    "round1Loser": false,
+    "round1Winner": false,
+    "round2Winner": false,
+    "episode": "Cobra Kai",
+    "notes": ""
+  },
+  {
+    "name": "Erica",
+    "gender": "Female",
+    "race": "White",
+    "occupation": "Writer",
+    "round1Loser": false,
+    "round1Winner": false,
+    "round2Winner": false,
+    "episode": "Umbrella Academy",
+    "notes": ""
+  },
+  {
+    "name": "Tao",
+    "gender": "Male",
+    "race": "Asian",
+    "occupation": "",
+    "round1Loser": false,
+    "round1Winner": false,
+    "round2Winner": false,
+    "episode": "Umbrella Academy",
+    "notes": ""
+  },
+  {
+    "name": "Charles",
+    "gender": "Male",
+    "race": "White",
+    "occupation": "",
+    "round1Loser": false,
+    "round1Winner": false,
+    "round2Winner": false,
+    "episode": "Umbrella Academy",
+    "notes": ""
+  }
+]

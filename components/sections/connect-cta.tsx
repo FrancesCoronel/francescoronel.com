@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-type CTAVariant = "default" | "speaking" | "mentoring" | "follow" | "hire" | "contact";
+type CTAVariant = "default" | "speaking" | "mentoring" | "follow" | "hire" | "contact" | "projects";
 
 const variants: Record<
   CTAVariant,
@@ -26,7 +26,7 @@ const variants: Record<
     image: "/images/assets/rocket-illustration.webp",
   },
   speaking: {
-    heading: "Want Me to Speak? \uD83C\uDF99\uFE0F",
+    heading: "Want Me to Speak? 🎤",
     description:
       "I\u2019ve spoken at 100+ events on diversity in tech, TypeScript, career growth, and more. Let\u2019s make your next event memorable.",
     primaryLabel: "Book Me to Speak",
@@ -36,7 +36,7 @@ const variants: Record<
     image: "/images/assets/speaking-microphone.png",
   },
   mentoring: {
-    heading: "Level Up Your Career \uD83D\uDE80",
+    heading: "Level Up Your Career 💬",
     description:
       "Whether you\u2019re prepping for interviews, navigating a career transition, or leveling up as an engineer \u2014 I\u2019m here to help.",
     primaryLabel: "Book a Session",
@@ -65,8 +65,18 @@ const variants: Record<
     secondaryHref: "/speaking",
     image: "/images/assets/calendar-connect.webp",
   },
+  projects: {
+    heading: "Let's Build Something 🛠️",
+    description:
+      "Have a project idea, want to collaborate, or interested in open-source work? I'd love to hear about it.",
+    primaryLabel: "Get in Touch",
+    primaryHref: "/contact",
+    secondaryLabel: "View on GitHub",
+    secondaryHref: "https://github.com/FrancesCoronel",
+    image: "/images/assets/rocket-illustration.webp",
+  },
   contact: {
-    heading: "Let\u2019s Connect \uD83D\uDC9C",
+    heading: "Let's Connect 📨",
     description:
       "Have a question, a speaking invite, or just want to say hi? I\u2019d love to hear from you.",
     primaryLabel: "Send a Message",

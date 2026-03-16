@@ -2,7 +2,7 @@
   {
     "name": "Latina Dev",
     "slug": "latina-dev",
-    "logo": "",
+    "logo": "/images/organizations/latina-dev.svg",
     "url": "https://latina.dev/",
     "type": "community",
     "description": "Latina Dev is an open-source directory of Latina software engineers at the student, IC, and leadership levels to increase visibility and access to valuable opportunities."
@@ -10,7 +10,7 @@
   {
     "name": "Apprenticeships.me",
     "slug": "apprenticeships-me",
-    "logo": "https://ph-files.imgix.net/9ef5b2d3-42c1-4e7a-a8af-4f40523fe9a5.png",
+    "logo": "/images/organizations/apprenticeships-me.svg",
     "url": "https://apprenticeships.me/",
     "type": "community",
     "description": "Apprenticeships.me is a directory of apprenticeships in the tech industry to help people find new careers by learning from the industry itself."
@@ -18,7 +18,7 @@
   {
     "name": "Tech Queens",
     "slug": "tech-queens",
-    "logo": "/images/organizations/tech-queens.png",
+    "logo": "/images/organizations/tech-queens.jpg",
     "url": "https://anchor.fm/tech-queens",
     "type": "community",
     "description": "Tech Queens is the first and only podcast that focuses solely on the stories and advice shared by women of color in tech."
@@ -234,7 +234,7 @@
   {
     "name": "CodeNewbie",
     "slug": "codenewbie",
-    "logo": "/images/organizations/codenewbie.png",
+    "logo": "/images/organizations/codenewbie.jpg",
     "url": "https://www.codenewbie.org/",
     "type": "community",
     "description": "CodeNewbie is a supportive online community for aspiring programmers of all levels. It offers resources, discussions, and mentorship opportunities to help beginners kick-start their coding journey and foster a thriving tech community."
@@ -242,7 +242,7 @@
   {
     "name": "CodeNation",
     "slug": "codenation",
-    "logo": "/images/organizations/codenation.png",
+    "logo": "/images/organizations/code-nation.jpeg",
     "url": "https://codenation.org/",
     "type": "community",
     "description": "CodeNation is a leading tech education nonprofit organization that empowers young minds with coding skills. They offer immersive programs and resources to bridge the digital divide and prepare future innovators for the tech industry."
@@ -274,7 +274,7 @@
   {
     "name": "BuiltIn",
     "slug": "builtin",
-    "logo": "/images/organizations/builtin.png",
+    "logo": "",
     "url": "https://builtin.com/",
     "type": "community",
     "description": "BuiltIn is a comprehensive platform connecting tech professionals with innovative companies. It offers a curated job board, in-depth articles, and a supportive community, fostering growth and collaboration in the tech industry."
@@ -394,7 +394,7 @@
   {
     "name": "AAAI",
     "slug": "aaai",
-    "logo": "/images/organizations/aaai.png",
+    "logo": "/images/organizations/aaai-logo.jpg",
     "url": "https://aaai.org/about-aaai/",
     "type": "community",
     "description": "AAAI (Association for the Advancement of Artificial Intelligence) is a prestigious organization at the forefront of AI research and development. It brings together experts from academia, industry, and government to explore cutting-edge advancements in artificial intelligence and cognitive science."

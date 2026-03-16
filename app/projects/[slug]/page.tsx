@@ -6,6 +6,8 @@ import { buildMetadata } from "@/lib/metadata";
 import { getProjectBySlug, getProjects } from "@/lib/content";
 import { resolveImageUrl } from "@/lib/cloudinary";
 import { formatDateRange } from "@/lib/utils";
+import nailedItEpisodes from "@/content/nailed-it-episodes.json";
+import nailedItContestants from "@/content/nailed-it-contestants.json";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -157,6 +159,73 @@ export default async function ProjectPage({ params }: PageProps) {
           >
             View organization page →
           </Link>
+        </div>
+      )}
+
+      {/* Nailed It! Data Tables */}
+      {slug === "nailed-it-tracker" && (
+        <div className="mt-12 space-y-10">
+          {/* Episodes */}
+          <section>
+            <h2 className="mb-4 text-xl font-bold text-navy-900 dark:text-horchata-100">
+              Episodes <span className="text-sm font-normal text-navy-400">({nailedItEpisodes.length})</span>
+            </h2>
+            <div className="overflow-x-auto rounded-xl border border-horchata-200 dark:border-navy-700">
+              <table className="w-full text-sm">
+                <thead className="bg-horchata-50 dark:bg-navy-800">
+                  <tr>
+                    {["Episode Name", "Season", "Ep #", "Guest Judge", "R1 Challenge", "R2 Challenge"].map((h) => (
+                      <th key={h} className="px-4 py-3 text-left font-semibold text-navy-700 dark:text-horchata-300 whitespace-nowrap">{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-horchata-100 dark:divide-navy-700">
+                  {nailedItEpisodes.map((ep) => (
+                    <tr key={ep.name} className="bg-white dark:bg-navy-900">
+                      <td className="px-4 py-3 font-medium text-navy-900 dark:text-horchata-100">{ep.name}</td>
+                      <td className="px-4 py-3 text-navy-600 dark:text-horchata-300">{ep.season}</td>
+                      <td className="px-4 py-3 text-navy-600 dark:text-horchata-300">{ep.episode}</td>
+                      <td className="px-4 py-3 text-navy-600 dark:text-horchata-300">{ep.guestJudge || "—"}</td>
+                      <td className="px-4 py-3 text-navy-600 dark:text-horchata-300">{ep.round1Challenge || "—"}</td>
+                      <td className="px-4 py-3 text-navy-600 dark:text-horchata-300">{ep.round2Challenge || "—"}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          {/* Contestants */}
+          <section>
+            <h2 className="mb-4 text-xl font-bold text-navy-900 dark:text-horchata-100">
+              Contestants <span className="text-sm font-normal text-navy-400">({nailedItContestants.length})</span>
+            </h2>
+            <div className="overflow-x-auto rounded-xl border border-horchata-200 dark:border-navy-700">
+              <table className="w-full text-sm">
+                <thead className="bg-horchata-50 dark:bg-navy-800">
+                  <tr>
+                    {["Name", "Episode", "Occupation", "Gender", "Race", "R1 Winner", "R2 Winner", "Notes"].map((h) => (
+                      <th key={h} className="px-4 py-3 text-left font-semibold text-navy-700 dark:text-horchata-300 whitespace-nowrap">{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-horchata-100 dark:divide-navy-700">
+                  {nailedItContestants.map((c) => (
+                    <tr key={c.name} className="bg-white dark:bg-navy-900">
+                      <td className="px-4 py-3 font-medium text-navy-900 dark:text-horchata-100 whitespace-nowrap">{c.name}</td>
+                      <td className="px-4 py-3 text-navy-600 dark:text-horchata-300 whitespace-nowrap">{c.episode}</td>
+                      <td className="px-4 py-3 text-navy-600 dark:text-horchata-300">{c.occupation || "—"}</td>
+                      <td className="px-4 py-3 text-navy-600 dark:text-horchata-300">{c.gender}</td>
+                      <td className="px-4 py-3 text-navy-600 dark:text-horchata-300">{c.race}</td>
+                      <td className="px-4 py-3 text-center">{c.round1Winner ? "✓" : ""}</td>
+                      <td className="px-4 py-3 text-center">{c.round2Winner ? "✓" : ""}</td>
+                      <td className="px-4 py-3 text-navy-500 dark:text-horchata-400 text-xs">{c.notes || ""}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
         </div>
       )}
 

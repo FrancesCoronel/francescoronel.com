@@ -7,6 +7,7 @@ import { PageHeader } from "@/components/ui/page-header";
 import { ConnectCTA } from "@/components/sections/connect-cta";
 import { resolveImageUrl } from "@/lib/cloudinary";
 import { formatDateRange } from "@/lib/utils";
+import { getMultipleRepoStars } from "@/lib/github";
 
 export const metadata: Metadata = buildMetadata({
   title: "Projects",
@@ -31,7 +32,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   "side-project": "bg-horchata-100 text-horchata-700 dark:bg-navy-700 dark:text-horchata-300",
 };
 
-function ProjectCard({ project }: { project: ReturnType<typeof getProjects>[number] }) {
+function ProjectCard({ project, stars }: { project: ReturnType<typeof getProjects>[number]; stars?: number | null }) {
   return (
     <Link
       href={`/projects/${project.slug}`}
@@ -84,18 +85,32 @@ function ProjectCard({ project }: { project: ReturnType<typeof getProjects>[numb
       <p className="mt-3 flex-1 text-sm text-navy-600 dark:text-white/70">
         {project.description}
       </p>
-      <p className="mt-4 text-xs text-navy-400 dark:text-white/40">
-        {formatDateRange(project.startDate, project.endDate)}
-      </p>
+      <div className="mt-4 flex items-center justify-between gap-2">
+        <p className="text-xs text-navy-400 dark:text-white/40">
+          {formatDateRange(project.startDate, project.endDate)}
+        </p>
+        {stars != null && (
+          <span className="flex items-center gap-1 text-xs font-medium text-navy-400 dark:text-white/40">
+            <svg className="h-3.5 w-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            {stars.toLocaleString()}
+          </span>
+        )}
+      </div>
     </Link>
   );
 }
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
   const projects = getProjects();
   const featuredSlugs = new Set(["latina-dev", "apprenticeships-me", "hire-me"]);
   const featured = projects.filter((p) => featuredSlugs.has(p.slug));
   const rest = projects.filter((p) => !featuredSlugs.has(p.slug));
+
+  // Fetch GitHub stars for all projects that have a github field
+  const reposToFetch = Object.fromEntries(
+    projects.filter((p) => p.github).map((p) => [p.slug, p.github as string])
+  );
+  const starsMap = await getMultipleRepoStars(reposToFetch);
 
   return (
     <>
@@ -127,7 +142,7 @@ export default function ProjectsPage() {
             </h2>
             <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {featured.map((project) => (
-                <ProjectCard key={project.slug} project={project} />
+                <ProjectCard key={project.slug} project={project} stars={starsMap[project.slug]} />
               ))}
             </div>
           </div>
@@ -144,13 +159,13 @@ export default function ProjectsPage() {
           )}
           <div className="grid gap-6 sm:grid-cols-2">
             {rest.map((project) => (
-              <ProjectCard key={project.slug} project={project} />
+              <ProjectCard key={project.slug} project={project} stars={starsMap[project.slug]} />
             ))}
           </div>
         </div>
       </section>
 
-      <ConnectCTA />
+      <ConnectCTA variant="projects" />
     </>
   );
 }
