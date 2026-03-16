@@ -574,7 +574,7 @@ export default function UsesPage() {
         </div>
       </section>
 
-      <ConnectCTA variant="follow" />
+      <ConnectCTA variant="hire" />
     </>
   );
 }
