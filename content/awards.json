@@ -15,7 +15,7 @@
     "date": "2015-05-20",
     "description": "I was selected as one of 3 finalists to represent BrooklynCupcake for the 10,000 Small Businesses Student Challenge through Goldman Sachs.",
     "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/66497855b26682f3f1aa90e2_63b28f305808d30fa45b3532_fwVTITD.jpeg",
-    "url": "https://10ksbapply.com/"
+    "url": "/blog/10000-small-businesses-student-challenge-winner"
   },
   {
     "title": "Featured on ABC7 News for Techqueria Leadership Work",
@@ -105,7 +105,7 @@
     "date": "2016-10-08",
     "description": "Won Best Device Privacy Hack at Kent Hack Enough, a Major League Hacking hackathon at Kent State University.",
     "image": "",
-    "url": ""
+    "url": "/blog/kent-hack-enough"
   },
   {
     "title": "Best Use of Dropbox API & Best Social Impact Prize - TreeHacks",
@@ -114,7 +114,7 @@
     "date": "2017-02-18",
     "description": "Won Best Use of Dropbox API and Best Social Impact Prize at TreeHacks, Stanford University's annual hackathon.",
     "image": "",
-    "url": ""
+    "url": "/blog/treehacks"
   },
   {
     "title": "Women Impact Tech SF",
@@ -123,7 +123,7 @@
     "date": "2019-01-15",
     "description": "Selected for this invite-only event uniting 500 elite female engineers in Silicon Valley with cutting-edge tech companies.",
     "image": "",
-    "url": ""
+    "url": "/blog/women-impact-tech-san-francisco"
   },
   {
     "title": "Diversity Scholarship Recipient — JSConf Hawaiʻi 2019",
@@ -150,7 +150,7 @@
     "date": "2017-07-01",
     "description": "Won third place at an Alexa hackathon hosted by Amazon and Accenture.",
     "image": "",
-    "url": ""
+    "url": "/blog/amazon-alexa-hackathon"
   },
   {
     "title": "James H. and Marilyn H. Simons Graduate Fellowship",
