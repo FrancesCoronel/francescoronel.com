@@ -12,6 +12,7 @@ interface Session {
   topic: string | null;
   source?: string;
   durationMinutes?: number;
+  cost?: number;
 }
 
 // Normalize raw types to 3 display categories
@@ -165,7 +166,7 @@ export function SessionsTable() {
                   style={{ height: `${Math.max(4, heightPct * 0.6)}px` }}
                 />
                 <span className="text-[10px] text-navy-400 dark:text-white/40">
-                  {year.slice(2)}
+                  {year}
                 </span>
               </div>
             );
@@ -223,6 +224,7 @@ export function SessionsTable() {
               <th className="px-4 py-3 font-semibold text-navy-700 dark:text-horchata-200">Name</th>
               <th className="px-4 py-3 font-semibold text-navy-700 dark:text-horchata-200">Topic</th>
               <th className="px-4 py-3 font-semibold text-navy-700 dark:text-horchata-200">Category</th>
+              <th className="px-4 py-3 font-semibold text-navy-700 dark:text-horchata-200">Cost</th>
               <th className="px-4 py-3 font-semibold text-navy-700 dark:text-horchata-200">Source</th>
             </tr>
           </thead>
@@ -242,9 +244,9 @@ export function SessionsTable() {
                   <td className="px-4 py-2.5 font-medium text-navy-900 dark:text-horchata-100">
                     {session.name}
                   </td>
-                  <td className="max-w-xs px-4 py-2.5 text-navy-500 dark:text-white/50">
+                  <td className="px-4 py-2.5 text-navy-500 dark:text-white/50">
                     {topic ? (
-                      <span className="line-clamp-1 cursor-help" title={topic}>{topic}</span>
+                      <span className="block max-w-xs break-words">{topic}</span>
                     ) : (
                       <span>—</span>
                     )}
@@ -253,6 +255,9 @@ export function SessionsTable() {
                     <span className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${CATEGORY_COLORS[category]}`}>
                       {CATEGORY_LABELS[category]}
                     </span>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-2.5 text-sm text-navy-500 dark:text-white/50">
+                    {session.cost != null ? `$${session.cost.toFixed(2)}` : <span className="text-navy-300 dark:text-white/20">—</span>}
                   </td>
                   <td className="px-4 py-2.5">
                     <span className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${SOURCE_COLORS[src] ?? SOURCE_COLORS["calendly"]}`}>
