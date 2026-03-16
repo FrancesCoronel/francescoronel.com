@@ -12,28 +12,9 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const REPO_BASE =
-  "https://github.com/FrancesCoronel/how-frances-codes/blob/main";
+  "https://github.com/FrancesCoronel/francescoronel.com/blob/main/claude";
 
 const tools = [
-  {
-    category: "AI",
-    items: [
-      {
-        name: "Claude",
-        description:
-          "AI coding assistant powering my entire development workflow — code generation, reviews, debugging, and Slack communication",
-        url: "https://claude.ai",
-        image: "/images/tools/claude.png",
-      },
-      {
-        name: "Reclaim.ai",
-        description:
-          "AI-powered calendar management — auto-schedules habits, tasks, and focus time around meetings",
-        url: "https://reclaim.ai",
-        image: "/images/tools/reclaim.png",
-      },
-    ],
-  },
   {
     category: "Development",
     items: [
@@ -70,17 +51,71 @@ const tools = [
         url: "https://slack.com",
         image: "/images/tools/slack.png",
       },
+      {
+        name: "Wispr Flow",
+        description:
+          "AI voice dictation — speak naturally and it transcribes directly into any text field with smart punctuation and formatting",
+        url: "https://wisprflow.ai",
+        icon: "🎙️",
+      },
+      {
+        name: "Grammarly",
+        description:
+          "AI writing assistant — grammar, clarity, tone, and style suggestions across every text field and browser tab",
+        url: "https://grammarly.com",
+        icon: "✍️",
+      },
+    ],
+  },
+  {
+    category: "Finance",
+    items: [
+      {
+        name: "Monarch",
+        description:
+          "Personal finance dashboard — budgets, net worth tracking, transactions, and goals across all accounts in one place",
+        url: "https://monarchmoney.com",
+        icon: "👑",
+      },
     ],
   },
   {
     category: "Productivity",
     items: [
       {
+        name: "Claude",
+        description:
+          "AI coding assistant powering my entire development workflow — code generation, reviews, debugging, and Slack communication",
+        url: "https://claude.ai",
+        image: "/images/tools/claude.png",
+      },
+      {
+        name: "Reclaim.ai",
+        description:
+          "AI-powered calendar management — auto-schedules habits, tasks, and focus time around meetings",
+        url: "https://reclaim.ai",
+        image: "/images/tools/reclaim.png",
+      },
+      {
         name: "Raycast",
         description:
           "Blazing fast launcher replacing Spotlight — extensions for clipboard history, snippets, window management, and app switching",
         url: "https://raycast.com",
         image: "/images/tools/raycast.png",
+      },
+      {
+        name: "Rocket",
+        description:
+          "System-wide emoji picker — type a colon anywhere to search and insert emoji without leaving the keyboard",
+        url: "https://matthewpalmer.net/rocket/",
+        icon: "🚀",
+      },
+      {
+        name: "Flux",
+        description:
+          "Adjusts display color temperature based on time of day — warmer tones at night to reduce eye strain",
+        url: "https://justgetflux.com",
+        icon: "🌅",
       },
       {
         name: "BetterSnapTool",
@@ -150,6 +185,7 @@ const plugins = [
     description: "Review pull requests with structured feedback",
     source: "claude-plugins-official",
     icon: "🔍",
+    url: "https://claude.ai",
   },
   {
     name: "Frontend Design",
@@ -157,6 +193,7 @@ const plugins = [
       "Create distinctive, production-grade frontend interfaces with high design quality",
     source: "claude-plugins-official",
     icon: "🎨",
+    url: "https://claude.ai",
   },
 ];
 
@@ -425,14 +462,17 @@ export default function UsesPage() {
           </h3>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
             {plugins.map((plugin) => (
-              <div
+              <a
                 key={plugin.name}
-                className="rounded-2xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800"
+                href={plugin.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-2xl border border-horchata-200 bg-white p-5 transition-all hover:border-horchata-400 hover:shadow-lg dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
               >
                 <div className="flex items-start gap-4">
                   <span className="mt-0.5 text-2xl">{plugin.icon}</span>
                   <div className="flex-1">
-                    <p className="font-bold text-navy-900 dark:text-horchata-100">
+                    <p className="font-bold text-navy-900 group-hover:text-horchata-600 dark:text-horchata-100">
                       {plugin.name}
                     </p>
                     <p className="mt-1 text-sm text-navy-600 dark:text-white/70">
@@ -444,7 +484,7 @@ export default function UsesPage() {
                         alt=""
                         width={14}
                         height={14}
-                        className="h-3.5 w-3.5 object-contain"
+                        className="h-3.5 w-3.5 rounded object-contain"
                         aria-hidden="true"
                         unoptimized
                       />
@@ -452,7 +492,7 @@ export default function UsesPage() {
                     </span>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
 
@@ -488,7 +528,7 @@ export default function UsesPage() {
                           alt=""
                           width={14}
                           height={14}
-                          className="h-3.5 w-3.5 object-contain"
+                          className="h-3.5 w-3.5 rounded object-contain"
                           aria-hidden="true"
                           unoptimized
                         />

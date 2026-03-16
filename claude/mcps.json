@@ -1,0 +1,49 @@
+[
+  {
+    "name": "Slack",
+    "id": "slack",
+    "description": "Read and send Slack messages, manage canvases, and search channels",
+    "scope": "global",
+    "url": "https://github.com/anthropics/claude-code-slack-mcp",
+    "tools": [
+      "slack_send_message",
+      "slack_schedule_message",
+      "slack_create_canvas",
+      "slack_search_public",
+      "slack_search_channels",
+      "slack_read_channel",
+      "slack_read_thread",
+      "slack_read_canvas",
+      "slack_send_message_draft"
+    ],
+    "permissions": "mcp__slack__*"
+  },
+{
+    "name": "Figma Desktop",
+    "id": "figma-desktop",
+    "description": "Capture screenshots from Figma desktop app",
+    "scope": "project",
+    "url": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Figma-MCP-server",
+    "tools": [
+      "get_screenshot"
+    ],
+    "permissions": "mcp__figma-desktop__*"
+  },
+  {
+    "name": "Puppeteer",
+    "id": "puppeteer",
+    "description": "Control a headless browser — navigate, screenshot, click, type, and evaluate JavaScript",
+    "scope": "global",
+    "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
+    "tools": [
+      "puppeteer_navigate",
+      "puppeteer_screenshot",
+      "puppeteer_click",
+      "puppeteer_fill",
+      "puppeteer_select",
+      "puppeteer_hover",
+      "puppeteer_evaluate"
+    ],
+    "permissions": "mcp__puppeteer__*"
+  }
+]

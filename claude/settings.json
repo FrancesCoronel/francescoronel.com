@@ -1,0 +1,74 @@
+{
+  "env": {
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "1"
+  },
+  "permissions": {
+    "allow": [
+      "Bash",
+      "Read",
+      "Edit",
+      "Write",
+      "MultiEdit",
+      "NotebookEdit",
+      "Grep",
+      "Glob",
+      "WebFetch",
+      "mcp__slack__slack_read_thread",
+      "mcp__slack__slack_send_message_draft",
+      "mcp__slack__slack_send_message",
+      "mcp__slack__slack_schedule_message",
+      "mcp__slack__slack_create_canvas",
+      "mcp__slack__slack_read_canvas",
+      "mcp__slack__slack_search_public",
+      "mcp__slack__slack_search_channels",
+      "mcp__slack__slack_read_channel"
+    ]
+  },
+  "model": "claude-opus-4-6",
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "idle_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e \"display notification \\\"Claude is waiting for your input\\\" with title \\\"Claude Code\\\" sound name \\\"Glass\\\"\""
+          }
+        ]
+      },
+      {
+        "matcher": "permission_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e \"display notification \\\"Claude needs your permission\\\" with title \\\"Claude Code\\\" sound name \\\"Ping\\\"\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e \"display notification \\\"Task complete\\\" with title \\\"Claude Code\\\" sound name \\\"Submarine\\\"\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'INPUT=$(cat); FILE_PATH=$(echo \"$INPUT\" | jq -r \".tool_input.file_path // empty\"); if [[ -z \"$FILE_PATH\" ]]; then exit 0; fi; if [[ \"$FILE_PATH\" == *.ts || \"$FILE_PATH\" == *.tsx || \"$FILE_PATH\" == *.js || \"$FILE_PATH\" == *.jsx ]]; then yarn run prettier --write \"$FILE_PATH\" 2>/dev/null || true; elif [[ \"$FILE_PATH\" == *.md || \"$FILE_PATH\" == *.mdc ]]; then npx markdownlint --fix \"$FILE_PATH\" 2>/dev/null || true; fi'"
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "pr-review-toolkit@claude-plugins-official": true
+  }
+}

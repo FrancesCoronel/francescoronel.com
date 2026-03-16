@@ -10,11 +10,13 @@ import {
   getEducation,
   getCategoryMaps,
   getOrganizationByName,
+  getProjects,
 } from "@/lib/content";
 import { formatDateRange } from "@/lib/utils";
 import { buildMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import Image from "next/image";
+import mentoringData from "@/content/mentoring-sessions.json";
 
 export const metadata: Metadata = buildMetadata({
   path: "/",
@@ -23,7 +25,13 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function HomePage() {
-  const recentPosts = getAllBlogPosts().slice(0, 12);
+  const recentPosts = getAllBlogPosts().slice(0, 4);
+  const activeProjects = getProjects().filter((p) => p.status === "active").slice(0, 4);
+  const allPosts = getAllBlogPosts();
+  const mentoringSessionCount = (mentoringData as { _meta: { totalSessions: number } })._meta.totalSessions;
+  const startYear = 2015;
+  const currentYear = new Date().getFullYear();
+  const yearsOfExperience = currentYear - startYear;
   const experiences = getExperiences().filter((exp) => {
     const t = exp.title.toLowerCase();
     if (t.includes("mentor")) return false;
@@ -69,7 +77,7 @@ export default function HomePage() {
                 Browse all posts →
               </Link>
             </div>
-            <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
               {recentPosts.map((post) => (
                 <BlogCard key={post.slug} post={post} categoryImages={categoryImages} />
               ))}
@@ -177,14 +185,69 @@ export default function HomePage() {
         </section>
       )}
 
+      {/* Active Projects */}
+      {activeProjects.length > 0 && (
+        <section className="py-16 md:py-20">
+          <div className="mx-auto max-w-[var(--container-max)] px-6">
+            <div className="mb-10 flex items-end justify-between">
+              <div>
+                <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+                  Projects
+                </p>
+                <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
+                  Active Projects 🛠️
+                </h2>
+              </div>
+              <Link
+                href="/projects"
+                className="text-sm font-medium text-horchata-800 hover:text-horchata-600 dark:text-horchata-400 dark:hover:text-horchata-200"
+              >
+                All projects →
+              </Link>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {activeProjects.map((project) => (
+                <Link
+                  key={project.slug}
+                  href={`/projects/${project.slug}`}
+                  className="group flex items-start gap-4 rounded-2xl border border-horchata-200 bg-white p-5 transition-all hover:border-horchata-400 hover:shadow-lg dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
+                >
+                  {project.logo ? (
+                    <Image
+                      src={project.logo}
+                      alt={project.title}
+                      width={40}
+                      height={40}
+                      className="mt-0.5 h-10 w-10 flex-shrink-0 rounded-lg object-contain"
+                    />
+                  ) : (
+                    <span className="mt-0.5 text-2xl">🛠️</span>
+                  )}
+                  <div className="flex-1 min-w-0">
+                    <p className="font-bold text-navy-900 group-hover:text-horchata-600 dark:text-horchata-100">
+                      {project.title}
+                    </p>
+                    <p className="mt-0.5 text-sm text-navy-500 dark:text-white/60 line-clamp-2">
+                      {project.tagline}
+                    </p>
+                  </div>
+                  <svg className="mt-1 h-4 w-4 flex-shrink-0 text-horchata-400 group-hover:text-horchata-600 dark:text-navy-500 dark:group-hover:text-horchata-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Stats */}
-      <section className="py-16 md:py-20">
+      <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <div className="grid gap-8 sm:grid-cols-3 text-center">
+          <div className="grid gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { stat: "250+", label: "Engineers mentored" },
+              { stat: `${mentoringSessionCount}+`, label: "Mentoring sessions logged" },
+              { stat: `${allPosts.length}+`, label: "Blog posts published" },
               { stat: "100+", label: "Speaking events since 2015" },
-              { stat: "10+", label: "Years of experience" },
+              { stat: `${yearsOfExperience}+`, label: "Years of experience" },
             ].map(({ stat, label }) => (
               <div key={label}>
                 <p className="text-5xl font-black text-navy-900 dark:text-horchata-100">{stat}</p>

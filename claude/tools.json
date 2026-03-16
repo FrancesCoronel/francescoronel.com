@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Claude",
+    "id": "claude",
+    "category": "AI",
+    "description": "AI coding assistant powering my entire development workflow — code generation, reviews, debugging, and Slack communication",
+    "url": "https://claude.ai",
+    "icon": "🤖"
+  },
+  {
+    "name": "Reclaim.ai",
+    "id": "reclaim",
+    "category": "AI",
+    "description": "AI-powered calendar management — auto-schedules habits, tasks, and focus time around meetings",
+    "url": "https://reclaim.ai",
+    "icon": "📅"
+  },
+  {
+    "name": "Cursor",
+    "id": "cursor",
+    "category": "Development",
+    "description": "AI-native code editor built on VS Code — used alongside Claude Code for visual editing and debugging",
+    "url": "https://cursor.com",
+    "icon": "✏️"
+  },
+  {
+    "name": "Warp",
+    "id": "warp",
+    "category": "Development",
+    "description": "Modern terminal with AI command search, block-based output, and collaborative workflows",
+    "url": "https://warp.dev",
+    "icon": "⚡"
+  },
+  {
+    "name": "GitHub CLI",
+    "id": "github-cli",
+    "category": "Development",
+    "description": "Command-line interface for GitHub — PRs, issues, actions, and code review without leaving the terminal",
+    "url": "https://cli.github.com",
+    "icon": "🐙"
+  },
+  {
+    "name": "GitHub Desktop",
+    "id": "github-desktop",
+    "category": "Development",
+    "description": "Visual Git client for managing branches, diffs, and commits with a clean GUI",
+    "url": "https://desktop.github.com",
+    "icon": "🖥"
+  },
+  {
+    "name": "Slack",
+    "id": "slack",
+    "category": "Communication",
+    "description": "Primary communication platform for team collaboration and messaging",
+    "url": "https://slack.com",
+    "icon": "💜"
+  },
+  {
+    "name": "Raycast",
+    "id": "raycast",
+    "category": "Productivity",
+    "description": "Blazing fast launcher replacing Spotlight — extensions for clipboard history, snippets, window management, and app switching",
+    "url": "https://raycast.com",
+    "icon": "🚀"
+  },
+  {
+    "name": "BetterSnapTool",
+    "id": "bettersnaptool",
+    "category": "Productivity",
+    "description": "Window snapping and management — drag windows to screen edges for instant resizing and tiling",
+    "url": "https://folivora.ai/bettersnaptool",
+    "icon": "🪟"
+  },
+  {
+    "name": "Itsycal",
+    "id": "itsycal",
+    "category": "Productivity",
+    "description": "Tiny menu bar calendar — quick glance at upcoming events without opening Calendar.app",
+    "url": "https://www.mowglii.com/itsycal/",
+    "icon": "📆"
+  },
+  {
+    "name": "Canva",
+    "id": "canva",
+    "category": "Creative",
+    "description": "Design tool for presentations, social graphics, and quick visual assets",
+    "url": "https://canva.com",
+    "icon": "🎨"
+  },
+  {
+    "name": "Gifox",
+    "id": "gifox",
+    "category": "Creative",
+    "description": "Lightweight screen recorder for capturing GIFs — perfect for PR demos and bug reports",
+    "url": "https://gifox.app",
+    "icon": "🎬"
+  }
+]

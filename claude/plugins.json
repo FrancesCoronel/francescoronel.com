@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Code Review",
+    "id": "code-review",
+    "marketplace": "claude-plugins-official",
+    "scope": "global",
+    "description": "Review pull requests with structured feedback",
+    "url": "https://github.com/anthropics/claude-code/tree/main/plugins/code-review"
+  },
+  {
+    "name": "Frontend Design",
+    "id": "frontend-design",
+    "marketplace": "claude-plugins-official",
+    "scope": "global",
+    "description": "Create distinctive, production-grade frontend interfaces with high design quality",
+    "url": "https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design"
+  }
+]

@@ -1,0 +1,178 @@
+[
+  {
+    "title": "Latina Dev",
+    "slug": "latina-dev",
+    "tagline": "Open-source directory of Latina software engineers",
+    "logo": "https://raw.githubusercontent.com/Latina-Dev/latina-dev/main/public/img/logos/logo.png",
+    "url": "https://latina.dev/",
+    "startDate": "2022-10-01T00:00:00.000Z",
+    "endDate": null,
+    "category": "open-source",
+    "description": "Latina Dev is an open-source directory of Latina software engineers at the student, IC, and leadership levels to increase visibility and access to valuable opportunities.",
+    "highlights": [
+      "Built and maintain an open-source directory at latina.dev to increase visibility for Latina software engineers",
+      "Hosts the community on a pro Slack workspace and deploys via Vercel's open source plan",
+      "GitHub: github.com/Latina-Dev/latina-dev"
+    ],
+    "skills": ["open-source", "community-building"],
+    "status": "active",
+    "organization": "latina-dev"
+  },
+  {
+    "title": "Apprenticeships.me",
+    "slug": "apprenticeships-me",
+    "tagline": "Directory of tech apprenticeships",
+    "logo": "https://www.apprenticeships.me/images/logo.svg",
+    "url": "https://apprenticeships.me/",
+    "startDate": "2019-05-01T00:00:00.000Z",
+    "endDate": null,
+    "category": "open-source",
+    "description": "Apprenticeships.me is a directory of apprenticeships in the tech industry. Now you can find a new career by learning from the industry itself.",
+    "highlights": [
+      "Open-source directory helping people find tech apprenticeships",
+      "Listed on Product Hunt: producthunt.com/posts/apprenticeships-me"
+    ],
+    "skills": ["open-source"],
+    "status": "active",
+    "organization": "apprenticeships-me"
+  },
+  {
+    "title": "Tech Queens Podcast",
+    "slug": "tech-queens",
+    "tagline": "The first podcast exclusively for women of color in tech",
+    "logo": "https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/production/podcast_uploaded400/329678/329678-1553374766704-32d92460b4bbb.jpg",
+    "url": "https://anchor.fm/tech-queens",
+    "startDate": "2019-03-01T00:00:00.000Z",
+    "endDate": "2020-03-01T00:00:00.000Z",
+    "category": "podcast",
+    "description": "Tech Queens is the first and only podcast that focuses solely on the stories and advice shared by women of color in tech.",
+    "highlights": [
+      "Founded and hosted Tech Queens, the first podcast exclusively focused on women of color in tech",
+      "Interviewed engineers, designers, and leaders from underrepresented backgrounds across the industry"
+    ],
+    "skills": ["community-building", "public-speaking"],
+    "organization": "tech-queens"
+  },
+  {
+    "title": "Jake the Dog Key Hand",
+    "slug": "jake-the-dog-key-hand",
+    "tagline": "Best Device Privacy Hack — Kent Hack Enough",
+    "logo": "",
+    "url": "https://devpost.com/software/jake-the-dog-key-hand-security-corp-whdm9v",
+    "startDate": "2016-10-01T00:00:00.000Z",
+    "endDate": "2016-10-31T00:00:00.000Z",
+    "category": "hackathon",
+    "description": "Hackathon project built at Kent Hack Enough, which brings hackers from all over the nation together to learn something new, party hard, and create something awesome.",
+    "highlights": [
+      "Won Best Device Privacy Hack at Kent Hack Enough",
+      "Devpost: devpost.com/software/jake-the-dog-key-hand-security-corp-whdm9v"
+    ],
+    "skills": []
+  },
+  {
+    "title": "MEGGS",
+    "slug": "meggs-design-hackathon-2016",
+    "tagline": "My Social Canvas #DesignHackathon 2016",
+    "logo": "",
+    "url": "http://devpost.com/software/meggs",
+    "startDate": "2016-10-01T00:00:00.000Z",
+    "endDate": "2016-10-31T00:00:00.000Z",
+    "category": "hackathon",
+    "description": "The My Social Canvas DesignHackathon brings together students pursuing degrees in fashion, graphic design, technology, and business to increase awareness, participation, and funding for girls in STEM programs.",
+    "highlights": [
+      "Built at My Social Canvas DesignHackathon 2016",
+      "Devpost: devpost.com/software/meggs"
+    ],
+    "skills": [],
+    "organization": "stanford-university"
+  },
+  {
+    "title": "Ammalia",
+    "slug": "ammalia-treehacks-2016",
+    "tagline": "Best Use of Dropbox API & Best Social Impact — TreeHacks 2016",
+    "logo": "/images/organizations/stanford-university.png",
+    "url": "http://devpost.com/software/ammalia",
+    "startDate": "2016-02-01T00:00:00.000Z",
+    "endDate": "2016-02-28T00:00:00.000Z",
+    "category": "hackathon",
+    "description": "TreeHacks is Stanford University's official national hackathon. In 2016, they brought in over 670 hackers with a 50/50 gender ratio, the first major student-run hackathon to do so.",
+    "highlights": [
+      "Won Best Use of Dropbox API and Best Social Impact Prize at TreeHacks 2016",
+      "Devpost: devpost.com/software/ammalia"
+    ],
+    "skills": []
+  },
+  {
+    "title": "Salesforce Day 1 Web Campaign",
+    "slug": "salesforce-day-1-web-campaign",
+    "tagline": "Lead developer for Slack's Salesforce acquisition web launch",
+    "logo": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/64ada0d56ff0228892106628_Organization%20Logos%20for%20Webflow.png",
+    "url": "https://slack.com/about/slack-salesforce",
+    "startDate": "2021-06-01T00:00:00.000Z",
+    "endDate": "2021-07-31T00:00:00.000Z",
+    "category": "work-project",
+    "description": "Lead developer for the Salesforce Day 1 web campaign — a coordinated set of web updates launched to coincide with Slack's acquisition by Salesforce.",
+    "highlights": [
+      "Led coordinated web updates across Slack.com for Day One of the Salesforce acquisition",
+      "Delivered a brand-new landing page showcasing the best of both Slack and Salesforce",
+      "Used Houston to roll out changes across the site simultaneously, including About, Homepage, Sales Solutions, Contact Sales, and legal pages",
+      "Collaborated with Activation and Purchase Experience teams on billing and legal language updates"
+    ],
+    "skills": ["growth-engineering", "javascript"],
+    "organization": "slack"
+  },
+  {
+    "title": "Nailed It! Netflix Contestant Tracker",
+    "slug": "nailed-it-tracker",
+    "tagline": "Unfinished database tracking every contestant from Netflix's Nailed It!",
+    "logo": "",
+    "url": "",
+    "startDate": "2023-01-01T00:00:00.000Z",
+    "endDate": "2023-06-01T00:00:00.000Z",
+    "category": "side-project",
+    "status": "abandoned",
+    "description": "A personal data project to catalog every contestant, episode, and result from Netflix's Nailed It! — the baking competition show where amateur bakers try (and gloriously fail) to recreate elaborate cakes. Never finished, but the data was fun to collect.",
+    "highlights": [
+      "Tracked 11 contestants across 4 episodes in a structured database",
+      "Recorded contestant demographics, round results, and episode metadata",
+      "Never shipped — but remains a monument to ambitious side projects"
+    ],
+    "skills": ["data", "open-source"]
+  },
+  {
+    "title": "Hire Me",
+    "slug": "hire-me",
+    "tagline": "A curated guide to getting an awesome tech gig",
+    "logo": "",
+    "url": "https://www.engjobsearch.com",
+    "startDate": "2018-01-01T00:00:00.000Z",
+    "endDate": null,
+    "category": "open-source",
+    "status": "active",
+    "description": "An open-source resource site with tips, templates, and strategies for landing a job in tech — from resume writing to interview prep to offer negotiation.",
+    "highlights": [
+      "Public GitHub repo with curated job search resources",
+      "Covers resume optimization, portfolio tips, interview prep, and salary negotiation",
+      "GitHub: github.com/FrancesCoronel/hire-me — live at engjobsearch.com"
+    ],
+    "skills": ["open-source", "career-advice"]
+  },
+  {
+    "title": "TSP.gov Redesign",
+    "slug": "tsp-gov-redesign",
+    "tagline": "Redesign of tsp.gov for the HUGE Design School challenge",
+    "logo": "",
+    "url": "http://francescoronel.github.io/tsp-gov",
+    "startDate": "2017-01-01T00:00:00.000Z",
+    "endDate": "2017-06-01T00:00:00.000Z",
+    "category": "side-project",
+    "status": "archived",
+    "description": "A redesign of the Thrift Savings Plan (tsp.gov) website created as part of the HUGE Design School challenge. Focused on improving usability and accessibility for federal employees managing their retirement savings.",
+    "highlights": [
+      "Redesigned tsp.gov for the HUGE Design School challenge",
+      "Focused on improved information architecture and accessibility",
+      "GitHub: github.com/FrancesCoronel/tsp-gov"
+    ],
+    "skills": ["web-design", "html", "css"]
+  }
+]

@@ -17,19 +17,29 @@ export const metadata: Metadata = buildMetadata({
   ogImage: "/images/og/speaking.png",
 });
 
+const upcomingEvents = [
+  {
+    org: "Leland",
+    talk: "Ask Me Anything as a Software Engineering Interviewer",
+    date: "2026-04-01",
+    url: "https://www.joinleland.com/event/ask-me-anything-as-a-software-engineering-interviewer",
+    description: "Live AMA session on Leland — ask me anything about software engineering interviews from the interviewer's perspective.",
+  },
+];
+
 const featuredTalks = [
   { org: "Dreamforce", orgSlug: "dreamforce", talk: "Exploring AI Agents in Slack", postSlug: "speaking-at-dreamforce-exploring-ai-agents-in-slack", image: "/images/speaking/dreamforce.jpg" },
+  { org: "Ripple", orgSlug: "ripple", talk: "Mujeres Fuertes: Honoring Latina Leadership in Tech", postSlug: "mujeres-fuertes-honoring-latina-leadership-in-tech-at-ripples-fireside-chat", image: "" },
+  { org: "Doximity", orgSlug: "doximity", talk: "Women of Color in Engineering Fireside Chat", postSlug: "reflections-on-my-fireside-chat-with-doximity-women-of-color-in-engineering", image: "" },
+  { org: "Techqueria", orgSlug: "techqueria", talk: "Community & Career Growth at Salesforce Tower", postSlug: "celebrating-community-and-career-growth-with-techqueria-at-salesforce-tower", image: "" },
   { org: "Pluralsight", orgSlug: "pluralsight", talk: "The Unsuspecting Beauty & Complexity of Web Forms", postSlug: "the-unsuspecting-beauty-complexity-of-web-forms", image: "/images/speaking/pluralsight.png" },
   { org: "Unidos US", orgSlug: "unidos-us", talk: "Latinas in Tech: Breaking the Digital Ceiling", postSlug: "latinas-in-tech", image: "/images/speaking/unidos-us.jpg" },
   { org: "Asana", orgSlug: "asana", talk: "Real Talk: Diversity in Tech", postSlug: "real-talk-finding-your-voice-in-tech", image: "/images/speaking/asana.png" },
   { org: "Stanford University", orgSlug: "stanford-university", talk: "Future of Work", postSlug: "", image: "" },
   { org: "LTX Fest", orgSlug: "ltx-fest", talk: "Latinx Level Up, LIT Rising Stars", postSlug: "ltx-fest", image: "/images/speaking/ltx-fest.png" },
   { org: "Coro Northern California", orgSlug: "coro-northern-california", talk: "Women in Leadership Alumni Panel", postSlug: "coro-women-in-leadership-alumnae-panel", image: "/images/speaking/coro.jpg" },
-  { org: "Women Who Code", orgSlug: "women-who-code", talk: "TypeScript 101", postSlug: "typescript-101", image: "/images/speaking/women-who-code.png" },
-  { org: "SMASH", orgSlug: "smash", talk: "My Journey in Tech", postSlug: "smash-academy-at-stanford-f0-9f-8e-93", image: "/images/speaking/smash.jpg" },
   { org: "CodeNewbie", orgSlug: "codenewbie", talk: "What are Progressive Web Apps?", postSlug: "codenewbie-podcast-what-are-progressive-web-apps", image: "/images/speaking/codenewbie.png" },
-  { org: "Somos", orgSlug: "somos", talk: "Latinx in the Workplace", postSlug: "latinx-in-the-workplace", image: "/images/speaking/somos.jpg" },
-  { org: "Outco", orgSlug: "outco", talk: "The Future of Diversity & Inclusion in Tech", postSlug: "outco-software-sesh", image: "/images/speaking/outco.png" },
+  { org: "Tech Intersections", orgSlug: "tech-intersections", talk: "Leveling Up on LinkedIn for Software Engineers", postSlug: "leveling-up-on-linkedin-for-software-engineers", image: "" },
 ];
 
 export default function SpeakingPage() {
@@ -85,6 +95,47 @@ export default function SpeakingPage() {
           />
         }
       />
+
+      {/* Upcoming Events */}
+      {upcomingEvents.length > 0 && (
+        <section className="border-y border-horchata-200 bg-horchata-100 py-12 dark:border-navy-700 dark:bg-navy-950">
+          <div className="mx-auto max-w-[var(--container-max)] px-6">
+            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+              Upcoming
+            </p>
+            <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+              Next Up 📅
+            </h2>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {upcomingEvents.map((event) => (
+                <a
+                  key={event.url}
+                  href={event.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col rounded-2xl border border-horchata-300 bg-white p-5 transition-all hover:border-horchata-500 hover:shadow-lg dark:border-navy-600 dark:bg-navy-800 dark:hover:border-navy-500"
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">
+                      Upcoming
+                    </span>
+                    <span className="text-xs text-navy-400 dark:text-white/40">{event.org}</span>
+                  </div>
+                  <p className="mt-3 font-bold text-navy-900 group-hover:text-horchata-600 dark:text-horchata-100">
+                    {event.talk}
+                  </p>
+                  <p className="mt-1 text-sm text-navy-600 dark:text-white/70">
+                    {event.description}
+                  </p>
+                  <p className="mt-3 text-xs font-medium text-horchata-600 dark:text-horchata-400">
+                    Register →
+                  </p>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Featured Talks Grid */}
       <section className="py-16 md:py-20">

@@ -26,9 +26,9 @@ const defaultCards: CtaCard[] = [
     image: "/images/assets/speaking-microphone.png",
   },
   {
-    label: "Portfolio",
+    label: "Projects",
     description: "Browse my projects and work",
-    href: "/portfolio",
+    href: "/projects",
     image: "/images/assets/newsletter-cta.webp",
   },
   {
@@ -41,7 +41,7 @@ const defaultCards: CtaCard[] = [
 
 export function ActionCards({ cards = defaultCards }: ActionCardsProps) {
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid gap-4 sm:grid-cols-2">
       {cards.map((cta) => (
         <Link
           key={cta.label}

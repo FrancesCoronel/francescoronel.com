@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Slack Project Update",
+    "id": "slack-project-update",
+    "command": "/slack-project-update",
+    "description": "Draft weekly or daily project update posts using a structured format with phases, accomplishments, blocking bugs, and next steps",
+    "file": "skills/slack-project-update.md",
+    "category": "Slack"
+  },
+  {
+    "name": "Slack Summary",
+    "id": "slack-summary",
+    "command": "/slack-summary",
+    "description": "Summarize meetings, huddles, threads, or discussions into structured recaps with numbered sections and calls to action",
+    "file": "skills/slack-summary.md",
+    "category": "Slack"
+  },
+  {
+    "name": "Slack Message",
+    "id": "slack-message",
+    "command": "/slack-message",
+    "description": "Draft conversational Slack messages matching Frances's writing style — tone, emoji patterns, formatting, and word choice",
+    "file": "skills/slack-message.md",
+    "category": "Slack"
+  },
+  {
+    "name": "PR Description",
+    "id": "pr-description",
+    "command": "/pr-description",
+    "description": "Create or update pull request descriptions using a structured template with Why, Testing, Before/After demos, Risks, Preview links, and more",
+    "file": "skills/pr-description.md",
+    "category": "Git"
+  },
+  {
+    "name": "Code Review",
+    "id": "code-review",
+    "command": "/code-review",
+    "description": "Review a PR for code quality, type safety, CSS issues, and test coverage — outputs findings in chat, never posts to GitHub",
+    "file": "skills/code-review.md",
+    "category": "Git"
+  },
+  {
+    "name": "Slack Draft",
+    "id": "slack-draft",
+    "command": "/slack-draft",
+    "description": "Draft or send a Slack message — asks whether to use your text or draft from scratch, formats with proper Slack mrkdwn, previews before sending",
+    "file": "skills/slack-draft.md",
+    "category": "Slack"
+  },
+  {
+    "name": "Tone & Voice",
+    "id": "tone-voice",
+    "command": "/tone-voice",
+    "description": "Frances's unified writing style — applies across Slack, GitHub, and docs with platform-specific formatting and consistent voice",
+    "file": "skills/tone-voice.md",
+    "category": "Writing"
+  }
+]

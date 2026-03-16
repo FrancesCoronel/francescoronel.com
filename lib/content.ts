@@ -13,6 +13,7 @@ import type {
   Education,
   Category,
   Tag,
+  Project,
 } from "./types";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
@@ -28,13 +29,15 @@ export function getBlogSlugs(): string[] {
     .map((f) => f.replace(/\.mdx$/, ""));
 }
 
-export function getBlogPost(slug: string): BlogPost | null {
+export function getBlogPost(slug: string, { includeDrafts = false } = {}): BlogPost | null {
   const filePath = path.join(BLOG_DIR, `${slug}.mdx`);
   if (!fs.existsSync(filePath)) return null;
 
   const raw = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(raw);
   const frontmatter = data as BlogPostFrontmatter;
+
+  if (frontmatter.draft && !includeDrafts) return null;
   const stats = readingTime(content);
 
   return {
@@ -110,6 +113,16 @@ export function getExperiences(): WorkExperience[] {
     (a, b) =>
       new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
   );
+}
+
+export function getProjects(): Project[] {
+  return loadJSON<Project>("projects.json").sort(
+    (a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
+  );
+}
+
+export function getProjectBySlug(slug: string): Project | undefined {
+  return getProjects().find((p) => p.slug === slug);
 }
 
 export function getEducation(): Education[] {

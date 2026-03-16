@@ -44,7 +44,12 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "www.scdn.co" },
       { protocol: "https", hostname: "www.themebeta.com" },
       { protocol: "https", hostname: "tf-assets-prod.s3.amazonaws.com" },
+      { protocol: "https", hostname: "s3-us-west-2.amazonaws.com" },
       { protocol: "https", hostname: "knightfoundation.imgix.net" },
+      { protocol: "https", hostname: "ph-files.imgix.net" },
+      { protocol: "https", hostname: "raw.githubusercontent.com" },
+      { protocol: "https", hostname: "logo.clearbit.com" },
+      { protocol: "https", hostname: "www.apprenticeships.me" },
       { protocol: "https", hostname: "static1.squarespace.com" },
     ],
   },
@@ -231,11 +236,23 @@ const nextConfig: NextConfig = {
         destination: "/mentoring",
         permanent: true,
       },
+      // ── Portfolio → Projects ─────────────────────────────
+      { source: "/portfolio", destination: "/projects", permanent: true },
+      { source: "/blog/hire-me", destination: "/projects/hire-me", permanent: true },
       {
-        source: "/portfolio",
-        destination: "/blog",
+        source: "/blog/salesforce-day-1-web-campaign",
+        destination: "/projects/salesforce-day-1-web-campaign",
         permanent: true,
       },
+
+      // ── Projects moved from /experience to /projects ─────
+      { source: "/experience/latina-dev", destination: "/projects/latina-dev", permanent: true },
+      { source: "/experience/apprenticeships-me", destination: "/projects/apprenticeships-me", permanent: true },
+      { source: "/experience/tech-queens", destination: "/projects/tech-queens", permanent: true },
+      { source: "/experience/jake-the-dog-key-hand", destination: "/projects/jake-the-dog-key-hand", permanent: true },
+      { source: "/experience/meggs-design-hackathon-2016", destination: "/projects/meggs-design-hackathon-2016", permanent: true },
+      { source: "/experience/ammalia-treehacks-2016", destination: "/projects/ammalia-treehacks-2016", permanent: true },
+      { source: "/experience/salesforce-day-1-web-campaign", destination: "/projects/salesforce-day-1-web-campaign", permanent: true },
 
       // ── Experience/Education blog posts → detail pages ────
       {

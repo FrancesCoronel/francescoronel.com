@@ -28,7 +28,7 @@ export function Timeline({ items, dark }: { items: TimelineItem[]; dark?: boolea
                 alt=""
                 width={48}
                 height={48}
-                className="h-full w-full object-contain p-1.5"
+                className="h-full w-full rounded-full object-contain p-1.5"
               />
             ) : (
               <div className={`flex h-full w-full items-center justify-center text-sm font-bold ${dark ? "text-horchata-400" : "text-horchata-600 dark:text-horchata-400"}`}>

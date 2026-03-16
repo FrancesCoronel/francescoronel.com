@@ -34,76 +34,67 @@ export default function NowPage() {
         }
       />
 
-      <section className="bg-horchata-100 py-16 md:py-20 dark:bg-navy-800">
-        <div className="mx-auto max-w-3xl px-6 space-y-12">
+      <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
+        <div className="mx-auto max-w-[var(--container-max)] px-6">
+          <div className="grid gap-8 md:grid-cols-3">
 
-          {/* Work */}
-          <div>
-            <h2 className="text-2xl font-bold text-navy-900 dark:text-horchata-100">
-              Work 💼
-            </h2>
-            <ul className="mt-4 space-y-3 text-navy-700 dark:text-horchata-200">
-              <li>
-                Currently on the <strong>Sidebar Systems team at Slack</strong> (within Messaging), focused on building the best-in-class messaging platform — notifications, sidebar architecture, and the systems that power how teams communicate every day.
-              </li>
-              <li>
-                Continuing to mentor engineers through <strong>Formation</strong> — behavioral mock interviews and seed development sessions.
-              </li>
-            </ul>
+            {/* Work */}
+            <div>
+              <h2 className="text-xl font-bold text-navy-900 dark:text-horchata-100">
+                Work 💼
+              </h2>
+              <ul className="mt-4 space-y-3 text-sm text-navy-700 dark:text-horchata-200">
+                <li>
+                  On the <strong>Sidebar Systems team at Slack</strong> — notifications, sidebar architecture, and the systems that power how teams communicate.
+                </li>
+                <li>
+                  Mentoring engineers through <strong>Formation</strong> — behavioral mock interviews and seed development sessions.
+                </li>
+              </ul>
+            </div>
+
+            {/* Side Projects */}
+            <div>
+              <h2 className="text-xl font-bold text-navy-900 dark:text-horchata-100">
+                Side Projects 🛠️
+              </h2>
+              <ul className="mt-4 space-y-3 text-sm text-navy-700 dark:text-horchata-200">
+                <li>
+                  Rebuilding <strong>this website</strong> from the ground up — migrating from Webflow to a fully self-owned Next.js stack.
+                </li>
+                <li>
+                  Going deep on <strong>AI-assisted development workflows</strong> — integrating Claude Code and MCP servers into my daily engineering practice.
+                </li>
+              </ul>
+            </div>
+
+            {/* Personal */}
+            <div>
+              <h2 className="text-xl font-bold text-navy-900 dark:text-horchata-100">
+                Personal 🌱
+              </h2>
+              <ul className="mt-4 space-y-3 text-sm text-navy-700 dark:text-horchata-200">
+                <li>
+                  Spending free time with my two corgis <strong>Luna and Sueño</strong> 🐾 and my boyfriend{" "}
+                  <a
+                    href="https://www.linkedin.com/in/andrew-rodriguez/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-horchata-300 underline-offset-2 transition-colors hover:text-horchata-600 dark:decoration-navy-500 dark:hover:text-horchata-400"
+                  >
+                    Andrew
+                  </a>{" "}
+                  — living in the East Bay.
+                </li>
+                <li>
+                  Pursuing my <strong>PADI Master Scuba Diver certification</strong> 🤿 — less than 2% of divers reach this level. ~100 dives logged and counting.
+                </li>
+              </ul>
+            </div>
+
           </div>
 
-          {/* Learning */}
-          <div>
-            <h2 className="text-2xl font-bold text-navy-900 dark:text-horchata-100">
-              Learning 📚
-            </h2>
-            <ul className="mt-4 space-y-3 text-navy-700 dark:text-horchata-200">
-              <li>
-                Pursuing my <strong>PADI Master Scuba Diver certification</strong> 🤿 — less than 2% of divers ever reach this level. I first fell in love with scuba in February 2023 when I spotted my first Garibaldi fish amongst the sea kelp in Catalina. Since then I&apos;ve logged ~100 dives and earned my Open Water, Advanced, and Rescue certs. The Master Diver course is a long journey but I&apos;m so excited for the challenge.
-              </li>
-              <li>
-                Going deep on <strong>AI-assisted development workflows</strong> — integrating Claude Code and MCP servers into my daily engineering practice.
-              </li>
-            </ul>
-          </div>
-
-          {/* Building */}
-          <div>
-            <h2 className="text-2xl font-bold text-navy-900 dark:text-horchata-100">
-              Building 🛠️
-            </h2>
-            <ul className="mt-4 space-y-3 text-navy-700 dark:text-horchata-200">
-              <li>
-                Rebuilding <strong>this website</strong> from the ground up — migrating from Webflow to a fully self-owned Next.js stack with full data ownership.
-              </li>
-            </ul>
-          </div>
-
-          {/* Life */}
-          <div>
-            <h2 className="text-2xl font-bold text-navy-900 dark:text-horchata-100">
-              Life 🌱
-            </h2>
-            <ul className="mt-4 space-y-3 text-navy-700 dark:text-horchata-200">
-              <li>
-                Spending most of my free time with my two corgis <strong>Luna and Sueño</strong> 🐾 and my boyfriend{" "}
-                <a
-                  href="https://www.linkedin.com/in/andrew-rodriguez/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline decoration-horchata-300 underline-offset-2 transition-colors hover:text-horchata-600 dark:decoration-navy-500 dark:hover:text-horchata-400"
-                >
-                  Andrew
-                </a>{" "}
-                — living in the East Bay.
-              </li>
-              <li>
-                Honoring my father&apos;s legacy and spending quality time with family.
-              </li>
-            </ul>
-          </div>
-
-          <p className="text-sm text-navy-400 dark:text-horchata-500">
+          <p className="mt-12 text-sm text-navy-400 dark:text-horchata-500">
             This is a{" "}
             <a
               href="https://nownownow.com/about"

@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { getTestimonials } from "@/lib/content";
-import mentees from "@/content/mentees.json";
 import { TestimonialsPreview } from "@/components/sections/testimonials-preview";
 import { buildMetadata } from "@/lib/metadata";
 import { CalEmbed } from "@/components/ui/cal-embed";
 import { PageHeader } from "@/components/ui/page-header";
 import { ConnectCTA } from "@/components/sections/connect-cta";
+import { MentoringSessionsFeed } from "@/components/ui/mentoring-sessions-feed";
 
 export const metadata: Metadata = buildMetadata({
   title: "Mentoring",
@@ -52,15 +51,15 @@ const pricingTiers = [
 ];
 
 const helpTopics = [
-  "Expert advice from a senior engineer with 10+ years in SaaS",
-  "Job search strategy — differentiate yourself and land interviews",
-  "Self-advocacy strategies for women and underrepresented engineers",
-  "Behavioral interview practice with real-time feedback",
-  "Salary negotiation coaching",
-  "Navigating promotion cycles",
-  "Open source contribution guidance",
-  "Resume and LinkedIn optimization",
-  "Conference talk preparation",
+  { emoji: "🎯", text: "Land your next role — job search strategy, resume reviews, and referral outreach that actually converts" },
+  { emoji: "🎤", text: "Ace the interview — behavioral and technical mock interviews with actionable feedback" },
+  { emoji: "💰", text: "Negotiate confidently — know your market value and make the ask" },
+  { emoji: "📈", text: "Get promoted — build your case, document your impact, and navigate the cycle" },
+  { emoji: "🦾", text: "Advocate for yourself — practical strategies for women and underrepresented engineers" },
+  { emoji: "📝", text: "Stand out on paper — LinkedIn, resume, and portfolio that open doors" },
+  { emoji: "🌐", text: "Break into open source — find projects, ship your first PR, and build in public" },
+  { emoji: "🎙️", text: "Get on stage — pitch, prep, and deliver a conference talk" },
+  { emoji: "🔄", text: "Pivot into tech — bootcamp-to-career transitions and non-traditional path navigation" },
 ];
 
 const expertiseAreas = [
@@ -116,8 +115,8 @@ export default function MentoringPage() {
       {/* Hero */}
       <PageHeader
         label="1-on-1 Coaching"
-        heading="Mentoring 🚀"
-        description="I provide guidance for current and aspiring software engineers. With 10+ years of full-time SaaS experience, I can help whether you're considering a bootcamp, prepping for interviews, or navigating your next career move."
+        heading="Mentoring 💬"
+        description="820+ sessions in. I help software engineers land roles, get promoted, negotiate better offers, and build careers they're proud of — with real talk from someone who's been in the industry for 10+ years."
         aside={
           <Image
             src="/images/assets/speaking-hero-image.webp"
@@ -131,17 +130,17 @@ export default function MentoringPage() {
       >
         <div className="mt-6 rounded-xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800">
           <p className="text-sm font-bold text-navy-700 dark:text-horchata-200">
-            Before our call, please:
+            Get the most out of our time:
           </p>
           <ul className="mt-2 space-y-1 text-sm text-navy-600 dark:text-white/70">
-            <li>📝 Prepare your discussion topics beforehand</li>
-            <li>⏰ Arrive punctually to maximize our time together</li>
+            <li>📝 Come with a specific goal or question in mind</li>
+            <li>⏰ Show up on time — we'll hit the ground running</li>
           </ul>
         </div>
       </PageHeader>
 
-      {/* Pricing Tiers */}
-      <section className="bg-horchata-100 py-16 md:py-20 dark:bg-navy-800">
+      {/* Pricing Tiers — dark */}
+      <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <h2 className="text-center text-2xl font-bold text-navy-900 dark:text-horchata-100">
             Pricing
@@ -185,7 +184,7 @@ export default function MentoringPage() {
                 <svg className="mt-4 h-5 w-5 self-end text-horchata-400 transition-colors group-hover:text-navy-900 dark:text-navy-500 dark:group-hover:text-horchata-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
                 {/* Memoji accent on the last card */}
                 {i === pricingTiers.length - 1 && (
-                  <div className="pointer-events-none absolute -bottom-4 -right-4 hidden lg:block">
+                  <div className="pointer-events-none absolute -right-4 -top-4 hidden lg:block">
                     <Image
                       src="/images/assets/frances-memoji-nice-job.png"
                       alt=""
@@ -202,8 +201,8 @@ export default function MentoringPage() {
         </div>
       </section>
 
-      {/* Calendar Embed */}
-      <section className="border-y border-horchata-200 bg-white py-16 dark:border-navy-700 dark:bg-navy-800/50">
+      {/* Calendar Embed — light */}
+      <section className="bg-horchata-50 py-16 dark:bg-navy-900">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
             Availability
@@ -214,43 +213,47 @@ export default function MentoringPage() {
           <div className="mt-8">
             <CalEmbed />
           </div>
+          <div className="mt-6">
+            <a
+              href="https://cal.com/francescoronel"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-horchata-300 px-6 py-2.5 text-sm font-medium text-navy-700 transition-colors hover:border-horchata-500 hover:bg-horchata-50 dark:border-navy-600 dark:text-horchata-200 dark:hover:bg-navy-800"
+            >
+              Book on cal.com
+              <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* How I Can Help */}
+      {/* How I Can Help — dark */}
       <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4">
             <div>
               <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
                 Mentoring
               </p>
-              <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">How I Can Help</h2>
+              <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">How I Can Help 🚀</h2>
             </div>
-            <Image
-              src="/images/assets/rocket-illustration.webp"
-              alt="Rocket illustration"
-              width={140}
-              height={140}
-              className="hidden h-[110px] w-[110px] flex-shrink-0 object-contain drop-shadow-lg sm:block md:h-[130px] md:w-[130px]"
-            />
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {helpTopics.map((topic) => (
               <div
-                key={topic}
+                key={topic.text}
                 className="flex items-start gap-3 rounded-xl border border-horchata-200 bg-white p-4 dark:border-navy-700 dark:bg-navy-800"
               >
-                <span className="mt-0.5 text-horchata-500 dark:text-horchata-400">✓</span>
-                <p className="text-sm text-navy-700 dark:text-horchata-200">{topic}</p>
+                <span className="text-xl leading-none">{topic.emoji}</span>
+                <p className="text-sm text-navy-700 dark:text-horchata-200">{topic.text}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Topic Expertise */}
-      <section className="py-16 md:py-20">
+      {/* Topic Expertise — light */}
+      <section className="bg-horchata-50 py-16 md:py-20 dark:bg-navy-900">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <h2 className="text-2xl font-bold text-navy-900 dark:text-horchata-100">
             Areas of Expertise 🎯
@@ -278,57 +281,18 @@ export default function MentoringPage() {
         </div>
       </section>
 
-      {/* People I've Mentored */}
-      <section className="bg-horchata-100 py-16 md:py-20 dark:bg-navy-800">
-        <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
-            Track Record
-          </p>
-          <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
-            People I&apos;ve Mentored 🤝
-          </h2>
-          <p className="mt-2 text-sm text-navy-600 dark:text-white/70">
-            I&apos;ve mentored 250+ engineers since 2016 — here are some of the people I&apos;ve had the pleasure of working with.
-          </p>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {mentees.map((mentee) => (
-              <div
-                key={mentee.slug}
-                className="flex items-start gap-3 rounded-xl border border-horchata-200 bg-white p-4 dark:border-navy-700"
-              >
-                <div className="min-w-0 flex-1">
-                  {mentee.linkedin ? (
-                    <a
-                      href={mentee.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm font-semibold text-navy-900 underline decoration-horchata-300 underline-offset-2 hover:text-horchata-600 dark:text-horchata-100 dark:decoration-navy-500 dark:hover:text-horchata-400"
-                    >
-                      {mentee.name}
-                    </a>
-                  ) : (
-                    <span className="text-sm font-semibold text-navy-900 dark:text-horchata-100">
-                      {mentee.name}
-                    </span>
-                  )}
-                  <p className="mt-0.5 text-xs text-navy-500 dark:text-white/60">
-                    {mentee.note}
-                  </p>
-                </div>
-                <span className="shrink-0 text-xs text-navy-400 dark:text-white/40">
-                  {new Date(mentee.date).getFullYear()}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Mentoring Sessions Feed */}
+      <MentoringSessionsFeed />
 
-      {/* Testimonials */}
-      <TestimonialsPreview testimonials={testimonials} heading="What Mentees Say" />
+      {/* Testimonials — light */}
+      <TestimonialsPreview
+        testimonials={testimonials}
+        heading="What Mentees Say"
+        sectionClassName="border-y border-horchata-200 bg-horchata-50 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-900"
+      />
 
-      {/* Refund Policy */}
-      <section className="py-16">
+      {/* Refund Policy — dark */}
+      <section className="border-y border-horchata-200 bg-horchata-100 py-16 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <h2 className="text-xl font-bold text-navy-900 dark:text-horchata-100">
             Refund Policy 📋

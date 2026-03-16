@@ -26,6 +26,7 @@ export interface BlogPostFrontmatter {
   skills: string[];
   externalUrl?: string;
   source?: "webflow" | "wordpress";
+  draft?: boolean;
 }
 
 export interface Testimonial {
@@ -77,6 +78,7 @@ export interface WorkExperience {
   description: string;
   highlights: string[];
   skills: string[];
+  type?: "employment" | "project";
 }
 
 export interface Education {
@@ -107,6 +109,23 @@ export interface Tag {
   name: string;
   slug: string;
   count?: number;
+}
+
+export interface Project {
+  title: string;
+  slug: string;
+  tagline: string;
+  description: string;
+  highlights: string[];
+  skills: string[];
+  logo: string;
+  url: string;
+  startDate: string;
+  endDate: string | null;
+  category: "open-source" | "podcast" | "hackathon" | "work-project" | "side-project";
+  status?: "active" | "complete" | "abandoned" | "archived";
+  blogSlug?: string;
+  organization?: string;
 }
 
 export interface SiteMetadata {
