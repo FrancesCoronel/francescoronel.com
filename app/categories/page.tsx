@@ -57,7 +57,7 @@ export default function CategoriesPage() {
                     </p>
                   )}
                 </div>
-                <span className="ml-4 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-horchata-400 text-sm font-medium text-navy-900 dark:bg-navy-500 dark:text-white">
+                <span className="ml-4 inline-flex min-w-[2rem] shrink-0 items-center justify-center rounded-full bg-horchata-400 px-2 py-1 text-sm font-medium text-navy-900 dark:bg-navy-500 dark:text-white">
                   {cat.count}
                 </span>
               </Link>

@@ -182,7 +182,7 @@ export default function AboutPage() {
   const displayTestimonials =
     testimonials.length > 0 ? testimonials : getTestimonials().slice(0, 3);
 
-  const experienceItems = experiences.map((exp) => {
+  const experienceItems = experiences.filter((exp) => exp.type !== "project").map((exp) => {
     const org = getOrganizationByName(exp.company);
     return {
       title: exp.title,

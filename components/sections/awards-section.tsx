@@ -21,7 +21,7 @@ function AwardCard({
   blogSlug?: string;
 }) {
   const isExternal = !blogSlug && !!award.url;
-  const href = blogSlug ? `/blog/${blogSlug}` : award.url || "#";
+  const href = blogSlug ? `/blog/${blogSlug}` : award.url || null;
 
   const inner = (
     <>
@@ -47,8 +47,14 @@ function AwardCard({
     </>
   );
 
-  const className =
+  const linkedClassName =
     "group rounded-2xl border border-horchata-200 bg-white p-5 transition-shadow hover:shadow-lg dark:border-navy-700 dark:bg-navy-800";
+  const plainClassName =
+    "rounded-2xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800";
+
+  if (!href) {
+    return <div className={plainClassName}>{inner}</div>;
+  }
 
   if (isExternal) {
     return (
@@ -56,7 +62,7 @@ function AwardCard({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={className}
+        className={linkedClassName}
       >
         {inner}
       </a>
@@ -64,7 +70,7 @@ function AwardCard({
   }
 
   return (
-    <Link href={href} className={className}>
+    <Link href={href} className={linkedClassName}>
       {inner}
     </Link>
   );

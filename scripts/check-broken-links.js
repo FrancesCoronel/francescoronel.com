@@ -39,6 +39,9 @@ const education = JSON.parse(
 const awards = JSON.parse(
   fs.readFileSync(path.join(contentDir, "awards.json"), "utf8")
 );
+const projects = JSON.parse(
+  fs.readFileSync(path.join(contentDir, "projects.json"), "utf8")
+);
 
 const orgSlugs = new Set(orgs.map((o) => o.slug));
 const categorySlugs = new Set(categories.map((c) => c.slug));
@@ -57,6 +60,7 @@ const validRoutes = new Set([
   "/contact",
   "/speaking",
   "/mentoring",
+  "/mentoring/sessions",
   "/testimonials",
   "/organizations",
   "/categories",
@@ -79,6 +83,8 @@ for (const slug of tagSlugs) validRoutes.add(`/tags/${slug}`);
 for (const exp of experiences) validRoutes.add(`/experience/${exp.slug}`);
 for (const edu of education) validRoutes.add(`/education/${edu.slug}`);
 for (const award of awards) validRoutes.add(`/awards/${award.slug}`);
+for (const project of projects) validRoutes.add(`/projects/${project.slug}`);
+validRoutes.add("/projects");
 
 const errors = [];
 

@@ -68,7 +68,7 @@ export function BlogListClient({
           >
             All ({posts.length})
           </button>
-          {categories.map((cat) => (
+          {categories.filter((cat) => (cat.count ?? 0) > 0).map((cat) => (
             <button
               key={cat.slug}
               onClick={() => handleCategoryClick(cat.slug)}
