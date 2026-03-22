@@ -5,6 +5,7 @@ import { getAwardBySlug, getAwards } from "@/lib/content";
 import { resolveImageUrl } from "@/lib/cloudinary";
 import { buildMetadata } from "@/lib/metadata";
 import { formatDate } from "@/lib/utils";
+import { ConnectCTA } from "@/components/sections/connect-cta";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -32,6 +33,7 @@ export default async function AwardPage({ params }: PageProps) {
   if (!award) notFound();
 
   return (
+    <>
     <div className="mx-auto max-w-3xl px-6 py-16">
       {award.image && (
         <Image
@@ -56,12 +58,14 @@ export default async function AwardPage({ params }: PageProps) {
           href={award.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-block text-horchata-800 underline hover:text-horchata-600 dark:text-horchata-400"
+          className="mt-6 inline-block text-horchata-800 underline hover:text-horchata-700 dark:text-horchata-400"
         >
           Learn more
           <svg className="ml-1 inline h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
         </a>
       )}
     </div>
+    <ConnectCTA variant="hire" />
+    </>
   );
 }

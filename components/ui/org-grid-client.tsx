@@ -24,7 +24,7 @@ export function OrgGridClient({ organizations }: { organizations: OrgSummary[] }
             <Link
               key={org.slug}
               href={`/organizations/${org.slug}`}
-              className="flex cursor-pointer flex-col items-center gap-3 rounded-xl border border-horchata-200 bg-white p-6 text-center transition-shadow hover:shadow-lg dark:border-navy-700 dark:bg-navy-800"
+              className="flex cursor-pointer flex-col items-center gap-3 rounded-xl border border-horchata-200 bg-horchata-50 p-6 text-center transition-shadow hover:shadow-lg dark:border-navy-700 dark:bg-navy-900"
             >
               <OrgLogo
                 src={org.logo}

@@ -116,7 +116,7 @@ export default function PortfolioPage() {
                     )}
                   </div>
                 </div>
-                <h3 className="mt-3 font-bold text-navy-900 group-hover:text-horchata-600 dark:text-horchata-100">
+                <h3 className="mt-3 font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
                   {project.title}
                 </h3>
                 <p className="mt-1 flex-1 line-clamp-2 text-sm text-navy-500 dark:text-white/60">

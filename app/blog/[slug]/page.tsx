@@ -5,6 +5,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import remarkGfm from "remark-gfm";
 import { getBlogPost, getBlogSlugs, getAllBlogPosts, getOrganizationBySlug, getCategoryMaps } from "@/lib/content";
+import { PrevNextNav } from "@/components/ui/prev-next-nav";
 import { resolveImageUrl, ogImageUrl } from "@/lib/cloudinary";
 import { formatDate } from "@/lib/utils";
 import { sanitizeMdxContent } from "@/lib/sanitize-mdx";
@@ -68,8 +69,12 @@ export default async function BlogPostPage({ params }: PageProps) {
     );
   }
 
-  // Related posts: same category, excluding current
   const allPosts = getAllBlogPosts();
+  const currentIndex = allPosts.findIndex((p) => p.slug === post.slug);
+  const prevPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
+  const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
+
+  // Related posts: same category, excluding current
   const relatedPosts = allPosts
     .filter(
       (p) =>
@@ -247,6 +252,15 @@ export default async function BlogPostPage({ params }: PageProps) {
             </p>
           </div>
         </Link>
+      </div>
+
+      {/* Prev / Next */}
+      <div className="mt-10">
+        <PrevNextNav
+          prev={prevPost ? { slug: prevPost.slug, title: prevPost.title } : null}
+          next={nextPost ? { slug: nextPost.slug, title: nextPost.title } : null}
+          basePath="/blog"
+        />
       </div>
 
     </article>

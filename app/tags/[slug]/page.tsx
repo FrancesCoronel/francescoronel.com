@@ -4,6 +4,7 @@ import { PostsListClient } from "@/components/ui/posts-list-client";
 import { getTagBySlug, getTags, getBlogPostsByTag, getCategoryMaps } from "@/lib/content";
 import { PageHeader } from "@/components/ui/page-header";
 import { buildMetadata } from "@/lib/metadata";
+import { ConnectCTA } from "@/components/sections/connect-cta";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -54,6 +55,8 @@ export default async function TagPage({ params }: PageProps) {
           <PostsListClient posts={posts} categoryImages={categoryImages} hideSearch />
         </div>
       </section>
+
+      <ConnectCTA variant="follow" />
     </>
   );
 }

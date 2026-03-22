@@ -40,7 +40,7 @@ export default function CategoriesPage() {
                 className="group flex cursor-pointer items-center justify-between rounded-2xl border border-horchata-200 bg-white p-5 transition-all hover:border-horchata-400 hover:shadow-lg dark:border-navy-700 dark:hover:border-navy-500"
               >
                 <div>
-                  <h2 className="flex items-center gap-2 text-lg font-bold text-navy-900 group-hover:text-horchata-600 dark:text-horchata-100">
+                  <h2 className="flex items-center gap-2 text-lg font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
                     {cat.name}
                     {cat.image && (
                       <img

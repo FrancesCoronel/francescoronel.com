@@ -51,10 +51,18 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "logo.clearbit.com" },
       { protocol: "https", hostname: "www.apprenticeships.me" },
       { protocol: "https", hostname: "static1.squarespace.com" },
+      { protocol: "https", hostname: "www.engjobsearch.com" },
     ],
   },
   async redirects() {
     return [
+      // ── Newsletter → Blog ─────────────────────────────────
+      { source: "/newsletter", destination: "/blog", permanent: true },
+
+      // ── Index routes that redirect to about page sections ─────
+      { source: "/experience", destination: "/about#experience", permanent: true },
+      { source: "/education", destination: "/about#education", permanent: true },
+      { source: "/awards", destination: "/about#awards", permanent: true },
       // ── Blog posts migrated to testimonials ───────────────
       { source: "/blog/chris-lanus", destination: "/testimonials/chris-lanus", permanent: true },
       { source: "/blog/gabriel-rowe", destination: "/testimonials/gabriel-rowe", permanent: true },

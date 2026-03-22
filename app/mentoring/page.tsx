@@ -94,7 +94,11 @@ const expertiseAreas = [
   },
 ];
 
+import mentoringData from "@/content/mentoring-sessions.json";
+
 export default function MentoringPage() {
+  const { totalSessions, totalHours } = (mentoringData as { _meta: { totalSessions: number; totalHours: number } })._meta;
+  const hoursDisplay = Math.floor(totalHours);
   const allTestimonials = getTestimonials();
   // Show testimonials from mentoring-related roles or just the first 6
   const mentoringTestimonials = allTestimonials
@@ -116,7 +120,7 @@ export default function MentoringPage() {
       <PageHeader
         label="1-on-1 Coaching"
         heading="Mentoring 💬"
-        description="820+ sessions in. I help software engineers land roles, get promoted, negotiate better offers, and build careers they're proud of — with real talk from someone who's been in the industry for 10+ years."
+        description={`${totalSessions}+ sessions and ${hoursDisplay}+ hours in. I help software engineers land roles, get promoted, negotiate better offers, and build careers they're proud of — with real talk from someone who's been in the industry for 10+ years.`}
         aside={
           <Image
             src="/images/assets/speaking-hero-image.webp"
@@ -142,8 +146,11 @@ export default function MentoringPage() {
       {/* Pricing Tiers — dark */}
       <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <h2 className="text-center text-2xl font-bold text-navy-900 dark:text-horchata-100">
-            Pricing
+          <p className="text-center text-sm font-bold uppercase tracking-widest text-horchata-700">
+            Coaching
+          </p>
+          <h2 className="mt-1 text-center text-2xl font-bold text-navy-900 dark:text-horchata-100">
+            Pricing 💸
           </h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {pricingTiers.map((tier, i) => (
@@ -255,7 +262,10 @@ export default function MentoringPage() {
       {/* Topic Expertise — light */}
       <section className="bg-horchata-50 py-16 md:py-20 dark:bg-navy-900">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <h2 className="text-2xl font-bold text-navy-900 dark:text-horchata-100">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+            Topics
+          </p>
+          <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
             Areas of Expertise 🎯
           </h2>
           <div className="mt-10 grid gap-6 md:gap-8 md:grid-cols-3">
@@ -287,14 +297,17 @@ export default function MentoringPage() {
       {/* Testimonials — light */}
       <TestimonialsPreview
         testimonials={testimonials}
-        heading="What Mentees Say"
+        heading="What Mentees Say 💬"
         sectionClassName="border-y border-horchata-200 bg-horchata-50 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-900"
       />
 
       {/* Refund Policy — dark */}
       <section className="border-y border-horchata-200 bg-horchata-100 py-16 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <h2 className="text-xl font-bold text-navy-900 dark:text-horchata-100">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+            Policies
+          </p>
+          <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100">
             Refund Policy 📋
           </h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-3">

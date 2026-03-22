@@ -160,7 +160,7 @@
     "title": "Hire Me",
     "slug": "hire-me",
     "tagline": "A curated guide to getting an awesome tech gig",
-    "logo": "",
+    "logo": "https://www.engjobsearch.com/_images/icon.svg",
     "url": "https://www.engjobsearch.com",
     "startDate": "2018-01-01T00:00:00.000Z",
     "endDate": null,
@@ -185,7 +185,7 @@
     "logo": "",
     "url": "http://francescoronel.github.io/tsp-gov",
     "startDate": "2017-01-01T00:00:00.000Z",
-    "endDate": "2017-06-01T00:00:00.000Z",
+    "endDate": "2018-09-23T00:00:00.000Z",
     "category": "side-project",
     "status": "archived",
     "description": "A redesign of the Thrift Savings Plan (tsp.gov) website created as part of the HUGE Design School challenge. Focused on improving usability and accessibility for federal employees managing their retirement savings.",
@@ -230,7 +230,7 @@
     "logo": "/images/organizations/new-york-times.png",
     "url": "https://francescoronel.github.io/nyt-comm",
     "startDate": "2016-09-01T00:00:00.000Z",
-    "endDate": "2016-12-31T00:00:00.000Z",
+    "endDate": "2024-09-22T00:00:00.000Z",
     "category": "side-project",
     "status": "archived",
     "description": "Product Studio project at Cornell Tech in partnership with The New York Times — built a product concept around community-driven news.",
@@ -250,7 +250,7 @@
     "logo": "",
     "url": "https://github.com/FrancesCoronel/cover-letter-templates",
     "startDate": "2017-01-01T00:00:00.000Z",
-    "endDate": null,
+    "endDate": "2018-09-23T00:00:00.000Z",
     "category": "open-source",
     "status": "archived",
     "description": "A collection of cover letter templates created over the years, open-sourced for anyone to use in their tech job search.",
@@ -293,7 +293,7 @@
     "logo": "",
     "url": "https://github.com/FrancesCoronel/automator-workflows",
     "startDate": "2016-01-01T00:00:00.000Z",
-    "endDate": null,
+    "endDate": "2021-08-16T00:00:00.000Z",
     "category": "open-source",
     "status": "archived",
     "description": "A collection of custom macOS Automator workflows to automate repetitive tasks on the desktop.",
@@ -719,5 +719,1095 @@
     ],
     "organization": "techqueria",
     "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f4f10dd57285e4cc3c1_Techqueria-Job-Board.png"
+  },
+  {
+    "title": "Wordpress Website",
+    "slug": "wordpress-website",
+    "tagline": "Custom styling used for WordPress website",
+    "logo": "",
+    "url": "https://francescoronel.com",
+    "startDate": "2023-05-24T21:56:24Z",
+    "endDate": "2023-05-24T21:59:09Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Custom styling used for WordPress website",
+    "highlights": [
+      "GitHub: github.com/FrancesCoronel/wordpress-website"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/wordpress-website"
+  },
+  {
+    "title": "Francescoronel.Github.Io",
+    "slug": "francescoronel-github-io",
+    "tagline": "My personal GitHub page 🍓🍫",
+    "logo": "",
+    "url": "https://francescoronel.github.io",
+    "startDate": "2022-04-18T17:23:37Z",
+    "endDate": "2023-05-21T07:34:14Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "My personal GitHub page 🍓🍫",
+    "highlights": [
+      "2+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/francescoronel.github.io"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/francescoronel.github.io"
+  },
+  {
+    "title": "Personal Website V2",
+    "slug": "personal-website-v2",
+    "tagline": "Old version of my website created using HTML5 Up and Hugo.",
+    "logo": "",
+    "url": "https://www.fvcproductions.com",
+    "startDate": "2018-07-24T05:02:40Z",
+    "endDate": "2018-09-22T22:36:38Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Old version of my website created using HTML5 Up and Hugo.",
+    "highlights": [
+      "GitHub: github.com/FrancesCoronel/personal-website-v2"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/personal-website-v2"
+  },
+  {
+    "title": "Hugoma",
+    "slug": "hugoma",
+    "tagline": "A boiler plate for Hugo created with Bulma and optimized with modern workflows and tooling. 🌟️",
+    "logo": "",
+    "url": "https://hugoma.netlify.app",
+    "startDate": "2018-05-01T00:50:22Z",
+    "endDate": "2018-12-28T02:07:58Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "A boiler plate for Hugo created with Bulma and optimized with modern workflows and tooling. 🌟️",
+    "highlights": [
+      "7+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/hugoma"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/hugoma"
+  },
+  {
+    "title": "Maintain Me",
+    "slug": "maintain-me",
+    "tagline": "Fulfill all of GitHub's community standards with one command. 💛️",
+    "logo": "",
+    "url": "https://www.npmjs.com/package/maintain-me",
+    "startDate": "2018-04-16T17:29:32Z",
+    "endDate": "2019-04-08T03:09:10Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Fulfill all of GitHub's community standards with one command. 💛️",
+    "highlights": [
+      "4+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/maintain-me"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/maintain-me"
+  },
+  {
+    "title": "Slack Front End",
+    "slug": "slack-front-end",
+    "tagline": "Sampling of Slack FE engineers in Bay Area.",
+    "logo": "",
+    "url": "https://slack-front-end.netlify.app",
+    "startDate": "2018-04-13T16:55:27Z",
+    "endDate": "2022-03-15T02:22:55Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Sampling of Slack FE engineers in Bay Area.",
+    "highlights": [
+      "2+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/slack-front-end"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/slack-front-end"
+  },
+  {
+    "title": "Typescript Book",
+    "slug": "typescript-book",
+    "tagline": "Files I created to prepare for first submission of TypeScript book.",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/typescript-book",
+    "startDate": "2018-04-08T00:43:06Z",
+    "endDate": "2018-07-12T07:11:18Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Files I created to prepare for first submission of TypeScript book.",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/typescript-book"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/typescript-book"
+  },
+  {
+    "title": "Vanilla Box",
+    "slug": "vanilla-box",
+    "tagline": "📷 Photo lightbox gallery created with just vanilla JS. ",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/vanilla-box",
+    "startDate": "2018-03-19T22:53:41Z",
+    "endDate": "2018-09-16T04:07:03Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "📷 Photo lightbox gallery created with just vanilla JS. ",
+    "highlights": [
+      "GitHub: github.com/FrancesCoronel/vanilla-box"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/vanilla-box"
+  },
+  {
+    "title": "Personal Website V1",
+    "slug": "personal-website-v1",
+    "tagline": "My old website that was created with Jekyll.",
+    "logo": "",
+    "url": "https://web.archive.org/web/20171211233412/https://fvcproductions.com/",
+    "startDate": "2018-01-01T17:04:57Z",
+    "endDate": "2018-01-01T17:23:08Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "My old website that was created with Jekyll.",
+    "highlights": [
+      "GitHub: github.com/FrancesCoronel/personal-website-v1"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/personal-website-v1"
+  },
+  {
+    "title": "Coding Interviews",
+    "slug": "coding-interviews",
+    "tagline": "All the coding interviews I've been through. 💻",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/coding-interviews",
+    "startDate": "2017-11-26T02:09:03Z",
+    "endDate": "2018-02-27T23:01:00Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "All the coding interviews I've been through. 💻",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/coding-interviews"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/coding-interviews"
+  },
+  {
+    "title": "Docsify Starter",
+    "slug": "docsify-starter",
+    "tagline": "A boilerplate for docsify projects. 📝️",
+    "logo": "",
+    "url": "https://docsify.fvcproductions.com",
+    "startDate": "2017-11-13T04:12:02Z",
+    "endDate": "2018-11-08T00:07:38Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "A boilerplate for docsify projects. 📝️",
+    "highlights": [
+      "2+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/docsify-starter"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/docsify-starter"
+  },
+  {
+    "title": "Social Justice Foss",
+    "slug": "social-justice-foss",
+    "tagline": "Promoting social justice by contributing to F/OSS - Women Who Code Hackathon - October 2017 🚺 ✌️",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/social-justice-foss",
+    "startDate": "2017-10-21T17:30:57Z",
+    "endDate": "2017-10-22T00:56:29Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Promoting social justice by contributing to F/OSS - Women Who Code Hackathon - October 2017 🚺 ✌️",
+    "highlights": [
+      "5+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/social-justice-foss"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/social-justice-foss"
+  },
+  {
+    "title": "Ga Super Proxy",
+    "slug": "ga-super-proxy",
+    "tagline": "Super proxy setup with Google Analytics to show page views on personal blog.",
+    "logo": "",
+    "url": "https://fvcproductions-analytics.appspot.com",
+    "startDate": "2017-07-15T22:00:13Z",
+    "endDate": "2017-10-15T23:22:28Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Super proxy setup with Google Analytics to show page views on personal blog.",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/ga-super-proxy"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/ga-super-proxy"
+  },
+  {
+    "title": "Pacific Shores Shuttle",
+    "slug": "pacific-shores-shuttle",
+    "tagline": "If you work at Pacific Shores, you can figure out when the next shuttle is coming! 🚌",
+    "logo": "",
+    "url": "https://pacificshoresshuttle.com/",
+    "startDate": "2017-07-04T19:58:19Z",
+    "endDate": "2018-01-25T19:32:29Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "If you work at Pacific Shores, you can figure out when the next shuttle is coming! 🚌",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/pacific-shores-shuttle"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/pacific-shores-shuttle"
+  },
+  {
+    "title": "Accenture Alexa Hackathon",
+    "slug": "accenture-alexa-hackathon",
+    "tagline": "Accenture's Alexa Hackathon on June 30th, 2017 🔧",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/accenture-alexa-hackathon",
+    "startDate": "2017-06-30T18:14:32Z",
+    "endDate": "2018-09-22T22:36:30Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Accenture's Alexa Hackathon on June 30th, 2017 🔧",
+    "highlights": [
+      "2+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/accenture-alexa-hackathon"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/accenture-alexa-hackathon"
+  },
+  {
+    "title": "Party Activities",
+    "slug": "party-activities",
+    "tagline": "Out of ideas for what to do with your friends at the party? Look no further! 🎉",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/party-activities",
+    "startDate": "2017-06-11T04:11:41Z",
+    "endDate": "2018-07-13T02:57:43Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Out of ideas for what to do with your friends at the party? Look no further! 🎉",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/party-activities"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/party-activities"
+  },
+  {
+    "title": "Mothersday Netflix",
+    "slug": "mothersday-netflix",
+    "tagline": "A gift card for a Netflix subscription on Mother's Day! 💖",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/mothersday-netflix",
+    "startDate": "2017-05-14T16:04:37Z",
+    "endDate": "2018-07-13T02:57:39Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "A gift card for a Netflix subscription on Mother's Day! 💖",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/mothersday-netflix"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/mothersday-netflix"
+  },
+  {
+    "title": "Sukromia",
+    "slug": "sukromia",
+    "tagline": "Capstone project for \"Privacy in the Digital Age\" at Cornell Tech",
+    "logo": "",
+    "url": "https://fvcproductions.github.io/sukromia/",
+    "startDate": "2017-05-07T17:19:00Z",
+    "endDate": "2018-07-12T07:08:16Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Capstone project for \"Privacy in the Digital Age\" at Cornell Tech",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/sukromia"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/sukromia"
+  },
+  {
+    "title": "Todo App",
+    "slug": "todo-app",
+    "tagline": "CodeNow To Do App Tutorial",
+    "logo": "",
+    "url": "https://fvcproductions.github.io/todo-app/",
+    "startDate": "2017-04-30T13:54:32Z",
+    "endDate": "2017-09-02T23:29:03Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "CodeNow To Do App Tutorial",
+    "highlights": [
+      "3+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/todo-app"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/todo-app"
+  },
+  {
+    "title": "Holberton Website",
+    "slug": "holberton-website",
+    "tagline": "Website for Holberton Application - Level 2",
+    "logo": "",
+    "url": "http://fvcproductions.github.io/holberton-website",
+    "startDate": "2017-04-09T19:28:47Z",
+    "endDate": "2017-04-18T18:03:06Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Website for Holberton Application - Level 2",
+    "highlights": [
+      "2+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/holberton-website"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/holberton-website"
+  },
+  {
+    "title": "Fullstack Me",
+    "slug": "fullstack-me",
+    "tagline": "Resources for getting into Fullstack Academy. 📚",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/fullstack-me",
+    "startDate": "2017-03-11T22:23:00Z",
+    "endDate": "2018-07-12T07:37:21Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Resources for getting into Fullstack Academy. 📚",
+    "highlights": [
+      "4+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/fullstack-me"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/fullstack-me"
+  },
+  {
+    "title": "Git Guardian",
+    "slug": "git-guardian",
+    "tagline": "GitHub + Guardian News = GitGuardian",
+    "logo": "",
+    "url": "http://fvcproductions.github.io/git-guardian",
+    "startDate": "2017-03-04T22:55:21Z",
+    "endDate": "2018-07-12T05:20:42Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "GitHub + Guardian News = GitGuardian",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/git-guardian"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/git-guardian"
+  },
+  {
+    "title": "School Apps",
+    "slug": "school-apps",
+    "tagline": "Here, I weirdly display all the essays I used for my undergrad and grad school applications! 🎓",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/school-apps",
+    "startDate": "2017-02-28T00:48:41Z",
+    "endDate": "2017-09-02T23:30:38Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Here, I weirdly display all the essays I used for my undergrad and grad school applications! 🎓",
+    "highlights": [
+      "3+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/school-apps"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/school-apps"
+  },
+  {
+    "title": "Duolingo Delights",
+    "slug": "duolingo-delights",
+    "tagline": "Surprise yourself with Delights. Learn the language, explore the culture. 🎁",
+    "logo": "",
+    "url": "https://fvcproductions.github.io/duolingo-delights/",
+    "startDate": "2017-02-06T18:35:00Z",
+    "endDate": "2017-09-03T04:37:00Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Surprise yourself with Delights. Learn the language, explore the culture. 🎁",
+    "highlights": [
+      "GitHub: github.com/FrancesCoronel/duolingo-delights"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/duolingo-delights"
+  },
+  {
+    "title": "Keynote Jeopardy",
+    "slug": "keynote-jeopardy",
+    "tagline": "A Jeopardy template created in Keynote. 📂",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/keynote-jeopardy",
+    "startDate": "2017-02-05T21:15:57Z",
+    "endDate": "2018-07-12T06:27:35Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "A Jeopardy template created in Keynote. 📂",
+    "highlights": [
+      "3+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/keynote-jeopardy"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/keynote-jeopardy"
+  },
+  {
+    "title": "Venus Co",
+    "slug": "venus-co",
+    "tagline": "Assets for Venus Co. | Startup Studio 💕",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/venus-co",
+    "startDate": "2016-12-06T20:00:14Z",
+    "endDate": "2024-09-22T23:38:33Z",
+    "category": "open-source",
+    "status": "complete",
+    "description": "Assets for Venus Co. | Startup Studio 💕",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/venus-co"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/venus-co"
+  },
+  {
+    "title": "Num Colors",
+    "slug": "num-colors",
+    "tagline": "Given a URL of an image, this returns the number of colors in that image using image-magick 🎨",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/num-colors",
+    "startDate": "2016-11-28T00:04:23Z",
+    "endDate": "2018-07-12T06:48:47Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Given a URL of an image, this returns the number of colors in that image using image-magick 🎨",
+    "highlights": [
+      "GitHub: github.com/FrancesCoronel/num-colors"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/num-colors"
+  },
+  {
+    "title": "Anagram",
+    "slug": "anagram",
+    "tagline": "Check if two strings are anagrams of each other 🔍",
+    "logo": "",
+    "url": "http://fvcproductions.github.io/anagram",
+    "startDate": "2016-10-17T17:27:03Z",
+    "endDate": "2018-07-12T07:08:10Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Check if two strings are anagrams of each other 🔍",
+    "highlights": [
+      "GitHub: github.com/FrancesCoronel/anagram"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/anagram"
+  },
+  {
+    "title": "Time",
+    "slug": "time",
+    "tagline": "A basic Flask app 🕜",
+    "logo": "",
+    "url": "http://fc333-time.herokuapp.com",
+    "startDate": "2016-10-15T20:59:18Z",
+    "endDate": "2018-09-22T22:36:26Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "A basic Flask app 🕜",
+    "highlights": [
+      "GitHub: github.com/FrancesCoronel/time"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/time"
+  },
+  {
+    "title": "Leap Auth Home",
+    "slug": "leap-auth-home",
+    "tagline": "Leap Motion Auth for Home Automation | Kent Hack Enough 2016  🏠 🔑 ✋",
+    "logo": "",
+    "url": "http://fvcproductions.github.io/leap-auth-home",
+    "startDate": "2016-10-09T00:32:19Z",
+    "endDate": "2018-07-12T07:07:54Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Leap Motion Auth for Home Automation | Kent Hack Enough 2016  🏠 🔑 ✋",
+    "highlights": [
+      "GitHub: github.com/FrancesCoronel/leap-auth-home"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/leap-auth-home"
+  },
+  {
+    "title": "Cornell Tech Logos",
+    "slug": "cornell-tech-logos",
+    "tagline": "Easily view and download all the Cornell Tech logos 🎓 🎨",
+    "logo": "",
+    "url": "https://cornell-tech-logos.netlify.app",
+    "startDate": "2016-10-03T18:39:00Z",
+    "endDate": "2022-03-15T02:19:46Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Easily view and download all the Cornell Tech logos 🎓 🎨",
+    "highlights": [
+      "8+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/cornell-tech-logos"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/cornell-tech-logos"
+  },
+  {
+    "title": "Mysocialcanvas",
+    "slug": "mysocialcanvas",
+    "tagline": "My Social Canvas #DesignHackathon 🎨 ",
+    "logo": "",
+    "url": "http://fvcproductions.github.io/mysocialcanvas",
+    "startDate": "2016-10-01T16:52:24Z",
+    "endDate": "2018-07-12T07:25:59Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "My Social Canvas #DesignHackathon 🎨 ",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/mysocialcanvas"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/mysocialcanvas"
+  },
+  {
+    "title": "Startup Systems",
+    "slug": "startup-systems",
+    "tagline": "A personal GitHub page for a HW assignment 📝",
+    "logo": "",
+    "url": "http://fvcproductions.github.io/startup-systems",
+    "startDate": "2016-09-01T21:57:14Z",
+    "endDate": "2018-07-12T05:37:25Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "A personal GitHub page for a HW assignment 📝",
+    "highlights": [
+      "GitHub: github.com/FrancesCoronel/startup-systems"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/startup-systems"
+  },
+  {
+    "title": "Tech Events",
+    "slug": "tech-events",
+    "tagline": "Tech events all around the world, nah nah nah nah 🌎",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/tech-events",
+    "startDate": "2016-08-26T18:35:38Z",
+    "endDate": "2017-10-29T00:19:46Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Tech events all around the world, nah nah nah nah 🌎",
+    "highlights": [
+      "3+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/tech-events"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/tech-events"
+  },
+  {
+    "title": "Beato",
+    "slug": "beato",
+    "tagline": "My first hackathon project back from 2014 👼",
+    "logo": "",
+    "url": "http://beato-2014.appspot.com/",
+    "startDate": "2016-07-01T23:19:05Z",
+    "endDate": "2016-07-03T19:28:26Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "My first hackathon project back from 2014 👼",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/beato"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/beato"
+  },
+  {
+    "title": "Bebop Me",
+    "slug": "bebop-me",
+    "tagline": "A project made with RenPy for my Python programming class at HU 💘",
+    "logo": "",
+    "url": "http://bebop-me.appspot.com",
+    "startDate": "2016-07-01T23:18:01Z",
+    "endDate": "2018-07-12T05:02:06Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "A project made with RenPy for my Python programming class at HU 💘",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/bebop-me"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/bebop-me"
+  },
+  {
+    "title": "Icon Designs",
+    "slug": "icon-designs",
+    "tagline": "Icon designs I've created over time - mostly for OSX apps 🖌",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/icon-designs",
+    "startDate": "2016-03-20T17:46:41Z",
+    "endDate": "2018-07-13T02:57:24Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Icon designs I've created over time - mostly for OSX apps 🖌",
+    "highlights": [
+      "2+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/icon-designs"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/icon-designs"
+  },
+  {
+    "title": "Built In Norfolk",
+    "slug": "built-in-norfolk",
+    "tagline": "Badges for when you're hacking out in Norfolk, VA ⚓",
+    "logo": "",
+    "url": "https://fvcproductions.com/portfolio/built-in-norfolk/",
+    "startDate": "2016-01-15T21:40:49Z",
+    "endDate": "2018-07-12T05:00:35Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Badges for when you're hacking out in Norfolk, VA ⚓",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/built-in-norfolk"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/built-in-norfolk"
+  },
+  {
+    "title": "Customize Icons",
+    "slug": "customize-icons",
+    "tagline": "Customize your icons on macOS 🔧",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/customize-icons",
+    "startDate": "2016-01-08T23:06:34Z",
+    "endDate": "2017-01-26T16:39:29Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Customize your icons on macOS 🔧",
+    "highlights": [
+      "8+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/customize-icons"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/customize-icons"
+  },
+  {
+    "title": "Slack Invites",
+    "slug": "slack-invites",
+    "tagline": "Clone of Stamplay Slack invites web app 👫",
+    "logo": "",
+    "url": "https://va-acm.stamplayapp.com/",
+    "startDate": "2016-01-05T02:33:36Z",
+    "endDate": "2018-07-13T02:46:29Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Clone of Stamplay Slack invites web app 👫",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/slack-invites"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/slack-invites"
+  },
+  {
+    "title": "Sexy Sublime",
+    "slug": "sexy-sublime",
+    "tagline": "Smexy Sublime Text 3 settings 💋",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/sexy-sublime",
+    "startDate": "2015-11-28T04:44:35Z",
+    "endDate": "2016-05-14T18:10:36Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Smexy Sublime Text 3 settings 💋",
+    "highlights": [
+      "2+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/sexy-sublime"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/sexy-sublime"
+  },
+  {
+    "title": "Weyland Corp",
+    "slug": "weyland-corp",
+    "tagline": "WeylandCorp's update to ASTRO's base code for CSC 404 ☠",
+    "logo": "",
+    "url": "http://fvcproductions.github.io/WeylandCorp",
+    "startDate": "2015-10-12T19:07:23Z",
+    "endDate": "2018-09-22T22:36:23Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "WeylandCorp's update to ASTRO's base code for CSC 404 ☠",
+    "highlights": [
+      "3+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/weyland-corp"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/weyland-corp"
+  },
+  {
+    "title": "Cs Hu",
+    "slug": "cs-hu",
+    "tagline": "Material from my CS courses at Hampton University from Jan 2014 - May 2016 🎓",
+    "logo": "",
+    "url": "http://huacm.wordpress.com",
+    "startDate": "2015-09-08T18:36:15Z",
+    "endDate": "2018-07-12T13:56:21Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Material from my CS courses at Hampton University from Jan 2014 - May 2016 🎓",
+    "highlights": [
+      "2+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/cs-hu"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/cs-hu"
+  },
+  {
+    "title": "Fullstack Academy",
+    "slug": "fullstack-academy",
+    "tagline": "1506 | Summer of Code 🌞",
+    "logo": "",
+    "url": "http://fullstackacademy.com/summer-of-code",
+    "startDate": "2015-09-07T00:49:15Z",
+    "endDate": "2018-09-22T22:36:34Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "1506 | Summer of Code 🌞",
+    "highlights": [
+      "8+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/fullstack-academy"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/fullstack-academy"
+  },
+  {
+    "title": "Rankme",
+    "slug": "rankme",
+    "tagline": "We rank coding bootcamps 📈",
+    "logo": "",
+    "url": "http://rank-me.herokuapp.com/",
+    "startDate": "2015-08-07T13:32:57Z",
+    "endDate": "2018-09-22T22:36:22Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "We rank coding bootcamps 📈",
+    "highlights": [
+      "2+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/rankme"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/rankme"
+  },
+  {
+    "title": "Codewars Kata",
+    "slug": "codewars-kata",
+    "tagline": "All the Kata I've created on Codewars 👊",
+    "logo": "",
+    "url": "http://codewars.com/users/fvcproductions",
+    "startDate": "2015-07-21T00:52:18Z",
+    "endDate": "2016-03-20T17:25:37Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "All the Kata I've created on Codewars 👊",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/codewars-kata"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/codewars-kata"
+  },
+  {
+    "title": "Flashcards",
+    "slug": "flashcards",
+    "tagline": "Creating a Quizlet like web app using AngularJS ✅",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/flashcards",
+    "startDate": "2015-07-14T01:55:24Z",
+    "endDate": "2018-09-22T22:36:20Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Creating a Quizlet like web app using AngularJS ✅",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/flashcards"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/flashcards"
+  },
+  {
+    "title": "Trip Planner Live Ui",
+    "slug": "trip-planner-live-ui",
+    "tagline": "2nd part of the Trip Planner Workshop, providing actions to the static layout 🛫",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/trip-planner-live-ui",
+    "startDate": "2015-07-07T01:13:11Z",
+    "endDate": "2018-09-22T22:36:18Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "2nd part of the Trip Planner Workshop, providing actions to the static layout 🛫",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/trip-planner-live-ui"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/trip-planner-live-ui"
+  },
+  {
+    "title": "Trip Planner Persistent",
+    "slug": "trip-planner-persistent",
+    "tagline": "3rd part of the Trip Planner Workshop, creating persistence using AJAX 🚌",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/trip-planner-persistent",
+    "startDate": "2015-07-07T01:00:08Z",
+    "endDate": "2018-09-22T22:36:19Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "3rd part of the Trip Planner Workshop, creating persistence using AJAX 🚌",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/trip-planner-persistent"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/trip-planner-persistent"
+  },
+  {
+    "title": "Wikistack",
+    "slug": "wikistack",
+    "tagline": "Wiki clone built with Mongo & Express, among other things 📖",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/wikistack",
+    "startDate": "2015-06-24T14:14:29Z",
+    "endDate": "2018-09-22T22:36:18Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Wiki clone built with Mongo & Express, among other things 📖",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/wikistack"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/wikistack"
+  },
+  {
+    "title": "Twitter Clone",
+    "slug": "twitter-clone",
+    "tagline": "An app that clones Twitter utilizing Express 🐦",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/twitter-clone",
+    "startDate": "2015-06-17T16:35:17Z",
+    "endDate": "2018-09-22T22:36:17Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "An app that clones Twitter utilizing Express 🐦",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/twitter-clone"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/twitter-clone"
+  },
+  {
+    "title": "Guessing Game",
+    "slug": "guessing-game",
+    "tagline": "Fullstack Foundations - Guessing Game 🎱",
+    "logo": "",
+    "url": "http://fvcproductions.github.io/guessing-game",
+    "startDate": "2015-05-29T00:50:27Z",
+    "endDate": "2018-07-12T05:15:04Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "Fullstack Foundations - Guessing Game 🎱",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/guessing-game"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/guessing-game"
+  },
+  {
+    "title": "Intro Cs",
+    "slug": "intro-cs",
+    "tagline": "An intro to computer science for HU kids 📔",
+    "logo": "",
+    "url": "https://francescoronel.gitbook.io/intro-to-cs",
+    "startDate": "2015-03-09T23:06:13Z",
+    "endDate": "2018-07-12T05:29:07Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "An intro to computer science for HU kids 📔",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/intro-cs"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/intro-cs"
+  },
+  {
+    "title": "Personal Website V3",
+    "slug": "personal-website-v3",
+    "tagline": "My virtual lair - v3.0. 🏠",
+    "logo": "",
+    "url": "https://www.fvcproductions.com",
+    "startDate": "2014-10-30T00:05:05Z",
+    "endDate": "2020-07-23T16:17:57Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "My virtual lair - v3.0. 🏠",
+    "highlights": [
+      "9+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/personal-website-v3"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/personal-website-v3"
+  },
+  {
+    "title": "Coder Bits",
+    "slug": "coder-bits",
+    "tagline": "HTML, Java, Python, C, PHP, C++, JS 💩",
+    "logo": "",
+    "url": "https://github.com/FrancesCoronel/coder-bits",
+    "startDate": "2014-03-13T21:33:19Z",
+    "endDate": "2017-12-10T20:18:23Z",
+    "category": "open-source",
+    "status": "archived",
+    "description": "HTML, Java, Python, C, PHP, C++, JS 💩",
+    "highlights": [
+      "1+ GitHub stars",
+      "GitHub: github.com/FrancesCoronel/coder-bits"
+    ],
+    "skills": [
+      "open-source"
+    ],
+    "github": "FrancesCoronel/coder-bits"
   }
 ]

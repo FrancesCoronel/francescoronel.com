@@ -124,6 +124,7 @@ export interface Project {
   endDate: string | null;
   category: "open-source" | "podcast" | "hackathon" | "work-project" | "side-project";
   status?: "active" | "complete" | "abandoned" | "archived";
+  github?: string;
   blogSlug?: string;
   organization?: string;
 }

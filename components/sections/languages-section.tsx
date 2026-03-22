@@ -22,7 +22,7 @@ export function LanguagesSection({
         <h2 className="text-2xl font-bold text-navy-900 dark:text-horchata-100">
           Languages 🌎
         </h2>
-        <div className="mt-6 grid grid-cols-2 gap-4">
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {languages.map((lang) => (
             <div
               key={lang.name}

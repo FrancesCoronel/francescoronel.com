@@ -171,7 +171,7 @@ export function BlogListClient({
               setActiveCategory(null);
               setPage(1);
             }}
-            className="mt-4 text-sm font-medium text-horchata-800 hover:text-horchata-600 dark:text-horchata-400"
+            className="mt-4 text-sm font-medium text-horchata-800 hover:text-horchata-700 dark:text-horchata-400"
           >
             Show all posts
           </button>

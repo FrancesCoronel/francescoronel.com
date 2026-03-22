@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import {
   getExperiences,
   getEducation,
@@ -7,9 +8,12 @@ import {
   getOrganizationsByActivity,
   getOrganizationByName,
   getTestimonials,
+  getAllBlogPosts,
+  getBlogPostsByCategory,
   EXCLUDED_FROM_FEATURED_ORGS,
 } from "@/lib/content";
 import skills from "@/content/skills.json";
+import mentoringData from "@/content/mentoring-sessions.json";
 import { buildMetadata } from "@/lib/metadata";
 import { PageHeader } from "@/components/ui/page-header";
 import { BioSection } from "@/components/sections/bio-section";
@@ -172,6 +176,11 @@ const bioVariants = [
 export default function AboutPage() {
   const experiences = getExperiences();
   const education = getEducation();
+  const mentoringSessionCount = (mentoringData as { _meta: { totalSessions: number } })._meta.totalSessions;
+  const allPostsCount = getAllBlogPosts().length;
+  const speakingCount = getBlogPostsByCategory("speaking").length;
+  const startYear = 2017;
+  const yearsOfExperience = new Date().getFullYear() - startYear;
   const awards = getAwards();
   const organizations = getOrganizationsByActivity()
     .filter((o) => o.logo && !EXCLUDED_FROM_FEATURED_ORGS.has(o.slug))
@@ -273,7 +282,9 @@ export default function AboutPage() {
       <MemojiSection />
 
       {/* Awards */}
-      <AwardsSection awards={awards} blogPostMap={awardBlogPosts} />
+      <div id="awards">
+        <AwardsSection awards={awards} blogPostMap={awardBlogPosts} />
+      </div>
 
       {/* Skills */}
       <section className="py-16 md:py-20">
@@ -302,6 +313,33 @@ export default function AboutPage() {
 
       {/* Testimonials */}
       <TestimonialsPreview testimonials={displayTestimonials} />
+
+      {/* Stats */}
+      <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
+        <div className="mx-auto max-w-[var(--container-max)] px-6">
+          <div className="mb-10 text-center">
+            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+              By the Numbers
+            </p>
+            <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
+              Impact at a Glance 📊
+            </h2>
+          </div>
+          <div className="grid gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { stat: `${mentoringSessionCount}+`, label: "Mentoring sessions logged", href: "/mentoring" },
+              { stat: `${allPostsCount}+`, label: "Blog posts published", href: "/blog" },
+              { stat: `${speakingCount}+`, label: "Speaking events since 2015", href: "/speaking" },
+              { stat: `${yearsOfExperience}+`, label: "Years of full-time experience", href: "#experience" },
+            ].map(({ stat, label, href }) => (
+              <Link key={label} href={href} className="group rounded-2xl p-4 transition-colors hover:bg-horchata-200 dark:hover:bg-navy-800">
+                <p className="text-5xl font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100 dark:group-hover:text-horchata-400">{stat}</p>
+                <p className="mt-2 text-sm text-navy-500 dark:text-white/60">{label}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <ConnectCTA variant="hire" />
     </>

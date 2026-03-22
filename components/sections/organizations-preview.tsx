@@ -31,7 +31,7 @@ export function OrganizationsPreview({
           </div>
           <Link
             href="/organizations"
-            className="text-sm font-medium text-horchata-800 hover:text-horchata-600 dark:text-horchata-400 dark:hover:text-horchata-200"
+            className="text-sm font-medium text-horchata-800 hover:text-horchata-700 dark:text-horchata-400 dark:hover:text-horchata-200"
           >
             View all →
           </Link>

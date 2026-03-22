@@ -8,6 +8,7 @@ import {
   getExperiences,
   getOrganizationByName,
 } from "@/lib/content";
+import { ConnectCTA } from "@/components/sections/connect-cta";
 import { resolveImageUrl } from "@/lib/cloudinary";
 import { formatDateRange } from "@/lib/utils";
 
@@ -41,6 +42,7 @@ export default async function ExperiencePage({ params }: PageProps) {
   const org = getOrganizationByName(exp.company);
 
   return (
+    <>
     <div className="mx-auto max-w-3xl px-6 py-16">
       <div className="flex items-start gap-4">
         {exp.companyLogo && (
@@ -60,7 +62,7 @@ export default async function ExperiencePage({ params }: PageProps) {
             {org ? (
               <Link
                 href={`/organizations/${org.slug}`}
-                className="underline decoration-horchata-300 underline-offset-2 transition-colors hover:text-horchata-600 dark:decoration-navy-500 dark:hover:text-horchata-400"
+                className="underline decoration-horchata-300 underline-offset-2 transition-colors hover:text-horchata-700 dark:decoration-navy-500 dark:hover:text-horchata-400"
               >
                 {exp.company}
               </Link>
@@ -108,11 +110,13 @@ export default async function ExperiencePage({ params }: PageProps) {
       <div className="mt-10">
         <Link
           href="/about"
-          className="text-sm font-medium text-horchata-800 hover:text-horchata-600 dark:text-horchata-400 dark:hover:text-horchata-200"
+          className="text-sm font-medium text-horchata-800 hover:text-horchata-700 dark:text-horchata-400 dark:hover:text-horchata-200"
         >
           &larr; All experience
         </Link>
       </div>
     </div>
+    <ConnectCTA variant="hire" />
+    </>
   );
 }

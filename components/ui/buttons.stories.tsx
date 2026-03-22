@@ -91,19 +91,19 @@ export const TextLink: Story = {
     <div className="flex flex-wrap items-center gap-6">
       <a
         href="#"
-        className="text-sm font-medium text-horchata-800 hover:text-horchata-600"
+        className="text-sm font-medium text-horchata-800 hover:text-horchata-700"
       >
         View all <span aria-hidden="true">&rarr;</span>
       </a>
       <a
         href="#"
-        className="text-sm font-medium text-horchata-800 hover:text-horchata-600"
+        className="text-sm font-medium text-horchata-800 hover:text-horchata-700"
       >
         Show all posts
       </a>
       <a
         href="#"
-        className="text-sm font-medium text-horchata-800 hover:text-horchata-600"
+        className="text-sm font-medium text-horchata-800 hover:text-horchata-700"
       >
         See full experience <span aria-hidden="true">&rarr;</span>
       </a>
@@ -189,7 +189,7 @@ export const AllVariants: Story = {
       </div>
       <div>
         <p className="mb-3 text-xs font-bold uppercase tracking-wider text-navy-500">Text Link</p>
-        <a href="#" className="text-sm font-medium text-horchata-800 hover:text-horchata-600">
+        <a href="#" className="text-sm font-medium text-horchata-800 hover:text-horchata-700">
           View all <span aria-hidden="true">&rarr;</span>
         </a>
       </div>

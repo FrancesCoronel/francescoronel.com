@@ -39,6 +39,13 @@ const tools = [
         url: "https://desktop.github.com",
         image: "/images/tools/github.png",
       },
+      {
+        name: "KeyCastr",
+        description:
+          "Open-source keystroke visualizer — displays key presses on screen for screen recordings, demos, and talks",
+        url: "https://github.com/keycastr/keycastr",
+        icon: "⌨️",
+      },
     ],
   },
   {
@@ -76,6 +83,18 @@ const tools = [
           "Personal finance dashboard — budgets, net worth tracking, transactions, and goals across all accounts in one place",
         url: "https://monarchmoney.com",
         icon: "👑",
+      },
+    ],
+  },
+  {
+    category: "Storage & Cloud",
+    items: [
+      {
+        name: "Google One AI Pro",
+        description:
+          "2TB Google storage plus access to Gemini Advanced, Google AI features, and premium benefits across Google apps",
+        url: "https://one.google.com/about/ai-premium",
+        icon: "☁️",
       },
     ],
   },
@@ -131,11 +150,37 @@ const tools = [
         url: "https://www.mowglii.com/itsycal/",
         image: "/images/tools/itsycal.png",
       },
+      {
+        name: "Irvue",
+        description:
+          "Automatic wallpaper changer that pulls stunning photos from Unsplash and refreshes your desktop on a schedule",
+        url: "https://irvue.app",
+        icon: "🖼️",
+      },
+    ],
+  },
+  {
+    category: "Health",
+    items: [
+      {
+        name: "Healthier",
+        description:
+          "Simple macOS habit tracker for building and maintaining daily routines — minimal UI, lives in the menu bar",
+        url: "https://healthier.app",
+        icon: "💪",
+      },
     ],
   },
   {
     category: "Creative",
     items: [
+      {
+        name: "Figma",
+        description:
+          "Collaborative design tool for UI/UX, prototyping, and visual design — also used via MCP server for design-to-code workflows",
+        url: "https://figma.com",
+        image: "/images/tools/figma.png",
+      },
       {
         name: "Canva",
         description:
@@ -357,7 +402,7 @@ export default function UsesPage() {
                         </span>
                       )}
                       <div className="flex-1">
-                        <p className="font-bold text-navy-900 group-hover:text-horchata-600 dark:text-horchata-100">
+                        <p className="font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
                           {item.name}
                         </p>
                         <p className="mt-1 text-sm text-navy-600 dark:text-white/70">
@@ -365,7 +410,7 @@ export default function UsesPage() {
                         </p>
                       </div>
                       <svg
-                        className="mt-1 h-4 w-4 flex-shrink-0 text-horchata-400 group-hover:text-horchata-600 dark:text-navy-500 dark:group-hover:text-horchata-300"
+                        className="mt-1 h-4 w-4 flex-shrink-0 text-horchata-400 group-hover:text-horchata-700 dark:text-navy-500 dark:group-hover:text-horchata-300"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -401,7 +446,7 @@ export default function UsesPage() {
               href={`${REPO_BASE}/CLAUDE.md`}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-horchata-600 hover:text-horchata-800 dark:text-horchata-400 dark:hover:text-horchata-200"
+              className="font-medium text-horchata-700 hover:text-horchata-800 dark:text-horchata-400 dark:hover:text-horchata-200"
             >
               View my CLAUDE.md →
             </a>
@@ -423,7 +468,7 @@ export default function UsesPage() {
                     className="mt-0.5 h-8 w-8 flex-shrink-0 rounded-lg object-contain"
                   />
                   <div className="flex-1">
-                    <p className="text-lg font-bold text-navy-900 group-hover:text-horchata-600 dark:text-horchata-100">
+                    <p className="text-lg font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
                       {server.name}
                     </p>
                     <p className="mt-1 text-sm text-navy-600 dark:text-white/70">
@@ -472,7 +517,7 @@ export default function UsesPage() {
                 <div className="flex items-start gap-4">
                   <span className="mt-0.5 text-2xl">{plugin.icon}</span>
                   <div className="flex-1">
-                    <p className="font-bold text-navy-900 group-hover:text-horchata-600 dark:text-horchata-100">
+                    <p className="font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
                       {plugin.name}
                     </p>
                     <p className="mt-1 text-sm text-navy-600 dark:text-white/70">
@@ -511,7 +556,7 @@ export default function UsesPage() {
               >
                 <span className="mt-0.5 text-2xl">{skill.icon}</span>
                 <div className="flex-1">
-                  <p className="font-bold text-navy-900 group-hover:text-horchata-600 dark:text-horchata-100">
+                  <p className="font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
                     {skill.name}
                   </p>
                   <p className="mt-1 text-sm text-navy-600 dark:text-white/70">

@@ -249,7 +249,7 @@ export default function DesignSystemPage() {
                 className="flex items-center gap-6 p-4"
               >
                 <div className="w-28 flex-shrink-0">
-                  <p className="font-mono text-sm font-medium text-horchata-600 dark:text-horchata-400">
+                  <p className="font-mono text-sm font-medium text-horchata-700 dark:text-horchata-400">
                     {t.name}
                   </p>
                 </div>
@@ -291,7 +291,7 @@ export default function DesignSystemPage() {
               <p className="font-medium text-navy-900 dark:text-horchata-100">
                 Container Max Width
               </p>
-              <p className="mt-1 font-mono text-sm text-horchata-600 dark:text-horchata-400">
+              <p className="mt-1 font-mono text-sm text-horchata-700 dark:text-horchata-400">
                 1200px
               </p>
               <p className="mt-2 text-sm text-navy-500 dark:text-horchata-400">
@@ -302,7 +302,7 @@ export default function DesignSystemPage() {
               <p className="font-medium text-navy-900 dark:text-horchata-100">
                 Section Padding
               </p>
-              <p className="mt-1 font-mono text-sm text-horchata-600 dark:text-horchata-400">
+              <p className="mt-1 font-mono text-sm text-horchata-700 dark:text-horchata-400">
                 py-16 md:py-20
               </p>
               <p className="mt-2 text-sm text-navy-500 dark:text-horchata-400">
@@ -313,7 +313,7 @@ export default function DesignSystemPage() {
               <p className="font-medium text-navy-900 dark:text-horchata-100">
                 Card Radius
               </p>
-              <p className="mt-1 font-mono text-sm text-horchata-600 dark:text-horchata-400">
+              <p className="mt-1 font-mono text-sm text-horchata-700 dark:text-horchata-400">
                 rounded-2xl (16px)
               </p>
               <p className="mt-2 text-sm text-navy-500 dark:text-horchata-400">
@@ -357,13 +357,13 @@ export default function DesignSystemPage() {
           <div className="mt-6 flex flex-wrap items-center gap-6">
             <a
               href="#"
-              className="text-sm font-medium text-horchata-800 hover:text-horchata-600 dark:text-horchata-400 dark:hover:text-horchata-200"
+              className="text-sm font-medium text-horchata-800 hover:text-horchata-700 dark:text-horchata-400 dark:hover:text-horchata-200"
             >
               Standard Link →
             </a>
             <a
               href="#"
-              className="text-sm font-medium underline underline-offset-2 decoration-horchata-300 hover:text-horchata-600 dark:decoration-navy-500 dark:hover:text-horchata-400"
+              className="text-sm font-medium underline underline-offset-2 decoration-horchata-300 hover:text-horchata-700 dark:decoration-navy-500 dark:hover:text-horchata-400"
             >
               Underlined Link
             </a>
@@ -441,14 +441,14 @@ export default function DesignSystemPage() {
 
             {/* Hover Card */}
             <div className="group cursor-pointer rounded-2xl border border-horchata-200 bg-white p-6 transition-all hover:border-horchata-400 hover:shadow-lg dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500">
-              <h3 className="text-lg font-bold text-navy-900 group-hover:text-horchata-600 dark:text-horchata-100">
+              <h3 className="text-lg font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
                 Interactive Card
               </h3>
               <p className="mt-2 text-sm text-navy-600 dark:text-white/70">
                 Cards that are links get hover states with border changes,
                 shadow, and text color shifts.
               </p>
-              <p className="mt-4 text-sm font-medium text-horchata-600 dark:text-horchata-400">
+              <p className="mt-4 text-sm font-medium text-horchata-700 dark:text-horchata-400">
                 Hover me →
               </p>
             </div>

@@ -34,7 +34,7 @@ export default function TagsPage() {
                 href={`/tags/${tag.slug}`}
                 className="group flex items-center gap-2 rounded-full border border-horchata-200 bg-white px-4 py-2 transition-all hover:border-horchata-400 hover:shadow-md dark:border-navy-700 dark:hover:border-navy-500"
               >
-                <span className="text-sm font-medium text-navy-900 group-hover:text-horchata-600 dark:text-horchata-100">
+                <span className="text-sm font-medium text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
                   {tag.name}
                 </span>
                 <span className="flex items-center justify-center rounded-full bg-horchata-400 px-2.5 py-1 text-xs font-medium leading-none text-navy-900 dark:bg-navy-500 dark:text-white">

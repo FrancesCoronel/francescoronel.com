@@ -46,13 +46,12 @@ const featuredTalks = [
 export default function SpeakingPage() {
   const speakingPosts = getBlogPostsByCategory("speaking");
   const organizations = getOrganizations();
+  const speakingKeywords = ["speak", "talk", "present", "panel", "workshop", "keynote", "fireside", "audience", "session", "stage"];
   const speakingTestimonials = getTestimonials()
-    .filter(
-      (t) =>
-        t.quote.toLowerCase().includes("speak") ||
-        t.quote.toLowerCase().includes("talk") ||
-        t.quote.toLowerCase().includes("present")
-    )
+    .filter((t) => {
+      const text = (t.quote + " " + t.role).toLowerCase();
+      return speakingKeywords.some((kw) => text.includes(kw));
+    })
     .slice(0, 3);
   const displayTestimonials =
     speakingTestimonials.length >= 3
@@ -136,7 +135,7 @@ export default function SpeakingPage() {
                       <p className="text-xs font-medium text-navy-500 dark:text-horchata-400">
                         {talk.org}
                       </p>
-                      <p className="mt-0.5 text-sm font-bold text-navy-900 group-hover:text-horchata-600 dark:text-horchata-100 dark:group-hover:text-horchata-300">
+                      <p className="mt-0.5 text-sm font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100 dark:group-hover:text-horchata-300">
                         {talk.talk}
                       </p>
                     </div>

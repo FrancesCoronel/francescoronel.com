@@ -58,7 +58,7 @@ export function OrgLogo({
   if (state === "letter") {
     return (
       <div
-        className={`flex items-center justify-center rounded-full bg-horchata-100 font-bold text-horchata-600 dark:bg-navy-700 dark:text-horchata-400 ${avatarClassName ?? ""}`}
+        className={`flex items-center justify-center rounded-full bg-horchata-100 font-bold text-horchata-700 dark:bg-navy-700 dark:text-horchata-400 ${avatarClassName ?? ""}`}
         style={{ width: size, height: size, fontSize: Math.round(size * 0.375) }}
         aria-label={name}
       >

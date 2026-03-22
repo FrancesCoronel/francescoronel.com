@@ -56,7 +56,7 @@ export function UpcomingEvents({ events }: UpcomingEventsProps) {
                     </span>
                     <span className="text-xs text-navy-400 dark:text-white/40">{event.org}</span>
                   </div>
-                  <p className="mt-3 font-bold text-navy-900 group-hover:text-horchata-600 dark:text-horchata-100">
+                  <p className="mt-3 font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
                     {event.talk}
                   </p>
                   <p className="mt-1 text-sm text-navy-600 dark:text-white/70">
@@ -65,7 +65,7 @@ export function UpcomingEvents({ events }: UpcomingEventsProps) {
                   <p className="mt-3 text-xs font-semibold text-horchata-700 dark:text-horchata-400">
                     📅 {formatEventDate(event.date)}
                   </p>
-                  <p className="mt-1 text-xs font-medium text-horchata-600 dark:text-horchata-400">
+                  <p className="mt-1 text-xs font-medium text-horchata-700 dark:text-horchata-400">
                     Register →
                   </p>
                 </a>
@@ -104,7 +104,7 @@ export function UpcomingEvents({ events }: UpcomingEventsProps) {
                     </span>
                     <span className="text-xs text-navy-400 dark:text-white/40">{event.org}</span>
                   </div>
-                  <p className="mt-3 font-bold text-navy-700 group-hover:text-horchata-600 dark:text-horchata-200">
+                  <p className="mt-3 font-bold text-navy-700 group-hover:text-horchata-700 dark:text-horchata-200">
                     {event.talk}
                   </p>
                   <p className="mt-1 text-sm text-navy-500 dark:text-white/60">

@@ -25,7 +25,7 @@ export function CredentialsMarquee() {
             <span key={i} className="flex items-center gap-2 whitespace-nowrap">
               <Link
                 href={c.href}
-                className="text-sm font-medium text-navy-700 transition-colors hover:text-horchata-600 dark:text-horchata-200 dark:hover:text-horchata-400"
+                className="text-sm font-medium text-navy-700 transition-colors hover:text-horchata-700 dark:text-horchata-200 dark:hover:text-horchata-400"
               >
                 {c.text}
               </Link>

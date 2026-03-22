@@ -8,6 +8,8 @@ import {
   getContentByOrganization,
   getCategoryMaps,
 } from "@/lib/content";
+import { PrevNextNav } from "@/components/ui/prev-next-nav";
+import { ConnectCTA } from "@/components/sections/connect-cta";
 import { resolveImageUrl } from "@/lib/cloudinary";
 import { formatDate, formatDateRange } from "@/lib/utils";
 import { BlogCard } from "@/components/ui/blog-card";
@@ -53,6 +55,11 @@ export default async function OrganizationDetailPage({
 
   const { org, posts, experiences, testimonials, awards, education } = result;
   const { categoryImages } = getCategoryMaps();
+
+  const allOrgs = getOrganizations();
+  const currentIndex = allOrgs.findIndex((o) => o.slug === slug);
+  const prevOrg = currentIndex > 0 ? allOrgs[currentIndex - 1] : null;
+  const nextOrg = currentIndex < allOrgs.length - 1 ? allOrgs[currentIndex + 1] : null;
   const hasContent =
     posts.length > 0 ||
     experiences.length > 0 ||
@@ -85,7 +92,7 @@ export default async function OrganizationDetailPage({
               className="h-20 w-20 flex-shrink-0 rounded-xl object-contain"
             />
           ) : (
-            <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-xl bg-horchata-100 text-3xl font-bold text-horchata-600 dark:bg-navy-700 dark:text-horchata-400">
+            <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-xl bg-horchata-100 text-3xl font-bold text-horchata-700 dark:bg-navy-700 dark:text-horchata-400">
               {org.name.charAt(0)}
             </div>
           )}
@@ -103,7 +110,7 @@ export default async function OrganizationDetailPage({
                 href={org.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 inline-block text-sm font-medium text-horchata-800 hover:text-horchata-600 dark:text-horchata-400 dark:hover:text-horchata-200"
+                className="mt-2 inline-block text-sm font-medium text-horchata-800 hover:text-horchata-700 dark:text-horchata-400 dark:hover:text-horchata-200"
               >
                 Visit website
                 <svg className="ml-1 inline h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
@@ -134,7 +141,7 @@ export default async function OrganizationDetailPage({
                   <p className="text-xs font-medium text-navy-500 dark:text-horchata-400">
                     {formatDateRange(exp.startDate, exp.endDate)}
                   </p>
-                  <h3 className="mt-1 text-lg font-bold text-navy-900 group-hover:text-horchata-600 dark:text-horchata-100 dark:group-hover:text-horchata-400">
+                  <h3 className="mt-1 text-lg font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100 dark:group-hover:text-horchata-400">
                     {exp.title}
                   </h3>
                   {exp.location && (
@@ -169,7 +176,7 @@ export default async function OrganizationDetailPage({
                   <p className="text-xs font-medium text-navy-500 dark:text-horchata-400">
                     {formatDateRange(edu.startDate, edu.endDate)}
                   </p>
-                  <h3 className="mt-1 text-lg font-bold text-navy-900 group-hover:text-horchata-600 dark:text-horchata-100 dark:group-hover:text-horchata-400">
+                  <h3 className="mt-1 text-lg font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100 dark:group-hover:text-horchata-400">
                     {edu.degree}
                   </h3>
                   {edu.field && (
@@ -224,7 +231,7 @@ export default async function OrganizationDetailPage({
                   href={`/awards/${award.slug}`}
                   className="group rounded-xl border border-horchata-200 bg-white p-6 transition-shadow hover:shadow-md dark:border-navy-700 dark:bg-navy-800"
                 >
-                  <h3 className="text-lg font-bold text-navy-900 group-hover:text-horchata-600 dark:text-horchata-100">
+                  <h3 className="text-lg font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
                     {award.title}
                   </h3>
                   <p className="mt-1 text-sm text-navy-500 dark:text-horchata-400">
@@ -240,12 +247,22 @@ export default async function OrganizationDetailPage({
         <div className="mt-12">
           <Link
             href="/organizations"
-            className="text-sm font-medium text-horchata-800 hover:text-horchata-600 dark:text-horchata-400 dark:hover:text-horchata-200"
+            className="text-sm font-medium text-horchata-800 hover:text-horchata-700 dark:text-horchata-400 dark:hover:text-horchata-200"
           >
             &larr; All organizations
           </Link>
         </div>
+
+        <div className="mt-8">
+          <PrevNextNav
+            prev={prevOrg ? { slug: prevOrg.slug, title: prevOrg.name } : null}
+            next={nextOrg ? { slug: nextOrg.slug, title: nextOrg.name } : null}
+            basePath="/organizations"
+          />
+        </div>
       </div>
+
+      <ConnectCTA variant="hire" />
     </>
   );
 }

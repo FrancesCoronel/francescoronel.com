@@ -87,7 +87,7 @@ input, textarea, select {
 .prose {
   --tw-prose-body: var(--foreground);
   --tw-prose-headings: var(--foreground);
-  --tw-prose-links: var(--color-horchata-600);
+  --tw-prose-links: var(--color-horchata-700);
 }
 
 /* Marquee animation */
@@ -107,6 +107,11 @@ input, textarea, select {
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
+}
+
+/* Pointer cursor on all interactive elements */
+a, button, [role="button"], label[for], select, summary {
+  cursor: pointer;
 }
 
 /* Focus styles */

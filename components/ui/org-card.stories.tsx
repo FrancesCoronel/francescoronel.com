@@ -82,7 +82,7 @@ export const NoLogo: Story = {
       className="flex flex-col items-center gap-3 rounded-xl border border-horchata-200 bg-white p-5 text-center transition-shadow hover:shadow-lg"
       style={{ width: 160 }}
     >
-      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-horchata-100 text-xl font-bold text-horchata-600">
+      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-horchata-100 text-xl font-bold text-horchata-700">
         A
       </div>
       <p className="text-sm font-medium text-navy-900">Accenture</p>

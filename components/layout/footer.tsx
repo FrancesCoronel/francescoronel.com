@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { NewsletterForm } from "@/components/ui/newsletter-form";
 
 const socialLinks = [
   {
@@ -59,33 +60,34 @@ const socialLinks = [
 
 const footerNav = [
   {
-    heading: "Navigate",
+    heading: "Pages",
     links: [
       { href: "/about", label: "About" },
       { href: "/blog", label: "Blog" },
+      { href: "/contact", label: "Contact" },
+      { href: "/mentoring", label: "Mentoring" },
       { href: "/projects", label: "Projects" },
       { href: "/speaking", label: "Speaking" },
-      { href: "/mentoring", label: "Mentoring" },
-      { href: "/contact", label: "Contact" },
     ],
   },
   {
-    heading: "Explore",
+    heading: "More",
     links: [
-      { href: "/now", label: "Now" },
-      { href: "/organizations", label: "Organizations" },
-      { href: "/testimonials", label: "Testimonials" },
       { href: "/categories", label: "Categories" },
+      { href: "/design-system", label: "Design System" },
+      { href: "/organizations", label: "Organizations" },
       { href: "/tags", label: "Tags" },
+      { href: "/testimonials", label: "Testimonials" },
     ],
   },
   {
     heading: "Resources",
     links: [
-      { href: "/uses", label: "What I Use" },
+      { href: "/for-llms", label: "For LLMs" },
+      { href: "/now", label: "Now" },
       { href: "/feed", label: "RSS Feed" },
       { href: "/sitemap.xml", label: "Sitemap" },
-      { href: "/for-llms", label: "For LLMs" },
+      { href: "/uses", label: "What I Use" },
     ],
   },
 ];
@@ -100,12 +102,9 @@ export function Footer() {
             <Link href="/" className="text-xl font-bold text-navy-900 transition-colors hover:text-navy-700 dark:text-white dark:hover:text-white/80">
               Hi, I&apos;m Frances! 👋🏽
             </Link>
-            <div className="mt-2 max-w-xs text-sm leading-relaxed text-navy-600 dark:text-white/70">
-              <p className="whitespace-nowrap">Senior Software Engineer @ Slack 👩🏽‍💻</p>
-              <p>Speaker &amp; Mentor 🚀</p>
-              <p>Proud Peruvian-American 🇵🇪</p>
-              <p>Corgi Mom to Luna &amp; Sueño 🐾</p>
-            </div>
+            <p className="mt-2 max-w-xs text-sm leading-relaxed text-navy-600 dark:text-white/70">
+              Senior SWE at Slack · speaker · mentor · community builder · Bay Area 🇵🇪
+            </p>
 
             {/* Social links */}
             <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -115,7 +114,7 @@ export function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-lg border border-horchata-200 bg-horchata-100 p-2.5 text-horchata-600 transition-colors hover:bg-horchata-200 hover:text-horchata-800 dark:border-navy-600 dark:bg-navy-800 dark:text-horchata-400 dark:hover:bg-navy-700 dark:hover:text-horchata-200"
+                  className="rounded-lg border border-horchata-200 bg-horchata-100 p-2.5 text-horchata-700 transition-colors hover:bg-horchata-200 hover:text-horchata-800 dark:border-navy-600 dark:bg-navy-800 dark:text-horchata-400 dark:hover:bg-navy-700 dark:hover:text-horchata-200"
                   aria-label={link.label}
                 >
                   {link.icon}
@@ -125,33 +124,45 @@ export function Footer() {
           </div>
 
           {/* Nav columns */}
-          {footerNav.map((group) => (
-            <div key={group.heading}>
-              <p className="text-xs font-bold uppercase tracking-widest text-horchata-600 dark:text-horchata-500">
-                {group.heading}
-              </p>
-              <ul className="mt-3 flex flex-col gap-2">
-                {group.links.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-navy-600 transition-colors hover:text-navy-900 dark:text-white/70 dark:hover:text-white"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <nav aria-label="Footer navigation" className="contents">
+            {footerNav.map((group) => (
+              <div key={group.heading}>
+                <h3 className="text-xs font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
+                  {group.heading}
+                </h3>
+                <ul className="mt-3 flex flex-col gap-2">
+                  {group.links.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-sm text-navy-600 transition-colors hover:text-navy-900 dark:text-white/70 dark:hover:text-white"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </nav>
         </div>
 
-        <div className="mt-12 border-t border-horchata-200 pt-6 text-center text-xs text-navy-400 dark:border-navy-700 dark:text-white/40 md:text-left">
-          &copy; {new Date().getFullYear()}{" "}
-          <Link href="/" className="transition-colors hover:text-navy-600 dark:hover:text-white/70">
-            Frances Coronel
-          </Link>
-          . All rights reserved.
+        <div className="mt-12 border-t border-horchata-200 pt-6 dark:border-navy-700">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <p className="text-center text-xs text-navy-400 dark:text-white/40 md:text-left">
+              &copy; {new Date().getFullYear()}{" "}
+              <Link href="/" className="transition-colors hover:text-navy-600 dark:hover:text-white/70">
+                Frances Coronel
+              </Link>
+              . All rights reserved.
+            </p>
+            <div className="flex flex-col items-center gap-2 sm:flex-row sm:items-center sm:gap-3">
+              <span className="whitespace-nowrap text-xs font-medium text-navy-500 dark:text-white/50">
+                Subscribe to my newsletter
+              </span>
+              <NewsletterForm variant="footer" />
+            </div>
+          </div>
         </div>
       </div>
     </footer>

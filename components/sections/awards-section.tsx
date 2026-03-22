@@ -25,11 +25,11 @@ function AwardCard({
 
   const inner = (
     <>
-      <h3 className="text-base font-bold leading-snug text-navy-900 group-hover:text-horchata-600 dark:text-horchata-100">
+      <h3 className="text-base font-bold leading-snug text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
         {award.title}
         {isExternal && (
           <svg
-            className="ml-1.5 inline h-3.5 w-3.5 text-navy-400 transition-colors group-hover:text-horchata-600 dark:text-navy-500"
+            className="ml-1.5 inline h-3.5 w-3.5 text-navy-400 transition-colors group-hover:text-horchata-700 dark:text-navy-500"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"

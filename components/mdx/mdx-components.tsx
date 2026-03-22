@@ -90,7 +90,7 @@ function MdxLink({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-horchata-800 underline decoration-horchata-300 underline-offset-2 transition-colors hover:text-horchata-600 dark:text-horchata-400 dark:hover:text-horchata-200"
+        className="text-horchata-800 underline decoration-horchata-300 underline-offset-2 transition-colors hover:text-horchata-700 dark:text-horchata-400 dark:hover:text-horchata-200"
         {...props}
       >
         {children}
@@ -101,7 +101,7 @@ function MdxLink({
   return (
     <Link
       href={href}
-      className="text-horchata-800 underline decoration-horchata-300 underline-offset-2 transition-colors hover:text-horchata-600 dark:text-horchata-400 dark:hover:text-horchata-200"
+      className="text-horchata-800 underline decoration-horchata-300 underline-offset-2 transition-colors hover:text-horchata-700 dark:text-horchata-400 dark:hover:text-horchata-200"
       {...props}
     >
       {children}

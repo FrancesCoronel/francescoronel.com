@@ -1,3 +1,9 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+---
+
 # francescoronel.com 🌐
 
 My personal website — migrated from Webflow to a fully self-owned Next.js stack
@@ -39,8 +45,8 @@ Dedup script (`scripts/dedup-posts.js`) keeps the Webflow version when duplicate
 
 ### Routing 🗺️
 
-- **Static pages**: `/`, `/about`, `/blog`, `/contact`, `/speaking`, `/mentoring`, `/portfolio`, `/testimonials`, `/organizations`, `/for-llms`
-- **Dynamic SSG**: `/blog/[slug]`, `/categories/[slug]`, `/tags/[slug]`, `/experience/[slug]`, `/education/[slug]`, `/awards/[slug]`, `/organizations/[slug]`
+- **Static pages**: `/`, `/about`, `/blog`, `/contact`, `/speaking`, `/mentoring`, `/portfolio`, `/testimonials`, `/organizations`, `/for-llms`, `/tags`, `/experience`, `/education`, `/design-system`
+- **Dynamic SSG**: `/blog/[slug]`, `/categories/[slug]`, `/tags/[slug]`, `/experience/[slug]`, `/education/[slug]`, `/awards/[slug]`, `/organizations/[slug]`, `/testimonials/[slug]`
 - **API routes**: `/feed` (RSS), `/robots.txt`, `/sitemap.xml`
 
 ### Cross-Linking 🔗
@@ -115,7 +121,20 @@ npm run lighthouse       # run lighthouse CI (uses lighthouserc.json)
 npm run lighthouse:local # single-page lighthouse report (HTML output)
 npm run audit:a11y       # pa11y-ci accessibility audit
 npm run audit:full       # unlighthouse full-site audit (crawls all pages)
+npm run storybook        # launch Storybook dev server (port 6006)
+npm run build-storybook  # build static Storybook
+npm run test:storybook   # run Vitest component tests via addon-vitest
+npm run chromatic        # upload to Chromatic for visual regression
 ```
+
+## Custom Slash Commands 🔧
+
+Defined in `.claude/commands/` — invoke with `/command-name`:
+
+- `/new-post` — scaffold a new MDX blog post with frontmatter template
+- `/deploy` — build + push to trigger Vercel deployment
+- `/commit` — smart commit with conventional message
+- `/audit` — run performance & accessibility audits
 
 ## Design Tokens 🎨
 

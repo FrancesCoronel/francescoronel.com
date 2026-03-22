@@ -80,7 +80,7 @@ export default function NowPage() {
                     href="https://www.linkedin.com/in/andrew-rodriguez/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline decoration-horchata-300 underline-offset-2 transition-colors hover:text-horchata-600 dark:decoration-navy-500 dark:hover:text-horchata-400"
+                    className="underline decoration-horchata-300 underline-offset-2 transition-colors hover:text-horchata-700 dark:decoration-navy-500 dark:hover:text-horchata-400"
                   >
                     Andrew
                   </a>{" "}
@@ -100,7 +100,7 @@ export default function NowPage() {
               href="https://nownownow.com/about"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline decoration-horchata-300 underline-offset-2 transition-colors hover:text-horchata-600 dark:decoration-navy-500 dark:hover:text-horchata-400"
+              className="underline decoration-horchata-300 underline-offset-2 transition-colors hover:text-horchata-700 dark:decoration-navy-500 dark:hover:text-horchata-400"
             >
               /now page
             </a>

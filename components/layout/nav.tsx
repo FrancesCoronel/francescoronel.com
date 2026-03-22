@@ -9,9 +9,9 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 const navLinks = [
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
+  { href: "/mentoring", label: "Mentoring" },
   { href: "/projects", label: "Projects" },
   { href: "/speaking", label: "Speaking" },
-  { href: "/mentoring", label: "Mentoring" },
 ];
 
 export function Nav() {
@@ -23,7 +23,7 @@ export function Nav() {
       <nav className="mx-auto flex max-w-[var(--container-max)] items-center justify-between px-6 py-3">
         <Link
           href="/"
-          className="flex items-center gap-2 text-lg font-bold tracking-tight text-navy-900 transition-colors hover:text-horchata-600 dark:text-horchata-100 dark:hover:text-horchata-400"
+          className="flex items-center gap-2 text-lg font-bold tracking-tight text-navy-900 transition-colors hover:text-horchata-700 dark:text-horchata-100 dark:hover:text-horchata-400"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img

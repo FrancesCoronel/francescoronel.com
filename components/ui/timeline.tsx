@@ -28,7 +28,7 @@ export function Timeline({ items, dark }: { items: TimelineItem[]; dark?: boolea
               name={item.subtitle}
               size={48}
               className="h-full w-full rounded-full object-contain p-1.5"
-              avatarClassName={`h-full w-full text-sm font-bold ${dark ? "text-horchata-400" : "text-horchata-600 dark:text-horchata-400"}`}
+              avatarClassName={`h-full w-full text-sm font-bold ${dark ? "text-horchata-400" : "text-horchata-700 dark:text-horchata-400"}`}
             />
           </div>
 
@@ -39,7 +39,7 @@ export function Timeline({ items, dark }: { items: TimelineItem[]; dark?: boolea
             <h3 className={`mt-1 text-lg font-bold ${dark ? "text-horchata-100" : "text-navy-900 dark:text-horchata-100"}`}>
               <Link
                 href={`${item.linkPrefix}/${item.slug}`}
-                className="hover:text-horchata-400"
+                className="hover:text-horchata-700 dark:hover:text-horchata-400"
               >
                 {item.title}
               </Link>
@@ -48,7 +48,7 @@ export function Timeline({ items, dark }: { items: TimelineItem[]; dark?: boolea
               {item.subtitleHref ? (
                 <Link
                   href={item.subtitleHref}
-                  className={`underline underline-offset-2 transition-colors ${dark ? "decoration-white/30 hover:text-white" : "decoration-horchata-300 hover:text-horchata-600 dark:decoration-navy-500 dark:hover:text-horchata-400"}`}
+                  className={`underline underline-offset-2 transition-colors ${dark ? "decoration-white/30 hover:text-white" : "decoration-horchata-300 hover:text-horchata-700 dark:decoration-navy-500 dark:hover:text-horchata-400"}`}
                 >
                   {item.subtitle}
                 </Link>
