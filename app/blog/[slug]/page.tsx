@@ -11,6 +11,7 @@ import { formatDate, canOptimize } from "@/lib/utils";
 import { sanitizeMdxContent } from "@/lib/sanitize-mdx";
 import { mdxComponents } from "@/components/mdx/mdx-components";
 import { BlogCard } from "@/components/ui/blog-card";
+import { ReadingProgress } from "@/components/ui/reading-progress";
 import { buildMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import Link from "next/link";
@@ -102,6 +103,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <>
+    <ReadingProgress />
     <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
       {/* Header */}
       <header className="mb-10">
@@ -238,7 +240,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           className="flex items-center gap-5 rounded-2xl border border-horchata-200 bg-horchata-50 p-6 transition-all hover:border-horchata-400 hover:shadow-lg dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
         >
           <Image
-            src="/images/assets/frances-headshot.png"
+            src="/images/assets/frances-slack.jpg"
             alt="Frances Coronel"
             width={80}
             height={80}

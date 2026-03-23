@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { formatDate } from "@/lib/utils";
 
@@ -6,11 +7,34 @@ interface Award {
   title: string;
   date: string;
   url?: string;
+  organization?: string;
+  orgLogo?: string;
 }
 
 interface AwardsSectionProps {
   awards: Award[];
   blogPostMap?: Record<string, string>;
+}
+
+function AwardIcon({ orgLogo, organization }: { orgLogo?: string; organization?: string }) {
+  if (orgLogo) {
+    return (
+      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg bg-horchata-50 dark:bg-navy-700">
+        <Image
+          src={orgLogo}
+          alt={organization ?? ""}
+          width={32}
+          height={32}
+          className="h-8 w-8 object-contain"
+        />
+      </div>
+    );
+  }
+  return (
+    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-horchata-100 text-xl dark:bg-navy-700">
+      🏆
+    </div>
+  );
 }
 
 function AwardCard({
@@ -21,36 +45,44 @@ function AwardCard({
   blogSlug?: string;
 }) {
   const isExternal = !blogSlug && !!award.url;
-  const href = blogSlug ? `/blog/${blogSlug}` : award.url || null;
+  const href = blogSlug ? `/blog/${blogSlug}` : award.url || `/awards/${award.slug}`;
 
   const inner = (
-    <>
-      <h3 className="text-base font-bold leading-snug text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
-        {award.title}
-        {isExternal && (
-          <svg
-            className="ml-1.5 inline h-3.5 w-3.5 text-navy-400 transition-colors group-hover:text-horchata-700 dark:text-navy-500"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M7 17L17 7M17 7H7M17 7v10" />
-          </svg>
+    <div className="flex items-start gap-3">
+      <AwardIcon orgLogo={award.orgLogo} organization={award.organization} />
+      <div className="min-w-0">
+        <h3 className="text-sm font-bold leading-snug text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
+          {award.title}
+          {isExternal && (
+            <svg
+              className="ml-1.5 inline h-3.5 w-3.5 text-navy-400 transition-colors group-hover:text-horchata-700 dark:text-navy-500"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          )}
+        </h3>
+        {award.organization && (
+          <p className="mt-0.5 text-xs font-medium text-horchata-700 dark:text-horchata-500">
+            {award.organization}
+          </p>
         )}
-      </h3>
-      <p className="mt-1 text-sm text-navy-500 dark:text-horchata-400">
-        {formatDate(award.date)}
-      </p>
-    </>
+        <p className="mt-1 text-xs text-navy-400 dark:text-navy-500">
+          {formatDate(award.date)}
+        </p>
+      </div>
+    </div>
   );
 
   const linkedClassName =
-    "group rounded-2xl border border-horchata-200 bg-white p-5 transition-shadow hover:shadow-lg dark:border-navy-700 dark:bg-navy-800";
+    "group rounded-2xl border border-horchata-200 bg-white p-4 transition-shadow hover:shadow-lg dark:border-navy-700 dark:bg-navy-800";
   const plainClassName =
-    "rounded-2xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800";
+    "rounded-2xl border border-horchata-200 bg-white p-4 dark:border-navy-700 dark:bg-navy-800";
 
   if (!href) {
     return <div className={plainClassName}>{inner}</div>;

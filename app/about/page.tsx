@@ -173,8 +173,14 @@ export default function AboutPage() {
   const allPostsCount = roundDown(getAllBlogPosts().length);
   const speakingCount = roundDown(getBlogPostsByCategory("speaking").length);
   const yearsOfExperience = YEARS_OF_EXPERIENCE;
-  const awards = getAwards();
-  const organizations = getOrganizationsByActivity()
+  const allOrganizations = getOrganizationsByActivity();
+  const awards = getAwards().map((a) => {
+    const org = allOrganizations.find(
+      (o) => o.name.toLowerCase() === a.organization.toLowerCase()
+    );
+    return { ...a, orgLogo: org?.logo ?? "" };
+  });
+  const organizations = allOrganizations
     .filter((o) => o.logo && !EXCLUDED_FROM_FEATURED_ORGS.has(o.slug))
     .slice(0, 10);
   const testimonials = getTestimonials()
@@ -221,15 +227,28 @@ export default function AboutPage() {
         heading="About 👩🏽‍💻"
         description="I'm Frances Coronel, a Senior Software Engineer at Slack with 8+ years in frontend engineering. I build AI-powered developer tooling, speak at conferences, and mentor engineers at all levels. I care deeply about making technical leadership more accessible, especially for Latinas and underrepresented engineers in tech."
         aside={
-          <div className="h-56 w-56 overflow-hidden rounded-full bg-horchata-100 ring-4 ring-horchata-200 dark:bg-navy-700 dark:ring-navy-600 sm:h-72 sm:w-72 md:h-96 md:w-96">
-            <Image
-              src="/images/assets/frances-slack.jpg"
-              alt="Frances Coronel"
-              width={384}
-              height={384}
-              className="h-full w-full object-cover"
-              priority
-            />
+          <div className="relative flex-shrink-0">
+            <div className="h-56 w-56 overflow-hidden rounded-full bg-horchata-100 ring-4 ring-horchata-200 dark:bg-navy-700 dark:ring-navy-600 sm:h-72 sm:w-72 md:h-96 md:w-96">
+              <Image
+                src="/images/assets/frances-slack.jpg"
+                alt="Frances Coronel"
+                width={384}
+                height={384}
+                className="h-full w-full object-cover"
+                priority
+              />
+            </div>
+            {/* Memoji overlay */}
+            <div className="absolute -bottom-2 -left-2 h-20 w-20 sm:h-24 sm:w-24 md:-bottom-4 md:-left-4 md:h-32 md:w-32">
+              <Image
+                src="/images/assets/frances-thumbs-up-memoji.png"
+                alt="Frances Coronel thumbs-up memoji"
+                width={128}
+                height={128}
+                className="h-full w-full object-contain drop-shadow-md"
+                priority
+              />
+            </div>
           </div>
         }
       >

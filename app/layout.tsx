@@ -7,6 +7,7 @@ import { AnalyticsProviders } from "@/components/layout/analytics";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import { PersonJsonLd, WebSiteJsonLd } from "@/components/layout/json-ld";
 import { buildMetadata } from "@/lib/metadata";
+import { BackToTop } from "@/components/ui/back-to-top";
 import "./globals.css";
 
 const cabin = Cabin({
@@ -61,6 +62,7 @@ export default function RootLayout({
           <Nav />
           <main id="main-content" className="flex-1">{children}</main>
           <Footer />
+          <BackToTop />
           <AnalyticsProviders />
         </ThemeProvider>
       </body>

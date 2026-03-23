@@ -29,18 +29,18 @@ const upcomingEvents = [
 ];
 
 const featuredTalks = [
-  { org: "Dreamforce", orgSlug: "dreamforce", talk: "Exploring AI Agents in Slack", postSlug: "speaking-at-dreamforce-exploring-ai-agents-in-slack", image: "/images/speaking/dreamforce.jpg" },
-  { org: "Ripple", orgSlug: "ripple", talk: "Mujeres Fuertes: Honoring Latina Leadership in Tech", postSlug: "mujeres-fuertes-honoring-latina-leadership-in-tech-at-ripples-fireside-chat", image: "" },
-  { org: "Doximity", orgSlug: "doximity", talk: "Women of Color in Engineering Fireside Chat", postSlug: "reflections-on-my-fireside-chat-with-doximity-women-of-color-in-engineering", image: "" },
-  { org: "Techqueria", orgSlug: "techqueria", talk: "Community & Career Growth at Salesforce Tower", postSlug: "celebrating-community-and-career-growth-with-techqueria-at-salesforce-tower", image: "" },
-  { org: "Pluralsight", orgSlug: "pluralsight", talk: "The Unsuspecting Beauty & Complexity of Web Forms", postSlug: "the-unsuspecting-beauty-complexity-of-web-forms", image: "/images/speaking/pluralsight.png" },
-  { org: "Unidos US", orgSlug: "unidos-us", talk: "Latinas in Tech: Breaking the Digital Ceiling", postSlug: "latinas-in-tech", image: "/images/speaking/unidos-us.jpg" },
-  { org: "Asana", orgSlug: "asana", talk: "Real Talk: Diversity in Tech", postSlug: "real-talk-finding-your-voice-in-tech", image: "/images/speaking/asana.png" },
-  { org: "Stanford University", orgSlug: "stanford-university", talk: "Future of Work", postSlug: "", image: "" },
-  { org: "LTX Fest", orgSlug: "ltx-fest", talk: "Latinx Level Up, LIT Rising Stars", postSlug: "ltx-fest", image: "/images/speaking/ltx-fest.png" },
-  { org: "Coro Northern California", orgSlug: "coro-northern-california", talk: "Women in Leadership Alumni Panel", postSlug: "coro-women-in-leadership-alumnae-panel", image: "/images/speaking/coro.jpg" },
-  { org: "CodeNewbie", orgSlug: "codenewbie", talk: "What are Progressive Web Apps?", postSlug: "codenewbie-podcast-what-are-progressive-web-apps", image: "/images/speaking/codenewbie.png" },
-  { org: "Tech Intersections", orgSlug: "tech-intersections", talk: "Leveling Up on LinkedIn for Software Engineers", postSlug: "leveling-up-on-linkedin-for-software-engineers", image: "" },
+  { org: "Dreamforce", orgSlug: "dreamforce", talk: "Exploring AI Agents in Slack", postSlug: "speaking-at-dreamforce-exploring-ai-agents-in-slack", image: "/images/speaking/dreamforce.jpg", topics: ["AI", "Slack"] },
+  { org: "Ripple", orgSlug: "ripple", talk: "Mujeres Fuertes: Honoring Latina Leadership in Tech", postSlug: "mujeres-fuertes-honoring-latina-leadership-in-tech-at-ripples-fireside-chat", image: "", topics: ["Latinx Leadership", "Diversity"] },
+  { org: "Doximity", orgSlug: "doximity", talk: "Women of Color in Engineering Fireside Chat", postSlug: "reflections-on-my-fireside-chat-with-doximity-women-of-color-in-engineering", image: "", topics: ["Diversity", "Women in Engineering"] },
+  { org: "Techqueria", orgSlug: "techqueria", talk: "Community & Career Growth at Salesforce Tower", postSlug: "celebrating-community-and-career-growth-with-techqueria-at-salesforce-tower", image: "", topics: ["Community", "Career Growth"] },
+  { org: "Pluralsight", orgSlug: "pluralsight", talk: "The Unsuspecting Beauty & Complexity of Web Forms", postSlug: "the-unsuspecting-beauty-complexity-of-web-forms", image: "/images/speaking/pluralsight.png", topics: ["TypeScript", "Web Dev"] },
+  { org: "Unidos US", orgSlug: "unidos-us", talk: "Latinas in Tech: Breaking the Digital Ceiling", postSlug: "latinas-in-tech", image: "/images/speaking/unidos-us.jpg", topics: ["Latinx in Tech", "Diversity"] },
+  { org: "Asana", orgSlug: "asana", talk: "Real Talk: Diversity in Tech", postSlug: "real-talk-finding-your-voice-in-tech", image: "/images/speaking/asana.png", topics: ["Diversity", "Career"] },
+  { org: "Stanford University", orgSlug: "stanford-university", talk: "Future of Work", postSlug: "", image: "", topics: ["Future of Work"] },
+  { org: "LTX Fest", orgSlug: "ltx-fest", talk: "Latinx Level Up, LIT Rising Stars", postSlug: "ltx-fest", image: "/images/speaking/ltx-fest.png", topics: ["Latinx in Tech", "Career"] },
+  { org: "Coro Northern California", orgSlug: "coro-northern-california", talk: "Women in Leadership Alumni Panel", postSlug: "coro-women-in-leadership-alumnae-panel", image: "/images/speaking/coro.jpg", topics: ["Women in Leadership", "Diversity"] },
+  { org: "CodeNewbie", orgSlug: "codenewbie", talk: "What are Progressive Web Apps?", postSlug: "codenewbie-podcast-what-are-progressive-web-apps", image: "/images/speaking/codenewbie.png", topics: ["PWA", "Web Dev"] },
+  { org: "Tech Intersections", orgSlug: "tech-intersections", talk: "Leveling Up on LinkedIn for Software Engineers", postSlug: "leveling-up-on-linkedin-for-software-engineers", image: "", topics: ["LinkedIn", "Career"] },
 ];
 
 export default function SpeakingPage() {
@@ -138,6 +138,15 @@ export default function SpeakingPage() {
                       <p className="mt-0.5 text-sm font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100 dark:group-hover:text-horchata-300">
                         {talk.talk}
                       </p>
+                      {talk.topics.length > 0 && (
+                        <div className="mt-2 flex flex-wrap gap-1">
+                          {talk.topics.map((topic) => (
+                            <span key={topic} className="rounded-full bg-horchata-100 px-2 py-0.5 text-xs font-medium text-horchata-800 dark:bg-navy-700 dark:text-horchata-300">
+                              {topic}
+                            </span>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </Link>

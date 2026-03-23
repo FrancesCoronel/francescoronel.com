@@ -44,7 +44,7 @@ export function Hero() {
           <div className="relative flex-shrink-0">
             <div className="relative h-56 w-56 sm:h-72 sm:w-72 md:h-96 md:w-96 lg:h-[28rem] lg:w-[28rem]">
               <Image
-                src="/images/assets/frances-headshot.png"
+                src="/images/assets/frances-slack.jpg"
                 alt="Frances Coronel"
                 width={448}
                 height={448}
