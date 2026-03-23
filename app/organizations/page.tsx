@@ -6,6 +6,7 @@ import {
   getTestimonials,
   getAwards,
   getEducation,
+  getProjects,
 } from "@/lib/content";
 import { OrgGridClient } from "@/components/ui/org-grid-client";
 import { PageHeader } from "@/components/ui/page-header";
@@ -26,6 +27,7 @@ export default function OrganizationsPage() {
   const testimonials = getTestimonials();
   const awards = getAwards();
   const education = getEducation();
+  const projects = getProjects();
 
   const orgsWithCounts = organizations
     .map((org) => {
@@ -45,7 +47,10 @@ export default function OrganizationsPage() {
       const eduCount = education.filter(
         (e) => e.institution.toLowerCase() === orgName
       ).length;
-      const totalRefs = postCount + expCount + testCount + awardCount + eduCount;
+      const projectCount = projects.filter(
+        (p) => p.organization === org.slug
+      ).length;
+      const totalRefs = postCount + expCount + testCount + awardCount + eduCount + projectCount;
 
       return {
         name: org.name,
@@ -55,6 +60,7 @@ export default function OrganizationsPage() {
         totalRefs,
       };
     })
+    .filter((org) => org.totalRefs > 0)
     .sort((a, b) => b.totalRefs - a.totalRefs);
 
   return (

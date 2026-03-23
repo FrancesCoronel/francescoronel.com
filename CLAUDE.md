@@ -209,12 +209,17 @@ Every section must have BOTH a subheader label AND an emoji in the main heading.
 
 ## Alternating Section Backgrounds 🎨
 
-Pages must alternate between light and dark section backgrounds. First section after PageHeader is always light. Footer is always dark.
+Pages must alternate between light and dark section backgrounds.
 
-**Light sections** (default/first): `bg-white` or `bg-horchata-50 dark:bg-navy-900`
+**Rules:**
+- **Page headers** (PageHeader component or first hero section): always **light** bg
+- **Footer CTA** (ConnectCTA component, last content section): always **dark** bg
+- All sections in between alternate, starting with dark after the header
+
+**Light sections**: `bg-white` or `bg-horchata-50 dark:bg-navy-900`
 
 **Dark sections**: `border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950`
 
-Pattern: PageHeader(light) → dark → light → dark → light → ConnectCTA(light) → Footer(dark)
+Pattern: PageHeader(light) → dark → light → dark → NewsletterCTA → ConnectCTA(dark) → Footer(nav, dark)
 
 When adding a new section, check what the section before it is and apply the opposite bg. Use `sectionClassName` prop on shared components (like `TestimonialsPreview`) to override their default bg when needed.

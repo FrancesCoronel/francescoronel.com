@@ -14,6 +14,7 @@ import { BlogCard } from "@/components/ui/blog-card";
 import { ReadingProgress } from "@/components/ui/reading-progress";
 import { buildMetadata } from "@/lib/metadata";
 import { NewsletterCTA } from "@/components/sections/newsletter-cta";
+import { ConnectCTA } from "@/components/sections/connect-cta";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -292,6 +293,8 @@ export default async function BlogPostPage({ params }: PageProps) {
         </div>
       </section>
     )}
+
+    <ConnectCTA variant="follow" />
     </>
   );
 }

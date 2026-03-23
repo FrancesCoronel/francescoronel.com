@@ -4,7 +4,6 @@ import { getProjects } from "@/lib/content";
 import { buildMetadata } from "@/lib/metadata";
 import { PageHeader } from "@/components/ui/page-header";
 import { ConnectCTA } from "@/components/sections/connect-cta";
-import { NewsletterCTA } from "@/components/sections/newsletter-cta";
 import { getMultipleRepoStars } from "@/lib/github";
 import { ProjectsGridClient } from "@/components/ui/projects-grid-client";
 
@@ -82,8 +81,6 @@ export default async function ProjectsPage({
         featuredSlugs={FEATURED_SLUGS}
         initialSkill={skill}
       />
-
-      <NewsletterCTA />
 
       <ConnectCTA variant="projects" />
     </>

@@ -6,6 +6,7 @@ import Link from "next/link";
 import type { Project } from "@/lib/types";
 import { resolveImageUrl } from "@/lib/cloudinary";
 import { formatDateRange } from "@/lib/utils";
+import { PaginationNav } from "./pagination-nav";
 
 const PAGE_SIZE = 12;
 
@@ -171,80 +172,6 @@ function FeaturedProjectRow({
   );
 }
 
-function Pagination({
-  page,
-  totalPages,
-  onPage,
-}: {
-  page: number;
-  totalPages: number;
-  onPage: (p: number) => void;
-}) {
-  if (totalPages <= 1) return null;
-
-  const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
-  const showEllipsisEnd = totalPages > 7 && page < totalPages - 3;
-  const showEllipsisStart = totalPages > 7 && page > 4;
-
-  const visiblePages = pages.filter((p) => {
-    if (totalPages <= 7) return true;
-    if (p === 1 || p === totalPages) return true;
-    if (Math.abs(p - page) <= 1) return true;
-    return false;
-  });
-
-  return (
-    <div className="mt-12 flex items-center justify-center gap-1">
-      <button
-        onClick={() => onPage(page - 1)}
-        disabled={page === 1}
-        className="flex h-9 w-9 items-center justify-center rounded-full border border-horchata-200 text-navy-500 transition-colors hover:border-horchata-400 hover:text-navy-900 disabled:cursor-not-allowed disabled:opacity-30 dark:border-navy-700 dark:text-white/50 dark:hover:border-navy-500 dark:hover:text-white"
-        aria-label="Previous page"
-      >
-        <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M15 18l-6-6 6-6" />
-        </svg>
-      </button>
-
-      {visiblePages.map((p, i) => {
-        const prevVisible = visiblePages[i - 1];
-        const showStartEllipsis = showEllipsisStart && prevVisible && p - prevVisible > 1 && p !== 2;
-        const showEndEllipsis = showEllipsisEnd && i === visiblePages.length - 2;
-        return (
-          <span key={p} className="flex items-center gap-1">
-            {showStartEllipsis && (
-              <span className="px-1 text-sm text-navy-400 dark:text-white/30">…</span>
-            )}
-            <button
-              onClick={() => onPage(p)}
-              className={`flex h-9 w-9 items-center justify-center rounded-full text-sm font-medium transition-colors ${
-                p === page
-                  ? "bg-navy-900 text-white dark:bg-horchata-400 dark:text-navy-900"
-                  : "border border-horchata-200 text-navy-600 hover:border-horchata-400 hover:text-navy-900 dark:border-navy-700 dark:text-white/60 dark:hover:border-navy-500 dark:hover:text-white"
-              }`}
-            >
-              {p}
-            </button>
-            {showEndEllipsis && (
-              <span className="px-1 text-sm text-navy-400 dark:text-white/30">…</span>
-            )}
-          </span>
-        );
-      })}
-
-      <button
-        onClick={() => onPage(page + 1)}
-        disabled={page === totalPages}
-        className="flex h-9 w-9 items-center justify-center rounded-full border border-horchata-200 text-navy-500 transition-colors hover:border-horchata-400 hover:text-navy-900 disabled:cursor-not-allowed disabled:opacity-30 dark:border-navy-700 dark:text-white/50 dark:hover:border-navy-500 dark:hover:text-white"
-        aria-label="Next page"
-      >
-        <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M9 18l6-6-6-6" />
-        </svg>
-      </button>
-    </div>
-  );
-}
 
 export function ProjectsGridClient({
   projects,
@@ -365,7 +292,7 @@ export function ProjectsGridClient({
                     />
                   ))}
                 </div>
-                <Pagination page={filteredPage} totalPages={filteredTotalPages} onPage={setFilteredPage} />
+                <PaginationNav page={filteredPage} totalPages={filteredTotalPages} onPage={setFilteredPage} />
               </>
             )}
           </div>
@@ -420,7 +347,7 @@ export function ProjectsGridClient({
                   />
                 ))}
               </div>
-              <Pagination page={restPage} totalPages={restTotalPages} onPage={setRestPage} />
+              <PaginationNav page={restPage} totalPages={restTotalPages} onPage={setRestPage} />
             </div>
           </section>
         </>

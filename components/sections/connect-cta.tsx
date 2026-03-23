@@ -33,7 +33,7 @@ const variants: Record<
     primaryHref: "/contact",
     secondaryLabel: "Follow on LinkedIn",
     secondaryHref: "https://www.linkedin.com/in/francescoronel",
-    image: "/images/assets/memoji-fistbump.png",
+    image: "/images/assets/speaking-microphone.png",
   },
   mentoring: {
     heading: "Level Up Your Career 💬",
@@ -97,7 +97,7 @@ export function ConnectCTA({ variant = "default" }: ConnectCTAProps) {
   const isSecondaryExternal = v.secondaryHref.startsWith("http");
 
   return (
-    <section className="border-y border-horchata-200 bg-horchata-50 py-16 dark:border-navy-700 dark:bg-navy-900">
+    <section className="border-y border-horchata-200 bg-horchata-100 py-16 dark:border-navy-700 dark:bg-navy-950">
       <div className="mx-auto max-w-2xl px-6 text-center">
         <Image
           src={v.image}

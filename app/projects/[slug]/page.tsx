@@ -8,6 +8,7 @@ import { resolveImageUrl } from "@/lib/cloudinary";
 import { formatDateRange } from "@/lib/utils";
 import { getRepoData } from "@/lib/github";
 import { ConnectCTA } from "@/components/sections/connect-cta";
+import { NewsletterCTA } from "@/components/sections/newsletter-cta";
 import { PrevNextNav } from "@/components/ui/prev-next-nav";
 import nailedItEpisodes from "@/content/nailed-it-episodes.json";
 import nailedItContestants from "@/content/nailed-it-contestants.json";
@@ -402,6 +403,8 @@ export default async function ProjectPage({ params }: PageProps) {
           basePath="/projects"
         />
       </div>
+
+      <NewsletterCTA />
 
       <ConnectCTA variant="hire" />
     </>
