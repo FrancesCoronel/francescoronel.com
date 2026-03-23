@@ -267,8 +267,7 @@ const nextConfig: NextConfig = {
         destination: "/mentoring",
         permanent: true,
       },
-      // ── Portfolio → Projects ─────────────────────────────
-      { source: "/portfolio", destination: "/projects", permanent: true },
+      // ── Portfolio/Projects → Work ─────────────────────────
       { source: "/blog/hire-me", destination: "/projects/hire-me", permanent: true },
       {
         source: "/blog/salesforce-day-1-web-campaign",
