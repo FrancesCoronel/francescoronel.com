@@ -28,7 +28,7 @@ import { ConnectCTA } from "@/components/sections/connect-cta";
 export const metadata: Metadata = buildMetadata({
   title: "About",
   description:
-    "Frances Coronel is a senior software engineer at Slack with 10+ years of experience. Speaker, mentor, and proud Peruvian-American. 👩🏽‍💻",
+    "Frances Coronel is a Senior Software Engineer at Slack with 8+ years of experience in frontend engineering and AI adoption. Speaker, mentor, and proud Peruvian-American. 👩🏽‍💻",
   path: "/about",
   ogImage: "/images/og/about.jpg",
 });
@@ -51,37 +51,52 @@ const awardBlogPosts: Record<string, string> = {
 
 const bioVariants = [
   {
+    label: "Short Bio",
+    content: (
+      <p>
+        Senior Software Engineer at Slack with 8+ years in frontend engineering
+        and an MS in Computer Science from Cornell Tech. Speaker at 100+ events
+        and mentor focused on helping underrepresented engineers grow into
+        technical leadership.
+      </p>
+    ),
+  },
+  {
+    label: "Social Media",
+    content: (
+      <p>
+        Senior Software Engineer @ Slack 👩🏽‍💻 | Speaker &amp; Mentor 🚀 |
+        Corgi Mom 🐕 | 40 Under 40 Latinos in Bay Area 🌉 | Empowering
+        the next generation of engineers 💛
+      </p>
+    ),
+  },
+  {
     label: "First Person",
     content: (
       <>
         <p>
-          Hi! I&apos;m Frances Coronel — a senior software engineer, speaker,
+          Hi! I&apos;m Frances Coronel, a Senior Software Engineer at Slack, speaker,
           mentor, and proud Corgi mom.
         </p>
         <p>
-          I&apos;ve been coding professionally since 2015, building my career at the intersection of design,
-          product, and engineering. My sweet spot is crafting{" "}
-          user-centered, high-impact experiences in{" "}
-          React and TypeScript that help millions of
-          people get work done more efficiently.
+          I hold a Bachelor&apos;s in Computer Science from Hampton University and a Master&apos;s
+          in Computer Science from Cornell Tech. I&apos;ve been working full-time as a software
+          engineer since 2017, specializing in frontend engineering with React and TypeScript.
+          I&apos;m currently on Slack&apos;s DevXP pillar, focused on AI adoption
+          and developer productivity, building agentic workflows and tooling that help engineers
+          move faster with AI, and helping non-engineers confidently use those same tools
+          alongside them.
         </p>
         <p>
-          Right now, I work at Slack on the <strong>Messaging team</strong>,
-          where I&apos;m focused on frontend architecture, notifications, and sidebar systems —
-          the foundation of how teams communicate and collaborate every day.
+          Beyond Slack, I enjoy mentoring other engineers and I&apos;ve logged 250+ hours of
+          technical and behavioral interview prep. I&apos;ve also spoken at 100+ events on
+          frontend engineering topics and building a career in tech with intention.
         </p>
         <p>
-          Beyond my day-to-day engineering work, I&apos;m passionate about{" "}
-          mentorship and representation in tech. I&apos;ve
-          mentored hundreds of engineers through organizations like
-          Formation, served as Executive Director of Techqueria, and
-          spoken at over 100 events.
-        </p>
-        <p>
-          As a proud Peruvian-American, I care deeply about creating
-          more visibility and access for underrepresented communities in
-          engineering and leadership roles. I grew up in Norfolk, Virginia,
-          and now live in the Bay Area with my two Corgis and my boyfriend Andrew.
+          As a proud Peruvian-American from Norfolk, Virginia, I care about making technical
+          leadership more accessible, especially for Latinas and underrepresented engineers.
+          I now live in the Bay Area with my two Corgis, Luna and Sueño, and my partner Andrew.
         </p>
       </>
     ),
@@ -91,55 +106,33 @@ const bioVariants = [
     content: (
       <>
         <p>
-          Frances Coronel is a senior software engineer,
+          Frances Coronel is a Senior Software Engineer at Slack,
           speaker, mentor, and proud Corgi mom.
         </p>
         <p>
-          Since 2015, she has built a career at the intersection of product, design, and
-          engineering — crafting user-centered, high-impact experiences
-          that help millions of people get work done more efficiently.
+          With 8+ years of experience in frontend engineering, she specializes in
+          React and TypeScript, building high-impact products used by millions.
+          She currently works on Slack&apos;s DevXP pillar, focused on AI
+          adoption and developer productivity, shipping agentic workflows and internal
+          tooling that help engineers move faster with AI, and enabling non-engineers
+          to confidently use those same tools alongside them.
         </p>
         <p>
-          She currently works at Slack on the <strong>Messaging team</strong>,
-          focused on frontend architecture, notifications, and sidebar systems —
-          the foundation of how teams communicate and collaborate every day.
+          Frances led the settings redesign that drove a 5x increase in engagement
+          and served as Engineering Manager on the Lists team before returning to
+          her individual contributor roots in AI tooling.
         </p>
         <p>
-          Beyond her engineering work, Frances is deeply committed to
-          mentorship, community building, and representation in tech.
-          She has mentored hundreds of aspiring and experienced engineers
-          through programs like Formation, served as Executive Director of Techqueria,
-          and spoken at over 100 events.
+          Beyond her engineering work, Frances is deeply committed to mentorship,
+          community building, and representation in tech. She has mentored hundreds
+          of engineers, served as Executive Director of Techqueria, and spoken at
+          over 100 events.
         </p>
         <p>
-          Originally from Norfolk, Virginia,
-          Frances now calls the Bay Area home, where she
-          lives with her two Corgis, Luna and Sueño, and her boyfriend Andrew.
+          Originally from Norfolk, Virginia, Frances now calls the Bay Area home,
+          where she lives with her two Corgis, Luna and Sueño, and her partner Andrew.
         </p>
       </>
-    ),
-  },
-  {
-    label: "Short Bio",
-    content: (
-      <p>
-        Frances Coronel is a Senior Software Engineer at Slack, speaker,
-        and mentor passionate about building intuitive, high-impact
-        experiences that empower teams worldwide. A proud
-        Peruvian-American and Corgi mom based in the Bay Area, she loves
-        scuba diving, Netflix marathons, and laughing with her partner
-        Andrew.
-      </p>
-    ),
-  },
-  {
-    label: "Social Media",
-    content: (
-      <p>
-        Senior Software Engineer @ Slack 👩🏽‍💻 | Speaker & Mentor 🚀 |
-        Corgi Mom 🐾 | 40 Under 40 Latinos in Bay Area 🌉 | Empowering
-        the next generation of engineers 💛
-      </p>
     ),
   },
   {
@@ -148,25 +141,23 @@ const bioVariants = [
     content: (
       <>
         <p>
-          Frances Coronel is a Senior Software Engineer at{" "}
-          Slack, where she builds core messaging
-          experiences that help millions of people work more efficiently
-          every day.
+          Frances Coronel is a Senior Software Engineer at Slack, where she works
+          on the DevXP pillar focused on AI adoption and developer productivity,
+          building agentic workflows and internal tooling that help engineers move
+          faster with AI.
         </p>
         <p>
-          With nearly a decade of experience in{" "}
-          frontend engineering, Frances specializes in{" "}
-          React and TypeScript, bridging
-          design and development to deliver elegant, user-centered
-          solutions at scale.
+          With 8+ years of experience in frontend engineering, Frances specializes
+          in React and TypeScript, bridging design and development to deliver
+          elegant, user-centered solutions at scale. Her work on Slack&apos;s settings
+          redesign drove a 5x increase in user engagement.
         </p>
         <p>
-          A proud Peruvian-American, Frances is also a{" "}
-          speaker, mentor, and diversity advocate who has
-          mentored hundreds of engineers and spoken at more than 100 events.
-          Originally from Norfolk, Virginia, Frances now lives in
-          the Bay Area with her two Corgis,{" "}
-          Luna and Sueño.
+          A proud Peruvian-American, Frances is also a speaker, mentor, and
+          diversity advocate who has mentored hundreds of engineers and spoken
+          at more than 100 events. Originally from Norfolk, Virginia, Frances
+          now lives in the Bay Area with her two Corgis, Luna and Sueño,
+          and her partner Andrew.
         </p>
       </>
     ),
@@ -227,7 +218,7 @@ export default function AboutPage() {
       <PageHeader
         label="Engineer, Speaker & Mentor"
         heading="About 👩🏽‍💻"
-        description="I'm Frances Coronel — a senior software engineer at Slack with 10+ years of experience building products used by millions. I craft frontend experiences in React and TypeScript, mentor the next generation of engineers, and speak at conferences worldwide to make tech more inclusive."
+        description="I'm Frances Coronel, a Senior Software Engineer at Slack with 8+ years in frontend engineering. I build AI-powered developer tooling, speak at conferences, and mentor engineers at all levels. I care deeply about making technical leadership more accessible, especially for Latinas and underrepresented engineers in tech."
         aside={
           <div className="h-56 w-56 overflow-hidden rounded-full bg-horchata-100 ring-4 ring-horchata-200 dark:bg-navy-700 dark:ring-navy-600 sm:h-72 sm:w-72 md:h-96 md:w-96">
             <Image
@@ -315,26 +306,33 @@ export default function AboutPage() {
       <TestimonialsPreview testimonials={displayTestimonials} />
 
       {/* Stats */}
-      <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
+      <section className="border-y border-horchata-200 bg-horchata-50 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <div className="mb-10 text-center">
-            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <div className="mb-12 text-center">
+            <p className="text-xs font-bold uppercase tracking-widest text-horchata-600 dark:text-horchata-500">
               By the Numbers
             </p>
-            <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
-              Impact at a Glance 📊
+            <h2 className="mt-2 text-3xl font-bold text-navy-900 dark:text-horchata-100">
+              Impact at a Glance
             </h2>
           </div>
-          <div className="grid gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 divide-x divide-y divide-horchata-200 lg:grid-cols-4 lg:divide-y-0 dark:divide-navy-700">
             {[
-              { stat: `${mentoringSessionCount}+`, label: "Mentoring sessions logged", href: "/mentoring" },
-              { stat: `${allPostsCount}+`, label: "Blog posts published", href: "/blog" },
-              { stat: `${speakingCount}+`, label: "Speaking events since 2015", href: "/speaking" },
-              { stat: `${yearsOfExperience}+`, label: "Years of full-time experience", href: "#experience" },
-            ].map(({ stat, label, href }) => (
-              <Link key={label} href={href} className="group rounded-2xl p-4 transition-colors hover:bg-horchata-200 dark:hover:bg-navy-800">
-                <p className="text-5xl font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100 dark:group-hover:text-horchata-400">{stat}</p>
-                <p className="mt-2 text-sm text-navy-500 dark:text-white/60">{label}</p>
+              { stat: `${mentoringSessionCount}+`, label: "Mentoring sessions", sublabel: "logged", href: "/mentoring" },
+              { stat: `${allPostsCount}+`, label: "Blog posts", sublabel: "published", href: "/blog" },
+              { stat: `${speakingCount}+`, label: "Speaking events", sublabel: "since 2015", href: "/speaking" },
+              { stat: `${yearsOfExperience}+`, label: "Years of experience", sublabel: "full-time", href: "#experience" },
+            ].map(({ stat, label, sublabel, href }) => (
+              <Link
+                key={label}
+                href={href}
+                className="group flex flex-col items-center gap-1 px-6 py-8 text-center transition-colors hover:bg-horchata-100 dark:hover:bg-navy-800/60 first:rounded-tl-2xl sm:first:rounded-bl-2xl last:rounded-br-2xl sm:last:rounded-tr-2xl"
+              >
+                <span className="block text-6xl font-bold tracking-tight text-horchata-700 transition-colors group-hover:text-horchata-800 dark:text-horchata-400 dark:group-hover:text-horchata-300">
+                  {stat}
+                </span>
+                <span className="mt-1 text-sm font-semibold text-navy-800 dark:text-white/80">{label}</span>
+                <span className="text-xs text-navy-400 dark:text-white/40">{sublabel}</span>
               </Link>
             ))}
           </div>

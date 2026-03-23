@@ -22,7 +22,7 @@ export async function generateMetadata({
   const testimonial = getTestimonialBySlug(slug);
   if (!testimonial) return {};
   return buildMetadata({
-    title: `Testimonial — ${testimonial.role}${testimonial.organization ? ` at ${testimonial.organization}` : ""}`,
+    title: `Testimonial: ${testimonial.role}${testimonial.organization ? ` at ${testimonial.organization}` : ""}`,
     description: testimonial.quote.slice(0, 160) + "...",
     path: `/testimonials/${slug}`,
     robots: { index: false, follow: true },

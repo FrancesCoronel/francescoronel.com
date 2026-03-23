@@ -175,6 +175,73 @@ for (const testimonial of testimonials) {
   }
 }
 
+// Check for external URLs in TSX page files that point to known-dead domains
+const KNOWN_DEAD_URL_DOMAINS = [
+  "irvue.app",
+];
+
+const tsxFiles = [
+  path.join(appDir, "uses/page.tsx"),
+  path.join(appDir, "speaking/page.tsx"),
+  path.join(appDir, "about/page.tsx"),
+  path.join(appDir, "contact/page.tsx"),
+  path.join(appDir, "mentoring/page.tsx"),
+];
+
+for (const f of tsxFiles) {
+  if (!fs.existsSync(f)) continue;
+  const content = fs.readFileSync(f, "utf8");
+  const urlPattern = /["'](https?:\/\/[^"'\s]+)["']/g;
+  let match;
+  while ((match = urlPattern.exec(content)) !== null) {
+    const url = match[1];
+    for (const domain of KNOWN_DEAD_URL_DOMAINS) {
+      if (url.includes(domain)) {
+        errors.push({
+          file: path.relative(path.join(__dirname, ".."), f),
+          type: "dead-external-url",
+          ref: url,
+          message: `URL "${url}" points to known-dead domain "${domain}"`,
+        });
+      }
+    }
+  }
+}
+
+// Check for bad featuredImage URLs
+const DEAD_IMAGE_DOMAINS = [
+  "uploads-ssl.webflow.com",
+  "cdn.prod.website-files.com",
+  "atomic-temporary",
+  "wpcomstaging.com",
+  "cnet2.cbsistatic.com",
+  "encrypted-tbn0.gstatic.com",
+  "i.imgur.com",
+  "image.slidesharecdn.com",
+];
+
+for (const f of blogFiles) {
+  const content = fs.readFileSync(path.join(blogDir, f), "utf8");
+  const fm = content.match(/^---\n([\s\S]*?)\n---/);
+  if (!fm) continue;
+
+  const imgMatch = fm[1].match(/^featuredImage:\s*["']?(.+?)["']?\s*$/m);
+  if (!imgMatch) continue;
+  const imgUrl = imgMatch[1].trim();
+  if (!imgUrl || imgUrl === '""' || imgUrl === "''") continue;
+
+  for (const domain of DEAD_IMAGE_DOMAINS) {
+    if (imgUrl.includes(domain)) {
+      errors.push({
+        file: `content/blog/${f}`,
+        type: "featured-image",
+        ref: imgUrl,
+        message: `featuredImage points to ${domain} — migrate to Vercel Blob`,
+      });
+    }
+  }
+}
+
 // Report results
 if (warnings.length > 0) {
   console.log(`Warnings (${warnings.length}):`);

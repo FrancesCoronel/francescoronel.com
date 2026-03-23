@@ -9,14 +9,16 @@ on:
     branches: [main]
     paths:
       - "content/**"
+      - "app/**"
   schedule:
     - cron: "0 9 * * 1"  # Every Monday at 9am UTC
   workflow_dispatch:
 
 jobs:
-  check-links:
+  # ── Internal link integrity (routes, slugs, featured images) ──────────────
+  check-internal:
+    name: Internal links
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
@@ -24,5 +26,109 @@ jobs:
         with:
           node-version: 22
 
-      - name: Check for broken links
+      - name: Check internal links, slugs, and featured image domains
+        id: internal
         run: node scripts/check-broken-links.js
+
+      - name: Notify Slack on failure
+        if: failure() && steps.internal.outcome == 'failure' && github.event_name == 'schedule'
+        uses: slackapi/slack-github-action@v2
+        with:
+          channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
+          payload: |
+            {
+              "text": ":broken_heart: *Broken internal links detected on francescoronel.com*",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": ":broken_heart: *Broken internal links detected on francescoronel.com*\n\nThe weekly link check found issues with internal routes, slugs, or featured image domains."
+                  }
+                },
+                {
+                  "type": "actions",
+                  "elements": [
+                    {
+                      "type": "button",
+                      "text": { "type": "plain_text", "text": "View Run" },
+                      "url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+
+  # ── External link checker (lychee) ────────────────────────────────────────
+  check-external:
+    name: External links (lychee)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check external links
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --config lychee.toml
+            --no-progress
+            --output ./lychee/out.md
+            --format markdown
+            app/uses/page.tsx
+            app/speaking/page.tsx
+            app/about/page.tsx
+            app/contact/page.tsx
+            app/mentoring/page.tsx
+            content/projects.json
+          # Don't fail the job — let the issue + Slack do the alerting
+          fail: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Open or update GitHub issue if broken links found
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "🔗 Broken external links detected"
+          content-filepath: ./lychee/out.md
+          labels: |
+            bug
+            maintenance
+
+      - name: Notify Slack if broken links found
+        if: steps.lychee.outputs.exit_code != 0 && github.event_name == 'schedule'
+        uses: slackapi/slack-github-action@v2
+        with:
+          channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
+          payload: |
+            {
+              "text": ":link: *Broken external links detected on francescoronel.com*",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": ":link: *Broken external links detected on francescoronel.com*\n\nThe weekly link check found dead URLs in page files or project data. A GitHub issue has been opened with the full report."
+                  }
+                },
+                {
+                  "type": "actions",
+                  "elements": [
+                    {
+                      "type": "button",
+                      "text": { "type": "plain_text", "text": "View Issues" },
+                      "url": "${{ github.server_url }}/${{ github.repository }}/issues?q=is%3Aissue+is%3Aopen+label%3Amaintenance"
+                    },
+                    {
+                      "type": "button",
+                      "text": { "type": "plain_text", "text": "View Run" },
+                      "url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}

@@ -28,7 +28,7 @@ const tools = [
       {
         name: "GitHub CLI",
         description:
-          "Command-line interface for GitHub — PRs, issues, actions, and code review without leaving the terminal",
+          "Command-line interface for GitHub: PRs, issues, actions, and code review without leaving the terminal",
         url: "https://cli.github.com",
         image: "/images/tools/github.png",
       },
@@ -42,7 +42,7 @@ const tools = [
       {
         name: "KeyCastr",
         description:
-          "Open-source keystroke visualizer — displays key presses on screen for screen recordings, demos, and talks",
+          "Open-source keystroke visualizer that displays key presses on screen for screen recordings, demos, and talks",
         url: "https://github.com/keycastr/keycastr",
         icon: "⌨️",
       },
@@ -61,14 +61,14 @@ const tools = [
       {
         name: "Wispr Flow",
         description:
-          "AI voice dictation — speak naturally and it transcribes directly into any text field with smart punctuation and formatting",
+          "AI voice dictation. Speak naturally and it transcribes directly into any text field with smart punctuation and formatting",
         url: "https://wisprflow.ai",
         icon: "🎙️",
       },
       {
         name: "Grammarly",
         description:
-          "AI writing assistant — grammar, clarity, tone, and style suggestions across every text field and browser tab",
+          "AI writing assistant with grammar, clarity, tone, and style suggestions across every text field and browser tab",
         url: "https://grammarly.com",
         icon: "✍️",
       },
@@ -80,7 +80,7 @@ const tools = [
       {
         name: "Monarch",
         description:
-          "Personal finance dashboard — budgets, net worth tracking, transactions, and goals across all accounts in one place",
+          "Personal finance dashboard for budgets, net worth tracking, transactions, and goals across all accounts in one place",
         url: "https://monarchmoney.com",
         icon: "👑",
       },
@@ -104,49 +104,49 @@ const tools = [
       {
         name: "Claude",
         description:
-          "AI coding assistant powering my entire development workflow — code generation, reviews, debugging, and Slack communication",
+          "AI coding assistant powering my entire development workflow: code generation, reviews, debugging, and Slack communication",
         url: "https://claude.ai",
         image: "/images/tools/claude.png",
       },
       {
         name: "Reclaim.ai",
         description:
-          "AI-powered calendar management — auto-schedules habits, tasks, and focus time around meetings",
+          "AI-powered calendar management that auto-schedules habits, tasks, and focus time around meetings",
         url: "https://reclaim.ai",
         image: "/images/tools/reclaim.png",
       },
       {
         name: "Raycast",
         description:
-          "Blazing fast launcher replacing Spotlight — extensions for clipboard history, snippets, window management, and app switching",
+          "Blazing fast launcher replacing Spotlight, with extensions for clipboard history, snippets, window management, and app switching",
         url: "https://raycast.com",
         image: "/images/tools/raycast.png",
       },
       {
         name: "Rocket",
         description:
-          "System-wide emoji picker — type a colon anywhere to search and insert emoji without leaving the keyboard",
+          "System-wide emoji picker. Type a colon anywhere to search and insert emoji without leaving the keyboard",
         url: "https://matthewpalmer.net/rocket/",
         icon: "🚀",
       },
       {
         name: "Flux",
         description:
-          "Adjusts display color temperature based on time of day — warmer tones at night to reduce eye strain",
+          "Adjusts display color temperature based on time of day, with warmer tones at night to reduce eye strain",
         url: "https://justgetflux.com",
         icon: "🌅",
       },
       {
         name: "BetterSnapTool",
         description:
-          "Window snapping and management — drag windows to screen edges for instant resizing and tiling",
+          "Window snapping and management. Drag windows to screen edges for instant resizing and tiling",
         url: "https://folivora.ai/bettersnaptool",
         icon: "🪟",
       },
       {
         name: "Itsycal",
         description:
-          "Tiny menu bar calendar — quick glance at upcoming events without opening Calendar.app",
+          "Tiny menu bar calendar for a quick glance at upcoming events without opening Calendar.app",
         url: "https://www.mowglii.com/itsycal/",
         image: "/images/tools/itsycal.png",
       },
@@ -154,7 +154,7 @@ const tools = [
         name: "Irvue",
         description:
           "Automatic wallpaper changer that pulls stunning photos from Unsplash and refreshes your desktop on a schedule",
-        url: "https://irvue.app",
+        url: "https://apps.apple.com/us/app/irvue/id1039633667",
         icon: "🖼️",
       },
     ],
@@ -165,7 +165,7 @@ const tools = [
       {
         name: "Healthier",
         description:
-          "Simple macOS habit tracker for building and maintaining daily routines — minimal UI, lives in the menu bar",
+          "Simple macOS habit tracker for building and maintaining daily routines. Minimal UI, lives in the menu bar",
         url: "https://healthier.app",
         icon: "💪",
       },
@@ -177,7 +177,7 @@ const tools = [
       {
         name: "Figma",
         description:
-          "Collaborative design tool for UI/UX, prototyping, and visual design — also used via MCP server for design-to-code workflows",
+          "Collaborative design tool for UI/UX, prototyping, and visual design, also used via MCP server for design-to-code workflows",
         url: "https://figma.com",
         image: "/images/tools/figma.png",
       },
@@ -191,14 +191,14 @@ const tools = [
       {
         name: "Gamma",
         description:
-          "AI-powered presentation tool — generates polished slide decks, documents, and webpages from a prompt",
+          "AI-powered presentation tool that generates polished slide decks, documents, and webpages from a prompt",
         url: "https://gamma.app",
         image: "/images/tools/gamma.jpg",
       },
       {
         name: "Gifox",
         description:
-          "Lightweight screen recorder for capturing GIFs — perfect for PR demos and bug reports",
+          "Lightweight screen recorder for capturing GIFs, perfect for PR demos and bug reports",
         url: "https://gifox.app",
         image: "/images/tools/gifox.jpg",
       },
@@ -272,7 +272,7 @@ const skills = [
     command: "/slack-message",
     file: "slack-message.md",
     description:
-      "Draft conversational Slack messages matching my writing style — tone, emoji patterns, formatting, and word choice",
+      "Draft conversational Slack messages matching my writing style: tone, emoji patterns, formatting, and word choice",
     category: "Slack",
     icon: "💬",
   },
@@ -281,7 +281,7 @@ const skills = [
     command: "/slack-draft",
     file: "slack-draft.md",
     description:
-      "Draft or send a Slack message — asks whether to use your text or draft from scratch, formats with proper Slack mrkdwn",
+      "Draft or send a Slack message. Asks whether to use your text or draft from scratch, formats with proper Slack mrkdwn",
     category: "Slack",
     icon: "✏️",
   },
@@ -299,7 +299,7 @@ const skills = [
     command: "/code-review",
     file: "code-review.md",
     description:
-      "Review a PR for code quality, type safety, CSS issues, and test coverage — outputs findings in chat, never posts to GitHub",
+      "Review a PR for code quality, type safety, CSS issues, and test coverage. Outputs findings in chat, never posts to GitHub",
     category: "Git",
     icon: "🔍",
   },
@@ -308,7 +308,7 @@ const skills = [
     command: "/tone-voice",
     file: "tone-voice.md",
     description:
-      "Unified writing style — applies across Slack, GitHub, and docs with platform-specific formatting and consistent voice",
+      "Unified writing style across Slack, GitHub, and docs with platform-specific formatting and consistent voice",
     category: "Writing",
     icon: "🗣️",
   },

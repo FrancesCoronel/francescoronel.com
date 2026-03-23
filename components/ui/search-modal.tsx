@@ -235,7 +235,7 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
           {/* Footer hint */}
           {!query.trim() && (
             <div className="px-4 py-6 text-center text-xs text-navy-400 dark:text-horchata-500">
-              Search across all 844+ pages — blog posts, projects, talks, and
+              Search across all 844+ pages: blog posts, projects, talks, and
               more
             </div>
           )}

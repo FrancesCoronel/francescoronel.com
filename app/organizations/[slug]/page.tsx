@@ -37,7 +37,7 @@ export async function generateMetadata({
 
   const { org } = result;
   const description = org.description ||
-    `Everything related to ${org.name} — blog posts, experience, testimonials, and more.`;
+    `Everything related to ${org.name}: blog posts, experience, testimonials, and more.`;
   return buildMetadata({
     title: org.name,
     description,

@@ -57,7 +57,7 @@ function ProjectCard({
           />
         ) : (
           <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-horchata-100 text-2xl dark:bg-navy-700">
-            🛠️
+            {project.emoji ?? "🛠️"}
           </div>
         )}
         <div className="flex flex-col items-end gap-1">
@@ -76,11 +76,8 @@ function ProjectCard({
       <h2 className="mt-4 text-lg font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100 dark:group-hover:text-horchata-400">
         {project.title}
       </h2>
-      <p className="mt-1 text-sm text-horchata-700 dark:text-horchata-400">
+      <p className="mt-2 flex-1 text-sm text-navy-600 dark:text-white/70">
         {project.tagline}
-      </p>
-      <p className="mt-3 flex-1 text-sm text-navy-600 dark:text-white/70">
-        {project.description}
       </p>
       <div className="mt-4 flex items-center justify-between gap-2">
         <p className="text-xs text-navy-400 dark:text-white/40">
@@ -97,7 +94,7 @@ function ProjectCard({
               </svg>
             </span>
           )}
-          {stars != null && (
+          {stars != null && stars > 0 && (
             <span className="flex items-center gap-1 text-xs text-navy-400 dark:text-white/40">
               <svg
                 className="h-3 w-3 fill-current text-horchata-500"
@@ -118,19 +115,23 @@ export function ProjectsGridClient({
   projects,
   starsMap,
   featuredSlugs,
+  initialSkill,
 }: {
   projects: Project[];
   starsMap: Record<string, number | null>;
   featuredSlugs: string[];
+  initialSkill?: string;
 }) {
   const [activeFilter, setActiveFilter] = useState<FilterKey>("all");
   const [githubOnly, setGithubOnly] = useState(false);
+  const [skillFilter, setSkillFilter] = useState<string | null>(initialSkill ?? null);
 
-  const isFiltering = activeFilter !== "all" || githubOnly;
+  const isFiltering = activeFilter !== "all" || githubOnly || skillFilter !== null;
 
   const filtered = projects.filter((p) => {
     if (activeFilter !== "all" && p.category !== activeFilter) return false;
     if (githubOnly && !p.github) return false;
+    if (skillFilter && !p.skills.includes(skillFilter)) return false;
     return true;
   });
 
@@ -157,6 +158,15 @@ export function ProjectsGridClient({
                 {tab.label}
               </button>
             ))}
+            {skillFilter && (
+              <button
+                onClick={() => setSkillFilter(null)}
+                className="flex items-center gap-1.5 rounded-full bg-horchata-700 px-3.5 py-1.5 text-sm font-medium text-white dark:bg-horchata-500 dark:text-navy-900"
+              >
+                {skillFilter}
+                <svg className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+              </button>
+            )}
             <button
               onClick={() => setGithubOnly((v) => !v)}
               className={`ml-auto flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors ${

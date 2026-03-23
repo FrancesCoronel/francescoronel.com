@@ -4,7 +4,7 @@
     "slug": "latina-dev",
     "tagline": "Open-source directory of Latina software engineers",
     "logo": "https://raw.githubusercontent.com/Latina-Dev/latina-dev/main/public/img/logos/logo.png",
-    "url": "https://latina.dev/",
+    "url": "https://latina.dev",
     "startDate": "2022-10-01T00:00:00.000Z",
     "endDate": null,
     "category": "open-source",
@@ -27,7 +27,7 @@
     "slug": "apprenticeships-me",
     "tagline": "Directory of tech apprenticeships",
     "logo": "https://www.apprenticeships.me/images/logo.svg",
-    "url": "https://apprenticeships.me/",
+    "url": "https://apprenticeships.me",
     "startDate": "2019-05-01T00:00:00.000Z",
     "endDate": null,
     "category": "open-source",
@@ -133,7 +133,7 @@
       "javascript"
     ],
     "organization": "slack",
-    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/64ada0d56ff0228892106628_Organization%20Logos%20for%20Webflow.png"
+    "image": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/static/64ada0d56ff0228892106628_Organization%2520Logos%2520for%2520Webflow.png"
   },
   {
     "title": "Nailed It! Netflix Contestant Tracker",
@@ -161,7 +161,7 @@
     "slug": "hire-me",
     "tagline": "A curated guide to getting an awesome tech gig",
     "logo": "https://www.engjobsearch.com/_images/icon.svg",
-    "url": "https://www.engjobsearch.com",
+    "url": "https://engjobsearch.com",
     "startDate": "2018-01-01T00:00:00.000Z",
     "endDate": null,
     "category": "open-source",
@@ -181,7 +181,7 @@
   {
     "title": "TSP.gov Redesign",
     "slug": "tsp-gov-redesign",
-    "tagline": "Redesign of tsp.gov for the HUGE Design School challenge",
+    "tagline": "Redesign of the tsp.gov website for HUGE Design School challenge. 🖌️",
     "logo": "",
     "url": "http://francescoronel.github.io/tsp-gov",
     "startDate": "2017-01-01T00:00:00.000Z",
@@ -199,7 +199,8 @@
       "html",
       "css"
     ],
-    "github": "FrancesCoronel/tsp-gov"
+    "github": "FrancesCoronel/tsp-gov",
+    "emoji": "🏛️"
   },
   {
     "title": "Diversify Me",
@@ -221,7 +222,8 @@
       "open-source",
       "community-building"
     ],
-    "github": "FrancesCoronel/diversify-me"
+    "github": "FrancesCoronel/diversify-me",
+    "emoji": "🌈"
   },
   {
     "title": "NYT Comm",
@@ -263,7 +265,8 @@
       "open-source",
       "career-advice"
     ],
-    "github": "FrancesCoronel/cover-letter-templates"
+    "github": "FrancesCoronel/cover-letter-templates",
+    "emoji": "📄"
   },
   {
     "title": "Dotfiles",
@@ -284,7 +287,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/dotfiles"
+    "github": "FrancesCoronel/dotfiles",
+    "emoji": "⚙️"
   },
   {
     "title": "Automator Workflows",
@@ -304,7 +308,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/automator-workflows"
+    "github": "FrancesCoronel/automator-workflows",
+    "emoji": "🤖"
   },
   {
     "title": "Slack.com Contact Sales Form",
@@ -331,7 +336,7 @@
       "css"
     ],
     "organization": "slack",
-    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f4459086bc3288417ce_Blog-Post-Slack.com-Contact-Sales-Form.png"
+    "image": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/static/63b28f4459086bc3288417ce_Blog-Post-Slack.com-Contact-Sales-Form.png"
   },
   {
     "title": "Slack Interactive Demo Homepage",
@@ -379,7 +384,7 @@
       "css"
     ],
     "organization": "slack",
-    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f3bedd8f5590b160985_Screen-Shot-2020-11-08-at-8.21.09-PM.png"
+    "image": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/static/63b28f3bedd8f5590b160985_Screen-Shot-2020-11-08-at-8.21.09-PM.png"
   },
   {
     "title": "Slack Immersive Homepage",
@@ -425,7 +430,7 @@
       "css"
     ],
     "organization": "slack",
-    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f3bdd9044bdc6f5eb4d_Screen-Shot-2020-11-08-at-8.23.37-PM.png"
+    "image": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/static/63b28f3bdd9044bdc6f5eb4d_Screen-Shot-2020-11-08-at-8.23.37-PM.png"
   },
   {
     "title": "Slack University Recruiting Page",
@@ -449,7 +454,7 @@
       "css"
     ],
     "organization": "slack",
-    "image": "https://cdn.prod.website-files.com/63b0b035359373d0cc473202/63b28f433b0afb6c93484557_2018-08-11-university-recruiting-mobile.png"
+    "image": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/static/63b28f433b0afb6c93484557_2018-08-11-university-recruiting-mobile.png"
   },
   {
     "title": "Slack Enterprise Page Redesign",
@@ -474,7 +479,7 @@
       "css"
     ],
     "organization": "slack",
-    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f4308650bcb04d4c8c1_new-enterprise-page-top-section.png"
+    "image": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/static/63b28f4308650bcb04d4c8c1_new-enterprise-page-top-section.png"
   },
   {
     "title": "Slack Downloads Page Refresh",
@@ -499,7 +504,7 @@
       "css"
     ],
     "organization": "slack",
-    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f4e3214e82e5ba64df7_Downloads-Page.png"
+    "image": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/static/63b28f4e3214e82e5ba64df7_Downloads-Page.png"
   },
   {
     "title": "Slack Partner Referral Form",
@@ -522,7 +527,7 @@
       "javascript"
     ],
     "organization": "slack",
-    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f441504f936dd103677_Blog-Post-Slack-Partner-Referral-Form.png"
+    "image": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/static/63b28f441504f936dd103677_Blog-Post-Slack-Partner-Referral-Form.png"
   },
   {
     "title": "Slack.com Consent Updates for Forms",
@@ -546,7 +551,7 @@
       "javascript"
     ],
     "organization": "slack",
-    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f4f34a33d78c1aa4332_Slack.com-Consent-Updates-for-Forms.png"
+    "image": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/static/63b28f4f34a33d78c1aa4332_Slack.com-Consent-Updates-for-Forms.png"
   },
   {
     "title": "Slack.com Webinar Form Registration",
@@ -570,7 +575,7 @@
       "javascript"
     ],
     "organization": "slack",
-    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f49b49fa19df883351c_Slack.com-Webinar-Registration.png"
+    "image": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/static/63b28f49b49fa19df883351c_Slack.com-Webinar-Registration.png"
   },
   {
     "title": "Slack Lists: Files Column",
@@ -644,7 +649,7 @@
       "typescript"
     ],
     "organization": "byteboard",
-    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f55b49fa146c8833555_Client-Platform-Candidate-Actions.png"
+    "image": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/static/63b28f55b49fa146c8833555_Client-Platform-Candidate-Actions.png"
   },
   {
     "title": "Byteboard Pre-Interview Comms & Interview Hub",
@@ -668,7 +673,7 @@
       "typescript"
     ],
     "organization": "byteboard",
-    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/65ee40168dc418fda4797b56_63b28f55e03dc5388f29976f_interview-hub-welcome.png"
+    "image": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/static/65ee40168dc418fda4797b56_63b28f55e03dc5388f29976f_interview-hub-welcome.png"
   },
   {
     "title": "Byteboard Zero State Dashboard",
@@ -718,7 +723,7 @@
       "javascript"
     ],
     "organization": "techqueria",
-    "image": "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f4f10dd57285e4cc3c1_Techqueria-Job-Board.png"
+    "image": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/static/63b28f4f10dd57285e4cc3c1_Techqueria-Job-Board.png"
   },
   {
     "title": "Wordpress Website",
@@ -737,7 +742,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/wordpress-website"
+    "github": "FrancesCoronel/wordpress-website",
+    "emoji": "📝"
   },
   {
     "title": "Francescoronel.Github.Io",
@@ -757,7 +763,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/francescoronel.github.io"
+    "github": "FrancesCoronel/francescoronel.github.io",
+    "emoji": "🌐"
   },
   {
     "title": "Personal Website V2",
@@ -776,7 +783,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/personal-website-v2"
+    "github": "FrancesCoronel/personal-website-v2",
+    "emoji": "🌐"
   },
   {
     "title": "Hugoma",
@@ -796,7 +804,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/hugoma"
+    "github": "FrancesCoronel/hugoma",
+    "emoji": "🎨"
   },
   {
     "title": "Maintain Me",
@@ -816,7 +825,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/maintain-me"
+    "github": "FrancesCoronel/maintain-me",
+    "emoji": "🔧"
   },
   {
     "title": "Slack Front End",
@@ -836,7 +846,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/slack-front-end"
+    "github": "FrancesCoronel/slack-front-end",
+    "emoji": "💬"
   },
   {
     "title": "Typescript Book",
@@ -856,7 +867,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/typescript-book"
+    "github": "FrancesCoronel/typescript-book",
+    "emoji": "📚"
   },
   {
     "title": "Vanilla Box",
@@ -875,7 +887,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/vanilla-box"
+    "github": "FrancesCoronel/vanilla-box",
+    "emoji": "📦"
   },
   {
     "title": "Personal Website V1",
@@ -894,7 +907,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/personal-website-v1"
+    "github": "FrancesCoronel/personal-website-v1",
+    "emoji": "🌐"
   },
   {
     "title": "Coding Interviews",
@@ -914,7 +928,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/coding-interviews"
+    "github": "FrancesCoronel/coding-interviews",
+    "emoji": "💻"
   },
   {
     "title": "Docsify Starter",
@@ -934,7 +949,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/docsify-starter"
+    "github": "FrancesCoronel/docsify-starter",
+    "emoji": "📖"
   },
   {
     "title": "Social Justice Foss",
@@ -954,7 +970,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/social-justice-foss"
+    "github": "FrancesCoronel/social-justice-foss",
+    "emoji": "✊"
   },
   {
     "title": "Ga Super Proxy",
@@ -974,7 +991,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/ga-super-proxy"
+    "github": "FrancesCoronel/ga-super-proxy",
+    "emoji": "📊"
   },
   {
     "title": "Pacific Shores Shuttle",
@@ -994,7 +1012,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/pacific-shores-shuttle"
+    "github": "FrancesCoronel/pacific-shores-shuttle",
+    "emoji": "🚌"
   },
   {
     "title": "Accenture Alexa Hackathon",
@@ -1014,7 +1033,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/accenture-alexa-hackathon"
+    "github": "FrancesCoronel/accenture-alexa-hackathon",
+    "emoji": "🗣️"
   },
   {
     "title": "Party Activities",
@@ -1034,7 +1054,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/party-activities"
+    "github": "FrancesCoronel/party-activities",
+    "emoji": "🎉"
   },
   {
     "title": "Mothersday Netflix",
@@ -1054,7 +1075,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/mothersday-netflix"
+    "github": "FrancesCoronel/mothersday-netflix",
+    "emoji": "🎬"
   },
   {
     "title": "Sukromia",
@@ -1074,7 +1096,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/sukromia"
+    "github": "FrancesCoronel/sukromia",
+    "emoji": "✨"
   },
   {
     "title": "Todo App",
@@ -1094,7 +1117,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/todo-app"
+    "github": "FrancesCoronel/todo-app",
+    "emoji": "✅"
   },
   {
     "title": "Holberton Website",
@@ -1114,7 +1138,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/holberton-website"
+    "github": "FrancesCoronel/holberton-website",
+    "emoji": "🏫"
   },
   {
     "title": "Fullstack Me",
@@ -1134,7 +1159,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/fullstack-me"
+    "github": "FrancesCoronel/fullstack-me",
+    "emoji": "🖥️"
   },
   {
     "title": "Git Guardian",
@@ -1154,7 +1180,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/git-guardian"
+    "github": "FrancesCoronel/git-guardian",
+    "emoji": "🔐"
   },
   {
     "title": "School Apps",
@@ -1174,7 +1201,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/school-apps"
+    "github": "FrancesCoronel/school-apps",
+    "emoji": "🎓"
   },
   {
     "title": "Duolingo Delights",
@@ -1193,7 +1221,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/duolingo-delights"
+    "github": "FrancesCoronel/duolingo-delights",
+    "emoji": "🦉"
   },
   {
     "title": "Keynote Jeopardy",
@@ -1213,7 +1242,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/keynote-jeopardy"
+    "github": "FrancesCoronel/keynote-jeopardy",
+    "emoji": "🎯"
   },
   {
     "title": "Venus Co",
@@ -1233,7 +1263,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/venus-co"
+    "github": "FrancesCoronel/venus-co",
+    "emoji": "💄"
   },
   {
     "title": "Num Colors",
@@ -1252,7 +1283,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/num-colors"
+    "github": "FrancesCoronel/num-colors",
+    "emoji": "🎨"
   },
   {
     "title": "Anagram",
@@ -1271,7 +1303,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/anagram"
+    "github": "FrancesCoronel/anagram",
+    "emoji": "🔤"
   },
   {
     "title": "Time",
@@ -1290,7 +1323,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/time"
+    "github": "FrancesCoronel/time",
+    "emoji": "⏱️"
   },
   {
     "title": "Leap Auth Home",
@@ -1309,7 +1343,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/leap-auth-home"
+    "github": "FrancesCoronel/leap-auth-home",
+    "emoji": "🔑"
   },
   {
     "title": "Cornell Tech Logos",
@@ -1329,7 +1364,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/cornell-tech-logos"
+    "github": "FrancesCoronel/cornell-tech-logos",
+    "emoji": "🎓"
   },
   {
     "title": "Mysocialcanvas",
@@ -1349,7 +1385,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/mysocialcanvas"
+    "github": "FrancesCoronel/mysocialcanvas",
+    "emoji": "📱"
   },
   {
     "title": "Startup Systems",
@@ -1368,7 +1405,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/startup-systems"
+    "github": "FrancesCoronel/startup-systems",
+    "emoji": "🚀"
   },
   {
     "title": "Tech Events",
@@ -1388,7 +1426,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/tech-events"
+    "github": "FrancesCoronel/tech-events",
+    "emoji": "📅"
   },
   {
     "title": "Beato",
@@ -1408,7 +1447,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/beato"
+    "github": "FrancesCoronel/beato",
+    "emoji": "🎵"
   },
   {
     "title": "Bebop Me",
@@ -1428,7 +1468,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/bebop-me"
+    "github": "FrancesCoronel/bebop-me",
+    "emoji": "🎺"
   },
   {
     "title": "Icon Designs",
@@ -1448,7 +1489,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/icon-designs"
+    "github": "FrancesCoronel/icon-designs",
+    "emoji": "🖼️"
   },
   {
     "title": "Built In Norfolk",
@@ -1468,7 +1510,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/built-in-norfolk"
+    "github": "FrancesCoronel/built-in-norfolk",
+    "emoji": "🏙️"
   },
   {
     "title": "Customize Icons",
@@ -1488,7 +1531,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/customize-icons"
+    "github": "FrancesCoronel/customize-icons",
+    "emoji": "🎨"
   },
   {
     "title": "Slack Invites",
@@ -1508,7 +1552,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/slack-invites"
+    "github": "FrancesCoronel/slack-invites",
+    "emoji": "💬"
   },
   {
     "title": "Sexy Sublime",
@@ -1528,7 +1573,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/sexy-sublime"
+    "github": "FrancesCoronel/sexy-sublime",
+    "emoji": "🎨"
   },
   {
     "title": "Weyland Corp",
@@ -1548,10 +1594,11 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/weyland-corp"
+    "github": "FrancesCoronel/weyland-corp",
+    "emoji": "🚀"
   },
   {
-    "title": "Cs Hu",
+    "title": "CS at Hampton University",
     "slug": "cs-hu",
     "tagline": "Material from my CS courses at Hampton University from Jan 2014 - May 2016 🎓",
     "logo": "",
@@ -1568,7 +1615,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/cs-hu"
+    "github": "FrancesCoronel/cs-hu",
+    "emoji": "🎓"
   },
   {
     "title": "Fullstack Academy",
@@ -1588,7 +1636,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/fullstack-academy"
+    "github": "FrancesCoronel/fullstack-academy",
+    "emoji": "🏫"
   },
   {
     "title": "Rankme",
@@ -1608,7 +1657,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/rankme"
+    "github": "FrancesCoronel/rankme",
+    "emoji": "🏆"
   },
   {
     "title": "Codewars Kata",
@@ -1628,7 +1678,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/codewars-kata"
+    "github": "FrancesCoronel/codewars-kata",
+    "emoji": "⚔️"
   },
   {
     "title": "Flashcards",
@@ -1648,7 +1699,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/flashcards"
+    "github": "FrancesCoronel/flashcards",
+    "emoji": "🃏"
   },
   {
     "title": "Trip Planner Live Ui",
@@ -1668,7 +1720,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/trip-planner-live-ui"
+    "github": "FrancesCoronel/trip-planner-live-ui",
+    "emoji": "✈️"
   },
   {
     "title": "Trip Planner Persistent",
@@ -1688,7 +1741,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/trip-planner-persistent"
+    "github": "FrancesCoronel/trip-planner-persistent",
+    "emoji": "✈️"
   },
   {
     "title": "Wikistack",
@@ -1708,7 +1762,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/wikistack"
+    "github": "FrancesCoronel/wikistack",
+    "emoji": "📖"
   },
   {
     "title": "Twitter Clone",
@@ -1728,7 +1783,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/twitter-clone"
+    "github": "FrancesCoronel/twitter-clone",
+    "emoji": "🐦"
   },
   {
     "title": "Guessing Game",
@@ -1748,10 +1804,11 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/guessing-game"
+    "github": "FrancesCoronel/guessing-game",
+    "emoji": "🎮"
   },
   {
-    "title": "Intro Cs",
+    "title": "Intro to CS",
     "slug": "intro-cs",
     "tagline": "An intro to computer science for HU kids 📔",
     "logo": "",
@@ -1768,7 +1825,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/intro-cs"
+    "github": "FrancesCoronel/intro-cs",
+    "emoji": "💻"
   },
   {
     "title": "Personal Website V3",
@@ -1788,7 +1846,8 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/personal-website-v3"
+    "github": "FrancesCoronel/personal-website-v3",
+    "emoji": "🌐"
   },
   {
     "title": "Coder Bits",
@@ -1808,6 +1867,7 @@
     "skills": [
       "open-source"
     ],
-    "github": "FrancesCoronel/coder-bits"
+    "github": "FrancesCoronel/coder-bits",
+    "emoji": "💡"
   }
 ]

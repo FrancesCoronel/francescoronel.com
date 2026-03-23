@@ -44,7 +44,7 @@ export function getBlogPost(slug: string, { includeDrafts = false } = {}): BlogP
     slug: frontmatter.slug || slug,
     title: frontmatter.title,
     date: frontmatter.date,
-    excerpt: frontmatter.excerpt || "",
+    excerpt: frontmatter.excerpt || content.replace(/^---[\s\S]*?---\n/, "").replace(/[#*`>_[\]()!|]/g, "").replace(/\s+/g, " ").trim().slice(0, 160) || "",
     featuredImage: frontmatter.featuredImage || "",
     categories: frontmatter.categories || [],
     tags: frontmatter.tags || [],

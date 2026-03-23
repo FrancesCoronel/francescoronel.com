@@ -58,7 +58,7 @@ const variants: Record<
   hire: {
     heading: "Let\u2019s Work Together \uD83D\uDCBC",
     description:
-      "10+ years of software engineering experience, from startups to enterprise. Open to speaking, advising, and collaboration opportunities.",
+      "8+ years of software engineering experience, from startups to enterprise. Open to speaking, advising, and collaboration opportunities.",
     primaryLabel: "Get in Touch",
     primaryHref: "/contact",
     secondaryLabel: "Book Me to Speak",

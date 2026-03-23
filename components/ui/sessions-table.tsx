@@ -48,6 +48,25 @@ const SOURCE_COLORS: Record<string, string> = {
   leland: "bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-400",
 };
 
+const SOURCE_LOGOS: Record<string, string> = {
+  formation: "/images/organizations/formation.png",
+  calendly:  "/images/organizations/calendly.png",
+  leland:    "/images/organizations/leland.svg",
+  "cal.com": "/images/organizations/cal-com.png",
+};
+
+function SourceLogo({ source }: { source: string }) {
+  const src = SOURCE_LOGOS[source];
+  if (!src) return null;
+  return (
+    <img
+      src={src}
+      alt={source}
+      className="h-4 w-4 rounded-sm object-contain"
+    />
+  );
+}
+
 function formatDate(dateStr: string) {
   return new Date(dateStr + "T12:00:00").toLocaleDateString("en-US", {
     year: "numeric",
@@ -252,7 +271,7 @@ export function SessionsTable() {
                     )}
                   </td>
                   <td className="px-4 py-2.5">
-                    <span className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${CATEGORY_COLORS[category]}`}>
+                    <span className={`rounded-full px-3 py-1 text-xs font-semibold ${CATEGORY_COLORS[category]}`}>
                       {CATEGORY_LABELS[category]}
                     </span>
                   </td>
@@ -260,7 +279,8 @@ export function SessionsTable() {
                     {session.cost != null ? `$${session.cost.toFixed(2)}` : <span className="text-navy-300 dark:text-white/20">—</span>}
                   </td>
                   <td className="px-4 py-2.5">
-                    <span className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${SOURCE_COLORS[src] ?? SOURCE_COLORS["calendly"]}`}>
+                    <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ${SOURCE_COLORS[src] ?? SOURCE_COLORS["calendly"]}`}>
+                      <SourceLogo source={src} />
                       {SOURCE_LABELS[src] ?? src}
                     </span>
                   </td>

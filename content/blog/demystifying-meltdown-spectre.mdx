@@ -3,7 +3,7 @@ title: "Demystifying Meltdown & Spectre"
 slug: "demystifying-meltdown-spectre"
 date: "2018-02-16"
 excerpt: ""
-featuredImage: "https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0b08650b55a4d4c56c_aWN2RkM.jpeg"
+featuredImage: "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0b08650b55a4d4c56c_aWN2RkM.jpeg"
 categories: ["portfolio"]
 tags: ["diversity-and-inclusion"]
 organizations: []
@@ -20,87 +20,87 @@ As a developer evangelist, you will often be called upon to speak at a variety o
 ## Solution
 > I had less about two days to come up with a 20-minute presentation that breaks down Meltdown & Spectre so I’m open to any feedback if you notice something off. 😊
 Hey everyone! So I was tasked with “demystifying Meltdown & Spectre” for you all. Ideally, by the end of this presentation, you’ll have a better high-level understanding of how they both work.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0b08650b55a4d4c56c_aWN2RkM.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0b08650b55a4d4c56c_aWN2RkM.jpeg)
 We’ll be first providing some context into Meltdown & Spectre, deep diving into the mechanisms, how they compare, existing solutions and why everyone freaked out in the first place.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b3e56d4c56d_oQo9MkC.jpeg)![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b117ad4c57d_5bGqWBi.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b3e56d4c56d_oQo9MkC.jpeg)![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b117ad4c57d_5bGqWBi.jpeg)
 So as you know the two players in questions are Meltdown and Spectre. These are probably some of the best logos I’ve seen that are associated with what are probably the worst computer vulnerabilities to ever be discovered since they pretty much affect everyone around the world. Okay, so having said that, Meltdown and Spectre are the names given to CPU flaws that affect nearly every computer chip manufactured within the last 22 years.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650bdc94d4c56f_28utdhT.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650bdc94d4c56f_28utdhT.jpeg)
 The CPU is the hardware in charge of executing all the programs on our devices.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b56b2d4c576_ZAs6cLb.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b56b2d4c576_ZAs6cLb.jpeg)
 The CPU meaning the “central processing unit” of a machine or otherwise known as “the brain” of the machine.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b5a81d4c577_g47jcyH.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b5a81d4c577_g47jcyH.jpeg)
 The researchers behind the project who came from Google Project Zero and universities like the Graz University of Technology actually knew of the bugs since last summer but were actually not supposed to be leaked to the public until January 9th of this year.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b17ffd4c56e_o9hQ5iY.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b17ffd4c56e_o9hQ5iY.jpeg)
 So from around July 2017 to January 2018, the bugs were supposed to be kept top secret so that companies could have time to create and release patches to mitigate the issues.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b17a5d4c599_nPq8LiQ.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b17a5d4c599_nPq8LiQ.jpeg)
 However, a British tech news site called The Register eventually leaked it a few days before in the first week of January…
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650ba13ad4c580_GDOonMB.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650ba13ad4c580_GDOonMB.jpeg)
 …and media outlets went into frenzy mode but more on that later.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b3fa5d4c58d_gGBPePw.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b3fa5d4c58d_gGBPePw.jpeg)
 So going in for deep dive, let’s explore how Meltdown works first.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b7848d4c590_m4yzaFm.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b7848d4c590_m4yzaFm.jpeg)
 Meltdown affects Intel processors and basically melts security boundaries which are normally enforced by the hardware. It does this by breaking down the mechanism that keeps applications from accessing memory.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b0315d4c587_t6nNAeq.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b0315d4c587_t6nNAeq.jpeg)
 Let me provide an analogy.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b23aed4c589_J6yiYEy.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b23aed4c589_J6yiYEy.jpeg)
 Let’s say you’re trying to rob a bank vault where inside there is a piece of paper with the bank manager’s password in it. The bank vault has a lot of security and is heavily guarded so it seems pretty well protected.…But that bank is about to experience a Meltdown. Being the mastermind you are, you lead a group of robbers to help carry out an attack.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b2725d4c582_MFDU72J.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b2725d4c582_MFDU72J.jpeg)
 You have an unlimited supply of robbers so you sort of brute force it and sends an agent in to try and get in without getting caught. Each of your agents wears a microphone so you can hear them at all times. Since there’s an unlimited number of agents so you just keep trying until one succeeds. Finally, an agent gets into the vault and is able to look at the piece of paper with the password on it. They whisper the password into the microphone just before the guard shoots them down. Now you know the password and can use it as needed to gain access to private accounts. That’s how meltdown works on a computer or device.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b27fad4c58f_WxN9EBR.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b27fad4c58f_WxN9EBR.jpeg)
 The attacker has code that looks at the memory that should be restricted. The computer processor throws an exception and the CPU cleans everything up, erasing any evidence of the crime. But the attacks keep coming, and while the CPU is doing cleanup, it’s also executing other code out of order. This is what leaks the password. The out of order code is what transmits the restricted information while the CPU is busy. Okay, so that seems pretty horrendous. But it gets worse.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b3293d4c57e_wncHBpe.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b3293d4c57e_wncHBpe.jpeg)
 But before we get into Spectre, we have to first understand Speculative Execution.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b3036d4c571_szHnsgq.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b3036d4c571_szHnsgq.jpeg)
 Think of your computer as a restaurant called the speculation diner. This diner specializes in speculating which basically means forming a theory without concrete evidence.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b3534d4c584_p0XnOF3.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b3534d4c584_p0XnOF3.jpeg)
 So at this diner, there is a customer that comes in every day at breakfast and orders the same thing - eggs & bacon.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650bd2c0d4c579_cToj59x.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650bd2c0d4c579_cToj59x.jpeg)
 Eventually, the cook sees this pattern and starts making the order ahead of time. It’s more efficient and breakfast is ready the minute the customer comes in so they’re very happy.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b8190d4c58c_gRT75Xc.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b8190d4c58c_gRT75Xc.jpeg)
 However, one day the customer decides not to order eggs and bacon and instead decides to try pancakes. The chef is fine with this and just throws away the previously prepared food into the trash.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b738fd4c578_GO5zWBz.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b738fd4c578_GO5zWBz.jpeg)
 And the cook prepares the pancakes instead. No biggie.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650be920d4c57a_v0sJJif.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650be920d4c57a_v0sJJif.jpeg)
 So that whole process is what modern CPU chips take advantage of. Programs are prepped to execute but if they don’t actually end up being needed, they are stored in an unsecured area called cache memory. Because the programs are prepped to execute, they run a lot faster.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b922fd4c596_Nn5roDQ.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b922fd4c596_Nn5roDQ.jpeg)
 Just like the customers who get their orders faster, programs are able to run faster and speed performance is great.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b1443d4c572_pPEfXcu.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b1443d4c572_pPEfXcu.jpeg)
 And much like the Space Race from the 20th century, chip makers for the last two decades have been competing fiercely to provide the fastest processor.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b3b1cd4c574_UfHOvTU.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b3b1cd4c574_UfHOvTU.jpeg)
 Modern chip makers like Intel and AMD have been racing for the last two decades to provide the fastest processors which is why the speculative execution was so useful.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b1c8ed4c597_znqk7nx.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b1c8ed4c597_znqk7nx.jpeg)
 So Spectre is more dangerous because it is more crafty. Spectre gets its name from the root cause, which is called “Speculative Execution” which I described earlier. Spectre works by exploiting those speculations —mistraining the processor to make it predict wrongly and execute. So in essence, Spectre works by tricking programs into leaking their secretsAs it is not easy to fix, it will haunt us for quite some time. Hence, the ghostie.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b2c80d4c58b_RVMErMk.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b2c80d4c58b_RVMErMk.jpeg)
 If we consider a program “If A is true, then compute function X; if A is false, then compute function Y”, the chip can start computing both functions X and Y in parallel before it even knows whether A is true or false. Once it knows whether A is true or false, it already has a head start on what comes after, which speeds up processing overall.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b723fd4c570_Xbd4EPe.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b723fd4c570_Xbd4EPe.jpeg)
 So going back to that restaurant analogy - programs that were prepped but not actually executed end up in an unsecured area of the computer called cache memory where unauthorizes users can access it through a side channel.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650be13bd4c57f_VUVDMOj.jpeg)![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b4f87d4c593_4nZhvYA.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650be13bd4c57f_VUVDMOj.jpeg)![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b4f87d4c593_4nZhvYA.jpeg)
 If we wanted to compare the two, we can see that both Meltdown and Spectre allow low-privilege users who execute code on your system to read sensitive information from memory via Speculative Execution.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b18ead4c58a_AXfoq0E.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b18ead4c58a_AXfoq0E.jpeg)
 The difference is that Meltdown takes advantage of a specific Intel privilege escalation issue to do this, while Spectre uses the combination of Speculative Execution and Branch Prediction. Both issues can be addressed with software patches, but this is more effective for Meltdown than Spectre.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650beb30d4c594_YFpHGRn.jpeg)![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b193cd4c57b_77YjXCK.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650beb30d4c594_YFpHGRn.jpeg)![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b193cd4c57b_77YjXCK.jpeg)
 Regardless, the end results are the same - compromised data.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b5c82d4c588_7UOeN2Z.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b5c82d4c588_7UOeN2Z.jpeg)
 Although there are existing remedies, they have been proven to result in the computer running slower.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b641fd4c573_yD9HVfm.jpeg)![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b836ed4c575_KWGk3xL.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b641fd4c573_yD9HVfm.jpeg)![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b836ed4c575_KWGk3xL.jpeg)
 And at the end of the day, the flaw is hardware-based, not software-based so a simple software update isn’t going to solve the real issue.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b8932d4c598_xEWkGkc.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b8932d4c598_xEWkGkc.jpeg)
 And the only way to fix a hardware flaw is to
 
  	- replace the hardware (in this instance 90% of the world’s computers are affected so not feasible) or 	- write patches that do a workaround for the hardware flaw which often means corralling and buffering data to keep it safe (which slows the computer down).
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b1185d4c592_ov0XA3U.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b1185d4c592_ov0XA3U.jpeg)
 So why did everyone freak out?
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650ba1ddd4c591_7oHqU6I.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650ba1ddd4c591_7oHqU6I.jpeg)
 Well, for one, the verbiage on the official website was pretty frightening.“Am I affected by the vulnerability?”**Most certainly, yes.**So nonchalant but intense at the same time. Yikes!
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b49c6d4c586_jdWxcOg.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b49c6d4c586_jdWxcOg.jpeg)
 And as mentioned before, this is a hardware flaw and the only way to remedy a hardware flaw completely is to replace the hardware.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b92bdd4c581_qcfcoTR.jpeg)![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b683fd4c595_BRVkLHl.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b92bdd4c581_qcfcoTR.jpeg)![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b683fd4c595_BRVkLHl.jpeg)
 What I actually found most troubling personally is that the folks behind these chips decided to prioritize speed over security or money over the safety of their products.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650bb0afd4c583_yYITVcq.jpeg)![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b9441d4c585_7Mr2Ff7.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650bb0afd4c583_yYITVcq.jpeg)![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b9441d4c585_7Mr2Ff7.jpeg)
 Also just this week, there were new exploits called MeltdownPrime and SpectrePrime found that are just new ways to abuse the flaw but no worries, the patches out there fix these too.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650bc103d4c57c_huuLTdO.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650bc103d4c57c_huuLTdO.jpeg)
 If we think about the future and how quantum computing is the next big thing, it’s disturbing to think about the potential consequences the next great hardware flaws could cause.
-![](https://uploads-ssl.webflow.com/63b0b035359373d0cc473202/63b28f0c08650b0de8d4c58e_a914QLc.jpeg)
+![](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28f0c08650b0de8d4c58e_a914QLc.jpeg)
 One can only hope there are more ethical guidelines put in place. But until then, patch away!
 
 ### References

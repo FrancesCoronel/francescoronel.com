@@ -66,7 +66,7 @@ export default async function CategoryPage({ params }: PageProps) {
         description={category.description || `Blog posts in the ${category.name} category.`}
       />
 
-      <section className="py-16 md:py-20">
+      <section className="bg-white py-16 md:py-20 dark:bg-navy-900">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <p className="mb-6 text-sm text-navy-500 dark:text-horchata-400">
             {posts.length} post{posts.length !== 1 ? "s" : ""}

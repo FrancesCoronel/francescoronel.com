@@ -30,10 +30,8 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "fvcproductions39789812.wordpress.com" },
       { protocol: "https", hostname: "fvcproductions.files.wordpress.com" },
       // Common external image hosts found in blog content
-      { protocol: "https", hostname: "i.imgur.com" },
       { protocol: "https", hostname: "i.stack.imgur.com" },
       { protocol: "https", hostname: "cdn-images-1.medium.com" },
-      { protocol: "https", hostname: "image.slidesharecdn.com" },
       { protocol: "https", hostname: "images.pexels.com" },
       { protocol: "https", hostname: "media.githubusercontent.com" },
       { protocol: "https", hostname: "pbs.twimg.com" },
@@ -52,6 +50,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "www.apprenticeships.me" },
       { protocol: "https", hostname: "static1.squarespace.com" },
       { protocol: "https", hostname: "www.engjobsearch.com" },
+      { protocol: "https", hostname: "ktebrbhzg9wasky1.public.blob.vercel-storage.com" },
     ],
   },
   async redirects() {
@@ -258,7 +257,14 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      // ── Duplicate WordPress posts → Webflow canonical slugs ──
+      { source: "/blog/im-obsessed-with-labs", destination: "/blog/im-obsessed-with-labs-f3e5b", permanent: true },
+      { source: "/blog/mindot-tour", destination: "/blog/mindot-tour-2", permanent: true },
+      { source: "/blog/new-epoch-new-exploits-%f0%9f%98%88", destination: "/blog/new-epoch-new-exploits-f0-9f-98-88", permanent: true },
+      { source: "/blog/smash-academy-at-stanford-%f0%9f%8e%93", destination: "/blog/smash-academy-at-stanford-f0-9f-8e-93", permanent: true },
+
       // ── Blog posts migrated to projects ──────────────────
+      { source: "/blog/fullstack-academy-3", destination: "/projects/fullstack-academy", permanent: true },
       // Slack work projects
       { source: "/blog/contact-sales-form", destination: "/projects/contact-sales-form", permanent: true },
       { source: "/blog/slack-interactive-demo-homepage", destination: "/projects/slack-interactive-demo-homepage", permanent: true },

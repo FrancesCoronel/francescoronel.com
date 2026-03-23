@@ -95,15 +95,15 @@ const footerNav = [
 export function Footer() {
   return (
     <footer className="border-t border-horchata-200 bg-horchata-100 dark:border-navy-800 dark:bg-navy-950">
-      <div className="mx-auto max-w-[var(--container-max)] px-6 py-12 md:py-16">
-        <div className="grid gap-10 md:grid-cols-5">
+      <div className="mx-auto max-w-screen-2xl px-6 py-12 md:py-16">
+        <div className="grid gap-10 md:grid-cols-6">
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div className="md:col-span-3">
             <Link href="/" className="text-xl font-bold text-navy-900 transition-colors hover:text-navy-700 dark:text-white dark:hover:text-white/80">
               Hi, I&apos;m Frances! 👋🏽
             </Link>
-            <p className="mt-2 max-w-xs text-sm leading-relaxed text-navy-600 dark:text-white/70">
-              Senior SWE at Slack · speaker · mentor · community builder · Bay Area 🇵🇪
+            <p className="mt-2 max-w-sm text-sm leading-relaxed text-navy-600 dark:text-white/70">
+              Frances Coronel is a Senior Software Engineer at Slack specializing in frontend engineering and AI adoption, and a speaker and mentor working to make tech more equitable.
             </p>
 
             {/* Social links */}

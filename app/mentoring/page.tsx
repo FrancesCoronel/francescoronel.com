@@ -11,7 +11,7 @@ import { MentoringSessionsFeed } from "@/components/ui/mentoring-sessions-feed";
 export const metadata: Metadata = buildMetadata({
   title: "Mentoring",
   description:
-    "Book a mentoring call with Frances Coronel — career guidance, technical interviews, resume reviews, and more for current and aspiring software engineers.",
+    "Book a mentoring call with Frances Coronel: career guidance, technical interviews, resume reviews, and more for current and aspiring software engineers.",
   path: "/mentoring",
   ogImage: "/images/og/mentoring.png",
 });
@@ -36,7 +36,7 @@ const pricingTiers = [
     price: "$200",
     original: "$210",
     label: "3-Call Package",
-    description: "Three 1-hour sessions — $10 savings",
+    description: "Three 1-hour sessions ($10 savings)",
     href: "https://buy.stripe.com/9AQeYVdyk7dn65i9AK",
     cta: "Purchase package",
   },
@@ -44,22 +44,22 @@ const pricingTiers = [
     price: "$400",
     original: "$420",
     label: "6-Call Package",
-    description: "Six 1-hour sessions — $20 savings",
+    description: "Six 1-hour sessions ($20 savings)",
     href: "https://buy.stripe.com/3csg2ZeCobtD3Xa9AL",
     cta: "Purchase package",
   },
 ];
 
 const helpTopics = [
-  { emoji: "🎯", text: "Land your next role — job search strategy, resume reviews, and referral outreach that actually converts" },
-  { emoji: "🎤", text: "Ace the interview — behavioral and technical mock interviews with actionable feedback" },
-  { emoji: "💰", text: "Negotiate confidently — know your market value and make the ask" },
-  { emoji: "📈", text: "Get promoted — build your case, document your impact, and navigate the cycle" },
-  { emoji: "🦾", text: "Advocate for yourself — practical strategies for women and underrepresented engineers" },
-  { emoji: "📝", text: "Stand out on paper — LinkedIn, resume, and portfolio that open doors" },
-  { emoji: "🌐", text: "Break into open source — find projects, ship your first PR, and build in public" },
-  { emoji: "🎙️", text: "Get on stage — pitch, prep, and deliver a conference talk" },
-  { emoji: "🔄", text: "Pivot into tech — bootcamp-to-career transitions and non-traditional path navigation" },
+  { emoji: "🎯", text: "Land your next role: job search strategy, resume reviews, and referral outreach that actually converts" },
+  { emoji: "🎤", text: "Ace the interview: behavioral and technical mock interviews with actionable feedback" },
+  { emoji: "💰", text: "Negotiate confidently: know your market value and make the ask" },
+  { emoji: "📈", text: "Get promoted: build your case, document your impact, and navigate the cycle" },
+  { emoji: "🦾", text: "Advocate for yourself: practical strategies for women and underrepresented engineers" },
+  { emoji: "📝", text: "Stand out on paper: LinkedIn, resume, and portfolio that open doors" },
+  { emoji: "🌐", text: "Break into open source: find projects, ship your first PR, and build in public" },
+  { emoji: "🎙️", text: "Get on stage: pitch, prep, and deliver a conference talk" },
+  { emoji: "🔄", text: "Pivot into tech: bootcamp-to-career transitions and non-traditional path navigation" },
 ];
 
 const expertiseAreas = [
@@ -120,7 +120,7 @@ export default function MentoringPage() {
       <PageHeader
         label="1-on-1 Coaching"
         heading="Mentoring 💬"
-        description={`${totalSessions}+ sessions and ${hoursDisplay}+ hours in. I help software engineers land roles, get promoted, negotiate better offers, and build careers they're proud of — with real talk from someone who's been in the industry for 10+ years.`}
+        description={`${totalSessions}+ sessions and ${hoursDisplay}+ hours in. I help software engineers land roles, get promoted, negotiate better offers, and build careers they're proud of. Real talk from someone who's been in the industry for 8+ years.`}
         aside={
           <Image
             src="/images/assets/speaking-hero-image.webp"
@@ -138,7 +138,7 @@ export default function MentoringPage() {
           </p>
           <ul className="mt-2 space-y-1 text-sm text-navy-600 dark:text-white/70">
             <li>📝 Come with a specific goal or question in mind</li>
-            <li>⏰ Show up on time — we'll hit the ground running</li>
+            <li>⏰ Show up on time. We'll hit the ground running</li>
           </ul>
         </div>
       </PageHeader>

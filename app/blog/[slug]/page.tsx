@@ -74,14 +74,23 @@ export default async function BlogPostPage({ params }: PageProps) {
   const prevPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
   const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
 
-  // Related posts: same category, excluding current
+  // Related posts: scored by shared categories (3pts), tags (2pts), orgs (2pts), recency (1pt)
+  const postDate = new Date(post.date).getTime();
   const relatedPosts = allPosts
-    .filter(
-      (p) =>
-        p.slug !== post.slug &&
-        p.categories.some((c) => post.categories.includes(c))
-    )
-    .slice(0, 3);
+    .filter((p) => p.slug !== post.slug)
+    .map((p) => {
+      const sharedCategories = p.categories.filter((c) => post.categories.includes(c)).length;
+      const sharedTags = p.tags.filter((t) => post.tags.includes(t)).length;
+      const sharedOrgs = p.organizations.filter((o) => post.organizations.includes(o)).length;
+      const ageDiffYears = Math.abs(new Date(p.date).getTime() - postDate) / (1000 * 60 * 60 * 24 * 365);
+      const recencyScore = Math.max(0, 1 - ageDiffYears / 5);
+      const score = sharedCategories * 3 + sharedTags * 2 + sharedOrgs * 2 + recencyScore;
+      return { post: p, score };
+    })
+    .filter(({ score }) => score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3)
+    .map(({ post: p }) => p);
 
   // Resolve organization data from slugs in frontmatter
   const organizations = post.organizations
@@ -104,6 +113,11 @@ export default async function BlogPostPage({ params }: PageProps) {
         <h1 className="text-3xl font-bold leading-tight text-navy-900 dark:text-horchata-100 md:text-4xl">
           {post.title}
         </h1>
+        {post.excerpt && (
+          <p className="mt-4 text-lg leading-relaxed text-navy-600 dark:text-horchata-300">
+            {post.excerpt}
+          </p>
+        )}
         {post.categories.length > 0 && (
           <div className="mt-4 flex flex-wrap gap-2">
             {post.categories.map((cat) => (

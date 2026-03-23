@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const siteConfig = {
   title: "Frances Coronel",
   description:
-    "Frances Coronel is a senior software engineer, a fierce advocate for diversity in tech, and a doting Corgi mom. 👩🏽‍💻",
+    "Senior Software Engineer at Slack with 8+ years in frontend engineering and an MS in Computer Science from Cornell Tech. Speaker at 100+ events and mentor focused on helping underrepresented engineers grow into technical leadership.",
   siteUrl: "https://francescoronel.com",
   author: "Frances Coronel",
   social: {

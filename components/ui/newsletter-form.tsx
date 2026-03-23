@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 interface NewsletterFormProps {
-  variant?: "footer" | "section";
+  variant?: "footer" | "section" | "dark";
 }
 
 export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
@@ -28,7 +28,7 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
         setStatus("success");
         setMessage(
           data.alreadySubscribed
-            ? "You're already subscribed — thanks for being here! 🎉"
+            ? "You're already subscribed, thanks for being here! 🎉"
             : "You're in! Check your inbox to confirm. 🎉"
         );
         setEmail("");
@@ -40,6 +40,38 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
       setStatus("error");
       setMessage("Something went wrong. Please try again.");
     }
+  }
+
+  if (variant === "dark") {
+    return (
+      <div>
+        {status === "success" ? (
+          <p className="text-sm text-horchata-400">{message}</p>
+        ) : (
+          <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="your@email.com"
+              required
+              disabled={status === "loading"}
+              className="min-w-0 flex-1 rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-horchata-400 disabled:opacity-60"
+            />
+            <button
+              type="submit"
+              disabled={status === "loading"}
+              className="rounded-xl bg-horchata-500 px-6 py-3 text-sm font-semibold text-navy-900 transition-colors hover:bg-horchata-400 disabled:opacity-60"
+            >
+              {status === "loading" ? "Subscribing…" : "Subscribe"}
+            </button>
+          </form>
+        )}
+        {status === "error" && (
+          <p className="mt-2 text-sm text-red-400">{message}</p>
+        )}
+      </div>
+    );
   }
 
   if (variant === "footer") {

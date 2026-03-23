@@ -1,14 +1,12 @@
 # francescoronel.com 🌐
 
-My personal website — migrated from Webflow to a fully self-owned Next.js stack.
+My personal website, fully self-owned and prompt-driven. Migrated from Webflow to a Next.js stack with MDX content, static search, and zero vendor lock-in.
 
-No more vendor lock-in, full data ownership, prompt-driven editing ⚡
-
-**Live:** [francescoronel.com](https://francescoronel.com) · **Hosted on:** Vercel · **Repo:** [FrancesCoronel/francescoronel.com](https://github.com/FrancesCoronel/francescoronel.com) · **Project Board:** [GitHub Projects](https://github.com/users/FrancesCoronel/projects/3/)
+**Live:** [francescoronel.com](https://francescoronel.com) · **Hosted on:** Vercel · **Project Board:** [GitHub Projects](https://github.com/users/FrancesCoronel/projects/3/)
 
 ---
 
-## Tech Stack
+## Tech Stack 🛠️
 
 | Layer | Technology |
 |---|---|
@@ -16,13 +14,13 @@ No more vendor lock-in, full data ownership, prompt-driven editing ⚡
 | Styling | Tailwind CSS 4 + `@tailwindcss/typography` |
 | Content | MDX blog posts + JSON data files |
 | MDX | `next-mdx-remote/rsc` with remark-gfm, rehype-slug, rehype-autolink-headings, rehype-pretty-code |
-| Search | Pagefind (static binary search, zero client payload) |
-| Images | Webflow CDN (current), planned migration to Cloudflare R2 |
+| Search | Pagefind (static index, zero client payload) |
+| Images | Vercel Blob |
 | Analytics | Vercel Analytics + Speed Insights + Google Analytics 4 |
-| Hosting | Vercel |
+| Hosting | Vercel Pro |
 | Fonts | Cabin via `next/font/google` |
 
-## Commands
+## Commands 💻
 
 ```bash
 npm run dev              # start dev server
@@ -38,7 +36,7 @@ npm run build-storybook  # build static Storybook
 npm run chromatic        # upload to Chromatic for visual regression
 ```
 
-## Architecture
+## Architecture 🏗️
 
 - **665+ blog posts** as individual MDX files in `content/blog/`
 - **Structured data** in JSON files: testimonials, organizations, skills, awards, experience, education
@@ -47,38 +45,13 @@ npm run chromatic        # upload to Chromatic for visual regression
 - **Organizations** are the hub entity — each org page aggregates experience, posts, testimonials, education, awards
 - See [`CLAUDE.md`](./CLAUDE.md) for full architecture docs
 
----
+## Environment Variables 🔑
 
-## Roadmap / Future Ideas
+Copy `.env.local.example` to `.env.local` and fill in:
 
-### Infrastructure & Deployment
-- [ ] Migrate images from Webflow CDN to Cloudflare R2 or Cloudinary
-- [ ] Add Lighthouse CI to GitHub Actions for automated performance monitoring
-- [ ] Add visual regression testing (Playwright screenshots)
-- [ ] Storybook deployment to public URL (Chromatic or Vercel)
-
-### AI & Search
-- [ ] Build RAG chatbot with Pagefind + Claude Haiku — conversational search over all site content
-- [ ] Add AI-powered "related posts" recommendations beyond simple category matching
-
-### Content & SEO
-- [ ] Add Substack link / newsletter signup
-- [ ] RSS to social auto-posting (Twitter/LinkedIn)
-- [ ] Add reading progress bar to blog posts
-- [ ] Add table of contents sidebar for long blog posts
-- [ ] Migrate remaining WordPress images from CDN to local `/images/blog/`
-- [ ] Download and self-host Imgur images referenced in older posts
-
-### Speaking Page
-- [ ] Add "Upcoming Events" section with future talk dates/locations
-- [ ] Create speaker kit / press page with downloadable headshots, bio, one-sheet PDF
-- [ ] Add topic tags to featured talks (AI, TypeScript, Diversity, etc.)
-
-### Design & UX
-- [ ] Add page transition animations (View Transitions API)
-- [ ] Add skeleton loading states for dynamic content
-- [ ] Add "back to top" floating button on long pages
-
-### Analytics
-- [ ] Add event tracking for CTA clicks, search queries, theme toggles
-- [ ] Heatmap integration (PostHog or similar)
+```bash
+NEXT_PUBLIC_GA4_MEASUREMENT_ID=   # Google Analytics 4
+CAL_COM_API_KEY=                  # Cal.com mentoring sessions
+BUTTONDOWN_API_KEY=               # Newsletter (Buttondown)
+BLOB_READ_WRITE_TOKEN=            # Vercel Blob storage
+```

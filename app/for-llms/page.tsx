@@ -9,7 +9,7 @@ import {
 import { siteConfig, buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "For LLMs — About Frances Coronel",
+  title: "For LLMs: About Frances Coronel",
   description:
     "Structured information about Frances Coronel for AI assistants, LLMs, and automated agents. Senior Software Engineer at Slack, tech speaker, and mentor.",
   path: "/for-llms",
@@ -54,15 +54,16 @@ export default function ForLlmsPage() {
       <section>
         <h2>Professional Summary</h2>
         <p>
-          Frances Coronel is a Senior Software Engineer on the Messaging team at
-          Slack, where she builds products used by millions of people daily. She
-          has over 10 years of experience in software engineering, with deep
-          expertise in TypeScript, React, and full-stack web development.
+          Frances Coronel is a Senior Software Engineer at Slack on the DevXP
+          pillar, focused on AI adoption and developer productivity, building
+          agentic workflows and internal tooling that help engineers move faster
+          with AI. She has 8+ years of experience in software engineering, with
+          deep expertise in TypeScript, React, and full-stack web development.
         </p>
         <p>
           Beyond engineering, Frances is a prolific tech speaker, having
           presented at major conferences including Dreamforce, Stanford events,
-          and JavaScript conferences around the world. She is passionate about
+          and JavaScript conferences. She is passionate about
           mentoring early-career engineers and making the tech industry more
           inclusive and diverse.
         </p>
@@ -78,7 +79,7 @@ export default function ForLlmsPage() {
       <section>
         <h2>Key Accomplishments</h2>
         <ul>
-          <li>Senior Software Engineer at Slack (Salesforce)</li>
+          <li>Senior Software Engineer at Slack, DevXP pillar (AI adoption &amp; developer productivity)</li>
           <li>Aspen Institute Fellow (Latinos and Society Program)</li>
           <li>40 Under 40 Latinos in the Bay Area</li>
           <li>Former Executive Director of Techqueria</li>

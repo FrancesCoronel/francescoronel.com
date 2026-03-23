@@ -439,5 +439,86 @@
     "quote": "I don't know if you remember me but we Skyped a while ago. You were nice enough to let me ask you questions and get advice on the application process for Fullstack. I went into the admissions process with way more confidence and I got in! So thank you, you were extremely helpful.\n\nIt's Angel again and I just graduated from FSA this past Friday. I made it! Again I can't thank you enough for prepping me for the admissions process and all your help since then. This was one of the most challenging and satisfying 3 months I've experienced.",
     "image": "",
     "featured": false
+  },
+  {
+    "name": "Adilene Constante",
+    "slug": "adilene-constante",
+    "role": "Software Engineer",
+    "organization": "",
+    "quote": "I reached out to Frances because I admire all of that she has accomplished. She gave me the confidence I needed to keep pressing forward as I continue my job hunt in the tech industry. She was kind enough to provide really helpful feedback on my LinkedIn, personal website, and resume. Her career advice and feedback was invaluable. She really cares about helping people find their way in the tech industry.\n\nI can't thank you enough, Frances! You are truly inspiring!",
+    "image": "",
+    "featured": false
+  },
+  {
+    "name": "Lavie Ruan",
+    "slug": "lavie-ruan",
+    "role": "Software Engineer",
+    "organization": "",
+    "quote": "Frances has been a great help in the process of my web development journey. She showed me what a good web development environment is.\n\nFrances's broad knowledge in the web development field gave me a structured guideline in prepping for bootcamp applications. Her guidance has nourished me tremendously.\n\nI just got accepted to a bootcamp, and I start my full time web development bootcamp in 2 weeks, and I wouldn't have gotten where I am without her.\n\nI know Frances will continue to inspire and help other future web developers succeed. I am forever thankful for Frances's mentorship.",
+    "image": "",
+    "featured": false
+  },
+  {
+    "name": "Linda Xiong",
+    "slug": "linda-xiong",
+    "role": "Software Engineer",
+    "organization": "",
+    "quote": "While being very busy with software engineering work and other tech advocacy activities, Frances took the time to thoroughly answer my questions regarding finding my dream job in tech. Instead of generic answers, she provided her opinion as well as other alternatives. She inspires me to be a female leader of color in tech.",
+    "image": "",
+    "featured": false
+  },
+  {
+    "name": "Mike Jonas",
+    "slug": "mike-jonas",
+    "role": "Software Engineer",
+    "organization": "Hack Reactor",
+    "quote": "I emailed you a few months ago asking for some coding bootcamp interview advice. I ended up getting accepted into Hack Reactor! I'm on my 5th week and have been having an amazing experience. A fellow classmate noticed today that we were connected on LinkedIn and mentioned he was also a fan of your blog. Thanks again for the advice you gave me.",
+    "image": "",
+    "featured": false
+  },
+  {
+    "name": "Pak Chu",
+    "slug": "pak-chu",
+    "role": "Student",
+    "organization": "MakerSquare",
+    "quote": "Frances has helped me prepare for my upcoming coding bootcamp. She showed me all the cool tricks and skills to make me a better programmer. She took her time and explained the what, why, and how. She also took her time showing me how to overcome challenges I will face in my cohort. I can't thank Frances enough for taking her time and sharing her knowledge with me.",
+    "image": "",
+    "featured": false
+  },
+  {
+    "name": "Neil Scheuermann",
+    "slug": "neil-scheuermann",
+    "role": "Software Engineer",
+    "organization": "",
+    "quote": "You are so kind and gave me some great advice. Just wanted to send a quick note to thank you again for taking time to meet with me. It was very helpful and I really appreciate it.",
+    "image": "",
+    "featured": false
+  },
+  {
+    "name": "Simran Anand",
+    "slug": "simran-anand",
+    "role": "Software Engineering Intern",
+    "organization": "Thunkable",
+    "quote": "After our call, I learned a lot about the various areas where my interests can take me in the tech industry as well as solidified my resolve to keep pursuing the Joint Major in Mathematics and Computer Science. Thank you so much for your time, I truly appreciate all the advice and guidance I got from you! I also loved hearing about your experience in the industry.\n\nThank you so much for your time last night! I learn so many new things from you every conversation.",
+    "image": "",
+    "featured": false
+  },
+  {
+    "name": "Pauly Quintero",
+    "slug": "pauly-quintero",
+    "role": "Career Changer",
+    "organization": "",
+    "quote": "Thank you for mentoring me with your ideas, experience, and valuable information about how a person like me — a Latin woman coming from another industry — could be inserted into the competitive Silicon Valley workforce.",
+    "image": "",
+    "featured": false
+  },
+  {
+    "name": "Wen Tran",
+    "slug": "wen-tran",
+    "role": "Student",
+    "organization": "MakerSquare",
+    "quote": "I had the pleasure to chat with Frances and to receive her guidance on all things related to coding bootcamps and tech careers. She was so generous with her time, and she shared with me the resources and advice that are beneficial to help me prepare for my admission interviews, JavaScript learning tools, and insights on navigating the tech scenes as a beginner. She is the epitome of a caring mentor, and makes the developers' community such a welcoming and inviting place.",
+    "image": "",
+    "featured": false
   }
 ]

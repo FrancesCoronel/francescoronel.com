@@ -24,7 +24,7 @@ const upcomingEvents = [
     talk: "Ask Me Anything as a Software Engineering Interviewer",
     date: "2026-03-19",
     url: "https://www.joinleland.com/event/ask-me-anything-as-a-software-engineering-interviewer",
-    description: "Live AMA session on Leland — ask me anything about software engineering interviews from the interviewer's perspective. 11:00–11:30 AM.",
+    description: "Live AMA session on Leland. Ask me anything about software engineering interviews from the interviewer's perspective. 11:00–11:30 AM.",
   },
 ];
 
@@ -83,7 +83,7 @@ export default function SpeakingPage() {
       <PageHeader
         label="Events"
         heading="Speaking 🎤"
-        description="I've spoken at 100+ events on diverse topics ranging from driving D&I in the tech industry to community building — covering TypeScript, Progressive Web Apps, JavaScript, and more."
+        description="Senior Software Engineer at Slack with 8+ years in frontend engineering. Speaker and mentor, with a focus on helping underrepresented engineers grow into technical leadership."
         aside={
           <Image
             src="/images/assets/speaking-microphone.png"

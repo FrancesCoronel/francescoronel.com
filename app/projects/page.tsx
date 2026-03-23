@@ -16,7 +16,12 @@ export const metadata: Metadata = buildMetadata({
 
 const FEATURED_SLUGS = ["latina-dev", "apprenticeships-me", "hire-me"];
 
-export default async function ProjectsPage() {
+export default async function ProjectsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ skill?: string }>;
+}) {
+  const { skill } = await searchParams;
   const projects = getProjects();
 
   const reposToFetch = Object.fromEntries(
@@ -74,6 +79,7 @@ export default async function ProjectsPage() {
         projects={projects}
         starsMap={starsMap}
         featuredSlugs={FEATURED_SLUGS}
+        initialSkill={skill}
       />
 
       <ConnectCTA variant="projects" />

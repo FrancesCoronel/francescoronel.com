@@ -1,0 +1,56 @@
+# Lychee link checker configuration
+# Docs: https://lychee.cli.rs/usage/config/
+
+# Parallel threads
+threads = 5
+
+# Timeout per request (seconds)
+timeout = 20
+
+# Max redirects to follow
+max_redirects = 10
+
+# Retry wait time (seconds)
+retry_wait_time = 3
+
+# Max retries per link
+max_retries = 3
+
+# Accept 429 (rate limited) as non-failure — treat as "probably fine"
+accept = ["100..=103", "200..=299", "429"]
+
+# User agent (some sites block default curl UA)
+user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+
+# Exclude URL patterns that are known to block bots or require auth
+exclude = [
+  # Social / auth-walled
+  "linkedin\\.com",
+  "twitter\\.com",
+  "x\\.com",
+  "discord\\.com",
+  "reddit\\.com",
+
+  # Calendly blocks headless requests
+  "calendly\\.com",
+
+  # Cal.com embeds block crawlers
+  "cal\\.com",
+
+  # YouTube — use thumbnail check instead
+  "youtube\\.com",
+  "youtu\\.be",
+
+  # Localhost / dev
+  "localhost",
+  "127\\.0\\.0\\.1",
+
+  # Vercel preview URLs (dynamic per-deploy)
+  "\\.vercel\\.app",
+
+  # Archive URLs (often slow)
+  "web\\.archive\\.org",
+
+  # Anchor links (checked by internal script)
+  "#",
+]

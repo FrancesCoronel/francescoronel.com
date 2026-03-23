@@ -1,41 +1,32 @@
 /**
- * Image Migration Script: Webflow CDN → Cloudinary
+ * Image Migration Script: Webflow CDN → Vercel Blob
  *
  * Crawls all MDX and JSON content files for Webflow image URLs,
- * downloads each image, uploads to Cloudinary, and rewrites URLs.
+ * downloads each image, uploads to Vercel Blob, and rewrites URLs in-place.
  *
  * Prerequisites:
- *   1. Set CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET in .env.local
- *   2. Run: npx tsx scripts/migrate-images.ts
+ *   1. Set BLOB_READ_WRITE_TOKEN in .env.local
+ *   2. Run: npx tsx --env-file=.env.local scripts/migrate-images.ts
  *
- * Cloudinary folder structure:
- *   francescoronel/
- *   ├── blog/          — Blog featured + inline images
- *   ├── organizations/ — Org logos
- *   ├── awards/        — Award images
- *   ├── static/        — Memoji, hero images, 3D illustrations
- *   └── og/            — Open Graph images
+ * Blob folder structure:
+ *   blog/          — Blog featured + inline images
+ *   organizations/ — Org logos
+ *   awards/        — Award images
+ *   static/        — Misc images
  */
 
 import fs from "fs";
 import path from "path";
 import https from "https";
 import http from "http";
+import { put } from "@vercel/blob";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
-const CLOUD_NAME = process.env.CLOUDINARY_CLOUD_NAME || "francescoronel";
-const API_KEY = process.env.CLOUDINARY_API_KEY;
-const API_SECRET = process.env.CLOUDINARY_API_SECRET;
-
-if (!API_KEY || !API_SECRET) {
-  console.error("Missing CLOUDINARY_API_KEY or CLOUDINARY_API_SECRET in environment");
-  process.exit(1);
-}
-
-// ─── Helpers ─────────────────────────────────────────────────
 
 const WEBFLOW_CDN_PATTERN = /https?:\/\/cdn\.prod\.website-files\.com\/[^\s"')]+/g;
 const UPLOADS_PATTERN = /https?:\/\/uploads-ssl\.webflow\.com\/[^\s"')]+/g;
+
+// ─── Helpers ──────────────────────────────────────────────────
 
 function downloadFile(url: string): Promise<Buffer> {
   return new Promise((resolve, reject) => {
@@ -43,6 +34,10 @@ function downloadFile(url: string): Promise<Buffer> {
     client.get(url, (res) => {
       if (res.statusCode && res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
         downloadFile(res.headers.location).then(resolve).catch(reject);
+        return;
+      }
+      if (res.statusCode && res.statusCode >= 400) {
+        reject(new Error(`HTTP ${res.statusCode} for ${url}`));
         return;
       }
       const chunks: Buffer[] = [];
@@ -53,132 +48,117 @@ function downloadFile(url: string): Promise<Buffer> {
   });
 }
 
-async function uploadToCloudinary(
-  buffer: Buffer,
-  folder: string,
-  filename: string
-): Promise<string> {
-  const timestamp = Math.floor(Date.now() / 1000);
-  const publicId = `${folder}/${filename}`;
-
-  // Use the upload API
-  const formData = new FormData();
-  formData.append("file", new Blob([buffer]));
-  formData.append("public_id", publicId);
-  formData.append("api_key", API_KEY!);
-  formData.append("timestamp", timestamp.toString());
-
-  // Generate signature
-  const crypto = await import("crypto");
-  const signatureString = `public_id=${publicId}&timestamp=${timestamp}${API_SECRET}`;
-  const signature = crypto.createHash("sha1").update(signatureString).digest("hex");
-  formData.append("signature", signature);
-
-  const res = await fetch(
-    `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`,
-    { method: "POST", body: formData }
-  );
-
-  if (!res.ok) {
-    const text = await res.text();
-    throw new Error(`Cloudinary upload failed: ${res.status} ${text}`);
-  }
-
-  const data = await res.json();
-  return data.public_id as string;
-}
-
 function filenameFromUrl(url: string): string {
   const parsed = new URL(url);
-  const basename = path.basename(parsed.pathname);
-  // Remove Webflow hash suffix (e.g., "image_abc123.jpg" → "image.jpg")
-  return basename.replace(/[_-][a-f0-9]{6,}\./i, ".");
+  return path.basename(parsed.pathname);
 }
 
-function folderForFile(filePath: string): string {
+function folderFromFile(filePath: string): string {
   const relative = path.relative(CONTENT_DIR, filePath);
   if (relative.startsWith("blog")) return "blog";
   if (relative.includes("organizations")) return "organizations";
   if (relative.includes("awards")) return "awards";
-  if (relative.includes("education")) return "education";
-  if (relative.includes("experience")) return "experience";
   return "static";
 }
 
-// ─── Main ────────────────────────────────────────────────────
+function contentTypeFromFilename(filename: string): string {
+  const ext = path.extname(filename).toLowerCase();
+  const map: Record<string, string> = {
+    ".jpg": "image/jpeg",
+    ".jpeg": "image/jpeg",
+    ".png": "image/png",
+    ".gif": "image/gif",
+    ".webp": "image/webp",
+    ".svg": "image/svg+xml",
+    ".avif": "image/avif",
+  };
+  return map[ext] ?? "image/jpeg";
+}
+
+// ─── Main ─────────────────────────────────────────────────────
 
 async function main() {
-  const urlMap = new Map<string, string>(); // original URL → cloudinary public_id
+  const urlMap = new Map<string, string>(); // original URL → blob URL
   const filesToProcess: string[] = [];
 
-  // Gather all content files
   function walk(dir: string) {
     for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
       const full = path.join(dir, entry.name);
-      if (entry.isDirectory()) {
-        walk(full);
-      } else if (entry.name.endsWith(".mdx") || entry.name.endsWith(".json")) {
+      if (entry.isDirectory()) walk(full);
+      else if (entry.name.endsWith(".mdx") || entry.name.endsWith(".json")) {
         filesToProcess.push(full);
       }
     }
   }
   walk(CONTENT_DIR);
 
-  // Find all Webflow image URLs
+  // Collect all unique Webflow URLs, keyed to which files they appear in
   const allUrls = new Set<string>();
   const fileContents = new Map<string, string>();
+  const urlToFolder = new Map<string, string>();
 
   for (const file of filesToProcess) {
     const content = fs.readFileSync(file, "utf-8");
     fileContents.set(file, content);
+    const folder = folderFromFile(file);
 
-    const matches = [
-      ...content.matchAll(WEBFLOW_CDN_PATTERN),
-      ...content.matchAll(UPLOADS_PATTERN),
-    ];
-    for (const match of matches) {
-      allUrls.add(match[0]);
+    for (const match of [...content.matchAll(WEBFLOW_CDN_PATTERN), ...content.matchAll(UPLOADS_PATTERN)]) {
+      const url = match[0];
+      allUrls.add(url);
+      if (!urlToFolder.has(url)) urlToFolder.set(url, folder);
     }
   }
 
-  console.log(`Found ${allUrls.size} unique Webflow image URLs across ${filesToProcess.length} files`);
+  console.log(`\nFound ${allUrls.size} unique Webflow image URLs across ${filesToProcess.length} files\n`);
 
-  // Download and upload each image
+  // Download and upload each image to Vercel Blob
   let processed = 0;
-  for (const url of allUrls) {
-    try {
-      const filename = filenameFromUrl(url);
-      // Determine folder based on URL pattern or a default
-      const folder = url.includes("blog") ? "blog" : "static";
+  let failed = 0;
 
-      console.log(`  [${++processed}/${allUrls.size}] ${filename}...`);
+  for (const url of allUrls) {
+    const filename = filenameFromUrl(url);
+    const folder = urlToFolder.get(url) ?? "static";
+    const blobPath = `${folder}/${filename}`;
+    processed++;
+
+    try {
+      process.stdout.write(`  [${processed}/${allUrls.size}] ${filename}... `);
       const buffer = await downloadFile(url);
-      const publicId = await uploadToCloudinary(buffer, folder, filename.replace(/\.[^.]+$/, ""));
-      urlMap.set(url, `cloudinary://${publicId}`);
+      const blob = await put(blobPath, buffer, {
+        access: "public",
+        contentType: contentTypeFromFilename(filename),
+        addRandomSuffix: false,
+      });
+      urlMap.set(url, blob.url);
+      console.log(`✅`);
     } catch (err) {
-      console.error(`  Failed to migrate ${url}:`, err);
-      // Keep the original URL if migration fails
+      failed++;
+      console.log(`❌ ${err instanceof Error ? err.message : err}`);
     }
   }
 
   // Rewrite URLs in all content files
-  let rewritten = 0;
+  let filesRewritten = 0;
   for (const [file, content] of fileContents) {
     let updated = content;
-    for (const [originalUrl, cloudinaryRef] of urlMap) {
+    for (const [originalUrl, blobUrl] of urlMap) {
       if (updated.includes(originalUrl)) {
-        updated = updated.split(originalUrl).join(cloudinaryRef);
-        rewritten++;
+        updated = updated.split(originalUrl).join(blobUrl);
       }
     }
     if (updated !== content) {
       fs.writeFileSync(file, updated, "utf-8");
+      filesRewritten++;
     }
   }
 
-  console.log(`\nImage Migration Complete:`);
-  console.log(`  Uploaded: ${urlMap.size} images to Cloudinary`);
-  console.log(`  Rewrote: ${rewritten} URL references`);
+  console.log(`\n─── Migration Complete ───────────────────────────`);
+  console.log(`  Uploaded:  ${urlMap.size} images to Vercel Blob`);
+  console.log(`  Failed:    ${failed} images`);
+  console.log(`  Files updated: ${filesRewritten}`);
+  if (failed > 0) {
+    console.log(`\n  Failed URLs kept as-is in content files.`);
+  }
 }
 
 main().catch((err) => {
