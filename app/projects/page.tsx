@@ -145,6 +145,14 @@ export default async function ProjectsPage() {
                 <p className="mt-1 flex-1 line-clamp-2 text-sm text-navy-500 dark:text-white/60">
                   {project.tagline}
                 </p>
+                {starsMap[project.slug] != null && (
+                  <div className="mt-3 flex items-center gap-1 text-xs text-navy-400 dark:text-white/40">
+                    <svg className="h-3.5 w-3.5 fill-current text-horchata-500" viewBox="0 0 24 24">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                    {starsMap[project.slug]!.toLocaleString()} stars
+                  </div>
+                )}
               </Link>
             ))}
           </div>
