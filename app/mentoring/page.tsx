@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Book a mentoring call with Frances Coronel: career guidance, technical interviews, resume reviews, and more for current and aspiring software engineers.",
   path: "/mentoring",
-  ogImage: "/images/og/mentoring.png",
+  ogImage: "/images/og/mentoring.jpg",
 });
 
 const pricingTiers = [

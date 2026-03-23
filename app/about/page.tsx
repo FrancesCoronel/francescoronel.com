@@ -14,7 +14,7 @@ import {
 } from "@/lib/content";
 import skills from "@/content/skills.json";
 import mentoringData from "@/content/mentoring-sessions.json";
-import { buildMetadata } from "@/lib/metadata";
+import { buildMetadata, YEARS_OF_EXPERIENCE } from "@/lib/metadata";
 import { PageHeader } from "@/components/ui/page-header";
 import { BioSection } from "@/components/sections/bio-section";
 import { TimelineSection } from "@/components/sections/timeline-section";
@@ -83,6 +83,8 @@ const bioVariants = [
           I hold a Bachelor&apos;s in Computer Science from Hampton University and a Master&apos;s
           in Computer Science from Cornell Tech. I&apos;ve been working full-time as a software
           engineer since 2017, specializing in frontend engineering with React and TypeScript.
+        </p>
+        <p>
           I&apos;m currently on Slack&apos;s DevXP pillar, focused on AI adoption
           and developer productivity, building agentic workflows and tooling that help engineers
           move faster with AI, and helping non-engineers confidently use those same tools
@@ -110,27 +112,26 @@ const bioVariants = [
           speaker, mentor, and proud Corgi mom.
         </p>
         <p>
-          With 8+ years of experience in frontend engineering, she specializes in
-          React and TypeScript, building high-impact products used by millions.
-          She currently works on Slack&apos;s DevXP pillar, focused on AI
-          adoption and developer productivity, shipping agentic workflows and internal
-          tooling that help engineers move faster with AI, and enabling non-engineers
-          to confidently use those same tools alongside them.
+          She holds a Bachelor&apos;s in Computer Science from Hampton University and a Master&apos;s
+          in Computer Science from Cornell Tech. She has been working full-time as a software
+          engineer since 2017, specializing in frontend engineering with React and TypeScript.
         </p>
         <p>
-          Frances led the settings redesign that drove a 5x increase in engagement
-          and served as Engineering Manager on the Lists team before returning to
-          her individual contributor roots in AI tooling.
+          She currently works on Slack&apos;s DevXP pillar, focused on AI adoption
+          and developer productivity, building agentic workflows and tooling that help engineers
+          move faster with AI, and helping non-engineers confidently use those same tools
+          alongside them.
         </p>
         <p>
-          Beyond her engineering work, Frances is deeply committed to mentorship,
-          community building, and representation in tech. She has mentored hundreds
-          of engineers, served as Executive Director of Techqueria, and spoken at
-          over 100 events.
+          Beyond Slack, Frances enjoys mentoring other engineers and has logged 250+ hours of
+          technical and behavioral interview prep. She has also spoken at 100+ events on
+          frontend engineering topics and building a career in tech with intention.
         </p>
         <p>
-          Originally from Norfolk, Virginia, Frances now calls the Bay Area home,
-          where she lives with her two Corgis, Luna and Sueño, and her partner Andrew.
+          As a proud Peruvian-American from Norfolk, Virginia, Frances cares about making
+          technical leadership more accessible, especially for Latinas and underrepresented
+          engineers. She now lives in the Bay Area with her two Corgis, Luna and Sueño,
+          and her partner Andrew.
         </p>
       </>
     ),
@@ -167,11 +168,11 @@ const bioVariants = [
 export default function AboutPage() {
   const experiences = getExperiences();
   const education = getEducation();
-  const mentoringSessionCount = (mentoringData as { _meta: { totalSessions: number } })._meta.totalSessions;
-  const allPostsCount = getAllBlogPosts().length;
-  const speakingCount = getBlogPostsByCategory("speaking").length;
-  const startYear = 2017;
-  const yearsOfExperience = new Date().getFullYear() - startYear;
+  const roundDown = (n: number) => n >= 1000 ? Math.floor(n / 1000) * 1000 : n >= 100 ? Math.floor(n / 100) * 100 : Math.floor(n / 10) * 10;
+  const mentoringSessionCount = roundDown((mentoringData as { _meta: { totalSessions: number } })._meta.totalSessions);
+  const allPostsCount = roundDown(getAllBlogPosts().length);
+  const speakingCount = roundDown(getBlogPostsByCategory("speaking").length);
+  const yearsOfExperience = YEARS_OF_EXPERIENCE;
   const awards = getAwards();
   const organizations = getOrganizationsByActivity()
     .filter((o) => o.logo && !EXCLUDED_FROM_FEATURED_ORGS.has(o.slug))

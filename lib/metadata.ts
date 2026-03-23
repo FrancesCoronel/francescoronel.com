@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+export const YEARS_OF_EXPERIENCE = new Date().getFullYear() - 2017;
+
 export const siteConfig = {
   title: "Frances Coronel",
   description:
@@ -15,7 +17,7 @@ export const siteConfig = {
 };
 
 const defaultOgImage = {
-  url: `${siteConfig.siteUrl}/images/og/home.png`,
+  url: `${siteConfig.siteUrl}/images/og/home.jpg`,
   width: 1200,
   height: 630,
   alt: "Frances Coronel",

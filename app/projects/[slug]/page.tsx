@@ -156,7 +156,7 @@ export default async function ProjectPage({ params }: PageProps) {
       </section>
 
       {/* Body */}
-      <section className="py-16 md:py-20">
+      <section className="border-b border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <div className="grid gap-10 lg:grid-cols-3 lg:gap-16">
 

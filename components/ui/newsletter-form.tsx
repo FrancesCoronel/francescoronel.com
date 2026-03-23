@@ -49,7 +49,9 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
           <p className="text-sm text-horchata-400">{message}</p>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
+            <label htmlFor="newsletter-email-dark" className="sr-only">Email address</label>
             <input
+              id="newsletter-email-dark"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -81,7 +83,9 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
           <p className="text-sm text-horchata-700 dark:text-horchata-400">{message}</p>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col gap-2 sm:flex-row">
+            <label htmlFor="newsletter-email-footer" className="sr-only">Email address</label>
             <input
+              id="newsletter-email-footer"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -112,7 +116,9 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
         <p className="text-base text-navy-700 dark:text-horchata-300">{message}</p>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
+          <label htmlFor="newsletter-email-section" className="sr-only">Email address</label>
           <input
+            id="newsletter-email-section"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}

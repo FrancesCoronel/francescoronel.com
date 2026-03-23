@@ -194,7 +194,7 @@ export default function ForLlmsPage() {
         </ul>
       </section>
 
-      <footer className="mt-12 border-t pt-6 text-sm text-gray-500">
+      <footer className="mt-12 border-t border-horchata-200 pt-6 text-sm text-navy-400 dark:border-navy-700 dark:text-white/40">
         <p>
           This page is designed to be easily parsed by AI assistants and LLMs.
           For the human-friendly version, visit{" "}

@@ -7,7 +7,7 @@ import remarkGfm from "remark-gfm";
 import { getBlogPost, getBlogSlugs, getAllBlogPosts, getOrganizationBySlug, getCategoryMaps } from "@/lib/content";
 import { PrevNextNav } from "@/components/ui/prev-next-nav";
 import { resolveImageUrl, ogImageUrl } from "@/lib/cloudinary";
-import { formatDate } from "@/lib/utils";
+import { formatDate, canOptimize } from "@/lib/utils";
 import { sanitizeMdxContent } from "@/lib/sanitize-mdx";
 import { mdxComponents } from "@/components/mdx/mdx-components";
 import { BlogCard } from "@/components/ui/blog-card";
@@ -145,12 +145,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       {post.featuredImage && (() => {
         let imgSrc = resolveImageUrl(post.featuredImage);
         if (imgSrc.startsWith("//")) imgSrc = `https:${imgSrc}`;
-        const isOptimizable = (() => {
-          try {
-            const { hostname } = new URL(imgSrc);
-            return ["res.cloudinary.com", "cdn.prod.website-files.com", "uploads-ssl.webflow.com"].includes(hostname);
-          } catch { return false; }
-        })();
+        const isOptimizable = canOptimize(imgSrc);
         return isOptimizable ? (
           <Image
             src={imgSrc}
@@ -205,12 +200,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             {organizations.map((org) => {
               let logoSrc = resolveImageUrl(org.logo);
               if (logoSrc.startsWith("//")) logoSrc = `https:${logoSrc}`;
-              const isOptimizable = (() => {
-                try {
-                  const { hostname } = new URL(logoSrc);
-                  return ["res.cloudinary.com", "cdn.prod.website-files.com", "uploads-ssl.webflow.com"].includes(hostname);
-                } catch { return false; }
-              })();
+              const isOptimizable = canOptimize(logoSrc);
               return (
                 <Link
                   key={org.slug}

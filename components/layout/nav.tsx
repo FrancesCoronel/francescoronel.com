@@ -77,6 +77,7 @@ export function Nav() {
           className="md:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
         >
           <svg
             className="h-6 w-6 text-navy-900 dark:text-horchata-100"

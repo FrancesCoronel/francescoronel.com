@@ -43,6 +43,7 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
   } | null>(null);
   const [pagefindError, setPagefindError] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
   const debounceRef = useRef<ReturnType<typeof setTimeout>>(null);
   const router = useRouter();
 
@@ -123,7 +124,28 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
   }, [query, pagefind]);
 
   function handleKeyDown(e: React.KeyboardEvent) {
-    if (e.key === "ArrowDown") {
+    if (e.key === "Tab") {
+      if (!modalRef.current) return;
+      const focusable = Array.from(
+        modalRef.current.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        )
+      );
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    } else if (e.key === "ArrowDown") {
       e.preventDefault();
       setSelectedIndex((i) => Math.min(i + 1, results.length - 1));
     } else if (e.key === "ArrowUp") {
@@ -137,7 +159,7 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
   }
 
   return (
-    <div className="fixed inset-0 z-[9999]" role="dialog" aria-modal="true">
+    <div className="fixed inset-0 z-[9999]" role="dialog" aria-modal="true" aria-label="Search">
       {/* Backdrop */}
       <div
         className="fixed inset-0 bg-navy-900/60 backdrop-blur-sm"
@@ -146,7 +168,7 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
 
       {/* Modal */}
       <div className="fixed left-1/2 top-[10vh] w-full max-w-2xl -translate-x-1/2 px-4">
-        <div className="overflow-hidden rounded-2xl border border-horchata-200 bg-white shadow-2xl dark:border-navy-600 dark:bg-navy-800">
+        <div ref={modalRef} onKeyDown={handleKeyDown} className="overflow-hidden rounded-2xl border border-horchata-200 bg-white shadow-2xl dark:border-navy-600 dark:bg-navy-800">
           {/* Search input */}
           <div className="flex items-center border-b border-horchata-200 px-4 dark:border-navy-700">
             <svg
@@ -204,7 +226,9 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
                         </p>
                         <p
                           className="mt-1 line-clamp-2 text-xs text-navy-500 dark:text-horchata-400"
-                          dangerouslySetInnerHTML={{ __html: r.excerpt }}
+                          dangerouslySetInnerHTML={{
+                            __html: r.excerpt.replace(/<(?!\/?mark\b)[^>]*>/gi, ""),
+                          }}
                         />
                       </Link>
                     </li>

@@ -16,7 +16,7 @@ import {
   getTestimonials,
 } from "@/lib/content";
 import { formatDateRange } from "@/lib/utils";
-import { buildMetadata } from "@/lib/metadata";
+import { buildMetadata, YEARS_OF_EXPERIENCE } from "@/lib/metadata";
 import Link from "next/link";
 import Image from "next/image";
 import mentoringData from "@/content/mentoring-sessions.json";
@@ -25,20 +25,19 @@ import { getMultipleRepoStars } from "@/lib/github";
 export const metadata: Metadata = buildMetadata({
   path: "/",
   ogType: "profile",
-  ogImage: "/images/og/home.png",
+  ogImage: "/images/og/home.jpg",
 });
 
 export default async function HomePage() {
   const recentPosts = getAllBlogPosts().slice(0, 4);
   const activeProjects = getProjects().filter((p) => p.status === "active").slice(0, 4);
   const allPosts = getAllBlogPosts();
-  const mentoringSessionCount = (mentoringData as { _meta: { totalSessions: number } })._meta.totalSessions;
-  const speakingCount = getBlogPostsByCategory("speaking").length;
-  const startYear = 2017; // First full-time engineering role (Accenture)
-  const currentYear = new Date().getFullYear();
-  const yearsOfExperience = currentYear - startYear;
-  const awardsCount = getAwards().length;
-  const testimonialsCount = getTestimonials().length;
+  const roundDown = (n: number) => n >= 1000 ? Math.floor(n / 1000) * 1000 : n >= 100 ? Math.floor(n / 100) * 100 : Math.floor(n / 10) * 10;
+  const mentoringSessionCount = roundDown((mentoringData as { _meta: { totalSessions: number } })._meta.totalSessions);
+  const speakingCount = roundDown(getBlogPostsByCategory("speaking").length);
+  const yearsOfExperience = YEARS_OF_EXPERIENCE;
+  const awardsCount = roundDown(getAwards().length);
+  const testimonialsCount = roundDown(getTestimonials().length);
   const experiences = getExperiences().filter((exp) => {
     const t = exp.title.toLowerCase();
     if (t.includes("mentor")) return false;
@@ -279,7 +278,7 @@ export default async function HomePage() {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { stat: `${mentoringSessionCount}+`, label: "Mentoring sessions", sublabel: "logged on ADPList & Calendly", icon: "💬", href: "/mentoring" },
-              { stat: `${allPosts.length}+`, label: "Blog posts", sublabel: "published since 2014", icon: "✍🏽", href: "/blog" },
+              { stat: `${roundDown(allPosts.length)}+`, label: "Blog posts", sublabel: "published since 2014", icon: "✍🏽", href: "/blog" },
               { stat: `${speakingCount}+`, label: "Speaking events", sublabel: "at conferences since 2015", icon: "🎤", href: "/speaking" },
               { stat: `${yearsOfExperience}+`, label: "Years of experience", sublabel: "full-time in industry", icon: "💼", href: "/about#experience" },
               { stat: `${awardsCount}+`, label: "Awards & recognition", sublabel: "from organizations & publications", icon: "🏆", href: "/awards" },

@@ -13,6 +13,24 @@ const securityHeaders = [
     key: "Strict-Transport-Security",
     value: "max-age=63072000; includeSubDomains; preload",
   },
+  {
+    key: "Content-Security-Policy",
+    value: [
+      "default-src 'self'",
+      // Next.js requires unsafe-inline for hydration scripts; unsafe-eval for dev HMR
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+      "style-src 'self' 'unsafe-inline'",
+      // Images come from many external CDNs across 665 blog posts
+      "img-src 'self' data: https:",
+      "font-src 'self'",
+      // API calls: Vercel Analytics/Speed Insights, GA4, Buttondown newsletter
+      "connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://www.google-analytics.com https://region1.google-analytics.com https://api.buttondown.email",
+      // Cal.com booking embed
+      "frame-src https://cal.com",
+      "object-src 'none'",
+      "base-uri 'self'",
+    ].join("; "),
+  },
 ];
 
 const nextConfig: NextConfig = {

@@ -57,15 +57,19 @@ export function getBlogPost(slug: string, { includeDrafts = false } = {}): BlogP
   };
 }
 
+let _allPostsCache: BlogPost[] | null = null;
+
 export function getAllBlogPosts(): BlogPost[] {
+  if (_allPostsCache) return _allPostsCache;
   const slugs = getBlogSlugs();
   const posts = slugs
     .map((slug) => getBlogPost(slug))
     .filter((post): post is BlogPost => post !== null);
 
-  return posts.sort(
+  _allPostsCache = posts.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
+  return _allPostsCache;
 }
 
 export function getBlogPostsByCategory(categorySlug: string): BlogPost[] {

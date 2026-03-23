@@ -10,7 +10,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "All the sweet things folks have had to say about their experience working with Frances Coronel.",
   path: "/testimonials",
-  ogImage: "/images/og/mentoring.png",
+  ogImage: "/images/og/mentoring.jpg",
   robots: { index: false, follow: false },
 });
 

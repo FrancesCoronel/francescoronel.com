@@ -1,5 +1,45 @@
 import { type ClassValue, clsx } from "clsx";
 
+// Hostnames configured in next.config.ts remotePatterns — keep in sync
+export const OPTIMIZED_HOSTS = new Set([
+  "res.cloudinary.com",
+  "cdn.prod.website-files.com",
+  "uploads-ssl.webflow.com",
+  "fvcproductions39789812.wordpress.com",
+  "fvcproductions.files.wordpress.com",
+  "i.imgur.com",
+  "i.stack.imgur.com",
+  "cdn-images-1.medium.com",
+  "image.slidesharecdn.com",
+  "images.pexels.com",
+  "media.githubusercontent.com",
+  "pbs.twimg.com",
+  "i.ytimg.com",
+  "github.com",
+  "avatars.githubusercontent.com",
+  "encrypted-tbn0.gstatic.com",
+  "www.scdn.co",
+  "www.themebeta.com",
+  "tf-assets-prod.s3.amazonaws.com",
+  "knightfoundation.imgix.net",
+  "logo.clearbit.com",
+  "raw.githubusercontent.com",
+  "ph-files.imgix.net",
+  "s3-us-west-2.amazonaws.com",
+  "static1.squarespace.com",
+  "www.apprenticeships.me",
+  "ktebrbhzg9wasky1.public.blob.vercel-storage.com",
+]);
+
+export function canOptimize(url: string): boolean {
+  try {
+    const { hostname } = new URL(url);
+    return OPTIMIZED_HOSTS.has(hostname);
+  } catch {
+    return false;
+  }
+}
+
 /**
  * Merge Tailwind class names, resolving conflicts.
  * Lightweight alternative to tailwind-merge for simple cases.

@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Frances Coronel has spoken at 100+ events on topics ranging from diversity in tech to TypeScript, Progressive Web Apps, and community building.",
   path: "/speaking",
-  ogImage: "/images/og/speaking.png",
+  ogImage: "/images/og/speaking.jpg",
 });
 
 const upcomingEvents = [

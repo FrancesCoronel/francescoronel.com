@@ -51,15 +51,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cabin.variable} ${latina.variable}`} suppressHydrationWarning>
-      <head>
-        <link rel="alternate" type="application/rss+xml" title="Frances Coronel - Blog" href="/feed" />
-      </head>
       <body className="flex min-h-screen flex-col antialiased">
         <ThemeProvider>
           <PersonJsonLd />
           <WebSiteJsonLd />
+          <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:rounded focus:bg-horchata-900 focus:px-4 focus:py-2 focus:text-white">
+            Skip to main content
+          </a>
           <Nav />
-          <main className="flex-1">{children}</main>
+          <main id="main-content" className="flex-1">{children}</main>
           <Footer />
           <AnalyticsProviders />
         </ThemeProvider>
