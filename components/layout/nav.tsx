@@ -19,7 +19,7 @@ export function Nav() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-horchata-200/60 bg-horchata-50/90 backdrop-blur-lg dark:border-navy-700/60 dark:bg-navy-900/90">
+    <header className="sticky top-0 z-50 border-b border-horchata-200/60 bg-horchata-50/90 shadow-sm backdrop-blur-lg dark:border-navy-700/60 dark:bg-navy-900/90 dark:shadow-md dark:shadow-black/40">
       <nav className="mx-auto flex max-w-[var(--container-max)] items-center justify-between px-6 py-3">
         <Link
           href="/"

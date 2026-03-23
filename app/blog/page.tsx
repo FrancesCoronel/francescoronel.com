@@ -4,7 +4,7 @@ import { getAllBlogPosts, getCategories } from "@/lib/content";
 import { BlogListClient } from "@/components/ui/blog-list-client";
 import { PageHeader } from "@/components/ui/page-header";
 import { buildMetadata } from "@/lib/metadata";
-import { ConnectCTA } from "@/components/sections/connect-cta";
+import { NewsletterCTA } from "@/components/sections/newsletter-cta";
 
 export const metadata: Metadata = buildMetadata({
   title: "Blog",
@@ -52,7 +52,7 @@ export default function BlogListingPage() {
         </div>
       </section>
 
-      <ConnectCTA variant="follow" />
+      <NewsletterCTA />
     </>
   );
 }

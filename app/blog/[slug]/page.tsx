@@ -114,11 +114,11 @@ export default async function BlogPostPage({ params }: PageProps) {
           <span>&middot;</span>
           <span>{post.readingTime}</span>
         </div>
-        <h1 className="text-3xl font-bold leading-tight text-navy-900 dark:text-horchata-100 md:text-4xl">
+        <h1 className="text-2xl font-bold leading-tight text-navy-900 dark:text-horchata-100 md:text-3xl">
           {post.title}
         </h1>
         {post.excerpt && (
-          <p className="mt-4 text-lg leading-relaxed text-navy-600 dark:text-horchata-300">
+          <p className="mt-4 text-base leading-relaxed text-navy-600 dark:text-horchata-300">
             {post.excerpt}
           </p>
         )}
@@ -170,7 +170,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       })()}
 
       {/* MDX content */}
-      <div className="prose prose-lg max-w-none dark:prose-invert">
+      <div className="prose prose-base max-w-none dark:prose-invert [&_p]:text-base [&_li]:text-base">
         {content}
       </div>
 
@@ -178,7 +178,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       {post.tags.length > 0 && (
         <div className="mt-10 border-t border-horchata-200 pt-6 dark:border-navy-700">
           <p className="mb-2 text-xs font-bold uppercase tracking-wider text-navy-500 dark:text-horchata-400">
-            Tags
+            Tags 🏷️
           </p>
           <div className="flex flex-wrap gap-2">
             {post.tags.map((tag) => (
@@ -198,7 +198,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       {organizations.length > 0 && (
         <div className="mt-10 border-t border-horchata-200 pt-6 dark:border-navy-700">
           <p className="mb-3 text-xs font-bold uppercase tracking-wider text-navy-500 dark:text-horchata-400">
-            Organizations
+            Organizations 🏢
           </p>
           <div className="flex flex-wrap gap-3">
             {organizations.map((org) => {
@@ -239,26 +239,29 @@ export default async function BlogPostPage({ params }: PageProps) {
       <div className="mt-10 border-t border-horchata-200 pt-8 dark:border-navy-700">
         <Link
           href="/about"
-          className="flex items-center gap-5 rounded-2xl border border-horchata-200 bg-horchata-50 p-6 transition-all hover:border-horchata-400 hover:shadow-lg dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
+          className="group flex items-center gap-6 rounded-2xl border-2 border-horchata-300 bg-horchata-50 p-6 transition-all hover:border-horchata-400 hover:shadow-md dark:border-navy-600 dark:bg-navy-800 dark:hover:border-horchata-500"
         >
           <Image
             src="/images/assets/frances-slack.jpg"
             alt="Frances Coronel"
             width={80}
             height={80}
-            className="h-16 w-16 flex-shrink-0 rounded-full object-cover ring-2 ring-horchata-200 dark:ring-navy-600"
+            className="h-20 w-20 flex-shrink-0 rounded-full object-cover ring-2 ring-horchata-400"
           />
-          <div>
-            <p className="text-xs font-bold uppercase tracking-wider text-navy-500 dark:text-horchata-400">
+          <div className="min-w-0 flex-1">
+            <p className="text-xs font-bold uppercase tracking-wider text-horchata-600 dark:text-horchata-400">
               Written by
             </p>
-            <p className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100">
+            <p className="mt-1 text-xl font-bold text-navy-900 dark:text-white">
               Frances Coronel
             </p>
-            <p className="mt-1 text-sm text-navy-600 dark:text-white/70">
-              Senior Software Engineer at Slack. Speaker, mentor, and proud Peruvian-American. 👩🏽‍💻
+            <p className="mt-1 text-sm text-navy-600 dark:text-white/60">
+              Senior Software Engineer at Slack with 8+ years of experience in frontend engineering and AI adoption. Speaker, mentor, and proud Peruvian-American. 👩🏽‍💻
             </p>
           </div>
+          <svg className="h-5 w-5 flex-shrink-0 text-white/30 transition-transform group-hover:translate-x-1 group-hover:text-horchata-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
         </Link>
       </div>
 

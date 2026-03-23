@@ -1,46 +1,26 @@
-import Image from "next/image";
 import { NewsletterForm } from "@/components/ui/newsletter-form";
 
 export function NewsletterCTA() {
   return (
-    <section className="border-y border-horchata-900 bg-horchata-900 py-16 dark:border-navy-800 dark:bg-navy-800">
-      <div className="mx-auto max-w-[var(--container-max)] px-6">
-        <div className="mx-auto max-w-4xl">
-          <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
-            {/* Illustration */}
-            <div className="flex-shrink-0">
-              <Image
-                src="/images/assets/newsletter-cta.webp"
-                alt=""
-                width={200}
-                height={200}
-                className="h-36 w-36 object-contain drop-shadow-xl md:h-44 md:w-44"
-                aria-hidden="true"
-              />
-            </div>
+    <section className="border-y border-navy-800 bg-navy-800 py-16">
+      <div className="mx-auto max-w-3xl px-6">
+        <p className="text-xs font-bold uppercase tracking-widest text-horchata-400">
+          Stay in the loop
+        </p>
+        <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+          🦄 The Unicorn Engineer ✨
+        </h2>
+        <p className="mt-3 text-sm text-white/60 sm:text-base">
+          Personal and career learnings, advice, collaboration opportunities, and more. Delivered straight to your inbox.
+        </p>
 
-            {/* Content */}
-            <div className="flex-1 text-center md:text-left">
-              <p className="text-xs font-bold uppercase tracking-widest text-horchata-400">
-                Stay in the loop
-              </p>
-              <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
-                The Unicorn Engineer ✨
-              </h2>
-              <p className="mt-3 max-w-lg text-sm text-white/60 sm:text-base">
-                Personal and career learnings, advice, collaboration opportunities, and more. Delivered straight to your inbox.
-              </p>
-
-              <div className="mt-6 max-w-lg">
-                <NewsletterForm variant="dark" />
-              </div>
-
-              <p className="mt-3 text-xs text-white/30">
-                No spam. Unsubscribe anytime.
-              </p>
-            </div>
-          </div>
+        <div className="mt-6">
+          <NewsletterForm variant="dark" />
         </div>
+
+        <p className="mt-3 text-xs text-white/30">
+          No spam. Unsubscribe anytime.
+        </p>
       </div>
     </section>
   );
