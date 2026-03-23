@@ -6,7 +6,7 @@ import { buildMetadata } from "@/lib/metadata";
 import { getProjectBySlug, getProjects } from "@/lib/content";
 import { resolveImageUrl } from "@/lib/cloudinary";
 import { formatDateRange } from "@/lib/utils";
-import { getRepoStars } from "@/lib/github";
+import { getRepoData } from "@/lib/github";
 import { ConnectCTA } from "@/components/sections/connect-cta";
 import { PrevNextNav } from "@/components/ui/prev-next-nav";
 import nailedItEpisodes from "@/content/nailed-it-episodes.json";
@@ -53,7 +53,8 @@ export default async function ProjectPage({ params }: PageProps) {
   const project = getProjectBySlug(slug);
   if (!project) notFound();
 
-  const stars = project.github ? await getRepoStars(project.github) : null;
+  const repoData = project.github ? await getRepoData(project.github) : null;
+  const stars = repoData?.stars ?? null;
 
   const allProjects = getProjects();
   const currentIndex = allProjects.findIndex((p) => p.slug === slug);
@@ -158,7 +159,7 @@ export default async function ProjectPage({ params }: PageProps) {
       {/* Body */}
       <section className="border-b border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <div className="grid gap-10 lg:grid-cols-3 lg:gap-16">
+          <div className="grid gap-10 lg:grid-cols-[3fr_2fr] lg:gap-16">
 
             {/* Main content */}
             <div className="space-y-10 lg:col-span-2">
@@ -174,21 +175,39 @@ export default async function ProjectPage({ params }: PageProps) {
               )}
 
               {/* Highlights */}
-              {project.highlights.length > 0 && (
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-horchata-600 dark:text-horchata-500">Highlights</p>
-                  <ul className="mt-4 space-y-2.5">
-                    {project.highlights.map((h, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <svg className="mt-0.5 h-5 w-5 shrink-0 text-horchata-500" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
-                        </svg>
-                        <span className="text-sm leading-relaxed text-navy-700 dark:text-horchata-200">{h}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+              {(() => {
+                const realHighlights = project.highlights.filter(
+                  (h) => !h.startsWith("GitHub:")
+                );
+                const githubHighlights: string[] = [];
+                if (repoData) {
+                  if (repoData.language) githubHighlights.push(`Written in ${repoData.language}`);
+                  if (repoData.stars > 0) githubHighlights.push(`${repoData.stars.toLocaleString()} stars on GitHub`);
+                  if (repoData.forks > 0) githubHighlights.push(`${repoData.forks.toLocaleString()} forks`);
+                  if (repoData.openIssues > 0) githubHighlights.push(`${repoData.openIssues} open issue${repoData.openIssues !== 1 ? "s" : ""}`);
+                  if (repoData.pushedAt) {
+                    const d = new Date(repoData.pushedAt);
+                    githubHighlights.push(`Last updated ${d.toLocaleDateString("en-US", { month: "long", year: "numeric" })}`);
+                  }
+                }
+                const allHighlights = [...realHighlights, ...githubHighlights];
+                if (allHighlights.length === 0) return null;
+                return (
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-widest text-horchata-600 dark:text-horchata-500">Highlights</p>
+                    <ul className="mt-4 space-y-2.5">
+                      {allHighlights.map((h, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <svg className="mt-0.5 h-5 w-5 shrink-0 text-horchata-500" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+                          </svg>
+                          <span className="text-sm leading-relaxed text-navy-700 dark:text-horchata-200">{h}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })()}
 
               {/* Nailed It! Data Tables */}
               {slug === "nailed-it-tracker" && (
@@ -274,12 +293,45 @@ export default async function ProjectPage({ params }: PageProps) {
                     </span>
                     <svg className="h-3.5 w-3.5 shrink-0 text-navy-400 transition-transform group-hover:translate-x-0.5 dark:text-white/30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
                   </a>
-                  {stars != null && stars > 0 && (
+                  {repoData && (
+                    <div className="grid grid-cols-2 divide-x divide-y divide-horchata-100 border-t border-horchata-100 dark:divide-navy-700 dark:border-navy-700">
+                      {repoData.stars > 0 && (
+                        <div className="flex items-center gap-2 px-4 py-3">
+                          <svg className="h-4 w-4 shrink-0 fill-current text-horchata-500" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                          <span className="text-sm font-semibold text-navy-900 dark:text-horchata-100">{repoData.stars.toLocaleString()}</span>
+                          <span className="text-xs text-navy-400 dark:text-white/40">stars</span>
+                        </div>
+                      )}
+                      {repoData.forks > 0 && (
+                        <div className="flex items-center gap-2 px-4 py-3">
+                          <svg className="h-4 w-4 shrink-0 fill-current text-navy-400 dark:text-horchata-500" viewBox="0 0 24 24"><path d="M5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a4 4 0 0 1 3.874 3H11a1 1 0 0 1 0 2H8.874A4.002 4.002 0 0 1 1 13a4 4 0 0 1 4-4zm14-6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a4 4 0 0 1 4 4 4 4 0 0 1-3.874 3H13a1 1 0 0 1 0-2h2.126A4.002 4.002 0 0 1 19 9zm-7-6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a4 4 0 0 1 3.874 3 1 1 0 0 1 0 2A4.002 4.002 0 0 1 12 21a4 4 0 0 1-3.874-3 1 1 0 0 1 0-2A4.002 4.002 0 0 1 12 9z"/></svg>
+                          <span className="text-sm font-semibold text-navy-900 dark:text-horchata-100">{repoData.forks.toLocaleString()}</span>
+                          <span className="text-xs text-navy-400 dark:text-white/40">forks</span>
+                        </div>
+                      )}
+                      {repoData.language && (
+                        <div className="flex items-center gap-2 px-4 py-3">
+                          <span className="h-3 w-3 shrink-0 rounded-full bg-horchata-400" />
+                          <span className="text-sm text-navy-700 dark:text-horchata-200">{repoData.language}</span>
+                        </div>
+                      )}
+                      {repoData.openIssues > 0 && (
+                        <div className="flex items-center gap-2 px-4 py-3">
+                          <svg className="h-4 w-4 shrink-0 text-navy-400 dark:text-horchata-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                          <span className="text-sm font-semibold text-navy-900 dark:text-horchata-100">{repoData.openIssues}</span>
+                          <span className="text-xs text-navy-400 dark:text-white/40">issues</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
+                  {repoData?.topics && repoData.topics.length > 0 && (
                     <div className="border-t border-horchata-100 px-4 py-3 dark:border-navy-700">
-                      <div className="flex items-center gap-2">
-                        <svg className="h-4 w-4 fill-current text-horchata-500" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <span className="text-sm font-bold text-navy-900 dark:text-horchata-100">{stars.toLocaleString()}</span>
-                        <span className="text-sm text-navy-400 dark:text-white/40">stars</span>
+                      <div className="flex flex-wrap gap-1.5">
+                        {repoData.topics.map((t) => (
+                          <span key={t} className="rounded-full bg-horchata-100 px-2.5 py-0.5 text-xs font-medium text-navy-600 dark:bg-navy-700 dark:text-horchata-300">
+                            {t}
+                          </span>
+                        ))}
                       </div>
                     </div>
                   )}

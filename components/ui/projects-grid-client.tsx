@@ -44,7 +44,7 @@ function ProjectCard({
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="group flex flex-col rounded-2xl border border-horchata-200 bg-white p-6 transition-shadow hover:shadow-lg dark:border-navy-700 dark:bg-navy-800"
+      className="group flex flex-col rounded-2xl border border-horchata-300 bg-horchata-50 p-6 transition-shadow hover:shadow-lg dark:border-navy-700 dark:bg-navy-800"
     >
       <div className="flex items-start justify-between gap-3">
         {project.logo ? (
@@ -142,7 +142,7 @@ export function ProjectsGridClient({
   return (
     <div>
       {/* Filter bar */}
-      <div className="border-b border-horchata-200 bg-white dark:border-navy-700 dark:bg-navy-900">
+      <div className="border-b border-horchata-300 bg-horchata-100 dark:border-navy-700 dark:bg-navy-900">
         <div className="mx-auto max-w-[var(--container-max)] px-6 py-4">
           <div className="flex flex-wrap items-center gap-2">
             {FILTER_TABS.map((tab) => (
@@ -214,7 +214,7 @@ export function ProjectsGridClient({
         /* Default view — featured + rest */
         <>
           {featured.length > 0 && (
-            <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
+            <section className="border-y border-horchata-300 bg-horchata-200 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
               <div className="mx-auto max-w-[var(--container-max)] px-6">
                 <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
                   Currently Active
@@ -235,7 +235,7 @@ export function ProjectsGridClient({
             </section>
           )}
 
-          <section className="py-16 md:py-20">
+          <section className="bg-horchata-100 py-16 md:py-20 dark:bg-navy-900">
             <div className="mx-auto max-w-[var(--container-max)] px-6">
               {featured.length > 0 && (
                 <h2 className="mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
