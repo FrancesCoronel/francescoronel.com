@@ -48,7 +48,7 @@
       "date": "2026-02-13",
       "name": "Diego S.",
       "type": "mentoring",
-      "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Diego Sigaran",
+      "eventTypeName": "30-Minute Mentoring Call — Frances Coronel <> Diego Sigaran",
       "topic": null,
       "source": "cal.com",
       "durationMinutes": 30
@@ -77,7 +77,7 @@
       "date": "2026-01-07",
       "name": "Keith T.",
       "type": "mentoring",
-      "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Keith Tugcu",
+      "eventTypeName": "30-Minute Mentoring Call — Frances Coronel <> Keith Tugcu",
       "topic": null,
       "source": "cal.com",
       "durationMinutes": 30
@@ -86,7 +86,7 @@
       "date": "2026-01-06",
       "name": "Enea X.",
       "type": "mentoring",
-      "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Enea Xharja",
+      "eventTypeName": "30-Minute Mentoring Call — Frances Coronel <> Enea Xharja",
       "topic": null,
       "source": "cal.com",
       "durationMinutes": 30
@@ -205,7 +205,7 @@
       "date": "2025-06-07",
       "name": "Sunny",
       "type": "mentoring",
-      "eventTypeName": "1-Hour Mentoring Call \u2014 Frances Coronel <> Sunny",
+      "eventTypeName": "1-Hour Mentoring Call — Frances Coronel <> Sunny",
       "topic": null,
       "source": "cal.com",
       "durationMinutes": 60
@@ -234,7 +234,7 @@
       "date": "2025-05-13",
       "name": "Sunny",
       "type": "mentoring",
-      "eventTypeName": "1-Hour Mentoring Call \u2014 Frances Coronel <> Sunny",
+      "eventTypeName": "1-Hour Mentoring Call — Frances Coronel <> Sunny",
       "topic": null,
       "source": "cal.com",
       "durationMinutes": 60
@@ -273,7 +273,7 @@
       "date": "2025-04-08",
       "name": "Sunny",
       "type": "mentoring",
-      "eventTypeName": "1-Hour Mentoring Call \u2014 Frances Coronel <> Sunny",
+      "eventTypeName": "1-Hour Mentoring Call — Frances Coronel <> Sunny",
       "topic": null,
       "source": "cal.com",
       "durationMinutes": 60
@@ -292,7 +292,7 @@
       "date": "2025-04-01",
       "name": "Anwana N.",
       "type": "mentoring",
-      "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Anwana Ntofon",
+      "eventTypeName": "30-Minute Mentoring Call — Frances Coronel <> Anwana Ntofon",
       "topic": null,
       "source": "cal.com",
       "durationMinutes": 30
@@ -330,7 +330,7 @@
       "date": "2025-02-18",
       "name": "Sunny",
       "type": "mentoring",
-      "eventTypeName": "1-Hour Mentoring Call \u2014 Frances Coronel <> Sunny",
+      "eventTypeName": "1-Hour Mentoring Call — Frances Coronel <> Sunny",
       "topic": null,
       "source": "cal.com",
       "durationMinutes": 60
@@ -349,7 +349,7 @@
       "date": "2025-02-17",
       "name": "Sunny",
       "type": "mentoring",
-      "eventTypeName": "1-Hour Mentoring Call \u2014 Frances Coronel <> Sunny",
+      "eventTypeName": "1-Hour Mentoring Call — Frances Coronel <> Sunny",
       "topic": null,
       "source": "cal.com",
       "durationMinutes": 60
@@ -358,7 +358,7 @@
       "date": "2025-02-15",
       "name": "Sunny",
       "type": "mentoring",
-      "eventTypeName": "1-Hour Mentoring Call \u2014 Frances Coronel <> Sunny",
+      "eventTypeName": "1-Hour Mentoring Call — Frances Coronel <> Sunny",
       "topic": null,
       "source": "cal.com",
       "durationMinutes": 60
@@ -437,7 +437,7 @@
       "date": "2025-01-20",
       "name": "Daisy",
       "type": "mentoring",
-      "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Daisy",
+      "eventTypeName": "30-Minute Mentoring Call — Frances Coronel <> Daisy",
       "topic": null,
       "source": "cal.com",
       "durationMinutes": 30
@@ -466,7 +466,7 @@
       "date": "2025-01-15",
       "name": "Kateri G.",
       "type": "mentoring",
-      "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Kateri Gutierrez",
+      "eventTypeName": "30-Minute Mentoring Call — Frances Coronel <> Kateri Gutierrez",
       "topic": null,
       "source": "cal.com",
       "durationMinutes": 30
@@ -534,7 +534,7 @@
       "date": "2024-10-21",
       "name": "Karen Z.",
       "type": "mentoring",
-      "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Karen Zapata",
+      "eventTypeName": "30-Minute Mentoring Call — Frances Coronel <> Karen Zapata",
       "topic": null,
       "source": "cal.com",
       "durationMinutes": 30
@@ -543,7 +543,7 @@
       "date": "2024-10-18",
       "name": "Karen Z.",
       "type": "mentoring",
-      "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Karen Zapata",
+      "eventTypeName": "30-Minute Mentoring Call — Frances Coronel <> Karen Zapata",
       "topic": null,
       "source": "cal.com",
       "durationMinutes": 30
@@ -648,15 +648,6 @@
       "cost": 52
     },
     {
-      "date": "2024-05-28",
-      "name": "Formation Client",
-      "type": "community",
-      "eventTypeName": "Latinx FRG Meeting",
-      "topic": null,
-      "source": "formation",
-      "durationMinutes": 30
-    },
-    {
       "date": "2024-05-25",
       "name": "Formation Client",
       "type": "mentoring",
@@ -725,24 +716,6 @@
       "source": "formation",
       "durationMinutes": 48,
       "cost": 52
-    },
-    {
-      "date": "2024-04-23",
-      "name": "Formation Client",
-      "type": "community",
-      "eventTypeName": "Latinx FRG Meeting",
-      "topic": null,
-      "source": "formation",
-      "durationMinutes": 30
-    },
-    {
-      "date": "2024-04-05",
-      "name": "Formation Client",
-      "type": "community",
-      "eventTypeName": "Latinx FRG Meeting",
-      "topic": null,
-      "source": "formation",
-      "durationMinutes": 30
     },
     {
       "date": "2024-04-05",
@@ -825,15 +798,6 @@
       "cost": 65
     },
     {
-      "date": "2024-02-02",
-      "name": "Formation Client",
-      "type": "community",
-      "eventTypeName": "Latinx FRG Meeting",
-      "topic": null,
-      "source": "formation",
-      "durationMinutes": 30
-    },
-    {
       "date": "2024-01-27",
       "name": "Formation Client",
       "type": "interview",
@@ -842,15 +806,6 @@
       "source": "formation",
       "durationMinutes": 30,
       "cost": 32.5
-    },
-    {
-      "date": "2024-01-23",
-      "name": "Formation Client",
-      "type": "community",
-      "eventTypeName": "Latinx FRG Meeting",
-      "topic": null,
-      "source": "formation",
-      "durationMinutes": 30
     },
     {
       "date": "2024-01-20",
@@ -923,15 +878,6 @@
       "cost": 65
     },
     {
-      "date": "2023-12-12",
-      "name": "Formation Client",
-      "type": "community",
-      "eventTypeName": "Latinx FRG Meeting",
-      "topic": null,
-      "source": "formation",
-      "durationMinutes": 30
-    },
-    {
       "date": "2023-12-06",
       "name": "Formation Client",
       "type": "mentoring",
@@ -952,15 +898,6 @@
       "cost": 32.5
     },
     {
-      "date": "2023-11-14",
-      "name": "Formation Client",
-      "type": "community",
-      "eventTypeName": "Latinx FRG Meeting",
-      "topic": null,
-      "source": "formation",
-      "durationMinutes": 30
-    },
-    {
       "date": "2023-09-12",
       "name": "Formation Client",
       "type": "mentoring",
@@ -974,7 +911,7 @@
       "date": "2023-09-12",
       "name": "Angelica R.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Just a coffee chat to get to know each other!",
       "durationMinutes": 30
     },
@@ -1011,15 +948,6 @@
     {
       "date": "2023-08-15",
       "name": "Formation Client",
-      "type": "community",
-      "eventTypeName": "Latinx FRG Meeting",
-      "topic": null,
-      "source": "formation",
-      "durationMinutes": 30
-    },
-    {
-      "date": "2023-08-15",
-      "name": "Formation Client",
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
@@ -1041,7 +969,7 @@
       "date": "2023-08-15",
       "name": "Elizabeth P.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Intros and Airbnb!",
       "durationMinutes": 30
     },
@@ -1096,15 +1024,6 @@
     {
       "date": "2023-07-25",
       "name": "Formation Client",
-      "type": "community",
-      "eventTypeName": "Latinx FRG Meeting",
-      "topic": null,
-      "source": "formation",
-      "durationMinutes": 30
-    },
-    {
-      "date": "2023-07-25",
-      "name": "Formation Client",
       "type": "interview",
       "eventTypeName": "Technical Behavioral Interview with Frances",
       "topic": null,
@@ -1126,7 +1045,7 @@
       "date": "2023-06-16",
       "name": "Ashley D.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Latina Dev and contributing to project",
       "durationMinutes": 30
     },
@@ -1151,14 +1070,6 @@
       "cost": 65
     },
     {
-      "date": "2023-06-06",
-      "name": "Fernanda P.",
-      "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "'- I'm actually happy chatting on any sort of platform, Frances! Whatever is easiest for you!\n- I guess we can just chat about where we left off on Discord DM's! Thank you as well!",
-      "durationMinutes": 30
-    },
-    {
       "date": "2023-06-05",
       "name": "Hector R.",
       "type": "mentoring",
@@ -1171,7 +1082,7 @@
       "name": "Stephanie H.",
       "type": "mentoring",
       "eventTypeName": "30-Minute Mentoring Call (Prepaid)",
-      "topic": "I\u2019ll be wrapping up week 2 at Reddit! I\u2019ll follow up with some bullets points in advance of our call.",
+      "topic": "I’ll be wrapping up week 2 at Reddit! I’ll follow up with some bullets points in advance of our call.",
       "durationMinutes": 30
     },
     {
@@ -1198,7 +1109,7 @@
       "date": "2023-05-22",
       "name": "Noel C.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Meet & Greet.",
       "durationMinutes": 30
     },
@@ -1226,7 +1137,7 @@
       "date": "2023-05-18",
       "name": "Michael A.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Post-Asana reconnection",
       "durationMinutes": 30
     },
@@ -1234,7 +1145,7 @@
       "date": "2023-05-18",
       "name": "Chase T.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": null,
       "durationMinutes": 30
     },
@@ -1428,7 +1339,7 @@
       "date": "2023-02-28",
       "name": "Vicki D.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Informational interview to learn more about your career and the field of software engineering",
       "durationMinutes": 30
     },
@@ -1476,7 +1387,7 @@
       "date": "2023-02-16",
       "name": "Jasmin G.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Website Help :)",
       "durationMinutes": 30
     },
@@ -1505,34 +1416,10 @@
       "durationMinutes": 30
     },
     {
-      "date": "2023-02-02",
-      "name": "Jasmin G.",
-      "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "esta vida loca",
-      "durationMinutes": 30
-    },
-    {
-      "date": "2023-01-23",
-      "name": "Ei-Nyung C.",
-      "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Let's talk about our panel for Tech Intersections! I can do earlier if you want, say the Thursday the week before.",
-      "durationMinutes": 30
-    },
-    {
-      "date": "2022-12-13",
-      "name": "Gabriella C.",
-      "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Interested in contributing to the Latinas Who Code Directory!",
-      "durationMinutes": 30
-    },
-    {
       "date": "2022-12-06",
       "name": "mariana g.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Engineering career as a woman\nFront end Vs Backend\nPython VS. Rubby VS. app languages\nVR,AR and metaverse\nPortfolio building",
       "durationMinutes": 30,
       "cost": 25
@@ -1541,24 +1428,16 @@
       "date": "2022-11-29",
       "name": "Samson M.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "I have 5 years of FE experience and I\u2019m ready to move on to a Senior role. Unfortunately I was just laid off so I\u2019d like some help being groomed for a senior role! Thank you!",
+      "eventTypeName": "30-Minute Chat 👋🏽",
+      "topic": "I have 5 years of FE experience and I’m ready to move on to a Senior role. Unfortunately I was just laid off so I’d like some help being groomed for a senior role! Thank you!",
       "durationMinutes": 30,
       "cost": 25
     },
     {
       "date": "2022-11-15",
-      "name": "Ei-Nyung C.",
-      "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Lets talk about our January Tech Intersections Panel!",
-      "durationMinutes": 30
-    },
-    {
-      "date": "2022-11-15",
       "name": "Ashlyn N.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Introductory Call",
       "durationMinutes": 30
     },
@@ -1566,7 +1445,7 @@
       "date": "2022-11-10",
       "name": "Frank U.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": null,
       "durationMinutes": 30,
       "cost": 25
@@ -1575,23 +1454,15 @@
       "date": "2022-11-03",
       "name": "Mary R.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Github",
-      "durationMinutes": 30
-    },
-    {
-      "date": "2022-10-28",
-      "name": "Dahlia M.",
-      "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "Angeles Investors",
       "durationMinutes": 30
     },
     {
       "date": "2022-10-25",
       "name": "Aysha A.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "The best way to break into tech as a WOC",
       "durationMinutes": 30
     },
@@ -1599,7 +1470,7 @@
       "date": "2022-10-20",
       "name": "Yanira G.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "HOPE!",
       "durationMinutes": 30
     },
@@ -1607,7 +1478,7 @@
       "date": "2022-10-14",
       "name": "Karina N.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": null,
       "durationMinutes": 30
     },
@@ -1615,7 +1486,7 @@
       "date": "2022-10-13",
       "name": "Jiaqi S.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Catchup",
       "durationMinutes": 30
     },
@@ -1623,7 +1494,7 @@
       "date": "2022-10-10",
       "name": "ABRAHAM M.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Software Engineering Career Advice",
       "durationMinutes": 30
     },
@@ -1631,7 +1502,7 @@
       "date": "2022-10-10",
       "name": "Brenda H.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": null,
       "durationMinutes": 30
     },
@@ -1639,7 +1510,7 @@
       "date": "2022-10-10",
       "name": "Daniel A.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": null,
       "durationMinutes": 30
     },
@@ -1647,7 +1518,7 @@
       "date": "2022-10-07",
       "name": "Nafisa H.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "A follow-up to our conversation about sharing my story and career goals, while also maintaining credibility as a software engineer.",
       "durationMinutes": 30
     },
@@ -1655,7 +1526,7 @@
       "date": "2022-10-06",
       "name": "Phyllis W.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Initial meeting to connect.",
       "durationMinutes": 30
     },
@@ -1663,7 +1534,7 @@
       "date": "2022-10-03",
       "name": "Jitendra S.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "career growth",
       "durationMinutes": 30
     },
@@ -1671,7 +1542,7 @@
       "date": "2022-09-29",
       "name": "Nafisa H.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": null,
       "durationMinutes": 30
     },
@@ -1679,7 +1550,7 @@
       "date": "2022-09-26",
       "name": "B C.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Emerging tech and worker financial security",
       "durationMinutes": 30
     },
@@ -1687,7 +1558,7 @@
       "date": "2022-09-22",
       "name": "Gabriela R.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": null,
       "durationMinutes": 30
     },
@@ -1695,7 +1566,7 @@
       "date": "2022-09-22",
       "name": "Lucy R.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": null,
       "durationMinutes": 30
     },
@@ -1703,7 +1574,7 @@
       "date": "2022-09-20",
       "name": "Rosi Q.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Latinx Heritage month",
       "durationMinutes": 30
     },
@@ -1711,7 +1582,7 @@
       "date": "2022-08-16",
       "name": "Damien E.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "To Discuss latinx talent and the best ways to foster the growth potential of that market.",
       "durationMinutes": 30
     },
@@ -1719,7 +1590,7 @@
       "date": "2022-05-18",
       "name": "Dawn K.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": null,
       "durationMinutes": 30
     },
@@ -1727,7 +1598,7 @@
       "date": "2022-04-19",
       "name": "Julia M.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": null,
       "durationMinutes": 30
     },
@@ -1735,7 +1606,7 @@
       "date": "2022-04-14",
       "name": "Kenneth G.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Latin@s in tech",
       "durationMinutes": 30
     },
@@ -1751,7 +1622,7 @@
       "date": "2022-02-24",
       "name": "Josh T.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Catch up call",
       "durationMinutes": 30
     },
@@ -1759,7 +1630,7 @@
       "date": "2022-02-22",
       "name": "Natalie A.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Mindot Plans 2022",
       "durationMinutes": 30
     },
@@ -1767,23 +1638,15 @@
       "date": "2022-02-21",
       "name": "Victor B.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Internship opportunities, networking in STEM and talking about future career opportunities, and general advice as a Latino in STEM!",
-      "durationMinutes": 30
-    },
-    {
-      "date": "2022-02-04",
-      "name": "Sanaa S.",
-      "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
-      "topic": "The Google Developer Student Club Diversity Panel!",
       "durationMinutes": 30
     },
     {
       "date": "2022-02-03",
       "name": "Dominique P.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Connect :)",
       "durationMinutes": 30
     },
@@ -1791,7 +1654,7 @@
       "date": "2022-02-02",
       "name": "Audrey G.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Talk about your experience at Slack and your ERG leadership.",
       "durationMinutes": 30
     },
@@ -1824,7 +1687,7 @@
       "date": "2022-01-19",
       "name": "Arturo V.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "So many things!\n1. Say hello :)\n2. Chat about Alza (startup) and 3. Meet Frances!",
       "durationMinutes": 30
     },
@@ -1840,7 +1703,7 @@
       "date": "2021-12-27",
       "name": "Amelia L.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": null,
       "durationMinutes": 30
     },
@@ -1856,7 +1719,7 @@
       "date": "2021-11-30",
       "name": "Mariana S.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Interview prep",
       "durationMinutes": 30
     },
@@ -1873,7 +1736,7 @@
       "date": "2021-11-12",
       "name": "Francisco O.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Getting involved in Techqueria",
       "durationMinutes": 30
     },
@@ -1881,7 +1744,7 @@
       "date": "2021-11-03",
       "name": "Margarita C.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "TM",
       "durationMinutes": 30
     },
@@ -1907,7 +1770,7 @@
       "date": "2021-10-13",
       "name": "Nicholas G.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Slack Culture",
       "durationMinutes": 30
     },
@@ -1915,7 +1778,7 @@
       "date": "2021-09-06",
       "name": "Angela R.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "I'd like to learn more about your life and how you got started public speaking!",
       "durationMinutes": 30
     },
@@ -1950,7 +1813,7 @@
       "date": "2021-08-30",
       "name": "Mireya R.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Latinx ERG networking and resources",
       "durationMinutes": 30
     },
@@ -1958,7 +1821,7 @@
       "date": "2021-08-27",
       "name": "Alexandra R.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Intro, best ways to get involved",
       "durationMinutes": 30
     },
@@ -1975,7 +1838,7 @@
       "date": "2021-08-25",
       "name": "Brian L.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "My experience at Launchdarkly",
       "durationMinutes": 30
     },
@@ -2001,7 +1864,7 @@
       "date": "2021-08-18",
       "name": "Michell B.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": "Tower the git client",
       "durationMinutes": 30
     },
@@ -2009,7 +1872,7 @@
       "date": "2021-08-16",
       "name": "Nikki A.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "eventTypeName": "30-Minute Chat 👋🏽",
       "topic": null,
       "durationMinutes": 30
     },
@@ -2069,7 +1932,7 @@
       "name": "Lisa R.",
       "type": "chat-30",
       "eventTypeName": "30-Min Chat",
-      "topic": "D&I and your experience in the tech industry\ud83d\ude0a",
+      "topic": "D&I and your experience in the tech industry😊",
       "durationMinutes": 30
     },
     {
@@ -2247,7 +2110,7 @@
       "name": "Enrique G.",
       "type": "chat-15",
       "eventTypeName": "15-Min Call ($10)",
-      "topic": "I\u2019m a CS + Math student at a liberal arts college in California quarantined at home in Mexico City.\nI graduate in May and want to talk about how junior\nLatinx folks should break into tech",
+      "topic": "I’m a CS + Math student at a liberal arts college in California quarantined at home in Mexico City.\nI graduate in May and want to talk about how junior\nLatinx folks should break into tech",
       "durationMinutes": 15,
       "cost": 10
     },
@@ -4905,87 +4768,6 @@
       "type": "chat-15",
       "eventTypeName": "15 Minute Chat",
       "topic": null,
-      "durationMinutes": 15
-    },
-    {
-      "date": "2026-01-12",
-      "name": "Manish K.",
-      "type": "chat-15",
-      "eventTypeName": "Leland Intro Call",
-      "topic": null,
-      "source": "leland",
-      "durationMinutes": 15
-    },
-    {
-      "date": "2026-02-02",
-      "name": "Nam D.",
-      "type": "chat-15",
-      "eventTypeName": "Leland Intro Call",
-      "topic": null,
-      "source": "leland",
-      "durationMinutes": 15
-    },
-    {
-      "date": "2026-02-02",
-      "name": "Diego S.",
-      "type": "chat-15",
-      "eventTypeName": "Leland Intro Call",
-      "topic": null,
-      "source": "leland",
-      "durationMinutes": 15
-    },
-    {
-      "date": "2026-02-09",
-      "name": "Augustine A.",
-      "type": "chat-15",
-      "eventTypeName": "Leland Intro Call",
-      "topic": null,
-      "source": "leland",
-      "durationMinutes": 15
-    },
-    {
-      "date": "2026-02-09",
-      "name": "Keshia C.",
-      "type": "chat-15",
-      "eventTypeName": "Leland Intro Call",
-      "topic": null,
-      "source": "leland",
-      "durationMinutes": 15
-    },
-    {
-      "date": "2026-02-09",
-      "name": "Vamsidhar P.",
-      "type": "chat-15",
-      "eventTypeName": "Leland Intro Call",
-      "topic": null,
-      "source": "leland",
-      "durationMinutes": 15
-    },
-    {
-      "date": "2026-02-12",
-      "name": "Jhoselyn P.",
-      "type": "chat-15",
-      "eventTypeName": "Leland Intro Call",
-      "topic": null,
-      "source": "leland",
-      "durationMinutes": 15
-    },
-    {
-      "date": "2026-02-12",
-      "name": "Brahanyaa S.",
-      "type": "chat-15",
-      "eventTypeName": "Leland Intro Call",
-      "topic": null,
-      "source": "leland",
-      "durationMinutes": 15
-    },
-    {
-      "date": "2026-02-12",
-      "name": "Thien N.",
-      "type": "chat-15",
-      "eventTypeName": "Leland Intro Call",
-      "topic": null,
-      "source": "leland",
       "durationMinutes": 15
     },
     {
