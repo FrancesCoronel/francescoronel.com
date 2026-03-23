@@ -165,11 +165,8 @@ export default async function ProjectsPage() {
             Writing & Case Studies
           </p>
           <h2 className="mt-1 mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
-            Portfolio Posts 📝
+            Portfolio Posts 📝 <span className="text-lg font-normal text-navy-400 dark:text-white/40">({portfolioPosts.length})</span>
           </h2>
-          <p className="mb-6 text-sm text-navy-500 dark:text-horchata-400">
-            {portfolioPosts.length} item{portfolioPosts.length !== 1 ? "s" : ""}
-          </p>
           <PostsListClient posts={portfolioPosts} categoryImages={categoryImages} hideSearch />
         </div>
       </section>
