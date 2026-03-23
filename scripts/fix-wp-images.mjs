@@ -24,10 +24,9 @@ function walkDir(dir) {
 const PROJECT_DIR = process.cwd();
 const CONTENT_DIR = join(PROJECT_DIR, "content/blog");
 const UPLOAD_DIR = join(PROJECT_DIR, "public/images/wp-uploads");
-const WP_EXPORT_DIR = join(
-  process.env.HOME,
-  "Downloads/media-export-176054289-from-0-to-36169"
-);
+const WP_EXPORT_DIR =
+  process.env.WP_EXPORT_DIR ||
+  join(process.env.HOME, "Documents/Website/media-export-176054289-from-0-to-36169");
 
 // All broken WordPress URL patterns
 const WP_URL_RE =

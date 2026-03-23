@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAllBlogPosts, getCategories, getTags, getExperiences, getEducation, getAwards, getOrganizations } from "@/lib/content";
+import { getAllPosts, getCategories, getTags, getExperiences, getEducation, getAwards, getOrganizations } from "@/lib/content";
 import { siteConfig } from "@/lib/metadata";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -16,11 +16,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === "" ? 1.0 : 0.8,
   }));
 
-  const blogPosts = getAllBlogPosts().map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
+  const posts = getAllPosts().map((post) => ({
+    url: `${baseUrl}/posts/${post.slug}`,
     lastModified: new Date(post.date),
     changeFrequency: "monthly" as const,
-    priority: 0.6,
+    priority: post.postType === "project" ? 0.7 : 0.6,
   }));
 
   const categories = getCategories().map((cat) => ({
@@ -67,7 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticPages,
-    ...blogPosts,
+    ...posts,
     ...categories,
     ...tags,
     ...experiences,

@@ -86,7 +86,7 @@ export default function PortfolioPage() {
             {projects.slice(0, 6).map((project) => (
               <Link
                 key={project.slug}
-                href={`/projects/${project.slug}`}
+                href={`/posts/${project.slug}`}
                 className="group flex flex-col rounded-2xl border border-horchata-200 bg-white p-5 transition-shadow hover:shadow-lg dark:border-navy-700 dark:bg-navy-800"
               >
                 <div className="flex items-start justify-between gap-3">

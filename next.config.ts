@@ -92,7 +92,7 @@ const nextConfig: NextConfig = {
       // ── Webflow CMS template URL patterns ─────────────────
       {
         source: "/detail_blog/:slug",
-        destination: "/blog/:slug",
+        destination: "/posts/:slug",
         permanent: true,
       },
       {
@@ -135,41 +135,31 @@ const nextConfig: NextConfig = {
       // fvcproductions.com used /:year/:month/:day/:title/
       {
         source: "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:slug",
-        destination: "/blog/:slug",
+        destination: "/posts/:slug",
         permanent: true,
       },
       {
         source: "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:slug/",
-        destination: "/blog/:slug",
+        destination: "/posts/:slug",
         permanent: true,
       },
       // Two-segment date patterns (WordPress-style /YYYY/MM/slug)
       {
         source: "/:year(\\d{4})/:month(\\d{2})/:slug",
-        destination: "/blog/:slug",
+        destination: "/posts/:slug",
         permanent: true,
       },
 
       // ── Hugo content directory patterns ───────────────────
-      // Hugo v3 used content/posts/, Hugo v2 used content/adventures/
-      {
-        source: "/posts/:slug",
-        destination: "/blog/:slug",
-        permanent: true,
-      },
-      {
-        source: "/posts/:slug/",
-        destination: "/blog/:slug",
-        permanent: true,
-      },
+      // Hugo v2 used content/adventures/; Hugo v3 used /posts/ (now canonical, no redirect needed)
       {
         source: "/adventures/:slug",
-        destination: "/blog/:slug",
+        destination: "/posts/:slug",
         permanent: true,
       },
       {
         source: "/adventures/:slug/",
-        destination: "/blog/:slug",
+        destination: "/posts/:slug",
         permanent: true,
       },
 

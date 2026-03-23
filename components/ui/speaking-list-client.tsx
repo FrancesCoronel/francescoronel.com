@@ -44,6 +44,7 @@ export function SpeakingListClient({ posts, categoryImages }: SpeakingListClient
             key={post.slug}
             post={post as never}
             categoryImages={categoryImages}
+            basePath="/posts"
             hideReadingTime
           />
         ))}

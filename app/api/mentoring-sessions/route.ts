@@ -51,7 +51,7 @@ export async function GET() {
 
   try {
     const res = await fetch(
-      `https://api.cal.com/v1/bookings?apiKey=${apiKey}&take=100&status=accepted`,
+      `https://api.cal.com/v1/bookings?apiKey=${apiKey}&take=100&status=ACCEPTED`,
       { next: { revalidate: 300 } }
     );
 

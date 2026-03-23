@@ -1,16 +1,16 @@
-import { getAllBlogPosts } from "@/lib/content";
+import { getAllPosts } from "@/lib/content";
 import { siteConfig } from "@/lib/metadata";
 
 export async function GET() {
-  const posts = getAllBlogPosts().slice(0, 50);
+  const posts = getAllPosts().slice(0, 50);
 
   const items = posts
     .map(
       (post) => `
     <item>
       <title><![CDATA[${post.title}]]></title>
-      <link>${siteConfig.siteUrl}/blog/${post.slug}</link>
-      <guid isPermaLink="true">${siteConfig.siteUrl}/blog/${post.slug}</guid>
+      <link>${siteConfig.siteUrl}/posts/${post.slug}</link>
+      <guid isPermaLink="true">${siteConfig.siteUrl}/posts/${post.slug}</guid>
       <pubDate>${new Date(post.date).toUTCString()}</pubDate>
       <description><![CDATA[${post.excerpt}]]></description>
     </item>`

@@ -94,7 +94,7 @@ export default async function HomePage() {
             </div>
             <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
               {recentPosts.map((post) => (
-                <BlogCard key={post.slug} post={post} categoryImages={categoryImages} />
+                <BlogCard key={post.slug} post={post} categoryImages={categoryImages} basePath="/posts" />
               ))}
             </div>
           </div>
@@ -226,7 +226,7 @@ export default async function HomePage() {
                 return (
                   <div key={project.slug} className="group relative flex items-start gap-6 border-b border-horchata-200 py-8 last:border-b-0 dark:border-navy-700">
                     <div className="absolute -inset-x-4 inset-y-2 z-0 rounded-2xl border border-horchata-300 bg-white opacity-0 shadow-sm transition group-hover:opacity-100 dark:border-navy-600 dark:bg-navy-800" />
-                    <Link href={`/projects/${project.slug}`} className="absolute inset-0 z-20" aria-label={project.title} />
+                    <Link href={`/posts/${project.slug}`} className="absolute inset-0 z-20" aria-label={project.title} />
                     <div className="relative z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-md ring-1 ring-navy-900/5 shadow-navy-900/10 dark:bg-navy-700 dark:ring-white/10">
                       {project.logo ? (
                         <Image src={project.logo} alt={project.title} width={32} height={32} className="h-8 w-8 rounded-full object-contain" />

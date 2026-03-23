@@ -23,7 +23,7 @@ function AwardCard({
   blogSlug?: string;
 }) {
   const isExternal = !blogSlug && !!award.url;
-  const href = blogSlug ? `/blog/${blogSlug}` : award.url || `/awards/${award.slug}`;
+  const href = blogSlug ? `/posts/${blogSlug}` : award.url || `/awards/${award.slug}`;
 
   const inner = (
     <div className="flex items-start gap-3">

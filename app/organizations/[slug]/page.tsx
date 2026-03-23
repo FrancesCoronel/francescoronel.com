@@ -235,7 +235,7 @@ export default async function OrganizationDetailPage({
               {projects.map((project) => (
                 <Link
                   key={project.slug}
-                  href={`/projects/${project.slug}`}
+                  href={`/posts/${project.slug}`}
                   className="group relative flex flex-col items-start rounded-2xl border border-horchata-200 bg-white p-6 transition-shadow hover:shadow-md dark:border-navy-700 dark:bg-navy-800/50"
                 >
                   <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-horchata-100 text-xl dark:bg-navy-700">
@@ -266,7 +266,7 @@ export default async function OrganizationDetailPage({
             </h2>
             <ExpandableGrid initialCount={6} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {posts.map((post) => (
-                <BlogCard key={post.slug} post={post} categoryImages={categoryImages} />
+                <BlogCard key={post.slug} post={post} categoryImages={categoryImages} basePath="/posts" />
               ))}
             </ExpandableGrid>
           </div>

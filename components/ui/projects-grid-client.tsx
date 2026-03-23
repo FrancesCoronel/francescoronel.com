@@ -71,7 +71,7 @@ function ProjectCard({
   return (
     <div className="group relative flex flex-col items-start rounded-2xl border border-horchata-200 bg-white p-6 transition-shadow hover:shadow-md dark:border-navy-700 dark:bg-navy-800/50">
       <div className="absolute inset-0 z-0 rounded-2xl bg-horchata-50 opacity-0 transition group-hover:opacity-100 dark:bg-navy-800" />
-      <Link href={`/projects/${project.slug}`} className="absolute inset-0 z-20 rounded-2xl" aria-label={project.title} />
+      <Link href={`/posts/${project.slug}`} className="absolute inset-0 z-20 rounded-2xl" aria-label={project.title} />
 
       <ProjectLogo project={project} />
 
@@ -129,7 +129,7 @@ function FeaturedProjectRow({
   return (
     <div className="group relative flex items-start gap-6 border-b border-horchata-200 py-8 last:border-b-0 dark:border-navy-700">
       <div className="absolute -inset-x-4 inset-y-2 z-0 rounded-2xl border border-horchata-300 bg-white opacity-0 shadow-sm transition group-hover:opacity-100 dark:border-navy-600 dark:bg-navy-800" />
-      <Link href={`/projects/${project.slug}`} className="absolute inset-0 z-20" aria-label={project.title} />
+      <Link href={`/posts/${project.slug}`} className="absolute inset-0 z-20" aria-label={project.title} />
 
       <ProjectLogo project={project} />
 
