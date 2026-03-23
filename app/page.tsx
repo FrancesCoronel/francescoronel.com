@@ -30,7 +30,6 @@ export const metadata: Metadata = buildMetadata({
 
 export default async function HomePage() {
   const recentPosts = getAllBlogPosts().slice(0, 4);
-  const activeProjects = getProjects().filter((p) => p.status === "active").slice(0, 4);
   const allPosts = getAllBlogPosts();
   const roundDown = (n: number) => n >= 1000 ? Math.floor(n / 1000) * 1000 : n >= 100 ? Math.floor(n / 100) * 100 : Math.floor(n / 10) * 10;
   const mentoringSessionCount = roundDown((mentoringData as { _meta: { totalSessions: number } })._meta.totalSessions);
@@ -53,11 +52,15 @@ export default async function HomePage() {
   );
   const { categoryImages } = getCategoryMaps();
 
-  // Fetch GitHub stars for active projects
-  const activeProjectRepos = Object.fromEntries(
-    activeProjects.filter((p) => p.github).map((p) => [p.slug, p.github as string])
+  const FEATURED_SLUGS = ["latina-dev", "apprenticeships-me", "hire-me"];
+  const allProjects = getProjects();
+  const featuredProjects = FEATURED_SLUGS.map((slug) => allProjects.find((p) => p.slug === slug)).filter(Boolean) as typeof allProjects;
+
+  // Fetch GitHub stars for featured projects
+  const featuredProjectRepos = Object.fromEntries(
+    featuredProjects.filter((p) => p.github).map((p) => [p.slug, p.github as string])
   );
-  const activeProjectStars = await getMultipleRepoStars(activeProjectRepos);
+  const featuredProjectStars = await getMultipleRepoStars(featuredProjectRepos);
 
   return (
     <>
@@ -197,17 +200,17 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* Active Projects */}
-      {activeProjects.length > 0 && (
+      {/* Featured Projects */}
+      {featuredProjects.length > 0 && (
         <section className="py-16 md:py-20">
           <div className="mx-auto max-w-[var(--container-max)] px-6">
-            <div className="mb-10 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
-                  Projects
+                  Pinned
                 </p>
                 <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
-                  Active Projects 🛠️
+                  Featured Projects ⭐
                 </h2>
               </div>
               <Link
@@ -217,48 +220,50 @@ export default async function HomePage() {
                 All projects →
               </Link>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {activeProjects.map((project) => (
-                <Link
-                  key={project.slug}
-                  href={`/projects/${project.slug}`}
-                  className="group flex items-start gap-4 rounded-2xl border border-horchata-200 bg-white p-5 transition-all hover:border-horchata-400 hover:shadow-lg dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
-                >
-                  {project.logo ? (
-                    <Image
-                      src={project.logo}
-                      alt={project.title}
-                      width={40}
-                      height={40}
-                      className="mt-0.5 h-10 w-10 flex-shrink-0 rounded-lg object-contain"
-                    />
-                  ) : (
-                    <span className="mt-0.5 text-2xl">🛠️</span>
-                  )}
-                  <div className="flex-1 min-w-0">
-                    <p className="font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
-                      {project.title}
-                    </p>
-                    <p className="mt-0.5 text-sm text-navy-500 dark:text-white/60 line-clamp-2">
-                      {project.tagline}
-                    </p>
-                    {project.github && (
-                      <span className="mt-1 flex items-center gap-1.5 text-xs text-navy-400 dark:text-white/40">
-                        <svg className="h-3 w-3 flex-shrink-0 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        <span className="font-mono">{project.github.split("/")[1] ?? project.github}</span>
-                        {activeProjectStars[project.slug] != null && (
-                          <>
-                            <span>·</span>
-                            <svg className="h-3 w-3 flex-shrink-0 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            {(activeProjectStars[project.slug] as number).toLocaleString()}
-                          </>
+            <div>
+              {featuredProjects.map((project) => {
+                const stars = featuredProjectStars[project.slug];
+                return (
+                  <div key={project.slug} className="group relative flex items-start gap-6 border-b border-horchata-200 py-8 last:border-b-0 dark:border-navy-700">
+                    <div className="absolute -inset-x-4 inset-y-2 z-0 rounded-2xl border border-horchata-300 bg-white opacity-0 shadow-sm transition group-hover:opacity-100 dark:border-navy-600 dark:bg-navy-800" />
+                    <Link href={`/projects/${project.slug}`} className="absolute inset-0 z-20" aria-label={project.title} />
+                    <div className="relative z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-md ring-1 ring-navy-900/5 shadow-navy-900/10 dark:bg-navy-700 dark:ring-white/10">
+                      {project.logo ? (
+                        <Image src={project.logo} alt={project.title} width={32} height={32} className="h-8 w-8 rounded-full object-contain" />
+                      ) : (
+                        <span className="text-xl">{project.emoji ?? "🛠️"}</span>
+                      )}
+                    </div>
+                    <div className="relative z-10 flex min-w-0 flex-1 flex-col">
+                      <div className="flex items-center gap-2">
+                        <h3 className="text-base font-semibold tracking-tight text-navy-800 dark:text-horchata-100">
+                          {project.title}
+                        </h3>
+                        {project.status === "active" && (
+                          <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">
+                            Active
+                          </span>
                         )}
-                      </span>
-                    )}
+                      </div>
+                      <p className="mt-1.5 text-sm text-navy-600 dark:text-white/60">{project.tagline}</p>
+                      <div className="mt-3 flex items-center gap-3 text-xs text-navy-400 dark:text-white/40">
+                        <span>{formatDateRange(project.startDate, project.endDate)}</span>
+                        {stars != null && stars > 0 && (
+                          <span className="flex items-center gap-1">
+                            <svg className="h-3 w-3 fill-current text-horchata-500" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            {stars.toLocaleString()}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <div className="relative z-10 flex-shrink-0 self-center">
+                      <svg className="h-5 w-5 text-navy-300 transition-colors group-hover:text-horchata-700 dark:text-navy-600 dark:group-hover:text-horchata-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </div>
                   </div>
-                  <svg className="mt-1 h-4 w-4 flex-shrink-0 text-horchata-400 group-hover:text-horchata-700 dark:text-navy-500 dark:group-hover:text-horchata-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-                </Link>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>

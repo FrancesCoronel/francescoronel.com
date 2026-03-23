@@ -18,18 +18,10 @@ export const metadata: Metadata = buildMetadata({
   ogImage: "/images/og/speaking.jpg",
 });
 
-const upcomingEvents = [
-  {
-    org: "Leland",
-    talk: "Ask Me Anything as a Software Engineering Interviewer",
-    date: "2026-03-19",
-    url: "https://www.joinleland.com/event/ask-me-anything-as-a-software-engineering-interviewer",
-    description: "Live AMA session on Leland. Ask me anything about software engineering interviews from the interviewer's perspective. 11:00–11:30 AM.",
-  },
-];
+const upcomingEvents: { org: string; talk: string; date: string; url: string; description: string; links?: { label: string; url: string }[] }[] = [];
 
 const featuredTalks = [
-  { org: "Dreamforce", orgSlug: "dreamforce", talk: "Exploring AI Agents in Slack", postSlug: "speaking-at-dreamforce-exploring-ai-agents-in-slack", image: "/images/speaking/dreamforce.jpg", topics: ["AI", "Slack"] },
+{ org: "Dreamforce", orgSlug: "dreamforce", talk: "Exploring AI Agents in Slack", postSlug: "speaking-at-dreamforce-exploring-ai-agents-in-slack", image: "/images/speaking/dreamforce.jpg", topics: ["AI", "Slack"] },
   { org: "Ripple", orgSlug: "ripple", talk: "Mujeres Fuertes: Honoring Latina Leadership in Tech", postSlug: "mujeres-fuertes-honoring-latina-leadership-in-tech-at-ripples-fireside-chat", image: "", topics: ["Latinx Leadership", "Diversity"] },
   { org: "Doximity", orgSlug: "doximity", talk: "Women of Color in Engineering Fireside Chat", postSlug: "reflections-on-my-fireside-chat-with-doximity-women-of-color-in-engineering", image: "", topics: ["Diversity", "Women in Engineering"] },
   { org: "Techqueria", orgSlug: "techqueria", talk: "Community & Career Growth at Salesforce Tower", postSlug: "celebrating-community-and-career-growth-with-techqueria-at-salesforce-tower", image: "", topics: ["Community", "Career Growth"] },
@@ -90,7 +82,7 @@ export default function SpeakingPage() {
             alt="3D microphone illustration"
             width={400}
             height={400}
-            className="h-auto w-[200px] drop-shadow-lg sm:w-[260px] md:w-[360px]"
+            className="h-auto w-[200px] object-contain drop-shadow-lg sm:w-[260px] md:w-[360px]"
             priority
           />
         }
@@ -100,7 +92,7 @@ export default function SpeakingPage() {
       <UpcomingEvents events={upcomingEvents} />
 
       {/* Featured Talks Grid */}
-      <section className="py-16 md:py-20">
+      <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
             Highlights
@@ -157,7 +149,7 @@ export default function SpeakingPage() {
       </section>
 
       {/* Past Events */}
-      <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
+      <section className="py-16 md:py-20">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
             Archive

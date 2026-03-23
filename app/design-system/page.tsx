@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/metadata";
+import { ConnectCTA } from "@/components/sections/connect-cta";
 
 export const metadata: Metadata = buildMetadata({
   title: "Design System",
@@ -81,7 +82,7 @@ export default function DesignSystemPage() {
           </p>
           <div className="mt-6">
             <a
-              href="http://localhost:6006"
+              href="https://69c087c8a9b267e23aa27530-wqalrhjovn.chromatic.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-navy-900 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-navy-800 dark:bg-horchata-500 dark:text-navy-900 dark:hover:bg-horchata-400"
@@ -556,7 +557,7 @@ export default function DesignSystemPage() {
       </section>
 
       {/* Section Patterns */}
-      <section className="bg-horchata-100 py-16 dark:bg-navy-800">
+      <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
             Patterns
@@ -590,6 +591,8 @@ export default function DesignSystemPage() {
           </div>
         </div>
       </section>
+
+      <ConnectCTA />
     </>
   );
 }

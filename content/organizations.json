@@ -494,5 +494,13 @@
     "url": "https://outco.io/",
     "type": "community",
     "description": "Interview preparation and career coaching program for software engineers."
+  },
+  {
+    "name": "Leland",
+    "slug": "leland",
+    "logo": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/logos/leland.svg",
+    "url": "https://www.joinleland.com",
+    "type": "community",
+    "description": "Leland is a platform connecting people with expert coaches for career, academic, and personal growth goals."
   }
 ]

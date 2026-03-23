@@ -31,7 +31,7 @@
     "slug": "freelancing",
     "color": "#365c71",
     "fontColor": "#ffffff",
-    "emoji": "👍",
+    "emoji": "👍🏽",
     "image": "/images/categories/freelancing.png",
     "description": ""
   },
@@ -40,7 +40,7 @@
     "slug": "mentoring",
     "color": "#0d6445",
     "fontColor": "#ffffff",
-    "emoji": "👏",
+    "emoji": "👏🏽",
     "image": "/images/categories/mentoring.png",
     "description": ""
   },

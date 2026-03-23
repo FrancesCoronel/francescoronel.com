@@ -65,7 +65,7 @@ export default function OrganizationsPage() {
         description="Companies, conferences, and communities I've worked with throughout my career."
       />
 
-      <section className="py-16 md:py-20">
+      <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <OrgGridClient organizations={orgsWithCounts} />
         </div>

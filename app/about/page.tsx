@@ -20,6 +20,7 @@ import { BioSection } from "@/components/sections/bio-section";
 import { TimelineSection } from "@/components/sections/timeline-section";
 import { LanguagesSection } from "@/components/sections/languages-section";
 import { MemojiSection } from "@/components/sections/memoji-section";
+import { SkillIcon, getSkillUrl, getSkillEmoji, hasSkillIcon } from "@/components/ui/skill-icon";
 import { AwardsSection } from "@/components/sections/awards-section";
 import { OrganizationsPreview } from "@/components/sections/organizations-preview";
 import { TestimonialsPreview } from "@/components/sections/testimonials-preview";
@@ -173,6 +174,8 @@ export default function AboutPage() {
   const allPostsCount = roundDown(getAllBlogPosts().length);
   const speakingCount = roundDown(getBlogPostsByCategory("speaking").length);
   const yearsOfExperience = YEARS_OF_EXPERIENCE;
+  const awardsCount = roundDown(getAwards().length);
+  const testimonialsCount = roundDown(getTestimonials().length);
   const allOrganizations = getOrganizationsByActivity();
   const awards = getAwards().map((a) => {
     const org = allOrganizations.find(
@@ -227,28 +230,15 @@ export default function AboutPage() {
         heading="About 👩🏽‍💻"
         description="I'm Frances Coronel, a Senior Software Engineer at Slack with 8+ years in frontend engineering. I build AI-powered developer tooling, speak at conferences, and mentor engineers at all levels. I care deeply about making technical leadership more accessible, especially for Latinas and underrepresented engineers in tech."
         aside={
-          <div className="relative flex-shrink-0">
-            <div className="h-56 w-56 overflow-hidden rounded-full bg-horchata-100 ring-4 ring-horchata-200 dark:bg-navy-700 dark:ring-navy-600 sm:h-72 sm:w-72 md:h-96 md:w-96">
-              <Image
-                src="/images/assets/frances-slack.jpg"
-                alt="Frances Coronel"
-                width={384}
-                height={384}
-                className="h-full w-full object-cover"
-                priority
-              />
-            </div>
-            {/* Memoji overlay */}
-            <div className="absolute -bottom-2 -left-2 h-20 w-20 sm:h-24 sm:w-24 md:-bottom-4 md:-left-4 md:h-32 md:w-32">
-              <Image
-                src="/images/assets/frances-thumbs-up-memoji.png"
-                alt="Frances Coronel thumbs-up memoji"
-                width={128}
-                height={128}
-                className="h-full w-full object-contain drop-shadow-md"
-                priority
-              />
-            </div>
+          <div className="h-56 w-56 overflow-hidden rounded-full bg-horchata-100 ring-4 ring-horchata-200 dark:bg-navy-700 dark:ring-navy-600 sm:h-72 sm:w-72 md:h-96 md:w-96">
+            <Image
+              src="/images/assets/frances-slack.jpg"
+              alt="Frances Coronel"
+              width={384}
+              height={384}
+              className="h-full w-full object-cover"
+              priority
+            />
           </div>
         }
       >
@@ -307,14 +297,24 @@ export default function AboutPage() {
             Skills &amp; Technologies 🛠️
           </h2>
           <div className="mt-8 flex flex-wrap gap-2">
-            {skills.map((skill) => (
-              <span
-                key={skill.slug}
-                className="rounded-full border border-horchata-200 bg-white px-4 py-1.5 text-sm font-medium text-navy-700 dark:border-navy-700 dark:text-horchata-200"
-              >
-                {skill.name}
-              </span>
-            ))}
+            {skills.map((skill) => {
+              const url = getSkillUrl(skill.slug);
+              const emoji = getSkillEmoji(skill.slug);
+              const isInternal = url?.startsWith("/");
+              const inner = (
+                <>
+                  <SkillIcon slug={skill.slug} size={18} />
+                  {emoji && !hasSkillIcon(skill.slug) && (
+                    <span className="text-base leading-none" aria-hidden="true">{emoji}</span>
+                  )}
+                  {skill.name}
+                </>
+              );
+              const cls = "inline-flex items-center gap-2 rounded-full border border-horchata-200 bg-white px-4 py-2 text-sm font-medium text-navy-700 transition-colors hover:border-horchata-400 hover:bg-horchata-50 dark:border-navy-700 dark:bg-navy-800 dark:text-horchata-200 dark:hover:border-navy-500";
+              if (!url) return <span key={skill.slug} className={cls + " cursor-default"}>{inner}</span>;
+              if (isInternal) return <Link key={skill.slug} href={url} className={cls}>{inner}</Link>;
+              return <a key={skill.slug} href={url} target="_blank" rel="noopener noreferrer" className={cls}>{inner}</a>;
+            })}
           </div>
         </div>
       </section>
@@ -323,36 +323,41 @@ export default function AboutPage() {
       <OrganizationsPreview organizations={organizations} />
 
       {/* Testimonials */}
-      <TestimonialsPreview testimonials={displayTestimonials} />
+      <TestimonialsPreview testimonials={displayTestimonials} sectionClassName="border-y border-horchata-200 bg-horchata-50 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-900" />
 
       {/* Stats */}
-      <section className="border-y border-horchata-200 bg-horchata-50 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
+      <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <div className="mb-12 text-center">
-            <p className="text-xs font-bold uppercase tracking-widest text-horchata-600 dark:text-horchata-500">
+          <div className="mb-10 text-center">
+            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
               By the Numbers
             </p>
-            <h2 className="mt-2 text-3xl font-bold text-navy-900 dark:text-horchata-100">
-              Impact at a Glance
+            <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
+              Impact at a Glance 📊
             </h2>
           </div>
-          <div className="grid grid-cols-2 divide-x divide-y divide-horchata-200 lg:grid-cols-4 lg:divide-y-0 dark:divide-navy-700">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { stat: `${mentoringSessionCount}+`, label: "Mentoring sessions", sublabel: "logged", href: "/mentoring" },
-              { stat: `${allPostsCount}+`, label: "Blog posts", sublabel: "published", href: "/blog" },
-              { stat: `${speakingCount}+`, label: "Speaking events", sublabel: "since 2015", href: "/speaking" },
-              { stat: `${yearsOfExperience}+`, label: "Years of experience", sublabel: "full-time", href: "#experience" },
-            ].map(({ stat, label, sublabel, href }) => (
+              { stat: `${mentoringSessionCount}+`, label: "Mentoring sessions", sublabel: "logged on ADPList & Calendly", icon: "💬", href: "/mentoring" },
+              { stat: `${allPostsCount}+`, label: "Blog posts", sublabel: "published since 2014", icon: "✍🏽", href: "/blog" },
+              { stat: `${speakingCount}+`, label: "Speaking events", sublabel: "at conferences since 2015", icon: "🎤", href: "/speaking" },
+              { stat: `${yearsOfExperience}+`, label: "Years of experience", sublabel: "full-time in industry", icon: "💼", href: "#experience" },
+              { stat: `${awardsCount}+`, label: "Awards & recognition", sublabel: "from organizations & publications", icon: "🏆", href: "/awards" },
+              { stat: `${testimonialsCount}+`, label: "Testimonials", sublabel: "from mentees, peers & leaders", icon: "⭐", href: "/testimonials" },
+            ].map(({ stat, label, sublabel, icon, href }) => (
               <Link
                 key={label}
                 href={href}
-                className="group flex flex-col items-center gap-1 px-6 py-8 text-center transition-colors hover:bg-horchata-100 dark:hover:bg-navy-800/60 first:rounded-tl-2xl sm:first:rounded-bl-2xl last:rounded-br-2xl sm:last:rounded-tr-2xl"
+                className="group flex items-center gap-5 rounded-2xl border border-horchata-200 bg-white px-6 py-5 transition-all hover:border-horchata-400 hover:shadow-md dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
               >
-                <span className="block text-6xl font-bold tracking-tight text-horchata-700 transition-colors group-hover:text-horchata-800 dark:text-horchata-400 dark:group-hover:text-horchata-300">
-                  {stat}
-                </span>
-                <span className="mt-1 text-sm font-semibold text-navy-800 dark:text-white/80">{label}</span>
-                <span className="text-xs text-navy-400 dark:text-white/40">{sublabel}</span>
+                <span className="text-3xl" aria-hidden="true">{icon}</span>
+                <div className="min-w-0">
+                  <p className="text-3xl font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100 dark:group-hover:text-horchata-400">
+                    {stat}
+                  </p>
+                  <p className="mt-0.5 text-sm font-medium text-navy-700 dark:text-white/80">{label}</p>
+                  <p className="text-xs text-navy-400 dark:text-white/40">{sublabel}</p>
+                </div>
               </Link>
             ))}
           </div>

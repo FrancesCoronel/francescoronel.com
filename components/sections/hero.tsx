@@ -51,17 +51,6 @@ export function Hero() {
                 className="h-full w-full rounded-full object-cover ring-4 ring-horchata-200 drop-shadow-lg dark:ring-navy-600"
                 priority
               />
-              {/* Thumbs-up memoji overlay */}
-              <div className="absolute -bottom-2 -left-2 h-24 w-24 md:-bottom-4 md:-left-4 md:h-32 md:w-32 lg:h-36 lg:w-36">
-                <Image
-                  src="/images/assets/frances-thumbs-up-memoji.png"
-                  alt="Frances Coronel thumbs-up memoji"
-                  width={144}
-                  height={144}
-                  className="h-full w-full object-contain drop-shadow-md"
-                  priority
-                />
-              </div>
             </div>
           </div>
         </div>

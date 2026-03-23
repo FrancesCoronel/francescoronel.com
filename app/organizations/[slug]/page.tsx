@@ -10,8 +10,9 @@ import {
 } from "@/lib/content";
 import { PrevNextNav } from "@/components/ui/prev-next-nav";
 import { ConnectCTA } from "@/components/sections/connect-cta";
+import { NewsletterCTA } from "@/components/sections/newsletter-cta";
 import { resolveImageUrl } from "@/lib/cloudinary";
-import { formatDate, formatDateRange } from "@/lib/utils";
+import { formatDateRange } from "@/lib/utils";
 import { BlogCard } from "@/components/ui/blog-card";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { ExpandableGrid } from "@/components/ui/expandable-grid";
@@ -19,6 +20,9 @@ import { siteConfig } from "@/lib/metadata";
 import {
   BreadcrumbJsonLd,
 } from "@/components/layout/json-ld";
+
+const DARK_SECTION = "border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950";
+const LIGHT_SECTION = "bg-white py-16 md:py-20 dark:bg-navy-900";
 
 export function generateStaticParams() {
   return getOrganizations().map((org) => ({ slug: org.slug }));
@@ -53,19 +57,30 @@ export default async function OrganizationDetailPage({
   const result = getContentByOrganization(slug);
   if (!result) notFound();
 
-  const { org, posts, experiences, testimonials, awards, education } = result;
+  const { org, posts, experiences, testimonials, awards, education, projects } = result;
   const { categoryImages } = getCategoryMaps();
 
   const allOrgs = getOrganizations();
   const currentIndex = allOrgs.findIndex((o) => o.slug === slug);
   const prevOrg = currentIndex > 0 ? allOrgs[currentIndex - 1] : null;
   const nextOrg = currentIndex < allOrgs.length - 1 ? allOrgs[currentIndex + 1] : null;
-  const hasContent =
-    posts.length > 0 ||
-    experiences.length > 0 ||
-    testimonials.length > 0 ||
-    awards.length > 0 ||
-    education.length > 0;
+
+  // Build ordered list of sections that have content, for alternating bg assignment
+  const sectionOrder = [
+    { id: "experience", show: experiences.length > 0 },
+    { id: "education", show: education.length > 0 },
+    { id: "projects", show: projects.length > 0 },
+    { id: "posts", show: posts.length > 0 },
+    { id: "testimonials", show: testimonials.length > 0 },
+    { id: "awards", show: awards.length > 0 },
+  ].filter((s) => s.show);
+
+  const sectionBg: Record<string, string> = {};
+  sectionOrder.forEach(({ id }, i) => {
+    sectionBg[id] = i % 2 === 0 ? DARK_SECTION : LIGHT_SECTION;
+  });
+
+  const hasContent = sectionOrder.length > 0;
 
   return (
     <>
@@ -80,56 +95,66 @@ export default async function OrganizationDetailPage({
         ]}
       />
 
-      <div className="mx-auto max-w-[var(--container-max)] px-6 py-16">
-        {/* Header */}
-        <div className="flex items-start gap-6">
-          {org.logo ? (
-            <Image
-              src={resolveImageUrl(org.logo)}
-              alt={org.name}
-              width={96}
-              height={96}
-              className="h-20 w-20 flex-shrink-0 rounded-xl object-contain"
-            />
-          ) : (
-            <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-xl bg-horchata-100 text-3xl font-bold text-horchata-700 dark:bg-navy-700 dark:text-horchata-400">
-              {org.name.charAt(0)}
-            </div>
-          )}
-          <div>
-            <h1 className="text-3xl font-bold text-navy-900 dark:text-horchata-100 md:text-4xl">
-              {org.name}
-            </h1>
-            {org.description && (
-              <p className="mt-2 text-lg text-navy-600 dark:text-white/70">
-                {org.description}
+      {/* Header — always light */}
+      <section className="bg-horchata-50 py-16 md:py-20 dark:bg-navy-900">
+        <div className="mx-auto max-w-[var(--container-max)] px-6">
+          <div className="flex items-start gap-6">
+            {org.logo ? (
+              <Image
+                src={resolveImageUrl(org.logo)}
+                alt={org.name}
+                width={96}
+                height={96}
+                className="h-20 w-20 flex-shrink-0 rounded-xl object-contain"
+              />
+            ) : (
+              <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-xl bg-horchata-100 text-3xl font-bold text-horchata-700 dark:bg-navy-700 dark:text-horchata-400">
+                {org.name.charAt(0)}
+              </div>
+            )}
+            <div>
+              <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
+                Organization
               </p>
-            )}
-            {org.url && (
-              <a
-                href={org.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 inline-block text-sm font-medium text-horchata-800 hover:text-horchata-700 dark:text-horchata-400 dark:hover:text-horchata-200"
-              >
-                Visit website
-                <svg className="ml-1 inline h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-              </a>
-            )}
+              <h1 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100 md:text-4xl">
+                {org.name}
+              </h1>
+              {org.description && (
+                <p className="mt-2 text-lg text-navy-600 dark:text-white/70">
+                  {org.description}
+                </p>
+              )}
+              {org.url && (
+                <a
+                  href={org.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-block text-sm font-medium text-horchata-800 hover:text-horchata-700 dark:text-horchata-400 dark:hover:text-horchata-200"
+                >
+                  Visit website
+                  <svg className="ml-1 inline h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                </a>
+              )}
+            </div>
           </div>
+
+          {!hasContent && (
+            <p className="mt-12 text-navy-500 dark:text-horchata-400">
+              No associated content found yet for {org.name}.
+            </p>
+          )}
         </div>
+      </section>
 
-        {!hasContent && (
-          <p className="mt-12 text-navy-500 dark:text-horchata-400">
-            No associated content found yet for {org.name}.
-          </p>
-        )}
-
-        {/* Experience */}
-        {experiences.length > 0 && (
-          <section className="mt-12">
-            <h2 className="mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
-              Experience 💼 ({experiences.length})
+      {/* Experience */}
+      {experiences.length > 0 && (
+        <section className={sectionBg["experience"]}>
+          <div className="mx-auto max-w-[var(--container-max)] px-6">
+            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
+              Work
+            </p>
+            <h2 className="mt-1 mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+              Experience 💼
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
               {experiences.map((exp) => (
@@ -157,14 +182,19 @@ export default async function OrganizationDetailPage({
                 </Link>
               ))}
             </div>
-          </section>
-        )}
+          </div>
+        </section>
+      )}
 
-        {/* Education */}
-        {education.length > 0 && (
-          <section className="mt-12">
-            <h2 className="mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
-              Education 🎓 ({education.length})
+      {/* Education */}
+      {education.length > 0 && (
+        <section className={sectionBg["education"]}>
+          <div className="mx-auto max-w-[var(--container-max)] px-6">
+            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
+              Academic
+            </p>
+            <h2 className="mt-1 mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+              Education 🎓
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
               {education.map((edu) => (
@@ -187,42 +217,90 @@ export default async function OrganizationDetailPage({
                 </Link>
               ))}
             </div>
-          </section>
-        )}
+          </div>
+        </section>
+      )}
 
-        {/* Blog Posts */}
-        {posts.length > 0 && (
-          <section className="mt-12">
-            <h2 className="mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
-              Blog Posts ✍🏽 ({posts.length})
+      {/* Projects */}
+      {projects.length > 0 && (
+        <section className={sectionBg["projects"]}>
+          <div className="mx-auto max-w-[var(--container-max)] px-6">
+            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
+              Built
+            </p>
+            <h2 className="mt-1 mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+              Projects 🛠️
+            </h2>
+            <ExpandableGrid initialCount={6} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {projects.map((project) => (
+                <Link
+                  key={project.slug}
+                  href={`/projects/${project.slug}`}
+                  className="group relative flex flex-col items-start rounded-2xl border border-horchata-200 bg-white p-6 transition-shadow hover:shadow-md dark:border-navy-700 dark:bg-navy-800/50"
+                >
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-horchata-100 text-xl dark:bg-navy-700">
+                    {project.emoji ?? "🛠️"}
+                  </div>
+                  <h3 className="mt-4 text-base font-semibold text-navy-800 group-hover:text-horchata-700 dark:text-horchata-100 dark:group-hover:text-horchata-400">
+                    {project.title}
+                  </h3>
+                  <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-navy-600 dark:text-white/60">
+                    {project.tagline}
+                  </p>
+                </Link>
+              ))}
+            </ExpandableGrid>
+          </div>
+        </section>
+      )}
+
+      {/* Blog Posts */}
+      {posts.length > 0 && (
+        <section className={sectionBg["posts"]}>
+          <div className="mx-auto max-w-[var(--container-max)] px-6">
+            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
+              Writing
+            </p>
+            <h2 className="mt-1 mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+              Blog Posts ✍🏽
             </h2>
             <ExpandableGrid initialCount={6} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {posts.map((post) => (
                 <BlogCard key={post.slug} post={post} categoryImages={categoryImages} />
               ))}
             </ExpandableGrid>
-          </section>
-        )}
+          </div>
+        </section>
+      )}
 
-        {/* Testimonials */}
-        {testimonials.length > 0 && (
-          <section className="mt-12">
-            <h2 className="mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
-              Testimonials 💬 ({testimonials.length})
+      {/* Testimonials */}
+      {testimonials.length > 0 && (
+        <section className={sectionBg["testimonials"]}>
+          <div className="mx-auto max-w-[var(--container-max)] px-6">
+            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
+              Praise
+            </p>
+            <h2 className="mt-1 mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+              Testimonials 💬
             </h2>
             <div className="grid gap-6 md:grid-cols-2">
               {testimonials.map((t) => (
                 <TestimonialCard key={t.slug} testimonial={t} />
               ))}
             </div>
-          </section>
-        )}
+          </div>
+        </section>
+      )}
 
-        {/* Awards */}
-        {awards.length > 0 && (
-          <section className="mt-12">
-            <h2 className="mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
-              Awards 🏆 ({awards.length})
+      {/* Awards */}
+      {awards.length > 0 && (
+        <section className={sectionBg["awards"]}>
+          <div className="mx-auto max-w-[var(--container-max)] px-6">
+            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
+              Recognition
+            </p>
+            <h2 className="mt-1 mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+              Awards 🏆
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
               {awards.map((award) => (
@@ -240,27 +318,30 @@ export default async function OrganizationDetailPage({
                 </Link>
               ))}
             </div>
-          </section>
-        )}
+          </div>
+        </section>
+      )}
 
-        {/* Back link */}
-        <div className="mt-12">
+      {/* Navigation — always light */}
+      <section className="bg-horchata-50 py-12 dark:bg-navy-900">
+        <div className="mx-auto max-w-[var(--container-max)] px-6">
           <Link
             href="/organizations"
             className="text-sm font-medium text-horchata-800 hover:text-horchata-700 dark:text-horchata-400 dark:hover:text-horchata-200"
           >
             &larr; All organizations
           </Link>
+          <div className="mt-8">
+            <PrevNextNav
+              prev={prevOrg ? { slug: prevOrg.slug, title: prevOrg.name } : null}
+              next={nextOrg ? { slug: nextOrg.slug, title: nextOrg.name } : null}
+              basePath="/organizations"
+            />
+          </div>
         </div>
+      </section>
 
-        <div className="mt-8">
-          <PrevNextNav
-            prev={prevOrg ? { slug: prevOrg.slug, title: prevOrg.name } : null}
-            next={nextOrg ? { slug: nextOrg.slug, title: nextOrg.name } : null}
-            basePath="/organizations"
-          />
-        </div>
-      </div>
+      <NewsletterCTA />
 
       <ConnectCTA variant="hire" />
     </>

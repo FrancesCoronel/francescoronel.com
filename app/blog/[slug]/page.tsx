@@ -13,6 +13,7 @@ import { mdxComponents } from "@/components/mdx/mdx-components";
 import { BlogCard } from "@/components/ui/blog-card";
 import { ReadingProgress } from "@/components/ui/reading-progress";
 import { buildMetadata } from "@/lib/metadata";
+import { NewsletterCTA } from "@/components/sections/newsletter-cta";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -271,16 +272,23 @@ export default async function BlogPostPage({ params }: PageProps) {
 
     </article>
 
+    <NewsletterCTA />
+
     {/* Related posts — full width breakout */}
     {relatedPosts.length > 0 && (
-      <section className="mx-auto max-w-[var(--container-max)] px-6 pb-16">
-        <h2 className="mb-6 text-xl font-bold text-navy-900 dark:text-horchata-100">
-          Related Posts
-        </h2>
-        <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {relatedPosts.map((p) => (
-            <BlogCard key={p.slug} post={p} categoryImages={categoryImages} />
-          ))}
+      <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
+        <div className="mx-auto max-w-[var(--container-max)] px-6">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+            Keep Reading
+          </p>
+          <h2 className="mt-1 mb-8 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+            Related Posts
+          </h2>
+          <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {relatedPosts.map((p) => (
+              <BlogCard key={p.slug} post={p} categoryImages={categoryImages} />
+            ))}
+          </div>
         </div>
       </section>
     )}

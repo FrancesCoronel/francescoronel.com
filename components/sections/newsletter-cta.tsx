@@ -3,10 +3,10 @@ import { NewsletterForm } from "@/components/ui/newsletter-form";
 
 export function NewsletterCTA() {
   return (
-    <section className="border-y border-horchata-200 bg-horchata-200 py-16 dark:border-navy-700 dark:bg-navy-950">
+    <section className="border-y border-horchata-900 bg-horchata-900 py-16 dark:border-navy-800 dark:bg-navy-800">
       <div className="mx-auto max-w-[var(--container-max)] px-6">
-        <div className="overflow-hidden rounded-2xl bg-horchata-900 dark:bg-navy-800">
-          <div className="flex flex-col items-center gap-8 px-8 py-12 md:flex-row md:gap-12 md:px-12 lg:px-16">
+        <div className="mx-auto max-w-4xl">
+          <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
             {/* Illustration */}
             <div className="flex-shrink-0">
               <Image

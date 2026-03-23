@@ -285,5 +285,33 @@
     "category": "",
     "icon": "",
     "proficiency": 0
+  },
+  {
+    "name": "Tailwind CSS",
+    "slug": "tailwind",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Vercel",
+    "slug": "vercel",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Firebase",
+    "slug": "firebase",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
+  },
+  {
+    "name": "Python",
+    "slug": "python",
+    "category": "",
+    "icon": "",
+    "proficiency": 0
   }
 ]

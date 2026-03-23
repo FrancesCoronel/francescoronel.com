@@ -52,7 +52,8 @@ export function cn(...inputs: ClassValue[]) {
  * Format a date string for display.
  */
 export function formatDate(dateStr: string): string {
-  const date = new Date(dateStr);
+  // Append noon to avoid UTC midnight shifting the date back one day in western timezones
+  const date = new Date(dateStr + "T12:00:00");
   return date.toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",

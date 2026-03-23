@@ -145,6 +145,41 @@ Colors follow a **navy + horchata** palette defined in `app/globals.css` under `
 - Light mode bg: `horchata-50` (#fdf8f3)
 - Dark mode bg: `navy-900` (#141726)
 
+## Image Hosting 🖼️
+
+All new images must be uploaded to Vercel Blob storage before use. Never reference external image CDNs (AWS S3, Webflow CDN, imgix, etc.) directly.
+
+**Store ID:** `store_kTEbrBhzG9WAskY1`
+**Public base URL:** `https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/`
+
+**Upload a new image:**
+```bash
+BLOB_READ_WRITE_TOKEN="..." node -e "
+const { put } = require('@vercel/blob');
+const fs = require('fs');
+async function main() {
+  const buf = fs.readFileSync('/path/to/image.png');
+  const blob = await put('folder/filename.png', buf, { access: 'public', contentType: 'image/png' });
+  console.log(blob.url);
+}
+main();
+"
+```
+
+Folder conventions:
+- `speaking/` — speaking event photos
+- `awards/` — award images
+- `projects/` — project screenshots/logos
+- `static/` — general site assets
+
+## Emoji Skin Tone 🏽
+
+Always use **medium-brown skin tone** (🏽, modifier U+1F3FD) for ANY emoji that supports a skin tone modifier. This includes ALL hand gestures, body parts, and person/people emoji. Never use default yellow/generic, light, medium-light, medium-dark, or dark skin tones.
+
+**Applies to:** ✍🏽 👋🏽 🤝🏽 👊🏽 ✌🏽 💪🏽 👍🏽 👎🏽 👏🏽 🙌🏽 🙏🏽 💅🏽 ✋🏽 🤚🏽 🖐🏽 👌🏽 🤞🏽 🤟🏽 🤘🏽 🤙🏽 🫶🏽 🫱🏽 🫲🏽 👈🏽 👉🏽 👆🏽 👇🏽 ☝🏽 ✊🏽 🤜🏽 🤛🏽 👐🏽 🤲🏽 and all person/face emoji (👩🏽‍💻 👩🏽‍🏫 👩🏽‍💼 🧑🏽‍💻 etc.)
+
+**Rule:** Before writing any emoji, check if it supports skin tone. If yes, always append 🏽. No exceptions.
+
 ## Conventions 📐
 
 - All pages use `max-w-[var(--container-max)]` (1200px) with `px-6` padding
@@ -154,3 +189,32 @@ Colors follow a **navy + horchata** palette defined in `app/globals.css` under `
 - Nav has active page detection via `usePathname()`
 - Testimonial cards truncate to 280 chars with "Read more" expand/collapse
 - Blog uses Pagefind for full-text search + client-side category filtering + pagination (18 per page)
+
+## Section Header Format 🏷️
+
+Every section must have BOTH a subheader label AND an emoji in the main heading. No exceptions.
+
+```tsx
+<p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+  Events                          {/* short category label, no emoji */}
+</p>
+<h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+  Speaking 🎤                     {/* heading + emoji */}
+</h2>
+```
+
+- Subheader: short, uppercase, `text-horchata-700`, no emoji
+- Main heading: title case, emoji at the end, `dark:text-horchata-100`
+- Never use a heading without the subheader label above it
+
+## Alternating Section Backgrounds 🎨
+
+Pages must alternate between light and dark section backgrounds. First section after PageHeader is always light. Footer is always dark.
+
+**Light sections** (default/first): `bg-white` or `bg-horchata-50 dark:bg-navy-900`
+
+**Dark sections**: `border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950`
+
+Pattern: PageHeader(light) → dark → light → dark → light → ConnectCTA(light) → Footer(dark)
+
+When adding a new section, check what the section before it is and apply the opposite bg. Use `sectionClassName` prop on shared components (like `TestimonialsPreview`) to override their default bg when needed.

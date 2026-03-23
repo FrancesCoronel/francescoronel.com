@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { formatDate } from "@/lib/utils";
 
@@ -8,7 +7,6 @@ interface Award {
   date: string;
   url?: string;
   organization?: string;
-  orgLogo?: string;
 }
 
 interface AwardsSectionProps {
@@ -16,26 +14,6 @@ interface AwardsSectionProps {
   blogPostMap?: Record<string, string>;
 }
 
-function AwardIcon({ orgLogo, organization }: { orgLogo?: string; organization?: string }) {
-  if (orgLogo) {
-    return (
-      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg bg-horchata-50 dark:bg-navy-700">
-        <Image
-          src={orgLogo}
-          alt={organization ?? ""}
-          width={32}
-          height={32}
-          className="h-8 w-8 object-contain"
-        />
-      </div>
-    );
-  }
-  return (
-    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-horchata-100 text-xl dark:bg-navy-700">
-      🏆
-    </div>
-  );
-}
 
 function AwardCard({
   award,
@@ -49,7 +27,6 @@ function AwardCard({
 
   const inner = (
     <div className="flex items-start gap-3">
-      <AwardIcon orgLogo={award.orgLogo} organization={award.organization} />
       <div className="min-w-0">
         <h3 className="text-sm font-bold leading-snug text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
           {award.title}
@@ -68,7 +45,7 @@ function AwardCard({
           )}
         </h3>
         {award.organization && (
-          <p className="mt-0.5 text-xs font-medium text-horchata-700 dark:text-horchata-500">
+          <p className="mt-0.5 text-xs font-medium text-navy-500 dark:text-white/50">
             {award.organization}
           </p>
         )}

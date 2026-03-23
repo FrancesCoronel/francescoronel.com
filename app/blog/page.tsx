@@ -36,10 +36,11 @@ export default function BlogListingPage() {
         aside={
           <Image
             src="/images/assets/newsletter-cta.webp"
-            alt="Newsletter illustration"
-            width={400}
-            height={400}
-            className="h-auto w-[160px] drop-shadow-lg sm:w-[200px] md:w-[280px]"
+            alt=""
+            width={280}
+            height={280}
+            className="h-auto w-[200px] object-contain drop-shadow-lg sm:w-[260px] md:w-[360px]"
+            aria-hidden="true"
             priority
           />
         }

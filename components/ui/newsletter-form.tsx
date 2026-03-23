@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 interface NewsletterFormProps {
   variant?: "footer" | "section" | "dark";
@@ -46,13 +47,18 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
     return (
       <div>
         {status === "success" ? (
-          <p className="text-sm text-horchata-400">{message}</p>
+          <div className="flex items-center gap-3">
+            <Image src="/images/assets/memoji-wave.png" alt="" width={48} height={48} className="h-12 w-12 object-contain" aria-hidden="true" />
+            <p className="text-sm text-horchata-400">{message}</p>
+          </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
             <label htmlFor="newsletter-email-dark" className="sr-only">Email address</label>
             <input
               id="newsletter-email-dark"
               type="email"
+              inputMode="email"
+              autoComplete="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="your@email.com"
@@ -63,7 +69,7 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="rounded-xl bg-horchata-500 px-6 py-3 text-sm font-semibold text-navy-900 transition-colors hover:bg-horchata-400 disabled:opacity-60"
+              className="w-full rounded-xl bg-horchata-500 px-6 py-3 text-sm font-semibold text-navy-900 transition-colors hover:bg-horchata-400 disabled:opacity-60 sm:w-auto"
             >
               {status === "loading" ? "Subscribing…" : "Subscribe"}
             </button>
@@ -80,24 +86,29 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
     return (
       <div>
         {status === "success" ? (
-          <p className="text-sm text-horchata-700 dark:text-horchata-400">{message}</p>
+          <div className="flex items-center gap-2">
+            <Image src="/images/assets/memoji-wave.png" alt="" width={36} height={36} className="h-9 w-9 object-contain" aria-hidden="true" />
+            <p className="text-sm text-horchata-700 dark:text-horchata-400">{message}</p>
+          </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col gap-2 sm:flex-row">
             <label htmlFor="newsletter-email-footer" className="sr-only">Email address</label>
             <input
               id="newsletter-email-footer"
               type="email"
+              inputMode="email"
+              autoComplete="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="your@email.com"
               required
               disabled={status === "loading"}
-              className="min-w-0 flex-1 rounded-lg border border-horchata-200 bg-white px-3 py-2 text-sm text-navy-900 placeholder-navy-400 focus:outline-none focus:ring-2 focus:ring-horchata-400 disabled:opacity-60 dark:border-navy-600 dark:bg-navy-800 dark:text-white dark:placeholder-white/40 dark:focus:ring-horchata-500"
+              className="min-w-0 flex-1 rounded-lg border border-horchata-200 bg-white px-3 py-2.5 text-sm text-navy-900 placeholder-navy-400 focus:outline-none focus:ring-2 focus:ring-horchata-400 disabled:opacity-60 dark:border-navy-600 dark:bg-navy-800 dark:text-white dark:placeholder-white/40 dark:focus:ring-horchata-500"
             />
             <button
               type="submit"
               disabled={status === "loading"}
-              className="rounded-lg bg-horchata-700 px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-horchata-800 disabled:opacity-60 dark:bg-horchata-500 dark:text-navy-900 dark:hover:bg-horchata-400"
+              className="w-full rounded-lg bg-horchata-700 px-3 py-2.5 text-sm font-medium text-white transition-colors hover:bg-horchata-800 disabled:opacity-60 dark:bg-horchata-500 dark:text-navy-900 dark:hover:bg-horchata-400 sm:w-auto"
             >
               {status === "loading" ? "..." : "Subscribe"}
             </button>
@@ -113,13 +124,18 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
   return (
     <div>
       {status === "success" ? (
-        <p className="text-base text-navy-700 dark:text-horchata-300">{message}</p>
+        <div className="flex items-center gap-3">
+          <Image src="/images/assets/memoji-wave.png" alt="" width={48} height={48} className="h-12 w-12 object-contain" aria-hidden="true" />
+          <p className="text-base text-navy-700 dark:text-horchata-300">{message}</p>
+        </div>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
           <label htmlFor="newsletter-email-section" className="sr-only">Email address</label>
           <input
             id="newsletter-email-section"
             type="email"
+            inputMode="email"
+            autoComplete="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="your@email.com"
@@ -130,7 +146,7 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="rounded-xl bg-horchata-700 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-horchata-800 disabled:opacity-60 dark:bg-horchata-500 dark:text-navy-900 dark:hover:bg-horchata-400"
+            className="w-full rounded-xl bg-horchata-700 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-horchata-800 disabled:opacity-60 dark:bg-horchata-500 dark:text-navy-900 dark:hover:bg-horchata-400 sm:w-auto"
           >
             {status === "loading" ? "Subscribing…" : "Subscribe"}
           </button>

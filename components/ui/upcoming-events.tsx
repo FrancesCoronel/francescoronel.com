@@ -6,6 +6,7 @@ interface UpcomingEvent {
   date: string;
   url: string;
   description: string;
+  links?: { label: string; url: string }[];
 }
 
 interface UpcomingEventsProps {
@@ -65,9 +66,26 @@ export function UpcomingEvents({ events }: UpcomingEventsProps) {
                   <p className="mt-3 text-xs font-semibold text-horchata-700 dark:text-horchata-400">
                     📅 {formatEventDate(event.date)}
                   </p>
-                  <p className="mt-1 text-xs font-medium text-horchata-700 dark:text-horchata-400">
-                    Register →
-                  </p>
+                  {event.links && event.links.length > 0 ? (
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      {event.links.map((link) => (
+                        <a
+                          key={link.url}
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="rounded-full border border-horchata-300 px-2.5 py-0.5 text-xs font-medium text-horchata-700 hover:bg-horchata-50 dark:border-navy-500 dark:text-horchata-400 dark:hover:bg-navy-700"
+                        >
+                          {link.label} →
+                        </a>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="mt-1 text-xs font-medium text-horchata-700 dark:text-horchata-400">
+                      Register →
+                    </p>
+                  )}
                 </a>
               ))}
             </div>

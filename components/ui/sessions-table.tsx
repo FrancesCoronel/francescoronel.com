@@ -62,7 +62,7 @@ function SourceLogo({ source }: { source: string }) {
     <img
       src={src}
       alt={source}
-      className="h-4 w-4 rounded-sm object-contain"
+      className="h-5 w-5 rounded-sm object-contain"
     />
   );
 }
@@ -241,16 +241,15 @@ export function SessionsTable() {
             <tr className="border-b border-horchata-200 bg-horchata-50 text-left dark:border-navy-700 dark:bg-navy-800">
               <th className="px-4 py-3 font-semibold text-navy-700 dark:text-horchata-200">Date</th>
               <th className="px-4 py-3 font-semibold text-navy-700 dark:text-horchata-200">Name</th>
-              <th className="px-4 py-3 font-semibold text-navy-700 dark:text-horchata-200">Topic</th>
+              <th className="px-4 py-3 font-semibold text-navy-700 dark:text-horchata-200">Duration</th>
               <th className="px-4 py-3 font-semibold text-navy-700 dark:text-horchata-200">Category</th>
-              <th className="px-4 py-3 font-semibold text-navy-700 dark:text-horchata-200">Cost</th>
               <th className="px-4 py-3 font-semibold text-navy-700 dark:text-horchata-200">Source</th>
             </tr>
           </thead>
           <tbody>
             {paginated.map((session, i) => {
               const src = session.source ?? "calendly";
-              const topic = session.topic ?? (src === "formation" ? session.eventTypeName : null);
+              const displayName = session.name === "Formation Client" ? session.eventTypeName : session.name;
               const category = normalizeType(session.type);
               return (
                 <tr
@@ -261,25 +260,18 @@ export function SessionsTable() {
                     {formatDate(session.date)}
                   </td>
                   <td className="px-4 py-2.5 font-medium text-navy-900 dark:text-horchata-100">
-                    {session.name}
+                    {displayName}
                   </td>
-                  <td className="px-4 py-2.5 text-navy-500 dark:text-white/50">
-                    {topic ? (
-                      <span className="block max-w-xs break-words">{topic}</span>
-                    ) : (
-                      <span>—</span>
-                    )}
+                  <td className="whitespace-nowrap px-4 py-2.5 text-navy-500 dark:text-white/50">
+                    {session.durationMinutes ? `${session.durationMinutes}m` : <span className="text-navy-300 dark:text-white/20">—</span>}
                   </td>
-                  <td className="px-4 py-2.5">
-                    <span className={`rounded-full px-3 py-1 text-xs font-semibold ${CATEGORY_COLORS[category]}`}>
+                  <td className="whitespace-nowrap px-4 py-2.5">
+                    <span className={`whitespace-nowrap rounded-full px-3 py-1 text-xs font-semibold ${CATEGORY_COLORS[category]}`}>
                       {CATEGORY_LABELS[category]}
                     </span>
                   </td>
-                  <td className="whitespace-nowrap px-4 py-2.5 text-sm text-navy-500 dark:text-white/50">
-                    {session.cost != null ? `$${session.cost.toFixed(2)}` : <span className="text-navy-300 dark:text-white/20">—</span>}
-                  </td>
-                  <td className="px-4 py-2.5">
-                    <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ${SOURCE_COLORS[src] ?? SOURCE_COLORS["calendly"]}`}>
+                  <td className="whitespace-nowrap px-4 py-2.5">
+                    <span className={`inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-1 text-xs font-semibold ${SOURCE_COLORS[src] ?? SOURCE_COLORS["calendly"]}`}>
                       <SourceLogo source={src} />
                       {SOURCE_LABELS[src] ?? src}
                     </span>

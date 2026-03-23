@@ -20,7 +20,7 @@ const mockTestimonials = [
     organization: "Google",
     quote:
       "Frances is one of the most impactful engineers I've had the pleasure of working with. Her ability to break down complex problems and communicate solutions clearly is unmatched. She consistently raises the bar for everyone on the team.",
-    image: "/images/testimonials/placeholder.jpg",
+    image: "",
     featured: true,
   },
   {
@@ -30,7 +30,7 @@ const mockTestimonials = [
     organization: "Meta",
     quote:
       "I had the privilege of being mentored by Frances during a critical career transition. Her guidance on interview preparation, system design, and navigating the tech industry as a Latino professional was invaluable. I landed my dream role thanks to her support.",
-    image: "/images/testimonials/placeholder.jpg",
+    image: "",
     featured: true,
   },
   {
@@ -40,7 +40,7 @@ const mockTestimonials = [
     organization: "Figma",
     quote:
       "Frances's talk on inclusive design at our company all-hands was phenomenal. She brought real-world examples, actionable takeaways, and an energy that kept the entire room engaged. Would absolutely invite her to speak again.",
-    image: "/images/testimonials/placeholder.jpg",
+    image: "",
     featured: true,
   },
 ];

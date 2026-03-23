@@ -1,8 +1,17 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function NotFound() {
   return (
     <div className="flex min-h-[60vh] flex-col items-center justify-center px-6 text-center">
+      <Image
+        src="/images/assets/memoji-thinking.png"
+        alt=""
+        width={120}
+        height={120}
+        className="mb-4 h-24 w-24 object-contain"
+        aria-hidden="true"
+      />
       <h1 className="text-6xl font-bold text-navy-900 dark:text-horchata-100">
         404
       </h1>

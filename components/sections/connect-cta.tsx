@@ -23,7 +23,7 @@ const variants: Record<
     primaryHref: "/contact",
     secondaryLabel: "Book Mentoring",
     secondaryHref: "/mentoring",
-    image: "/images/assets/rocket-illustration.webp",
+    image: "/images/assets/calendar-connect.webp",
   },
   speaking: {
     heading: "Want Me to Speak? 🎤",
@@ -33,7 +33,7 @@ const variants: Record<
     primaryHref: "/contact",
     secondaryLabel: "Follow on LinkedIn",
     secondaryHref: "https://www.linkedin.com/in/francescoronel",
-    image: "/images/assets/speaking-microphone.png",
+    image: "/images/assets/memoji-fistbump.png",
   },
   mentoring: {
     heading: "Level Up Your Career 💬",

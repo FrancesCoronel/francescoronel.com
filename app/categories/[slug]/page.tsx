@@ -6,6 +6,7 @@ import { getCategoryBySlug, getCategories, getBlogPostsByCategory, getCategoryMa
 import { PageHeader } from "@/components/ui/page-header";
 import { buildMetadata } from "@/lib/metadata";
 import { ConnectCTA } from "@/components/sections/connect-cta";
+import { NewsletterCTA } from "@/components/sections/newsletter-cta";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -66,7 +67,7 @@ export default async function CategoryPage({ params }: PageProps) {
         description={category.description || `Blog posts in the ${category.name} category.`}
       />
 
-      <section className="bg-white py-16 md:py-20 dark:bg-navy-900">
+      <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <p className="mb-6 text-sm text-navy-500 dark:text-horchata-400">
             {posts.length} post{posts.length !== 1 ? "s" : ""}
@@ -74,6 +75,8 @@ export default async function CategoryPage({ params }: PageProps) {
           <PostsListClient posts={posts} categoryImages={categoryImages} hideSearch />
         </div>
       </section>
+
+      <NewsletterCTA />
 
       <ConnectCTA variant="follow" />
     </>

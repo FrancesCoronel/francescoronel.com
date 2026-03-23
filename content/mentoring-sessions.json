@@ -5,20 +5,20 @@
       "start": "2015-05-22",
       "end": "2026-02-26"
     },
-    "totalSessions": 584,
+    "totalSessions": 561,
     "byYear": {
       "2015": 1,
       "2016": 34,
       "2017": 13,
       "2018": 57,
       "2019": 117,
-      "2020": 93,
+      "2020": 92,
       "2021": 62,
-      "2022": 39,
-      "2023": 68,
-      "2024": 43,
+      "2022": 38,
+      "2023": 61,
+      "2024": 38,
       "2025": 41,
-      "2026": 16
+      "2026": 7
     },
     "byType": {
       "chat-15": 321,
@@ -44,10 +44,19 @@
       "cost": 52
     },
     {
+      "date": "2026-02-16",
+      "name": "Lora R.",
+      "type": "chat-30",
+      "eventTypeName": "Leland Coaching Session",
+      "source": "leland",
+      "durationMinutes": 30,
+      "cost": 7.7
+    },
+    {
       "date": "2026-02-13",
       "name": "Diego S.",
       "type": "mentoring",
-      "eventTypeName": "30-Minute Mentoring Call — Frances Coronel <> Diego Sigaran",
+      "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Diego Sigaran",
       "source": "cal.com",
       "durationMinutes": 30
     },
@@ -73,7 +82,7 @@
       "date": "2026-01-07",
       "name": "Keith T.",
       "type": "mentoring",
-      "eventTypeName": "30-Minute Mentoring Call — Frances Coronel <> Keith Tugcu",
+      "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Keith Tugcu",
       "source": "cal.com",
       "durationMinutes": 30
     },
@@ -81,7 +90,7 @@
       "date": "2026-01-06",
       "name": "Enea X.",
       "type": "mentoring",
-      "eventTypeName": "30-Minute Mentoring Call — Frances Coronel <> Enea Xharja",
+      "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Enea Xharja",
       "source": "cal.com",
       "durationMinutes": 30
     },
@@ -188,7 +197,7 @@
       "date": "2025-06-07",
       "name": "Sunny",
       "type": "mentoring",
-      "eventTypeName": "1-Hour Mentoring Call — Frances Coronel <> Sunny",
+      "eventTypeName": "1-Hour Mentoring Call \u2014 Frances Coronel <> Sunny",
       "source": "cal.com",
       "durationMinutes": 60
     },
@@ -214,7 +223,7 @@
       "date": "2025-05-13",
       "name": "Sunny",
       "type": "mentoring",
-      "eventTypeName": "1-Hour Mentoring Call — Frances Coronel <> Sunny",
+      "eventTypeName": "1-Hour Mentoring Call \u2014 Frances Coronel <> Sunny",
       "source": "cal.com",
       "durationMinutes": 60
     },
@@ -249,7 +258,7 @@
       "date": "2025-04-08",
       "name": "Sunny",
       "type": "mentoring",
-      "eventTypeName": "1-Hour Mentoring Call — Frances Coronel <> Sunny",
+      "eventTypeName": "1-Hour Mentoring Call \u2014 Frances Coronel <> Sunny",
       "source": "cal.com",
       "durationMinutes": 60
     },
@@ -263,10 +272,10 @@
       "cost": 65
     },
     {
-      "date": "2025-04-01",
+      "date": "2025-03-31",
       "name": "Anwana N.",
       "type": "mentoring",
-      "eventTypeName": "30-Minute Mentoring Call — Frances Coronel <> Anwana Ntofon",
+      "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Anwana Ntofon",
       "source": "cal.com",
       "durationMinutes": 30
     },
@@ -300,7 +309,7 @@
       "date": "2025-02-18",
       "name": "Sunny",
       "type": "mentoring",
-      "eventTypeName": "1-Hour Mentoring Call — Frances Coronel <> Sunny",
+      "eventTypeName": "1-Hour Mentoring Call \u2014 Frances Coronel <> Sunny",
       "source": "cal.com",
       "durationMinutes": 60
     },
@@ -317,7 +326,7 @@
       "date": "2025-02-17",
       "name": "Sunny",
       "type": "mentoring",
-      "eventTypeName": "1-Hour Mentoring Call — Frances Coronel <> Sunny",
+      "eventTypeName": "1-Hour Mentoring Call \u2014 Frances Coronel <> Sunny",
       "source": "cal.com",
       "durationMinutes": 60
     },
@@ -325,7 +334,7 @@
       "date": "2025-02-15",
       "name": "Sunny",
       "type": "mentoring",
-      "eventTypeName": "1-Hour Mentoring Call — Frances Coronel <> Sunny",
+      "eventTypeName": "1-Hour Mentoring Call \u2014 Frances Coronel <> Sunny",
       "source": "cal.com",
       "durationMinutes": 60
     },
@@ -396,7 +405,7 @@
       "date": "2025-01-20",
       "name": "Daisy",
       "type": "mentoring",
-      "eventTypeName": "30-Minute Mentoring Call — Frances Coronel <> Daisy",
+      "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Daisy",
       "source": "cal.com",
       "durationMinutes": 30
     },
@@ -422,7 +431,7 @@
       "date": "2025-01-15",
       "name": "Kateri G.",
       "type": "mentoring",
-      "eventTypeName": "30-Minute Mentoring Call — Frances Coronel <> Kateri Gutierrez",
+      "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Kateri Gutierrez",
       "source": "cal.com",
       "durationMinutes": 30
     },
@@ -483,7 +492,7 @@
       "date": "2024-10-21",
       "name": "Karen Z.",
       "type": "mentoring",
-      "eventTypeName": "30-Minute Mentoring Call — Frances Coronel <> Karen Zapata",
+      "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Karen Zapata",
       "source": "cal.com",
       "durationMinutes": 30
     },
@@ -491,7 +500,7 @@
       "date": "2024-10-18",
       "name": "Karen Z.",
       "type": "mentoring",
-      "eventTypeName": "30-Minute Mentoring Call — Frances Coronel <> Karen Zapata",
+      "eventTypeName": "30-Minute Mentoring Call \u2014 Frances Coronel <> Karen Zapata",
       "source": "cal.com",
       "durationMinutes": 30
     },
@@ -822,7 +831,7 @@
       "date": "2023-09-12",
       "name": "Angelica R.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
@@ -935,7 +944,7 @@
       "date": "2023-06-16",
       "name": "Ashley D.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
@@ -992,7 +1001,7 @@
       "date": "2023-05-22",
       "name": "Noel C.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
@@ -1017,14 +1026,14 @@
       "date": "2023-05-18",
       "name": "Michael A.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2023-05-18",
       "name": "Chase T.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
@@ -1106,6 +1115,13 @@
       "eventTypeName": "30-Minute Mentoring Call (Prepaid)",
       "durationMinutes": 30,
       "cost": 30
+    },
+    {
+      "date": "2023-04-07",
+      "name": "Hua Szu Yang",
+      "type": "chat-30",
+      "eventTypeName": "30-Minute Chat",
+      "durationMinutes": 30
     },
     {
       "date": "2023-03-31",
@@ -1196,7 +1212,7 @@
       "date": "2023-02-28",
       "name": "Vicki D.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
@@ -1238,7 +1254,7 @@
       "date": "2023-02-16",
       "name": "Jasmin G.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
@@ -1266,7 +1282,7 @@
       "date": "2022-12-06",
       "name": "Mariana G.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30,
       "cost": 25
     },
@@ -1274,22 +1290,36 @@
       "date": "2022-11-29",
       "name": "Samson M.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30,
       "cost": 25
+    },
+    {
+      "date": "2022-11-17",
+      "name": "Daisy Polanco",
+      "type": "chat-30",
+      "eventTypeName": "30-Minute Chat",
+      "durationMinutes": 30
     },
     {
       "date": "2022-11-15",
       "name": "Ashlyn N.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "durationMinutes": 30
+    },
+    {
+      "date": "2022-11-11",
+      "name": "Ana Parada",
+      "type": "chat-30",
+      "eventTypeName": "30-Minute Chat",
       "durationMinutes": 30
     },
     {
       "date": "2022-11-10",
       "name": "Frank U.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30,
       "cost": 25
     },
@@ -1297,140 +1327,147 @@
       "date": "2022-11-03",
       "name": "Mary R.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-10-25",
       "name": "Aysha A.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-10-20",
       "name": "Yanira G.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-10-14",
       "name": "Karina N.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-10-13",
       "name": "Jiaqi S.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
+      "durationMinutes": 30
+    },
+    {
+      "date": "2022-10-11",
+      "name": "Lavie Ruan",
+      "type": "chat-30",
+      "eventTypeName": "30-Minute Chat",
       "durationMinutes": 30
     },
     {
       "date": "2022-10-10",
-      "name": "ABRAHAM M.",
+      "name": "Abraham M.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-10-10",
       "name": "Brenda H.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-10-10",
       "name": "Daniel A.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-10-07",
       "name": "Nafisa H.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-10-06",
       "name": "Phyllis W.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-10-03",
       "name": "Jitendra S.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-09-29",
       "name": "Nafisa H.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-09-26",
       "name": "B C.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-09-22",
       "name": "Gabriela R.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-09-22",
       "name": "Lucy R.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-09-20",
       "name": "Rosi Q.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-08-16",
       "name": "Damien E.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-05-18",
       "name": "Dawn K.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-04-19",
       "name": "Julia M.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-04-14",
       "name": "Kenneth G.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
@@ -1444,35 +1481,35 @@
       "date": "2022-02-24",
       "name": "Josh T.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-02-22",
       "name": "Natalie A.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-02-21",
       "name": "Victor B.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-02-03",
       "name": "Dominique P.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2022-02-02",
       "name": "Audrey G.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
@@ -1501,7 +1538,7 @@
       "date": "2022-01-19",
       "name": "Arturo V.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
@@ -1515,7 +1552,7 @@
       "date": "2021-12-27",
       "name": "Amelia L.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
@@ -1529,7 +1566,7 @@
       "date": "2021-11-30",
       "name": "Mariana S.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
@@ -1544,14 +1581,14 @@
       "date": "2021-11-12",
       "name": "Francisco O.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2021-11-03",
       "name": "Margarita C.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
@@ -1574,14 +1611,14 @@
       "date": "2021-10-13",
       "name": "Nicholas G.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2021-09-06",
       "name": "Angela R.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
@@ -1612,14 +1649,14 @@
       "date": "2021-08-30",
       "name": "Mireya R.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2021-08-27",
       "name": "Alexandra R.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
@@ -1634,7 +1671,7 @@
       "date": "2021-08-25",
       "name": "Brian L.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
@@ -1657,14 +1694,14 @@
       "date": "2021-08-18",
       "name": "Michell B.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
       "date": "2021-08-16",
       "name": "Nikki A.",
       "type": "chat-30",
-      "eventTypeName": "30-Minute Chat 👋🏽",
+      "eventTypeName": "30-Minute Chat \ud83d\udc4b\ud83c\udffd",
       "durationMinutes": 30
     },
     {
@@ -2341,13 +2378,6 @@
     {
       "date": "2020-05-07",
       "name": "Oscar R.",
-      "type": "chat-15",
-      "eventTypeName": "15-Min Chat",
-      "durationMinutes": 15
-    },
-    {
-      "date": "2020-05-04",
-      "name": "Joel-Lehi O.",
       "type": "chat-15",
       "eventTypeName": "15-Min Chat",
       "durationMinutes": 15
@@ -4204,15 +4234,6 @@
       "type": "chat-15",
       "eventTypeName": "15 Minute Chat",
       "durationMinutes": 15
-    },
-    {
-      "date": "2026-02-16",
-      "name": "Lora R.",
-      "type": "chat-30",
-      "eventTypeName": "Leland Coaching Session",
-      "source": "leland",
-      "durationMinutes": 30,
-      "cost": 7.7
     }
   ]
 }

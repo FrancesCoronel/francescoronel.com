@@ -47,7 +47,7 @@
     "title": "Tech Queens Podcast",
     "slug": "tech-queens",
     "tagline": "The first podcast exclusively for women of color in tech",
-    "logo": "https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/production/podcast_uploaded400/329678/329678-1553374766704-32d92460b4bbb.jpg",
+    "logo": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/projects/anchor-podcast-logo.jpg",
     "url": "https://anchor.fm/tech-queens",
     "startDate": "2019-03-01T00:00:00.000Z",
     "endDate": "2020-03-01T00:00:00.000Z",
@@ -600,7 +600,7 @@
       "typescript"
     ],
     "organization": "slack",
-    "image": "https://cdn.prod.website-files.com/63b0b035359373d0cc473202/67145cb1e4e4bac79738b6d5_Blog%20Banner%20design%20(2).png"
+    "image": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/projects/webflow-blog-banner.png"
   },
   {
     "title": "Byteboard Skills Report Redesign",
@@ -955,14 +955,14 @@
   {
     "title": "Social Justice Foss",
     "slug": "social-justice-foss",
-    "tagline": "Promoting social justice by contributing to F/OSS - Women Who Code Hackathon - October 2017 🚺 ✌️",
+    "tagline": "Promoting social justice by contributing to F/OSS - Women Who Code Hackathon - October 2017 🚺 ✌🏽",
     "logo": "",
     "url": "https://github.com/FrancesCoronel/social-justice-foss",
     "startDate": "2017-10-21T17:30:57Z",
     "endDate": "2017-10-22T00:56:29Z",
     "category": "open-source",
     "status": "archived",
-    "description": "Promoting social justice by contributing to F/OSS - Women Who Code Hackathon - October 2017 🚺 ✌️",
+    "description": "Promoting social justice by contributing to F/OSS - Women Who Code Hackathon - October 2017 🚺 ✌🏽",
     "highlights": [
       "5+ GitHub stars",
       "GitHub: github.com/FrancesCoronel/social-justice-foss"
@@ -971,7 +971,7 @@
       "open-source"
     ],
     "github": "FrancesCoronel/social-justice-foss",
-    "emoji": "✊"
+    "emoji": "✊🏽"
   },
   {
     "title": "Ga Super Proxy",
@@ -1329,14 +1329,14 @@
   {
     "title": "Leap Auth Home",
     "slug": "leap-auth-home",
-    "tagline": "Leap Motion Auth for Home Automation | Kent Hack Enough 2016  🏠 🔑 ✋",
+    "tagline": "Leap Motion Auth for Home Automation | Kent Hack Enough 2016  🏠 🔑 ✋🏽",
     "logo": "",
     "url": "http://fvcproductions.github.io/leap-auth-home",
     "startDate": "2016-10-09T00:32:19Z",
     "endDate": "2018-07-12T07:07:54Z",
     "category": "open-source",
     "status": "archived",
-    "description": "Leap Motion Auth for Home Automation | Kent Hack Enough 2016  🏠 🔑 ✋",
+    "description": "Leap Motion Auth for Home Automation | Kent Hack Enough 2016  🏠 🔑 ✋🏽",
     "highlights": [
       "GitHub: github.com/FrancesCoronel/leap-auth-home"
     ],
@@ -1663,14 +1663,14 @@
   {
     "title": "Codewars Kata",
     "slug": "codewars-kata",
-    "tagline": "All the Kata I've created on Codewars 👊",
+    "tagline": "All the Kata I've created on Codewars 👊🏽",
     "logo": "",
     "url": "http://codewars.com/users/fvcproductions",
     "startDate": "2015-07-21T00:52:18Z",
     "endDate": "2016-03-20T17:25:37Z",
     "category": "open-source",
     "status": "archived",
-    "description": "All the Kata I've created on Codewars 👊",
+    "description": "All the Kata I've created on Codewars 👊🏽",
     "highlights": [
       "1+ GitHub stars",
       "GitHub: github.com/FrancesCoronel/codewars-kata"

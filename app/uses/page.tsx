@@ -70,7 +70,7 @@ const tools = [
         description:
           "AI writing assistant with grammar, clarity, tone, and style suggestions across every text field and browser tab",
         url: "https://grammarly.com",
-        icon: "✍️",
+        icon: "✍🏽",
       },
     ],
   },
@@ -167,7 +167,7 @@ const tools = [
         description:
           "Simple macOS habit tracker for building and maintaining daily routines. Minimal UI, lives in the menu bar",
         url: "https://healthier.app",
-        icon: "💪",
+        icon: "💪🏽",
       },
     ],
   },
@@ -230,7 +230,7 @@ const plugins = [
     description: "Review pull requests with structured feedback",
     source: "claude-plugins-official",
     icon: "🔍",
-    url: "https://claude.ai",
+    url: "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-review",
   },
   {
     name: "Frontend Design",
@@ -238,14 +238,14 @@ const plugins = [
       "Create distinctive, production-grade frontend interfaces with high design quality",
     source: "claude-plugins-official",
     icon: "🎨",
-    url: "https://claude.ai",
+    url: "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/frontend-design",
   },
 ];
 
 const categoryIcons: Record<string, { image?: string; emoji?: string }> = {
   Slack: { image: "/images/tools/slack.png" },
   Git: { image: "/images/tools/github.png" },
-  Writing: { emoji: "✍️" },
+  Writing: { emoji: "✍🏽" },
 };
 
 const skills = [
@@ -365,7 +365,7 @@ export default function UsesPage() {
       </section>
 
       {/* Tools by Category */}
-      <section className="py-16 md:py-20">
+      <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
             Software

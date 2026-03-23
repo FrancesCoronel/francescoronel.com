@@ -5,6 +5,7 @@ import { getTagBySlug, getTags, getBlogPostsByTag, getCategoryMaps } from "@/lib
 import { PageHeader } from "@/components/ui/page-header";
 import { buildMetadata } from "@/lib/metadata";
 import { ConnectCTA } from "@/components/sections/connect-cta";
+import { NewsletterCTA } from "@/components/sections/newsletter-cta";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -50,11 +51,13 @@ export default async function TagPage({ params }: PageProps) {
         description={`${posts.length} post${posts.length !== 1 ? "s" : ""} tagged with ${tag.name}.`}
       />
 
-      <section className="py-16 md:py-20">
+      <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <PostsListClient posts={posts} categoryImages={categoryImages} hideSearch />
         </div>
       </section>
+
+      <NewsletterCTA />
 
       <ConnectCTA variant="follow" />
     </>

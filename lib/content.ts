@@ -262,5 +262,9 @@ export function getContentByOrganization(orgSlug: string) {
     (e) => e.institution.toLowerCase() === orgName
   );
 
-  return { org, posts, experiences, testimonials, awards, education };
+  const projects = getProjects().filter(
+    (p) => p.organization === orgSlug
+  );
+
+  return { org, posts, experiences, testimonials, awards, education, projects };
 }

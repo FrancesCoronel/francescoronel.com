@@ -127,7 +127,7 @@ export default function MentoringPage() {
             alt="Speech bubbles illustration"
             width={400}
             height={400}
-            className="h-auto w-[200px] drop-shadow-lg sm:w-[280px] md:w-[380px]"
+            className="h-auto w-[200px] object-contain drop-shadow-lg sm:w-[260px] md:w-[360px]"
             priority
           />
         }

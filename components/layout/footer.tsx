@@ -95,7 +95,7 @@ const footerNav = [
 export function Footer() {
   return (
     <footer className="border-t border-horchata-200 bg-horchata-100 dark:border-navy-800 dark:bg-navy-950">
-      <div className="mx-auto max-w-screen-2xl px-6 py-12 md:py-16">
+      <div className="mx-auto max-w-screen-2xl px-6 py-8 md:py-10">
         <div className="grid gap-10 md:grid-cols-6">
           {/* Brand */}
           <div className="md:col-span-3">
@@ -147,7 +147,7 @@ export function Footer() {
           </nav>
         </div>
 
-        <div className="mt-12 border-t border-horchata-200 pt-6 dark:border-navy-700">
+        <div className="mt-8 border-t border-horchata-200 pt-5 dark:border-navy-700">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <p className="text-center text-xs text-navy-400 dark:text-white/40 md:text-left">
               &copy; {new Date().getFullYear()}{" "}

@@ -4,6 +4,7 @@ import { getProjects } from "@/lib/content";
 import { buildMetadata } from "@/lib/metadata";
 import { PageHeader } from "@/components/ui/page-header";
 import { ConnectCTA } from "@/components/sections/connect-cta";
+import { NewsletterCTA } from "@/components/sections/newsletter-cta";
 import { getMultipleRepoStars } from "@/lib/github";
 import { ProjectsGridClient } from "@/components/ui/projects-grid-client";
 
@@ -42,7 +43,7 @@ export default async function ProjectsPage({
             alt=""
             width={300}
             height={300}
-            className="h-48 w-48 object-contain drop-shadow-lg md:h-64 md:w-64"
+            className="h-auto w-[200px] object-contain drop-shadow-lg sm:w-[260px] md:w-[360px]"
             aria-hidden="true"
           />
         }
@@ -81,6 +82,8 @@ export default async function ProjectsPage({
         featuredSlugs={FEATURED_SLUGS}
         initialSkill={skill}
       />
+
+      <NewsletterCTA />
 
       <ConnectCTA variant="projects" />
     </>
