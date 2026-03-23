@@ -63,9 +63,9 @@ const footerNav = [
     heading: "Pages",
     links: [
       { href: "/about", label: "About" },
-      { href: "/posts", label: "Blog" },
       { href: "/contact", label: "Contact" },
       { href: "/mentoring", label: "Mentoring" },
+      { href: "/posts", label: "Posts" },
       { href: "/projects", label: "Projects" },
       { href: "/speaking", label: "Speaking" },
     ],

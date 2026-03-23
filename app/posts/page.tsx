@@ -31,7 +31,7 @@ export default function PostsListingPage() {
     <>
       <PageHeader
         label="Writing & Work"
-        heading="Blog ✍🏽"
+        heading="Posts ✍🏽"
         description="Blog posts, project write-ups, and case studies on software engineering, tech career, AI, and more."
         aside={
           <Image

@@ -637,7 +637,7 @@ export default async function PostPage({ params }: PageProps) {
             prev={prevPost ? { slug: prevPost.slug, title: prevPost.title } : null}
             next={nextPost ? { slug: nextPost.slug, title: nextPost.title } : null}
             basePath="/posts"
-            allLabel="Blog"
+            allLabel="Posts"
           />
         </div>
       </article>

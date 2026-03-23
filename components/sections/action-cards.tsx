@@ -20,7 +20,7 @@ const defaultCards: CtaCard[] = [
     image: "/images/assets/memoji-laptop.png",
   },
   {
-    label: "Blog",
+    label: "Posts",
     description: "Read my latest posts and insights",
     href: "/posts",
     image: "/images/assets/newsletter-cta.webp",
