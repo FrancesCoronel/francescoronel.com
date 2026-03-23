@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import mentoringData from "@/content/mentoring-sessions.json";
 import { MentoringStats } from "@/components/ui/mentoring-stats";
+import { PaginationNav } from "@/components/ui/pagination-nav";
 
 interface Session {
   date: string;
@@ -283,28 +284,7 @@ export function SessionsTable() {
         </table>
       </div>
 
-      {/* Pagination */}
-      {totalPages > 1 && (
-        <div className="mt-4 flex items-center justify-between text-sm">
-          <button
-            onClick={() => setPage((p) => Math.max(1, p - 1))}
-            disabled={page === 1}
-            className="rounded-lg border border-horchata-200 bg-white px-5 py-2.5 text-navy-700 disabled:opacity-40 dark:border-navy-700 dark:bg-navy-800 dark:text-horchata-200"
-          >
-            ← Previous
-          </button>
-          <span className="text-navy-500 dark:text-white/50">
-            Page {page} of {totalPages}
-          </span>
-          <button
-            onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-            disabled={page === totalPages}
-            className="rounded-lg border border-horchata-200 bg-white px-5 py-2.5 text-navy-700 disabled:opacity-40 dark:border-navy-700 dark:bg-navy-800 dark:text-horchata-200"
-          >
-            Next →
-          </button>
-        </div>
-      )}
+      <PaginationNav page={page} totalPages={totalPages} onPage={setPage} />
     </div>
   );
 }
