@@ -26,9 +26,9 @@ const defaultCards: CtaCard[] = [
     image: "/images/assets/newsletter-cta.webp",
   },
   {
-    label: "Projects",
+    label: "Work",
     description: "Browse my projects and work",
-    href: "/projects",
+    href: "/work",
     image: "/images/assets/rocket-illustration.webp",
   },
   {

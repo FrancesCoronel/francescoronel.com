@@ -248,11 +248,6 @@ const nextConfig: NextConfig = {
 
       // ── Old page paths ───────────────────────────────────
       {
-        source: "/work",
-        destination: "/experience/senior-software-engineer-messaging",
-        permanent: true,
-      },
-      {
         source: "/hire-me",
         destination: "/contact",
         permanent: true,
