@@ -154,7 +154,9 @@ export default function SpeakingPage() {
           <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
             Archive
           </p>
-          <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">Past Events ({posts.length})</h2>
+          <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+            Past Events 📅 <span className="text-lg font-normal text-navy-400 dark:text-white/40">({posts.length})</span>
+          </h2>
           <div className="mt-10">
             <SpeakingListClient posts={posts} categoryImages={categoryImages} />
           </div>
