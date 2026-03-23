@@ -28,7 +28,7 @@ const CATEGORY_COLORS: Record<string, string> = {
 };
 
 export const metadata: Metadata = buildMetadata({
-  title: "Projects",
+  title: "Work",
   description:
     "Side projects, open-source tools, hackathon builds, and work projects from Frances Coronel.",
   path: "/work",
