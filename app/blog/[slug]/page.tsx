@@ -174,9 +174,11 @@ export default async function BlogPostPage({ params }: PageProps) {
         {content}
       </div>
 
+      <hr className="mt-10 border-horchata-200 dark:border-navy-700" />
+
       {/* Tags */}
       {post.tags.length > 0 && (
-        <div className="mt-10 border-t border-horchata-200 pt-6 dark:border-navy-700">
+        <div className="mt-10">
           <p className="mb-2 text-xs font-bold uppercase tracking-wider text-navy-500 dark:text-horchata-400">
             Tags 🏷️
           </p>
@@ -196,7 +198,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
       {/* Organizations */}
       {organizations.length > 0 && (
-        <div className="mt-10 border-t border-horchata-200 pt-6 dark:border-navy-700">
+        <div className="mt-8">
           <p className="mb-3 text-xs font-bold uppercase tracking-wider text-navy-500 dark:text-horchata-400">
             Organizations 🏢
           </p>
@@ -236,7 +238,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       )}
 
       {/* Author */}
-      <div className="mt-10 border-t border-horchata-200 pt-8 dark:border-navy-700">
+      <div className="mt-10">
         <Link
           href="/about"
           className="group flex items-center gap-6 rounded-2xl border-2 border-horchata-300 bg-horchata-50 p-6 transition-all hover:border-horchata-400 hover:shadow-md dark:border-navy-600 dark:bg-navy-800 dark:hover:border-horchata-500"
@@ -271,6 +273,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           prev={prevPost ? { slug: prevPost.slug, title: prevPost.title } : null}
           next={nextPost ? { slug: nextPost.slug, title: nextPost.title } : null}
           basePath="/blog"
+          allLabel="Blog Posts"
         />
       </div>
 

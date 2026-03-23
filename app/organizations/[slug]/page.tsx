@@ -322,24 +322,13 @@ export default async function OrganizationDetailPage({
         </section>
       )}
 
-      {/* Navigation — always light */}
-      <section className="bg-horchata-50 py-12 dark:bg-navy-900">
-        <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <Link
-            href="/organizations"
-            className="text-sm font-medium text-horchata-800 hover:text-horchata-700 dark:text-horchata-400 dark:hover:text-horchata-200"
-          >
-            &larr; All organizations
-          </Link>
-          <div className="mt-8">
-            <PrevNextNav
-              prev={prevOrg ? { slug: prevOrg.slug, title: prevOrg.name } : null}
-              next={nextOrg ? { slug: nextOrg.slug, title: nextOrg.name } : null}
-              basePath="/organizations"
-            />
-          </div>
-        </div>
-      </section>
+      <div className="mx-auto max-w-[var(--container-max)] px-6 py-10">
+        <PrevNextNav
+          prev={prevOrg ? { slug: prevOrg.slug, title: prevOrg.name } : null}
+          next={nextOrg ? { slug: nextOrg.slug, title: nextOrg.name } : null}
+          basePath="/organizations"
+        />
+      </div>
 
       <NewsletterCTA />
 
