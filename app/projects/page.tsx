@@ -108,10 +108,7 @@ export default async function ProjectsPage() {
             Projects 🛠️
           </h2>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              ...projects.filter((p) => FEATURED_SLUGS.includes(p.slug)),
-              ...projects.filter((p) => !FEATURED_SLUGS.includes(p.slug)),
-            ].map((project) => (
+            {projects.filter((p) => FEATURED_SLUGS.includes(p.slug)).map((project) => (
               <Link
                 key={project.slug}
                 href={`/posts/${project.slug}`}
