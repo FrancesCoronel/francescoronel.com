@@ -310,7 +310,7 @@ export default function AboutPage() {
                   {skill.name}
                 </>
               );
-              const cls = "inline-flex items-center gap-2 rounded-full border border-horchata-200 bg-white px-4 py-2 text-sm font-medium text-navy-700 transition-colors hover:border-horchata-400 hover:bg-horchata-50 dark:border-navy-700 dark:bg-navy-800 dark:text-horchata-200 dark:hover:border-navy-500";
+              const cls = "inline-flex items-center gap-2 rounded-full border border-horchata-200 bg-white px-4 py-2 text-sm font-medium text-navy-700 transition-colors hover:border-horchata-400 hover:bg-horchata-50 dark:border-navy-700 dark:bg-navy-800 dark:text-horchata-200 dark:hover:border-navy-500 dark:hover:bg-navy-700 dark:hover:text-white";
               if (!url) return <span key={skill.slug} className={cls + " cursor-default"}>{inner}</span>;
               if (isInternal) return <Link key={skill.slug} href={url} className={cls}>{inner}</Link>;
               return <a key={skill.slug} href={url} target="_blank" rel="noopener noreferrer" className={cls}>{inner}</a>;
