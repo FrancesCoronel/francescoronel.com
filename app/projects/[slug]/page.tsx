@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { buildMetadata } from "@/lib/metadata";
-import { getProjectBySlug, getProjects } from "@/lib/content";
+import { getProjectBySlug, getProjects, getOrganizationBySlug } from "@/lib/content";
 import { resolveImageUrl } from "@/lib/cloudinary";
 import { formatDateRange } from "@/lib/utils";
 import { getRepoData } from "@/lib/github";
@@ -55,6 +55,7 @@ export default async function ProjectPage({ params }: PageProps) {
   if (!project) notFound();
 
   const repoData = project.github ? await getRepoData(project.github) : null;
+  const orgData = project.organization ? getOrganizationBySlug(project.organization) : null;
   const stars = repoData?.stars ?? null;
 
   const allProjects = getProjects();
@@ -68,7 +69,7 @@ export default async function ProjectPage({ params }: PageProps) {
     <>
       {/* Hero */}
       <section className="border-b border-horchata-200 bg-horchata-50 py-14 md:py-20 dark:border-navy-700 dark:bg-navy-900">
-        <div className="mx-auto max-w-[var(--container-max)] px-6">
+        <div className="mx-auto max-w-3xl px-6">
 
           <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-8">
             {/* Logo / Emoji */}
@@ -152,11 +153,8 @@ export default async function ProjectPage({ params }: PageProps) {
 
       {/* Body */}
       <section className="border-b border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
-        <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <div className="grid gap-10 lg:grid-cols-[3fr_2fr] lg:gap-16">
-
-            {/* Main content */}
-            <div className="space-y-10 lg:col-span-2">
+        <div className="mx-auto max-w-3xl px-6">
+          <div className="space-y-10">
 
               {/* Description — only show if different from tagline */}
               {project.description && project.description !== project.tagline && (
@@ -191,8 +189,8 @@ export default async function ProjectPage({ params }: PageProps) {
                     <p className="text-xs font-bold uppercase tracking-widest text-horchata-600 dark:text-horchata-500">Highlights</p>
                     <ul className="mt-4 space-y-2.5">
                       {allHighlights.map((h, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <svg className="mt-0.5 h-5 w-5 shrink-0 text-horchata-500" viewBox="0 0 20 20" fill="currentColor">
+                        <li key={i} className="flex items-baseline gap-3">
+                          <svg className="relative top-0.5 h-4 w-4 shrink-0 text-horchata-500" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                           </svg>
                           <span className="text-sm leading-relaxed text-navy-700 dark:text-horchata-200">{h}</span>
@@ -266,15 +264,15 @@ export default async function ProjectPage({ params }: PageProps) {
               )}
             </div>
 
-            {/* Sidebar */}
-            <aside className="space-y-5 lg:sticky lg:top-8 lg:self-start">
+            {/* Cards */}
+            <div className="mt-6 space-y-5 border-t border-horchata-200 pt-10 dark:border-navy-700">
 
               {/* GitHub card */}
               {project.github && (
                 <div className="overflow-hidden rounded-2xl border border-horchata-200 bg-white dark:border-navy-700 dark:bg-navy-800">
                   <div className="flex items-center gap-2 border-b border-horchata-100 px-4 py-3 dark:border-navy-700">
                     <svg className="h-4 w-4 shrink-0 fill-current text-navy-600 dark:text-horchata-300" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                    <span className="text-xs font-bold uppercase tracking-widest text-navy-500 dark:text-horchata-500">GitHub</span>
+                    <span className="text-xs font-bold uppercase tracking-widest text-navy-500 dark:text-horchata-500">GitHub 🐙</span>
                   </div>
                   <a
                     href={`https://github.com/${project.github}`}
@@ -336,7 +334,7 @@ export default async function ProjectPage({ params }: PageProps) {
               {project.skills.length > 0 && (
                 <div className="rounded-2xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800">
                   <p className="text-xs font-bold uppercase tracking-widest text-navy-500 dark:text-horchata-500">
-                    Skills & Tags
+                    Skills & Tags 🏷️
                   </p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {project.skills.map((skill) => (
@@ -356,7 +354,7 @@ export default async function ProjectPage({ params }: PageProps) {
               {project.blogSlug && (
                 <div className="rounded-2xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800">
                   <p className="text-xs font-bold uppercase tracking-widest text-navy-500 dark:text-horchata-500">
-                    Blog Post
+                    Blog Post ✍🏽
                   </p>
                   <Link
                     href={`/blog/${project.blogSlug}`}
@@ -373,23 +371,31 @@ export default async function ProjectPage({ params }: PageProps) {
               {project.organization && (
                 <div className="rounded-2xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800">
                   <p className="text-xs font-bold uppercase tracking-widest text-navy-500 dark:text-horchata-500">
-                    Organization
+                    Organization 🏢
                   </p>
                   <Link
                     href={`/organizations/${project.organization}`}
-                    className="group mt-3 flex items-center gap-2 text-sm font-medium text-navy-700 transition-colors hover:text-horchata-700 dark:text-horchata-200 dark:hover:text-horchata-400"
+                    className="group mt-3 flex items-center gap-3 text-sm font-medium text-navy-700 transition-colors hover:text-horchata-700 dark:text-horchata-200 dark:hover:text-horchata-400"
                   >
-                    View organization
-                    <svg className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    {orgData?.logo && (
+                      <Image
+                        src={resolveImageUrl(orgData.logo)}
+                        alt={orgData.name}
+                        width={32}
+                        height={32}
+                        className="h-8 w-8 rounded object-contain"
+                      />
+                    )}
+                    <span className="flex-1">{orgData?.name ?? project.organization}</span>
+                    <svg className="h-3.5 w-3.5 shrink-0 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                   </Link>
                 </div>
               )}
-            </aside>
-          </div>
+            </div>
         </div>
       </section>
 
-      <div className="mx-auto max-w-[var(--container-max)] px-6 py-10">
+      <div className="mx-auto max-w-3xl px-6 py-10">
         <PrevNextNav
           prev={prevProject ? { slug: prevProject.slug, title: prevProject.title } : null}
           next={nextProject ? { slug: nextProject.slug, title: nextProject.title } : null}

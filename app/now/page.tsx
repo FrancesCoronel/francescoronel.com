@@ -45,10 +45,10 @@ export default function NowPage() {
               </h2>
               <ul className="mt-4 space-y-3 text-sm text-navy-700 dark:text-horchata-200">
                 <li>
-                  On the <strong>Sidebar Systems team at Slack</strong> — notifications, sidebar architecture, and the systems that power how teams communicate.
+                  Transitioning from the <strong>Sidebar Systems team</strong> to the <strong>DevXP team at Slack</strong> — shifting focus toward developer experience and tooling.
                 </li>
                 <li>
-                  Mentoring engineers through <strong>Formation</strong> — behavioral mock interviews and seed development sessions.
+                  Excited to bring everything I learned in sidebar architecture and AI adoption into building better tools for engineers.
                 </li>
               </ul>
             </div>
@@ -104,7 +104,7 @@ export default function NowPage() {
             >
               /now page
             </a>
-            , inspired by Derek Sivers. If you have a website, you should make one too.
+. If you have a website, you should make one too.
           </p>
         </div>
       </section>

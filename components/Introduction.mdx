@@ -1,0 +1,85 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Introduction" />
+
+# francescoronel.com — Design System
+
+Welcome to the component library for **[francescoronel.com](https://francescoronel.com)** — Frances Coronel's personal website built with Next.js 16, React 19, and Tailwind CSS 4.
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router, React 19) |
+| Styling | Tailwind CSS 4 |
+| Components | Custom React components |
+| Icons | Simple Icons (skill cards) |
+| Fonts | Cabin via `next/font/google` |
+| Hosting | Vercel |
+
+---
+
+## Design Tokens
+
+The site uses a **navy + horchata** color palette defined in `app/globals.css`:
+
+- **Navy** (`navy-50` → `navy-950`) — dark blues for text, backgrounds, and dark mode surfaces
+- **Horchata** (`horchata-50` → `horchata-950`) — warm beige/tan for accents and highlights
+- **Accent** — `horchata-400` (#e5b783)
+- **Light mode bg** — `horchata-50` (#fdf8f3)
+- **Dark mode bg** — `navy-900` (#141726)
+
+Full token reference: [Design System page →](https://francescoronel.com/design-system)
+
+---
+
+## Component Categories
+
+### Layout
+- **Nav** — site-wide navigation with active state detection and dark mode toggle
+- **Footer** — site footer with links and social icons
+
+### Sections
+- **Hero** — homepage hero with profile photo and headline
+- **PageHeader** — shared page header used across all interior pages
+- **BioSection** — tabbed bio variants (Short, Social Media, First Person, Third Person, Press)
+- **TimelineSection** — experience and education timeline
+- **AwardsSection** — awards grid with links
+- **ConnectCTA** — call-to-action section with variants per page
+- **NewsletterCTA** — newsletter signup section
+- **TestimonialsPreview** — featured testimonial cards
+- **OrganizationsPreview** — organization logo grid
+- **CredentialsMarquee** — scrolling logo marquee
+- **LanguagesSection** — spoken languages display
+- **MemojiSection** — memoji showcase grid
+
+### UI Components
+- **BlogCard** — blog post preview card
+- **TestimonialCard** — individual testimonial with expand/collapse
+- **Timeline** — reusable timeline list component
+- **OrgLogo** — organization logo with fallbacks (image → Clearbit → letter avatar)
+- **LogoCarousel** — animated logo carousel
+- **Marquee** — infinite scroll marquee
+- **PageHeader** — interior page hero with aside slot
+- **PrevNextNav** — blog post previous/next navigation
+- **Buttons** — button style reference
+- **NewsletterForm** — email subscription form (dark, footer, section variants)
+
+---
+
+## Conventions
+
+- All cards: `rounded-2xl border border-horchata-200 bg-white` (dark: `border-navy-700 bg-navy-800`)
+- Section headings always have a short uppercase label above the main `h2`
+- Pages alternate light/dark section backgrounds for visual rhythm
+- Emoji use medium-brown skin tone (🏽) throughout
+
+---
+
+## Links
+
+- **Live site** — [francescoronel.com](https://francescoronel.com)
+- **GitHub** — [FrancesCoronel/francescoronel.com](https://github.com/FrancesCoronel/francescoronel.com)
+- **Chromatic** — [Storybook on Chromatic](https://69c087c8a9b267e23aa27530-wqalrhjovn.chromatic.com/)

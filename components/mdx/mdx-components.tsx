@@ -1,8 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Tweet } from "react-tweet";
 import { resolveImageUrl } from "@/lib/cloudinary";
 import { canOptimize } from "@/lib/utils";
 import type { MDXComponents } from "mdx/types";
+
+function extractTweetId(url: string): string | null {
+  const match = url.match(/(?:twitter\.com|x\.com)\/\w+\/status\/(\d+)/);
+  return match ? match[1] : null;
+}
 
 function normalizeUrl(url: string): string {
   if (url.startsWith("//")) return `https:${url}`;
@@ -50,6 +56,16 @@ function MdxLink({
   ...props
 }: React.AnchorHTMLAttributes<HTMLAnchorElement>) {
   if (!href) return <span {...props}>{children}</span>;
+
+  // Auto-embed naked Twitter/X URLs
+  const tweetId = extractTweetId(href);
+  if (tweetId && children === href) {
+    return (
+      <span className="not-prose my-6 flex justify-center">
+        <Tweet id={tweetId} />
+      </span>
+    );
+  }
 
   const isExternal = href.startsWith("http") || href.startsWith("//");
   if (isExternal) {
@@ -102,4 +118,5 @@ export const mdxComponents: MDXComponents = {
   a: MdxLink,
   Callout,
   Image: MdxImage,
+  Tweet,
 };

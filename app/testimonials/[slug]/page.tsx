@@ -107,15 +107,16 @@ export default async function TestimonialPage({ params }: PageProps) {
             ))}
           </blockquote>
 
-          <div className="mt-10">
-            <PrevNextNav
-              prev={prevItem ? { slug: prevItem.slug, title: prevItem.name } : null}
-              next={nextItem ? { slug: nextItem.slug, title: nextItem.name } : null}
-              basePath="/testimonials"
-            />
-          </div>
         </div>
       </section>
+
+      <div className="mx-auto max-w-3xl px-6 py-10">
+        <PrevNextNav
+          prev={prevItem ? { slug: prevItem.slug, title: prevItem.name } : null}
+          next={nextItem ? { slug: nextItem.slug, title: nextItem.name } : null}
+          basePath="/testimonials"
+        />
+      </div>
 
       <ConnectCTA variant="hire" />
     </>
