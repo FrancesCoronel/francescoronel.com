@@ -13,7 +13,7 @@ interface BlogCardProps {
 
 export function BlogCard({ post, categoryImages, hideReadingTime, basePath = "/blog" }: BlogCardProps) {
   return (
-    <article className="group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-horchata-200 bg-horchata-50 transition-shadow hover:shadow-lg dark:border-navy-700 dark:bg-navy-800">
+    <article className="group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-horchata-200 bg-white transition-shadow hover:shadow-lg dark:border-navy-700 dark:bg-navy-800">
       <Link
         href={`${basePath}/${post.slug}`}
         className="absolute inset-0 z-10"
