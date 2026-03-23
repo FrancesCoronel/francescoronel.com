@@ -56,3 +56,8 @@ page-update-suggestions.md
 
 *storybook.log
 storybook-static
+
+# tailwindplus downloader (credentials, sessions, exported component snapshots)
+.tailwindplus-downloader-credentials.json
+.tailwindplus-downloader-session.json
+tailwindplus-components-*.json
