@@ -499,7 +499,7 @@ export default async function PostPage({ params }: PageProps) {
                 <Link
                   key={cat}
                   href={`/categories/${cat}`}
-                  className="relative z-20 flex cursor-pointer items-center gap-1.5 rounded-full bg-horchata-100 px-3 py-1 text-xs font-medium text-horchata-800 transition-colors hover:bg-horchata-200 dark:bg-navy-700 dark:text-white/70"
+                  className="relative z-20 flex cursor-pointer items-center gap-1.5 rounded-full bg-horchata-100 px-3 py-1 text-xs font-medium text-horchata-800 transition-colors hover:bg-horchata-200 dark:bg-navy-700 dark:text-white/70 dark:hover:bg-navy-600 dark:hover:text-white"
                 >
                   {cat.charAt(0).toUpperCase() + cat.slice(1)}
                   {categoryImages[cat] && (
