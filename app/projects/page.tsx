@@ -139,7 +139,7 @@ export default async function ProjectsPage() {
                     )}
                   </div>
                 </div>
-                <h3 className="mt-3 font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
+                <h3 className="mt-3 break-words font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
                   {project.title}
                 </h3>
                 <p className="mt-1 flex-1 line-clamp-2 text-sm text-navy-500 dark:text-white/60">

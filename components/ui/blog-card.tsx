@@ -40,7 +40,7 @@ export function BlogCard({ post, categoryImages, hideReadingTime, basePath = "/b
             </>
           )}
         </div>
-        <h3 className="mb-2 text-lg font-bold leading-snug text-navy-900 group-hover:text-horchata-700 dark:text-white dark:group-hover:text-white/80">
+        <h3 className="mb-2 break-words text-lg font-bold leading-snug text-navy-900 group-hover:text-horchata-700 dark:text-white dark:group-hover:text-white/80">
           {post.title}
         </h3>
         <p className="line-clamp-2 text-sm text-navy-600 dark:text-white/70">
