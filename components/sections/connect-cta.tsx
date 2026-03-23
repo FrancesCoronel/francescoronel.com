@@ -89,15 +89,16 @@ const variants: Record<
 
 interface ConnectCTAProps {
   variant?: CTAVariant;
+  sectionClassName?: string;
 }
 
-export function ConnectCTA({ variant = "default" }: ConnectCTAProps) {
+export function ConnectCTA({ variant = "default", sectionClassName }: ConnectCTAProps) {
   const v = variants[variant];
   const isExternal = v.primaryHref.startsWith("http");
   const isSecondaryExternal = v.secondaryHref.startsWith("http");
 
   return (
-    <section className="border-y border-horchata-200 bg-horchata-100 py-16 dark:border-navy-700 dark:bg-navy-950">
+    <section className={sectionClassName ?? "border-y border-horchata-200 bg-horchata-50 py-16 dark:border-navy-700 dark:bg-navy-900"}>
       <div className="mx-auto max-w-2xl px-6 text-center">
         <Image
           src={v.image}

@@ -213,13 +213,14 @@ Pages must alternate between light and dark section backgrounds.
 
 **Rules:**
 - **Page headers** (PageHeader component or first hero section): always **light** bg
-- **Footer CTA** (ConnectCTA component, last content section): always **dark** bg
+- **ConnectCTA** (last content section before nav footer): always **light** bg (`bg-horchata-50 dark:bg-navy-900`)
+- **Nav footer**: always **dark** bg (`bg-horchata-100`) — this is the site-wide footer component
 - All sections in between alternate, starting with dark after the header
 
 **Light sections**: `bg-white` or `bg-horchata-50 dark:bg-navy-900`
 
 **Dark sections**: `border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950`
 
-Pattern: PageHeader(light) → dark → light → dark → NewsletterCTA → ConnectCTA(dark) → Footer(nav, dark)
+Pattern: PageHeader(light) → dark → light → dark → NewsletterCTA → ConnectCTA(light) → Footer nav(dark)
 
 When adding a new section, check what the section before it is and apply the opposite bg. Use `sectionClassName` prop on shared components (like `TestimonialsPreview`) to override their default bg when needed.
