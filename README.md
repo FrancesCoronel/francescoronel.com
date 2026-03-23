@@ -33,6 +33,9 @@ npm run lighthouse       # run lighthouse CI
 npm run lighthouse:local # single-page lighthouse report (HTML output)
 npm run audit:a11y       # pa11y-ci accessibility audit
 npm run audit:full       # unlighthouse full-site audit
+npm run storybook        # launch Storybook dev server (port 6006)
+npm run build-storybook  # build static Storybook
+npm run chromatic        # upload to Chromatic for visual regression
 ```
 
 ## Architecture
@@ -43,43 +46,6 @@ npm run audit:full       # unlighthouse full-site audit
 - **Search:** Pagefind indexes all rendered HTML pages at build time
 - **Organizations** are the hub entity — each org page aggregates experience, posts, testimonials, education, awards
 - See [`CLAUDE.md`](./CLAUDE.md) for full architecture docs
-
-## DNS Cutover: Webflow → Vercel
-
-### Pre-Cutover Checklist
-
-- [ ] All pages built and rendering correctly (`npm run build` passes)
-- [ ] All 665+ blog posts render with images
-- [ ] Redirects configured in `next.config.ts` covering all Webflow URL patterns
-- [ ] Sitemap generates correctly at `/sitemap.xml`
-- [ ] RSS feed generates correctly at `/feed`
-- [ ] robots.txt allows all crawlers
-- [ ] Google Analytics 4 firing on all pages
-- [ ] Vercel Analytics + Speed Insights configured
-- [ ] Open Graph images and meta tags working
-- [ ] Dark mode toggle working
-- [ ] Search (Pagefind) indexing all content
-- [ ] Mobile responsive across all breakpoints
-- [ ] Lighthouse scores: Performance 90+, Accessibility 95+, SEO 95+
-
-### Cutover Steps
-
-1. **Deploy to Vercel** — connect `FrancesCoronel/francescoronel.com`, build command `npm run build`
-2. **Test preview URL** — visit every page type, test redirects, images, search, dark mode, mobile
-3. **Add custom domain** — Vercel Settings > Domains: add `francescoronel.com` + `www`
-   - `francescoronel.com` → A record `76.76.21.21`
-   - `www.francescoronel.com` → CNAME `cname.vercel-dns.com`
-4. **Lower TTL** — 48 hours before cutover, set TTL to 60 seconds
-5. **Update DNS** — remove Webflow records, add Vercel records (do during low-traffic hours)
-6. **Verify propagation** — `dig francescoronel.com`, check https://dnschecker.org
-7. **Post-cutover** — submit sitemap to Google Search Console, verify GA4, test old Webflow URLs redirect, restore TTL to 3600
-
-**Rollback:** revert DNS records to Webflow IPs — with 60s TTL, traffic returns within minutes.
-
-### Post-Cutover Cleanup
-
-- [ ] Cancel Webflow subscription (after 1-2 weeks stable)
-- [ ] Migrate images from Webflow CDN to Cloudflare R2 or Cloudinary
 
 ---
 
