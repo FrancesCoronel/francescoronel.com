@@ -49,7 +49,7 @@ function AwardCard({
             {award.organization}
           </p>
         )}
-        <p className="mt-1 text-xs text-navy-400 dark:text-navy-500">
+        <p className="mt-1 text-xs text-navy-500 dark:text-horchata-400">
           {formatDate(award.date)}
         </p>
       </div>

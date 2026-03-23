@@ -31,7 +31,7 @@ export function CredentialsMarquee() {
               </Link>
               <span className="text-xl" aria-hidden="true">{c.emoji}</span>
               <span
-                className="mx-3 text-horchata-400 dark:text-navy-500"
+                className="mx-3 text-navy-500 dark:text-horchata-400"
                 aria-hidden="true"
               >
                 •

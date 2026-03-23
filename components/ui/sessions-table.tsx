@@ -9,7 +9,7 @@ interface Session {
   name: string;
   type: string;
   eventTypeName: string;
-  topic: string | null;
+  topic?: string | null;
   source?: string;
   durationMinutes?: number;
   cost?: number;

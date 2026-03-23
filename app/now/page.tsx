@@ -109,7 +109,7 @@ export default function NowPage() {
                   <div className="absolute -left-1.5 top-1 hidden h-3 w-3 rounded-full bg-horchata-400 ring-4 ring-horchata-100 dark:bg-horchata-500 dark:ring-navy-950 sm:block" aria-hidden="true" />
 
                   {/* Date label */}
-                  <p className="mb-6 text-xs font-bold uppercase tracking-widest text-horchata-600 dark:text-horchata-500">
+                  <p className="mb-6 text-xs font-bold uppercase tracking-widest text-horchata-800 dark:text-horchata-400">
                     {entry.date}
                   </p>
 
@@ -134,7 +134,7 @@ export default function NowPage() {
             </div>
           </div>
 
-          <p className="mt-14 text-sm text-navy-400 dark:text-horchata-500">
+          <p className="mt-14 text-sm text-navy-500 dark:text-horchata-400">
             This is a{" "}
             <a
               href="https://nownownow.com/about"
