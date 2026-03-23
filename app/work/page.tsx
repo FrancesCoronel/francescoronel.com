@@ -31,7 +31,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Projects",
   description:
     "Side projects, open-source tools, hackathon builds, and work projects from Frances Coronel.",
-  path: "/projects",
+  path: "/work",
 });
 
 export default async function ProjectsPage() {

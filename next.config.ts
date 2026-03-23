@@ -81,6 +81,8 @@ const nextConfig: NextConfig = {
       { source: "/blog/angel-riera", destination: "/testimonials/angel-riera", permanent: true },
       { source: "/blog/:slug", destination: "/posts/:slug", permanent: true },
       { source: "/projects/:slug", destination: "/posts/:slug", permanent: true },
+      { source: "/projects", destination: "/work", permanent: true },
+      { source: "/portfolio", destination: "/work", permanent: true },
 
       // ── Deduped project slug redirects ────────────────────
       { source: "/posts/byteboard-candidate-actions", destination: "/posts/client-platform-candidate-actions", permanent: true },

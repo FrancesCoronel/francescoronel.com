@@ -11,7 +11,7 @@ const navLinks = [
   { href: "/mentoring", label: "Mentoring" },
   { href: "/posts", label: "Posts" },
   { href: "/speaking", label: "Speaking" },
-  { href: "/projects", label: "Work" },
+  { href: "/work", label: "Work" },
 ];
 
 export function Nav() {
