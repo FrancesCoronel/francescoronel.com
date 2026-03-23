@@ -14,6 +14,7 @@ import type {
   Category,
   Tag,
   Project,
+  Post,
 } from "./types";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
@@ -225,6 +226,68 @@ export function getTestimonialBySlug(
 
 export function getOrganizationBySlug(slug: string): Organization | undefined {
   return getOrganizations().find((o) => o.slug === slug);
+}
+
+// ─── Unified Posts (blog + projects) ─────────────────────────
+
+function projectToPost(project: Project): Post {
+  return {
+    slug: project.slug,
+    title: project.title,
+    date: project.startDate,
+    excerpt: project.description || project.tagline,
+    featuredImage: project.logo || "",
+    categories: [project.category],
+    tags: project.skills,
+    organizations: project.organization ? [project.organization] : [],
+    skills: project.skills,
+    readingTime: "",
+    content: "",
+    postType: "project",
+    tagline: project.tagline,
+    highlights: project.highlights,
+    logo: project.logo,
+    emoji: project.emoji,
+    projectUrl: project.url,
+    startDate: project.startDate,
+    endDate: project.endDate,
+    projectCategory: project.category,
+    status: project.status,
+    github: project.github,
+    organization: project.organization,
+  };
+}
+
+export function getPost(slug: string): Post | null {
+  const blog = getBlogPost(slug);
+  if (blog) return { ...blog, postType: "post" };
+  const project = getProjectBySlug(slug);
+  if (project) return projectToPost(project);
+  return null;
+}
+
+export function getPostSlugs(): string[] {
+  const blogSlugs = getBlogSlugs();
+  const blogSlugSet = new Set(blogSlugs);
+  const projectSlugs = getProjects()
+    .map((p) => p.slug)
+    .filter((s) => !blogSlugSet.has(s));
+  return [...blogSlugs, ...projectSlugs];
+}
+
+let _unifiedPostsCache: Post[] | null = null;
+
+export function getAllPosts(): Post[] {
+  if (_unifiedPostsCache) return _unifiedPostsCache;
+  const blogPosts: Post[] = getAllBlogPosts().map((p) => ({ ...p, postType: "post" as const }));
+  const blogSlugSet = new Set(blogPosts.map((p) => p.slug));
+  const projectPosts: Post[] = getProjects()
+    .filter((p) => !blogSlugSet.has(p.slug))
+    .map(projectToPost);
+  _unifiedPostsCache = [...blogPosts, ...projectPosts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+  return _unifiedPostsCache;
 }
 
 export function getOrganizationByName(name: string): Organization | undefined {

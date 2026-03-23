@@ -130,6 +130,23 @@ export interface Project {
   organization?: string;
 }
 
+/** Unified post type — covers both blog posts and projects */
+export interface Post extends BlogPost {
+  postType: "post" | "project";
+  // Project-specific fields (only set when postType === 'project')
+  tagline?: string;
+  highlights?: string[];
+  logo?: string;
+  emoji?: string;
+  projectUrl?: string;
+  startDate?: string;
+  endDate?: string | null;
+  projectCategory?: "open-source" | "podcast" | "hackathon" | "work-project" | "side-project";
+  status?: "active" | "complete" | "abandoned" | "archived";
+  github?: string;
+  organization?: string;
+}
+
 export interface SiteMetadata {
   title: string;
   description: string;

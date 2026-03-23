@@ -8,13 +8,14 @@ interface BlogCardProps {
   post: BlogPost;
   categoryImages?: Record<string, string>;
   hideReadingTime?: boolean;
+  basePath?: string;
 }
 
-export function BlogCard({ post, categoryImages, hideReadingTime }: BlogCardProps) {
+export function BlogCard({ post, categoryImages, hideReadingTime, basePath = "/blog" }: BlogCardProps) {
   return (
     <article className="group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-horchata-200 bg-horchata-50 transition-shadow hover:shadow-lg dark:border-navy-700 dark:bg-navy-800">
       <Link
-        href={`/blog/${post.slug}`}
+        href={`${basePath}/${post.slug}`}
         className="absolute inset-0 z-10"
         aria-label={post.title}
       />

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Tweet } from "react-tweet";
+import { Tweet as ReactTweet } from "react-tweet";
+import type { ComponentType } from "react";
+const Tweet = ReactTweet as ComponentType<{ id: string }>;
 import { resolveImageUrl } from "@/lib/cloudinary";
 import { canOptimize } from "@/lib/utils";
 import type { MDXComponents } from "mdx/types";

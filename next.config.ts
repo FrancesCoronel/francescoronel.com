@@ -73,6 +73,15 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // ── Unified /posts namespace ───────────────────────────
+      // More specific blog post exceptions must come BEFORE the wildcard catch-all
+      { source: "/blog/chris-lanus", destination: "/testimonials/chris-lanus", permanent: true },
+      { source: "/blog/gabriel-rowe", destination: "/testimonials/gabriel-rowe", permanent: true },
+      { source: "/blog/franklin-lee", destination: "/testimonials/franklin-lee", permanent: true },
+      { source: "/blog/angel-riera", destination: "/testimonials/angel-riera", permanent: true },
+      { source: "/blog/:slug", destination: "/posts/:slug", permanent: true },
+      { source: "/projects/:slug", destination: "/posts/:slug", permanent: true },
+
       // ── Newsletter → Blog ─────────────────────────────────
       { source: "/newsletter", destination: "/blog", permanent: true },
 
@@ -80,11 +89,6 @@ const nextConfig: NextConfig = {
       { source: "/experience", destination: "/about#experience", permanent: true },
       { source: "/education", destination: "/about#education", permanent: true },
       { source: "/awards", destination: "/about#awards", permanent: true },
-      // ── Blog posts migrated to testimonials ───────────────
-      { source: "/blog/chris-lanus", destination: "/testimonials/chris-lanus", permanent: true },
-      { source: "/blog/gabriel-rowe", destination: "/testimonials/gabriel-rowe", permanent: true },
-      { source: "/blog/franklin-lee", destination: "/testimonials/franklin-lee", permanent: true },
-      { source: "/blog/angel-riera", destination: "/testimonials/angel-riera", permanent: true },
       // ── Webflow CMS template URL patterns ─────────────────
       {
         source: "/detail_blog/:slug",
