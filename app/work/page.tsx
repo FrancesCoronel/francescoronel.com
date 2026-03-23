@@ -105,7 +105,7 @@ export default async function ProjectsPage() {
             Featured
           </p>
           <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
-            Work 🛠️
+            Featured Projects ⭐
           </h2>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {projects.filter((p) => FEATURED_SLUGS.includes(p.slug)).map((project) => (
