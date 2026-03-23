@@ -18,7 +18,7 @@ import type {
 } from "./types";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
-const BLOG_DIR = path.join(CONTENT_DIR, "blog");
+const BLOG_DIR = path.join(CONTENT_DIR, "posts");
 
 // ─── Blog Posts ──────────────────────────────────────────────
 
@@ -30,7 +30,7 @@ export function getBlogSlugs(): string[] {
     .map((f) => f.replace(/\.mdx$/, ""));
 }
 
-export function getBlogPost(slug: string, { includeDrafts = false } = {}): BlogPost | null {
+export function getBlogPost(slug: string, { includeDrafts = false } = {}): Post | null {
   const filePath = path.join(BLOG_DIR, `${slug}.mdx`);
   if (!fs.existsSync(filePath)) return null;
 
@@ -40,13 +40,14 @@ export function getBlogPost(slug: string, { includeDrafts = false } = {}): BlogP
 
   if (frontmatter.draft && !includeDrafts) return null;
   const stats = readingTime(content);
+  const isProject = frontmatter.type === "project";
 
   return {
     slug: frontmatter.slug || slug,
     title: frontmatter.title,
     date: frontmatter.date,
     excerpt: frontmatter.excerpt || content.replace(/^---[\s\S]*?---\n/, "").replace(/[#*`>_[\]()!|]/g, "").replace(/\s+/g, " ").trim().slice(0, 160) || "",
-    featuredImage: frontmatter.featuredImage || "",
+    featuredImage: frontmatter.featuredImage || frontmatter.logo || "",
     categories: frontmatter.categories || [],
     tags: frontmatter.tags || [],
     organizations: frontmatter.organizations || [],
@@ -55,17 +56,30 @@ export function getBlogPost(slug: string, { includeDrafts = false } = {}): BlogP
     source: frontmatter.source,
     readingTime: stats.text,
     content,
+    postType: isProject ? "project" : "post",
+    // Project fields
+    tagline: frontmatter.tagline,
+    highlights: frontmatter.highlights,
+    logo: frontmatter.logo,
+    emoji: frontmatter.emoji,
+    projectUrl: frontmatter.projectUrl,
+    startDate: frontmatter.startDate,
+    endDate: frontmatter.endDate,
+    projectCategory: frontmatter.projectCategory,
+    status: frontmatter.status,
+    github: frontmatter.github,
+    organization: frontmatter.organization,
   };
 }
 
-let _allPostsCache: BlogPost[] | null = null;
+let _allPostsCache: Post[] | null = null;
 
-export function getAllBlogPosts(): BlogPost[] {
+export function getAllBlogPosts(): Post[] {
   if (_allPostsCache) return _allPostsCache;
   const slugs = getBlogSlugs();
   const posts = slugs
     .map((slug) => getBlogPost(slug))
-    .filter((post): post is BlogPost => post !== null);
+    .filter((post): post is Post => post !== null);
 
   _allPostsCache = posts.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
@@ -260,7 +274,7 @@ function projectToPost(project: Project): Post {
 
 export function getPost(slug: string): Post | null {
   const blog = getBlogPost(slug);
-  if (blog) return { ...blog, postType: "post" };
+  if (blog) return blog;
   const project = getProjectBySlug(slug);
   if (project) return projectToPost(project);
   return null;
@@ -279,12 +293,14 @@ let _unifiedPostsCache: Post[] | null = null;
 
 export function getAllPosts(): Post[] {
   if (_unifiedPostsCache) return _unifiedPostsCache;
-  const blogPosts: Post[] = getAllBlogPosts().map((p) => ({ ...p, postType: "post" as const }));
-  const blogSlugSet = new Set(blogPosts.map((p) => p.slug));
-  const projectPosts: Post[] = getProjects()
-    .filter((p) => !blogSlugSet.has(p.slug))
+  // getAllBlogPosts() now includes project-type MDX posts directly
+  const mdxPosts = getAllBlogPosts();
+  const mdxSlugSet = new Set(mdxPosts.map((p) => p.slug));
+  // Fall back to JSON for any projects not yet migrated to MDX
+  const jsonOnlyProjects: Post[] = getProjects()
+    .filter((p) => !mdxSlugSet.has(p.slug))
     .map(projectToPost);
-  _unifiedPostsCache = [...blogPosts, ...projectPosts].sort(
+  _unifiedPostsCache = [...mdxPosts, ...jsonOnlyProjects].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
   return _unifiedPostsCache;

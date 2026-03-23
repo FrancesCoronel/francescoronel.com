@@ -22,7 +22,7 @@ const defaultCards: CtaCard[] = [
   {
     label: "Blog",
     description: "Read my latest posts and insights",
-    href: "/blog",
+    href: "/posts",
     image: "/images/assets/newsletter-cta.webp",
   },
   {

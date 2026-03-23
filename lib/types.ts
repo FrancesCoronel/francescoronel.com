@@ -27,6 +27,19 @@ export interface BlogPostFrontmatter {
   externalUrl?: string;
   source?: "webflow" | "wordpress";
   draft?: boolean;
+  // Project fields — present when type === "project"
+  type?: "project";
+  tagline?: string;
+  highlights?: string[];
+  logo?: string;
+  emoji?: string;
+  projectUrl?: string;
+  startDate?: string;
+  endDate?: string | null;
+  projectCategory?: "open-source" | "podcast" | "hackathon" | "work-project" | "side-project";
+  status?: "active" | "complete" | "abandoned" | "archived";
+  github?: string;
+  organization?: string;
 }
 
 export interface Testimonial {

@@ -86,7 +86,7 @@ export default async function HomePage() {
                 </h2>
               </div>
               <Link
-                href="/blog"
+                href="/posts"
                 className="text-sm font-medium text-horchata-800 hover:text-horchata-700 dark:text-horchata-400 dark:hover:text-horchata-200"
               >
                 Browse all posts →
@@ -282,8 +282,8 @@ export default async function HomePage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { stat: `${mentoringSessionCount}+`, label: "Mentoring sessions", sublabel: "logged on ADPList & Calendly", icon: "💬", href: "/mentoring" },
-              { stat: `${roundDown(allPosts.length)}+`, label: "Blog posts", sublabel: "published since 2014", icon: "✍🏽", href: "/blog" },
+              { stat: `${mentoringSessionCount}+`, label: "Mentoring sessions", sublabel: "logged on Cal.com & Calendly", icon: "💬", href: "/mentoring" },
+              { stat: `${roundDown(allPosts.length)}+`, label: "Blog posts", sublabel: "published since 2014", icon: "✍🏽", href: "/posts" },
               { stat: `${speakingCount}+`, label: "Speaking events", sublabel: "at conferences since 2015", icon: "🎤", href: "/speaking" },
               { stat: `${yearsOfExperience}+`, label: "Years of experience", sublabel: "full-time in industry", icon: "💼", href: "/about#experience" },
               { stat: `${awardsCount}+`, label: "Awards & recognition", sublabel: "from organizations & publications", icon: "🏆", href: "/awards" },

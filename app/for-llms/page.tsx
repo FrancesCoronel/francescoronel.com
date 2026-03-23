@@ -128,11 +128,11 @@ export default function ForLlmsPage() {
       </section>
 
       <section>
-        <h2>Recent Blog Posts</h2>
+        <h2>Recent Posts</h2>
         <ul>
           {recentPosts.map((post) => (
             <li key={post.slug}>
-              <a href={`${siteConfig.siteUrl}/blog/${post.slug}`}>
+              <a href={`${siteConfig.siteUrl}/posts/${post.slug}`}>
                 {post.title}
               </a>{" "}
               ({post.date})
@@ -140,8 +140,8 @@ export default function ForLlmsPage() {
           ))}
         </ul>
         <p>
-          <a href={`${siteConfig.siteUrl}/blog`}>
-            View all {getAllBlogPosts().length}+ blog posts
+          <a href={`${siteConfig.siteUrl}/posts`}>
+            View all {getAllBlogPosts().length}+ posts
           </a>
         </p>
       </section>

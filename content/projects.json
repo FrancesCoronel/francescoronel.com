@@ -603,7 +603,7 @@
   },
   {
     "title": "Byteboard Skills Report Redesign",
-    "slug": "byteboard-skills-report-redesign",
+    "slug": "skills-report-redesign",
     "tagline": "Full redesign of Byteboard's core candidate evaluation artifact",
     "logo": "/images/organizations/byteboard.png",
     "url": "https://byteboard.dev",
@@ -627,7 +627,7 @@
   },
   {
     "title": "Byteboard Client Platform Candidate Actions",
-    "slug": "byteboard-candidate-actions",
+    "slug": "client-platform-candidate-actions",
     "tagline": "Self-serve candidate management tooling for Byteboard clients",
     "logo": "/images/organizations/byteboard.png",
     "url": "https://byteboard.dev",
@@ -652,7 +652,7 @@
   },
   {
     "title": "Byteboard Pre-Interview Comms & Interview Hub",
-    "slug": "byteboard-interview-hub",
+    "slug": "pre-interview-comms-interview-hub-revamp",
     "tagline": "Redesigned candidate pre-interview experience to increase motivation and completion rates",
     "logo": "/images/organizations/byteboard.png",
     "url": "https://mailchi.mp/byteboard/byteboard-product-newsletter-q4-2022",
@@ -676,7 +676,7 @@
   },
   {
     "title": "Byteboard Zero State Dashboard",
-    "slug": "byteboard-zero-state-dashboard",
+    "slug": "zero-state-dashboard",
     "tagline": "New-client dashboard experience to reduce churn at Byteboard",
     "logo": "/images/organizations/byteboard.png",
     "url": "https://byteboard.dev",
@@ -995,7 +995,7 @@
   },
   {
     "title": "Pacific Shores Shuttle",
-    "slug": "pacific-shores-shuttle",
+    "slug": "pacific-shores-shuttle-app",
     "tagline": "If you work at Pacific Shores, you can figure out when the next shuttle is coming! 🚌",
     "logo": "",
     "url": "https://pacificshoresshuttle.com/",
@@ -1619,7 +1619,7 @@
   },
   {
     "title": "Fullstack Academy",
-    "slug": "fullstack-academy",
+    "slug": "fullstack-academy-3",
     "tagline": "1506 | Summer of Code 🌞",
     "logo": "",
     "url": "http://fullstackacademy.com/summer-of-code",

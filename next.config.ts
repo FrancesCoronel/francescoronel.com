@@ -82,13 +82,23 @@ const nextConfig: NextConfig = {
       { source: "/blog/:slug", destination: "/posts/:slug", permanent: true },
       { source: "/projects/:slug", destination: "/posts/:slug", permanent: true },
 
-      // ── Newsletter → Blog ─────────────────────────────────
-      { source: "/newsletter", destination: "/blog", permanent: true },
+      // ── Deduped project slug redirects ────────────────────
+      { source: "/posts/byteboard-candidate-actions", destination: "/posts/client-platform-candidate-actions", permanent: true },
+      { source: "/posts/byteboard-interview-hub", destination: "/posts/pre-interview-comms-interview-hub-revamp", permanent: true },
+      { source: "/posts/byteboard-skills-report-redesign", destination: "/posts/skills-report-redesign", permanent: true },
+      { source: "/posts/byteboard-zero-state-dashboard", destination: "/posts/zero-state-dashboard", permanent: true },
+      { source: "/posts/fullstack-academy", destination: "/posts/fullstack-academy-3", permanent: true },
+      { source: "/posts/pacific-shores-shuttle", destination: "/posts/pacific-shores-shuttle-app", permanent: true },
+
+      // ── /blog and /newsletter → /posts ────────────────────
+      { source: "/blog", destination: "/posts", permanent: true },
+      { source: "/newsletter", destination: "/posts", permanent: true },
 
       // ── Index routes that redirect to about page sections ─────
       { source: "/experience", destination: "/about#experience", permanent: true },
       { source: "/education", destination: "/about#education", permanent: true },
       { source: "/awards", destination: "/about#awards", permanent: true },
+      { source: "/awards/:slug", destination: "/about#awards", permanent: true },
       // ── Webflow CMS template URL patterns ─────────────────
       {
         source: "/detail_blog/:slug",

@@ -5,6 +5,7 @@ import type { ComponentType } from "react";
 const Tweet = ReactTweet as ComponentType<{ id: string }>;
 import { resolveImageUrl } from "@/lib/cloudinary";
 import { canOptimize } from "@/lib/utils";
+import { ZoomableImage } from "@/components/ui/zoomable-image";
 import type { MDXComponents } from "mdx/types";
 
 function extractTweetId(url: string): string | null {
@@ -29,26 +30,30 @@ function MdxImage({
   // Use next/image only for hosts we've configured
   if (canOptimize(normalized)) {
     return (
-      <Image
-        src={normalized}
-        alt={alt || ""}
-        width={800}
-        height={450}
-        className="my-6 rounded-lg"
-        {...(props as Record<string, unknown>)}
-      />
+      <ZoomableImage src={normalized} alt={alt || ""} className="my-6 block">
+        <Image
+          src={normalized}
+          alt={alt || ""}
+          width={800}
+          height={450}
+          className="rounded-lg"
+          {...(props as Record<string, unknown>)}
+        />
+      </ZoomableImage>
     );
   }
 
   // Regular img tag for everything else (external hosts, local paths, etc.)
   /* eslint-disable @next/next/no-img-element */
   return (
-    <img
-      src={normalized}
-      alt={alt || ""}
-      className="my-6 max-w-full rounded-lg"
-      loading="lazy"
-    />
+    <ZoomableImage src={normalized} alt={alt || ""} className="my-6 block">
+      <img
+        src={normalized}
+        alt={alt || ""}
+        className="max-w-full rounded-lg"
+        loading="lazy"
+      />
+    </ZoomableImage>
   );
 }
 
@@ -115,9 +120,31 @@ function Callout({
   );
 }
 
+function MdxParagraph({
+  children,
+  ...props
+}: React.HTMLAttributes<HTMLElement>) {
+  // If the paragraph contains only a tweet embed, render a div to avoid
+  // invalid <div> inside <p> hydration errors (react-tweet renders divs)
+  const child =
+    Array.isArray(children) && children.length === 1 ? children[0] : children;
+  if (
+    child &&
+    typeof child === "object" &&
+    "props" in child &&
+    typeof child.props?.className === "string" &&
+    child.props.className.includes("not-prose") &&
+    child.props.className.includes("justify-center")
+  ) {
+    return <div {...props}>{children}</div>;
+  }
+  return <p {...props}>{children}</p>;
+}
+
 export const mdxComponents: MDXComponents = {
   img: MdxImage,
   a: MdxLink,
+  p: MdxParagraph,
   Callout,
   Image: MdxImage,
   Tweet,

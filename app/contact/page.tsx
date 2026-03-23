@@ -25,8 +25,8 @@ export default function ContactPage() {
   const testimonialsCount = roundDown(getTestimonials().length);
 
   const stats = [
-    { stat: `${mentoringSessionCount}+`, label: "Mentoring sessions", sublabel: "logged on ADPList & Calendly", icon: "💬", href: "/mentoring" },
-    { stat: `${roundDown(allPosts.length)}+`, label: "Blog posts", sublabel: "published since 2014", icon: "✍🏽", href: "/blog" },
+    { stat: `${mentoringSessionCount}+`, label: "Mentoring sessions", sublabel: "logged on Cal.com & Calendly", icon: "💬", href: "/mentoring" },
+    { stat: `${roundDown(allPosts.length)}+`, label: "Blog posts", sublabel: "published since 2014", icon: "✍🏽", href: "/posts" },
     { stat: `${speakingCount}+`, label: "Speaking events", sublabel: "at conferences since 2015", icon: "🎤", href: "/speaking" },
     { stat: `${YEARS_OF_EXPERIENCE}+`, label: "Years of experience", sublabel: "full-time in industry", icon: "💼", href: "/about#experience" },
     { stat: `${awardsCount}+`, label: "Awards & recognition", sublabel: "from organizations & publications", icon: "🏆", href: "/awards" },
