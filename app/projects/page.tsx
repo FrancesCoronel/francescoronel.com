@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { getProjects } from "@/lib/content";
+import { getProjects, getBlogPostsByCategory, getCategoryMaps } from "@/lib/content";
 import { buildMetadata } from "@/lib/metadata";
 import { PageHeader } from "@/components/ui/page-header";
 import { ConnectCTA } from "@/components/sections/connect-cta";
 import { getMultipleRepoStars } from "@/lib/github";
 import { ProjectsGridClient } from "@/components/ui/projects-grid-client";
+import { PostsListClient } from "@/components/ui/posts-list-client";
 
 export const metadata: Metadata = buildMetadata({
   title: "Projects",
@@ -23,6 +24,16 @@ export default async function ProjectsPage({
 }) {
   const { skill } = await searchParams;
   const projects = getProjects();
+  const portfolioPosts = getBlogPostsByCategory("portfolio").map((p) => ({
+    slug: p.slug,
+    title: p.title,
+    excerpt: p.excerpt,
+    date: p.date,
+    readingTime: p.readingTime,
+    featuredImage: p.featuredImage,
+    categories: p.categories,
+  }));
+  const { categoryImages } = getCategoryMaps();
 
   const reposToFetch = Object.fromEntries(
     projects.filter((p) => p.github).map((p) => [p.slug, p.github as string])
@@ -81,6 +92,22 @@ export default async function ProjectsPage({
         featuredSlugs={FEATURED_SLUGS}
         initialSkill={skill}
       />
+
+      {/* Portfolio posts */}
+      <section className="py-16 md:py-20">
+        <div className="mx-auto max-w-[var(--container-max)] px-6">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+            Writing & Case Studies
+          </p>
+          <h2 className="mt-1 mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+            Portfolio Posts 📝
+          </h2>
+          <p className="mb-6 text-sm text-navy-500 dark:text-horchata-400">
+            {portfolioPosts.length} item{portfolioPosts.length !== 1 ? "s" : ""}
+          </p>
+          <PostsListClient posts={portfolioPosts} categoryImages={categoryImages} hideSearch />
+        </div>
+      </section>
 
       <ConnectCTA variant="projects" />
     </>
