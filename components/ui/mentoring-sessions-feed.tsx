@@ -10,11 +10,11 @@ interface Session {
   name: string;
   type: string;
   eventTypeName: string;
-  topic: string | null;
+  topic?: string | null;
   source?: string;
 }
 
-const { _meta, sessions: historicalSessions } = mentoringData as {
+const { _meta, sessions: historicalSessions } = mentoringData as unknown as {
   _meta: {
     totalSessions: number;
     byYear: Record<string, number>;
