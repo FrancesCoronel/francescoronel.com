@@ -52,6 +52,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cabin.variable} ${latina.variable}`} suppressHydrationWarning>
+      <head>
+        {/* IndieWeb rel="me" for IndieLogin identity verification */}
+        <link rel="me" href="https://github.com/FrancesCoronel" />
+        <link rel="me" href="https://bsky.app/profile/francescoronel.bsky.social" />
+      </head>
       <body className="flex min-h-screen flex-col antialiased">
         <ThemeProvider>
           <PersonJsonLd />

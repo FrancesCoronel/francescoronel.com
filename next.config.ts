@@ -18,13 +18,13 @@ const securityHeaders = [
     value: [
       "default-src 'self'",
       // Next.js requires unsafe-inline for hydration scripts; unsafe-eval for dev HMR
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://app.cal.com https://va.vercel-scripts.com",
       "style-src 'self' 'unsafe-inline'",
       // Images come from many external CDNs across 665 blog posts
       "img-src 'self' data: https:",
       "font-src 'self'",
       // API calls: Vercel Analytics/Speed Insights, GA4, Buttondown newsletter
-      "connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://www.google-analytics.com https://region1.google-analytics.com https://api.buttondown.email",
+      "connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://www.google-analytics.com https://region1.google-analytics.com https://api.buttondown.email https://formspree.io",
       // Cal.com booking embed
       "frame-src https://cal.com",
       "object-src 'none'",

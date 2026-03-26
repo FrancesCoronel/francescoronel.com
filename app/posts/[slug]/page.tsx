@@ -600,27 +600,26 @@ export default async function PostPage({ params }: PageProps) {
         <div className="mt-10">
           <Link
             href="/about"
-            className="group flex items-center gap-6 rounded-2xl border-2 border-horchata-300 bg-horchata-50 p-6 transition-all hover:border-horchata-400 hover:shadow-md dark:border-navy-600 dark:bg-navy-800 dark:hover:border-horchata-500"
+            className="group flex flex-col gap-4 rounded-2xl border-2 border-horchata-300 bg-horchata-50 p-6 transition-all hover:border-horchata-400 hover:shadow-md dark:border-navy-600 dark:bg-navy-800 dark:hover:border-horchata-500 sm:flex-row sm:items-center sm:gap-6"
           >
             <Image
               src="/images/assets/frances-slack.jpg"
               alt="Frances Coronel"
-              width={80}
-              height={80}
-              className="h-20 w-20 flex-shrink-0 rounded-full object-cover ring-2 ring-horchata-400"
+              width={64}
+              height={64}
+              className="h-16 w-16 flex-shrink-0 rounded-full object-cover ring-2 ring-horchata-400"
             />
             <div className="min-w-0 flex-1">
               <p className="text-xs font-bold uppercase tracking-wider text-horchata-600 dark:text-horchata-400">
                 Written by
               </p>
-              <p className="mt-1 text-xl font-bold text-navy-900 dark:text-white">Frances Coronel</p>
+              <p className="mt-1 text-base font-bold text-navy-900 dark:text-white">Frances Coronel</p>
               <p className="mt-1 text-sm text-navy-600 dark:text-white/60">
-                Senior Software Engineer at Slack with 8+ years of experience in frontend engineering
-                and AI adoption. Speaker, mentor, and proud Peruvian-American. 👩🏽‍💻
+                Senior Software Engineer at Slack. Speaker, mentor, and proud Peruvian-American. 👩🏽‍💻
               </p>
             </div>
             <svg
-              className="h-5 w-5 flex-shrink-0 text-white/30 transition-transform group-hover:translate-x-1 group-hover:text-horchata-400"
+              className="hidden h-5 w-5 flex-shrink-0 text-navy-300 transition-transform group-hover:translate-x-1 group-hover:text-horchata-400 dark:text-navy-600 sm:block"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

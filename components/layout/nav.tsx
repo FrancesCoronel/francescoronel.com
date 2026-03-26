@@ -36,7 +36,7 @@ export function Nav() {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden items-center gap-1 md:flex">
+        <div className="hidden items-center gap-1 lg:flex">
           <ul className="flex items-center gap-1">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
@@ -73,7 +73,7 @@ export function Nav() {
         {/* Mobile hamburger */}
         <button
           type="button"
-          className="md:hidden"
+          className="lg:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
           aria-expanded={mobileOpen}
@@ -104,7 +104,7 @@ export function Nav() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="border-t border-horchata-200 bg-horchata-50 px-6 py-4 dark:border-navy-700 dark:bg-navy-900 md:hidden">
+        <div className="border-t border-horchata-200 bg-horchata-50 px-6 py-4 dark:border-navy-700 dark:bg-navy-900 lg:hidden">
           <ul className="flex flex-col gap-1">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;

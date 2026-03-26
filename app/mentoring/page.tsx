@@ -31,6 +31,7 @@ const pricingTiers = [
     description: "Deep dive on career strategy, interview prep, or portfolio review",
     href: "https://cal.com/francescoronel/mentoring-hour",
     cta: "Book a call",
+    featured: false,
   },
   {
     price: "$200",
@@ -39,6 +40,7 @@ const pricingTiers = [
     description: "Three 1-hour sessions ($10 savings)",
     href: "https://buy.stripe.com/9AQeYVdyk7dn65i9AK",
     cta: "Purchase package",
+    featured: false,
   },
   {
     price: "$400",
@@ -47,6 +49,7 @@ const pricingTiers = [
     description: "Six 1-hour sessions ($20 savings)",
     href: "https://buy.stripe.com/3csg2ZeCobtD3Xa9AL",
     cta: "Purchase package",
+    featured: false,
   },
 ];
 
@@ -152,8 +155,9 @@ export default function MentoringPage() {
           <h2 className="mt-1 text-center text-2xl font-bold text-navy-900 dark:text-horchata-100">
             Pricing 💸
           </h2>
+
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {pricingTiers.map((tier, i) => (
+            {pricingTiers.map((tier) => (
               <a
                 key={tier.label}
                 href={tier.href}
@@ -175,7 +179,7 @@ export default function MentoringPage() {
                     <span className="text-3xl font-bold text-navy-900 dark:text-horchata-100">
                       {tier.price}
                     </span>
-                    {tier.original && (
+                    {"original" in tier && tier.original && (
                       <span className="text-sm text-navy-400 line-through dark:text-horchata-500">
                         {tier.original}
                       </span>
@@ -189,19 +193,6 @@ export default function MentoringPage() {
                   {tier.description}
                 </p>
                 <svg className="mt-4 h-5 w-5 self-end text-horchata-400 transition-colors group-hover:text-navy-900 dark:text-navy-500 dark:group-hover:text-horchata-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-                {/* Memoji accent on the last card */}
-                {i === pricingTiers.length - 1 && (
-                  <div className="pointer-events-none absolute -right-4 -top-4 hidden lg:block">
-                    <Image
-                      src="/images/assets/frances-memoji-nice-job.png"
-                      alt=""
-                      width={100}
-                      height={100}
-                      className="h-[80px] w-[80px] object-contain drop-shadow-md"
-                      aria-hidden="true"
-                    />
-                  </div>
-                )}
               </a>
             ))}
           </div>
@@ -249,7 +240,7 @@ export default function MentoringPage() {
             {helpTopics.map((topic) => (
               <div
                 key={topic.text}
-                className="flex items-start gap-3 rounded-xl border border-horchata-200 bg-white p-4 dark:border-navy-700 dark:bg-navy-800"
+                className="flex items-center gap-3 rounded-xl border border-horchata-200 bg-white p-4 dark:border-navy-700 dark:bg-navy-800"
               >
                 <span className="text-xl leading-none">{topic.emoji}</span>
                 <p className="text-sm text-navy-700 dark:text-horchata-200">{topic.text}</p>

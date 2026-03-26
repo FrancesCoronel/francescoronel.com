@@ -36,6 +36,7 @@ function MdxImage({
           alt={alt || ""}
           width={800}
           height={450}
+          sizes="(max-width: 768px) 100vw, 800px"
           className="rounded-lg"
           {...(props as Record<string, unknown>)}
         />

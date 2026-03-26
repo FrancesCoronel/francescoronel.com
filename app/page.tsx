@@ -235,12 +235,12 @@ export default async function HomePage() {
                       )}
                     </div>
                     <div className="relative z-10 flex min-w-0 flex-1 flex-col">
-                      <div className="flex items-center gap-2">
-                        <h3 className="text-base font-semibold tracking-tight text-navy-800 dark:text-horchata-100">
+                      <div className="flex min-w-0 items-center gap-2">
+                        <h3 className="truncate text-base font-semibold tracking-tight text-navy-800 dark:text-horchata-100">
                           {project.title}
                         </h3>
                         {project.status === "active" && (
-                          <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">
+                          <span className="shrink-0 rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">
                             Active
                           </span>
                         )}

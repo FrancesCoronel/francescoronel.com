@@ -20,7 +20,7 @@ export function Hero() {
         <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12 lg:gap-16">
           {/* Text content */}
           <div className="flex-1 text-center md:text-left">
-            <h1 className="text-5xl font-black leading-[1.1] tracking-tight text-navy-900 dark:text-horchata-100 md:text-6xl lg:text-7xl">
+            <h1 className="text-2xl font-black leading-[1.1] tracking-tight text-navy-900 dark:text-horchata-100 sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl">
               Hi, I&apos;m Frances! 👋🏽
             </h1>
 
@@ -29,7 +29,7 @@ export function Hero() {
               {descriptors.map((d) => (
                 <p
                   key={d.text}
-                  className="text-base text-navy-600 dark:text-white/70 md:text-lg"
+                  className="text-sm text-navy-600 dark:text-white/70 md:text-base lg:text-lg"
                 >
                   {d.text}{" "}
                   <span className="inline-block" aria-hidden="true">
@@ -42,7 +42,7 @@ export function Hero() {
 
           {/* Circular profile photo + Memoji overlay */}
           <div className="relative flex-shrink-0">
-            <div className="relative h-56 w-56 sm:h-72 sm:w-72 md:h-96 md:w-96 lg:h-[28rem] lg:w-[28rem]">
+            <div className="relative h-56 w-56 sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-96 lg:w-96 xl:h-[28rem] xl:w-[28rem]">
               <Image
                 src="/images/assets/frances-slack.jpg"
                 alt="Frances Coronel"

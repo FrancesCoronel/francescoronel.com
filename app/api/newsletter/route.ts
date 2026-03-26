@@ -58,12 +58,13 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: true });
   }
 
-  // 409 = already subscribed — treat as success
-  if (res.status === 409) {
+  const data = await res.json().catch(() => ({}));
+
+  // 409 or a 400 with "already subscribed" in the detail — treat as success
+  if (res.status === 409 || (res.status === 400 && typeof data?.detail === "string" && data.detail.toLowerCase().includes("already subscribed"))) {
     return NextResponse.json({ success: true, alreadySubscribed: true });
   }
 
-  const data = await res.json().catch(() => ({}));
   return NextResponse.json(
     { error: data?.detail || "Failed to subscribe" },
     { status: res.status }

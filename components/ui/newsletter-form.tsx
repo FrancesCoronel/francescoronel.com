@@ -52,7 +52,7 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
             <p className="text-sm text-horchata-400">{message}</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex gap-3">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
             <label htmlFor="newsletter-email-dark" className="sr-only">Email address</label>
             <input
               id="newsletter-email-dark"
@@ -69,7 +69,7 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="flex-shrink-0 rounded-xl bg-horchata-500 px-6 py-3 text-sm font-semibold text-navy-900 transition-colors hover:bg-horchata-400 disabled:opacity-60"
+              className="w-full flex-shrink-0 rounded-xl bg-horchata-500 px-6 py-3 text-sm font-semibold text-navy-900 transition-colors hover:bg-horchata-400 disabled:opacity-60 sm:w-auto"
             >
               {status === "loading" ? "Subscribing…" : "Subscribe"}
             </button>
