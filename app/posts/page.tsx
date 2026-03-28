@@ -9,7 +9,7 @@ import { NewsletterCTA } from "@/components/sections/newsletter-cta";
 export const metadata: Metadata = buildMetadata({
   title: "Posts",
   description:
-    "Blog posts, project write-ups, and case studies by Frances Coronel — software engineering, tech career, AI, and more.",
+    "Blog posts, project write-ups, and case studies by Frances Coronel covering software engineering, tech careers, AI, and more.",
   path: "/posts",
   ogImage: "/images/og/blog.jpg",
 });

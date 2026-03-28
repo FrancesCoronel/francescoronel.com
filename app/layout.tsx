@@ -42,6 +42,8 @@ export const metadata: Metadata = {
   },
   other: {
     "llms.txt": "https://francescoronel.com/llms.txt",
+    // Add your Bing Webmaster Tools verification key here once obtained from https://www.bing.com/webmasters
+    // "msvalidate.01": "YOUR_BING_KEY",
   },
 };
 

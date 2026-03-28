@@ -50,6 +50,11 @@ export function PersonJsonLd() {
       `https://linkedin.com/in/${siteConfig.social.linkedin}`,
       `https://twitter.com/${siteConfig.social.twitter.replace("@", "")}`,
       "https://youtube.com/@fvcproductions",
+      "https://bsky.app/profile/francescoronel.bsky.social",
+      "https://reddit.com/user/fvcproductions",
+      "https://www.producthunt.com/@francescoronel",
+      "https://discord.com/users/151169028696571904",
+      "https://indieweb.org/User:Www.francescoronel.com",
     ],
   };
 

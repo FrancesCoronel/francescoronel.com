@@ -8,7 +8,7 @@ import { PageHeader } from "@/components/ui/page-header";
 export const metadata: Metadata = buildMetadata({
   title: "Now",
   description:
-    "What Frances Coronel is focused on right now — current projects, learning, and life.",
+    "What Frances Coronel is focused on right now: current projects, learning, and life.",
   path: "/now",
 });
 
