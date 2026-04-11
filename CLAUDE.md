@@ -154,12 +154,12 @@ All new images must be uploaded to Vercel Blob storage before use. Never referen
 
 **Upload a new image:**
 ```bash
-BLOB_READ_WRITE_TOKEN="..." node -e "
+node --env-file=.env.local -e "
 const { put } = require('@vercel/blob');
 const fs = require('fs');
 async function main() {
   const buf = fs.readFileSync('/path/to/image.png');
-  const blob = await put('folder/filename.png', buf, { access: 'public', contentType: 'image/png' });
+  const blob = await put('folder/filename.png', buf, { access: 'public', contentType: 'image/png', token: process.env.IMAGES_BLOB_READ_WRITE_TOKEN });
   console.log(blob.url);
 }
 main();
