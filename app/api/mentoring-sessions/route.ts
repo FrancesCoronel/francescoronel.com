@@ -15,8 +15,8 @@ interface CalPayment {
 interface CalBooking {
   id: number;
   title: string;
-  startTime: string;
-  endTime: string;
+  start: string;
+  end: string;
   status: string;
   eventTypeId?: number;
   attendees?: Array<{ name: string; email: string }>;
@@ -51,8 +51,14 @@ export async function GET() {
 
   try {
     const res = await fetch(
-      `https://api.cal.com/v1/bookings?apiKey=${apiKey}&take=100&status=ACCEPTED`,
-      { next: { revalidate: 300 } }
+      `https://api.cal.com/v2/bookings?status=accepted&take=100`,
+      {
+        headers: {
+          "Authorization": `Bearer ${apiKey}`,
+          "cal-api-version": "2024-08-13",
+        },
+        next: { revalidate: 300 },
+      }
     );
 
     if (!res.ok) {
@@ -60,13 +66,13 @@ export async function GET() {
     }
 
     const data = await res.json();
-    const bookings: CalBooking[] = data.bookings ?? [];
+    const bookings: CalBooking[] = data.data ?? [];
 
     const sessions = bookings
       .filter(
         (b) =>
-          b.status === "ACCEPTED" &&
-          b.startTime &&
+          b.status === "accepted" &&
+          b.start &&
           (!b.eventTypeId || MENTORING_EVENT_TYPE_IDS.has(b.eventTypeId))
       )
       .map((b) => {
@@ -97,12 +103,12 @@ export async function GET() {
         const cost = successfulPayment ? successfulPayment.amount / 100 : undefined;
 
         // Calculate duration from start/end times
-        const durationMinutes = b.startTime && b.endTime
-          ? Math.round((new Date(b.endTime).getTime() - new Date(b.startTime).getTime()) / 60000)
+        const durationMinutes = b.start && b.end
+          ? Math.round((new Date(b.end).getTime() - new Date(b.start).getTime()) / 60000)
           : undefined;
 
         return {
-          date: b.startTime.split("T")[0],
+          date: b.start.split("T")[0],
           name: obfuscateName(attendeeName),
           type: categorizeTitle(b.title),
           eventTypeName: b.title,
