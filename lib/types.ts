@@ -132,6 +132,7 @@ export interface Project {
   highlights: string[];
   skills: string[];
   logo: string;
+  featuredImage?: string;
   emoji?: string;
   url: string;
   startDate: string;
