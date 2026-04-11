@@ -216,6 +216,22 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      // ── Category consolidation redirects ──────────────────
+      // mentoring had 0 posts as a category (exists only as a tag)
+      { source: "/categories/mentoring", destination: "/categories", permanent: true },
+      // newsletter folded into blog
+      { source: "/categories/newsletter", destination: "/categories/blog", permanent: true },
+      // programs + philanthropy merged into community
+      { source: "/categories/programs", destination: "/categories/community", permanent: true },
+      { source: "/categories/philanthropy", destination: "/categories/community", permanent: true },
+
+      // ── Tag consolidation redirects ────────────────────────
+      // canonical: latinx-in-tech
+      { source: "/tags/latina-in-tech", destination: "/tags/latinx-in-tech", permanent: true },
+      // webflow hash-slug duplicates
+      { source: "/tags/mentoring-087f7", destination: "/tags/mentoring", permanent: true },
+      { source: "/tags/design-systems-c4aed", destination: "/tags/design-systems", permanent: true },
+
       // ── WordPress upload/admin paths ──────────────────────
       // Old WordPress file paths — redirect to home so they don't 404 and bleed crawl budget
       {

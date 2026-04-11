@@ -16,60 +16,12 @@
     "slug": "web-design"
   },
   {
-    "name": "Teaching",
-    "slug": "teaching"
-  },
-  {
-    "name": "Real Estate Management",
-    "slug": "real-estate-management"
-  },
-  {
     "name": "React",
     "slug": "react"
   },
   {
-    "name": "Mentoring",
-    "slug": "mentoring-087f7"
-  },
-  {
-    "name": "HTML",
-    "slug": "html"
-  },
-  {
-    "name": "JavaScript",
-    "slug": "javascript"
-  },
-  {
     "name": "Interviewing",
     "slug": "interviewing"
-  },
-  {
-    "name": "Hack",
-    "slug": "hack"
-  },
-  {
-    "name": "CSS",
-    "slug": "css"
-  },
-  {
-    "name": "Branding",
-    "slug": "branding"
-  },
-  {
-    "name": "Design Systems",
-    "slug": "design-systems-c4aed"
-  },
-  {
-    "name": "Chrome Dev Tools",
-    "slug": "chrome-dev-tools"
-  },
-  {
-    "name": "Engineering Management",
-    "slug": "engineering-management"
-  },
-  {
-    "name": "Angular",
-    "slug": "angular"
   },
   {
     "name": "AI Agents",
@@ -100,7 +52,7 @@
     "slug": "diversity-and-inclusion"
   },
   {
-    "name": "Latinx in Tech ",
+    "name": "Latinx in Tech",
     "slug": "latinx-in-tech"
   },
   {
@@ -124,14 +76,6 @@
     "slug": "mentoring"
   },
   {
-    "name": "Technical Interview",
-    "slug": "technical-interview"
-  },
-  {
-    "name": "Webinars",
-    "slug": "webinars"
-  },
-  {
     "name": "Talks",
     "slug": "talks"
   },
@@ -144,96 +88,28 @@
     "slug": "scholarships"
   },
   {
-    "name": "Remote Work",
-    "slug": "remote-work"
-  },
-  {
     "name": "Podcast",
     "slug": "podcast"
-  },
-  {
-    "name": "Nonprofit",
-    "slug": "nonprofit"
   },
   {
     "name": "Mobile",
     "slug": "mobile"
   },
   {
-    "name": "LinkedIn Audio",
-    "slug": "linkedin-audio"
-  },
-  {
-    "name": "Lead Generation",
-    "slug": "lead-generation"
-  },
-  {
-    "name": "Layoffs",
-    "slug": "layoffs"
-  },
-  {
-    "name": "Latinx Heritage Month",
-    "slug": "latinx-heritage-month"
-  },
-  {
-    "name": "Judge",
-    "slug": "judge"
-  },
-  {
-    "name": "Latinas",
-    "slug": "latinas"
-  },
-  {
-    "name": "Latina in Tech",
-    "slug": "latina-in-tech"
-  },
-  {
     "name": "Job Board",
     "slug": "job-board"
-  },
-  {
-    "name": "Hispanic Heritage Month",
-    "slug": "hispanic-heritage-month"
   },
   {
     "name": "Hackathon",
     "slug": "hackathon"
   },
   {
-    "name": "Forms",
-    "slug": "forms"
-  },
-  {
-    "name": "First Generation",
-    "slug": "first-generation"
-  },
-  {
-    "name": "Fellowship",
-    "slug": "fellowship"
-  },
-  {
-    "name": "Executive Coaching",
-    "slug": "executive-coaching"
-  },
-  {
-    "name": "Enterprise",
-    "slug": "enterprise"
-  },
-  {
     "name": "Employee Resource Group",
     "slug": "employee-resource-group"
   },
   {
-    "name": "Elementary School",
-    "slug": "elementary-school"
-  },
-  {
     "name": "Design Systems",
     "slug": "design-systems"
-  },
-  {
-    "name": "Day in the Life",
-    "slug": "day-in-the-life"
   },
   {
     "name": "Customer Acquisition",
@@ -242,14 +118,6 @@
   {
     "name": "Conference",
     "slug": "conference"
-  },
-  {
-    "name": "Components",
-    "slug": "components"
-  },
-  {
-    "name": "Company Retreat",
-    "slug": "company-retreat"
   },
   {
     "name": "Community",
