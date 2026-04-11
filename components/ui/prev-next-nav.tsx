@@ -32,7 +32,7 @@ export function PrevNextNav({ prev, next, basePath, allLabel }: PrevNextNavProps
             <div className="py-6 pr-0 sm:pr-8">
               {prev && (
                 <Link
-                  href={`${basePath}/${prev.slug}`}
+                  href={`${basePath}/${encodeURIComponent(prev.slug)}`}
                   className="group flex flex-col gap-1"
                 >
                   <span className="text-xs font-bold uppercase tracking-widest text-navy-400 dark:text-white/40">
@@ -47,7 +47,7 @@ export function PrevNextNav({ prev, next, basePath, allLabel }: PrevNextNavProps
             <div className="py-6 pl-0 text-left sm:pl-8 sm:text-right">
               {next && (
                 <Link
-                  href={`${basePath}/${next.slug}`}
+                  href={`${basePath}/${encodeURIComponent(next.slug)}`}
                   className="group flex flex-col gap-1"
                 >
                   <span className="text-xs font-bold uppercase tracking-widest text-navy-400 dark:text-white/40">

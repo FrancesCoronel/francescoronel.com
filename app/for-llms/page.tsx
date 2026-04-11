@@ -132,7 +132,7 @@ export default function ForLlmsPage() {
         <ul>
           {recentPosts.map((post) => (
             <li key={post.slug}>
-              <a href={`${siteConfig.siteUrl}/posts/${post.slug}`}>
+              <a href={`${siteConfig.siteUrl}/posts/${encodeURIComponent(post.slug)}`}>
                 {post.title}
               </a>{" "}
               ({post.date})

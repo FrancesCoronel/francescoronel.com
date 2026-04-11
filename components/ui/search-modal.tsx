@@ -227,7 +227,9 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
                         <p
                           className="mt-1 line-clamp-2 text-xs text-navy-500 dark:text-horchata-400"
                           dangerouslySetInnerHTML={{
-                            __html: r.excerpt.replace(/<(?!\/?mark\b)[^>]*>/gi, ""),
+                            __html: r.excerpt
+                              .replace(/<mark[^>]*>/gi, "<mark>")
+                              .replace(/<(?!\/?mark>)[^>]*>/gi, ""),
                           }}
                         />
                       </Link>

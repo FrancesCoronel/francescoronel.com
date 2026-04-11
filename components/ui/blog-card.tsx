@@ -15,7 +15,7 @@ export function BlogCard({ post, categoryImages, hideReadingTime, basePath = "/b
   return (
     <article className="group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-horchata-200 bg-white transition-shadow hover:shadow-lg dark:border-navy-700 dark:bg-navy-800">
       <Link
-        href={`${basePath}/${post.slug}`}
+        href={`${basePath}/${encodeURIComponent(post.slug)}`}
         className="absolute inset-0 z-10"
         aria-label={post.title}
       />
