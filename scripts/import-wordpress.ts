@@ -74,7 +74,7 @@ function htmlToMdx(html: string): string {
   // Headings
   mdx = mdx.replace(/<h([1-6])[^>]*>(.*?)<\/h\1>/gis, (_, level, content) => {
     return (
-      "\n" + "#".repeat(parseInt(level)) + " " + content.replace(/<[^>]+>/g, "") + "\n"
+      "\n" + "#".repeat(parseInt(level)) + " " + content.replace(/<[^>]*(>|$)/g, "") + "\n"
     );
   });
 
@@ -133,8 +133,7 @@ function htmlToMdx(html: string): string {
   // Strip remaining HTML
   mdx = mdx.replace(/<\/?[^>]+(>|$)/g, "");
 
-  // Decode entities
-  mdx = mdx.replace(/&amp;/g, "&");
+  // Decode entities — &amp; must be last to avoid double-unescaping
   mdx = mdx.replace(/&lt;/g, "<");
   mdx = mdx.replace(/&gt;/g, ">");
   mdx = mdx.replace(/&quot;/g, '"');
@@ -147,6 +146,7 @@ function htmlToMdx(html: string): string {
   mdx = mdx.replace(/&#8212;/g, "—");
   mdx = mdx.replace(/&#8230;/g, "...");
   mdx = mdx.replace(/&nbsp;/g, " ");
+  mdx = mdx.replace(/&amp;/g, "&");
 
   // Clean whitespace
   mdx = mdx.replace(/\n{3,}/g, "\n\n");
@@ -270,8 +270,9 @@ function main() {
         featuredImage = thumbnailMatch[1];
       }
 
-      const escapedTitle = title.replace(/"/g, '\\"');
+      const escapedTitle = title.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
       const escapedExcerpt = (excerpt || "")
+        .replace(/\\/g, "\\\\")
         .replace(/"/g, '\\"')
         .replace(/\n/g, " ")
         .slice(0, 200);

@@ -228,8 +228,14 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
                           className="mt-1 line-clamp-2 text-xs text-navy-500 dark:text-horchata-400"
                           dangerouslySetInnerHTML={{
                             __html: r.excerpt
-                              .replace(/<mark[^>]*>/gi, "<mark>")
-                              .replace(/<(?!\/?mark>)[^>]*>/gi, ""),
+                              // Preserve only <mark>/<\/mark> — swap them with placeholders,
+                              // strip ALL other HTML (including unclosed tags like <script),
+                              // then restore the safe placeholders.
+                              .replace(/<mark>/gi, "\x00MO\x00")
+                              .replace(/<\/mark>/gi, "\x00MC\x00")
+                              .replace(/<[^>]*(>|$)/gi, "")
+                              .replace(/\x00MO\x00/g, "<mark>")
+                              .replace(/\x00MC\x00/g, "</mark>"),
                           }}
                         />
                       </Link>

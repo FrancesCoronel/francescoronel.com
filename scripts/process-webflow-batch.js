@@ -70,13 +70,13 @@ function htmlToMdx(html) {
   // Strip remaining tags
   mdx = mdx.replace(/<\/?[^>]+(>|$)/g, '');
 
-  // Decode entities
-  mdx = mdx.replace(/&amp;/g, '&');
+  // Decode entities — &amp; must be last to avoid double-unescaping
   mdx = mdx.replace(/&lt;/g, '<');
   mdx = mdx.replace(/&gt;/g, '>');
   mdx = mdx.replace(/&quot;/g, '"');
   mdx = mdx.replace(/&#39;/g, "'");
   mdx = mdx.replace(/&nbsp;/g, ' ');
+  mdx = mdx.replace(/&amp;/g, '&');
 
   // Clean whitespace
   mdx = mdx.replace(/\n{3,}/g, '\n\n');
@@ -102,9 +102,9 @@ for (const post of items) {
   const slug = fd.slug || '';
   if (!slug) continue;
 
-  const title = (fd.name || '').replace(/"/g, '\\"');
+  const title = (fd.name || '').replace(/\\/g, '\\\\').replace(/"/g, '\\"');
   const date = fd.published || post.createdOn || '';
-  const excerpt = (fd['blog-post-excerpt'] || '').replace(/"/g, '\\"');
+  const excerpt = (fd['blog-post-excerpt'] || '').replace(/\\/g, '\\\\').replace(/"/g, '\\"');
   const featuredImage = fd['blog-post-featured-image-photo']?.url || '';
   const body = fd['blog-post-richt-text'] || '';
   const externalUrl = fd.url || '';

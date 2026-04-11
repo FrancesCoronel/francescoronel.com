@@ -150,10 +150,9 @@ for (const file of httpMdxFiles) {
   const filePath = join(CONTENT_DIR, file);
   let content = readFileSync(filePath, "utf-8");
 
-  if (content.includes("http://fvcproductions39789812.wordpress.com")) {
+  if (/\bhttp:\/\/fvcproductions39789812\.wordpress\.com\b/.test(content)) {
     for (const localFilename of copiedFiles) {
-      const httpUrl = `http://fvcproductions39789812.wordpress.com/wp-content/uploads`;
-      if (content.includes(httpUrl)) {
+      if (/\bhttp:\/\/fvcproductions39789812\.wordpress\.com\/wp-content\/uploads\b/.test(content)) {
         // Replace any remaining http:// variants
         content = content.replace(
           /http:\/\/fvcproductions39789812\.wordpress\.com\/wp-content\/uploads\/\d{4}\/\d{2}\/([^)\s"?]+)/g,

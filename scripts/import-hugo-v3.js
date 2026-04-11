@@ -164,9 +164,9 @@ for (const file of files) {
   const raw = fs.readFileSync(path.join(postsDir, file), "utf-8");
   const { data, body } = parseFrontmatter(raw);
 
-  const title = (data.title || slug).replace(/"/g, '\\"');
+  const title = (data.title || slug).replace(/\\/g, '\\\\').replace(/"/g, '\\"');
   const date = data.date || file.slice(0, 10);
-  const excerpt = ((data.description || "").toString()).replace(/"/g, '\\"').replace(/\n/g, " ").slice(0, 200);
+  const excerpt = ((data.description || "").toString()).replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\n/g, " ").slice(0, 200);
   const featuredImage = data.image || "";
   const categories = Array.isArray(data.categories) ? data.categories.map((c) => c.toLowerCase().replace(/\s+/g, "-")) : [];
   const tags = Array.isArray(data.tags) ? data.tags.map((t) => t.toLowerCase().replace(/\s+/g, "-")) : [];

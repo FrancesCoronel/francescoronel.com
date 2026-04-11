@@ -127,13 +127,13 @@ function htmlToMdx(html: string): string {
   // Strip remaining HTML tags
   mdx = mdx.replace(/<\/?[^>]+(>|$)/g, "");
 
-  // Decode HTML entities
-  mdx = mdx.replace(/&amp;/g, "&");
+  // Decode HTML entities — &amp; must be last to avoid double-unescaping
   mdx = mdx.replace(/&lt;/g, "<");
   mdx = mdx.replace(/&gt;/g, ">");
   mdx = mdx.replace(/&quot;/g, '"');
   mdx = mdx.replace(/&#39;/g, "'");
   mdx = mdx.replace(/&nbsp;/g, " ");
+  mdx = mdx.replace(/&amp;/g, "&");
 
   // Clean up extra whitespace
   mdx = mdx.replace(/\n{3,}/g, "\n\n");
@@ -197,9 +197,9 @@ async function main() {
     for (const post of posts) {
       const fd = post.fieldData as Record<string, unknown>;
       const slug = (fd.slug as string) || "";
-      const title = ((fd.name as string) || (fd.title as string) || "").replace(/"/g, '\\"');
+      const title = ((fd.name as string) || (fd.title as string) || "").replace(/\\/g, "\\\\").replace(/"/g, '\\"');
       const date = (fd["published-date"] as string) || (fd.date as string) || (post.createdOn as string) || "";
-      const excerpt = ((fd.excerpt as string) || (fd.summary as string) || "").replace(/"/g, '\\"');
+      const excerpt = ((fd.excerpt as string) || (fd.summary as string) || "").replace(/\\/g, "\\\\").replace(/"/g, '\\"');
       const featuredImage = (fd["featured-image"] as { url: string })?.url || (fd["main-image"] as { url: string })?.url || "";
       const body = (fd["post-body"] as string) || (fd.body as string) || (fd.content as string) || "";
 
