@@ -27,7 +27,7 @@ export async function generateMetadata({
   const edu = getEducationBySlug(slug);
   if (!edu) return {};
   return buildMetadata({
-    title: `${edu.degree} — ${edu.institution}`,
+    title: `${edu.degree} at ${edu.institution}`,
     description: edu.description,
     path: `/education/${slug}`,
     ogImage: edu.logo || undefined,

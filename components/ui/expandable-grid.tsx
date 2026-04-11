@@ -26,7 +26,7 @@ export function ExpandableGrid({
           onClick={() => setShowAll(true)}
           className="mt-6 cursor-pointer text-sm font-medium text-horchata-800 transition-colors hover:text-horchata-700 dark:text-horchata-400 dark:hover:text-horchata-200"
         >
-          Show {remaining} more &darr;
+          Show {remaining} more ↓
         </button>
       )}
     </>

@@ -8,7 +8,7 @@ import { ConnectCTA } from "@/components/sections/connect-cta";
 export const metadata: Metadata = buildMetadata({
   title: "Categories",
   description:
-    "Browse blog posts by category — tech, speaking, career, and more.",
+    "Browse blog posts by category: tech, speaking, career, and more.",
   path: "/categories",
 });
 

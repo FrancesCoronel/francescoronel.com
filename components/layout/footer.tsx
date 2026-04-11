@@ -157,7 +157,7 @@ export function Footer() {
               Subscribe to my newsletter
             </h3>
             <p className="mt-1 text-sm text-navy-500 dark:text-white/50">
-              Updates on talks, blog posts, and mentoring — no spam.
+              Updates on talks, blog posts, and mentoring. No spam.
             </p>
           </div>
           <div className="mt-4 lg:mt-0">

@@ -36,31 +36,13 @@
     "description": ""
   },
   {
-    "name": "Mentoring",
-    "slug": "mentoring",
+    "name": "Community",
+    "slug": "community",
     "color": "#0d6445",
     "fontColor": "#ffffff",
-    "emoji": "👏🏽",
-    "image": "/images/categories/mentoring.png",
-    "description": ""
-  },
-  {
-    "name": "Newsletter",
-    "slug": "newsletter",
-    "color": "#655269",
-    "fontColor": "#ffffff",
-    "emoji": "📮",
-    "image": "/images/categories/newsletter.png",
-    "description": ""
-  },
-  {
-    "name": "Philanthropy",
-    "slug": "philanthropy",
-    "color": "#442b48",
-    "fontColor": "#ffffff",
-    "emoji": "💛",
-    "image": "/images/categories/philanthropy.png",
-    "description": ""
+    "emoji": "🌱",
+    "image": "",
+    "description": "Philanthropy, programs, and community impact."
   },
   {
     "name": "Podcast",
@@ -87,15 +69,6 @@
     "fontColor": "#ffffff",
     "emoji": "📰",
     "image": "/images/categories/press.png",
-    "description": ""
-  },
-  {
-    "name": "Programs",
-    "slug": "programs",
-    "color": "#efb920",
-    "fontColor": "#202020",
-    "emoji": "🌱",
-    "image": "/images/categories/programs.png",
     "description": ""
   },
   {

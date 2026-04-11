@@ -37,17 +37,17 @@ This is **QUITE a tedious process** (if you ask me), but I’ll try to condense 
 - cd ~ && mkdir Code  We will need this folder later
 - Clone down **Laravel Homestead** and install it in a folder called Homestead usingcd ~ && git clone //GitHub.com/laravel/homestead.git Homestead
 - Initialize Homestead using cd Homestead && bash init.sh
-- While still in ~/Homestead folder, sudo nano /private/etc/hosts to edit the hosts file and add on [these two lines (refer below)](https://www.fvcproductions.com/2017/01/13/launch-a-todo-app-using-laravel-homestead/#hosts)
+- While still in ~/Homestead folder, sudo nano /private/etc/hosts to edit the hosts file and add on [these two lines (refer below)](/blog/launch-a-todo-app-using-laravel-homestead#hosts)
 - Create a key to authorize ssh using cd ~/Homestead && ssh-keygen -t rsa -b 4096
 - Hit **Enter** twice (you don’t have to enter a password)
 - Time to start up **Vagrant** using cd ~/Homestead && vagrant up and enter password when asked
-- Edit the Homestead.yaml file to configure locations of code using nano ~/.homestead/Homestead.yaml and make thefolder and sites sections [look like this (refer below)](https://www.fvcproductions.com/2017/01/13/launch-a-todo-app-using-laravel-homestead/#yaml-config)  ❗ Anytime you edit this Homestead.yaml file, you have to perform the next 3 steps in order for it to work, so let’s go ahead and do those now.
+- Edit the Homestead.yaml file to configure locations of code using nano ~/.homestead/Homestead.yaml and make thefolder and sites sections [look like this (refer below)](/blog/launch-a-todo-app-using-laravel-homestead#yaml-config)  ❗ Anytime you edit this Homestead.yaml file, you have to perform the next 3 steps in order for it to work, so let’s go ahead and do those now.
 - Stop vagrant temporarily by using vagrant halt
 - Reload yaml configurations by using vagrant reload --provision and enter password when asked
 - While still in ~/Homestead folder, use vagrant ssh to enter into your Vagrant setup
 - Enter into your Code folder you created earlier and then your ds-todos app using cd ~/Code/ds-todos
 - While you’re in your ds-todos folder, use composer install to install the necessary dependencies for the to-do app
-- You will also need to configure your environment for ds-todos by creating an .env file and [typing the following in (refer below)](https://www.fvcproductions.com/2017/01/13/launch-a-todo-app-using-laravel-homestead/#env) using touch .env && nano .env
+- You will also need to configure your environment for ds-todos by creating an .env file and [typing the following in (refer below)](/blog/launch-a-todo-app-using-laravel-homestead#env) using touch .env && nano .env
 - Use php artisan migrate to migrate the app data over
 - Then use php artisan db:seed to seed the database
 - Finally, use php artisan key:generate to generate an app key for security purposes

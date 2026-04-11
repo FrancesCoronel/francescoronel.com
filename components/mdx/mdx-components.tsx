@@ -29,6 +29,7 @@ function extractInstagramId(url: string): string | null {
   return match ? match[1] : null;
 }
 
+
 function normalizeUrl(url: string): string {
   if (url.startsWith("//")) return `https:${url}`;
   return url;
@@ -174,6 +175,30 @@ function MdxLink({
   );
 }
 
+function LinkedInEmbed({ shareId, url }: { shareId: string; url: string }) {
+  return (
+    <span className="not-prose my-6 flex flex-col items-center gap-2">
+      <iframe
+        src={`https://www.linkedin.com/embed/feed/update/urn:li:share:${shareId}`}
+        className="w-full max-w-lg rounded-xl"
+        height="399"
+        frameBorder={0}
+        allowFullScreen
+        title="Embedded LinkedIn post"
+        loading="lazy"
+      />
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-sm text-horchata-700 underline decoration-horchata-300 underline-offset-2 hover:text-horchata-900 dark:text-horchata-400 dark:hover:text-horchata-200"
+      >
+        View on LinkedIn →
+      </a>
+    </span>
+  );
+}
+
 function Callout({
   children,
   type = "info",
@@ -231,6 +256,7 @@ export const mdxComponents: MDXComponents = {
   Callout,
   Image: MdxImage,
   Tweet,
+  LinkedInEmbed,
   h1: ({ children, ...props }) => (
     <h1 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-navy-900 dark:text-horchata-100" {...props}>
       {children}

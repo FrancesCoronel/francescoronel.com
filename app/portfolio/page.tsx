@@ -11,7 +11,7 @@ import { resolveImageUrl } from "@/lib/cloudinary";
 export const metadata: Metadata = buildMetadata({
   title: "Portfolio",
   description:
-    "Projects, work, and things I've built — a curated portfolio from Frances Coronel.",
+    "Projects, work, and things I've built. A curated portfolio from Frances Coronel.",
   path: "/portfolio",
 });
 
@@ -29,6 +29,14 @@ const CATEGORY_COLORS: Record<string, string> = {
   "hackathon": "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-400",
   "work-project": "bg-horchata-100 text-horchata-700 dark:bg-navy-700 dark:text-horchata-300",
   "side-project": "bg-horchata-100 text-horchata-700 dark:bg-navy-700 dark:text-horchata-300",
+};
+
+const CATEGORY_HERO_BG: Record<string, string> = {
+  "open-source": "bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950/60 dark:to-green-900/40",
+  "podcast": "bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-950/60 dark:to-purple-900/40",
+  "hackathon": "bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950/60 dark:to-blue-900/40",
+  "work-project": "bg-gradient-to-br from-horchata-50 to-horchata-100 dark:from-navy-800 dark:to-navy-700",
+  "side-project": "bg-gradient-to-br from-horchata-50 to-horchata-100 dark:from-navy-800 dark:to-navy-700",
 };
 
 export default function PortfolioPage() {
@@ -87,25 +95,36 @@ export default function PortfolioPage() {
               <Link
                 key={project.slug}
                 href={`/posts/${project.slug}`}
-                className="group flex flex-col rounded-2xl border border-horchata-200 bg-white p-5 transition-shadow hover:shadow-lg dark:border-navy-700 dark:bg-navy-800"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-horchata-200 bg-white transition-shadow hover:shadow-lg dark:border-navy-700 dark:bg-navy-800"
               >
-                <div className="flex items-start justify-between gap-3">
-                  {project.logo ? (
+                {/* Featured image */}
+                <div
+                  className={`relative flex h-40 w-full items-center justify-center ${CATEGORY_HERO_BG[project.category] ?? CATEGORY_HERO_BG["side-project"]}`}
+                >
+                  {project.featuredImage ? (
+                    <Image
+                      src={resolveImageUrl(project.featuredImage)}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : project.logo ? (
                     <Image
                       src={resolveImageUrl(project.logo)}
                       alt={project.title}
-                      width={40}
-                      height={40}
-                      className="h-10 w-10 rounded-lg object-contain"
+                      width={96}
+                      height={96}
+                      className="h-20 w-20 object-contain drop-shadow-sm"
                     />
                   ) : (
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-horchata-100 text-xl dark:bg-navy-700">
-                      🛠️
-                    </div>
+                    <span className="text-5xl">{project.emoji ?? "🛠️"}</span>
                   )}
-                  <div className="flex flex-col items-end gap-1">
+                </div>
+                {/* Card content */}
+                <div className="flex flex-1 flex-col p-5">
+                  <div className="flex items-center gap-2">
                     <span
-                      className={`shrink-0 rounded-full px-2 py-0.5 text-[10px] font-medium ${CATEGORY_COLORS[project.category] ?? CATEGORY_COLORS["side-project"]}`}
+                      className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${CATEGORY_COLORS[project.category] ?? CATEGORY_COLORS["side-project"]}`}
                     >
                       {CATEGORY_LABELS[project.category] ?? project.category}
                     </span>
@@ -115,13 +134,13 @@ export default function PortfolioPage() {
                       </span>
                     )}
                   </div>
+                  <h3 className="mt-3 font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
+                    {project.title}
+                  </h3>
+                  <p className="mt-1 flex-1 line-clamp-2 text-sm text-navy-500 dark:text-white/60">
+                    {project.tagline}
+                  </p>
                 </div>
-                <h3 className="mt-3 font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
-                  {project.title}
-                </h3>
-                <p className="mt-1 flex-1 line-clamp-2 text-sm text-navy-500 dark:text-white/60">
-                  {project.tagline}
-                </p>
               </Link>
             ))}
           </div>
