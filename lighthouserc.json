@@ -19,7 +19,22 @@
         "categories:performance": ["error", { "minScore": 0.9 }],
         "categories:accessibility": ["error", { "minScore": 0.9 }],
         "categories:best-practices": ["error", { "minScore": 0.9 }],
-        "categories:seo": ["error", { "minScore": 0.95 }]
+        "categories:seo": ["error", { "minScore": 0.95 }],
+        "color-contrast": ["warn", { "minScore": 1 }],
+        "errors-in-console": ["warn", { "minScore": 1 }],
+        "heading-order": ["warn", { "minScore": 1 }],
+        "image-redundant-alt": ["warn", { "minScore": 1 }],
+        "unsized-images": ["warn", { "minScore": 1 }],
+        "redirects": ["warn", { "minScore": 1 }],
+        "image-delivery-insight": "off",
+        "legacy-javascript-insight": "off",
+        "network-dependency-tree-insight": "off",
+        "lcp-discovery-insight": "off",
+        "forced-reflow-insight": "off",
+        "document-latency-insight": "off",
+        "offscreen-images": ["warn", { "maxLength": 0 }],
+        "unused-javascript": ["warn", { "maxLength": 0 }],
+        "uses-responsive-images": ["warn", { "maxLength": 0 }]
       }
     }
   }

@@ -48,7 +48,7 @@ const categorySlugs = new Set(categories.map((c) => c.slug));
 const tagSlugs = new Set(tags.map((t) => t.slug));
 
 // Load blog post slugs
-const blogDir = path.join(contentDir, "blog");
+const blogDir = path.join(contentDir, "posts");
 const blogFiles = fs.readdirSync(blogDir).filter((f) => f.endsWith(".mdx"));
 const blogSlugs = new Set(blogFiles.map((f) => f.replace(".mdx", "")));
 
@@ -106,7 +106,7 @@ for (const f of blogFiles) {
     for (const org of orgList) {
       if (!orgSlugs.has(org)) {
         errors.push({
-          file: `content/blog/${f}`,
+          file: `content/posts/${f}`,
           type: "organization",
           ref: org,
           message: `Organization slug "${org}" not found in organizations.json`,
@@ -125,7 +125,7 @@ for (const f of blogFiles) {
     for (const cat of catList) {
       if (!categorySlugs.has(cat)) {
         errors.push({
-          file: `content/blog/${f}`,
+          file: `content/posts/${f}`,
           type: "category",
           ref: cat,
           message: `Category slug "${cat}" not found in categories.json`,
@@ -149,7 +149,7 @@ for (const f of blogFiles) {
     const href = raw.split("#")[0].split("?")[0]; // strip hash and query
     if (href && !validRoutes.has(href)) {
       errors.push({
-        file: `content/blog/${f}`,
+        file: `content/posts/${f}`,
         type: "internal-link",
         ref: href,
         message: `Internal link "${href}" does not match any known route`,
@@ -233,7 +233,7 @@ for (const f of blogFiles) {
   for (const domain of DEAD_IMAGE_DOMAINS) {
     if (imgUrl.includes(domain)) {
       errors.push({
-        file: `content/blog/${f}`,
+        file: `content/posts/${f}`,
         type: "featured-image",
         ref: imgUrl,
         message: `featuredImage points to ${domain} — migrate to Vercel Blob`,

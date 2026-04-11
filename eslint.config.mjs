@@ -15,8 +15,19 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Generated files:
+    "public/pagefind/**",
+    // Utility scripts (not part of the Next.js app):
+    "scripts/**",
   ]),
-  ...storybook.configs["flat/recommended"]
+  ...storybook.configs["flat/recommended"],
+  {
+    rules: {
+      // useEffect(() => setMounted(true), []) is an idiomatic React hydration
+      // guard pattern — not a cascading-render risk in this codebase.
+      "react-hooks/set-state-in-effect": "off",
+    },
+  },
 ]);
 
 export default eslintConfig;

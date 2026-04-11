@@ -141,7 +141,7 @@ export default function MentoringPage() {
           </p>
           <ul className="mt-2 space-y-1 text-sm text-navy-600 dark:text-white/70">
             <li>📝 Come with a specific goal or question in mind</li>
-            <li>⏰ Show up on time. We'll hit the ground running</li>
+            <li>⏰ Show up on time. We&rsquo;ll hit the ground running</li>
           </ul>
         </div>
       </PageHeader>
