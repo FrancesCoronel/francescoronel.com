@@ -3,7 +3,7 @@
     "title": "Latina Dev",
     "slug": "latina-dev",
     "tagline": "Open-source directory of Latina software engineers",
-    "logo": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/logo.png",
+    "logo": "https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/blog/logo.png",
     "url": "https://latina.dev",
     "startDate": "2022-10-01T00:00:00.000Z",
     "endDate": null,
@@ -26,7 +26,7 @@
     "title": "Apprenticeships.me",
     "slug": "apprenticeships-me",
     "tagline": "Directory of tech apprenticeships",
-    "logo": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/logo.svg",
+    "logo": "https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/blog/logo.svg",
     "url": "https://apprenticeships.me",
     "startDate": "2019-05-01T00:00:00.000Z",
     "endDate": null,
@@ -46,7 +46,7 @@
     "title": "Tech Queens Podcast",
     "slug": "tech-queens",
     "tagline": "The first podcast exclusively for women of color in tech",
-    "logo": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/projects/anchor-podcast-logo.jpg",
+    "logo": "https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/projects/anchor-podcast-logo.jpg",
     "url": "https://anchor.fm/tech-queens",
     "startDate": "2019-03-01T00:00:00.000Z",
     "endDate": "2020-03-01T00:00:00.000Z",
@@ -159,7 +159,7 @@
     "title": "Hire Me",
     "slug": "hire-me",
     "tagline": "A curated guide to getting an awesome tech gig",
-    "logo": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/icon.svg",
+    "logo": "https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/blog/icon.svg",
     "url": "https://engjobsearch.com",
     "startDate": "2018-01-01T00:00:00.000Z",
     "endDate": null,
@@ -599,7 +599,7 @@
       "typescript"
     ],
     "organization": "slack",
-    "image": "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/projects/webflow-blog-banner.png"
+    "image": "https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/projects/webflow-blog-banner.png"
   },
   {
     "title": "Byteboard Skills Report Redesign",
