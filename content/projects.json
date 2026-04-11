@@ -20,7 +20,8 @@
     ],
     "status": "active",
     "organization": "latina-dev",
-    "github": "Latina-Dev/latina-dev"
+    "github": "Latina-Dev/latina-dev",
+    "featuredImage": "https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/blog/logo.png"
   },
   {
     "title": "Apprenticeships.me",
@@ -60,7 +61,8 @@
       "community-building",
       "public-speaking"
     ],
-    "organization": "tech-queens"
+    "organization": "tech-queens",
+    "featuredImage": "https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/projects/anchor-podcast-logo.jpg"
   },
   {
     "title": "Jake the Dog Key Hand",

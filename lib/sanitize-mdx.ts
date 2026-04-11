@@ -26,8 +26,12 @@ export function sanitizeMdxContent(content: string): string {
         .map((part, i) => {
           // Odd indices are inline code spans — leave them alone
           if (i % 2 === 1) return part;
-          // Even indices are regular text — escape bare <
-          return part.replace(/</g, "&lt;");
+          // Even indices are regular text — escape bare < that are NOT the
+          // start of a valid tag (letter, /, or ! after <). This preserves
+          // JSX components like <LinkedInEmbed />, HTML tags like <br>, and
+          // closing/comment tags, while still escaping things like <3 or
+          // stray < characters from legacy Webflow content.
+          return part.replace(/<(?![a-zA-Z/!])/g, "&lt;");
         })
         .join("");
     })
