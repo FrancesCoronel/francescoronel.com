@@ -26,7 +26,7 @@ const securityHeaders = [
       // API calls: Vercel Analytics/Speed Insights, GA4, Buttondown newsletter
       "connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://api.buttondown.email https://formspree.io",
       // Cal.com booking embed + YouTube/Instagram MDX embeds
-      "frame-src https://cal.com https://www.youtube.com https://www.instagram.com",
+      "frame-src https://cal.com https://app.cal.com https://www.youtube.com https://www.instagram.com",
       "object-src 'none'",
       "base-uri 'self'",
     ].join("; "),
