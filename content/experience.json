@@ -1,5 +1,28 @@
 [
   {
+    "title": "Senior Software Engineer, Agentic SDLC",
+    "slug": "senior-software-engineer-agentic-sdlc",
+    "company": "Slack",
+    "companyLogo": "/images/organizations/slack.png",
+    "companyUrl": "https://slack.com",
+    "location": "Remote",
+    "startDate": "2026-03-01T00:00:00.000Z",
+    "endDate": null,
+    "description": "Part of the Agentic SDLC team within Slack DevXP, focused on transforming how software gets built by integrating AI agents across the entire software development lifecycle, from idea to production. Agentic SDLC → DevXP → Dev & Data → Slack → Salesforce.",
+    "highlights": [
+      "Enabling engineers to work through powerful, semi-autonomous coding agents with tools to understand, iterate, test, and verify their work",
+      "Democratizing agentic development beyond engineering: empowering PMs, designers, TPMs, and all employees to automate work and build prototypes",
+      "Driving AI adoption and enablement across the organization, reducing the time from idea to working prototype",
+      "Establishing best practices, guardrails, and training for agentic development across web, mobile, and backend platforms",
+      "Collaborating closely with the DevXP AI enablement team"
+    ],
+    "skills": [
+      "typescript",
+      "react",
+      "ai"
+    ]
+  },
+  {
     "title": "Senior Software Engineer, Messaging",
     "slug": "senior-software-engineer-messaging",
     "company": "Slack",
@@ -7,7 +30,7 @@
     "companyUrl": "https://slack.com",
     "location": "Remote",
     "startDate": "2025-06-23T00:00:00.000Z",
-    "endDate": null,
+    "endDate": "2026-02-28T00:00:00.000Z",
     "description": "Currently on the Sidebar Systems team, focused on building the best in class messaging platform for getting work done. Sidebar Systems \u2192 Messaging \u2192 Slack Core Experience \u2192 Slack \u2192 Salesforce.",
     "highlights": [
       "Frontend Lead for Notifications 2.0, a core rebuild of Slack's notification preferences system, unifying four legacy mental models into a single, scalable architecture used by millions of users; Drove 5\u00d7 increase in settings engagement (20K \u2192 110K users) and improved default behaviors, reducing channel override usage by 5.6%; Led cross-functional coordination across frontend, backend, iOS, and Android for a highly coupled system migration",
