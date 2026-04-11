@@ -75,10 +75,35 @@ const nextConfig: NextConfig = {
     return [
       // ── Unified /posts namespace ───────────────────────────
       // More specific blog post exceptions must come BEFORE the wildcard catch-all
+
+      // Mentee posts → /mentoring (must be before the /blog/:slug wildcard)
+      ...[
+        "abel-regaldo", "adil-minocherhomjee", "adilene-constante", "amber-sharma",
+        "brenda-sukh", "brian-martinez", "carly-gordon", "cherri-hartigan",
+        "enrique-novoa", "eunji-song", "jasmine-anderson", "kanad-bahalkar",
+        "kelaiya-parikah", "lavie-ruan", "linda-xiong", "lupita-davila",
+        "mariela-p-smith", "matthew-ma", "maximilian-hofer", "melhjingoy-david",
+        "mike-jonas", "neil-scheuermann", "oscar-parra", "pak-chu",
+        "paul-do", "pauly-quintero", "ronnie-brown", "roya-lofti",
+        "simran-anand", "simran-kaur-anand", "steven-shen",
+        "theerut-foongkiatcharoen", "undisclosed-female", "undisclosed-male",
+        "valeria-oshiro", "wen-tran",
+      ].map((slug) => ({
+        source: `/blog/${slug}`,
+        destination: "/mentoring",
+        permanent: true,
+      })),
+
       { source: "/blog/chris-lanus", destination: "/testimonials/chris-lanus", permanent: true },
       { source: "/blog/gabriel-rowe", destination: "/testimonials/gabriel-rowe", permanent: true },
       { source: "/blog/franklin-lee", destination: "/testimonials/franklin-lee", permanent: true },
       { source: "/blog/angel-riera", destination: "/testimonials/angel-riera", permanent: true },
+
+      // Hugo/WordPress date-based blog URLs: /blog/YYYY/MM/DD/slug → /posts/slug
+      // (top-level /:year/:month/:day/:slug is handled separately below)
+      { source: "/blog/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:slug", destination: "/posts/:slug", permanent: true },
+      { source: "/blog/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:slug/", destination: "/posts/:slug", permanent: true },
+
       { source: "/blog/:slug", destination: "/posts/:slug", permanent: true },
       { source: "/projects/:slug", destination: "/posts/:slug", permanent: true },
       { source: "/projects", destination: "/work", permanent: true },
@@ -370,23 +395,30 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
-      // ── Mentee posts consolidated to /mentoring ───────────
-      ...[
-        "abel-regaldo", "adil-minocherhomjee", "adilene-constante", "amber-sharma",
-        "brenda-sukh", "brian-martinez", "carly-gordon", "cherri-hartigan",
-        "enrique-novoa", "eunji-song", "jasmine-anderson", "kanad-bahalkar",
-        "kelaiya-parikah", "lavie-ruan", "linda-xiong", "lupita-davila",
-        "mariela-p-smith", "matthew-ma", "maximilian-hofer", "melhjingoy-david",
-        "mike-jonas", "neil-scheuermann", "oscar-parra", "pak-chu",
-        "paul-do", "pauly-quintero", "ronnie-brown", "roya-lofti",
-        "simran-anand", "simran-kaur-anand", "steven-shen",
-        "theerut-foongkiatcharoen", "undisclosed-female", "undisclosed-male",
-        "valeria-oshiro", "wen-tran",
-      ].map((slug) => ({
-        source: `/blog/${slug}`,
-        destination: "/mentoring",
-        permanent: true,
-      })),
+      // ── Skills pages (no /skills/ route exists) ──────────
+      { source: "/skills/:slug", destination: "/about", permanent: true },
+
+      // ── Missing category redirects ────────────────────────
+      // "experience" was a Webflow-only category not in the new site
+      { source: "/categories/experience", destination: "/about#experience", permanent: true },
+      { source: "/categories/experience/:rest*", destination: "/about#experience", permanent: true },
+
+      // ── Missing organization redirects ───────────────────
+      { source: "/organizations/apprenticeships-me", destination: "/posts/apprenticeships-me", permanent: true },
+      { source: "/organizations/onramp", destination: "/mentoring", permanent: true },
+
+      // ── Podcast (Tech Queens) route ──────────────────────
+      { source: "/podcast/:slug", destination: "/posts/:slug", permanent: true },
+      { source: "/podcast", destination: "/posts", permanent: true },
+
+      // ── Old Webflow AI writing tool pages ────────────────
+      { source: "/tone-voice", destination: "/", permanent: true },
+      { source: "/slack-summary", destination: "/", permanent: true },
+      { source: "/pr-description", destination: "/", permanent: true },
+      { source: "/slack-message", destination: "/", permanent: true },
+      { source: "/code-review", destination: "/", permanent: true },
+      { source: "/slack-project-update", destination: "/", permanent: true },
+      { source: "/slack-draft", destination: "/", permanent: true },
 
       // ── Dedup redirects: old slugs → canonical slugs ──────
       ...dedupRedirects,
