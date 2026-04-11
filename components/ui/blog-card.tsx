@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { formatDate } from "@/lib/utils";
+import { formatDate, canOptimize } from "@/lib/utils";
 import { resolveImageUrl } from "@/lib/cloudinary";
 import type { BlogPost } from "@/lib/types";
 
@@ -19,17 +19,29 @@ export function BlogCard({ post, categoryImages, hideReadingTime, basePath = "/b
         className="absolute inset-0 z-10"
         aria-label={post.title}
       />
-      {post.featuredImage && (
-        <div className="overflow-hidden">
-          <Image
-            src={resolveImageUrl(post.featuredImage)}
-            alt={post.title}
-            width={600}
-            height={340}
-            className="h-36 w-full object-cover transition-transform duration-300 group-hover:scale-105 sm:h-48"
-          />
-        </div>
-      )}
+      {post.featuredImage && (() => {
+        const imgSrc = resolveImageUrl(post.featuredImage);
+        return (
+          <div className="overflow-hidden">
+            {canOptimize(imgSrc) ? (
+              <Image
+                src={imgSrc}
+                alt={post.title}
+                width={600}
+                height={340}
+                className="h-36 w-full object-cover transition-transform duration-300 group-hover:scale-105 sm:h-48"
+              />
+            ) : (
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img
+                src={imgSrc}
+                alt={post.title}
+                className="h-36 w-full object-cover transition-transform duration-300 group-hover:scale-105 sm:h-48"
+              />
+            )}
+          </div>
+        );
+      })()}
       <div className="flex flex-1 flex-col p-5">
         <div className="mb-2 flex items-center gap-3 text-xs text-navy-500 dark:text-white/60">
           <time dateTime={post.date}>{formatDate(post.date)}</time>
@@ -60,6 +72,7 @@ export function BlogCard({ post, categoryImages, hideReadingTime, basePath = "/b
                     alt=""
                     className="-my-0.5 h-4 w-4 object-contain"
                     aria-hidden="true"
+                    fetchPriority="low"
                   />
                 )}
               </span>

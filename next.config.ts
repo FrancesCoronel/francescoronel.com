@@ -24,9 +24,9 @@ const securityHeaders = [
       "img-src 'self' data: https:",
       "font-src 'self'",
       // API calls: Vercel Analytics/Speed Insights, GA4, Buttondown newsletter
-      "connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://www.google-analytics.com https://region1.google-analytics.com https://api.buttondown.email https://formspree.io",
-      // Cal.com booking embed
-      "frame-src https://cal.com",
+      "connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://api.buttondown.email https://formspree.io",
+      // Cal.com booking embed + YouTube/Instagram MDX embeds
+      "frame-src https://cal.com https://www.youtube.com https://www.instagram.com",
       "object-src 'none'",
       "base-uri 'self'",
     ].join("; "),
@@ -69,6 +69,8 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "static1.squarespace.com" },
       { protocol: "https", hostname: "www.engjobsearch.com" },
       { protocol: "https", hostname: "ktebrbhzg9wasky1.public.blob.vercel-storage.com" },
+      // Vercel Blob (new store, migrated 2025)
+      { protocol: "https", hostname: "gzqhczl3ehdy3foa.public.blob.vercel-storage.com" },
     ],
   },
   async redirects() {

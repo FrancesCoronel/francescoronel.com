@@ -7,10 +7,8 @@ export const OPTIMIZED_HOSTS = new Set([
   "uploads-ssl.webflow.com",
   "fvcproductions39789812.wordpress.com",
   "fvcproductions.files.wordpress.com",
-  "i.imgur.com",
   "i.stack.imgur.com",
   "cdn-images-1.medium.com",
-  "image.slidesharecdn.com",
   "images.pexels.com",
   "media.githubusercontent.com",
   "pbs.twimg.com",
@@ -28,7 +26,10 @@ export const OPTIMIZED_HOSTS = new Set([
   "s3-us-west-2.amazonaws.com",
   "static1.squarespace.com",
   "www.apprenticeships.me",
+  "www.engjobsearch.com",
   "ktebrbhzg9wasky1.public.blob.vercel-storage.com",
+  // New Vercel Blob store (migrated 2025)
+  "gzqhczl3ehdy3foa.public.blob.vercel-storage.com",
 ]);
 
 export function canOptimize(url: string): boolean {

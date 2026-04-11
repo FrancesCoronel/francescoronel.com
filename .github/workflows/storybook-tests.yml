@@ -14,6 +14,10 @@ on:
       - "app/globals.css"
   workflow_dispatch:
 
+concurrency:
+  group: storybook-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   # Run Storybook component tests via Vitest
   component-tests:

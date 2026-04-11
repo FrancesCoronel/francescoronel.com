@@ -18,7 +18,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test:storybook": "vitest --project storybook --run",
-    "chromatic": "chromatic --exit-zero-on-changes"
+    "chromatic": "chromatic --exit-zero-on-changes",
+    "lint:md": "markdownlint-cli2 \"content/posts/**/*.mdx\""
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",
@@ -58,6 +59,7 @@
     "chromatic": "15.3.0",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "markdownlint-cli2": "0.22.0",
     "pagefind": "^1.4.0",
     "playwright": "^1.58.2",
     "storybook": "10.3.3",

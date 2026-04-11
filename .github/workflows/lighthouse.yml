@@ -3,8 +3,30 @@ name: Lighthouse CI
 on:
   push:
     branches: [main]
+    paths:
+      - "app/**"
+      - "components/**"
+      - "lib/**"
+      - "public/**"
+      - "next.config.ts"
+      - "tailwind.config.*"
+      - "package.json"
+      - "package-lock.json"
   pull_request:
     branches: [main]
+    paths:
+      - "app/**"
+      - "components/**"
+      - "lib/**"
+      - "public/**"
+      - "next.config.ts"
+      - "tailwind.config.*"
+      - "package.json"
+      - "package-lock.json"
+
+concurrency:
+  group: lighthouse-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   lighthouse:

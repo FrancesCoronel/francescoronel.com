@@ -22,6 +22,9 @@ import { buildMetadata } from "@/lib/metadata";
 import { PrevNextNav } from "@/components/ui/prev-next-nav";
 import { BlogCard } from "@/components/ui/blog-card";
 import { ReadingProgress } from "@/components/ui/reading-progress";
+import { TableOfContents } from "@/components/ui/table-of-contents";
+import { extractHeadings } from "@/lib/extract-headings";
+import { Lightbox } from "@/components/ui/lightbox";
 import { NewsletterCTA } from "@/components/sections/newsletter-cta";
 import { ConnectCTA } from "@/components/sections/connect-cta";
 import nailedItEpisodes from "@/content/nailed-it-episodes.json";
@@ -432,6 +435,7 @@ export default async function PostPage({ params }: PageProps) {
   }
 
   // ── Blog post layout ────────────────────────────────────────
+  const headings = extractHeadings(post.content);
   const sanitized = sanitizeMdxContent(post.content);
   let mdxContent: React.ReactNode;
   try {
@@ -477,7 +481,9 @@ export default async function PostPage({ params }: PageProps) {
   return (
     <>
       <ReadingProgress />
-      <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
+      <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
+        <div className={headings.length >= 3 ? "xl:grid xl:grid-cols-[minmax(0,1fr)_220px] xl:gap-14" : ""}>
+      <article>
         {/* Header */}
         <header className="mb-10">
           <div className="mb-4 flex items-center gap-3 text-sm text-navy-500 dark:text-horchata-400">
@@ -533,9 +539,9 @@ export default async function PostPage({ params }: PageProps) {
           ))}
 
         {/* MDX content */}
-        <div className="prose prose-base max-w-none dark:prose-invert [&_li]:text-base [&_p]:text-base">
+        <Lightbox className="prose prose-base max-w-none dark:prose-invert [&_li]:text-base [&_p]:text-base">
           {mdxContent}
-        </div>
+        </Lightbox>
 
         <hr className="mt-10 border-horchata-200 dark:border-navy-700" />
 
@@ -640,6 +646,16 @@ export default async function PostPage({ params }: PageProps) {
           />
         </div>
       </article>
+
+      {headings.length >= 3 && (
+        <aside className="hidden xl:block">
+          <div className="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto">
+            <TableOfContents headings={headings} />
+          </div>
+        </aside>
+      )}
+        </div>
+      </div>
 
       <NewsletterCTA />
 

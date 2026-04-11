@@ -80,7 +80,7 @@ export function BlogListClient({
               }`}
             >
               {cat.image ? (
-                <img src={cat.image} alt="" className="h-5 w-5 object-contain" aria-hidden="true" />
+                <img src={cat.image} alt="" className="h-5 w-5 object-contain" aria-hidden="true" fetchPriority="low" />
               ) : cat.emoji ? (
                 <span aria-hidden="true">{cat.emoji}</span>
               ) : null}

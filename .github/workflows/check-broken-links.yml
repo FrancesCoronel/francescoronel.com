@@ -14,6 +14,10 @@ on:
     - cron: "0 9 * * 1"  # Every Monday at 9am UTC
   workflow_dispatch:
 
+concurrency:
+  group: check-broken-links-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   # ── Internal link integrity (routes, slugs, featured images) ──────────────
   check-internal:

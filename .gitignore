@@ -61,3 +61,4 @@ storybook-static
 .tailwindplus-downloader-credentials.json
 .tailwindplus-downloader-session.json
 tailwindplus-components-*.json
+.env*.local
