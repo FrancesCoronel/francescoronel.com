@@ -19,7 +19,9 @@ So maybe you got tired of Yosemite’s icons. That’s cool. Even without apps l
 
 ## Tools
 
- 	- Terminal 	- your favorite set of icons 	- some patience
+- Terminal
+- your favorite set of icons
+- some patience
 
 # Step 1 - Get Your Icons
 
@@ -29,7 +31,8 @@ So maybe you got tired of Yosemite’s icons. That’s cool. Even without apps l
 
 *A special thanks to these guys for the amazing circular icons that I use in this how-to.*
 
- 	- [Sebastian de With](https://dewith.com/) 	- [All the contributors to Yoios on GitHub](https://github.com/mmarfil/yoios)
+- [Sebastian de With](https://dewith.com/)
+- [All the contributors to Yoios on GitHub](https://github.com/mmarfil/yoios)
 
 # Step 2 - Get The Command
 
@@ -81,7 +84,7 @@ So if you want to change your Utility icons as well, the .set_icons folder locat
 > otherwise known as TLDR
 Now you probably have something like the following:
 
- 	- a folder called All The Icons with - all the icons you want to replace your old ones (in icns format) - the ChangeIcons.command that was included in this [ZIP file](https://github.com/fvcproductions/customize-icons) - a *hidden* sub-folder called .set_icons with - a modified icon-data.json file to include your own personal apps - the setfileicon UNIX executable file
+- a folder called All The Icons with - all the icons you want to replace your old ones (in icns format) - the ChangeIcons.command that was included in this [ZIP file](https://github.com/fvcproductions/customize-icons) - a *hidden* sub-folder called .set_icons with - a modified icon-data.json file to include your own personal apps - the setfileicon UNIX executable file
 
 At this point, if you’ve done everything right, you can “hide” your hidden files again in your Finder by executing the command defaults write com.apple.finder AppleShowAllFiles NO in Terminal. Make sure to execute killall Finder as well so that your Finder restarts and shows the changes. Now go ahead and click the ChangeIcons.command to change all your icons simultaneously.
 ![ChangeIcons.command in Terminal](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28eff85d8d806c54930c4_iDG752s.png)
@@ -89,6 +92,6 @@ You will be prompted to enter your password and *walla* you have all your snazzy
 > If you want to change your Utility icons as well, go ahead and click ChangeUtilityIcons.command too within the sub-folder called Utilities, assuming you properly named all the icons so that it works with the json file that is shown in **Step 2**.
 ## **Possible Errors You May Encounter**
 
- 	- You tried to edit the command files and now have a syntax error, like in the form of quotes - just make sure to use *straight quotes*. - You have a syntax error in your icon-data.json file, like a comma on the last line. - You forgot to include a certain app in your icon-data.json file and so the icon does not change when you execute the command. - An app is locked and, therefore, the icon cannot be changed. To unlock an app, go to the app, right click, Get Info. Uncheck the Locked button.
+- You tried to edit the command files and now have a syntax error, like in the form of quotes - just make sure to use *straight quotes*. - You have a syntax error in your icon-data.json file, like a comma on the last line. - You forgot to include a certain app in your icon-data.json file and so the icon does not change when you execute the command. - An app is locked and, therefore, the icon cannot be changed. To unlock an app, go to the app, right click, Get Info. Uncheck the Locked button.
 ![Locked App Error In Terminal](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28eff85d8d8511b4930c0_GSBuiRq.png)![Locked App - Dropbox](https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/blog/63b28eff85d8d838b04930c2_GuUXkrG.png)
 ### Have fun with your new icons! 😍
