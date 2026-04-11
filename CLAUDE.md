@@ -149,8 +149,8 @@ Colors follow a **navy + horchata** palette defined in `app/globals.css` under `
 
 All new images must be uploaded to Vercel Blob storage before use. Never reference external image CDNs (AWS S3, Webflow CDN, imgix, etc.) directly.
 
-**Store ID:** `store_kTEbrBhzG9WAskY1`
-**Public base URL:** `https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/`
+**Store ID:** `store_GZQhCZL3EhDy3Foa`
+**Public base URL:** `https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/`
 
 **Upload a new image:**
 ```bash
