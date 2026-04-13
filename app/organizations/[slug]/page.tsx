@@ -11,7 +11,6 @@ import {
 import { PrevNextNav } from "@/components/ui/prev-next-nav";
 import { ConnectCTA } from "@/components/sections/connect-cta";
 import { NewsletterCTA } from "@/components/sections/newsletter-cta";
-import { resolveImageUrl } from "@/lib/cloudinary";
 import { formatDateRange } from "@/lib/utils";
 import { BlogCard } from "@/components/ui/blog-card";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
@@ -101,7 +100,7 @@ export default async function OrganizationDetailPage({
           <div className="flex items-start gap-6">
             {org.logo ? (
               <Image
-                src={resolveImageUrl(org.logo)}
+                src={org.logo}
                 alt={org.name}
                 width={96}
                 height={96}

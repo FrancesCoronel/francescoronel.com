@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { resolveImageUrl } from "@/lib/cloudinary";
 
 export function getClearbitLogoUrl(url?: string | null): string | null {
   if (!url) return null;
@@ -38,7 +37,7 @@ export function OrgLogo({
   avatarClassName,
 }: OrgLogoProps) {
   const clearbitUrl = getClearbitLogoUrl(orgUrl);
-  const resolvedSrc = src ? resolveImageUrl(src) : null;
+  const resolvedSrc = src ?? null;
 
   // If a stored logo is defined, use it exclusively — no Clearbit.
   // Only use Clearbit when no stored logo is provided.

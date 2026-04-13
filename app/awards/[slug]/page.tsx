@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { getAwardBySlug, getAwards } from "@/lib/content";
-import { resolveImageUrl } from "@/lib/cloudinary";
 import { buildMetadata } from "@/lib/metadata";
 import { formatDate } from "@/lib/utils";
 import { ConnectCTA } from "@/components/sections/connect-cta";
@@ -69,7 +68,7 @@ export default async function AwardPage({ params }: PageProps) {
         <div className="mx-auto max-w-3xl px-6">
           {award.image && (
             <Image
-              src={resolveImageUrl(award.image)}
+              src={award.image}
               alt={award.title}
               width={800}
               height={400}

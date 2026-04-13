@@ -2,7 +2,6 @@ import { type ClassValue, clsx } from "clsx";
 
 // Hostnames configured in next.config.ts remotePatterns — keep in sync
 export const OPTIMIZED_HOSTS = new Set([
-  "res.cloudinary.com",
   "cdn.prod.website-files.com",
   "uploads-ssl.webflow.com",
   "fvcproductions39789812.wordpress.com",

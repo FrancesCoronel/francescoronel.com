@@ -6,7 +6,6 @@ import { ClientOnlyText } from "@/components/ui/client-only-text";
 import { buildMetadata } from "@/lib/metadata";
 import { ConnectCTA } from "@/components/sections/connect-cta";
 import { PrevNextNav } from "@/components/ui/prev-next-nav";
-import { resolveImageUrl } from "@/lib/cloudinary";
 import Link from "next/link";
 
 interface PageProps {
@@ -60,7 +59,7 @@ export default async function TestimonialPage({ params }: PageProps) {
           <div className="mt-4 flex items-center gap-4">
             {testimonial.image && (
               <Image
-                src={resolveImageUrl(testimonial.image)}
+                src={testimonial.image}
                 alt={testimonial.name}
                 width={64}
                 height={64}

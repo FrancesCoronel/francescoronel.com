@@ -9,7 +9,6 @@ import {
   getOrganizationByName,
 } from "@/lib/content";
 import { ConnectCTA } from "@/components/sections/connect-cta";
-import { resolveImageUrl } from "@/lib/cloudinary";
 import { formatDateRange } from "@/lib/utils";
 
 interface PageProps {
@@ -57,7 +56,7 @@ export default async function EducationPage({ params }: PageProps) {
           <div className="flex items-center gap-5">
             {edu.logo && (
               <Image
-                src={resolveImageUrl(edu.logo)}
+                src={edu.logo}
                 alt={edu.institution}
                 width={72}
                 height={72}

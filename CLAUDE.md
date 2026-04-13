@@ -68,9 +68,8 @@ Zero client-side content payload — works great even on 3G
 
 ### Image Handling 🖼️
 
-- `next/image` for hosts in `remotePatterns` (Webflow CDN, WordPress, Imgur, GitHub, etc.)
+- `next/image` for hosts in `remotePatterns` (Vercel Blob, Webflow CDN, WordPress, Imgur, GitHub, etc.)
 - Fallback `<img>` tag for unrecognized hosts
-- `lib/cloudinary.ts` has URL helpers for future Cloudflare R2 migration
 - `components/mdx/mdx-components.tsx` has the `OPTIMIZED_HOSTS` set — must match `next.config.ts` remotePatterns
 
 ### MDX Sanitization 🧹
@@ -103,7 +102,6 @@ Zero client-side content payload — works great even on 3G
 | `lib/content.ts` | All content loading functions (blog posts, JSON data, cross-references) |
 | `lib/metadata.ts` | Site config, `buildMetadata()` helper |
 | `lib/sanitize-mdx.ts` | Escapes `<` in MDX content |
-| `lib/cloudinary.ts` | Image URL resolution and Cloudinary helpers |
 | `components/mdx/mdx-components.tsx` | Custom MDX components (images, links, callouts) |
 | `components/ui/pagefind-search.tsx` | Pagefind search component (lazy-loaded) |
 | `next.config.ts` | Image remote patterns, redirects |
@@ -126,6 +124,42 @@ npm run build-storybook  # build static Storybook
 npm run test:storybook   # run Vitest component tests via addon-vitest
 npm run chromatic        # upload to Chromatic for visual regression
 ```
+
+## Blog Publishing Workflow ✍🏽
+
+### Writing (iA Writer)
+
+**Mac:** Open iA Writer → Library → Add Location → select `content/blog/` inside this repo. New posts appear immediately in the file system.
+
+**Android:** Use [Working Copy](https://workingcopyapp.com/) to clone the repo, then in iA Writer → Library → Add Location → Working Copy. After writing, open Working Copy to commit and push.
+
+### From draft to live
+
+1. **Write** in iA Writer — save as `content/blog/<slug>.mdx`
+2. **Tell Claude** (phone or desktop): _"Here's my new post at `content/blog/<slug>.mdx` — set it up for publication"_
+   - Claude will: fill missing frontmatter (excerpt, slug, date), suggest categories/tags, upload any local images to Vercel Blob, ensure MDX is valid
+3. **Commit** with `/commit`
+4. **Deploy** with `/deploy` (pushes to main → Vercel auto-deploys)
+5. **Cross-post** automatically fires via GitHub Actions → dev.to (on push to main for new `.mdx` files)
+   - Manual for LinkedIn: share the post URL with a short intro
+   - Manual for Hashnode: paste content via their import tool (set canonical URL)
+
+### Cross-posting setup
+
+**dev.to** — automated via `.github/workflows/crosspost-devto.yml`
+- Requires secret: `DEVTO_API_KEY` (Settings → GitHub repo → Secrets → Actions)
+- Get key: dev.to → Settings → Account → DEV API Keys
+- Script: `scripts/crosspost-devto.js` — strips MDX syntax, sets canonical URL, maps tags
+
+**Hashnode** — semi-manual (recommended for developer posts)
+- Import post via Hashnode dashboard → import from URL
+- Always set canonical URL to `https://www.francescoronel.com/blog/<slug>`
+
+**LinkedIn** — manual post linking back to the article
+
+### Newsletter
+
+Buttondown is wired up at `/api/newsletter` — subscribers sign up on the site. Send new issues directly from [buttondown.email](https://buttondown.email) dashboard.
 
 ## Custom Slash Commands 🔧
 

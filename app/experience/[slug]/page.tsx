@@ -10,7 +10,6 @@ import {
 } from "@/lib/content";
 import { ConnectCTA } from "@/components/sections/connect-cta";
 import { NewsletterCTA } from "@/components/sections/newsletter-cta";
-import { resolveImageUrl } from "@/lib/cloudinary";
 import { formatDateRange } from "@/lib/utils";
 
 interface PageProps {
@@ -59,7 +58,7 @@ export default async function ExperiencePage({ params }: PageProps) {
             {exp.companyLogo && (
               <div className="flex-shrink-0 overflow-hidden rounded-xl border border-horchata-200 bg-white p-2 shadow-sm dark:border-navy-700 dark:bg-navy-800">
                 <Image
-                  src={resolveImageUrl(exp.companyLogo)}
+                  src={exp.companyLogo}
                   alt={exp.company}
                   width={72}
                   height={72}

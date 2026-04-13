@@ -39,8 +39,6 @@ const nextConfig: NextConfig = {
   },
   images: {
     remotePatterns: [
-      // Cloudinary (future image hosting)
-      { protocol: "https", hostname: "res.cloudinary.com" },
       // Webflow CDN (current image hosting)
       { protocol: "https", hostname: "cdn.prod.website-files.com" },
       { protocol: "https", hostname: "uploads-ssl.webflow.com" },

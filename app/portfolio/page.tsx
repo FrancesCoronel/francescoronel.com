@@ -6,7 +6,6 @@ import { buildMetadata } from "@/lib/metadata";
 import { PageHeader } from "@/components/ui/page-header";
 import { ConnectCTA } from "@/components/sections/connect-cta";
 import { PostsListClient } from "@/components/ui/posts-list-client";
-import { resolveImageUrl } from "@/lib/cloudinary";
 
 export const metadata: Metadata = buildMetadata({
   title: "Portfolio",
@@ -103,14 +102,14 @@ export default function PortfolioPage() {
                 >
                   {project.featuredImage ? (
                     <Image
-                      src={resolveImageUrl(project.featuredImage)}
+                      src={project.featuredImage}
                       alt={project.title}
                       fill
                       className="object-cover"
                     />
                   ) : project.logo ? (
                     <Image
-                      src={resolveImageUrl(project.logo)}
+                      src={project.logo}
                       alt={project.title}
                       width={96}
                       height={96}

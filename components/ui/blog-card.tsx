@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { formatDate, canOptimize } from "@/lib/utils";
-import { resolveImageUrl } from "@/lib/cloudinary";
 import type { BlogPost } from "@/lib/types";
 
 interface BlogCardProps {
@@ -20,7 +19,7 @@ export function BlogCard({ post, categoryImages, hideReadingTime, basePath = "/b
         aria-label={post.title}
       />
       {post.featuredImage && (() => {
-        const imgSrc = resolveImageUrl(post.featuredImage);
+        const imgSrc = post.featuredImage;
         return (
           <div className="overflow-hidden">
             {canOptimize(imgSrc) ? (

@@ -4,7 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { Project } from "@/lib/types";
-import { resolveImageUrl } from "@/lib/cloudinary";
 import { formatDateRange } from "@/lib/utils";
 import { PaginationNav } from "./pagination-nav";
 
@@ -42,7 +41,7 @@ function ProjectLogo({ project }: { project: Project }) {
     return (
       <div className="relative z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-md ring-1 ring-navy-900/5 shadow-navy-900/10 dark:bg-navy-700 dark:ring-white/10">
         <Image
-          src={resolveImageUrl(project.logo)}
+          src={project.logo}
           alt={project.title}
           width={32}
           height={32}

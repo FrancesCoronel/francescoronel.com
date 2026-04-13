@@ -4,7 +4,6 @@ import { Suspense } from "react";
 import { Tweet as ReactTweet } from "react-tweet";
 import type { ComponentType } from "react";
 const Tweet = ReactTweet as ComponentType<{ id: string }>;
-import { resolveImageUrl } from "@/lib/cloudinary";
 import { canOptimize } from "@/lib/utils";
 import { ZoomableImage } from "@/components/ui/zoomable-image";
 import { LinkPreview as LinkPreviewRSC } from "@/components/ui/link-preview";
@@ -42,7 +41,7 @@ function MdxImage({
 }: React.ImgHTMLAttributes<HTMLImageElement>) {
   if (!src || typeof src !== "string") return null;
 
-  const normalized = normalizeUrl(resolveImageUrl(src));
+  const normalized = normalizeUrl(src);
 
   // Use next/image only for hosts we've configured
   if (canOptimize(normalized)) {

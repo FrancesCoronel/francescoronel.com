@@ -7,7 +7,6 @@ import { PageHeader } from "@/components/ui/page-header";
 import { ConnectCTA } from "@/components/sections/connect-cta";
 import { PostsListClient } from "@/components/ui/posts-list-client";
 import { getMultipleRepoStars } from "@/lib/github";
-import { resolveImageUrl } from "@/lib/cloudinary";
 
 const FEATURED_SLUGS = ["latina-dev", "apprenticeships-me", "hire-me"];
 
@@ -117,7 +116,7 @@ export default async function ProjectsPage() {
                 <div className="flex items-start justify-between gap-3">
                   {project.logo ? (
                     <Image
-                      src={resolveImageUrl(project.logo)}
+                      src={project.logo}
                       alt={project.title}
                       width={40}
                       height={40}

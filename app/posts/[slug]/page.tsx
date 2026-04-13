@@ -14,7 +14,6 @@ import {
   getCategoryMaps,
 } from "@/lib/content";
 import { getRepoData } from "@/lib/github";
-import { resolveImageUrl, ogImageUrl } from "@/lib/cloudinary";
 import { formatDate, formatDateRange, canOptimize } from "@/lib/utils";
 import { sanitizeMdxContent } from "@/lib/sanitize-mdx";
 import { mdxComponents } from "@/components/mdx/mdx-components";
@@ -75,7 +74,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ogType: "article",
     publishedTime: post.date,
     ogImage: post.featuredImage
-      ? ogImageUrl(post.featuredImage.replace("cloudinary://", ""))
+      ? post.featuredImage
       : undefined,
   });
 }
@@ -129,7 +128,7 @@ export default async function PostPage({ params }: PageProps) {
               {post.logo ? (
                 <div className="flex-shrink-0 overflow-hidden rounded-2xl border border-horchata-200 bg-white p-3 shadow-sm dark:border-navy-700 dark:bg-navy-800">
                   <Image
-                    src={resolveImageUrl(post.logo)}
+                    src={post.logo}
                     alt={post.title}
                     width={80}
                     height={80}
@@ -404,7 +403,7 @@ export default async function PostPage({ params }: PageProps) {
                   >
                     {orgData?.logo && (
                       <Image
-                        src={resolveImageUrl(orgData.logo)}
+                        src={orgData.logo}
                         alt={orgData.name}
                         width={32}
                         height={32}
@@ -475,7 +474,7 @@ export default async function PostPage({ params }: PageProps) {
     .slice(0, 3)
     .map(({ post: p }) => p);
 
-  let imgSrc = post.featuredImage ? resolveImageUrl(post.featuredImage) : null;
+  let imgSrc = post.featuredImage ?? null;
   if (imgSrc?.startsWith("//")) imgSrc = `https:${imgSrc}`;
 
   return (
@@ -573,7 +572,7 @@ export default async function PostPage({ params }: PageProps) {
             </p>
             <div className="flex flex-wrap gap-3">
               {organizations.map((org) => {
-                let logoSrc = resolveImageUrl(org.logo);
+                let logoSrc = org.logo;
                 if (logoSrc.startsWith("//")) logoSrc = `https:${logoSrc}`;
                 const isOptimizable = canOptimize(logoSrc);
                 return (

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { resolveImageUrl } from "@/lib/cloudinary";
 import { Marquee } from "./marquee";
 
 interface Logo {
@@ -35,7 +34,7 @@ export function LogoCarousel({
                   aria-label={logo.name}
                 >
                   <Image
-                    src={resolveImageUrl(logo.image)}
+                    src={logo.image}
                     alt={logo.name}
                     width={96}
                     height={48}
@@ -44,7 +43,7 @@ export function LogoCarousel({
                 </a>
               ) : (
                 <Image
-                  src={resolveImageUrl(logo.image)}
+                  src={logo.image}
                   alt={logo.name}
                   width={96}
                   height={48}

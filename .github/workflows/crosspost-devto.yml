@@ -1,0 +1,45 @@
+name: Cross-post to dev.to
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/blog/**/*.mdx"
+
+jobs:
+  crosspost:
+    name: Cross-post new posts
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Detect newly added blog posts
+        id: new-posts
+        run: |
+          # Only pick up files that were ADDED (A), not modified (M)
+          NEW=$(git diff --name-status HEAD~1 HEAD -- 'content/blog/*.mdx' \
+            | awk '$1 == "A" { print $2 }' \
+            | tr '\n' ' ')
+          echo "files=$NEW" >> "$GITHUB_OUTPUT"
+
+      - name: Cross-post to dev.to
+        if: steps.new-posts.outputs.files != ''
+        env:
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+        run: |
+          for file in ${{ steps.new-posts.outputs.files }}; do
+            echo "→ Processing $file"
+            node scripts/crosspost-devto.js "$file"
+          done
