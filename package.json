@@ -59,7 +59,7 @@
     "chromatic": "15.3.0",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
-    "eslint-plugin-storybook": "10.3.3",
+    "eslint-plugin-storybook": "10.3.5",
     "markdownlint-cli2": "0.22.0",
     "pagefind": "^1.4.0",
     "playwright": "^1.58.2",
