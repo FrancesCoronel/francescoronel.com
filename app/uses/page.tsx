@@ -44,7 +44,14 @@ const tools = [
         description:
           "Open-source keystroke visualizer that displays key presses on screen for screen recordings, demos, and talks",
         url: "https://github.com/keycastr/keycastr",
-        icon: "⌨️",
+        image: "/images/tools/keycastr.png",
+      },
+      {
+        name: "1Password",
+        description:
+          "Password manager and secure vault for credentials, API keys, SSH keys, and two-factor authentication codes",
+        url: "https://1password.com",
+        image: "/images/tools/1password.png",
       },
     ],
   },
@@ -63,14 +70,21 @@ const tools = [
         description:
           "AI voice dictation. Speak naturally and it transcribes directly into any text field with smart punctuation and formatting",
         url: "https://wisprflow.ai",
-        icon: "🎙️",
+        image: "/images/tools/wispr-flow.png",
+      },
+      {
+        name: "Otter.ai",
+        description:
+          "AI meeting transcription and note-taking. Captures conversations, generates summaries, and syncs with calendar for automatic recording",
+        url: "https://otter.ai",
+        image: "/images/tools/otter.png",
       },
       {
         name: "Grammarly",
         description:
           "AI writing assistant with grammar, clarity, tone, and style suggestions across every text field and browser tab",
         url: "https://grammarly.com",
-        icon: "✍🏽",
+        image: "/images/tools/grammarly.png",
       },
     ],
   },
@@ -127,21 +141,21 @@ const tools = [
         description:
           "System-wide emoji picker. Type a colon anywhere to search and insert emoji without leaving the keyboard",
         url: "https://matthewpalmer.net/rocket/",
-        icon: "🚀",
+        image: "/images/tools/rocket.png",
       },
       {
         name: "Flux",
         description:
           "Adjusts display color temperature based on time of day, with warmer tones at night to reduce eye strain",
         url: "https://justgetflux.com",
-        icon: "🌅",
+        image: "/images/tools/flux.png",
       },
       {
         name: "BetterSnapTool",
         description:
           "Window snapping and management. Drag windows to screen edges for instant resizing and tiling",
         url: "https://folivora.ai/bettersnaptool",
-        icon: "🪟",
+        image: "/images/tools/bettersnaptool.png",
       },
       {
         name: "Itsycal",
@@ -155,7 +169,14 @@ const tools = [
         description:
           "Automatic wallpaper changer that pulls stunning photos from Unsplash and refreshes your desktop on a schedule",
         url: "https://apps.apple.com/us/app/irvue/id1039633667",
-        icon: "🖼️",
+        image: "/images/tools/irvue.png",
+      },
+      {
+        name: "CleanMyMac",
+        description:
+          "Mac maintenance and optimization tool for removing junk files, managing startup apps, and monitoring system health",
+        url: "https://cleanmymac.com",
+        image: "/images/tools/cleanmymac.png",
       },
     ],
   },
@@ -167,7 +188,7 @@ const tools = [
         description:
           "Simple macOS habit tracker for building and maintaining daily routines. Minimal UI, lives in the menu bar",
         url: "https://healthier.app",
-        icon: "💪🏽",
+        image: "/images/tools/healthier.png",
       },
     ],
   },
@@ -201,6 +222,13 @@ const tools = [
           "Lightweight screen recorder for capturing GIFs, perfect for PR demos and bug reports",
         url: "https://gifox.app",
         image: "/images/tools/gifox.jpg",
+      },
+      {
+        name: "Screen Studio",
+        description:
+          "Professional screen recording with automatic zoom, cursor highlights, and background blur for polished demos and talks",
+        url: "https://screen.studio",
+        image: "/images/tools/screen-studio.png",
       },
     ],
   },
