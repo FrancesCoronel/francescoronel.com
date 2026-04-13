@@ -22,7 +22,7 @@ const tools = [
         name: "Warp",
         description:
           "Modern terminal with AI command search, block-based output, and collaborative workflows",
-        url: "https://warp.dev",
+        url: "https://app.warp.dev/referral/NPZPRR",
         image: "/images/tools/warp.png",
       },
       {
@@ -69,14 +69,14 @@ const tools = [
         name: "Wispr Flow",
         description:
           "AI voice dictation. Speak naturally and it transcribes directly into any text field with smart punctuation and formatting",
-        url: "https://wisprflow.ai",
+        url: "https://wisprflow.ai/r?FRANCES44",
         image: "/images/tools/wispr-flow.png",
       },
       {
         name: "Otter.ai",
         description:
           "AI meeting transcription and note-taking. Captures conversations, generates summaries, and syncs with calendar for automatic recording",
-        url: "https://otter.ai",
+        url: "https://otter.ai/referrals/W00U2MB8",
         image: "/images/tools/otter.png",
       },
       {
@@ -85,6 +85,13 @@ const tools = [
           "AI writing assistant with grammar, clarity, tone, and style suggestions across every text field and browser tab",
         url: "https://grammarly.com",
         image: "/images/tools/grammarly.png",
+      },
+      {
+        name: "Buttondown",
+        description:
+          "Newsletter platform powering my email list. Simple, powerful, and privacy-respecting with great APIs and subscriber management",
+        url: "https://buttondown.email",
+        icon: "📬",
       },
     ],
   },
@@ -95,7 +102,7 @@ const tools = [
         name: "Monarch",
         description:
           "Personal finance dashboard for budgets, net worth tracking, transactions, and goals across all accounts in one place",
-        url: "https://monarchmoney.com",
+        url: "https://monarch.com/referral/9djuitvqmq?r_source=copy",
         icon: "👑",
       },
     ],
@@ -133,7 +140,7 @@ const tools = [
         name: "Raycast",
         description:
           "Blazing fast launcher replacing Spotlight, with extensions for clipboard history, snippets, window management, and app switching",
-        url: "https://raycast.com",
+        url: "https://raycast.com/?via=frances",
         image: "/images/tools/raycast.png",
       },
       {
@@ -213,7 +220,7 @@ const tools = [
         name: "Gamma",
         description:
           "AI-powered presentation tool that generates polished slide decks, documents, and webpages from a prompt",
-        url: "https://gamma.app",
+        url: "https://gamma.app/signup?r=sju5yt6zzlxq9ms",
         image: "/images/tools/gamma.jpg",
       },
       {
