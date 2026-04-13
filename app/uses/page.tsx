@@ -90,7 +90,7 @@ const tools = [
         name: "Buttondown",
         description:
           "Newsletter platform powering my email list. Simple, powerful, and privacy-respecting with great APIs and subscriber management",
-        url: "https://buttondown.email",
+        url: "https://buttondown.com/refer/francescoronel",
         icon: "📬",
       },
     ],
