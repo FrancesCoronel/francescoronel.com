@@ -397,10 +397,10 @@ export default function UsesPage() {
           <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
             Setup
           </p>
-          <h1 className="mt-2 text-4xl font-bold text-navy-900 dark:text-horchata-100 md:text-5xl">
+          <h1 className="mt-2 text-2xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl md:text-4xl lg:text-5xl">
             What I Use 🛠️
           </h1>
-          <p className="mt-4 max-w-2xl text-lg text-navy-600 dark:text-white/70">
+          <p className="mt-4 max-w-2xl text-base text-navy-600 dark:text-white/70 sm:text-lg">
             Tools, software, MCP servers, plugins, and Claude Code configuration
             that power my daily development workflow.
           </p>
@@ -413,7 +413,7 @@ export default function UsesPage() {
           <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
             Software
           </p>
-          <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
+          <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">
             Tools & Apps
           </h2>
           <div className="mt-10 space-y-12">
@@ -478,7 +478,7 @@ export default function UsesPage() {
           <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
             AI Workflow
           </p>
-          <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
+          <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">
             Claude Code Setup
           </h2>
           <p className="mt-4 max-w-2xl text-sm text-navy-600 dark:text-white/70">

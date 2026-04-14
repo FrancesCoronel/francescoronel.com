@@ -36,7 +36,7 @@ export function Timeline({ items, dark }: { items: TimelineItem[]; dark?: boolea
             <p className={`text-xs font-medium ${dark ? "text-white/70" : "text-navy-500 dark:text-horchata-400"}`}>
               {formatDateRange(item.startDate, item.endDate)}
             </p>
-            <h3 className={`mt-1 text-lg font-bold ${dark ? "text-horchata-100" : "text-navy-900 dark:text-horchata-100"}`}>
+            <h3 className={`mt-1 text-base font-bold sm:text-lg ${dark ? "text-horchata-100" : "text-navy-900 dark:text-horchata-100"}`}>
               <Link
                 href={`${item.linkPrefix}/${item.slug}`}
                 className="hover:text-horchata-700 dark:hover:text-horchata-400"

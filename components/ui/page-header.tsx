@@ -20,11 +20,11 @@ export function PageHeader({
       <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
         {label}
       </p>
-      <h1 className="mt-2 text-4xl font-black text-navy-900 dark:text-horchata-100 md:text-5xl">
+      <h1 className="mt-2 text-2xl font-black text-navy-900 dark:text-horchata-100 sm:text-3xl md:text-4xl lg:text-5xl">
         {heading}
       </h1>
       {description && (
-        <p className="mt-4 max-w-2xl text-lg text-navy-600 dark:text-white/70">
+        <p className="mt-4 max-w-2xl text-base text-navy-600 dark:text-white/70 sm:text-lg">
           {description}
         </p>
       )}

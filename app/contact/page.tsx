@@ -59,7 +59,7 @@ export default function ContactPage() {
             <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
               By the Numbers
             </p>
-            <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
+            <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">
               Impact at a Glance 📊
             </h2>
           </div>
@@ -101,7 +101,7 @@ export default function ContactPage() {
               <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
                 Let&apos;s Work Together
               </p>
-              <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
+              <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">
                 Send me a message 💌
               </h2>
               <p className="mt-3 text-lg text-navy-600 dark:text-white/70">

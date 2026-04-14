@@ -233,7 +233,7 @@ export default function MentoringPage() {
               <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
                 Mentoring
               </p>
-              <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">How I Can Help 🚀</h2>
+              <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">How I Can Help 🚀</h2>
             </div>
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

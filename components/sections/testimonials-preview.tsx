@@ -18,12 +18,12 @@ export function TestimonialsPreview({
   return (
     <section className={sectionClassName ?? "border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950"}>
       <div className="mx-auto max-w-[var(--container-max)] px-6">
-        <div className="mb-10 flex items-end justify-between">
+        <div className="mb-10 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
               Testimonials
             </p>
-            <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+            <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
               {heading}
             </h2>
           </div>
