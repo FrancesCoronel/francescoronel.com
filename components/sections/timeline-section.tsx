@@ -42,7 +42,7 @@ export function TimelineSection({
         <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
           {label}
         </p>
-        <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+        <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
           {heading}
         </h2>
         <div className="mt-8">

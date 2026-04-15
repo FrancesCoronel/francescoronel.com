@@ -293,7 +293,7 @@ export default function AboutPage() {
           <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
             Expertise
           </p>
-          <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+          <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
             Skills &amp; Technologies 🛠️
           </h2>
           <div className="mt-8 flex flex-wrap gap-2">
@@ -332,7 +332,7 @@ export default function AboutPage() {
             <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
               By the Numbers
             </p>
-            <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
+            <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">
               Impact at a Glance 📊
             </h2>
           </div>

@@ -108,10 +108,10 @@ export function ConnectCTA({ variant = "default", sectionClassName }: ConnectCTA
           className="mx-auto mb-6 h-36 w-36 object-contain md:h-40 md:w-40"
           aria-hidden="true"
         />
-        <h2 className="text-3xl font-bold text-navy-900 dark:text-horchata-100">
+        <h2 className="text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">
           {v.heading}
         </h2>
-        <p className="mt-3 text-lg text-navy-600 dark:text-white/70">
+        <p className="mt-3 text-base text-navy-600 dark:text-white/70 sm:text-lg">
           {v.description}
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">

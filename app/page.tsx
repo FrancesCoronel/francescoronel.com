@@ -81,7 +81,7 @@ export default async function HomePage() {
                 <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
                   Blog
                 </p>
-                <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
+                <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">
                   Latest Posts ✍🏽
                 </h2>
               </div>
@@ -126,7 +126,7 @@ export default async function HomePage() {
                   <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
                     Career
                   </p>
-                  <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">Experience 💼</h2>
+                  <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">Experience 💼</h2>
                 </div>
                 <Link
                   href="/about#experience"
@@ -150,7 +150,7 @@ export default async function HomePage() {
                 <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
                   Education
                 </p>
-                <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">Degrees 🎓</h2>
+                <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">Degrees 🎓</h2>
               </div>
               <Link
                 href="/about#education"
@@ -164,7 +164,7 @@ export default async function HomePage() {
                 <Link
                   key={edu.slug}
                   href={`/education/${edu.slug}`}
-                  className="group flex cursor-pointer items-start gap-5 rounded-2xl border border-horchata-200 bg-white p-6 transition-all hover:border-horchata-400 hover:shadow-lg dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
+                  className="group flex cursor-pointer items-start gap-4 rounded-2xl border border-horchata-200 bg-white p-4 transition-all hover:border-horchata-400 hover:shadow-lg dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500 sm:gap-5 sm:p-6"
                 >
                   {edu.logo && (
                     <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-horchata-50 dark:bg-navy-700">
@@ -178,7 +178,7 @@ export default async function HomePage() {
                     </div>
                   )}
                   <div className="min-w-0 flex-1">
-                    <h3 className="text-lg font-bold leading-snug text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100 dark:group-hover:text-horchata-300">
+                    <h3 className="text-base font-bold leading-snug text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100 dark:group-hover:text-horchata-300 sm:text-lg">
                       {edu.degree}
                     </h3>
                     <p className="text-sm text-navy-600 dark:text-white/70">
@@ -209,7 +209,7 @@ export default async function HomePage() {
                 <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
                   Pinned
                 </p>
-                <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
+                <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">
                   Featured Projects ⭐
                 </h2>
               </div>
@@ -276,7 +276,7 @@ export default async function HomePage() {
             <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
               By the Numbers
             </p>
-            <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
+            <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">
               Impact at a Glance 📊
             </h2>
           </div>
