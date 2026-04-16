@@ -19,7 +19,7 @@ export function LanguagesSection({
   return (
     <section className="py-16 md:py-20">
       <div className="mx-auto max-w-[var(--container-max)] px-6">
-        <h2 className="text-2xl font-bold text-navy-900 dark:text-horchata-100">
+        <h2 className="text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
           Languages 🌎
         </h2>
         <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -28,9 +28,9 @@ export function LanguagesSection({
               key={lang.name}
               className="flex items-center gap-4 rounded-2xl border border-horchata-200 bg-white px-6 py-5 dark:border-navy-700 dark:bg-navy-800"
             >
-              <span className="text-4xl">{lang.flag}</span>
+              <span className="text-2xl sm:text-4xl">{lang.flag}</span>
               <div>
-                <p className="text-lg font-bold text-navy-900 dark:text-horchata-100">
+                <p className="text-base font-bold text-navy-900 dark:text-horchata-100 sm:text-lg">
                   {lang.name}
                 </p>
                 <p className="text-sm text-navy-500 dark:text-horchata-400">

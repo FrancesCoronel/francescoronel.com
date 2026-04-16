@@ -31,7 +31,7 @@ export function MemojiSection({ memojis = defaultMemojis }: MemojiSectionProps) 
           <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
             My Memoji
           </p>
-          <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+          <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
             Many Moods of Frances
           </h2>
         </div>

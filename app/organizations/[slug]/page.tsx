@@ -97,7 +97,7 @@ export default async function OrganizationDetailPage({
       {/* Header — always light */}
       <section className="bg-horchata-50 py-16 md:py-20 dark:bg-navy-900">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <div className="flex items-start gap-6">
+          <div className="flex items-start gap-4 sm:gap-6">
             {org.logo ? (
               <Image
                 src={org.logo}
@@ -115,11 +115,11 @@ export default async function OrganizationDetailPage({
               <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
                 Organization
               </p>
-              <h1 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100 md:text-4xl">
+              <h1 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl md:text-4xl">
                 {org.name}
               </h1>
               {org.description && (
-                <p className="mt-2 text-lg text-navy-600 dark:text-white/70">
+                <p className="mt-2 text-base text-navy-600 dark:text-white/70 sm:text-lg">
                   {org.description}
                 </p>
               )}
@@ -152,7 +152,7 @@ export default async function OrganizationDetailPage({
             <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
               Work
             </p>
-            <h2 className="mt-1 mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+            <h2 className="mt-1 mb-6 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
               Experience 💼
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
@@ -192,7 +192,7 @@ export default async function OrganizationDetailPage({
             <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
               Academic
             </p>
-            <h2 className="mt-1 mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+            <h2 className="mt-1 mb-6 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
               Education 🎓
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
@@ -227,7 +227,7 @@ export default async function OrganizationDetailPage({
             <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
               Built
             </p>
-            <h2 className="mt-1 mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+            <h2 className="mt-1 mb-6 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
               Projects 🛠️
             </h2>
             <ExpandableGrid initialCount={6} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -260,7 +260,7 @@ export default async function OrganizationDetailPage({
             <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
               Writing
             </p>
-            <h2 className="mt-1 mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+            <h2 className="mt-1 mb-6 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
               Blog Posts ✍🏽
             </h2>
             <ExpandableGrid initialCount={6} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -279,7 +279,7 @@ export default async function OrganizationDetailPage({
             <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
               Praise
             </p>
-            <h2 className="mt-1 mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+            <h2 className="mt-1 mb-6 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
               Testimonials 💬
             </h2>
             <div className="grid gap-6 md:grid-cols-2">
@@ -298,7 +298,7 @@ export default async function OrganizationDetailPage({
             <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
               Recognition
             </p>
-            <h2 className="mt-1 mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+            <h2 className="mt-1 mb-6 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
               Awards 🏆
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
