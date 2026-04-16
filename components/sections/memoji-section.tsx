@@ -32,7 +32,7 @@ export function MemojiSection({ memojis = defaultMemojis }: MemojiSectionProps) 
             My Memoji
           </p>
           <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
-            Many Moods of Frances
+            Many Moods of Frances 🎭
           </h2>
         </div>
         <div className="grid grid-cols-2 place-items-center gap-4 pb-8 sm:grid-cols-3 md:grid-cols-5 md:gap-6">

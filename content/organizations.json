@@ -101,7 +101,7 @@
     "logo": "/images/organizations/tech-intersections.png",
     "url": "https://techintersections.org",
     "type": "community",
-    "description": "Tech Intersections provides a space for the women of color most underrepresented in tech to come together and learn from each other\u2019s successes, challenges, and experiences. "
+    "description": "Tech Intersections provides a space for the women of color most underrepresented in tech to come together and learn from each other\u2019s successes, challenges, and experiences."
   },
   {
     "name": "Udacity",
@@ -500,7 +500,7 @@
     "slug": "notion",
     "logo": "",
     "url": "https://www.notion.so",
-    "type": "company",
+    "type": "employer",
     "description": "Notion is an all-in-one workspace for notes, tasks, wikis, and databases."
   }
 ]
