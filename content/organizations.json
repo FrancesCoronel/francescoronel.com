@@ -21,7 +21,7 @@
     "logo": "/images/organizations/stanford-university.png",
     "url": "https://www.stanford.edu/",
     "type": "community",
-    "description": "Stanford University, located in the heart of Silicon Valley, is a world-renowned institution known for innovation, entrepreneurship, and academic excellence. Its mission is to promote research, discovery, and leadership that make a global impact. 🌍"
+    "description": "Stanford University, located in the heart of Silicon Valley, is a world-renowned institution known for innovation, entrepreneurship, and academic excellence. Its mission is to promote research, discovery, and leadership that make a global impact. \ud83c\udf0d"
   },
   {
     "name": "Integral Ad Science",
@@ -45,7 +45,7 @@
     "logo": "/images/organizations/ripple.png",
     "url": "https://ripple.com/",
     "type": "community",
-    "description": "Ripple is a fintech company using blockchain to power instant, affordable, and transparent global payments. With solutions like XRP and RLUSD, Ripple helps businesses and banks move money across borders faster and smarter—reshaping finance for the digital age. 🌍💸"
+    "description": "Ripple is a fintech company using blockchain to power instant, affordable, and transparent global payments. With solutions like XRP and RLUSD, Ripple helps businesses and banks move money across borders faster and smarter\u2014reshaping finance for the digital age. \ud83c\udf0d\ud83d\udcb8"
   },
   {
     "name": "Sourcegraph",
@@ -101,7 +101,7 @@
     "logo": "/images/organizations/tech-intersections.png",
     "url": "https://techintersections.org",
     "type": "community",
-    "description": "Tech Intersections provides a space for the women of color most underrepresented in tech to come together and learn from each other’s successes, challenges, and experiences. "
+    "description": "Tech Intersections provides a space for the women of color most underrepresented in tech to come together and learn from each other\u2019s successes, challenges, and experiences. "
   },
   {
     "name": "Udacity",
@@ -149,7 +149,7 @@
     "logo": "/images/organizations/sabio.png",
     "url": "",
     "type": "community",
-    "description": "Sabio Coding Bootcamp empowers individuals to transform their lives through intensive, industry-focused coding education. Offering comprehensive programs in web development, software engineering, and more, Sabio equips students with the skills and mentorship needed to thrive in the tech industry. 🚀"
+    "description": "Sabio Coding Bootcamp empowers individuals to transform their lives through intensive, industry-focused coding education. Offering comprehensive programs in web development, software engineering, and more, Sabio equips students with the skills and mentorship needed to thrive in the tech industry. \ud83d\ude80"
   },
   {
     "name": "Techqueria",
@@ -157,7 +157,7 @@
     "logo": "/images/organizations/techqueria.png",
     "url": "https://techqueria.org",
     "type": "community",
-    "description": "Techqueria is a vibrant community of Latinx professionals in tech, dedicated to empowering and elevating Latinx talent. Through networking, resources, and mentorship, Techqueria fosters growth, innovation, and diversity, creating a supportive environment where members thrive and excel. 🌮"
+    "description": "Techqueria is a vibrant community of Latinx professionals in tech, dedicated to empowering and elevating Latinx talent. Through networking, resources, and mentorship, Techqueria fosters growth, innovation, and diversity, creating a supportive environment where members thrive and excel. \ud83c\udf2e"
   },
   {
     "name": "ABC7 News",
@@ -494,5 +494,13 @@
     "url": "https://www.joinleland.com",
     "type": "community",
     "description": "Leland is a platform connecting people with expert coaches for career, academic, and personal growth goals."
+  },
+  {
+    "name": "Notion",
+    "slug": "notion",
+    "logo": "",
+    "url": "https://www.notion.so",
+    "type": "company",
+    "description": "Notion is an all-in-one workspace for notes, tasks, wikis, and databases."
   }
 ]
