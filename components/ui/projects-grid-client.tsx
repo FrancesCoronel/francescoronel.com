@@ -126,7 +126,7 @@ function FeaturedProjectRow({
   const categoryColor = CATEGORY_COLORS[project.category] ?? CATEGORY_COLORS["side-project"];
 
   return (
-    <div className="group relative flex items-start gap-6 border-b border-horchata-200 py-8 last:border-b-0 dark:border-navy-700">
+    <div className="group relative flex items-start gap-3 border-b border-horchata-200 py-8 last:border-b-0 dark:border-navy-700 sm:gap-6">
       <div className="absolute -inset-x-4 inset-y-2 z-0 rounded-2xl border border-horchata-300 bg-white opacity-0 shadow-sm transition group-hover:opacity-100 dark:border-navy-600 dark:bg-navy-800" />
       <Link href={`/posts/${project.slug}`} className="absolute inset-0 z-20" aria-label={project.title} />
 
@@ -134,7 +134,7 @@ function FeaturedProjectRow({
 
       <div className="relative z-10 flex min-w-0 flex-1 flex-col">
         <div className="flex min-w-0 items-center gap-2">
-          <h2 className="truncate text-base font-semibold tracking-tight text-navy-800 dark:text-horchata-100">
+          <h2 className="min-w-0 line-clamp-2 text-base font-semibold tracking-tight text-navy-800 dark:text-horchata-100">
             {project.title}
           </h2>
           {project.status === "active" && (
@@ -305,7 +305,7 @@ export function ProjectsGridClient({
                 <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
                   Pinned
                 </p>
-                <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+                <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
                   Featured Projects ⭐
                 </h2>
                 <div className="mt-4">
@@ -328,7 +328,7 @@ export function ProjectsGridClient({
                   <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
                     All Work
                   </p>
-                  <h2 className="mt-1 mb-4 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+                  <h2 className="mt-1 mb-4 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
                     All Projects 🛠️
                   </h2>
                   <p className="mb-10 text-sm text-navy-400 dark:text-white/40">
