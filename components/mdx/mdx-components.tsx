@@ -1,10 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
-import { Tweet as ReactTweet } from "react-tweet";
-import type { ComponentType } from "react";
-const Tweet = ReactTweet as ComponentType<{ id: string }>;
+import { getTweet } from "react-tweet/api";
+import { EmbeddedTweet } from "react-tweet";
+import { enrichTweet } from "react-tweet";
 import { canOptimize } from "@/lib/utils";
+
+async function SafeTweet({ id }: { id: string }) {
+  try {
+    const tweet = await getTweet(id);
+    if (!tweet) throw new Error("not found");
+    enrichTweet(tweet); // validate before handing to EmbeddedTweet
+    return <EmbeddedTweet tweet={tweet} />;
+  } catch {
+    return (
+      <a href={`https://twitter.com/i/status/${id}`} target="_blank" rel="noopener noreferrer">
+        View tweet
+      </a>
+    );
+  }
+}
 import { ZoomableImage } from "@/components/ui/zoomable-image";
 import { LinkPreview as LinkPreviewRSC } from "@/components/ui/link-preview";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -90,7 +105,7 @@ function MdxLink({
     if (tweetId) {
       return (
         <span className="not-prose my-6 flex justify-center">
-          <Tweet id={tweetId} />
+          <SafeTweet id={tweetId} />
         </span>
       );
     }
@@ -254,7 +269,7 @@ export const mdxComponents: MDXComponents = {
   p: MdxParagraph,
   Callout,
   Image: MdxImage,
-  Tweet,
+  Tweet: SafeTweet,
   LinkedInEmbed,
   h1: ({ children, ...props }) => (
     <h1 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-navy-900 dark:text-horchata-100" {...props}>
