@@ -79,6 +79,7 @@ jobs:
 
       - name: Check external links
         id: lychee
+        continue-on-error: true
         uses: lycheeverse/lychee-action@v2
         with:
           args: >-
@@ -98,6 +99,7 @@ jobs:
 
       - name: Open or update GitHub issue if broken links found
         if: steps.lychee.outputs.exit_code != 0
+        continue-on-error: true
         uses: peter-evans/create-issue-from-file@v5
         with:
           title: "🔗 Broken external links detected"

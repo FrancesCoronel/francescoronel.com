@@ -7,7 +7,7 @@ export function NewsletterCTA() {
         <p className="text-xs font-bold uppercase tracking-widest text-horchata-400">
           Stay in the loop
         </p>
-        <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+        <h2 className="mt-2 text-lg font-bold text-white sm:text-2xl md:text-3xl">
           🦄 The Unicorn Engineer ✨
         </h2>
         <p className="mt-3 text-sm text-white/60 sm:text-base">
