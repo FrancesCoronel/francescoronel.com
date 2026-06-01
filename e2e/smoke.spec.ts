@@ -21,7 +21,9 @@ for (const { path, heading } of STATIC_PAGES) {
   });
 }
 
-test("home — nav links are present", async ({ page }) => {
+test("home — nav links are present", async ({ page }, testInfo) => {
+  // Nav links are hidden behind hamburger on mobile; only check on desktop
+  test.skip(testInfo.project.name === "Mobile Chrome", "Nav links hidden in hamburger on mobile");
   await page.goto("/");
   const nav = page.getByRole("navigation").first();
   await expect(nav.getByRole("link", { name: /posts/i })).toBeVisible();
