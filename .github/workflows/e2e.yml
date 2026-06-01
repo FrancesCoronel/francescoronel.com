@@ -27,6 +27,9 @@ jobs:
 
       - run: npm ci
 
+      - name: Install @playwright/test
+        run: npm install --no-save @playwright/test@$(node -e "console.log(require('./node_modules/playwright/package.json').version)")
+
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
 

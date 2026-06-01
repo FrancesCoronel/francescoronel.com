@@ -1,4 +1,4 @@
-import { test, expect } from "playwright/test";
+import { test, expect } from "@playwright/test";
 
 const STATIC_PAGES = [
   { path: "/", heading: /frances coronel/i },
