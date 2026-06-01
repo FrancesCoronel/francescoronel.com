@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
-import { Tweet as ReactTweet } from "react-tweet";
 import type { ComponentType } from "react";
-const Tweet = ReactTweet as ComponentType<{ id: string }>;
 import { canOptimize } from "@/lib/utils";
 import { ZoomableImage } from "@/components/ui/zoomable-image";
 import { LinkPreview as LinkPreviewRSC } from "@/components/ui/link-preview";
@@ -11,10 +9,6 @@ import { LinkPreview as LinkPreviewRSC } from "@/components/ui/link-preview";
 const LinkPreview = LinkPreviewRSC as any as (props: { url: string }) => React.ReactElement;
 import type { MDXComponents } from "mdx/types";
 
-function extractTweetId(url: string): string | null {
-  const match = url.match(/(?:twitter\.com|x\.com)\/\w+\/status\/(\d+)/);
-  return match ? match[1] : null;
-}
 
 function extractYouTubeId(url: string): string | null {
   const match = url.match(
@@ -85,15 +79,8 @@ function MdxLink({
   const isExternal = href.startsWith("http") || href.startsWith("//");
 
   if (isNaked && isExternal) {
-    // Twitter/X embed
-    const tweetId = extractTweetId(href);
-    if (tweetId) {
-      return (
-        <span className="not-prose my-6 flex justify-center">
-          <Tweet id={tweetId} />
-        </span>
-      );
-    }
+    // Twitter/X — skip react-tweet embed (null entity arrays in older tweets
+    // cause "TypeError: c is not iterable" during SSG); fall through to OG card.
 
     // YouTube embed
     const youtubeId = extractYouTubeId(href);
@@ -254,7 +241,6 @@ export const mdxComponents: MDXComponents = {
   p: MdxParagraph,
   Callout,
   Image: MdxImage,
-  Tweet,
   LinkedInEmbed,
   h1: ({ children, ...props }) => (
     <h1 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-navy-900 dark:text-horchata-100" {...props}>
