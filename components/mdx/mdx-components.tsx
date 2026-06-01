@@ -1,24 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
-import { getTweet } from "react-tweet/api";
-import { EmbeddedTweet } from "react-tweet";
-import { enrichTweet } from "react-tweet";
 import { canOptimize } from "@/lib/utils";
 
-async function SafeTweet({ id }: { id: string }) {
-  try {
-    const tweet = await getTweet(id);
-    if (!tweet) throw new Error("not found");
-    enrichTweet(tweet); // validate before handing to EmbeddedTweet
-    return <EmbeddedTweet tweet={tweet} />;
-  } catch {
-    return (
-      <a href={`https://twitter.com/i/status/${id}`} target="_blank" rel="noopener noreferrer">
-        View tweet
-      </a>
-    );
-  }
+function SafeTweet({ id }: { id: string }) {
+  return (
+    <a
+      href={`https://twitter.com/i/status/${id}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-1 text-horchata-600 hover:text-horchata-800 underline"
+    >
+      View on X/Twitter ↗
+    </a>
+  );
 }
 import { ZoomableImage } from "@/components/ui/zoomable-image";
 import { LinkPreview as LinkPreviewRSC } from "@/components/ui/link-preview";

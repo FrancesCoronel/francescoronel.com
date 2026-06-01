@@ -34,14 +34,6 @@ jobs:
         run: |
           npx next build
           npx pagefind --site .next/server/app --output-path public/pagefind || true
-        id: build
-        continue-on-error: true
-
-      - name: Build check
-        run: |
-          echo "Build outcome: ${{ steps.build.outcome }}"
-          ls .next/BUILD_ID 2>/dev/null && echo "Build OK" || echo "Build FAILED - .next missing"
-          if [ "${{ steps.build.outcome }}" = "failure" ]; then exit 1; fi
 
       - name: Run Playwright tests
         run: npm run test:e2e
