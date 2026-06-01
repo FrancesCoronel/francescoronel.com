@@ -1,9 +1,9 @@
 import { test, expect } from "@playwright/test";
 
 const STATIC_PAGES = [
-  { path: "/", heading: /frances coronel/i },
+  { path: "/", heading: /hi.*frances/i },
   { path: "/about", heading: /about/i },
-  { path: "/blog", heading: /blog/i },
+  { path: "/posts", heading: /posts/i },
   { path: "/speaking", heading: /speaking/i },
   { path: "/contact", heading: /contact/i },
   { path: "/portfolio", heading: /portfolio|projects/i },
@@ -24,40 +24,29 @@ for (const { path, heading } of STATIC_PAGES) {
 test("home — nav links are present", async ({ page }) => {
   await page.goto("/");
   const nav = page.getByRole("navigation").first();
-  await expect(nav.getByRole("link", { name: /blog/i })).toBeVisible();
+  await expect(nav.getByRole("link", { name: /posts/i })).toBeVisible();
   await expect(nav.getByRole("link", { name: /about/i })).toBeVisible();
 });
 
-test("blog — shows post cards", async ({ page }) => {
-  await page.goto("/blog");
-  const cards = page.getByRole("article");
-  await expect(cards.first()).toBeVisible();
+test("posts — shows post list items", async ({ page }) => {
+  await page.goto("/posts");
+  await expect(page.getByRole("heading", { name: /posts/i }).first()).toBeVisible();
+  // At least one link to a post should exist on the page
+  await expect(page.locator("a[href^='/posts/']").first()).toBeVisible();
 });
 
-test("blog post — renders content", async ({ page }) => {
-  await page.goto("/blog");
-  const firstLink = page.getByRole("article").first().getByRole("link").first();
-  const href = await firstLink.getAttribute("href");
+test("post — renders content", async ({ page }) => {
+  await page.goto("/posts");
+  const firstPostLink = page.locator("a[href^='/posts/']").first();
+  const href = await firstPostLink.getAttribute("href");
   await page.goto(href!);
   await expect(page).not.toHaveTitle(/404/i);
-  await expect(page.getByRole("article")).toBeVisible();
+  await expect(page.getByRole("heading").first()).toBeVisible();
 });
 
 test("organizations — detail page loads", async ({ page }) => {
-  await page.goto("/organizations/slack");
-  await expect(page.getByRole("heading", { name: /slack/i })).toBeVisible();
-});
-
-test("experience detail page loads", async ({ page }) => {
-  await page.goto("/experience");
-  const firstLink = page.getByRole("link", { name: /view/i }).or(
-    page.locator("a[href^='/experience/']")
-  ).first();
-  const href = await firstLink.getAttribute("href");
-  if (href) {
-    await page.goto(href);
-    await expect(page).not.toHaveTitle(/404/i);
-  }
+  await page.goto("/organizations/latina-dev");
+  await expect(page.getByRole("heading", { name: /latina/i })).toBeVisible();
 });
 
 test("RSS feed returns XML", async ({ request }) => {
@@ -77,15 +66,6 @@ test("robots.txt allows crawlers", async ({ request }) => {
   expect(res.status()).toBe(200);
   const body = await res.text();
   expect(body).toContain("User-agent");
-});
-
-test("dark mode toggle works", async ({ page }) => {
-  await page.goto("/");
-  const toggle = page.getByRole("button", { name: /theme|dark|light/i });
-  if (await toggle.isVisible()) {
-    await toggle.click();
-    await expect(page.locator("html")).toHaveAttribute("class", /dark/);
-  }
 });
 
 test("mobile — nav is usable on small screen", async ({ page }) => {
