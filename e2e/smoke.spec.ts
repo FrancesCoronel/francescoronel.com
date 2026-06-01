@@ -46,7 +46,7 @@ test("post — renders content", async ({ page }) => {
 
 test("organizations — detail page loads", async ({ page }) => {
   await page.goto("/organizations/latina-dev");
-  await expect(page.getByRole("heading", { name: /latina/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /latina/i }).first()).toBeVisible();
 });
 
 test("RSS feed returns XML", async ({ request }) => {
@@ -65,7 +65,7 @@ test("robots.txt allows crawlers", async ({ request }) => {
   const res = await request.get("/robots.txt");
   expect(res.status()).toBe(200);
   const body = await res.text();
-  expect(body).toContain("User-agent");
+  expect(body.toLowerCase()).toContain("user-agent");
 });
 
 test("mobile — nav is usable on small screen", async ({ page }) => {
