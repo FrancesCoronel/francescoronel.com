@@ -27,10 +27,6 @@ jobs:
 
       - run: npm ci
 
-      # playwright is locked at 1.58.2; install the matching test runner
-      - name: Install @playwright/test
-        run: npm install --save-dev --no-audit @playwright/test@1.58.2
-
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
 
