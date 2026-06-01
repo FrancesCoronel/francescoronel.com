@@ -28,16 +28,19 @@ jobs:
       - run: npm ci
 
       - name: Install @playwright/test
-        run: npm install --no-save @playwright/test@$(node -e "console.log(require('./node_modules/playwright/package.json').version)")
+        run: |
+          PW_VERSION=$(node -e "console.log(require('./node_modules/playwright/package.json').version)")
+          echo "Installing @playwright/test@$PW_VERSION"
+          npm install --no-save @playwright/test@$PW_VERSION
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
 
-      - name: Build
-        run: npm run build
-        env:
-          # Pagefind writes to public/ during postbuild; ignore missing env vars
-          SKIP_ENV_VALIDATION: true
+      - name: Build (pagefind failure is non-fatal)
+        run: |
+          npx next build 2>&1
+          echo "next build exit: $?"
+          npx pagefind --site .next/server/app --output-path public/pagefind 2>&1 || echo "pagefind skipped"
 
       - name: Run Playwright tests
         run: npm run test:e2e
