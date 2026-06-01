@@ -38,7 +38,7 @@ jobs:
 
       - name: Notify Slack on failure
         if: failure() && steps.internal.outcome == 'failure' && github.event_name == 'schedule'
-        uses: slackapi/slack-github-action@v2
+        uses: slackapi/slack-github-action@v3
         with:
           channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
           payload: |
@@ -110,7 +110,7 @@ jobs:
 
       - name: Notify Slack if broken links found
         if: steps.lychee.outputs.exit_code != 0 && github.event_name == 'schedule'
-        uses: slackapi/slack-github-action@v2
+        uses: slackapi/slack-github-action@v3
         with:
           channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
           payload: |
