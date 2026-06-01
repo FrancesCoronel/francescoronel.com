@@ -65,3 +65,4 @@ storybook-static
 .tailwindplus-downloader-session.json
 tailwindplus-components-*.json
 .env*.local
+test-results/
