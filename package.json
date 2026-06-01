@@ -58,7 +58,7 @@
     "@vitest/coverage-v8": "^4.0.18",
     "chromatic": "15.3.0",
     "eslint": "^9",
-    "eslint-config-next": "16.1.6",
+    "eslint-config-next": "16.2.3",
     "eslint-plugin-storybook": "10.3.3",
     "markdownlint-cli2": "0.22.0",
     "pagefind": "^1.4.0",
