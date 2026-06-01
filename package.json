@@ -42,8 +42,7 @@
     "rehype-autolink-headings": "^7.1.0",
     "rehype-pretty-code": "^0.14.1",
     "rehype-slug": "^6.0.0",
-    "remark-gfm": "^4.0.1",
-    "simple-icons": "16.13.0"
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.3",
