@@ -27,20 +27,17 @@ jobs:
 
       - run: npm ci
 
+      # playwright is in the lockfile at 1.58.2; install matching @playwright/test
       - name: Install @playwright/test
-        run: |
-          PW_VERSION=$(node -e "console.log(require('./node_modules/playwright/package.json').version)")
-          echo "Installing @playwright/test@$PW_VERSION"
-          npm install --no-save @playwright/test@$PW_VERSION
+        run: npm install --no-save @playwright/test@1.58.2
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
 
-      - name: Build (pagefind failure is non-fatal)
+      - name: Build
         run: |
-          npx next build 2>&1
-          echo "next build exit: $?"
-          npx pagefind --site .next/server/app --output-path public/pagefind 2>&1 || echo "pagefind skipped"
+          npx next build
+          npx pagefind --site .next/server/app --output-path public/pagefind || true
 
       - name: Run Playwright tests
         run: npm run test:e2e
