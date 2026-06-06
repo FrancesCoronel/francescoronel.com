@@ -37,7 +37,7 @@ export default defineConfig({
     // Dedicated project for visual screenshots — mobile 390×844
     {
       name: "visual-mobile",
-      use: { ...devices["iPhone 14"], viewport: { width: 390, height: 844 } },
+      use: { ...devices["Pixel 5"], viewport: { width: 390, height: 844 } },
       testMatch: "**/visual.spec.ts",
     },
   ],
