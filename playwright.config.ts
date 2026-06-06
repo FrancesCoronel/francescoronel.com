@@ -39,7 +39,6 @@ export default defineConfig({
       name: "visual-mobile",
       use: { ...devices["iPhone 14"], viewport: { width: 390, height: 844 } },
       testMatch: "**/visual.spec.ts",
-      testIgnore: ["**/*mobile*"],  // mobile variants handled inside the spec
     },
   ],
   webServer: process.env.BASE_URL

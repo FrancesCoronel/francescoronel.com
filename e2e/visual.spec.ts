@@ -8,12 +8,12 @@
  * reviewers can diff visuals without a local checkout.
  */
 
-import { test, expect } from "@playwright/test";
+import { test, expect, type Page } from "@playwright/test";
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
 
 async function screenshot(
-  page: Parameters<typeof test>[1] extends (args: { page: infer P }) => unknown ? P : never,
+  page: Page,
   name: string,
   clip?: { x: number; y: number; width: number; height: number }
 ) {
