@@ -1,10 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
-import { Tweet as ReactTweet } from "react-tweet";
-import type { ComponentType } from "react";
-const Tweet = ReactTweet as ComponentType<{ id: string }>;
 import { canOptimize } from "@/lib/utils";
+
+function SafeTweet({ id }: { id: string }) {
+  return (
+    <a
+      href={`https://twitter.com/i/status/${id}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-1 text-horchata-600 hover:text-horchata-800 underline"
+    >
+      View on X/Twitter ↗
+    </a>
+  );
+}
 import { ZoomableImage } from "@/components/ui/zoomable-image";
 import { LinkPreview as LinkPreviewRSC } from "@/components/ui/link-preview";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -90,7 +100,7 @@ function MdxLink({
     if (tweetId) {
       return (
         <span className="not-prose my-6 flex justify-center">
-          <Tweet id={tweetId} />
+          <SafeTweet id={tweetId} />
         </span>
       );
     }
@@ -254,7 +264,7 @@ export const mdxComponents: MDXComponents = {
   p: MdxParagraph,
   Callout,
   Image: MdxImage,
-  Tweet,
+  Tweet: SafeTweet,
   LinkedInEmbed,
   h1: ({ children, ...props }) => (
     <h1 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-navy-900 dark:text-horchata-100" {...props}>
