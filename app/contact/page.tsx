@@ -48,6 +48,7 @@ export default function ContactPage() {
             height={360}
             className="h-auto w-[200px] object-contain drop-shadow-lg sm:w-[260px] md:w-[360px]"
             aria-hidden="true"
+            priority
           />
         }
       />
