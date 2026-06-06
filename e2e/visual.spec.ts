@@ -112,17 +112,22 @@ test("screenshot — footer", async ({ page }) => {
 test("screenshot — blog card grid", async ({ page }) => {
   await page.goto("/posts");
   await page.waitForLoadState("networkidle");
-  // Grab the first grid of post cards
   const grid = page.locator("ul, ol, [class*='grid']").filter({ has: page.locator("a[href^='/posts/']") }).first();
+  await grid.scrollIntoViewIfNeeded();
   const box = await grid.boundingBox();
-  if (box) {
-    await screenshot(page, "component-blog-card-grid", {
-      x: box.x,
-      y: box.y,
-      width: box.width,
-      height: Math.min(box.height, 800),
-    });
+  if (box && box.width > 0 && box.height > 0) {
+    const x = Math.max(0, Math.round(box.x));
+    const y = Math.max(0, Math.round(box.y));
+    const vp = page.viewportSize()!;
+    const width = Math.min(Math.round(box.width), vp.width - x);
+    const height = Math.min(Math.round(box.height), 800, vp.height - y);
+    if (width > 0 && height > 0) {
+      await screenshot(page, "component-blog-card-grid", { x, y, width, height });
+      return;
+    }
   }
+  // Fallback: full-page screenshot if grid clip isn't usable
+  await screenshot(page, "component-blog-card-grid");
 });
 
 test("screenshot — mobile hamburger open", async ({ page }) => {
