@@ -44,7 +44,7 @@ const PAGES = [
 for (const { name, path } of PAGES) {
   test(`screenshot — ${name} (desktop)`, async ({ page }) => {
     await page.goto(path);
-    await page.waitForLoadState("networkidle");
+    await page.waitForLoadState("load");
     // Dismiss cookie banners / skeleton loaders
     await page.waitForTimeout(500);
     await screenshot(page, `${name}-desktop`);
@@ -53,7 +53,7 @@ for (const { name, path } of PAGES) {
   test(`screenshot — ${name} (mobile)`, async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(path);
-    await page.waitForLoadState("networkidle");
+    await page.waitForLoadState("load");
     await page.waitForTimeout(500);
     await screenshot(page, `${name}-mobile`);
   });
@@ -63,7 +63,7 @@ for (const { name, path } of PAGES) {
 
 test("screenshot — home dark mode", async ({ page }) => {
   await page.goto("/");
-  await page.waitForLoadState("networkidle");
+  await page.waitForLoadState("load");
   // Toggle dark mode via the theme button
   const themeBtn = page.getByRole("button", { name: /toggle.*theme|dark.*mode|light.*mode/i }).first();
   if (await themeBtn.isVisible()) {
@@ -80,7 +80,7 @@ test("screenshot — home dark mode", async ({ page }) => {
 
 test("screenshot — navigation bar", async ({ page }) => {
   await page.goto("/");
-  await page.waitForLoadState("networkidle");
+  await page.waitForLoadState("load");
   const nav = page.getByRole("navigation").first();
   const box = await nav.boundingBox();
   if (box) {
@@ -95,7 +95,7 @@ test("screenshot — navigation bar", async ({ page }) => {
 
 test("screenshot — footer", async ({ page }) => {
   await page.goto("/");
-  await page.waitForLoadState("networkidle");
+  await page.waitForLoadState("load");
   const footer = page.getByRole("contentinfo");
   await footer.scrollIntoViewIfNeeded();
   const box = await footer.boundingBox();
@@ -111,7 +111,7 @@ test("screenshot — footer", async ({ page }) => {
 
 test("screenshot — blog card grid", async ({ page }) => {
   await page.goto("/posts");
-  await page.waitForLoadState("networkidle");
+  await page.waitForLoadState("load");
   const grid = page.locator("ul, ol, [class*='grid']").filter({ has: page.locator("a[href^='/posts/']") }).first();
   await grid.scrollIntoViewIfNeeded();
   const box = await grid.boundingBox();
@@ -133,7 +133,7 @@ test("screenshot — blog card grid", async ({ page }) => {
 test("screenshot — mobile hamburger open", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
-  await page.waitForLoadState("networkidle");
+  await page.waitForLoadState("load");
   const hamburger = page.getByRole("button", { name: /menu|open nav/i }).first();
   if (await hamburger.isVisible()) {
     await hamburger.click();
@@ -147,7 +147,7 @@ test("screenshot — post detail hero", async ({ page }) => {
   const firstPost = page.locator("a[href^='/posts/']").first();
   const href = await firstPost.getAttribute("href");
   await page.goto(href!);
-  await page.waitForLoadState("networkidle");
+  await page.waitForLoadState("load");
   // Capture just the top ~600px (title + hero)
   await screenshot(page, "component-post-hero", {
     x: 0,
