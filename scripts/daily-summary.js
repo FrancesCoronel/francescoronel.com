@@ -10,6 +10,14 @@ const LINEAR_API_KEY = process.env.LINEAR_API_KEY;
 const GH_TOKEN = process.env.GH_TOKEN;
 const GITHUB_REPOSITORY = process.env.GITHUB_REPOSITORY || "francescoronel/francescoronel.com";
 
+if (!SLACK_CHANNEL_ID || !SLACK_BOT_TOKEN) {
+  console.error("Missing required env vars: SLACK_CHANNEL_ID, SLACK_BOT_TOKEN");
+  process.exit(1);
+}
+if (!GH_TOKEN) {
+  console.warn("GH_TOKEN not set — GitHub data will be unavailable");
+}
+
 async function fetchGitHubData() {
   const headers = {
     Authorization: `Bearer ${GH_TOKEN}`,
@@ -26,9 +34,9 @@ async function fetchGitHubData() {
 
   const prs = prsRes.ok ? await prsRes.json() : [];
   const issues = issuesRes.ok ? await issuesRes.json() : [];
-  const realIssues = issues.filter((i) => !i.pull_request);
+  const realIssues = Array.isArray(issues) ? issues.filter((i) => !i.pull_request) : [];
 
-  return { prs, issues: realIssues };
+  return { prs: Array.isArray(prs) ? prs : [], issues: realIssues };
 }
 
 async function fetchLinearData() {
@@ -76,7 +84,7 @@ async function synthesizeWithClaude(github, linear) {
 Today is ${today}.
 
 GITHUB — Open PRs (${github.prs.length}):
-${github.prs.map((pr) => `- [#${pr.number}] ${pr.title} (${pr.user.login}, ${pr.draft ? "draft" : "ready"})`).join("\n") || "None"}
+${github.prs.map((pr) => `- [#${pr.number}] ${pr.title} (${pr.user?.login || "unknown"}, ${pr.draft ? "draft" : "ready"})`).join("\n") || "None"}
 
 GITHUB — Open Issues (${github.issues.length}):
 ${github.issues.map((i) => `- [#${i.number}] ${i.title}`).join("\n") || "None"}

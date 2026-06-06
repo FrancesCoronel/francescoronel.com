@@ -28,10 +28,11 @@ jobs:
       - name: Detect newly added blog posts
         id: new-posts
         run: |
-          NEW=$(git diff --name-status HEAD~1 HEAD -- 'content/blog/*.mdx' \
-            | awk '$1 == "A" { print $2 }' \
-            | tr '\n' ' ')
-          echo "files=$NEW" >> "$GITHUB_OUTPUT"
+          NEW=$(git diff --name-status HEAD~1 HEAD -- 'content/blog/**/*.mdx' \
+            | awk '$1 == "A" { print $2 }')
+          echo "files<<EOF" >> "$GITHUB_OUTPUT"
+          echo "$NEW" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
 
       - name: Draft LinkedIn posts to Slack
         if: steps.new-posts.outputs.files != ''
@@ -40,7 +41,8 @@ jobs:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
           SLACK_CHANNEL_ID: C0B9JB5D00G
         run: |
-          for file in ${{ steps.new-posts.outputs.files }}; do
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
             echo "→ Drafting LinkedIn post for $file"
             node scripts/draft-linkedin.js "$file"
-          done
+          done <<< "${{ steps.new-posts.outputs.files }}"

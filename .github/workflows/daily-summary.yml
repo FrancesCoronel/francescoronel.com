@@ -2,7 +2,7 @@ name: Daily Slack summary
 
 on:
   schedule:
-    - cron: "0 13 * * 1-5" # 9am ET, weekdays
+    - cron: "0 13 * * 1-5" # 9am ET (9am EDT / 2pm UTC in summer, 8am EST / 1pm UTC in winter), weekdays
   workflow_dispatch:
 
 jobs:

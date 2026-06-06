@@ -9,6 +9,11 @@ const path = require("path");
 const SLACK_CHANNEL_ID = process.env.SLACK_CHANNEL_ID;
 const SLACK_BOT_TOKEN = process.env.SLACK_BOT_TOKEN;
 
+if (!SLACK_CHANNEL_ID || !SLACK_BOT_TOKEN) {
+  console.error("Missing required env vars: SLACK_CHANNEL_ID, SLACK_BOT_TOKEN");
+  process.exit(1);
+}
+
 const mdxFile = process.argv[2];
 if (!mdxFile) {
   console.error("Usage: node scripts/draft-linkedin.js <path-to-mdx>");
@@ -74,14 +79,18 @@ Output ONLY the LinkedIn post text, nothing else.`,
     ],
   });
 
+  const draft = message.content?.[0]?.text;
+  if (!draft) throw new Error("Claude returned no content");
+
   return {
-    draft: message.content[0].text,
+    draft,
     postUrl,
     title: frontmatter.title || slug,
   };
 }
 
 async function postToSlack(title, postUrl, draft) {
+  const safeDraft = draft.replace(/```/g, "` ` `");
   const res = await fetch("https://slack.com/api/chat.postMessage", {
     method: "POST",
     headers: {
@@ -103,7 +112,7 @@ async function postToSlack(title, postUrl, draft) {
           type: "section",
           text: {
             type: "mrkdwn",
-            text: `*LinkedIn draft — copy, tweak, and post:*\n\`\`\`${draft}\`\`\``,
+            text: `*LinkedIn draft — copy, tweak, and post:*\n\`\`\`${safeDraft}\`\`\``,
           },
         },
         {
