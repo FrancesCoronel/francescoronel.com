@@ -1,0 +1,32 @@
+name: Claude Code Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches: [main]
+
+jobs:
+  claude-review:
+    name: Claude Code Review
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: anthropics/claude-code-action@beta
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          direct_prompt: |
+            Review this pull request for:
+            - Correctness bugs and logic errors
+            - Security issues (XSS, injection, sensitive data exposure)
+            - Performance regressions (especially in Next.js SSG/SSR)
+            - Accessibility violations
+            - Adherence to the project conventions in CLAUDE.md (design tokens, section headers, alternating backgrounds, emoji skin tones)
+            - TypeScript type safety
+            Post inline comments on specific lines where issues are found.
+            Be concise — only flag real issues, not style preferences already enforced by ESLint.
