@@ -100,7 +100,7 @@ jobs:
       - name: Open or update GitHub issue if broken links found
         if: steps.lychee.outputs.exit_code != 0
         continue-on-error: true
-        uses: peter-evans/create-issue-from-file@v5
+        uses: peter-evans/create-issue-from-file@v6
         with:
           title: "🔗 Broken external links detected"
           content-filepath: ./lychee/out.md
