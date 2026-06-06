@@ -187,7 +187,12 @@ test("external links — have rel=noopener", async ({ page }) => {
     const rel = (await link.getAttribute("rel")) ?? "";
     const href = await link.getAttribute("href");
     // Skip same-origin links that happen to be absolute
-    if (href?.includes("francescoronel.com")) continue;
+    try {
+      const { hostname } = new URL(href ?? "");
+      if (hostname === "francescoronel.com" || hostname === "www.francescoronel.com") continue;
+    } catch {
+      continue; // relative or malformed URL — skip
+    }
     expect(rel, `${href} missing noopener`).toContain("noopener");
   }
 });
