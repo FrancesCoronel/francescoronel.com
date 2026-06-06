@@ -112,12 +112,17 @@ export function getBlogPostsByTag(tagSlug: string): BlogPost[] {
 
 // ─── JSON Data Loaders ───────────────────────────────────────
 
+const _jsonCache = new Map<string, unknown[]>();
+
 function loadJSON<T>(filename: string): T[] {
+  if (_jsonCache.has(filename)) return _jsonCache.get(filename) as T[];
   const filePath = path.join(CONTENT_DIR, filename);
   if (!fs.existsSync(filePath)) return [];
   try {
     const raw = fs.readFileSync(filePath, "utf-8");
-    return JSON.parse(raw) as T[];
+    const parsed = JSON.parse(raw) as T[];
+    _jsonCache.set(filename, parsed);
+    return parsed;
   } catch {
     return [];
   }
@@ -307,16 +312,22 @@ let _unifiedPostsCache: Post[] | null = null;
 
 export function getAllPosts(): Post[] {
   if (_unifiedPostsCache) return _unifiedPostsCache;
-  // getAllBlogPosts() now includes project-type MDX posts directly
   const mdxPosts = getAllBlogPosts();
   const mdxSlugSet = new Set(mdxPosts.map((p) => p.slug));
-  // Fall back to JSON for any projects not yet migrated to MDX
   const jsonOnlyProjects: Post[] = getProjects()
     .filter((p) => !mdxSlugSet.has(p.slug))
     .map(projectToPost);
-  _unifiedPostsCache = [...mdxPosts, ...jsonOnlyProjects].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+  // mdxPosts is already sorted by date; merge-sort the two sorted arrays
+  const merged: Post[] = [];
+  let i = 0, j = 0;
+  while (i < mdxPosts.length && j < jsonOnlyProjects.length) {
+    const aTime = new Date(mdxPosts[i].date).getTime();
+    const bTime = new Date(jsonOnlyProjects[j].date).getTime();
+    merged.push(aTime >= bTime ? mdxPosts[i++] : jsonOnlyProjects[j++]);
+  }
+  while (i < mdxPosts.length) merged.push(mdxPosts[i++]);
+  while (j < jsonOnlyProjects.length) merged.push(jsonOnlyProjects[j++]);
+  _unifiedPostsCache = merged;
   return _unifiedPostsCache;
 }
 
