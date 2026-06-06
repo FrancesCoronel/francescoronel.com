@@ -42,14 +42,14 @@ export function Hero() {
 
           {/* Circular profile photo + Memoji overlay */}
           <div className="relative flex-shrink-0">
-            <div className="relative h-56 w-56 sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-96 lg:w-96 xl:h-[28rem] xl:w-[28rem]">
+            <div className="relative h-56 w-56 sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-80 lg:w-80 xl:h-96 xl:w-96">
               <Image
                 src="/images/assets/frances-slack.webp"
                 alt="Frances Coronel"
-                width={448}
-                height={448}
-                className="h-full w-full rounded-full object-cover ring-4 ring-horchata-200 drop-shadow-lg dark:ring-navy-600"
-                sizes="(max-width: 640px) 224px, (max-width: 768px) 256px, (max-width: 1024px) 288px, (max-width: 1280px) 384px, 448px"
+                width={384}
+                height={384}
+                className="h-full w-full rounded-full object-cover object-top ring-4 ring-horchata-200 drop-shadow-lg dark:ring-navy-600"
+                sizes="(max-width: 640px) 224px, (max-width: 768px) 256px, (max-width: 1024px) 288px, (max-width: 1280px) 320px, 384px"
                 priority
               />
             </div>
