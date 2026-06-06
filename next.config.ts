@@ -319,10 +319,14 @@ const nextConfig: NextConfig = {
       // ── Duplicate WordPress posts → Webflow canonical slugs ──
       { source: "/blog/im-obsessed-with-labs", destination: "/blog/im-obsessed-with-labs-f3e5b", permanent: true },
       { source: "/blog/mindot-tour", destination: "/blog/mindot-tour-2", permanent: true },
-      { source: "/blog/new-epoch-new-exploits-%f0%9f%98%88", destination: "/blog/new-epoch-new-exploits-f0-9f-98-88", permanent: true },
-      { source: "/blog/smash-academy-at-stanford-%f0%9f%8e%93", destination: "/blog/smash-academy-at-stanford-f0-9f-8e-93", permanent: true },
-      { source: "/posts/new-epoch-new-exploits-%f0%9f%98%88", destination: "/posts/new-epoch-new-exploits-f0-9f-98-88", permanent: true },
-      { source: "/posts/smash-academy-at-stanford-%f0%9f%8e%93", destination: "/posts/smash-academy-at-stanford-f0-9f-8e-93", permanent: true },
+      { source: "/blog/new-epoch-new-exploits-%f0%9f%98%88", destination: "/posts/new-epoch-new-exploits", permanent: true },
+      { source: "/blog/new-epoch-new-exploits-f0-9f-98-88", destination: "/posts/new-epoch-new-exploits", permanent: true },
+      { source: "/blog/smash-academy-at-stanford-%f0%9f%8e%93", destination: "/posts/smash-academy-at-stanford", permanent: true },
+      { source: "/blog/smash-academy-at-stanford-f0-9f-8e-93", destination: "/posts/smash-academy-at-stanford", permanent: true },
+      { source: "/posts/new-epoch-new-exploits-%f0%9f%98%88", destination: "/posts/new-epoch-new-exploits", permanent: true },
+      { source: "/posts/new-epoch-new-exploits-f0-9f-98-88", destination: "/posts/new-epoch-new-exploits", permanent: true },
+      { source: "/posts/smash-academy-at-stanford-%f0%9f%8e%93", destination: "/posts/smash-academy-at-stanford", permanent: true },
+      { source: "/posts/smash-academy-at-stanford-f0-9f-8e-93", destination: "/posts/smash-academy-at-stanford", permanent: true },
 
       // ── Blog posts migrated to projects ──────────────────
       { source: "/blog/fullstack-academy-3", destination: "/projects/fullstack-academy", permanent: true },
