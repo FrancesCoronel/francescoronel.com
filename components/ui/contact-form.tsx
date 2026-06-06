@@ -66,7 +66,7 @@ export function ContactForm() {
       {/* Honeypot */}
       <input type="text" name="_gotcha" style={{ display: "none" }} tabIndex={-1} autoComplete="off" aria-hidden="true" />
 
-      <p className="text-xs text-navy-500 dark:text-white/40">
+      <p className="text-xs text-navy-500 dark:text-white/60">
         Fields marked with <span className="text-red-500" aria-hidden="true">*</span> are required.
       </p>
 

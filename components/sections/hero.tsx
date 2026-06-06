@@ -49,6 +49,7 @@ export function Hero() {
                 width={448}
                 height={448}
                 className="h-full w-full rounded-full object-cover ring-4 ring-horchata-200 drop-shadow-lg dark:ring-navy-600"
+                sizes="(max-width: 640px) 224px, (max-width: 768px) 256px, (max-width: 1024px) 288px, (max-width: 1280px) 384px, 448px"
                 priority
               />
             </div>

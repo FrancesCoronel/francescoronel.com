@@ -50,6 +50,8 @@ export function MemojiSection({ memojis = defaultMemojis }: MemojiSectionProps) 
                 width={120}
                 height={120}
                 className="h-20 w-20 object-contain drop-shadow-md sm:h-24 sm:w-24 md:h-28 md:w-28"
+                sizes="(max-width: 640px) 80px, (max-width: 768px) 96px, 112px"
+                loading="lazy"
               />
               <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-navy-800 px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 dark:bg-navy-700">
                 {memoji.mood}
