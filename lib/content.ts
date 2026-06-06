@@ -34,9 +34,19 @@ export function getBlogPost(slug: string, { includeDrafts = false } = {}): Post 
   const filePath = path.join(BLOG_DIR, `${slug}.mdx`);
   if (!fs.existsSync(filePath)) return null;
 
-  const raw = fs.readFileSync(filePath, "utf-8");
-  const { data, content } = matter(raw);
-  const frontmatter = data as BlogPostFrontmatter;
+  let raw: string;
+  try {
+    raw = fs.readFileSync(filePath, "utf-8");
+  } catch {
+    return null;
+  }
+  let data: Record<string, unknown>, content: string;
+  try {
+    ({ data, content } = matter(raw));
+  } catch {
+    return null;
+  }
+  const frontmatter = data as unknown as BlogPostFrontmatter;
 
   if (frontmatter.draft && !includeDrafts) return null;
   const stats = readingTime(content);
@@ -105,8 +115,12 @@ export function getBlogPostsByTag(tagSlug: string): BlogPost[] {
 function loadJSON<T>(filename: string): T[] {
   const filePath = path.join(CONTENT_DIR, filename);
   if (!fs.existsSync(filePath)) return [];
-  const raw = fs.readFileSync(filePath, "utf-8");
-  return JSON.parse(raw) as T[];
+  try {
+    const raw = fs.readFileSync(filePath, "utf-8");
+    return JSON.parse(raw) as T[];
+  } catch {
+    return [];
+  }
 }
 
 export function getTestimonials(): Testimonial[] {
