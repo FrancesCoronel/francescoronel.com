@@ -18,6 +18,8 @@ const cabin = Cabin({
 
 const latina = localFont({
   src: [
+    { path: "../public/fonts/latina-essential-light.woff2", weight: "300", style: "normal" },
+    { path: "../public/fonts/latina-essential-light-italic.woff2", weight: "300", style: "italic" },
     { path: "../public/fonts/latina-essential-medium.woff2", weight: "500", style: "normal" },
     { path: "../public/fonts/latina-essential-medium-italic.woff2", weight: "500", style: "italic" },
     { path: "../public/fonts/latina-essential-bold.woff2", weight: "700", style: "normal" },

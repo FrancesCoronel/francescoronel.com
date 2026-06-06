@@ -45,7 +45,7 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
 
   return (
     <nav aria-label="Table of contents">
-      <p className="mb-4 text-xs font-bold uppercase tracking-widest text-navy-400 dark:text-horchata-600">
+      <p className="mb-4 text-xs font-bold uppercase tracking-widest text-navy-400 dark:text-horchata-200">
         On this page
       </p>
       <ul className="relative border-l-2 border-horchata-200 dark:border-navy-700">

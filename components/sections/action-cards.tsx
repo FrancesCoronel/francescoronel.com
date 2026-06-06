@@ -54,7 +54,7 @@ const defaultCards: CtaCard[] = [
 export function ActionCards({ cards = defaultCards }: ActionCardsProps) {
   return (
     <div className="grid gap-4 sm:grid-cols-2">
-      {cards.map((cta) => (
+      {cards.map((cta, index) => (
         <Link
           key={cta.label}
           href={cta.href}
@@ -68,6 +68,7 @@ export function ActionCards({ cards = defaultCards }: ActionCardsProps) {
               height={96}
               className="h-16 w-16 object-contain sm:h-24 sm:w-24"
               aria-hidden="true"
+              priority={index < 2}
             />
           </div>
           <div>

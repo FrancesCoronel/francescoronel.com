@@ -5,33 +5,36 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  /* Colors — warm navy/horchata palette */
-  --color-navy-50: #f0f1f5;
-  --color-navy-100: #d9dce6;
-  --color-navy-200: #b3b9cd;
-  --color-navy-300: #8d96b4;
-  --color-navy-400: #67739b;
-  --color-navy-500: #4a5578;
-  --color-navy-600: #3b4461;
-  --color-navy-700: #2c334a;
-  --color-navy-800: #1e2233;
-  --color-navy-900: #141726;
-  --color-navy-950: #0b0d17;
+  /* Colors — teal/charcoal + linen/raspberry palette (Frances Coronel Design System) */
 
-  --color-horchata-50: #fdf8f3;
-  --color-horchata-100: #f9ede0;
-  --color-horchata-200: #f3dbc1;
-  --color-horchata-300: #ecc9a2;
-  --color-horchata-400: #e5b783;
-  --color-horchata-500: #dfa564;
-  --color-horchata-600: #c98e4e;
-  --color-horchata-700: #a6743f;
-  --color-horchata-800: #835b31;
-  --color-horchata-900: #604223;
-  --color-horchata-950: #3d2a16;
+  /* navy-* → teal-charcoal ramp (dark bg = navy-900 = #253137) */
+  --color-navy-50: #f1f4f5;
+  --color-navy-100: #e1e7ea;
+  --color-navy-200: #c3d0d5;
+  --color-navy-300: #9db3bb;
+  --color-navy-400: #7897a1;
+  --color-navy-500: #557880;
+  --color-navy-600: #415c63;
+  --color-navy-700: #344a50;
+  --color-navy-800: #2b3e43;
+  --color-navy-900: #253137;
+  --color-navy-950: #182126;
 
-  --color-accent: #e5b783;
-  --color-accent-dark: #c98e4e;
+  /* horchata-* → linen/warm neutrals (50–500) + raspberry accent (600+) */
+  --color-horchata-50: #f9f5f3;
+  --color-horchata-100: #f0ebe9;
+  --color-horchata-200: #e8e1de;
+  --color-horchata-300: #e1d7d3;
+  --color-horchata-400: #dacec8;
+  --color-horchata-500: #c7b8b1;
+  --color-horchata-600: #ca2e55;
+  --color-horchata-700: #9e2b25;
+  --color-horchata-800: #7a1e1a;
+  --color-horchata-900: #591512;
+  --color-horchata-950: #38090a;
+
+  --color-accent: #ca2e55;
+  --color-accent-dark: #9e2b25;
 
   /* Typography — Latina Essential for everything */
   --font-latina: "Latina Essential", sans-serif;
@@ -63,13 +66,13 @@
 }
 
 :root {
-  --background: #fdf8f3;
-  --foreground: #1e2233;
+  --background: #f6f2f0;
+  --foreground: #253137;
 }
 
 .dark {
-  --background: #141726;
-  --foreground: #f9ede0;
+  --background: #253137;
+  --foreground: #f0ebe9;
 }
 
 body {
@@ -119,8 +122,11 @@ a, button, [role="button"], label[for], select, summary {
   cursor: pointer;
 }
 
-/* Focus styles */
+/* Focus styles — navy-700 on light (~12:1), overridden to horchata-200 on dark (~11:1) */
 *:focus-visible {
-  outline: 2px solid var(--color-horchata-500);
+  outline: 2px solid var(--color-navy-700);
   outline-offset: 2px;
+}
+.dark *:focus-visible {
+  outline-color: var(--color-horchata-200);
 }
