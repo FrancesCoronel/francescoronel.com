@@ -77,7 +77,7 @@ export default function ContactPage() {
                     {stat}
                   </p>
                   <p className="mt-0.5 text-sm font-medium text-navy-700 dark:text-white/80">{label}</p>
-                  <p className="text-xs text-navy-400 dark:text-white/40">{sublabel}</p>
+                  <p className="text-xs text-navy-500 dark:text-white/60">{sublabel}</p>
                 </div>
               </Link>
             ))}
@@ -126,7 +126,7 @@ export default function ContactPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={label}
-                      className="flex h-10 w-10 items-center justify-center rounded-xl border border-horchata-200 bg-white text-navy-500 transition-colors hover:border-horchata-400 hover:text-navy-900 dark:border-navy-700 dark:bg-navy-800 dark:text-white/50 dark:hover:border-navy-500 dark:hover:text-white"
+                      className="flex h-10 w-10 items-center justify-center rounded-xl border border-horchata-200 bg-white text-navy-500 transition-colors hover:border-horchata-400 hover:text-navy-900 dark:border-navy-700 dark:bg-navy-800 dark:text-white/70 dark:hover:border-navy-500 dark:hover:text-white"
                     >
                       {icon}
                     </a>

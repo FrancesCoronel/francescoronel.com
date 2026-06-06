@@ -68,7 +68,8 @@ export function ActionCards({ cards = defaultCards }: ActionCardsProps) {
               height={96}
               className="h-16 w-16 object-contain sm:h-24 sm:w-24"
               aria-hidden="true"
-              priority={index < 2}
+              sizes="(max-width: 640px) 64px, 96px"
+              loading="lazy"
             />
           </div>
           <div>
