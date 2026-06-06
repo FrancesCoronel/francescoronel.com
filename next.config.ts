@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { withSentryConfig } from "@sentry/nextjs";
 import dedupRedirects from "./scripts/dedup-redirects.json";
 
 const securityHeaders = [
@@ -24,7 +25,7 @@ const securityHeaders = [
       "img-src 'self' data: https:",
       "font-src 'self'",
       // API calls: Vercel Analytics/Speed Insights, GA4, Buttondown newsletter
-      "connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://api.buttondown.email https://formspree.io",
+      "connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://api.buttondown.email https://formspree.io https://o188643.ingest.us.sentry.io",
       // Cal.com booking embed + YouTube/Instagram MDX embeds
       "frame-src https://cal.com https://app.cal.com https://www.youtube.com https://www.instagram.com",
       "object-src 'none'",
@@ -448,4 +449,13 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withSentryConfig(nextConfig, {
+  org: "fvcproductions",
+  project: "fvcproductions",
+  // Suppresses source map upload logs during build
+  silent: !process.env.CI,
+  // Upload source maps to Sentry for readable stack traces in production
+  widenClientFileUpload: true,
+  // Automatically tree-shake Sentry logger statements
+  disableLogger: true,
+});

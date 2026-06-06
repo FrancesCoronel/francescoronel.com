@@ -35,6 +35,10 @@ export const metadata: Metadata = {
       "application/rss+xml": "/feed",
     },
   },
+  verification: {
+    // Get this from Google Search Console → Settings → Ownership verification → HTML tag
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
   other: {
     "llms.txt": "https://francescoronel.com/llms.txt",
     // Add your Bing Webmaster Tools verification key here once obtained from https://www.bing.com/webmasters

@@ -29,6 +29,7 @@
     "test:e2e:smoke": "playwright test e2e/smoke.spec.ts"
   },
   "dependencies": {
+    "@sentry/nextjs": "^10.56.0",
     "@tailwindcss/typography": "^0.5.19",
     "@vercel/analytics": "^2.0.1",
     "@vercel/blob": "2.3.3",
