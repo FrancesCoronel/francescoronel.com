@@ -11,16 +11,18 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # ── Smoke + component tests (fast, every PR) ──────────────────────────────
   e2e:
-    name: Playwright smoke tests
+    name: Playwright smoke & component tests
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      pull-requests: write   # needed to post screenshot comment
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
@@ -35,14 +37,95 @@ jobs:
           npx next build
           npx pagefind --site .next/server/app --output-path public/pagefind || true
 
-      - name: Run Playwright tests
-        run: npm run test:e2e
+      - name: Start server
+        run: npm run start &
+        env:
+          PORT: 3000
+
+      - name: Wait for server
+        run: npx wait-on http://localhost:3000 --timeout 60000
+
+      - name: Run smoke tests
+        run: npm run test:e2e:smoke
         env:
           CI: true
+          BASE_URL: http://localhost:3000
 
-      - uses: actions/upload-artifact@v4
+      - name: Run component tests
+        run: npm run test:e2e:components
+        env:
+          CI: true
+          BASE_URL: http://localhost:3000
+
+      - name: Run visual screenshots (desktop)
+        run: npm run test:e2e:visual
+        env:
+          CI: true
+          BASE_URL: http://localhost:3000
+
+      - name: Run visual screenshots (mobile)
+        run: npm run test:e2e:visual:mobile
+        env:
+          CI: true
+          BASE_URL: http://localhost:3000
+
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: playwright-report
           path: playwright-report/
           retention-days: 14
+
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: screenshots
+          path: test-results/screenshots/
+          retention-days: 14
+
+      # Post a summary comment on PRs linking to the screenshot artifacts
+      - name: Comment screenshot links on PR
+        if: github.event_name == 'pull_request' && always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const artifactUrl = `${runUrl}#artifacts`;
+
+            const body = [
+              '## 📸 Visual snapshots',
+              '',
+              `Screenshots captured for this PR — [view all artifacts](${artifactUrl}).`,
+              '',
+              '| Page | Desktop | Mobile |',
+              '|------|---------|--------|',
+              ...['home','about','posts','speaking','contact','portfolio','testimonials','organizations','experience','education'].map(p =>
+                `| \`/${p === 'home' ? '' : p}\` | [desktop](${artifactUrl}) | [mobile](${artifactUrl}) |`
+              ),
+              '',
+              `> Full Playwright HTML report: [open report](${runUrl})`,
+            ].join('\n');
+
+            // Delete previous bot comment if it exists
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            const prev = comments.find(c => c.user?.type === 'Bot' && c.body?.includes('Visual snapshots'));
+            if (prev) {
+              await github.rest.issues.deleteComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: prev.id,
+              });
+            }
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });
