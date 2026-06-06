@@ -1,8 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
-import type { ComponentType } from "react";
 import { canOptimize } from "@/lib/utils";
+
+function SafeTweet({ id }: { id: string }) {
+  return (
+    <a
+      href={`https://twitter.com/i/status/${id}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-1 text-horchata-600 hover:text-horchata-800 underline"
+    >
+      View on X/Twitter ↗
+    </a>
+  );
+}
 import { ZoomableImage } from "@/components/ui/zoomable-image";
 import { LinkPreview as LinkPreviewRSC } from "@/components/ui/link-preview";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -19,6 +31,11 @@ function extractYouTubeId(url: string): string | null {
 
 function extractInstagramId(url: string): string | null {
   const match = url.match(/instagram\.com\/(?:p|reel|tv)\/([A-Za-z0-9_-]+)/);
+  return match ? match[1] : null;
+}
+
+function extractTweetId(url: string): string | null {
+  const match = url.match(/(?:twitter\.com|x\.com)\/\w+\/status\/(\d+)/);
   return match ? match[1] : null;
 }
 
@@ -79,8 +96,15 @@ function MdxLink({
   const isExternal = href.startsWith("http") || href.startsWith("//");
 
   if (isNaked && isExternal) {
-    // Twitter/X — skip react-tweet embed (null entity arrays in older tweets
-    // cause "TypeError: c is not iterable" during SSG); fall through to OG card.
+    // Twitter/X embed
+    const tweetId = extractTweetId(href);
+    if (tweetId) {
+      return (
+        <span className="not-prose my-6 flex justify-center">
+          <SafeTweet id={tweetId} />
+        </span>
+      );
+    }
 
     // YouTube embed
     const youtubeId = extractYouTubeId(href);
@@ -241,6 +265,7 @@ export const mdxComponents: MDXComponents = {
   p: MdxParagraph,
   Callout,
   Image: MdxImage,
+  Tweet: SafeTweet,
   LinkedInEmbed,
   h1: ({ children, ...props }) => (
     <h1 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-navy-900 dark:text-horchata-100" {...props}>

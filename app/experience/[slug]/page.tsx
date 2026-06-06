@@ -54,7 +54,7 @@ export default async function ExperiencePage({ params }: PageProps) {
             All experience
           </Link>
 
-          <div className="flex items-start gap-6">
+          <div className="flex items-start gap-4 sm:gap-6">
             {exp.companyLogo && (
               <div className="flex-shrink-0 overflow-hidden rounded-xl border border-horchata-200 bg-white p-2 shadow-sm dark:border-navy-700 dark:bg-navy-800">
                 <Image
@@ -70,10 +70,10 @@ export default async function ExperiencePage({ params }: PageProps) {
               <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
                 Experience
               </p>
-              <h1 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100 md:text-4xl">
+              <h1 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl md:text-4xl">
                 {exp.title}
               </h1>
-              <p className="mt-1 text-lg text-navy-600 dark:text-white/70">
+              <p className="mt-1 text-base text-navy-600 dark:text-white/70 sm:text-lg">
                 {org ? (
                   <Link
                     href={`/organizations/${org.slug}`}

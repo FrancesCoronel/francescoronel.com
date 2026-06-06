@@ -26,9 +26,9 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 22
 
@@ -38,7 +38,7 @@ jobs:
 
       - name: Notify Slack on failure
         if: failure() && steps.internal.outcome == 'failure' && github.event_name == 'schedule'
-        uses: slackapi/slack-github-action@v2
+        uses: slackapi/slack-github-action@v3
         with:
           channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
           payload: |
@@ -75,10 +75,11 @@ jobs:
       contents: read
       issues: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Check external links
         id: lychee
+        continue-on-error: true
         uses: lycheeverse/lychee-action@v2
         with:
           args: >-
@@ -98,6 +99,7 @@ jobs:
 
       - name: Open or update GitHub issue if broken links found
         if: steps.lychee.outputs.exit_code != 0
+        continue-on-error: true
         uses: peter-evans/create-issue-from-file@v5
         with:
           title: "🔗 Broken external links detected"
@@ -108,7 +110,7 @@ jobs:
 
       - name: Notify Slack if broken links found
         if: steps.lychee.outputs.exit_code != 0 && github.event_name == 'schedule'
-        uses: slackapi/slack-github-action@v2
+        uses: slackapi/slack-github-action@v3
         with:
           channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
           payload: |

@@ -53,7 +53,7 @@ export default async function EducationPage({ params }: PageProps) {
             Education
           </Link>
 
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-3 sm:gap-5">
             {edu.logo && (
               <Image
                 src={edu.logo}
@@ -67,7 +67,7 @@ export default async function EducationPage({ params }: PageProps) {
               <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
                 Education
               </p>
-              <h1 className="mt-1 text-2xl font-bold leading-tight text-navy-900 dark:text-horchata-100 md:text-3xl">
+              <h1 className="mt-1 text-xl font-bold leading-tight text-navy-900 dark:text-horchata-100 sm:text-2xl md:text-3xl">
                 {edu.degree}
               </h1>
             </div>

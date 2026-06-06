@@ -70,7 +70,7 @@ export default async function TestimonialPage({ params }: PageProps) {
               <ClientOnlyText
                 as="h1"
                 text={testimonial.name}
-                className="text-2xl font-bold text-navy-900 dark:text-horchata-100 md:text-3xl"
+                className="text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl md:text-3xl"
               />
               <p className="mt-0.5 text-base text-navy-600 dark:text-white/70">
                 {testimonial.role}

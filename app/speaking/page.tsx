@@ -97,7 +97,7 @@ export default function SpeakingPage() {
           <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
             Highlights
           </p>
-          <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
+          <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
             Featured Talks 🎤
           </h2>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -154,8 +154,8 @@ export default function SpeakingPage() {
           <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
             Archive
           </p>
-          <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
-            Past Events 📅 <span className="text-lg font-normal text-navy-400 dark:text-white/40">({posts.length})</span>
+          <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
+            Past Events 📅 <span className="text-base font-normal text-navy-400 dark:text-white/40 sm:text-lg">({posts.length})</span>
           </h2>
           <div className="mt-10">
             <SpeakingListClient posts={posts} categoryImages={categoryImages} />

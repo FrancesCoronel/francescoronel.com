@@ -48,7 +48,7 @@ export default async function AwardPage({ params }: PageProps) {
           <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
             Recognition
           </p>
-          <h1 className="mt-2 text-2xl font-bold leading-tight text-navy-900 dark:text-horchata-100 md:text-3xl">
+          <h1 className="mt-2 text-xl font-bold leading-tight text-navy-900 dark:text-horchata-100 sm:text-2xl md:text-3xl">
             {award.title} 🏆
           </h1>
 
