@@ -122,8 +122,11 @@ a, button, [role="button"], label[for], select, summary {
   cursor: pointer;
 }
 
-/* Focus styles */
+/* Focus styles — navy-700 on light (~12:1), overridden to horchata-200 on dark (~11:1) */
 *:focus-visible {
-  outline: 2px solid var(--color-navy-500);
+  outline: 2px solid var(--color-navy-700);
   outline-offset: 2px;
+}
+.dark *:focus-visible {
+  outline-color: var(--color-horchata-200);
 }
