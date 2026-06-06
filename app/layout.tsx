@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Cabin } from "next/font/google";
 import localFont from "next/font/local";
 import { Nav } from "@/components/layout/nav";
 import { Footer } from "@/components/layout/footer";
@@ -9,12 +8,6 @@ import { PersonJsonLd, WebSiteJsonLd } from "@/components/layout/json-ld";
 import { buildMetadata } from "@/lib/metadata";
 import { BackToTop } from "@/components/ui/back-to-top";
 import "./globals.css";
-
-const cabin = Cabin({
-  subsets: ["latin"],
-  variable: "--font-cabin",
-  display: "swap",
-});
 
 const latina = localFont({
   src: [
@@ -55,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cabin.variable} ${latina.variable}`} suppressHydrationWarning>
+    <html lang="en" className={latina.variable} suppressHydrationWarning>
       <head>
         {/* IndieWeb rel="me" for IndieLogin identity verification */}
         <link rel="me" href="https://github.com/FrancesCoronel" />

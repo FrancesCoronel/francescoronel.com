@@ -38,7 +38,6 @@
 
   /* Typography — Latina Essential for everything */
   --font-latina: "Latina Essential", sans-serif;
-  --font-cabin: "Cabin", sans-serif;
   --font-sans: var(--font-latina);
 
   /* Font size scale — 20px minimum baseline, aggressive heading scale */
