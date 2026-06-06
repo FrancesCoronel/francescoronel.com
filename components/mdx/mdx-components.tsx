@@ -21,10 +21,6 @@ import { LinkPreview as LinkPreviewRSC } from "@/components/ui/link-preview";
 const LinkPreview = LinkPreviewRSC as any as (props: { url: string }) => React.ReactElement;
 import type { MDXComponents } from "mdx/types";
 
-function extractTweetId(url: string): string | null {
-  const match = url.match(/(?:twitter\.com|x\.com)\/\w+\/status\/(\d+)/);
-  return match ? match[1] : null;
-}
 
 function extractYouTubeId(url: string): string | null {
   const match = url.match(
@@ -35,6 +31,11 @@ function extractYouTubeId(url: string): string | null {
 
 function extractInstagramId(url: string): string | null {
   const match = url.match(/instagram\.com\/(?:p|reel|tv)\/([A-Za-z0-9_-]+)/);
+  return match ? match[1] : null;
+}
+
+function extractTweetId(url: string): string | null {
+  const match = url.match(/(?:twitter\.com|x\.com)\/\w+\/status\/(\d+)/);
   return match ? match[1] : null;
 }
 
