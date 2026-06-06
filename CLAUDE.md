@@ -172,12 +172,14 @@ Defined in `.claude/commands/` — invoke with `/command-name`:
 
 ## Design Tokens 🎨
 
-Colors follow a **navy + horchata** palette defined in `app/globals.css` under `@theme`:
-- `navy-50` through `navy-950` — dark blues for text, backgrounds
-- `horchata-50` through `horchata-950` — warm beige/tan for accents, highlights
-- Accent: `horchata-400` (#e5b783)
-- Light mode bg: `horchata-50` (#fdf8f3)
-- Dark mode bg: `navy-900` (#141726)
+Colors follow a **teal/charcoal + linen/raspberry** palette defined in `app/globals.css` under `@theme` (Frances Coronel Design System):
+- `navy-50` through `navy-950` — teal-charcoal ramp for text, backgrounds, and dark surfaces
+- `horchata-50` through `horchata-500` — linen/warm neutral ramp for warm backgrounds and borders
+- `horchata-600` through `horchata-950` — raspberry/crimson ramp for accent, links, and CTAs
+- Accent (links, CTAs): `horchata-600` (#ca2e55, raspberry)
+- Light mode bg: `horchata-50` (#f9f5f3), warm section bg: `horchata-100` (#f0ebe9)
+- Dark mode bg: `navy-900` (#253137, dark teal/charcoal)
+- Primary ink: `navy-900` (#253137)
 
 ## Image Hosting 🖼️
 
