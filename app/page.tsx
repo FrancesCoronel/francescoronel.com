@@ -220,7 +220,7 @@ export default async function HomePage() {
                 All projects →
               </Link>
             </div>
-            <div>
+            <div className="overflow-hidden">
               {featuredProjects.map((project) => {
                 const stars = featuredProjectStars[project.slug];
                 return (
@@ -245,7 +245,7 @@ export default async function HomePage() {
                           </span>
                         )}
                       </div>
-                      <p className="mt-1.5 text-sm text-navy-600 dark:text-white/60">{project.tagline}</p>
+                      <p className="mt-1.5 line-clamp-2 text-sm text-navy-600 dark:text-white/60">{project.tagline}</p>
                       <div className="mt-3 flex items-center gap-3 text-xs text-navy-400 dark:text-white/40">
                         <span>{formatDateRange(project.startDate, project.endDate)}</span>
                         {stars != null && stars > 0 && (
@@ -294,7 +294,7 @@ export default async function HomePage() {
                 href={href}
                 className="group flex items-center gap-4 rounded-2xl border border-horchata-200 bg-white px-4 py-3 transition-all hover:border-horchata-400 hover:shadow-md sm:gap-5 sm:px-6 sm:py-5 dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
               >
-                <span className="text-2xl sm:text-3xl" aria-hidden="true">{icon}</span>
+                <span className="hidden text-3xl sm:inline" aria-hidden="true">{icon}</span>
                 <div className="min-w-0 flex-1">
                   <p className="text-2xl font-bold text-navy-900 group-hover:text-horchata-700 sm:text-3xl dark:text-horchata-100 dark:group-hover:text-horchata-400">
                     {stat}
