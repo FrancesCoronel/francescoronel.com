@@ -58,21 +58,21 @@ export function ActionCards({ cards = defaultCards }: ActionCardsProps) {
         <Link
           key={cta.label}
           href={cta.href}
-          className="group flex items-center gap-4 rounded-2xl border border-horchata-200 bg-white px-6 py-5 transition-all hover:border-horchata-400 hover:shadow-md dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
+          className="group flex flex-col items-center gap-3 rounded-2xl border border-horchata-200 bg-white px-4 py-4 text-center transition-all hover:border-horchata-400 hover:shadow-md sm:flex-row sm:items-center sm:gap-4 sm:px-6 sm:py-5 sm:text-left dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
         >
-          <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center sm:h-24 sm:w-24">
+          <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center sm:h-24 sm:w-24">
             <Image
               src={cta.image}
               alt=""
               width={96}
               height={96}
-              className="h-16 w-16 object-contain sm:h-24 sm:w-24"
+              className="h-14 w-14 object-contain sm:h-24 sm:w-24"
               aria-hidden="true"
-              sizes="(max-width: 640px) 64px, 96px"
+              sizes="(max-width: 640px) 56px, 96px"
               loading="lazy"
             />
           </div>
-          <div>
+          <div className="flex-1">
             <p className="font-bold text-navy-900 dark:text-horchata-100">
               {cta.label}
             </p>
@@ -81,7 +81,7 @@ export function ActionCards({ cards = defaultCards }: ActionCardsProps) {
             </p>
           </div>
           <svg
-            className="ml-auto h-5 w-5 text-navy-300 transition-transform group-hover:translate-x-1 dark:text-navy-500"
+            className="hidden h-5 w-5 text-navy-300 transition-transform group-hover:translate-x-1 sm:block dark:text-navy-500"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

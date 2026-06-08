@@ -42,16 +42,16 @@ export function BlogCard({ post, categoryImages, hideReadingTime, basePath = "/b
         );
       })()}
       <div className="flex flex-1 flex-col p-5">
-        <div className="mb-2 flex items-center gap-3 text-xs text-navy-500 dark:text-white/60">
+        <div className="mb-2 flex flex-col gap-0.5 text-xs text-navy-500 sm:flex-row sm:items-center sm:gap-3 dark:text-white/60">
           <time dateTime={post.date}>{formatDate(post.date)}</time>
           {!hideReadingTime && parseInt(post.readingTime) > 1 && (
             <>
-              <span>&middot;</span>
+              <span className="hidden sm:inline">&middot;</span>
               <span>{post.readingTime}</span>
             </>
           )}
         </div>
-        <h3 className="mb-2 break-words text-lg font-bold leading-snug text-navy-900 group-hover:text-horchata-700 dark:text-white dark:group-hover:text-white/80">
+        <h3 className="mb-2 break-words text-base font-bold leading-snug text-navy-900 group-hover:text-horchata-700 sm:text-lg dark:text-white dark:group-hover:text-white/80">
           {post.title}
         </h3>
         <p className="line-clamp-2 text-sm text-navy-600 dark:text-white/70">
