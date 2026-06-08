@@ -164,31 +164,31 @@ export default async function HomePage() {
                 <Link
                   key={edu.slug}
                   href={`/education/${edu.slug}`}
-                  className="group flex cursor-pointer items-start gap-4 rounded-2xl border border-horchata-200 bg-white p-4 transition-all hover:border-horchata-400 hover:shadow-lg dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500 sm:gap-5 sm:p-6"
+                  className="group flex cursor-pointer items-start gap-3 rounded-2xl border border-horchata-200 bg-white p-3 transition-all hover:border-horchata-400 hover:shadow-lg sm:gap-5 sm:p-6 dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
                 >
                   {edu.logo && (
-                    <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-horchata-50 dark:bg-navy-700">
+                    <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-horchata-50 sm:h-14 sm:w-14 dark:bg-navy-700">
                       <Image
                         src={edu.logo}
                         alt={edu.institution}
                         width={56}
                         height={56}
-                        className="h-11 w-11 rounded-lg object-contain"
+                        className="h-9 w-9 rounded-lg object-contain sm:h-11 sm:w-11"
                       />
                     </div>
                   )}
                   <div className="min-w-0 flex-1">
-                    <h3 className="text-base font-bold leading-snug text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100 dark:group-hover:text-horchata-300 sm:text-lg">
+                    <h3 className="text-sm font-bold leading-snug text-navy-900 group-hover:text-horchata-700 sm:text-lg dark:text-horchata-100 dark:group-hover:text-horchata-300">
                       {edu.degree}
                     </h3>
-                    <p className="text-sm text-navy-600 dark:text-white/70">
+                    <p className="text-xs text-navy-600 sm:text-sm dark:text-white/70">
                       {edu.institution}
                     </p>
                     <p className="mt-1 text-xs font-medium text-navy-400 dark:text-horchata-400">
                       {formatDateRange(edu.startDate, edu.endDate)}
                     </p>
                     {edu.description && (
-                      <p className="mt-2 text-sm text-navy-500 dark:text-horchata-400">
+                      <p className="mt-2 hidden text-sm text-navy-500 sm:block dark:text-horchata-400">
                         {edu.description}
                       </p>
                     )}
@@ -224,7 +224,7 @@ export default async function HomePage() {
               {featuredProjects.map((project) => {
                 const stars = featuredProjectStars[project.slug];
                 return (
-                  <div key={project.slug} className="group relative flex items-start gap-6 border-b border-horchata-200 py-8 last:border-b-0 dark:border-navy-700">
+                  <div key={project.slug} className="group relative flex items-start gap-4 border-b border-horchata-200 py-5 last:border-b-0 sm:gap-6 sm:py-8 dark:border-navy-700">
                     <div className="absolute -inset-x-4 inset-y-2 z-0 rounded-2xl border border-horchata-300 bg-white opacity-0 shadow-sm transition group-hover:opacity-100 dark:border-navy-600 dark:bg-navy-800" />
                     <Link href={`/posts/${project.slug}`} className="absolute inset-0 z-20" aria-label={project.title} />
                     <div className="relative z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-md ring-1 ring-navy-900/5 shadow-navy-900/10 dark:bg-navy-700 dark:ring-white/10">
@@ -280,7 +280,7 @@ export default async function HomePage() {
               Impact at a Glance 📊
             </h2>
           </div>
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
             {[
               { stat: `${mentoringSessionCount}+`, label: "Mentoring sessions", sublabel: "logged on Cal.com & Calendly", icon: "💬", href: "/mentoring" },
               { stat: `${roundDown(allPosts.length)}+`, label: "Blog posts", sublabel: "published since 2014", icon: "✍🏽", href: "/posts" },
@@ -292,14 +292,14 @@ export default async function HomePage() {
               <Link
                 key={label}
                 href={href}
-                className="group flex items-center gap-3 rounded-2xl border border-horchata-200 bg-white px-4 py-4 transition-all hover:border-horchata-400 hover:shadow-md sm:gap-5 sm:px-6 sm:py-5 dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
+                className="group flex items-center gap-4 rounded-2xl border border-horchata-200 bg-white px-4 py-3 transition-all hover:border-horchata-400 hover:shadow-md sm:gap-5 sm:px-6 sm:py-5 dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
               >
-                <span className="text-xl sm:text-3xl" aria-hidden="true">{icon}</span>
-                <div className="min-w-0">
-                  <p className="text-xl font-bold text-navy-900 group-hover:text-horchata-700 sm:text-3xl dark:text-horchata-100 dark:group-hover:text-horchata-400">
+                <span className="text-2xl sm:text-3xl" aria-hidden="true">{icon}</span>
+                <div className="min-w-0 flex-1">
+                  <p className="text-2xl font-bold text-navy-900 group-hover:text-horchata-700 sm:text-3xl dark:text-horchata-100 dark:group-hover:text-horchata-400">
                     {stat}
                   </p>
-                  <p className="mt-0.5 text-xs font-medium text-navy-700 sm:text-sm dark:text-white/80">{label}</p>
+                  <p className="mt-0.5 text-sm font-medium text-navy-700 dark:text-white/80">{label}</p>
                   <p className="hidden text-xs text-navy-400 sm:block dark:text-white/40">{sublabel}</p>
                 </div>
               </Link>
