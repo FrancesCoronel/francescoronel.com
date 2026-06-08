@@ -280,7 +280,7 @@ export default async function HomePage() {
               Impact at a Glance 📊
             </h2>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
             {[
               { stat: `${mentoringSessionCount}+`, label: "Mentoring sessions", sublabel: "logged on Cal.com & Calendly", icon: "💬", href: "/mentoring" },
               { stat: `${roundDown(allPosts.length)}+`, label: "Blog posts", sublabel: "published since 2014", icon: "✍🏽", href: "/posts" },
@@ -292,15 +292,15 @@ export default async function HomePage() {
               <Link
                 key={label}
                 href={href}
-                className="group flex items-center gap-5 rounded-2xl border border-horchata-200 bg-white px-6 py-5 transition-all hover:border-horchata-400 hover:shadow-md dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
+                className="group flex items-center gap-3 rounded-2xl border border-horchata-200 bg-white px-4 py-4 transition-all hover:border-horchata-400 hover:shadow-md sm:gap-5 sm:px-6 sm:py-5 dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
               >
-                <span className="text-3xl" aria-hidden="true">{icon}</span>
+                <span className="text-xl sm:text-3xl" aria-hidden="true">{icon}</span>
                 <div className="min-w-0">
-                  <p className="text-3xl font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100 dark:group-hover:text-horchata-400">
+                  <p className="text-xl font-bold text-navy-900 group-hover:text-horchata-700 sm:text-3xl dark:text-horchata-100 dark:group-hover:text-horchata-400">
                     {stat}
                   </p>
-                  <p className="mt-0.5 text-sm font-medium text-navy-700 dark:text-white/80">{label}</p>
-                  <p className="text-xs text-navy-400 dark:text-white/40">{sublabel}</p>
+                  <p className="mt-0.5 text-xs font-medium text-navy-700 sm:text-sm dark:text-white/80">{label}</p>
+                  <p className="hidden text-xs text-navy-400 sm:block dark:text-white/40">{sublabel}</p>
                 </div>
               </Link>
             ))}
