@@ -6,7 +6,7 @@ Create a new MDX blog post with frontmatter template.
 
 1. Ask for the post title if not provided as an argument
 2. Generate a slug from the title (lowercase, hyphens, no special chars)
-3. Create `content/blog/<slug>.mdx` with this frontmatter template:
+3. Create `content/posts/<slug>.mdx` with this frontmatter template:
 
 ```yaml
 ---
@@ -41,3 +41,5 @@ Remind the user:
 - Add a featured image URL
 - Pick categories and tags from the available options
 - The post will appear at `/blog/<slug>` after the next build
+
+> **Tip:** If you have source material (a Claude artifact, notes, transcript, or outline), use `/draft-post` instead — it writes the full post body for you.

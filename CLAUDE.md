@@ -165,7 +165,8 @@ Buttondown is wired up at `/api/newsletter` — subscribers sign up on the site.
 
 Defined in `.claude/commands/` — invoke with `/command-name`:
 
-- `/new-post` — scaffold a new MDX blog post with frontmatter template
+- `/draft-post <url-or-notes>` — fetch source material (artifact URL, notes, outline) and write a complete MDX blog post with full body, excerpt, and metadata
+- `/new-post` — scaffold an empty MDX blog post with frontmatter template (use `/draft-post` if you have source material)
 - `/deploy` — build + push to trigger Vercel deployment
 - `/commit` — smart commit with conventional message
 - `/audit` — run performance & accessibility audits
