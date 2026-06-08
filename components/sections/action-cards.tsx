@@ -60,7 +60,7 @@ export function ActionCards({ cards = defaultCards }: ActionCardsProps) {
           href={cta.href}
           className="group flex items-center gap-4 rounded-2xl border border-horchata-200 bg-white px-6 py-5 transition-all hover:border-horchata-400 hover:shadow-md dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
         >
-          <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center sm:h-24 sm:w-24">
+          <div className="hidden h-16 w-16 flex-shrink-0 items-center justify-center sm:flex sm:h-24 sm:w-24">
             <Image
               src={cta.image}
               alt=""

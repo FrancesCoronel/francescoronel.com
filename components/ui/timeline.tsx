@@ -17,11 +17,11 @@ interface TimelineItem {
 
 export function Timeline({ items, dark }: { items: TimelineItem[]; dark?: boolean }) {
   return (
-    <div className={`relative space-y-10 pl-16 before:absolute before:left-6 before:top-0 before:h-full before:w-0.5 ${dark ? "before:bg-navy-700" : "before:bg-horchata-200 dark:before:bg-navy-700"}`}>
+    <div className={`relative space-y-8 sm:space-y-10 sm:pl-16 sm:before:absolute sm:before:left-6 sm:before:top-0 sm:before:h-full sm:before:w-0.5 ${dark ? "sm:before:bg-navy-700" : "sm:before:bg-horchata-200 dark:sm:before:bg-navy-700"}`}>
       {items.map((item) => (
         <div key={item.slug} className="relative">
           {/* Dot on the timeline */}
-          <div className={`absolute -left-16 top-0 h-12 w-12 overflow-hidden rounded-full border-2 ${dark ? "border-horchata-600 bg-navy-700" : "border-horchata-400 bg-white dark:border-horchata-600 dark:bg-navy-700"}`}>
+          <div className={`hidden sm:block absolute -left-16 top-0 h-12 w-12 overflow-hidden rounded-full border-2 ${dark ? "border-horchata-600 bg-navy-700" : "border-horchata-400 bg-white dark:border-horchata-600 dark:bg-navy-700"}`}>
             <OrgLogo
               src={item.logo}
               orgUrl={item.orgUrl}

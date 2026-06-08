@@ -167,7 +167,7 @@ export default async function HomePage() {
                   className="group flex cursor-pointer items-start gap-3 rounded-2xl border border-horchata-200 bg-white p-3 transition-all hover:border-horchata-400 hover:shadow-lg sm:gap-5 sm:p-6 dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
                 >
                   {edu.logo && (
-                    <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-horchata-50 sm:h-14 sm:w-14 dark:bg-navy-700">
+                    <div className="hidden h-11 w-11 flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-horchata-50 sm:flex sm:h-14 sm:w-14 dark:bg-navy-700">
                       <Image
                         src={edu.logo}
                         alt={edu.institution}
@@ -227,7 +227,7 @@ export default async function HomePage() {
                   <div key={project.slug} className="group relative flex items-start gap-4 border-b border-horchata-200 py-5 last:border-b-0 sm:gap-6 sm:py-8 dark:border-navy-700">
                     <div className="absolute -inset-x-4 inset-y-2 z-0 rounded-2xl border border-horchata-300 bg-white opacity-0 shadow-sm transition group-hover:opacity-100 dark:border-navy-600 dark:bg-navy-800" />
                     <Link href={`/posts/${project.slug}`} className="absolute inset-0 z-20" aria-label={project.title} />
-                    <div className="relative z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-md ring-1 ring-navy-900/5 shadow-navy-900/10 dark:bg-navy-700 dark:ring-white/10">
+                    <div className="relative z-10 hidden h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-md ring-1 ring-navy-900/5 shadow-navy-900/10 sm:flex dark:bg-navy-700 dark:ring-white/10">
                       {project.logo ? (
                         <Image src={project.logo} alt={project.title} width={32} height={32} className="h-8 w-8 rounded-full object-contain" />
                       ) : (
