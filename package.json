@@ -71,9 +71,9 @@
     "markdownlint-cli2": "^0.22.1",
     "pagefind": "^1.4.0",
     "playwright": "^1.58.2",
-    "storybook": "^10.4.2",
+    "storybook": "^10.4.6",
     "tailwindcss": "^4",
-    "tsx": "4.21.0",
+    "tsx": "4.22.4",
     "typescript": "^5",
     "vitest": "^4.1.8",
     "wait-on": "^9.0.10"
