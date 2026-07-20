@@ -16,7 +16,17 @@ export const metadata: Metadata = buildMetadata({
   ogImage: "/images/og/mentoring.jpg",
 });
 
-const pricingTiers = [
+type PricingTier = {
+  price: string;
+  original?: string;
+  label: string;
+  description: string;
+  href: string;
+  cta: string;
+  featured: boolean;
+};
+
+const pricingTiers: PricingTier[] = [
   {
     price: "$30",
     label: "30-Minute Call",
@@ -26,29 +36,11 @@ const pricingTiers = [
     featured: true,
   },
   {
-    price: "$70",
+    price: "$65",
     label: "1-Hour Call",
     description: "Deep dive on career strategy, interview prep, or portfolio review",
     href: "https://cal.com/francescoronel/mentoring-hour",
     cta: "Book a call",
-    featured: false,
-  },
-  {
-    price: "$200",
-    original: "$210",
-    label: "3-Call Package",
-    description: "Three 1-hour sessions ($10 savings)",
-    href: "https://buy.stripe.com/9AQeYVdyk7dn65i9AK",
-    cta: "Purchase package",
-    featured: false,
-  },
-  {
-    price: "$400",
-    original: "$420",
-    label: "6-Call Package",
-    description: "Six 1-hour sessions ($20 savings)",
-    href: "https://buy.stripe.com/3csg2ZeCobtD3Xa9AL",
-    cta: "Purchase package",
     featured: false,
   },
 ];
@@ -156,7 +148,7 @@ export default function MentoringPage() {
             Pricing 💸
           </h2>
 
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 max-w-2xl mx-auto">
             {pricingTiers.map((tier) => (
               <a
                 key={tier.label}
@@ -301,21 +293,13 @@ export default function MentoringPage() {
           <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100">
             Refund Policy 📋
           </h2>
-          <div className="mt-6 grid gap-4 sm:grid-cols-3">
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
             <div className="rounded-xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800">
               <p className="font-medium text-navy-900 dark:text-horchata-100">
                 No refunds
               </p>
               <p className="mt-1 text-sm text-navy-600 dark:text-white/70">
                 All purchases are final
-              </p>
-            </div>
-            <div className="rounded-xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800">
-              <p className="font-medium text-navy-900 dark:text-horchata-100">
-                12-month window
-              </p>
-              <p className="mt-1 text-sm text-navy-600 dark:text-white/70">
-                Packages must be used within 12 months of purchase
               </p>
             </div>
             <div className="rounded-xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800">
