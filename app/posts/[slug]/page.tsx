@@ -193,7 +193,7 @@ export default async function PostPage({ params }: PageProps) {
                       <span className="font-mono text-xs">{repoName}</span>
                       {repoData != null && repoData.stars > 0 && (
                         <>
-                          <span className="text-navy-300 dark:text-navy-600">·</span>
+                          <span className="text-navy-300 dark:text-navy-500">·</span>
                           <span className="flex items-center gap-1">
                             <svg className="h-3 w-3 shrink-0 fill-current text-horchata-500" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
                             {repoData.stars.toLocaleString()}

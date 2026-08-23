@@ -81,7 +81,7 @@ export function ActionCards({ cards = defaultCards }: ActionCardsProps) {
             </p>
           </div>
           <svg
-            className="hidden h-5 w-5 text-navy-300 transition-transform group-hover:translate-x-1 sm:block dark:text-navy-600"
+            className="hidden h-5 w-5 text-navy-300 transition-transform group-hover:translate-x-1 sm:block dark:text-navy-500"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

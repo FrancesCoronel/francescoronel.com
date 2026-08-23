@@ -32,7 +32,7 @@ function AwardCard({
           {award.title}
           {isExternal && (
             <svg
-              className="ml-1.5 inline h-3.5 w-3.5 text-navy-600 transition-colors group-hover:text-horchata-700 dark:text-navy-600"
+              className="ml-1.5 inline h-3.5 w-3.5 text-navy-600 transition-colors group-hover:text-horchata-700 dark:text-navy-500"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"

@@ -184,7 +184,7 @@ export default function MentoringPage() {
                 <p className="flex-1 text-sm text-navy-600 dark:text-white/70">
                   {tier.description}
                 </p>
-                <svg className="mt-4 h-5 w-5 self-end text-horchata-400 transition-colors group-hover:text-navy-900 dark:text-navy-600 dark:group-hover:text-horchata-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                <svg className="mt-4 h-5 w-5 self-end text-horchata-400 transition-colors group-hover:text-navy-900 dark:text-navy-500 dark:group-hover:text-horchata-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
               </a>
             ))}
           </div>

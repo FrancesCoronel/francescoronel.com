@@ -115,7 +115,7 @@ export async function LinkPreview({ url }: { url: string }) {
             {og.description}
           </p>
         )}
-        <span className="mt-1 truncate text-xs text-navy-600 dark:text-navy-600">
+        <span className="mt-1 truncate text-xs text-navy-600 dark:text-horchata-400">
           {hostname}
         </span>
       </div>

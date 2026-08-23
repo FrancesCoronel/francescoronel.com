@@ -453,7 +453,7 @@ export default function UsesPage() {
                         </p>
                       </div>
                       <svg
-                        className="mt-1 h-4 w-4 flex-shrink-0 text-horchata-400 group-hover:text-horchata-700 dark:text-navy-600 dark:group-hover:text-horchata-300"
+                        className="mt-1 h-4 w-4 flex-shrink-0 text-horchata-400 group-hover:text-horchata-700 dark:text-navy-500 dark:group-hover:text-horchata-300"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
