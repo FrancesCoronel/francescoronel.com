@@ -73,7 +73,7 @@ export default async function ProjectsPage() {
 
       {totalStars > 0 && (
         <div className="border-b border-horchata-200 bg-white py-4 dark:border-navy-700 dark:bg-navy-900">
-          <div className="mx-auto flex max-w-[var(--container-max)] flex-wrap items-center gap-6 px-6 text-sm text-navy-500 dark:text-white/50">
+          <div className="mx-auto flex max-w-[var(--container-max)] flex-wrap items-center gap-6 px-6 text-sm text-navy-600 dark:text-white/60">
             <a
               href="https://github.com/FrancesCoronel"
               target="_blank"
@@ -141,11 +141,11 @@ export default async function ProjectsPage() {
                 <h3 className="mt-3 break-words font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
                   {project.title}
                 </h3>
-                <p className="mt-1 flex-1 line-clamp-2 text-sm text-navy-500 dark:text-white/60">
+                <p className="mt-1 flex-1 line-clamp-2 text-sm text-navy-600 dark:text-white/60">
                   {project.tagline}
                 </p>
                 {starsMap[project.slug] != null && (
-                  <div className="mt-3 flex items-center gap-1 text-xs text-navy-400 dark:text-white/40">
+                  <div className="mt-3 flex items-center gap-1 text-xs text-navy-600 dark:text-white/60">
                     <svg className="h-3.5 w-3.5 fill-current text-horchata-500" viewBox="0 0 24 24">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                     </svg>
@@ -164,7 +164,7 @@ export default async function ProjectsPage() {
             Writing & Case Studies
           </p>
           <h2 className="mt-1 mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
-            Portfolio Posts 📝 <span className="text-lg font-normal text-navy-400 dark:text-white/40">({portfolioPosts.length})</span>
+            Portfolio Posts 📝 <span className="text-lg font-normal text-navy-600 dark:text-white/60">({portfolioPosts.length})</span>
           </h2>
           <PostsListClient posts={portfolioPosts} categoryImages={categoryImages} hideSearch />
         </div>

@@ -169,7 +169,7 @@ export function SessionsTable() {
 
       {/* Activity bar chart by year */}
       <div className="mt-8">
-        <p className="mb-3 text-xs font-bold uppercase tracking-widest text-navy-400 dark:text-white/40">
+        <p className="mb-3 text-xs font-bold uppercase tracking-widest text-navy-600 dark:text-white/60">
           Sessions per year
         </p>
         <div className="flex items-end gap-1.5">
@@ -178,14 +178,14 @@ export function SessionsTable() {
             const heightPct = Math.round((count / maxCount) * 100);
             return (
               <div key={year} className="flex flex-1 flex-col items-center gap-1">
-                <span className="text-xs text-navy-400 dark:text-white/40">
+                <span className="text-xs text-navy-600 dark:text-white/60">
                   {count}
                 </span>
                 <div
                   className="w-full rounded-t bg-horchata-400 dark:bg-horchata-600"
                   style={{ height: `${Math.max(4, heightPct * 0.6)}px` }}
                 />
-                <span className="text-[10px] text-navy-400 dark:text-white/40">
+                <span className="text-[10px] text-navy-600 dark:text-white/60">
                   {year}
                 </span>
               </div>
@@ -230,7 +230,7 @@ export function SessionsTable() {
           <option value="leland">Leland</option>
         </select>
 
-        <span className="ml-auto self-center text-sm text-navy-500 dark:text-white/50">
+        <span className="ml-auto self-center text-sm text-navy-600 dark:text-white/60">
           {filtered.length} sessions
         </span>
       </div>
@@ -257,14 +257,14 @@ export function SessionsTable() {
                   key={`${session.date}-${i}`}
                   className="border-b border-horchata-100 last:border-0 odd:bg-white even:bg-horchata-50/50 dark:border-navy-700 dark:odd:bg-navy-900 dark:even:bg-navy-800/50"
                 >
-                  <td className="whitespace-nowrap px-4 py-2.5 text-navy-500 dark:text-white/50">
+                  <td className="whitespace-nowrap px-4 py-2.5 text-navy-600 dark:text-white/60">
                     {formatDate(session.date)}
                   </td>
                   <td className="px-4 py-2.5 font-medium text-navy-900 dark:text-horchata-100">
                     {displayName}
                   </td>
-                  <td className="whitespace-nowrap px-4 py-2.5 text-navy-500 dark:text-white/50">
-                    {session.durationMinutes ? `${session.durationMinutes}m` : <span className="text-navy-300 dark:text-white/20">—</span>}
+                  <td className="whitespace-nowrap px-4 py-2.5 text-navy-600 dark:text-white/60">
+                    {session.durationMinutes ? `${session.durationMinutes}m` : <span className="text-navy-300 dark:text-white/60">—</span>}
                   </td>
                   <td className="whitespace-nowrap px-4 py-2.5">
                     <span className={`whitespace-nowrap rounded-full px-3 py-1 text-xs font-semibold ${CATEGORY_COLORS[category]}`}>

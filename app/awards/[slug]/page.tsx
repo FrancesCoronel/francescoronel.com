@@ -56,7 +56,7 @@ export default async function AwardPage({ params }: PageProps) {
             <span className="rounded-full bg-horchata-100 px-3 py-1 text-sm font-medium text-navy-700 dark:bg-navy-800 dark:text-horchata-300">
               {award.organization}
             </span>
-            <span className="text-sm text-navy-500 dark:text-white/50">
+            <span className="text-sm text-navy-600 dark:text-white/60">
               {formatDate(award.date)}
             </span>
           </div>

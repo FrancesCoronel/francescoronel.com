@@ -32,7 +32,7 @@ function AwardCard({
           {award.title}
           {isExternal && (
             <svg
-              className="ml-1.5 inline h-3.5 w-3.5 text-navy-400 transition-colors group-hover:text-horchata-700 dark:text-navy-500"
+              className="ml-1.5 inline h-3.5 w-3.5 text-navy-600 transition-colors group-hover:text-horchata-700 dark:text-navy-600"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -45,11 +45,11 @@ function AwardCard({
           )}
         </h3>
         {award.organization && (
-          <p className="mt-0.5 text-xs font-medium text-navy-500 dark:text-white/50">
+          <p className="mt-0.5 text-xs font-medium text-navy-600 dark:text-white/60">
             {award.organization}
           </p>
         )}
-        <p className="mt-1 text-xs text-navy-500 dark:text-horchata-400">
+        <p className="mt-1 text-xs text-navy-600 dark:text-horchata-400">
           {formatDate(award.date)}
         </p>
       </div>

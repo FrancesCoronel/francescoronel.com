@@ -95,7 +95,7 @@ function ProjectCard({
         </p>
 
         {(stars != null && stars > 0) && (
-          <div className="relative z-10 mt-4 flex items-center gap-3 text-xs text-navy-400 dark:text-white/40">
+          <div className="relative z-10 mt-4 flex items-center gap-3 text-xs text-navy-600 dark:text-white/60">
             <span>{formatDateRange(project.startDate, project.endDate)}</span>
             <span className="flex items-center gap-1">
               <svg className="h-3 w-3 fill-current text-horchata-500" viewBox="0 0 24 24">
@@ -106,7 +106,7 @@ function ProjectCard({
           </div>
         )}
         {(stars == null || stars <= 0) && (
-          <p className="relative z-10 mt-4 text-xs text-navy-400 dark:text-white/40">
+          <p className="relative z-10 mt-4 text-xs text-navy-600 dark:text-white/60">
             {formatDateRange(project.startDate, project.endDate)}
           </p>
         )}
@@ -149,7 +149,7 @@ function FeaturedProjectRow({
         <p className="mt-1.5 text-sm text-navy-600 dark:text-white/60">
           {project.tagline}
         </p>
-        <div className="mt-3 flex items-center gap-3 text-xs text-navy-400 dark:text-white/40">
+        <div className="mt-3 flex items-center gap-3 text-xs text-navy-600 dark:text-white/60">
           <span>{formatDateRange(project.startDate, project.endDate)}</span>
           {stars != null && stars > 0 && (
             <span className="flex items-center gap-1">
@@ -236,7 +236,7 @@ export function ProjectsGridClient({
                 className={`rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors ${
                   activeFilter === tab.key
                     ? "bg-navy-900 text-white dark:bg-horchata-400 dark:text-navy-900"
-                    : "text-navy-500 hover:bg-horchata-100 hover:text-navy-900 dark:text-white/50 dark:hover:bg-navy-800 dark:hover:text-white"
+                    : "text-navy-600 hover:bg-horchata-100 hover:text-navy-900 dark:text-white/60 dark:hover:bg-navy-800 dark:hover:text-white"
                 }`}
               >
                 {tab.label}
@@ -256,7 +256,7 @@ export function ProjectsGridClient({
               className={`ml-auto flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors ${
                 githubOnly
                   ? "bg-navy-900 text-white dark:bg-horchata-400 dark:text-navy-900"
-                  : "text-navy-500 hover:bg-horchata-100 hover:text-navy-900 dark:text-white/50 dark:hover:bg-navy-800 dark:hover:text-white"
+                  : "text-navy-600 hover:bg-horchata-100 hover:text-navy-900 dark:text-white/60 dark:hover:bg-navy-800 dark:hover:text-white"
               }`}
             >
               <svg className="h-3.5 w-3.5 fill-current" viewBox="0 0 24 24">
@@ -273,12 +273,12 @@ export function ProjectsGridClient({
         <section className="py-16 md:py-20">
           <div className="mx-auto max-w-[var(--container-max)] px-6">
             {filtered.length === 0 ? (
-              <p className="text-center text-navy-500 dark:text-white/50">
+              <p className="text-center text-navy-600 dark:text-white/60">
                 No projects match the current filters.
               </p>
             ) : (
               <>
-                <p className="mb-10 text-sm text-navy-400 dark:text-white/40">
+                <p className="mb-10 text-sm text-navy-600 dark:text-white/60">
                   {filtered.length} project{filtered.length !== 1 ? "s" : ""}
                   {filteredTotalPages > 1 && ` · page ${filteredPage} of ${filteredTotalPages}`}
                 </p>
@@ -331,7 +331,7 @@ export function ProjectsGridClient({
                   <h2 className="mt-1 mb-4 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
                     All Projects 🛠️
                   </h2>
-                  <p className="mb-10 text-sm text-navy-400 dark:text-white/40">
+                  <p className="mb-10 text-sm text-navy-600 dark:text-white/60">
                     {rest.length} projects
                     {restTotalPages > 1 && ` · page ${restPage} of ${restTotalPages}`}
                   </p>

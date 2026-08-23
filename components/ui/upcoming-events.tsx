@@ -55,7 +55,7 @@ export function UpcomingEvents({ events }: UpcomingEventsProps) {
                     <span className="rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">
                       Upcoming
                     </span>
-                    <span className="text-xs text-navy-400 dark:text-white/40">{event.org}</span>
+                    <span className="text-xs text-navy-600 dark:text-white/60">{event.org}</span>
                   </div>
                   <p className="mt-3 font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
                     {event.talk}
@@ -104,7 +104,7 @@ export function UpcomingEvents({ events }: UpcomingEventsProps) {
                 </h2>
               </>
             )}
-            <p className={`text-sm font-semibold text-navy-500 dark:text-horchata-400 ${upcoming.length > 0 ? "mt-6 mb-3" : "mt-4 mb-3"}`}>
+            <p className={`text-sm font-semibold text-navy-600 dark:text-horchata-400 ${upcoming.length > 0 ? "mt-6 mb-3" : "mt-4 mb-3"}`}>
               Recently Past
             </p>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -120,15 +120,15 @@ export function UpcomingEvents({ events }: UpcomingEventsProps) {
                     <span className="rounded-full bg-horchata-100 px-2.5 py-0.5 text-xs font-medium text-horchata-700 dark:bg-navy-700 dark:text-horchata-400">
                       Past
                     </span>
-                    <span className="text-xs text-navy-400 dark:text-white/40">{event.org}</span>
+                    <span className="text-xs text-navy-600 dark:text-white/60">{event.org}</span>
                   </div>
                   <p className="mt-3 font-bold text-navy-700 group-hover:text-horchata-700 dark:text-horchata-200">
                     {event.talk}
                   </p>
-                  <p className="mt-1 text-sm text-navy-500 dark:text-white/60">
+                  <p className="mt-1 text-sm text-navy-600 dark:text-white/60">
                     {event.description}
                   </p>
-                  <p className="mt-3 text-xs text-navy-400 dark:text-horchata-500">
+                  <p className="mt-3 text-xs text-navy-600 dark:text-horchata-500">
                     📅 {formatEventDate(event.date)}
                   </p>
                 </a>

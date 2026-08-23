@@ -134,7 +134,7 @@ export default function NowPage() {
             </div>
           </div>
 
-          <p className="mt-14 text-sm text-navy-500 dark:text-horchata-400">
+          <p className="mt-14 text-sm text-navy-600 dark:text-horchata-400">
             This is a{" "}
             <a
               href="https://nownownow.com/about"

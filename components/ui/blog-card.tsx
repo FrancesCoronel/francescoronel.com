@@ -42,7 +42,7 @@ export function BlogCard({ post, categoryImages, hideReadingTime, basePath = "/b
         );
       })()}
       <div className="flex flex-1 flex-col p-5">
-        <div className="mb-2 flex flex-col gap-0.5 text-xs text-navy-500 sm:flex-row sm:items-center sm:gap-3 dark:text-white/60">
+        <div className="mb-2 flex flex-col gap-0.5 text-xs text-navy-600 sm:flex-row sm:items-center sm:gap-3 dark:text-white/60">
           <time dateTime={post.date}>{formatDate(post.date)}</time>
           {!hideReadingTime && parseInt(post.readingTime) > 1 && (
             <>

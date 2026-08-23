@@ -22,7 +22,7 @@ export function TestimonialsListClient({
 
   return (
     <>
-      <p className="text-sm text-navy-500 dark:text-horchata-400">
+      <p className="text-sm text-navy-600 dark:text-horchata-400">
         {testimonials.length} testimonials
       </p>
 

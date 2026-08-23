@@ -138,7 +138,7 @@ export default async function OrganizationDetailPage({
           </div>
 
           {!hasContent && (
-            <p className="mt-12 text-navy-500 dark:text-horchata-400">
+            <p className="mt-12 text-navy-600 dark:text-horchata-400">
               No associated content found yet for {org.name}.
             </p>
           )}
@@ -162,14 +162,14 @@ export default async function OrganizationDetailPage({
                   href={`/experience/${exp.slug}`}
                   className="group rounded-xl border border-horchata-200 bg-white p-6 transition-shadow hover:shadow-md dark:border-navy-700 dark:bg-navy-800"
                 >
-                  <p className="text-xs font-medium text-navy-500 dark:text-horchata-400">
+                  <p className="text-xs font-medium text-navy-600 dark:text-horchata-400">
                     {formatDateRange(exp.startDate, exp.endDate)}
                   </p>
                   <h3 className="mt-1 text-lg font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100 dark:group-hover:text-horchata-400">
                     {exp.title}
                   </h3>
                   {exp.location && (
-                    <p className="mt-1 text-sm text-navy-500 dark:text-horchata-400">
+                    <p className="mt-1 text-sm text-navy-600 dark:text-horchata-400">
                       {exp.location}
                     </p>
                   )}
@@ -202,14 +202,14 @@ export default async function OrganizationDetailPage({
                   href={`/education/${edu.slug}`}
                   className="group rounded-xl border border-horchata-200 bg-white p-6 transition-shadow hover:shadow-md dark:border-navy-700 dark:bg-navy-800"
                 >
-                  <p className="text-xs font-medium text-navy-500 dark:text-horchata-400">
+                  <p className="text-xs font-medium text-navy-600 dark:text-horchata-400">
                     {formatDateRange(edu.startDate, edu.endDate)}
                   </p>
                   <h3 className="mt-1 text-lg font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100 dark:group-hover:text-horchata-400">
                     {edu.degree}
                   </h3>
                   {edu.field && (
-                    <p className="mt-1 text-sm text-navy-500 dark:text-horchata-400">
+                    <p className="mt-1 text-sm text-navy-600 dark:text-horchata-400">
                       {edu.field}
                     </p>
                   )}
@@ -311,7 +311,7 @@ export default async function OrganizationDetailPage({
                   <h3 className="text-lg font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
                     {award.title}
                   </h3>
-                  <p className="mt-1 text-sm text-navy-500 dark:text-horchata-400">
+                  <p className="mt-1 text-sm text-navy-600 dark:text-horchata-400">
                     {award.date}
                   </p>
                 </Link>

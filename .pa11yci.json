@@ -13,6 +13,13 @@
     "http://localhost:3000/mentoring",
     "http://localhost:3000/testimonials",
     "http://localhost:3000/organizations",
-    "http://localhost:3000/organizations/slack"
+    "http://localhost:3000/organizations/slack",
+    "http://localhost:3000/posts/nextgen-collective-latinx-to-watch",
+    "http://localhost:3000/posts/ai-engineer-conference-2026",
+    "http://localhost:3000/tags/yearly-reflection",
+    "http://localhost:3000/categories/awards",
+    "http://localhost:3000/experience/senior-software-engineer-agentic-sdlc",
+    "http://localhost:3000/education/tidewater-community-college-summer-2010",
+    "http://localhost:3000/testimonials/glenda-robson"
   ]
 }

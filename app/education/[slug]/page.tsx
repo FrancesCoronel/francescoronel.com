@@ -86,10 +86,10 @@ export default async function EducationPage({ params }: PageProps) {
                 {edu.institution}
               </span>
             )}
-            <span className="text-sm text-navy-500 dark:text-white/50">
+            <span className="text-sm text-navy-600 dark:text-white/60">
               {edu.field}
             </span>
-            <span className="text-sm text-navy-500 dark:text-white/50">
+            <span className="text-sm text-navy-600 dark:text-white/60">
               {formatDateRange(edu.startDate, edu.endDate)}
             </span>
           </div>

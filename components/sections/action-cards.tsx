@@ -76,12 +76,12 @@ export function ActionCards({ cards = defaultCards }: ActionCardsProps) {
             <p className="font-bold text-navy-900 dark:text-horchata-100">
               {cta.label}
             </p>
-            <p className="text-sm text-navy-500 dark:text-horchata-400">
+            <p className="text-sm text-navy-600 dark:text-horchata-400">
               {cta.description}
             </p>
           </div>
           <svg
-            className="hidden h-5 w-5 text-navy-300 transition-transform group-hover:translate-x-1 sm:block dark:text-navy-500"
+            className="hidden h-5 w-5 text-navy-300 transition-transform group-hover:translate-x-1 sm:block dark:text-navy-600"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

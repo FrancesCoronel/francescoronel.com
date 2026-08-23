@@ -18,7 +18,7 @@ export function NewsletterCTA() {
           <NewsletterForm variant="dark" />
         </div>
 
-        <p className="mt-3 text-xs text-white/30">
+        <p className="mt-3 text-xs text-white/60">
           No spam. Unsubscribe anytime.
         </p>
       </div>

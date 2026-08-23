@@ -16,7 +16,7 @@ export function LogoCarousel({
 }) {
   return (
     <section className="py-12">
-      <h2 className="mb-6 text-center text-sm font-bold uppercase tracking-widest text-navy-500 dark:text-horchata-400">
+      <h2 className="mb-6 text-center text-sm font-bold uppercase tracking-widest text-navy-600 dark:text-horchata-400">
         {title}
       </h2>
       <Marquee speed={40}>

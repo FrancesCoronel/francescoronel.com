@@ -170,13 +170,13 @@ export const AllVariants: Story = {
   render: () => (
     <div className="flex flex-col gap-8">
       <div>
-        <p className="mb-3 text-xs font-bold uppercase tracking-wider text-navy-500">Primary</p>
+        <p className="mb-3 text-xs font-bold uppercase tracking-wider text-navy-600">Primary</p>
         <a href="#" className="rounded-full bg-horchata-700 px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-horchata-800">
           Get in Touch <span aria-hidden="true">&rarr;</span>
         </a>
       </div>
       <div>
-        <p className="mb-3 text-xs font-bold uppercase tracking-wider text-navy-500">Secondary</p>
+        <p className="mb-3 text-xs font-bold uppercase tracking-wider text-navy-600">Secondary</p>
         <a href="#" className="rounded-full border border-navy-300 px-8 py-3 text-sm font-medium text-navy-900 transition-colors hover:border-navy-400 hover:bg-white">
           Book Mentoring <span aria-hidden="true">&rarr;</span>
         </a>
@@ -188,13 +188,13 @@ export const AllVariants: Story = {
         </a>
       </div>
       <div>
-        <p className="mb-3 text-xs font-bold uppercase tracking-wider text-navy-500">Text Link</p>
+        <p className="mb-3 text-xs font-bold uppercase tracking-wider text-navy-600">Text Link</p>
         <a href="#" className="text-sm font-medium text-horchata-800 hover:text-horchata-700">
           View all <span aria-hidden="true">&rarr;</span>
         </a>
       </div>
       <div>
-        <p className="mb-3 text-xs font-bold uppercase tracking-wider text-navy-500">External Link</p>
+        <p className="mb-3 text-xs font-bold uppercase tracking-wider text-navy-600">External Link</p>
         <a href="#" className="inline-flex items-center gap-2 rounded-full bg-horchata-700 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-horchata-800">
           Follow on LinkedIn
           <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>

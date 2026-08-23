@@ -172,7 +172,7 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
           {/* Search input */}
           <div className="flex items-center border-b border-horchata-200 px-4 dark:border-navy-700">
             <svg
-              className="h-5 w-5 flex-shrink-0 text-navy-400 dark:text-horchata-500"
+              className="h-5 w-5 flex-shrink-0 text-navy-600 dark:text-horchata-500"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -199,7 +199,7 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
             <button
               type="button"
               onClick={onClose}
-              className="ml-2 hidden rounded-md bg-horchata-100 px-2 py-1 text-xs font-medium text-navy-500 sm:block dark:bg-navy-700 dark:text-horchata-400"
+              className="ml-2 hidden rounded-md bg-horchata-100 px-2 py-1 text-xs font-medium text-navy-600 sm:block dark:bg-navy-700 dark:text-horchata-400"
             >
               ESC
             </button>
@@ -225,7 +225,7 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
                           {r.title}
                         </p>
                         <p
-                          className="mt-1 line-clamp-2 text-xs text-navy-500 dark:text-horchata-400"
+                          className="mt-1 line-clamp-2 text-xs text-navy-600 dark:text-horchata-400"
                           dangerouslySetInnerHTML={{
                             __html: r.excerpt
                               // Preserve only <mark>/<\/mark> — swap them with placeholders,
@@ -245,17 +245,17 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
               ) : (
                 !loading && (
                   pagefindError ? (
-                    <p className="px-4 py-8 text-center text-sm text-navy-500 dark:text-horchata-400">
+                    <p className="px-4 py-8 text-center text-sm text-navy-600 dark:text-horchata-400">
                       Search requires a production build. Run{" "}
                       <code className="rounded bg-horchata-100 px-1 dark:bg-navy-700">npm run build</code>{" "}
                       to enable search.
                     </p>
                   ) : pagefind ? (
-                    <p className="px-4 py-8 text-center text-sm text-navy-500 dark:text-horchata-400">
+                    <p className="px-4 py-8 text-center text-sm text-navy-600 dark:text-horchata-400">
                       No results for &ldquo;{query}&rdquo;
                     </p>
                   ) : (
-                    <p className="px-4 py-8 text-center text-sm text-navy-500 dark:text-horchata-400">
+                    <p className="px-4 py-8 text-center text-sm text-navy-600 dark:text-horchata-400">
                       Loading search index&hellip;
                     </p>
                   )
@@ -266,7 +266,7 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
 
           {/* Footer hint */}
           {!query.trim() && (
-            <div className="px-4 py-6 text-center text-xs text-navy-400 dark:text-horchata-500">
+            <div className="px-4 py-6 text-center text-xs text-navy-600 dark:text-horchata-500">
               Search across all 844+ pages: blog posts, projects, talks, and
               more
             </div>
@@ -305,7 +305,7 @@ export function SearchModal() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="cursor-pointer rounded-full p-2 text-navy-500 transition-colors hover:bg-horchata-100 hover:text-navy-700 dark:text-horchata-400 dark:hover:bg-navy-700 dark:hover:text-horchata-200"
+        className="cursor-pointer rounded-full p-2 text-navy-600 transition-colors hover:bg-horchata-100 hover:text-navy-700 dark:text-horchata-400 dark:hover:bg-navy-700 dark:hover:text-horchata-200"
         aria-label="Search (⌘K)"
       >
         <svg

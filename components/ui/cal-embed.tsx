@@ -92,7 +92,7 @@ export function CalEmbed() {
       {!loaded && (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 rounded-2xl border border-horchata-200 bg-horchata-50 dark:border-navy-700 dark:bg-navy-800">
           <div className="h-10 w-10 animate-spin rounded-full border-4 border-horchata-200 border-t-horchata-500 dark:border-navy-600 dark:border-t-horchata-400" />
-          <p className="text-sm text-navy-400 dark:text-horchata-500">Loading calendar...</p>
+          <p className="text-sm text-navy-600 dark:text-horchata-500">Loading calendar...</p>
         </div>
       )}
       <div
