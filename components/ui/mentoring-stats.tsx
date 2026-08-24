@@ -31,7 +31,7 @@ export function MentoringStats({ totalSessions = _meta.totalSessions }: Mentorin
           <p className="mt-1 text-3xl font-bold text-horchata-700 dark:text-horchata-400">
             {value}
           </p>
-          <p className="mt-0.5 text-xs text-navy-500 dark:text-white/60">{label}</p>
+          <p className="mt-0.5 text-xs text-navy-600 dark:text-white/60">{label}</p>
         </div>
       ))}
     </div>

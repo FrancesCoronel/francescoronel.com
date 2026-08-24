@@ -36,7 +36,7 @@ export function LanguagesSection({
                 <p className="text-base font-bold text-navy-900 dark:text-horchata-100 sm:text-lg">
                   {lang.name}
                 </p>
-                <p className="text-sm text-navy-500 dark:text-horchata-400">
+                <p className="text-sm text-navy-600 dark:text-horchata-400">
                   {lang.level}
                 </p>
               </div>

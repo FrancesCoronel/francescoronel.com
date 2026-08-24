@@ -22,7 +22,7 @@ export function TestimonialCard({
         &ldquo;{displayQuote}&rdquo;
       </p>
       <footer className="mt-4 border-t border-horchata-100 pt-4 dark:border-navy-700">
-        <p className="text-xs text-navy-500 dark:text-horchata-400">
+        <p className="text-xs text-navy-600 dark:text-horchata-400">
           {testimonial.role}
           {testimonial.organization && ` at ${testimonial.organization}`}
         </p>

@@ -23,7 +23,7 @@ export default function Error({
       <h1 className="mt-2 text-3xl font-bold text-navy-900 dark:text-horchata-100">
         Unexpected Error
       </h1>
-      <p className="mt-3 max-w-sm text-navy-500 dark:text-white/50">
+      <p className="mt-3 max-w-sm text-navy-600 dark:text-white/60">
         An error occurred while loading this page. Please try again.
       </p>
       <button

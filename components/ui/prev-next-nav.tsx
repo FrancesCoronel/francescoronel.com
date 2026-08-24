@@ -35,7 +35,7 @@ export function PrevNextNav({ prev, next, basePath, allLabel }: PrevNextNavProps
                   href={`${basePath}/${encodeURIComponent(prev.slug)}`}
                   className="group flex flex-col gap-1"
                 >
-                  <span className="text-xs font-bold uppercase tracking-widest text-navy-400 dark:text-white/40">
+                  <span className="text-xs font-bold uppercase tracking-widest text-navy-600 dark:text-white/60">
                     ← Previous
                   </span>
                   <span className="text-sm font-medium text-navy-700 transition-colors group-hover:text-horchata-700 dark:text-white/70 dark:group-hover:text-horchata-400 line-clamp-2">
@@ -50,7 +50,7 @@ export function PrevNextNav({ prev, next, basePath, allLabel }: PrevNextNavProps
                   href={`${basePath}/${encodeURIComponent(next.slug)}`}
                   className="group flex flex-col gap-1"
                 >
-                  <span className="text-xs font-bold uppercase tracking-widest text-navy-400 dark:text-white/40">
+                  <span className="text-xs font-bold uppercase tracking-widest text-navy-600 dark:text-white/60">
                     Next →
                   </span>
                   <span className="text-sm font-medium text-navy-700 transition-colors group-hover:text-horchata-700 dark:text-white/70 dark:group-hover:text-horchata-400 line-clamp-2">

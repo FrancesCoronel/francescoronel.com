@@ -91,7 +91,7 @@ export function BlogListClient({
       )}
 
       {/* Results count */}
-      <p className="mt-6 text-sm text-navy-500 dark:text-horchata-400">
+      <p className="mt-6 text-sm text-navy-600 dark:text-horchata-400">
         Showing {paginated.length} of {filtered.length} posts
         {activeCategory && ` in "${activeCategory}"`}
       </p>
@@ -109,7 +109,7 @@ export function BlogListClient({
       {/* Empty state */}
       {paginated.length === 0 && (
         <div className="mt-12 text-center">
-          <p className="text-lg text-navy-500 dark:text-horchata-400">
+          <p className="text-lg text-navy-600 dark:text-horchata-400">
             No posts found in this category.
           </p>
           <button

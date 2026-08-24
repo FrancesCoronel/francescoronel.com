@@ -184,11 +184,11 @@ export default async function HomePage() {
                     <p className="text-xs text-navy-600 sm:text-sm dark:text-white/70">
                       {edu.institution}
                     </p>
-                    <p className="mt-1 text-xs font-medium text-navy-400 dark:text-horchata-400">
+                    <p className="mt-1 text-xs font-medium text-navy-600 dark:text-horchata-400">
                       {formatDateRange(edu.startDate, edu.endDate)}
                     </p>
                     {edu.description && (
-                      <p className="mt-2 hidden text-sm text-navy-500 sm:block dark:text-horchata-400">
+                      <p className="mt-2 hidden text-sm text-navy-600 sm:block dark:text-horchata-400">
                         {edu.description}
                       </p>
                     )}
@@ -246,7 +246,7 @@ export default async function HomePage() {
                         )}
                       </div>
                       <p className="mt-1.5 text-sm text-navy-600 dark:text-white/60">{project.tagline}</p>
-                      <div className="mt-2 flex flex-col gap-1 text-xs text-navy-400 sm:flex-row sm:items-center sm:gap-3 dark:text-white/40">
+                      <div className="mt-2 flex flex-col gap-1 text-xs text-navy-600 sm:flex-row sm:items-center sm:gap-3 dark:text-white/60">
                         <span>{formatDateRange(project.startDate, project.endDate)}</span>
                         {stars != null && stars > 0 && (
                           <span className="flex items-center gap-1">
@@ -300,7 +300,7 @@ export default async function HomePage() {
                     {stat}
                   </p>
                   <p className="mt-0.5 text-sm font-medium text-navy-700 dark:text-white/80">{label}</p>
-                  <p className="hidden text-xs text-navy-400 sm:block dark:text-white/40">{sublabel}</p>
+                  <p className="hidden text-xs text-navy-600 sm:block dark:text-white/60">{sublabel}</p>
                 </div>
               </Link>
             ))}

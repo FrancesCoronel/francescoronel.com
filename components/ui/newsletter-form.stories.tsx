@@ -27,7 +27,7 @@ export const Section: Story = {
   decorators: [
     (Story) => (
       <div className="max-w-lg rounded-2xl border border-horchata-200 bg-white p-8">
-        <p className="mb-4 text-sm font-bold uppercase tracking-widest text-navy-500">
+        <p className="mb-4 text-sm font-bold uppercase tracking-widest text-navy-600">
           Newsletter
         </p>
         <h2 className="mb-2 text-xl font-bold text-navy-900">
@@ -89,7 +89,7 @@ export const AllVariants: Story = {
   render: () => (
     <div className="flex flex-col gap-8">
       <div>
-        <p className="mb-2 text-xs font-bold uppercase tracking-widest text-navy-500">
+        <p className="mb-2 text-xs font-bold uppercase tracking-widest text-navy-600">
           Section (default)
         </p>
         <div className="max-w-md">
@@ -97,7 +97,7 @@ export const AllVariants: Story = {
         </div>
       </div>
       <div>
-        <p className="mb-2 text-xs font-bold uppercase tracking-widest text-navy-500">
+        <p className="mb-2 text-xs font-bold uppercase tracking-widest text-navy-600">
           Footer
         </p>
         <div className="max-w-sm">

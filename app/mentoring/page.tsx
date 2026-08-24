@@ -172,7 +172,7 @@ export default function MentoringPage() {
                       {tier.price}
                     </span>
                     {"original" in tier && tier.original && (
-                      <span className="text-sm text-navy-400 line-through dark:text-horchata-500">
+                      <span className="text-sm text-navy-600 line-through dark:text-horchata-500">
                         {tier.original}
                       </span>
                     )}

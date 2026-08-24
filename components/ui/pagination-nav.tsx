@@ -33,7 +33,7 @@ export function PaginationNav({ page, totalPages, onPage }: PaginationNavProps) 
 
       {pages.map((item, i) =>
         item === "ellipsis" ? (
-          <span key={`ellipsis-${i}`} className="px-2 text-navy-400 dark:text-horchata-500">
+          <span key={`ellipsis-${i}`} className="px-2 text-navy-600 dark:text-horchata-500">
             ...
           </span>
         ) : (

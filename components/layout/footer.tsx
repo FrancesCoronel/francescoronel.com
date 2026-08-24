@@ -156,7 +156,7 @@ export function Footer() {
             <h3 className="text-sm font-semibold text-navy-900 dark:text-horchata-100">
               Subscribe to my newsletter
             </h3>
-            <p className="mt-1 text-sm text-navy-500 dark:text-white/50">
+            <p className="mt-1 text-sm text-navy-600 dark:text-white/60">
               Updates on talks, blog posts, and mentoring. No spam.
             </p>
           </div>
@@ -167,7 +167,7 @@ export function Footer() {
 
         {/* Bottom: copyright left, social icons right */}
         <div className="mt-8 border-t border-horchata-200 pt-6 dark:border-navy-700 md:flex md:items-center md:justify-between">
-          <p className="text-xs text-navy-400 dark:text-white/40 md:order-1">
+          <p className="text-xs text-navy-600 dark:text-white/60 md:order-1">
             &copy; {new Date().getFullYear()}{" "}
             <Link href="/" className="transition-colors hover:text-navy-600 dark:hover:text-white/70">
               Frances Coronel
@@ -181,7 +181,7 @@ export function Footer() {
                 href={link.href}
                 target="_blank"
                 rel={link.rel ? `${link.rel} noopener noreferrer` : "noopener noreferrer"}
-                className="text-navy-400 transition-colors hover:text-horchata-700 dark:text-white/40 dark:hover:text-horchata-400"
+                className="text-navy-600 transition-colors hover:text-horchata-700 dark:text-white/60 dark:hover:text-horchata-400"
                 aria-label={link.label}
               >
                 {link.icon}

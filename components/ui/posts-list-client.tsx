@@ -58,13 +58,13 @@ export function PostsListClient({ posts, categoryImages, hideSearch }: PostsList
             value={search}
             onChange={(e) => handleSearchChange(e.target.value)}
             style={{ fontSize: "16px" }}
-            className="w-full rounded-lg border border-horchata-200 bg-white px-4 py-2.5 text-navy-900 placeholder:text-navy-400 focus:border-horchata-400 focus:outline-none focus:ring-2 focus:ring-horchata-400/30 dark:border-navy-600 dark:bg-navy-800 dark:text-horchata-100 dark:placeholder:text-horchata-500 dark:focus:border-horchata-500"
+            className="w-full rounded-lg border border-horchata-200 bg-white px-4 py-2.5 text-navy-900 placeholder:text-navy-600 focus:border-horchata-400 focus:outline-none focus:ring-2 focus:ring-horchata-400/30 dark:border-navy-600 dark:bg-navy-800 dark:text-horchata-100 dark:placeholder:text-horchata-500 dark:focus:border-horchata-500"
           />
         </div>
       )}
 
       {/* Results count */}
-      <p className="mt-4 text-sm text-navy-500 dark:text-horchata-400">
+      <p className="mt-4 text-sm text-navy-600 dark:text-horchata-400">
         Showing {paginated.length} of {filtered.length} posts
         {search.trim() && ` matching "${search.trim()}"`}
       </p>
@@ -82,7 +82,7 @@ export function PostsListClient({ posts, categoryImages, hideSearch }: PostsList
       {/* Empty state */}
       {paginated.length === 0 && (
         <div className="mt-12 text-center">
-          <p className="text-lg text-navy-500 dark:text-horchata-400">
+          <p className="text-lg text-navy-600 dark:text-horchata-400">
             No posts found{search.trim() ? ` matching "${search.trim()}"` : ""}.
           </p>
           {search.trim() && (

@@ -95,7 +95,7 @@ export function PagefindSearch() {
     <div className="relative">
       <div className="relative">
         <svg
-          className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-navy-400 dark:text-horchata-500"
+          className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-navy-600 dark:text-horchata-500"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -141,7 +141,7 @@ export function PagefindSearch() {
                       {r.title}
                     </p>
                     <p
-                      className="mt-1 line-clamp-2 text-xs text-navy-500 dark:text-horchata-400"
+                      className="mt-1 line-clamp-2 text-xs text-navy-600 dark:text-horchata-400"
                       dangerouslySetInnerHTML={{ __html: r.excerpt }}
                     />
                   </Link>
@@ -150,7 +150,7 @@ export function PagefindSearch() {
             </ul>
           ) : (
             !loading && (
-              <p className="px-4 py-6 text-center text-sm text-navy-500 dark:text-horchata-400">
+              <p className="px-4 py-6 text-center text-sm text-navy-600 dark:text-horchata-400">
                 No results for &ldquo;{query}&rdquo;
               </p>
             )

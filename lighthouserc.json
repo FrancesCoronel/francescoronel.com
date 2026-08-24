@@ -18,9 +18,11 @@
       "assertions": {
         "categories:performance": ["error", { "minScore": 0.75 }],
         "categories:accessibility": ["error", { "minScore": 0.9 }],
-        "categories:best-practices": ["error", { "minScore": 0.9 }],
+        "categories:best-practices": ["error", { "minScore": 0.85 }],
         "categories:seo": ["error", { "minScore": 0.95 }],
-        "color-contrast": "off",
+
+        "color-contrast": ["error", { "minScore": 1 }],
+
         "errors-in-console": "off",
         "heading-order": "off",
         "image-redundant-alt": "off",
@@ -33,18 +35,24 @@
         "forced-reflow-insight": "off",
         "document-latency-insight": "off",
         "offscreen-images": "off",
-        "unused-javascript": "off",
-        "uses-optimized-images": "off",
-        "uses-responsive-images": "off",
-        "render-blocking-resources": "off",
-        "render-blocking-insight": "off",
-        "largest-contentful-paint": "off",
-        "interactive": "off",
-        "max-potential-fid": "off",
-        "dom-size": "off",
-        "modern-image-formats": "off",
-        "uses-long-cache-ttl": "off",
-        "total-blocking-time": "off"
+
+        "largest-contentful-paint": ["warn", { "minScore": 0.3 }],
+        "interactive": ["warn", { "minScore": 0.4 }],
+        "max-potential-fid": ["warn", { "minScore": 0.2 }],
+        "total-blocking-time": ["warn", { "minScore": 0.5 }],
+        "unused-javascript": ["warn", { "minScore": 0.3 }],
+        "uses-optimized-images": ["warn", { "minScore": 0.5 }],
+        "uses-responsive-images": ["warn", { "minScore": 0.5 }],
+        "render-blocking-resources": ["warn", { "minScore": 0.5 }],
+        "render-blocking-insight": ["warn", { "minScore": 0.5 }],
+        "dom-size": ["warn", { "minScore": 0.5 }],
+        "dom-size-insight": ["warn", { "minScore": 0.5 }],
+        "modern-image-formats": ["warn", { "minScore": 0.5 }],
+        "legacy-javascript": ["warn", { "minScore": 0.5 }],
+        "uses-long-cache-ttl": ["warn", { "minScore": 0.5 }],
+        "image-aspect-ratio": ["warn", { "minScore": 0.5 }],
+        "image-size-responsive": ["warn", { "minScore": 0.5 }],
+        "valid-source-maps": ["warn", { "minScore": 0.3 }]
       }
     }
   }

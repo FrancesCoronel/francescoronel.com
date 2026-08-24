@@ -66,7 +66,7 @@ export function MentoringSessionsFeed() {
 
         {/* Activity bar chart by year */}
         <div className="mt-8">
-          <p className="mb-3 text-xs font-bold uppercase tracking-widest text-navy-400 dark:text-white/40">
+          <p className="mb-3 text-xs font-bold uppercase tracking-widest text-navy-600 dark:text-white/60">
             Sessions per year
           </p>
           <div className="flex items-end gap-1.5">
@@ -75,14 +75,14 @@ export function MentoringSessionsFeed() {
               const heightPct = Math.round((count / maxCount) * 100);
               return (
                 <div key={year} className="flex flex-1 flex-col items-center gap-1">
-                  <span className="text-xs text-navy-400 dark:text-white/40">
+                  <span className="text-xs text-navy-600 dark:text-white/60">
                     {count}
                   </span>
                   <div
                     className="w-full rounded-t bg-horchata-400 dark:bg-horchata-600"
                     style={{ height: `${Math.max(4, heightPct * 0.6)}px` }}
                   />
-                  <span className="text-[10px] text-navy-400 dark:text-white/40">
+                  <span className="text-[10px] text-navy-600 dark:text-white/60">
                     {year.slice(2)}
                   </span>
                 </div>

@@ -45,7 +45,7 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
 
   return (
     <nav aria-label="Table of contents">
-      <p className="mb-4 text-xs font-bold uppercase tracking-widest text-navy-400 dark:text-horchata-200">
+      <p className="mb-4 text-xs font-bold uppercase tracking-widest text-navy-600 dark:text-horchata-200">
         On this page
       </p>
       <ul className="relative border-l-2 border-horchata-200 dark:border-navy-700">
@@ -71,7 +71,7 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
                   level === 3 ? "pl-6" : "pl-4",
                   isActive
                     ? "font-semibold text-horchata-600 dark:text-horchata-400"
-                    : "text-navy-400 hover:text-navy-700 dark:text-white/40 dark:hover:text-white/70",
+                    : "text-navy-600 hover:text-navy-700 dark:text-white/60 dark:hover:text-white/70",
                 ].join(" ")}
               >
                 {text}

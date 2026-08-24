@@ -356,7 +356,7 @@ export default function AboutPage() {
                     {stat}
                   </p>
                   <p className="mt-0.5 text-sm font-medium text-navy-700 dark:text-white/80">{label}</p>
-                  <p className="text-xs text-navy-400 dark:text-white/40">{sublabel}</p>
+                  <p className="text-xs text-navy-600 dark:text-white/60">{sublabel}</p>
                 </div>
               </Link>
             ))}

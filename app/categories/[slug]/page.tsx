@@ -69,7 +69,7 @@ export default async function CategoryPage({ params }: PageProps) {
 
       <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="mb-6 text-sm text-navy-500 dark:text-horchata-400">
+          <p className="mb-6 text-sm text-navy-600 dark:text-horchata-400">
             {posts.length} post{posts.length !== 1 ? "s" : ""}
           </p>
           <PostsListClient posts={posts} categoryImages={categoryImages} hideSearch />

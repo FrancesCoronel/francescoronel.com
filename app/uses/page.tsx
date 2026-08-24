@@ -654,7 +654,7 @@ export default function UsesPage() {
                 <span className="inline-flex flex-shrink-0 items-center rounded-full bg-horchata-200 px-2.5 py-1 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-white/70">
                   {hook.event}
                 </span>
-                <code className="flex-shrink-0 text-xs text-navy-500 dark:text-horchata-400">
+                <code className="flex-shrink-0 text-xs text-navy-600 dark:text-horchata-400">
                   {hook.matcher}
                 </code>
                 <p className="flex-1 text-sm text-navy-600 group-hover:text-navy-900 dark:text-white/70 dark:group-hover:text-horchata-100">

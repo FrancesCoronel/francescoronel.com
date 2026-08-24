@@ -165,7 +165,7 @@ export default async function PostPage({ params }: PageProps) {
                   {post.tagline}
                 </p>
                 {post.startDate && (
-                  <p className="mt-1.5 text-sm text-navy-400 dark:text-white/40">
+                  <p className="mt-1.5 text-sm text-navy-600 dark:text-white/60">
                     {formatDateRange(post.startDate, post.endDate ?? null)}
                   </p>
                 )}
@@ -248,7 +248,7 @@ export default async function PostPage({ params }: PageProps) {
                 <div className="space-y-10">
                   <div>
                     <p className="text-xs font-bold uppercase tracking-widest text-horchata-600 dark:text-horchata-500">Episodes</p>
-                    <p className="mt-1 text-xs text-navy-400 dark:text-white/40">{nailedItEpisodes.length} total</p>
+                    <p className="mt-1 text-xs text-navy-600 dark:text-white/60">{nailedItEpisodes.length} total</p>
                     <div className="mt-4 overflow-x-auto rounded-xl border border-horchata-200 dark:border-navy-700">
                       <table className="w-full text-sm">
                         <thead className="bg-horchata-50 dark:bg-navy-800">
@@ -275,7 +275,7 @@ export default async function PostPage({ params }: PageProps) {
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-widest text-horchata-600 dark:text-horchata-500">Contestants</p>
-                    <p className="mt-1 text-xs text-navy-400 dark:text-white/40">{nailedItContestants.length} total</p>
+                    <p className="mt-1 text-xs text-navy-600 dark:text-white/60">{nailedItContestants.length} total</p>
                     <div className="mt-4 overflow-x-auto rounded-xl border border-horchata-200 dark:border-navy-700">
                       <table className="w-full text-sm">
                         <thead className="bg-horchata-50 dark:bg-navy-800">
@@ -295,7 +295,7 @@ export default async function PostPage({ params }: PageProps) {
                               <td className="px-4 py-3 text-navy-600 dark:text-horchata-300">{c.race}</td>
                               <td className="px-4 py-3 text-center">{c.round1Winner ? "✓" : ""}</td>
                               <td className="px-4 py-3 text-center">{c.round2Winner ? "✓" : ""}</td>
-                              <td className="px-4 py-3 text-xs text-navy-500 dark:text-horchata-400">{c.notes || ""}</td>
+                              <td className="px-4 py-3 text-xs text-navy-600 dark:text-horchata-400">{c.notes || ""}</td>
                             </tr>
                           ))}
                         </tbody>
@@ -313,7 +313,7 @@ export default async function PostPage({ params }: PageProps) {
                 <div className="overflow-hidden rounded-2xl border border-horchata-200 bg-white dark:border-navy-700 dark:bg-navy-800">
                   <div className="flex items-center gap-2 border-b border-horchata-100 px-4 py-3 dark:border-navy-700">
                     <svg className="h-4 w-4 shrink-0 fill-current text-navy-600 dark:text-horchata-300" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" /></svg>
-                    <span className="text-xs font-bold uppercase tracking-widest text-navy-500 dark:text-horchata-500">GitHub 🐙</span>
+                    <span className="text-xs font-bold uppercase tracking-widest text-navy-600 dark:text-horchata-500">GitHub 🐙</span>
                   </div>
                   <a
                     href={`https://github.com/${post.github}`}
@@ -324,7 +324,7 @@ export default async function PostPage({ params }: PageProps) {
                     <span className="min-w-0 break-all font-mono text-sm text-navy-800 dark:text-horchata-200">
                       {post.github}
                     </span>
-                    <svg className="h-3.5 w-3.5 shrink-0 text-navy-400 transition-transform group-hover:translate-x-0.5 dark:text-white/30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10" /></svg>
+                    <svg className="h-3.5 w-3.5 shrink-0 text-navy-600 transition-transform group-hover:translate-x-0.5 dark:text-white/30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10" /></svg>
                   </a>
                   {repoData && (
                     <div className="grid grid-cols-2 divide-x divide-y divide-horchata-100 border-t border-horchata-100 dark:divide-navy-700 dark:border-navy-700">
@@ -332,14 +332,14 @@ export default async function PostPage({ params }: PageProps) {
                         <div className="flex items-center gap-2 px-4 py-3">
                           <svg className="h-4 w-4 shrink-0 fill-current text-horchata-500" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
                           <span className="text-sm font-semibold text-navy-900 dark:text-horchata-100">{repoData.stars.toLocaleString()}</span>
-                          <span className="text-xs text-navy-400 dark:text-white/40">stars</span>
+                          <span className="text-xs text-navy-600 dark:text-white/60">stars</span>
                         </div>
                       )}
                       {repoData.forks > 0 && (
                         <div className="flex items-center gap-2 px-4 py-3">
-                          <svg className="h-4 w-4 shrink-0 fill-current text-navy-400 dark:text-horchata-500" viewBox="0 0 24 24"><path d="M5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a4 4 0 0 1 3.874 3H11a1 1 0 0 1 0 2H8.874A4.002 4.002 0 0 1 1 13a4 4 0 0 1 4-4zm14-6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a4 4 0 0 1 4 4 4 4 0 0 1-3.874 3H13a1 1 0 0 1 0-2h2.126A4.002 4.002 0 0 1 19 9zm-7-6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a4 4 0 0 1 3.874 3 1 1 0 0 1 0 2A4.002 4.002 0 0 1 12 21a4 4 0 0 1-3.874-3 1 1 0 0 1 0-2A4.002 4.002 0 0 1 12 9z" /></svg>
+                          <svg className="h-4 w-4 shrink-0 fill-current text-navy-600 dark:text-horchata-500" viewBox="0 0 24 24"><path d="M5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a4 4 0 0 1 3.874 3H11a1 1 0 0 1 0 2H8.874A4.002 4.002 0 0 1 1 13a4 4 0 0 1 4-4zm14-6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a4 4 0 0 1 4 4 4 4 0 0 1-3.874 3H13a1 1 0 0 1 0-2h2.126A4.002 4.002 0 0 1 19 9zm-7-6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a4 4 0 0 1 3.874 3 1 1 0 0 1 0 2A4.002 4.002 0 0 1 12 21a4 4 0 0 1-3.874-3 1 1 0 0 1 0-2A4.002 4.002 0 0 1 12 9z" /></svg>
                           <span className="text-sm font-semibold text-navy-900 dark:text-horchata-100">{repoData.forks.toLocaleString()}</span>
-                          <span className="text-xs text-navy-400 dark:text-white/40">forks</span>
+                          <span className="text-xs text-navy-600 dark:text-white/60">forks</span>
                         </div>
                       )}
                       {repoData.language && (
@@ -350,9 +350,9 @@ export default async function PostPage({ params }: PageProps) {
                       )}
                       {repoData.openIssues > 0 && (
                         <div className="flex items-center gap-2 px-4 py-3">
-                          <svg className="h-4 w-4 shrink-0 text-navy-400 dark:text-horchata-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
+                          <svg className="h-4 w-4 shrink-0 text-navy-600 dark:text-horchata-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
                           <span className="text-sm font-semibold text-navy-900 dark:text-horchata-100">{repoData.openIssues}</span>
-                          <span className="text-xs text-navy-400 dark:text-white/40">issues</span>
+                          <span className="text-xs text-navy-600 dark:text-white/60">issues</span>
                         </div>
                       )}
                     </div>
@@ -374,7 +374,7 @@ export default async function PostPage({ params }: PageProps) {
               {/* Skills */}
               {post.skills.length > 0 && (
                 <div className="rounded-2xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800">
-                  <p className="text-xs font-bold uppercase tracking-widest text-navy-500 dark:text-horchata-500">
+                  <p className="text-xs font-bold uppercase tracking-widest text-navy-600 dark:text-horchata-500">
                     Skills & Tags 🏷️
                   </p>
                   <div className="mt-3 flex flex-wrap gap-2">
@@ -394,7 +394,7 @@ export default async function PostPage({ params }: PageProps) {
               {/* Organization */}
               {post.organization && (
                 <div className="rounded-2xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800">
-                  <p className="text-xs font-bold uppercase tracking-widest text-navy-500 dark:text-horchata-500">
+                  <p className="text-xs font-bold uppercase tracking-widest text-navy-600 dark:text-horchata-500">
                     Organization 🏢
                   </p>
                   <Link
@@ -485,7 +485,7 @@ export default async function PostPage({ params }: PageProps) {
       <article>
         {/* Header */}
         <header className="mb-10">
-          <div className="mb-4 flex items-center gap-3 text-sm text-navy-500 dark:text-horchata-400">
+          <div className="mb-4 flex items-center gap-3 text-sm text-navy-600 dark:text-horchata-400">
             <time dateTime={post.date}>{formatDate(post.date)}</time>
             <span>&middot;</span>
             <span>{post.readingTime}</span>
@@ -547,7 +547,7 @@ export default async function PostPage({ params }: PageProps) {
         {/* Tags */}
         {post.tags.length > 0 && (
           <div className="mt-10">
-            <p className="mb-2 text-xs font-bold uppercase tracking-wider text-navy-500 dark:text-horchata-400">
+            <p className="mb-2 text-xs font-bold uppercase tracking-wider text-navy-600 dark:text-horchata-400">
               Tags 🏷️
             </p>
             <div className="flex flex-wrap gap-2">
@@ -567,7 +567,7 @@ export default async function PostPage({ params }: PageProps) {
         {/* Organizations */}
         {organizations.length > 0 && (
           <div className="mt-8">
-            <p className="mb-3 text-xs font-bold uppercase tracking-wider text-navy-500 dark:text-horchata-400">
+            <p className="mb-3 text-xs font-bold uppercase tracking-wider text-navy-600 dark:text-horchata-400">
               Organizations 🏢
             </p>
             <div className="flex flex-wrap gap-3">

@@ -136,7 +136,7 @@ export default function PortfolioPage() {
                   <h3 className="mt-3 font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
                     {project.title}
                   </h3>
-                  <p className="mt-1 flex-1 line-clamp-2 text-sm text-navy-500 dark:text-white/60">
+                  <p className="mt-1 flex-1 line-clamp-2 text-sm text-navy-600 dark:text-white/60">
                     {project.tagline}
                   </p>
                 </div>
@@ -155,7 +155,7 @@ export default function PortfolioPage() {
           <h2 className="mt-1 mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
             Portfolio Posts 📝
           </h2>
-          <p className="mb-6 text-sm text-navy-500 dark:text-horchata-400">
+          <p className="mb-6 text-sm text-navy-600 dark:text-horchata-400">
             {posts.length} item{posts.length !== 1 ? "s" : ""}
           </p>
           <PostsListClient posts={posts} categoryImages={categoryImages} hideSearch />

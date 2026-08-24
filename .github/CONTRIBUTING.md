@@ -34,3 +34,9 @@ npm run lint      # ESLint + Markdown lint
 - Tailwind CSS 4 utility classes — no new CSS files
 - Follow the existing component patterns in `components/`
 - No new dependencies without discussion in an issue first
+
+## License
+
+The source code (everything outside `content/blog/` and `public/`) is licensed under the [MIT License](../LICENSE). By submitting a code contribution, you agree it may be distributed under that license.
+
+Blog posts, images, and other written content are © Frances Coronel, all rights reserved — this repo does not accept new blog content from contributors (see above).

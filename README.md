@@ -55,3 +55,15 @@ CAL_COM_API_KEY=                  # Cal.com mentoring sessions
 BUTTONDOWN_API_KEY=               # Newsletter (Buttondown)
 BLOB_READ_WRITE_TOKEN=            # Vercel Blob storage
 ```
+
+## Contributing 🤝🏽
+
+Bug reports, typo fixes, and measurable perf/a11y improvements are welcome — see [`.github/CONTRIBUTING.md`](./.github/CONTRIBUTING.md).
+
+## Security 🔒
+
+See [`.github/SECURITY.md`](./.github/SECURITY.md) for how to report a vulnerability.
+
+## License 📄
+
+Source code is licensed under the [MIT License](./LICENSE). Blog posts, images, and other written content in `content/blog/` and `public/` are © Frances Coronel, all rights reserved, unless a post states otherwise.

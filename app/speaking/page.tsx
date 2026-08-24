@@ -124,7 +124,7 @@ export default function SpeakingPage() {
                       />
                     </div>
                     <div>
-                      <p className="text-xs font-medium text-navy-500 dark:text-horchata-400">
+                      <p className="text-xs font-medium text-navy-600 dark:text-horchata-400">
                         {talk.org}
                       </p>
                       <p className="mt-0.5 text-sm font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100 dark:group-hover:text-horchata-300">
@@ -155,7 +155,7 @@ export default function SpeakingPage() {
             Archive
           </p>
           <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
-            Past Events 📅 <span className="text-base font-normal text-navy-400 dark:text-white/40 sm:text-lg">({posts.length})</span>
+            Past Events 📅 <span className="text-base font-normal text-navy-600 dark:text-white/60 sm:text-lg">({posts.length})</span>
           </h2>
           <div className="mt-10">
             <SpeakingListClient posts={posts} categoryImages={categoryImages} />

@@ -14,7 +14,7 @@ interface OrgSummary {
 export function OrgGridClient({ organizations }: { organizations: OrgSummary[] }) {
   return (
     <>
-      <p className="mt-6 text-sm text-navy-500 dark:text-horchata-400">
+      <p className="mt-6 text-sm text-navy-600 dark:text-horchata-400">
         {organizations.length} organization{organizations.length !== 1 ? "s" : ""}
       </p>
 
@@ -38,7 +38,7 @@ export function OrgGridClient({ organizations }: { organizations: OrgSummary[] }
                 {org.name}
               </p>
               {org.totalRefs > 0 && (
-                <p className="text-xs text-navy-400 dark:text-horchata-500">
+                <p className="text-xs text-navy-600 dark:text-horchata-500">
                   {org.totalRefs} reference{org.totalRefs !== 1 ? "s" : ""}
                 </p>
               )}
@@ -47,7 +47,7 @@ export function OrgGridClient({ organizations }: { organizations: OrgSummary[] }
         </div>
       ) : (
         <div className="mt-12 text-center">
-          <p className="text-lg text-navy-500 dark:text-horchata-400">
+          <p className="text-lg text-navy-600 dark:text-horchata-400">
             No organizations found.
           </p>
         </div>

@@ -59,7 +59,7 @@ function ColorSwatch({ name, hex }: { name: string; hex: string }) {
       <p className="mt-2 text-sm font-medium text-navy-900 dark:text-horchata-100">
         {name}
       </p>
-      <p className="text-xs text-navy-500 dark:text-horchata-400">{hex}</p>
+      <p className="text-xs text-navy-600 dark:text-horchata-400">{hex}</p>
     </div>
   );
 }
@@ -143,7 +143,7 @@ export default function DesignSystemPage() {
               <p className="mt-3 font-medium text-navy-900 dark:text-horchata-100">
                 Light Background
               </p>
-              <p className="text-sm text-navy-500 dark:text-horchata-400">
+              <p className="text-sm text-navy-600 dark:text-horchata-400">
                 horchata-50 / navy-900
               </p>
             </div>
@@ -152,7 +152,7 @@ export default function DesignSystemPage() {
               <p className="mt-3 font-medium text-navy-900 dark:text-horchata-100">
                 Dark Section
               </p>
-              <p className="text-sm text-navy-500 dark:text-horchata-400">
+              <p className="text-sm text-navy-600 dark:text-horchata-400">
                 navy-900 / navy-950
               </p>
             </div>
@@ -161,7 +161,7 @@ export default function DesignSystemPage() {
               <p className="mt-3 font-medium text-navy-900 dark:text-horchata-100">
                 Accent
               </p>
-              <p className="text-sm text-navy-500 dark:text-horchata-400">
+              <p className="text-sm text-navy-600 dark:text-horchata-400">
                 horchata-400 (#e5b783)
               </p>
             </div>
@@ -187,7 +187,7 @@ export default function DesignSystemPage() {
             <p className="text-3xl font-bold text-navy-900 dark:text-horchata-100">
               Latina Essential
             </p>
-            <p className="mt-2 text-sm text-navy-500 dark:text-horchata-400">
+            <p className="mt-2 text-sm text-navy-600 dark:text-horchata-400">
               Primary typeface &mdash; used for all text across the site including
               headings, body, labels, and UI elements.
               Loaded locally via next/font/local. Designed by Latinotype.
@@ -215,7 +215,7 @@ export default function DesignSystemPage() {
             <p className="text-3xl font-bold text-navy-900 dark:text-horchata-100" style={{ fontFamily: "var(--font-cabin)" }}>
               Cabin
             </p>
-            <p className="mt-2 text-sm text-navy-500 dark:text-horchata-400">
+            <p className="mt-2 text-sm text-navy-600 dark:text-horchata-400">
               Fallback typeface &mdash; available as a secondary option via
               next/font/google. Previously used as the body font.
             </p>
@@ -255,10 +255,10 @@ export default function DesignSystemPage() {
                   </p>
                 </div>
                 <div className="w-40 flex-shrink-0">
-                  <p className="text-sm text-navy-500 dark:text-horchata-400">
+                  <p className="text-sm text-navy-600 dark:text-horchata-400">
                     {t.size}
                   </p>
-                  <p className="text-xs text-navy-400 dark:text-horchata-500">
+                  <p className="text-xs text-navy-600 dark:text-horchata-500">
                     LH: {t.lineHeight}
                   </p>
                 </div>
@@ -268,7 +268,7 @@ export default function DesignSystemPage() {
                 >
                   Aa
                 </p>
-                <p className="hidden text-sm text-navy-500 dark:text-horchata-400 md:block">
+                <p className="hidden text-sm text-navy-600 dark:text-horchata-400 md:block">
                   {t.usage}
                 </p>
               </div>
@@ -295,7 +295,7 @@ export default function DesignSystemPage() {
               <p className="mt-1 font-mono text-sm text-horchata-700 dark:text-horchata-400">
                 1200px
               </p>
-              <p className="mt-2 text-sm text-navy-500 dark:text-horchata-400">
+              <p className="mt-2 text-sm text-navy-600 dark:text-horchata-400">
                 var(--container-max) with px-6 padding
               </p>
             </div>
@@ -306,7 +306,7 @@ export default function DesignSystemPage() {
               <p className="mt-1 font-mono text-sm text-horchata-700 dark:text-horchata-400">
                 py-16 md:py-20
               </p>
-              <p className="mt-2 text-sm text-navy-500 dark:text-horchata-400">
+              <p className="mt-2 text-sm text-navy-600 dark:text-horchata-400">
                 64px mobile, 80px desktop
               </p>
             </div>
@@ -317,7 +317,7 @@ export default function DesignSystemPage() {
               <p className="mt-1 font-mono text-sm text-horchata-700 dark:text-horchata-400">
                 rounded-2xl (16px)
               </p>
-              <p className="mt-2 text-sm text-navy-500 dark:text-horchata-400">
+              <p className="mt-2 text-sm text-navy-600 dark:text-horchata-400">
                 Used on all cards, modals, and elevated surfaces
               </p>
             </div>
@@ -381,7 +381,7 @@ export default function DesignSystemPage() {
             <span className="inline-flex items-center rounded-full bg-navy-900 px-3 py-1 text-xs font-medium text-white hover:bg-navy-800 dark:bg-navy-600 dark:text-white dark:hover:bg-navy-500">
               #Tag Badge
             </span>
-            <span className="inline-flex items-center rounded-full border border-navy-300 px-3 py-1 text-xs font-medium text-navy-500 dark:border-navy-600 dark:text-horchata-400">
+            <span className="inline-flex items-center rounded-full border border-navy-300 px-3 py-1 text-xs font-medium text-navy-600 dark:border-navy-600 dark:text-horchata-400">
               Outline Badge
             </span>
           </div>
@@ -435,7 +435,7 @@ export default function DesignSystemPage() {
                 Used for blog posts, testimonials, portfolio items, and general
                 content containers.
               </p>
-              <p className="mt-4 font-mono text-xs text-navy-400 dark:text-horchata-500">
+              <p className="mt-4 font-mono text-xs text-navy-600 dark:text-horchata-500">
                 rounded-2xl border border-horchata-200 bg-white
               </p>
             </div>
@@ -482,15 +482,15 @@ export default function DesignSystemPage() {
           <div className="mt-10 grid gap-8 sm:grid-cols-3">
             <div className="rounded-xl bg-white p-6 shadow-sm dark:bg-navy-800">
               <p className="font-medium text-navy-900 dark:text-horchata-100">shadow-sm</p>
-              <p className="mt-1 text-sm text-navy-500 dark:text-horchata-400">Subtle elevation</p>
+              <p className="mt-1 text-sm text-navy-600 dark:text-horchata-400">Subtle elevation</p>
             </div>
             <div className="rounded-xl bg-white p-6 shadow-md dark:bg-navy-800">
               <p className="font-medium text-navy-900 dark:text-horchata-100">shadow-md</p>
-              <p className="mt-1 text-sm text-navy-500 dark:text-horchata-400">Default card shadow</p>
+              <p className="mt-1 text-sm text-navy-600 dark:text-horchata-400">Default card shadow</p>
             </div>
             <div className="rounded-xl bg-white p-6 shadow-lg dark:bg-navy-800">
               <p className="font-medium text-navy-900 dark:text-horchata-100">shadow-lg</p>
-              <p className="mt-1 text-sm text-navy-500 dark:text-horchata-400">Hover state shadow</p>
+              <p className="mt-1 text-sm text-navy-600 dark:text-horchata-400">Hover state shadow</p>
             </div>
           </div>
         </div>
@@ -529,7 +529,7 @@ export default function DesignSystemPage() {
                 overrides. Aggressive floor ensures readability at all
                 breakpoints and prevents iOS Safari zoom on input focus.
               </p>
-              <p className="mt-4 font-mono text-xs text-navy-400 dark:text-horchata-500">
+              <p className="mt-4 font-mono text-xs text-navy-600 dark:text-horchata-500">
                 text-xs = text-sm = 20px (1.25rem)
               </p>
             </div>
@@ -573,7 +573,7 @@ export default function DesignSystemPage() {
               <p className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100">
                 Section Heading
               </p>
-              <p className="mt-3 text-sm text-navy-500 dark:text-horchata-400">
+              <p className="mt-3 text-sm text-navy-600 dark:text-horchata-400">
                 Sections use a small uppercase label above the main heading.
                 Label is always horchata-500.
               </p>
