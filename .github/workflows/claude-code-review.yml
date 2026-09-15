@@ -18,11 +18,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: anthropics/claude-code-action@beta
+      - uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          model: claude-sonnet-5
-          direct_prompt: |
+          prompt: |
+            REPO: ${{ github.repository }}
+            PR NUMBER: ${{ github.event.pull_request.number }}
+
             Review this pull request for:
             - Correctness bugs and logic errors
             - Security issues (XSS, injection, sensitive data exposure)
@@ -32,3 +34,5 @@ jobs:
             - TypeScript type safety
             Post inline comments on specific lines where issues are found.
             Be concise — only flag real issues, not style preferences already enforced by ESLint.
+          claude_args: |
+            --model claude-sonnet-5
