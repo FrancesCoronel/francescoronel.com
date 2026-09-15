@@ -1,5 +1,31 @@
 [
   {
+    "institution": "Deep Atlas",
+    "slug": "deep-atlas-mli-cohort-21",
+    "degree": "Machine Learning Intensive (MLI) — Cohort 21",
+    "field": "AI/ML Engineering",
+    "logo": "",
+    "url": "https://www.deepatlas.ai/",
+    "startDate": "2026-02-28T00:00:00.000Z",
+    "endDate": "2026-03-05T00:00:00.000Z",
+    "description": "One-week, full-time immersive AI/ML bootcamp in San Francisco compressing roughly 6 months of learning into 5 days — math foundations, classical ML, deep learning, pretrained models, and modern AI engineering (RAG, agents, evals). Rallied 12 fellow Slack engineers to join the cohort and gave a lightning talk on my AI workflow and tooling.",
+    "honors": [
+      "Completed 95 hours of coursework in Agentic AI Systems, Machine Learning & AI (Feb 28 – Mar 4, 2026)"
+    ]
+  },
+  {
+    "institution": "ELC (Engineering Leadership Community)",
+    "slug": "elc-peer-group-2025",
+    "degree": "Peer Group Program — Engineering Leadership",
+    "field": "Engineering Leadership",
+    "logo": "",
+    "url": "https://sfelc.com/",
+    "startDate": "2025-04-04T00:00:00.000Z",
+    "endDate": "2026-04-17T00:00:00.000Z",
+    "description": "Selective, interview-based peer group cohort through ELC (in partnership with the Fung Institute for Engineering Leadership at UC Berkeley), meeting monthly with a small group of engineering leaders from companies like HashiCorp, Yelp, Coinbase, and Lattice to work through leadership challenges together.",
+    "honors": []
+  },
+  {
     "institution": "Tidewater Community College",
     "slug": "tidewater-community-college-summer-2010",
     "degree": "Dual Enrollment - Algebra & Accounting",
