@@ -1,0 +1,109 @@
+---
+title: "AI Is Fertilizer. Now We Have to Learn to Prune. 🌳"
+slug: "ai-is-fertilizer-learn-to-prune"
+date: "2026-10-09"
+excerpt: "Agents are growing our codebases faster than we can maintain them. Orchard engineering pairs every growth loop with a pruning loop so code stays healthy at agent scale."
+featuredImage: ""
+categories: ["blog"]
+tags: ["ai", "ai-agents", "developer-productivity"]
+organizations: []
+skills: []
+source: "nextjs"
+---
+
+Right now, I'm averaging 40+ PRs a day between the ones I open and the ones I merge. Yesterday alone, I opened about 20 and merged another 20. I work on an Agentic SDLC team, so I have more room to experiment than most engineers. But I don't think that will stay unusual for long. Very soon, if not already, this will be the norm for every engineer.
+
+And it's about to get bigger. We're piloting **factories**: agents that build in the background, around the clock, without anyone kicking off each task. When that scales, the amount of code we produce won't just double. It will multiply.
+
+That's exciting! 🚀 It also makes one thing urgent: someone has to be thinking about what we cut, and what we should build in the first place.
+
+## From one tree to an orchard
+
+This analogy didn't come from a whiteboard. It came from my backyard. My partner Andrew and I are trying to grow two Washington navel orange trees 🍊, and I've never had much of a green thumb, so I've been slowly learning as I go. The more I learn about tending them, the more it sounds like the conversations I'm having at work about agent-written code.
+
+For most of software history, a codebase was like a single tree in your backyard. It grew at a human pace. A few engineers tended it, and when it got overgrown, you scheduled a cleanup sprint and trimmed it back. Growth and maintenance moved at roughly the same speed.
+
+AI is fertilizer. Dump it on a tree and it doesn't just grow faster, it grows *everywhere*. And we're not tending one tree anymore. Every team now has an orchard, and factories will turn that orchard into a forest. 🌲
+
+Here's the catch: every line we add is a line someone, or something, has to maintain forever. It needs tests, upgrades, security patches, and context for the next person or agent who touches it. Right now, agents are creating far more than they remove. Growth with nothing to keep it in check is uncontrolled growth, and it eventually breaks the very foundation it grew from.
+
+## What uncontrolled growth looks like
+
+Anyone who has cared for a tree knows growth alone isn't health. Overgrown codebases show the same symptoms:
+
+- **Water sprouts:** fast shoots that grow straight up, bear no fruit, and drain the tree's energy. In code, that's duplicate helpers, near-identical components, and verbose logic written because an agent didn't know a solution already existed.
+- **Deadwood:** unused files, stale feature flags, and dead code nobody dares to delete.
+- **Power lines:** production systems, security boundaries, and critical dependencies that new growth must never touch.
+- **A lopsided canopy:** one area of the codebase gets so heavy it strains everything around it.
+- **Runaway roots:** roots that spread under the sidewalk, crack the foundation, and wrap around pipes. Code that sprawls past its boundaries starts touching services, data, and systems it was never meant to reach.
+
+More branches, less fruit. 🍎
+
+## Frontier teams are already pruning
+
+The teams shipping the most agent code are the ones who hit this wall first. A few public examples:
+
+- **OpenAI:** The Codex team tried dedicating every Friday to manual cleanup. It ate about 20 percent of engineering time and still couldn't keep up with how fast agents generated code. Now recurring background tasks scan for drift and open small refactoring PRs, most reviewable in under a minute. They compare it to paying down a high-interest loan in small increments. ([Harness engineering](https://openai.com/index/harness-engineering/))
+- **Anthropic:** In January, the Claude Code team open-sourced the [code-simplifier agent](https://github.com/anthropics/claude-plugins-official/blob/main/plugins/code-simplifier/agents/code-simplifier.md) it uses internally to keep its own codebase clean. It refactors recently changed code for clarity and less duplication while preserving exact behavior, typically before a PR is opened. That's a pruning step built right into the growth loop.
+- **Spotify:** Spotify runs Honk, a background coding agent built for large-scale software maintenance. In one case study, a team used it to migrate thousands of downstream consumers onto new dataset versions, saving an estimated 10 engineering weeks. ([Honk, Part 4](https://engineering.atspotify.com/2026/4/background-coding-agents-dataset-migrations-honk-part-4))
+- **Stripe:** Its unattended agents, called Minions, produce more than a thousand merged PRs a week. The key detail: their orchestration interleaves agent steps with deterministic ones, so steps like linting and CI always run. Those are power lines baked into the pipeline. ([Minions](https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents))
+
+The industry calls this "garbage collection" or "fighting entropy." Accurate, but it only lands with engineers. Everyone understands pruning a tree. 🌱
+
+## Orchard engineering: growing with shape
+
+Orchard engineering means pairing every growth loop with a pruning loop. If agents are planting, other agents and humans need to be shaping. It has four parts.
+
+### 1. Decide what to plant
+
+The cheapest code to maintain is code you never wrote. Before a factory builds anything, ask: Does this need to exist? Does it already exist somewhere else? What will it cost to keep alive?
+
+### 2. Build a pruning crew ✂️
+
+One-off cleanup tools are a great start. Plenty of teams already have skills that remove stale feature flags. But if factories run loops that constantly ship net new features, cleanup needs to run as loops too: automated, agentic, and always on.
+
+- **Deadwood agents** remove dead code, unused files, and stale feature flags on a regular cadence.
+- **Sprout agents** catch duplication and bloat and consolidate it.
+- **Power line agents** guard what matters with CI/CD, tests, security checks, and architecture rules enforced by linters.
+- **Shape agents** flag when one area of the codebase is getting too heavy.
+- **Grafting** teaches builder agents to reuse proven code before growing something new.
+
+### 3. Walk the rows: observability is the new must-have 👀
+
+A good orchardist walks the rows looking for disease, pests, and broken branches before they spread. When your orchard becomes a forest, no human can walk every row by hand.
+
+More code means more places for things to quietly go wrong, and fewer humans who've read every line. Telemetry, logging, and alerting become how you see your orchard.
+
+Orchards have a hidden weakness. Fruit trees are usually grafted from the same parent, so a whole orchard can be genetically identical, and one disease can move through every row. Someone tending a single backyard tree notices a sick branch early. Someone trusting automation across a thousand trees might not look at all. 🍂
+
+Codebases are becoming orchards of clones too. When agents generate the same patterns across hundreds of repos, one vulnerability or bad pattern gets copied everywhere. And if no one is reading every line anymore, a threat can spread quietly until it's too late.
+
+A big part of my role now is adding alerting wherever we find gaps. And those alerts aren't only for humans anymore. The best setups notify a person when something needs judgment, and notify an agent when something can be fixed automatically. A failing check, a spike in errors, or a slow endpoint can kick off a pruning agent before anyone has to wake up. 🚨
+
+If you can't see it, you can't prune it.
+
+### 4. Let humans be the orchardists
+
+We set the shape, write the rules, and review the pruning. That's real craft, the same way trimming hedges is an art form. 🎨
+
+## Bake it into practice
+
+Cleanup can't be a side quest anymore. At agent scale, dead code and feature flag cleanup need as much design and thought as the features themselves.
+
+- Write down your team's shape rules: what good looks like, what's off limits, what should always be reused
+- Pair every builder loop or factory with a pruning loop
+- Make cleanup part of the definition of done, like removing the flag when the rollout finishes
+- Add alerting wherever you find a blind spot, routed to a human or an agent
+- Track what you cut, not just what you ship: lines deleted, duplicates merged, tests and alerts added
+
+## The bottom line
+
+Fertilizer isn't the problem. Growth is great. But the teams that win this era won't be the ones that grow the most code. They'll be the ones that grow the healthiest orchards. Keep shipping, keep automating, and give your trees some shape. ✂️🌳
+
+## Sources
+
+- OpenAI: [Harness engineering: leveraging Codex in an agent-first world](https://openai.com/index/harness-engineering/)
+- Anthropic: [code-simplifier agent](https://github.com/anthropics/claude-plugins-official/blob/main/plugins/code-simplifier/agents/code-simplifier.md)
+- Spotify: [Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4)](https://engineering.atspotify.com/2026/4/background-coding-agents-dataset-migrations-honk-part-4)
+- Stripe: [Minions: Stripe's one-shot, end-to-end coding agents](https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents)
+- Martin Fowler / Thoughtworks: [Harness Engineering, first thoughts](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering-memo.html)
