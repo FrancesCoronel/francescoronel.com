@@ -1,5 +1,13 @@
 [
   {
+    "name": "AI",
+    "slug": "ai"
+  },
+  {
+    "name": "Developer Productivity",
+    "slug": "developer-productivity"
+  },
+  {
     "name": "Personal Life",
     "slug": "personal-life"
   },
