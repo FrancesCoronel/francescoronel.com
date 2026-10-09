@@ -11,7 +11,7 @@
     "export:webflow": "npx tsx scripts/export-webflow.ts",
     "import:wordpress": "npx tsx scripts/import-wordpress.ts",
     "migrate:images": "npx tsx scripts/migrate-images.ts",
-    "postbuild": "npx pagefind --site .next/server/app --output-path public/pagefind",
+    "postbuild": "echo DIAG_START; find . -path ./node_modules -prune -o -name '*.html' -print 2>/dev/null | grep -v node_modules | sed 's|/[^/]*$||' | sort | uniq -c | sort -rn | head -15; echo DIAG_END; npx pagefind --site .next/server/app --output-path public/pagefind",
     "lighthouse": "npx @lhci/cli autorun",
     "lighthouse:local": "npx lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html --chrome-flags='--headless=new'",
     "audit:a11y": "npx pa11y-ci --config .pa11yci.json",
