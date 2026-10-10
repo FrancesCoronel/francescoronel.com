@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Nav } from "@/components/layout/nav";
 import { Footer } from "@/components/layout/footer";
@@ -44,6 +44,13 @@ export const metadata: Metadata = {
     // Add your Bing Webmaster Tools verification key here once obtained from https://www.bing.com/webmasters
     // "msvalidate.01": "YOUR_BING_KEY",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f9f5f3" },
+    { media: "(prefers-color-scheme: dark)", color: "#253137" },
+  ],
 };
 
 export default function RootLayout({
