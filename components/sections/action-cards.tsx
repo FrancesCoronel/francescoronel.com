@@ -32,10 +32,10 @@ const defaultCards: CtaCard[] = [
     image: "/images/assets/rocket-illustration.webp",
   },
   {
-    label: "About",
-    description: "Learn more about me and my story",
-    href: "/about",
-    image: "/images/assets/memoji-laptop.png",
+    label: "Newsletter",
+    description: "Get new essays and talks in your inbox",
+    href: "/#newsletter",
+    image: "/images/assets/heart-chat-bubble.webp",
   },
 ];
 
