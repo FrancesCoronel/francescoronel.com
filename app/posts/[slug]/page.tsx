@@ -531,6 +531,7 @@ export default async function PostPage({ params }: PageProps) {
               height={450}
               className="mx-auto mb-10 rounded-xl"
               priority
+              fetchPriority="high"
             />
           ) : (
             /* eslint-disable @next/next/no-img-element */

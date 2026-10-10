@@ -124,6 +124,7 @@ export default function MentoringPage() {
             height={400}
             className="h-auto w-[200px] object-contain drop-shadow-lg sm:w-[260px] md:w-[360px]"
             priority
+            fetchPriority="high"
           />
         }
       >
