@@ -3,7 +3,7 @@
  * Cross-post a blog post to dev.to.
  *
  * Usage:
- *   node scripts/crosspost-devto.js content/blog/my-post.mdx
+ *   node scripts/crosspost-devto.js content/posts/my-post.mdx
  *
  * Required env vars:
  *   DEVTO_API_KEY — your dev.to API key (Settings → Account → DEV API Keys)
@@ -98,7 +98,7 @@ async function crosspost(filePath) {
   }
 
   const postSlug = slug || path.basename(filePath, path.extname(filePath));
-  const canonicalUrl = `${SITE_URL}/blog/${postSlug}`;
+  const canonicalUrl = `${SITE_URL}/posts/${postSlug}`;
   const bodyMarkdown = mdxToMarkdown(content);
   const devtoTags = buildDevToTags(categories, tags);
 

@@ -38,7 +38,7 @@ npm run chromatic        # upload to Chromatic for visual regression
 
 ## Architecture 🏗️
 
-- **665+ blog posts** as individual MDX files in `content/blog/`
+- **700 blog posts** as individual MDX files in `content/posts/`
 - **Structured data** in JSON files: testimonials, organizations, skills, awards, experience, education
 - Everything loaded at build time via `lib/content.ts` — synchronous file reads, no database
 - **Search:** Pagefind indexes all rendered HTML pages at build time
@@ -66,4 +66,4 @@ See [`.github/SECURITY.md`](./.github/SECURITY.md) for how to report a vulnerabi
 
 ## License 📄
 
-Source code is licensed under the [MIT License](./LICENSE). Blog posts, images, and other written content in `content/blog/` and `public/` are © Frances Coronel, all rights reserved, unless a post states otherwise.
+Source code is licensed under the [MIT License](./LICENSE). Blog posts, images, and other written content in `content/` and `public/` are © Frances Coronel, all rights reserved, unless a post states otherwise.
