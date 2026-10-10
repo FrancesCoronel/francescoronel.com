@@ -39,6 +39,7 @@ export default async function EducationPage({ params }: PageProps) {
   if (!edu) notFound();
 
   const org = getOrganizationByName(edu.institution);
+  const isProgram = edu.type === "program";
 
   return (
     <>
@@ -46,11 +47,11 @@ export default async function EducationPage({ params }: PageProps) {
       <section className="bg-horchata-50 py-16 dark:bg-navy-900">
         <div className="mx-auto max-w-3xl px-6">
           <Link
-            href="/about#education"
+            href={isProgram ? "/about#programs" : "/about#education"}
             className="mb-8 inline-flex items-center gap-1.5 text-sm text-horchata-700 transition-colors hover:text-horchata-900 dark:text-horchata-400 dark:hover:text-horchata-200"
           >
             <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M5 12l7 7M5 12l7-7"/></svg>
-            Education
+            {isProgram ? "Programs" : "Education"}
           </Link>
 
           <div className="flex items-center gap-3 sm:gap-5">
@@ -65,7 +66,7 @@ export default async function EducationPage({ params }: PageProps) {
             )}
             <div>
               <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
-                Education
+                {isProgram ? "Program" : "Education"}
               </p>
               <h1 className="mt-1 text-xl font-bold leading-tight text-navy-900 dark:text-horchata-100 sm:text-2xl md:text-3xl">
                 {edu.degree}

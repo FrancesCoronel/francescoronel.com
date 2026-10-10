@@ -17,6 +17,7 @@ import mentoringData from "@/content/mentoring-sessions.json";
 import { buildMetadata, YEARS_OF_EXPERIENCE } from "@/lib/metadata";
 import { PageHeader } from "@/components/ui/page-header";
 import { BioSection } from "@/components/sections/bio-section";
+import { Timeline } from "@/components/ui/timeline";
 import { TimelineSection } from "@/components/sections/timeline-section";
 import { LanguagesSection } from "@/components/sections/languages-section";
 import { MemojiSection } from "@/components/sections/memoji-section";
@@ -210,7 +211,7 @@ export default function AboutPage() {
     };
   });
 
-  const educationItems = education.map((edu) => {
+  const toEducationItem = (edu: (typeof education)[number]) => {
     const org = getOrganizationByName(edu.institution);
     return {
       title: edu.degree || edu.institution,
@@ -223,7 +224,9 @@ export default function AboutPage() {
       description: edu.description,
       linkPrefix: "/education",
     };
-  });
+  };
+  const educationItems = education.filter((edu) => edu.type !== "program").map(toEducationItem);
+  const programItems = education.filter((edu) => edu.type === "program").map(toEducationItem);
 
   return (
     <>
@@ -277,7 +280,21 @@ export default function AboutPage() {
         heading="Education 🎓"
         items={educationItems}
         dark
-      />
+      >
+        {programItems.length > 0 && (
+          <div id="programs" className="mt-16 scroll-mt-20">
+            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+              Programs
+            </p>
+            <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
+              Leadership &amp; Learning 🚀
+            </h2>
+            <div className="mt-8">
+              <Timeline items={programItems} />
+            </div>
+          </div>
+        )}
+      </TimelineSection>
 
       {/* Languages */}
       <LanguagesSection />
