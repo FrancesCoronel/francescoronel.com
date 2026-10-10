@@ -26,9 +26,9 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v7.0.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
 
-      - uses: actions/setup-node@v7.1.0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1  # v7.1.0
         with:
           node-version: 22
 
@@ -38,7 +38,7 @@ jobs:
 
       - name: Notify Slack on failure
         if: failure() && steps.internal.outcome == 'failure' && github.event_name == 'schedule'
-        uses: slackapi/slack-github-action@v4
+        uses: slackapi/slack-github-action@dcb1066f776dd043e64d0e8ba94ca15cc7e1875d  # v4.0.0
         with:
           channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
           payload: |
@@ -75,12 +75,12 @@ jobs:
       contents: read
       issues: write
     steps:
-      - uses: actions/checkout@v7.0.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
 
       - name: Check external links
         id: lychee
         continue-on-error: true
-        uses: lycheeverse/lychee-action@v2
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8  # v2.9.0
         with:
           args: >-
             --config lychee.toml
@@ -100,7 +100,7 @@ jobs:
       - name: Open or update GitHub issue if broken links found
         if: steps.lychee.outputs.exit_code != 0
         continue-on-error: true
-        uses: peter-evans/create-issue-from-file@v6
+        uses: peter-evans/create-issue-from-file@fca9117c27cdc29c6c4db3b86c48e4115a786710  # v6.0.0
         with:
           title: "🔗 Broken external links detected"
           content-filepath: ./lychee/out.md
@@ -110,7 +110,7 @@ jobs:
 
       - name: Notify Slack if broken links found
         if: steps.lychee.outputs.exit_code != 0 && github.event_name == 'schedule'
-        uses: slackapi/slack-github-action@v4
+        uses: slackapi/slack-github-action@dcb1066f776dd043e64d0e8ba94ca15cc7e1875d  # v4.0.0
         with:
           channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
           payload: |
