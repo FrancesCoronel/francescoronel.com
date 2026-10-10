@@ -140,22 +140,30 @@ npm run chromatic        # upload to Chromatic for visual regression
    - Claude will: fill missing frontmatter (excerpt, slug, date), suggest categories/tags, upload any local images to Vercel Blob, ensure MDX is valid
 3. **Commit** with `/commit`
 4. **Deploy** with `/deploy` (pushes to main → Vercel auto-deploys)
-5. **Cross-post** automatically fires via GitHub Actions → dev.to (on push to main for new `.mdx` files)
-   - Manual for LinkedIn: share the post URL with a short intro
-   - Manual for Hashnode: paste content via their import tool (set canonical URL)
+5. **Cross-post** automatically fires via `.github/workflows/crosspost.yml` on push to main for newly added `content/posts/*.mdx` files → dev.to, Hashnode, and Buffer drafts for LinkedIn/Bluesky/Threads
+   - A Slack reminder lists the manual steps: review the Buffer drafts, republish flagship essays as a LinkedIn Newsletter issue, share on Reddit by hand
 
 ### Cross-posting setup
 
-**dev.to** — automated via `.github/workflows/crosspost-devto.yml`
-- Requires secret: `DEVTO_API_KEY` (Settings → GitHub repo → Secrets → Actions)
-- Get key: dev.to → Settings → Account → DEV API Keys
+Each platform is skipped when its secret isn't set, and one failing doesn't block the others. Set `crosspost: false` in a post's frontmatter to skip it everywhere.
+
+**dev.to**
+- Secret: `DEVTO_API_KEY` (dev.to → Settings → Extensions → DEV Community API Keys)
 - Script: `scripts/crosspost-devto.js` — strips MDX syntax, sets canonical URL, maps tags
 
-**Hashnode** — semi-manual (recommended for developer posts)
-- Import post via Hashnode dashboard → import from URL
-- Always set canonical URL to `https://www.francescoronel.com/blog/<slug>`
+**Hashnode**
+- Secret: `HASHNODE_TOKEN` (hashnode.com/settings/developer); optional variable `HASHNODE_PUBLICATION_ID` (defaults to your first publication)
+- Script: `scripts/crosspost-hashnode.js` — sets `originalArticleURL` to the canonical post URL
 
-**LinkedIn** — manual post linking back to the article
+**LinkedIn, Bluesky, Threads (via Buffer)**
+- Secret: `BUFFER_API_KEY` (publish.buffer.com/settings/api); connect the channels in Buffer once
+- Optional variables: `BUFFER_SERVICES` (default `linkedin,bluesky,threads`), `BUFFER_MODE` (`draft` by default; `queue` to skip review)
+- Script: `scripts/crosspost-social.js` — writes a per-network post (title + excerpt + link, fit to each character limit); add `social: "..."` to frontmatter to use custom intro text instead of the excerpt
+- Preview without posting: `node scripts/crosspost-social.js content/posts/<slug>.mdx --dry-run`
+
+**Slack reminder**
+- Secret: `SLACK_WEBHOOK_URL` (a Slack incoming webhook to the channel or DM you want)
+- Script: `scripts/notify-slack.js` — posts the new post's link and the manual sharing checklist
 
 ### Newsletter
 
