@@ -14,6 +14,77 @@ export const metadata: Metadata = buildMetadata({
 
 const entries = [
   {
+    date: "October 2026",
+    id: "october-2026",
+    sections: [
+      {
+        emoji: "💼",
+        label: "Work",
+        items: [
+          <>
+            Building on the <strong>Agentic SDLC team at Slack</strong>, bringing
+            AI agents into every step of how software gets built, for engineers
+            and non-engineers alike.
+          </>,
+          <>
+            Averaging <strong>40+ PRs a day</strong> with coding agents and
+            helping pilot <strong>factories</strong>: agents that build in the
+            background, around the clock.
+          </>,
+          <>
+            Fully{" "}
+            <Link
+              href="/posts/i-think-im-becoming-a-cracked-engineer"
+              className="underline decoration-horchata-300 underline-offset-2 transition-colors hover:text-horchata-700 dark:decoration-navy-500 dark:hover:text-horchata-400"
+            >
+              cracked
+            </Link>{" "}
+            ⚡ at work. I love what I do, and it&apos;s genuinely fun for me.
+          </>,
+        ],
+      },
+      {
+        emoji: "✍🏽",
+        label: "Writing",
+        items: [
+          <>
+            Just published{" "}
+            <Link
+              href="/posts/ai-is-fertilizer-learn-to-prune"
+              className="underline decoration-horchata-300 underline-offset-2 transition-colors hover:text-horchata-700 dark:decoration-navy-500 dark:hover:text-horchata-400"
+            >
+              AI Is Fertilizer. Now We Have to Learn to Prune.
+            </Link>{" "}
+            🌳, my take on keeping codebases healthy at agent scale.
+          </>,
+          <>
+            Refocusing <strong>this website</strong> around how companies adopt
+            agentic AI, with more essays on the way.
+          </>,
+        ],
+      },
+      {
+        emoji: "🌱",
+        label: "Personal",
+        items: [
+          <>
+            Learning to grow two <strong>Washington navel orange trees</strong> 🍊
+            with Andrew. Still working on that green thumb.
+          </>,
+          <>
+            Spending most of my free time with Andrew and my corgis{" "}
+            <strong>Luna and Sueño</strong> 🐾, plus two roommates now sharing
+            the house.
+          </>,
+          <>
+            Still working toward my <strong>PADI Divemaster</strong> 🤿, with the
+            instructor development course (IDC) on deck for next year.
+          </>,
+        ],
+      },
+    ],
+  },
+  {
     date: "March 2026",
     id: "march-2026",
     sections: [

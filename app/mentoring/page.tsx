@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { getTestimonials } from "@/lib/content";
 import { TestimonialsPreview } from "@/components/sections/testimonials-preview";
-import { buildMetadata } from "@/lib/metadata";
+import { buildMetadata, YEARS_OF_EXPERIENCE } from "@/lib/metadata";
 import { CalEmbed } from "@/components/ui/cal-embed";
 import { PageHeader } from "@/components/ui/page-header";
 import { ConnectCTA } from "@/components/sections/connect-cta";
@@ -115,7 +115,7 @@ export default function MentoringPage() {
       <PageHeader
         label="1-on-1 Coaching"
         heading="Mentoring 💬"
-        description={`${totalSessions}+ sessions and ${hoursDisplay}+ hours in. I help software engineers land roles, get promoted, negotiate better offers, and build careers they're proud of. Real talk from someone who's been in the industry for 8+ years.`}
+        description={`${totalSessions}+ sessions and ${hoursDisplay}+ hours in. I help software engineers land roles, get promoted, negotiate better offers, and build careers they're proud of. Real talk from someone who's been in the industry for ${YEARS_OF_EXPERIENCE}+ years.`}
         aside={
           <Image
             src="/images/assets/speaking-hero-image.webp"

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { YEARS_OF_EXPERIENCE } from "@/lib/metadata";
 
 type CTAVariant = "default" | "speaking" | "mentoring" | "follow" | "hire" | "contact" | "projects";
 
@@ -58,7 +59,7 @@ const variants: Record<
   hire: {
     heading: "Let\u2019s Work Together \uD83D\uDCBC",
     description:
-      "8+ years of software engineering experience, from startups to enterprise. Open to speaking, advising, and collaboration opportunities.",
+      `${YEARS_OF_EXPERIENCE}+ years of software engineering experience, from startups to enterprise. Open to speaking, advising, and collaboration opportunities.`,
     primaryLabel: "Get in Touch",
     primaryHref: "/contact",
     secondaryLabel: "Book Me to Speak",

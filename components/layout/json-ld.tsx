@@ -49,7 +49,7 @@ export function PersonJsonLd() {
       `https://github.com/${siteConfig.social.github}`,
       `https://linkedin.com/in/${siteConfig.social.linkedin}`,
       `https://twitter.com/${siteConfig.social.twitter.replace("@", "")}`,
-      "https://youtube.com/@fvcproductions",
+      "https://www.youtube.com/c/FrancesVCoronel",
       "https://bsky.app/profile/francescoronel.bsky.social",
       "https://reddit.com/user/fvcproductions",
       "https://www.producthunt.com/@francescoronel",

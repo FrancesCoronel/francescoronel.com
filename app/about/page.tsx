@@ -29,7 +29,7 @@ import { ConnectCTA } from "@/components/sections/connect-cta";
 export const metadata: Metadata = buildMetadata({
   title: "About",
   description:
-    "Frances Coronel is a Senior Software Engineer at Slack with 8+ years of experience in frontend engineering and AI adoption. Speaker, mentor, and proud Peruvian-American. 👩🏽‍💻",
+    `Frances Coronel is a Senior Software Engineer at Slack with ${YEARS_OF_EXPERIENCE}+ years of experience in frontend engineering and AI adoption. Speaker, mentor, and proud Peruvian-American. 👩🏽‍💻`,
   path: "/about",
   ogImage: "/images/og/about.jpg",
 });
@@ -55,7 +55,7 @@ const bioVariants = [
     label: "Short Bio",
     content: (
       <p>
-        Senior Software Engineer at Slack with 8+ years in frontend engineering
+        Senior Software Engineer at Slack with {YEARS_OF_EXPERIENCE}+ years in frontend engineering
         and an MS in Computer Science from Cornell Tech. Speaker at 100+ events
         and mentor focused on helping underrepresented engineers grow into
         technical leadership.
@@ -149,7 +149,7 @@ const bioVariants = [
           faster with AI.
         </p>
         <p>
-          With 8+ years of experience in frontend engineering, Frances specializes
+          With {YEARS_OF_EXPERIENCE}+ years of experience in frontend engineering, Frances specializes
           in React and TypeScript, bridging design and development to deliver
           elegant, user-centered solutions at scale. Her work on Slack&apos;s settings
           redesign drove a 5x increase in user engagement.
@@ -228,7 +228,7 @@ export default function AboutPage() {
       <PageHeader
         label="Engineer, Speaker & Mentor"
         heading="About 👩🏽‍💻"
-        description="I'm Frances Coronel, a Senior Software Engineer at Slack with 8+ years in frontend engineering. I build AI-powered developer tooling, speak at conferences, and mentor engineers at all levels. I care deeply about making technical leadership more accessible, especially for Latinas and underrepresented engineers in tech."
+        description={`I'm Frances Coronel, a Senior Software Engineer at Slack with ${YEARS_OF_EXPERIENCE}+ years in frontend engineering. I build AI-powered developer tooling, speak at conferences, and mentor engineers at all levels. I care deeply about making technical leadership more accessible, especially for Latinas and underrepresented engineers in tech.`}
         aside={
           <div className="h-56 w-56 overflow-hidden rounded-full bg-horchata-100 ring-4 ring-horchata-200 dark:bg-navy-700 dark:ring-navy-600 sm:h-72 sm:w-72 md:h-96 md:w-96">
             <Image
