@@ -5,7 +5,7 @@ export const YEARS_OF_EXPERIENCE = new Date().getFullYear() - 2017;
 export const siteConfig = {
   title: "Frances Coronel",
   description:
-    `Senior Software Engineer at Slack with ${YEARS_OF_EXPERIENCE}+ years in frontend engineering and an MS in Computer Science from Cornell Tech. Speaker at 100+ events and mentor focused on helping underrepresented engineers grow into technical leadership.`,
+    "Frances Coronel is a Senior Software Engineer on Slack's Agentic SDLC team. She writes and speaks about how companies adopt agentic AI across the whole software lifecycle, for engineers and everyone else.",
   siteUrl: "https://francescoronel.com",
   author: "Frances Coronel",
   social: {
