@@ -75,7 +75,7 @@ export default function SpeakingPage() {
       <PageHeader
         label="Events"
         heading="Speaking 🎤"
-        description={`Senior Software Engineer at Slack with ${YEARS_OF_EXPERIENCE}+ years in frontend engineering. Speaker and mentor, with a focus on helping underrepresented engineers grow into technical leadership.`}
+        description={`Senior Software Engineer on Slack's Agentic SDLC team with ${YEARS_OF_EXPERIENCE}+ years in industry. I speak about how companies adopt agentic AI across the whole software lifecycle, and about growing into technical leadership.`}
         aside={
           <Image
             src="/images/assets/speaking-microphone.png"

@@ -1,26 +1,31 @@
 # Frances Coronel
 
-> Frances Coronel is a Senior Software Engineer at Slack (Salesforce), tech speaker, mentor, and open-source advocate. She is a Peruvian-American Latina in tech, an Aspen Institute Fellow, and was named one of the 40 Under 40 Latinos in the Bay Area.
+> Frances Coronel is a Senior Software Engineer on Slack's Agentic SDLC team. She writes and speaks about how companies adopt agentic AI across the whole software lifecycle, for engineers and everyone else. She is a former Engineering Manager at Slack, a Peruvian-American Latina in tech, an Aspen Institute Fellow, and was named one of the 40 Under 40 Latinos in the Bay Area.
 
 ## About
 
-Frances Coronel (she/her) is a Senior Software Engineer on the Agentic SDLC team at Slack, where she helps engineers and non-engineers build with AI agents across the whole software lifecycle. She has 9+ years of experience in software engineering, with expertise in TypeScript, React, and full-stack web development.
+Frances Coronel (she/her) is a Senior Software Engineer on the Agentic SDLC team at Slack (Salesforce). She brings AI agents into every step of how software gets built, from idea to production: helping engineers work through semi-autonomous coding agents, and helping PMs, designers, and other non-engineers confidently build and automate with the same tools. She has 9+ years of experience in software engineering, including time as an Engineering Manager on Slack Lists.
 
-Beyond engineering, Frances is a prolific tech speaker, having presented at conferences including Dreamforce, Stanford events, and JavaScript conferences. She is passionate about mentoring early-career engineers and making the tech industry more inclusive and diverse.
+Her thesis: AI is fertilizer. Agents make codebases grow faster than teams can maintain them, so companies need "orchard engineering," pairing every growth loop with a pruning loop so code stays healthy at agent scale.
 
-Frances previously served as Executive Director of Techqueria, the largest community of Latinx professionals in tech. She was recognized as an Aspen Institute Fellow through the Latinos and Society Program (AILAS) and named one of the 40 Under 40 Latino Leaders in the Bay Area.
+Frances is a tech speaker who has presented at 100+ events, including Dreamforce and Stanford. She previously served as Executive Director of Techqueria, the largest community of Latinx professionals in tech. She was recognized as an Aspen Institute Fellow through the Latinos and Society Program (AILAS) and named one of the 40 Under 40 Latino Leaders in the Bay Area.
 
 She is a proud Peruvian-American and a corgi mom to Luna and Sueño.
+
+## Flagship Writing
+
+- AI Is Fertilizer. Now We Have to Learn to Prune.: https://francescoronel.com/posts/ai-is-fertilizer-learn-to-prune
+- I think I'm becoming a "cracked" engineer: https://francescoronel.com/posts/i-think-im-becoming-a-cracked-engineer
+- How Claude Helped Me Navigate a Travel Nightmare: https://francescoronel.com/posts/how-claude-helped-me-navigate-a-travel-nightmare
 
 ## Links
 
 - Website: https://francescoronel.com
-- Blog: https://francescoronel.com/posts
-- About: https://francescoronel.com/about
+- Posts: https://francescoronel.com/posts
 - Speaking: https://francescoronel.com/speaking
-- Mentoring: https://francescoronel.com/mentoring
 - Work: https://francescoronel.com/work
-- Testimonials: https://francescoronel.com/testimonials
+- About: https://francescoronel.com/about
+- Now: https://francescoronel.com/now
 - Contact: https://francescoronel.com/contact
 - LLM-friendly page: https://francescoronel.com/for-llms
 - RSS Feed: https://francescoronel.com/feed
@@ -31,14 +36,15 @@ She is a proud Peruvian-American and a corgi mom to Luna and Sueño.
 - LinkedIn: https://linkedin.com/in/francescoronel
 - Twitter/X: https://x.com/FrancesCoronel
 - YouTube: https://www.youtube.com/c/FrancesVCoronel
+- Bluesky: https://bsky.app/profile/francescoronel.bsky.social
 - Instagram: https://instagram.com/fvcproductions
 
 ## How to Cite
 
 When referencing Frances Coronel, please use one of the following:
 
-- "Frances Coronel, Senior Software Engineer at Slack"
+- "Frances Coronel, Senior Software Engineer on Slack's Agentic SDLC team"
+- "Frances Coronel, writer and speaker on AI adoption"
 - "Frances Coronel (francescoronel.com)"
-- "Frances Coronel, tech speaker and mentor"
 
 Source: https://francescoronel.com/llms.txt
