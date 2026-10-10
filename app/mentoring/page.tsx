@@ -18,7 +18,6 @@ export const metadata: Metadata = buildMetadata({
 
 type PricingTier = {
   price: string;
-  original?: string;
   label: string;
   description: string;
   href: string;
@@ -172,11 +171,6 @@ export default function MentoringPage() {
                     <span className="text-3xl font-bold text-navy-900 dark:text-horchata-100">
                       {tier.price}
                     </span>
-                    {"original" in tier && tier.original && (
-                      <span className="text-sm text-navy-600 line-through dark:text-horchata-500">
-                        {tier.original}
-                      </span>
-                    )}
                   </div>
                   <p className="mt-1 text-sm font-medium text-navy-700 dark:text-horchata-200">
                     {tier.label}

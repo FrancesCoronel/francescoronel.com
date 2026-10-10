@@ -19,7 +19,7 @@ export default function CategoriesPage() {
     .sort((a, b) => {
       if (a.slug === "uncategorized") return 1;
       if (b.slug === "uncategorized") return -1;
-      return (b.count ?? 0) - (a.count ?? 0);
+      return b.count! - a.count!; // the filter above dropped every category without a count
     });
 
   return (

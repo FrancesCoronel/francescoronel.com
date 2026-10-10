@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
 export default function TagsPage() {
   const tags = getTags()
     .filter((t) => (t.count ?? 0) > 0)
-    .sort((a, b) => (b.count ?? 0) - (a.count ?? 0));
+    .sort((a, b) => b.count! - a.count!); // the filter above dropped every tag without a count
 
   return (
     <>

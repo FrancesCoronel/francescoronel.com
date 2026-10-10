@@ -22,7 +22,15 @@ export default defineConfig({
       {
         // Plain unit tests: lib/, API routes, and pages rendered to markup
         extends: true,
-        resolve: { alias: { "@": dirname } },
+        // public/ is served by Next, not imported; without this Vite rejects the
+        // Pagefind import once a build has generated public/pagefind
+        publicDir: false,
+        resolve: {
+          alias: {
+            "@": dirname,
+            "/pagefind/pagefind.js": path.join(dirname, "test/pagefind-stub.ts"),
+          },
+        },
         test: {
           name: "unit",
           environment: "node",

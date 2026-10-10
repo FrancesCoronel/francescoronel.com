@@ -71,7 +71,7 @@ export function MentoringSessionsFeed() {
           </p>
           <div className="flex items-end gap-1.5">
             {allYears.map((year) => {
-              const count = byYear[year] ?? 0;
+              const count = byYear[year];
               const heightPct = Math.round((count / maxCount) * 100);
               return (
                 <div key={year} className="flex flex-1 flex-col items-center gap-1">

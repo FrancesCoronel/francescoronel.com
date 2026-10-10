@@ -58,13 +58,6 @@ function AwardCard({
 
   const linkedClassName =
     "group rounded-2xl border border-horchata-200 bg-white p-4 transition-shadow hover:shadow-lg dark:border-navy-700 dark:bg-navy-800";
-  const plainClassName =
-    "rounded-2xl border border-horchata-200 bg-white p-4 dark:border-navy-700 dark:bg-navy-800";
-
-  if (!href) {
-    return <div className={plainClassName}>{inner}</div>;
-  }
-
   if (isExternal) {
     return (
       <a
