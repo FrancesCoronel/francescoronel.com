@@ -20,6 +20,18 @@ export default defineConfig({
     },
     projects: [
       {
+        // Plain unit tests: lib/, API routes, and pages rendered to markup
+        extends: true,
+        resolve: { alias: { "@": dirname } },
+        test: {
+          name: "unit",
+          environment: "node",
+          include: ["**/*.test.{ts,tsx}"],
+          exclude: ["node_modules/**", "e2e/**", ".next/**"],
+          setupFiles: ["./test/setup.ts"],
+        },
+      },
+      {
         extends: true,
         plugins: [storybookTest({ configDir: path.join(dirname, ".storybook") })],
         test: {
@@ -27,7 +39,8 @@ export default defineConfig({
           browser: {
             enabled: true,
             headless: true,
-            provider: playwright({}),
+            // CHROMIUM_PATH lets a machine with a different Playwright browser build run these
+            provider: playwright({ launchOptions: { executablePath: process.env.CHROMIUM_PATH } }),
             instances: [{ browser: "chromium" }],
           },
           setupFiles: [".storybook/preview.ts"],
