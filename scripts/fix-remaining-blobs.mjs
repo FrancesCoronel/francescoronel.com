@@ -2,7 +2,7 @@ import { put } from "@vercel/blob";
 import { readFileSync, writeFileSync, readdirSync } from "fs";
 import { join, extname } from "path";
 
-const NEW_TOKEN = "vercel_blob_rw_GZQhCZL3EhDy3Foa_hs7QNUEUssQUty5caV4RNOwYimIkR0";
+const NEW_TOKEN = process.env.NEW_BLOB_READ_WRITE_TOKEN;
 const NEW_BASE = "https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com";
 const OLD_BASE = "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com";
 const WEBFLOW_CDN = "https://cdn.prod.website-files.com/63b0b035359373d0cc473202";
