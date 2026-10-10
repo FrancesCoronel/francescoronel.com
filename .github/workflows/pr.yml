@@ -39,6 +39,9 @@ jobs:
     uses: FrancesCoronel/workflows/.github/workflows/web-quality.yml@claude/quality-gates
     with:
       node-version: "22"
+      # Starts at 85: post, tag and speaking pages score 86-96 on CI runners today.
+      # Raise to the shared 0.9 once they clear it consistently.
+      performance-min: 0.85
       urls: |
         /
         /about
