@@ -159,7 +159,10 @@ npm run chromatic        # upload to Chromatic for visual regression
 
 ### Newsletter
 
-Buttondown is wired up at `/api/newsletter` — subscribers sign up on the site. Send new issues directly from [buttondown.email](https://buttondown.email) dashboard.
+Resend is wired up at `/api/newsletter` — subscribers sign up on the site and are added as Resend contacts in the `RESEND_SEGMENT_ID` segment
+
+When a new post lands on main, `.github/workflows/newsletter-broadcast.yml` runs `scripts/newsletter-broadcast.js`, waits for the post to go live, and creates a **draft** broadcast in Resend (title, excerpt, featured image, link) — review and send it from the [Resend dashboard](https://resend.com/broadcasts)
+- Requires secrets: `RESEND_API_KEY`, `RESEND_SEGMENT_ID`, `RESEND_FROM` (a sender on a verified domain)
 
 ## Custom Slash Commands 🔧
 

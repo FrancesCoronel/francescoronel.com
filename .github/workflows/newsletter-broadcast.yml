@@ -1,0 +1,65 @@
+name: Newsletter broadcast
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/posts/**/*.mdx"
+  workflow_dispatch:
+    inputs:
+      file:
+        description: "Post to announce, e.g. content/posts/my-post.mdx"
+        required: true
+
+jobs:
+  broadcast:
+    name: Draft Resend broadcast for new posts
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Detect newly added blog posts
+        id: new-posts
+        env:
+          BEFORE: ${{ github.event.before }}
+          MANUAL_FILE: ${{ inputs.file }}
+        run: |
+          if [ -n "$MANUAL_FILE" ]; then
+            echo "files=$MANUAL_FILE" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # Compare against the commit before this push; fall back to the parent commit
+          BASE="$BEFORE"
+          if [ -z "$BASE" ] || ! git cat-file -e "$BASE" 2>/dev/null; then
+            BASE="HEAD~1"
+          fi
+          # Only pick up files that were ADDED (A), not modified (M)
+          NEW=$(git diff --name-status "$BASE" HEAD -- 'content/posts/*.mdx' \
+            | awk '$1 == "A" { print $2 }' \
+            | tr '\n' ' ')
+          echo "files=$NEW" >> "$GITHUB_OUTPUT"
+
+      - name: Create Resend broadcast drafts
+        if: steps.new-posts.outputs.files != ''
+        env:
+          FILES: ${{ steps.new-posts.outputs.files }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_SEGMENT_ID: ${{ secrets.RESEND_SEGMENT_ID }}
+          RESEND_FROM: ${{ secrets.RESEND_FROM }}
+        run: |
+          for file in $FILES; do
+            echo "→ Processing $file"
+            node scripts/newsletter-broadcast.js "$file"
+          done
