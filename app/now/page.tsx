@@ -31,6 +31,16 @@ const entries = [
             helping pilot <strong>factories</strong>: agents that build in the
             background, around the clock.
           </>,
+          <>
+            Fully{" "}
+            <Link
+              href="/posts/i-think-im-becoming-a-cracked-engineer"
+              className="underline decoration-horchata-300 underline-offset-2 transition-colors hover:text-horchata-700 dark:decoration-navy-500 dark:hover:text-horchata-400"
+            >
+              cracked
+            </Link>{" "}
+            ⚡ at work. I love what I do, and it&apos;s genuinely fun for me.
+          </>,
         ],
       },
       {
@@ -62,8 +72,12 @@ const entries = [
             with Andrew. Still working on that green thumb.
           </>,
           <>
-            Spending free time with <strong>Luna and Sueño</strong> 🐾 and
-            logging more dives 🤿.
+            Spending most of my free time with Andrew and my corgis{" "}
+            <strong>Luna and Sueño</strong> 🐾, plus two roommates now sharing
+            the house.
+          </>,
+          <>
+            Still working toward my <strong>PADI Divemaster</strong> 🤿.
           </>,
         ],
       },
