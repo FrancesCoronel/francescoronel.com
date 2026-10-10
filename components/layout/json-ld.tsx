@@ -70,22 +70,28 @@ export function BlogPostJsonLd({
   title,
   description,
   date,
+  updated,
   slug,
   image,
+  keywords,
 }: {
   title: string;
   description: string;
   date: string;
+  updated?: string;
   slug: string;
   image?: string;
+  keywords?: string[];
 }) {
+  const url = `${siteConfig.siteUrl}/posts/${slug}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: title,
     description,
     datePublished: date,
-    url: `${siteConfig.siteUrl}/blog/${slug}`,
+    dateModified: updated ?? date,
+    url,
     author: {
       "@type": "Person",
       name: siteConfig.author,
@@ -98,9 +104,10 @@ export function BlogPostJsonLd({
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${siteConfig.siteUrl}/blog/${slug}`,
+      "@id": url,
     },
     ...(image && { image }),
+    ...(keywords?.length && { keywords: keywords.join(", ") }),
   };
 
   return (

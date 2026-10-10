@@ -18,8 +18,8 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
-      // Next.js requires unsafe-inline for hydration scripts; unsafe-eval for dev HMR
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://app.cal.com https://va.vercel-scripts.com",
+      // Next.js requires unsafe-inline for hydration scripts; unsafe-eval only for dev HMR
+      `script-src 'self' 'unsafe-inline'${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""} https://www.googletagmanager.com https://www.google-analytics.com https://app.cal.com https://va.vercel-scripts.com`,
       "style-src 'self' 'unsafe-inline'",
       // Images come from many external CDNs across 665 blog posts
       "img-src 'self' data: https:",
@@ -35,10 +35,22 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  poweredByHeader: false,
   async headers() {
-    return [{ source: "/(.*)", headers: securityHeaders }];
+    return [
+      { source: "/(.*)", headers: securityHeaders },
+      // Font files never change in place; rename the file if a font is ever updated
+      {
+        source: "/fonts/:file*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
+      },
+    ];
   },
   images: {
+    // AVIF first, WebP fallback. Quality 90 keeps photos visually lossless; next/image
+    // never upscales, and srcset serves 2x sizes so retina screens stay sharp.
+    formats: ["image/avif", "image/webp"],
+    qualities: [90],
     remotePatterns: [
       // Webflow CDN (current image hosting)
       { protocol: "https", hostname: "cdn.prod.website-files.com" },

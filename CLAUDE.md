@@ -30,7 +30,7 @@ No more vendor lock-in, full data ownership, prompt-driven editing ⚡
 ### Content System 📝
 
 - **665 blog posts** as individual MDX files in `content/blog/`
-- Each has YAML frontmatter — title, date, excerpt, featuredImage, categories, tags, organizations, skills, source
+- Each has YAML frontmatter — title, date, optional `updated` (set it when you meaningfully revise a post; it feeds dateModified and the sitemap), excerpt, featuredImage, categories, tags, organizations, skills, source
 - **Structured data** in JSON files: testimonials, organizations, skills, awards, experience, education, categories, tags
 - Everything loaded at build time via `lib/content.ts` — synchronous file reads, no database
 

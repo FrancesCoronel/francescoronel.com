@@ -62,9 +62,15 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-5"
+      noValidate
+      toolname="contact_frances"
+      tooldescription="Send Frances Coronel a message about speaking, mentoring, collaboration or anything else. The person must review and submit it."
+    >
       {/* Honeypot */}
-      <input type="text" name="_gotcha" style={{ display: "none" }} tabIndex={-1} autoComplete="off" aria-hidden="true" />
+      <input type="text" name="_gotcha" toolparamdescription="Spam trap. Always leave empty." style={{ display: "none" }} tabIndex={-1} autoComplete="off" aria-hidden="true" />
 
       <p className="text-xs text-navy-600 dark:text-white/60">
         Fields marked with <span className="text-red-500" aria-hidden="true">*</span> are required.

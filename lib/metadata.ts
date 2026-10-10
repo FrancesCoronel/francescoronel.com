@@ -30,6 +30,7 @@ interface BuildMetadataOptions {
   ogImage?: string;
   ogType?: "website" | "article" | "profile";
   publishedTime?: string;
+  modifiedTime?: string;
   robots?: Metadata["robots"];
 }
 
@@ -40,6 +41,7 @@ export function buildMetadata({
   ogImage,
   ogType = "website",
   publishedTime,
+  modifiedTime,
   robots,
 }: BuildMetadataOptions = {}): Metadata {
   const url = path ? `${siteConfig.siteUrl}${path}` : siteConfig.siteUrl;
@@ -65,6 +67,7 @@ export function buildMetadata({
       description: metaDescription,
       images,
       ...(publishedTime ? { publishedTime } : {}),
+      ...(modifiedTime ? { modifiedTime } : {}),
     },
     twitter: {
       card: "summary_large_image",

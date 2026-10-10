@@ -190,7 +190,7 @@ export default function DesignSystemPage() {
             <p className="mt-2 text-sm text-navy-600 dark:text-horchata-400">
               Primary typeface &mdash; used for all text across the site including
               headings, body, labels, and UI elements.
-              Loaded locally via next/font/local. Designed by Latinotype.
+              Self-hosted with @font-face in globals.css. Designed by Latinotype.
             </p>
             <div className="mt-6 space-y-3">
               <p className="text-lg font-light text-navy-700 dark:text-horchata-200" style={{ fontFamily: "var(--font-latina)" }}>

@@ -7,7 +7,16 @@ interface NewsletterFormProps {
   variant?: "footer" | "section" | "dark";
 }
 
+// Declarative WebMCP: lets browser agents find this signup form (the person still submits it).
+// Only the footer form registers it, since a page can show both the footer and a section form
+// and tool names must be unique per page.
+const WEBMCP_TOOL = {
+  toolname: "subscribe_newsletter",
+  tooldescription: "Subscribe an email address to Frances Coronel's newsletter.",
+};
+
 export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
+  const toolProps = variant === "footer" ? WEBMCP_TOOL : {};
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -52,7 +61,7 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
             <p className="text-sm text-horchata-400">{message}</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row" {...toolProps}>
             <label htmlFor="newsletter-email-dark" className="sr-only">Email address</label>
             <input
               id="newsletter-email-dark"
@@ -91,7 +100,7 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
             <p className="text-sm text-horchata-700 dark:text-horchata-400">{message}</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col gap-2 sm:flex-row">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-2 sm:flex-row" {...toolProps}>
             <label htmlFor="newsletter-email-footer" className="sr-only">Email address</label>
             <input
               id="newsletter-email-footer"
@@ -129,7 +138,7 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
           <p className="text-base text-navy-700 dark:text-horchata-300">{message}</p>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row" {...toolProps}>
           <label htmlFor="newsletter-email-section" className="sr-only">Email address</label>
           <input
             id="newsletter-email-section"
