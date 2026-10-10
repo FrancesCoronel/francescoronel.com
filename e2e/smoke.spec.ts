@@ -26,7 +26,7 @@ test("home — nav links are present", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name === "Mobile Chrome", "Nav links hidden in hamburger on mobile");
   await page.goto("/");
   const nav = page.getByRole("navigation").first();
-  await expect(nav.getByRole("link", { name: /posts/i })).toBeVisible();
+  await expect(nav.getByRole("link", { name: /essays/i })).toBeVisible();
   await expect(nav.getByRole("link", { name: /about/i })).toBeVisible();
 });
 

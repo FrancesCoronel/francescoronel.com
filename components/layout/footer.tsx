@@ -74,12 +74,12 @@ const footerNav = [
   {
     heading: "Pages",
     links: [
-      { href: "/about", label: "About" },
-      { href: "/contact", label: "Contact" },
-      { href: "/mentoring", label: "Mentoring" },
-      { href: "/posts", label: "Posts" },
+      { href: "/essays", label: "Essays" },
       { href: "/speaking", label: "Speaking" },
       { href: "/work", label: "Work" },
+      { href: "/about", label: "About" },
+      { href: "/posts", label: "All Posts" },
+      { href: "/contact", label: "Contact" },
     ],
   },
   {
@@ -87,6 +87,7 @@ const footerNav = [
     links: [
       { href: "/categories", label: "Categories" },
       { href: "/design-system", label: "Design System" },
+      { href: "/mentoring", label: "Mentoring" },
       { href: "/organizations", label: "Organizations" },
       { href: "/tags", label: "Tags" },
       { href: "/testimonials", label: "Testimonials" },
@@ -119,7 +120,7 @@ export function Footer() {
               Hi, I&apos;m Frances! 👋🏽
             </Link>
             <p className="mt-2 max-w-sm text-sm leading-relaxed text-navy-600 dark:text-white/70">
-              Senior Software Engineer at Slack specializing in frontend engineering and AI adoption. Speaker and mentor making tech more equitable.
+              Senior Software Engineer on Slack’s Agentic SDLC team. I help whole companies build with AI agents, engineers and everyone else. 🚀
             </p>
           </div>
 
