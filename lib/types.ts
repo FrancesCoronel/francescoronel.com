@@ -105,6 +105,8 @@ export interface Education {
   endDate: string;
   description: string;
   honors: string[];
+  /** "program" for cohorts and professional development, shown apart from degrees */
+  type?: "program";
 }
 
 export interface Category {

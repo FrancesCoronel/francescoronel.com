@@ -2,6 +2,7 @@
   {
     "institution": "Deep Atlas",
     "slug": "deep-atlas-mli-cohort-21",
+    "type": "program",
     "degree": "Machine Learning Intensive (MLI) — Cohort 21",
     "field": "AI/ML Engineering",
     "logo": "",
@@ -16,6 +17,7 @@
   {
     "institution": "ELC (Engineering Leadership Community)",
     "slug": "elc-peer-group-2025",
+    "type": "program",
     "degree": "Peer Group Program — Engineering Leadership",
     "field": "Engineering Leadership",
     "logo": "",
