@@ -22,6 +22,11 @@ const BLOG_DIR = path.join(CONTENT_DIR, "posts");
 
 // ─── Blog Posts ──────────────────────────────────────────────
 
+// YAML parses unquoted dates (updated: 2026-10-10) as Date objects; normalize to YYYY-MM-DD
+function toIsoDate(value: string | Date): string {
+  return value instanceof Date ? value.toISOString().slice(0, 10) : String(value);
+}
+
 export function getBlogSlugs(): string[] {
   if (!fs.existsSync(BLOG_DIR)) return [];
   return fs
@@ -56,6 +61,7 @@ export function getBlogPost(slug: string, { includeDrafts = false } = {}): Post 
     slug: frontmatter.slug || slug,
     title: frontmatter.title,
     date: frontmatter.date,
+    ...(frontmatter.updated ? { updated: toIsoDate(frontmatter.updated) } : {}),
     excerpt: frontmatter.excerpt || content.replace(/^---[\s\S]*?---\n/, "").replace(/[#*`>_[\]()!|]/g, "").replace(/\s+/g, " ").trim().slice(0, 160) || "",
     featuredImage: frontmatter.featuredImage || frontmatter.logo || "",
     categories: frontmatter.categories || [],

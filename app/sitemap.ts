@@ -16,51 +16,57 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === "" ? 1.0 : 0.8,
   }));
 
-  const posts = getAllPosts().map((post) => ({
+  const allPosts = getAllPosts();
+
+  // Google only trusts lastmod when it reflects real changes, so derive it from content
+  // dates instead of the build time. Pages with no meaningful date omit it.
+  const latestDate = (postList: typeof allPosts) =>
+    postList.reduce<Date | undefined>((latest, p) => {
+      const d = new Date(p.updated ?? p.date);
+      return !latest || d > latest ? d : latest;
+    }, undefined);
+
+  const posts = allPosts.map((post) => ({
     url: `${baseUrl}/posts/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: new Date(post.updated ?? post.date),
     changeFrequency: "monthly" as const,
     priority: post.postType === "project" ? 0.7 : 0.6,
   }));
 
   const categories = getCategories().map((cat) => ({
     url: `${baseUrl}/categories/${cat.slug}`,
-    lastModified: new Date(),
+    lastModified: latestDate(allPosts.filter((p) => p.categories.includes(cat.slug))),
     changeFrequency: "weekly" as const,
     priority: 0.5,
   }));
 
   const tags = getTags().map((tag) => ({
     url: `${baseUrl}/tags/${tag.slug}`,
-    lastModified: new Date(),
+    lastModified: latestDate(allPosts.filter((p) => p.tags.includes(tag.slug))),
     changeFrequency: "weekly" as const,
     priority: 0.4,
   }));
 
   const experiences = getExperiences().map((exp) => ({
     url: `${baseUrl}/experience/${exp.slug}`,
-    lastModified: new Date(),
     changeFrequency: "yearly" as const,
     priority: 0.5,
   }));
 
   const education = getEducation().map((edu) => ({
     url: `${baseUrl}/education/${edu.slug}`,
-    lastModified: new Date(),
     changeFrequency: "yearly" as const,
     priority: 0.5,
   }));
 
   const awards = getAwards().map((award) => ({
     url: `${baseUrl}/awards/${award.slug}`,
-    lastModified: new Date(),
     changeFrequency: "yearly" as const,
     priority: 0.5,
   }));
 
   const organizations = getOrganizations().map((org) => ({
     url: `${baseUrl}/organizations/${org.slug}`,
-    lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.5,
   }));

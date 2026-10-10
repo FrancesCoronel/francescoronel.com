@@ -4,6 +4,82 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Latina Essential, self-hosted from /public/fonts. Only medium (body) and bold
+   (headings) are preloaded in app/layout.tsx; other weights and italics load on demand. */
+@font-face {
+  font-family: "Latina Essential";
+  src: url("/fonts/latina-essential-light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Latina Essential";
+  src: url("/fonts/latina-essential-light-italic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Latina Essential";
+  src: url("/fonts/latina-essential-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Latina Essential";
+  src: url("/fonts/latina-essential-medium-italic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Latina Essential";
+  src: url("/fonts/latina-essential-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Latina Essential";
+  src: url("/fonts/latina-essential-bold-italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Latina Essential";
+  src: url("/fonts/latina-essential-heavy.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Latina Essential";
+  src: url("/fonts/latina-essential-heavy-italic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Metric-matched Arial fallback (values next/font generated) to avoid layout shift on swap */
+@font-face {
+  font-family: "Latina Essential Fallback";
+  src: local("Arial");
+  ascent-override: 90.39%;
+  descent-override: 18.08%;
+  line-gap-override: 0%;
+  size-adjust: 110.63%;
+}
+
 @theme {
   /* Colors — teal/charcoal + linen/raspberry palette (Frances Coronel Design System) */
 
@@ -37,7 +113,7 @@
   --color-accent-dark: #9e2b25;
 
   /* Typography — Latina Essential for everything */
-  --font-latina: "Latina Essential", sans-serif;
+  --font-latina: "Latina Essential", "Latina Essential Fallback", sans-serif;
   --font-sans: var(--font-latina);
 
   /* Font size scale — 20px minimum baseline, aggressive heading scale */

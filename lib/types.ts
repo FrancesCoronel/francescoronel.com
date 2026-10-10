@@ -2,6 +2,8 @@ export interface BlogPost {
   slug: string;
   title: string;
   date: string;
+  /** Last meaningful edit (YYYY-MM-DD), from optional `updated` frontmatter */
+  updated?: string;
   excerpt: string;
   featuredImage: string;
   categories: string[];
@@ -18,6 +20,7 @@ export interface BlogPostFrontmatter {
   title: string;
   slug: string;
   date: string;
+  updated?: string;
   excerpt: string;
   featuredImage: string;
   categories: string[];

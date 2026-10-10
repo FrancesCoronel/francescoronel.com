@@ -32,6 +32,8 @@ export const OPTIMIZED_HOSTS = new Set([
 ]);
 
 export function canOptimize(url: string): boolean {
+  // Local files in /public go through next/image too (but not protocol-relative "//host" URLs)
+  if (url.startsWith("/") && !url.startsWith("//")) return true;
   try {
     const { hostname } = new URL(url);
     return OPTIMIZED_HOSTS.has(hostname);
