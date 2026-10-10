@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Marquee } from "@/components/ui/marquee";
 
 const credentials = [
-  { text: "Senior Software Engineer @ Slack", emoji: "👩🏽‍💻", href: "/experience/senior-software-engineer-messaging" },
+  { text: "Senior Software Engineer @ Slack", emoji: "👩🏽‍💻", href: "/experience/senior-software-engineer-agentic-sdlc" },
   { text: "Tech Speaker", emoji: "🎤", href: "/speaking" },
   { text: "Mentor & Career Coach", emoji: "💬", href: "/mentoring" },
   { text: "Cornell Tech Alum", emoji: "🎓", href: "/education/cornell-tech" },

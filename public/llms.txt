@@ -4,7 +4,7 @@
 
 ## About
 
-Frances Coronel (she/her) is a Senior Software Engineer on the Messaging team at Slack, where she builds products used by millions of people daily. She has over 10 years of experience in software engineering, with expertise in TypeScript, React, and full-stack web development.
+Frances Coronel (she/her) is a Senior Software Engineer on the Agentic SDLC team at Slack, where she helps engineers and non-engineers build with AI agents across the whole software lifecycle. She has 9+ years of experience in software engineering, with expertise in TypeScript, React, and full-stack web development.
 
 Beyond engineering, Frances is a prolific tech speaker, having presented at conferences including Dreamforce, Stanford events, and JavaScript conferences. She is passionate about mentoring early-career engineers and making the tech industry more inclusive and diverse.
 
@@ -15,11 +15,11 @@ She is a proud Peruvian-American and a corgi mom to Luna and Sueño.
 ## Links
 
 - Website: https://francescoronel.com
-- Blog: https://francescoronel.com/blog
+- Blog: https://francescoronel.com/posts
 - About: https://francescoronel.com/about
 - Speaking: https://francescoronel.com/speaking
 - Mentoring: https://francescoronel.com/mentoring
-- Portfolio: https://francescoronel.com/portfolio
+- Work: https://francescoronel.com/work
 - Testimonials: https://francescoronel.com/testimonials
 - Contact: https://francescoronel.com/contact
 - LLM-friendly page: https://francescoronel.com/for-llms
@@ -28,8 +28,8 @@ She is a proud Peruvian-American and a corgi mom to Luna and Sueño.
 ## Social
 
 - GitHub: https://github.com/FrancesCoronel
-- LinkedIn: https://linkedin.com/in/fvcproductions
-- Twitter/X: https://twitter.com/faborel
+- LinkedIn: https://linkedin.com/in/francescoronel
+- Twitter/X: https://x.com/FrancesCoronel
 - YouTube: https://youtube.com/@fvcproductions
 - Instagram: https://instagram.com/fvcproductions
 
