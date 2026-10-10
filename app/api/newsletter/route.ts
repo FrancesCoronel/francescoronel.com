@@ -30,21 +30,26 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Valid email required" }, { status: 400 });
   }
 
-  const apiKey = process.env.BUTTONDOWN_API_KEY;
+  const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
     return NextResponse.json({ error: "Newsletter not configured" }, { status: 500 });
   }
 
-  const res = await fetch("https://api.buttondown.email/v1/subscribers", {
+  const segmentId = process.env.RESEND_SEGMENT_ID;
+  const res = await fetch("https://api.resend.com/contacts", {
     method: "POST",
     headers: {
-      Authorization: `Token ${apiKey}`,
+      Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ email_address: email }),
+    body: JSON.stringify({
+      email,
+      unsubscribed: false,
+      ...(segmentId ? { segments: [{ id: segmentId }] } : {}),
+    }),
   });
 
-  if (res.status === 201) {
+  if (res.ok) {
     const webhookUrl = process.env.SLACK_WEBHOOK_URL;
     if (webhookUrl) {
       fetch(webhookUrl, {
@@ -60,13 +65,13 @@ export async function POST(request: Request) {
 
   const data = await res.json().catch(() => ({}));
 
-  // 409 or a 400 with "already subscribed" in the detail — treat as success
-  if (res.status === 409 || (res.status === 400 && typeof data?.detail === "string" && data.detail.toLowerCase().includes("already subscribed"))) {
+  // 409 or an "already exists" message — treat as success
+  if (res.status === 409 || (typeof data?.message === "string" && data.message.toLowerCase().includes("already exists"))) {
     return NextResponse.json({ success: true, alreadySubscribed: true });
   }
 
   return NextResponse.json(
-    { error: data?.detail || "Failed to subscribe" },
+    { error: data?.message || "Failed to subscribe" },
     { status: res.status }
   );
 }
