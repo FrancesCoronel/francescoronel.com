@@ -2,8 +2,8 @@ import { list, put } from "@vercel/blob";
 import { readFileSync, writeFileSync, readdirSync } from "fs";
 import { join, extname } from "path";
 
-const OLD_TOKEN = "vercel_blob_rw_kTEbrBhzG9WAskY1_q2QgBgZ6PrAZaH5vCFYhxGAppPXyet";
-const NEW_TOKEN = "vercel_blob_rw_GZQhCZL3EhDy3Foa_hs7QNUEUssQUty5caV4RNOwYimIkR0";
+const OLD_TOKEN = process.env.OLD_BLOB_READ_WRITE_TOKEN;
+const NEW_TOKEN = process.env.NEW_BLOB_READ_WRITE_TOKEN;
 const OLD_BASE = "https://ktebrbhzg9wasky1.public.blob.vercel-storage.com/";
 const NEW_BASE = "https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/";
 const CONTENT_DIR = join(process.cwd(), "content");

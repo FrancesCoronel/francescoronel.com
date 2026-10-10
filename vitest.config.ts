@@ -11,7 +11,34 @@ const dirname =
 
 export default defineConfig({
   test: {
+    coverage: {
+      provider: "v8",
+      // Count every source file, not just the ones a story happens to load
+      include: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}", "lib/**/*.{ts,tsx}"],
+      exclude: ["**/*.stories.*", "**/*.d.ts"],
+      reporter: ["text-summary", "json-summary", "html"],
+    },
     projects: [
+      {
+        // Plain unit tests: lib/, API routes, and pages rendered to markup
+        extends: true,
+        // public/ is served by Next, not imported; without this Vite rejects the
+        // Pagefind import once a build has generated public/pagefind
+        publicDir: false,
+        resolve: {
+          alias: {
+            "@": dirname,
+            "/pagefind/pagefind.js": path.join(dirname, "test/pagefind-stub.ts"),
+          },
+        },
+        test: {
+          name: "unit",
+          environment: "node",
+          include: ["**/*.test.{ts,tsx}"],
+          exclude: ["node_modules/**", "e2e/**", ".next/**"],
+          setupFiles: ["./test/setup.ts"],
+        },
+      },
       {
         extends: true,
         plugins: [storybookTest({ configDir: path.join(dirname, ".storybook") })],
@@ -20,7 +47,8 @@ export default defineConfig({
           browser: {
             enabled: true,
             headless: true,
-            provider: playwright({}),
+            // CHROMIUM_PATH lets a machine with a different Playwright browser build run these
+            provider: playwright({ launchOptions: { executablePath: process.env.CHROMIUM_PATH } }),
             instances: [{ browser: "chromium" }],
           },
           setupFiles: [".storybook/preview.ts"],

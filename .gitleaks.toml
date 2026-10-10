@@ -1,0 +1,8 @@
+# gitleaks config for the security workflow. Starts from the default rules.
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Public LinkedIn handle in site metadata, not a client ID"
+regexTarget = "line"
+regexes = ['''linkedin: "francescoronel"''']

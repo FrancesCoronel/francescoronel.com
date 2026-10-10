@@ -20,8 +20,45 @@ jobs:
       run-build: false # e2e and Lighthouse already build the site
       extra-scripts: lint:md
 
+  # Unit tests with coverage over app/, components/ and lib/. Every file is
+  # fully covered, so new untested code fails. Storybook interaction tests
+  # run in their own workflow; their browser coverage doesn't merge cleanly
+  # with the unit project's, so it isn't counted here.
+  coverage:
+    uses: FrancesCoronel/workflows/.github/workflows/coverage.yml@claude/quality-gates
+    with:
+      node-version: "22"
+      min: 100
+
+  security:
+    uses: FrancesCoronel/workflows/.github/workflows/security.yml@claude/quality-gates
+
+  # Zero axe violations (WCAG 2 AA) and Lighthouse 90+ performance,
+  # 100 accessibility, best practices and SEO on the key pages.
+  # /testimonials is left out: it is noindex on purpose, so its SEO score is always 66.
+  web-quality:
+    uses: FrancesCoronel/workflows/.github/workflows/web-quality.yml@claude/quality-gates
+    with:
+      node-version: "22"
+      # Starts at 85: post, tag and speaking pages score 86-96 on CI runners today.
+      # Raise to the shared 0.9 once they clear it consistently.
+      performance-min: 0.85
+      urls: |
+        /
+        /about
+        /contact
+        /speaking
+        /mentoring
+        /organizations
+        /organizations/slack
+        /posts
+        /posts/i-think-im-becoming-a-cracked-engineer
+        /posts/ai-engineer-conference-2026
+        /tags/yearly-reflection
+        /categories/awards
+
   dependabot:
-    needs: ci
+    needs: [ci, coverage, security, web-quality]
     if: github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot[bot]'
     uses: FrancesCoronel/workflows/.github/workflows/dependabot-automerge.yml@v1
     permissions:

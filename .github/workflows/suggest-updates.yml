@@ -31,8 +31,10 @@ jobs:
           node-version: 22
 
       - name: Analyze recent posts
+        env:
+          DAYS: ${{ github.event.inputs.days || '90' }}
         run: |
-          node scripts/suggest-page-updates.js --days ${{ github.event.inputs.days || '90' }}
+          node scripts/suggest-page-updates.js --days "$DAYS"
 
       - name: Create issue with suggestions
         if: hashFiles('page-update-suggestions.md') != ''

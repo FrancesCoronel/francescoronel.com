@@ -42,7 +42,9 @@ export function getBlogPost(slug: string, { includeDrafts = false } = {}): Post 
   }
   let data: Record<string, unknown>, content: string;
   try {
-    ({ data, content } = matter(raw));
+    // Passing options skips gray-matter's cache, which would hand back empty
+    // data for a broken file the second time it is parsed
+    ({ data, content } = matter(raw, {}));
   } catch {
     return null;
   }

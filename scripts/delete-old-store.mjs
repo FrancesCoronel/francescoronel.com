@@ -1,6 +1,6 @@
 import { list, del } from "@vercel/blob";
 
-const OLD_TOKEN = "vercel_blob_rw_kTEbrBhzG9WAskY1_q2QgBgZ6PrAZaH5vCFYhxGAppPXyet";
+const OLD_TOKEN = process.env.OLD_BLOB_READ_WRITE_TOKEN;
 
 let cursor;
 let total = 0;

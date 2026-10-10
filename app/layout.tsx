@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { preload } from "react-dom";
 import { Nav } from "@/components/layout/nav";
 import { Footer } from "@/components/layout/footer";
 import { AnalyticsProviders } from "@/components/layout/analytics";
@@ -9,20 +9,9 @@ import { buildMetadata } from "@/lib/metadata";
 import { BackToTop } from "@/components/ui/back-to-top";
 import "./globals.css";
 
-const latina = localFont({
-  src: [
-    { path: "../public/fonts/latina-essential-light.woff2", weight: "300", style: "normal" },
-    { path: "../public/fonts/latina-essential-light-italic.woff2", weight: "300", style: "italic" },
-    { path: "../public/fonts/latina-essential-medium.woff2", weight: "500", style: "normal" },
-    { path: "../public/fonts/latina-essential-medium-italic.woff2", weight: "500", style: "italic" },
-    { path: "../public/fonts/latina-essential-bold.woff2", weight: "700", style: "normal" },
-    { path: "../public/fonts/latina-essential-bold-italic.woff2", weight: "700", style: "italic" },
-    { path: "../public/fonts/latina-essential-heavy.woff2", weight: "900", style: "normal" },
-    { path: "../public/fonts/latina-essential-heavy-italic.woff2", weight: "900", style: "italic" },
-  ],
-  variable: "--font-latina",
-  display: "swap",
-});
+// Latina Essential is declared in globals.css. Only the three weights above the fold are
+// preloaded: preloading all eight files (~260 KB) delayed the hero image by 2-3 s on mobile.
+const PRELOADED_FONTS = ["medium", "bold", "heavy"];
 
 export const metadata: Metadata = {
   ...buildMetadata(),
@@ -51,8 +40,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  for (const weight of PRELOADED_FONTS) {
+    preload(`/fonts/latina-essential-${weight}.woff2`, {
+      as: "font",
+      type: "font/woff2",
+      crossOrigin: "anonymous",
+    });
+  }
+
   return (
-    <html lang="en" className={latina.variable} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* IndieWeb rel="me" for IndieLogin identity verification */}
         <link rel="me" href="https://github.com/FrancesCoronel" />
@@ -69,7 +66,7 @@ export default function RootLayout({
           <main id="main-content" className="flex-1">{children}</main>
           <Footer />
           <BackToTop />
-          <AnalyticsProviders />
+          <AnalyticsProviders vercel={Boolean(process.env.VERCEL)} />
         </ThemeProvider>
       </body>
     </html>
