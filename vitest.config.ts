@@ -11,6 +11,13 @@ const dirname =
 
 export default defineConfig({
   test: {
+    coverage: {
+      provider: "v8",
+      // Count every source file, not just the ones a story happens to load
+      include: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}", "lib/**/*.{ts,tsx}"],
+      exclude: ["**/*.stories.*", "**/*.d.ts"],
+      reporter: ["text-summary", "json-summary", "html"],
+    },
     projects: [
       {
         extends: true,

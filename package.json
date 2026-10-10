@@ -19,6 +19,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test:storybook": "vitest --project storybook --run",
+    "test:coverage": "vitest --project storybook --run --coverage",
     "chromatic": "chromatic --exit-zero-on-changes",
     "lint:md": "markdownlint-cli2 \"content/posts/**/*.mdx\"",
     "test:e2e": "playwright test",

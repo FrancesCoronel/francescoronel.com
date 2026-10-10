@@ -20,8 +20,41 @@ jobs:
       run-build: false # e2e and Lighthouse already build the site
       extra-scripts: lint:md
 
+  # Storybook interaction tests with coverage over app/, components/ and lib/.
+  # Started at today's level (about 12%); raise min as tests land, toward 100.
+  coverage:
+    uses: FrancesCoronel/workflows/.github/workflows/coverage.yml@claude/quality-gates
+    with:
+      node-version: "22"
+      setup: npx playwright install --with-deps chromium
+      min: 11
+
+  security:
+    uses: FrancesCoronel/workflows/.github/workflows/security.yml@claude/quality-gates
+
+  # Zero axe violations (WCAG 2 AA) and Lighthouse 90+ performance,
+  # 100 accessibility, best practices and SEO on the key pages.
+  web-quality:
+    uses: FrancesCoronel/workflows/.github/workflows/web-quality.yml@claude/quality-gates
+    with:
+      node-version: "22"
+      urls: |
+        /
+        /about
+        /contact
+        /speaking
+        /mentoring
+        /testimonials
+        /organizations
+        /organizations/slack
+        /posts
+        /posts/i-think-im-becoming-a-cracked-engineer
+        /posts/ai-engineer-conference-2026
+        /tags/yearly-reflection
+        /categories/awards
+
   dependabot:
-    needs: ci
+    needs: [ci, coverage, security, web-quality]
     if: github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot[bot]'
     uses: FrancesCoronel/workflows/.github/workflows/dependabot-automerge.yml@v1
     permissions:
