@@ -49,7 +49,7 @@ source: "nextjs"
 ---
 ```
 
-8. **Remind the user** to add a `featuredImage` URL before publishing (upload to Vercel Blob — see CLAUDE.md for the upload snippet).
+8. **Remind the user** to add a `featuredImage` URL before publishing (upload to Vercel Blob — see AGENTS.md for the upload snippet).
 
 ## Voice guidelines
 
