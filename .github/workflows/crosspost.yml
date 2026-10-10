@@ -1,0 +1,87 @@
+name: Cross-post new posts
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/posts/**/*.mdx"
+
+jobs:
+  crosspost:
+    name: Cross-post new posts
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Detect newly added blog posts
+        id: new-posts
+        run: |
+          # Only pick up files that were ADDED (A), not modified (M)
+          NEW=$(git diff --name-status HEAD~1 HEAD -- 'content/posts/*.mdx' \
+            | awk '$1 == "A" { print $2 }' \
+            | tr '\n' ' ')
+          echo "files=$NEW" >> "$GITHUB_OUTPUT"
+
+      # Each platform is skipped when its secret isn't set, and one failing doesn't block the others
+
+      - name: Cross-post to dev.to
+        if: steps.new-posts.outputs.files != ''
+        continue-on-error: true
+        env:
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+        run: |
+          if [ -z "$DEVTO_API_KEY" ]; then echo "DEVTO_API_KEY not set, skipping"; exit 0; fi
+          for file in ${{ steps.new-posts.outputs.files }}; do
+            echo "→ Processing $file"
+            node scripts/crosspost-devto.js "$file"
+          done
+
+      - name: Cross-post to Hashnode
+        if: steps.new-posts.outputs.files != ''
+        continue-on-error: true
+        env:
+          HASHNODE_TOKEN: ${{ secrets.HASHNODE_TOKEN }}
+          HASHNODE_PUBLICATION_ID: ${{ vars.HASHNODE_PUBLICATION_ID }}
+        run: |
+          if [ -z "$HASHNODE_TOKEN" ]; then echo "HASHNODE_TOKEN not set, skipping"; exit 0; fi
+          for file in ${{ steps.new-posts.outputs.files }}; do
+            echo "→ Processing $file"
+            node scripts/crosspost-hashnode.js "$file"
+          done
+
+      - name: Share on social via Buffer
+        if: steps.new-posts.outputs.files != ''
+        continue-on-error: true
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_SERVICES: ${{ vars.BUFFER_SERVICES }}
+          BUFFER_MODE: ${{ vars.BUFFER_MODE }}
+        run: |
+          if [ -z "$BUFFER_API_KEY" ]; then echo "BUFFER_API_KEY not set, skipping"; exit 0; fi
+          for file in ${{ steps.new-posts.outputs.files }}; do
+            echo "→ Processing $file"
+            node scripts/crosspost-social.js "$file"
+          done
+
+      - name: Remind me in Slack about the manual steps
+        if: steps.new-posts.outputs.files != ''
+        continue-on-error: true
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          if [ -z "$SLACK_WEBHOOK_URL" ]; then echo "SLACK_WEBHOOK_URL not set, skipping"; exit 0; fi
+          for file in ${{ steps.new-posts.outputs.files }}; do
+            node scripts/notify-slack.js "$file"
+          done
