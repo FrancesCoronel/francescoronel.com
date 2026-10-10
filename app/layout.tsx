@@ -69,7 +69,7 @@ export default function RootLayout({
           <main id="main-content" className="flex-1">{children}</main>
           <Footer />
           <BackToTop />
-          <AnalyticsProviders />
+          <AnalyticsProviders vercel={Boolean(process.env.VERCEL)} />
         </ThemeProvider>
       </body>
     </html>
