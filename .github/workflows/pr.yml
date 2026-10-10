@@ -34,6 +34,7 @@ jobs:
 
   # Zero axe violations (WCAG 2 AA) and Lighthouse 90+ performance,
   # 100 accessibility, best practices and SEO on the key pages.
+  # /testimonials is left out: it is noindex on purpose, so its SEO score is always 66.
   web-quality:
     uses: FrancesCoronel/workflows/.github/workflows/web-quality.yml@claude/quality-gates
     with:
@@ -44,7 +45,6 @@ jobs:
         /contact
         /speaking
         /mentoring
-        /testimonials
         /organizations
         /organizations/slack
         /posts

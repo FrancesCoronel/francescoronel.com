@@ -32,6 +32,8 @@ export const OPTIMIZED_HOSTS = new Set([
 ]);
 
 export function canOptimize(url: string): boolean {
+  // Local raster images in public/ go through next/image too (SVGs need dangerouslyAllowSVG, so they don't)
+  if (/^\/(?!\/)[^?#]*\.(png|jpe?g|webp|avif)$/i.test(url)) return true;
   try {
     const { hostname } = new URL(url);
     return OPTIMIZED_HOSTS.has(hostname);
