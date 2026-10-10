@@ -22,6 +22,8 @@ const latina = localFont({
   ],
   variable: "--font-latina",
   display: "swap",
+  // Preloading all 8 files (~260 KB) delayed the hero image by 2-3 s on mobile; swap covers first paint
+  preload: false,
 });
 
 export const metadata: Metadata = {
