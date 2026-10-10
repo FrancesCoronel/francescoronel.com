@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/sections/hero";
 import { CredentialsMarquee } from "@/components/sections/credentials-marquee";
 import { ConnectCTA } from "@/components/sections/connect-cta";
+import { NewsletterCTA } from "@/components/sections/newsletter-cta";
 import { BlogCard } from "@/components/ui/blog-card";
 import { Timeline } from "@/components/ui/timeline";
 import {
@@ -114,6 +115,9 @@ export default async function HomePage() {
         </section>
       )}
 
+
+      {/* Newsletter */}
+      <NewsletterCTA />
 
       {/* Experience Highlights */}
       {experiences.length > 0 && (() => {
