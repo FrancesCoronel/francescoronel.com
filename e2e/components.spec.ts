@@ -62,7 +62,7 @@ test("mobile nav — hamburger opens and closes overlay", async ({ page }) => {
   await page.waitForTimeout(200);
 
   // At least one nav link should now be visible
-  const navLinks = page.getByRole("link", { name: /posts|about|speaking/i });
+  const navLinks = page.getByRole("link", { name: /essays|about|speaking/i });
   await expect(navLinks.first()).toBeVisible();
 
   // Close it

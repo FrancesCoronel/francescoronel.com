@@ -7,11 +7,10 @@ import { SearchModal } from "@/components/ui/search-modal";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const navLinks = [
-  { href: "/about", label: "About" },
-  { href: "/mentoring", label: "Mentoring" },
-  { href: "/posts", label: "Posts" },
+  { href: "/essays", label: "Essays" },
   { href: "/speaking", label: "Speaking" },
   { href: "/work", label: "Work" },
+  { href: "/about", label: "About" },
 ];
 
 export function Nav() {

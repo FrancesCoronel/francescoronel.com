@@ -19,11 +19,11 @@ const variants: Record<
   default: {
     heading: "Let\u2019s Connect \uD83D\uDC4B\uD83C\uDFFD",
     description:
-      "Whether you want to book a speaking engagement, schedule a mentoring session, or just say hello \u2014 I\u2019d love to hear from you.",
+      "Want me to speak at your event, compare notes on bringing AI agents to your company, or just say hello? I\u2019d love to hear from you.",
     primaryLabel: "Get in Touch",
     primaryHref: "/contact",
-    secondaryLabel: "Book Mentoring",
-    secondaryHref: "/mentoring",
+    secondaryLabel: "Read the Essays",
+    secondaryHref: "/essays",
     image: "/images/assets/calendar-connect.webp",
   },
   speaking: {
@@ -49,11 +49,11 @@ const variants: Record<
   follow: {
     heading: "Stay in the Loop \u270D\uD83C\uDFFD",
     description:
-      "I share thoughts on engineering, career growth, and the tech industry. Follow along for more.",
+      "I share what I\u2019m learning about bringing AI agents to whole companies, for engineers and everyone else. Follow along for more.",
     primaryLabel: "Follow on LinkedIn",
     primaryHref: "https://www.linkedin.com/in/francescoronel",
-    secondaryLabel: "Book Mentoring",
-    secondaryHref: "/mentoring",
+    secondaryLabel: "Read the Essays",
+    secondaryHref: "/essays",
     image: "/images/assets/newsletter-cta.webp",
   },
   hire: {
@@ -82,8 +82,8 @@ const variants: Record<
       "Have a question, a speaking invite, or just want to say hi? I\u2019d love to hear from you.",
     primaryLabel: "Send a Message",
     primaryHref: "/contact",
-    secondaryLabel: "Book Mentoring",
-    secondaryHref: "/mentoring",
+    secondaryLabel: "Read the Essays",
+    secondaryHref: "/essays",
     image: "/images/assets/heart-chat-bubble.webp",
   },
 };
