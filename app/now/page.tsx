@@ -77,7 +77,8 @@ const entries = [
             the house.
           </>,
           <>
-            Still working toward my <strong>PADI Divemaster</strong> 🤿.
+            Still working toward my <strong>PADI Divemaster</strong> 🤿, with the
+            instructor development course (IDC) on deck for next year.
           </>,
         ],
       },
