@@ -126,7 +126,8 @@ export function SessionsTable() {
     return merged.sort((a, b) => b.date.localeCompare(a.date));
   }, [loaded, liveSessions]);
 
-  const totalCount = _meta.totalSessions + liveSessions.length;
+  // Live sessions already in the history are counted once, as the chart does
+  const totalCount = allSessions.length - historicalSessions.length + _meta.totalSessions;
 
   // Build byYear including live sessions
   const byYear = { ..._meta.byYear };
@@ -174,7 +175,7 @@ export function SessionsTable() {
         </p>
         <div className="flex items-end gap-1.5">
           {allYears.map((year) => {
-            const count = byYear[year] ?? 0;
+            const count = byYear[year];
             const heightPct = Math.round((count / maxCount) * 100);
             return (
               <div key={year} className="flex flex-1 flex-col items-center gap-1">

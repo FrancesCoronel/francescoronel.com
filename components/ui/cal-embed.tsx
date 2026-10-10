@@ -21,8 +21,7 @@ export function CalEmbed() {
   // The embed is heavy and sets third-party cookies, so wait until the
   // calendar is close to the viewport before loading it
   useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
+    const el = containerRef.current!;
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries.some((e) => e.isIntersecting)) {

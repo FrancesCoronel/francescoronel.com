@@ -20,14 +20,15 @@ jobs:
       run-build: false # e2e and Lighthouse already build the site
       extra-scripts: lint:md
 
-  # Storybook interaction tests with coverage over app/, components/ and lib/.
-  # Started at today's level (about 12%); raise min as tests land, toward 100.
+  # Unit tests with coverage over app/, components/ and lib/. Every file is
+  # fully covered, so new untested code fails. Storybook interaction tests
+  # run in their own workflow; their browser coverage doesn't merge cleanly
+  # with the unit project's, so it isn't counted here.
   coverage:
     uses: FrancesCoronel/workflows/.github/workflows/coverage.yml@claude/quality-gates
     with:
       node-version: "22"
-      setup: npx playwright install --with-deps chromium
-      min: 11
+      min: 100
 
   security:
     uses: FrancesCoronel/workflows/.github/workflows/security.yml@claude/quality-gates

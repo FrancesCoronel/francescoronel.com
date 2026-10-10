@@ -98,7 +98,11 @@ describe("ProjectsGridClient", () => {
     expect(within(work).getByText("Jan 2020 – Jun 2021").tagName).toBe("P");
 
     // Unknown categories fall back to the raw key and the side-project colour
-    expect(within(card("Odd One")).getByText("experiment")).toHaveClass("text-horchata-700");
+    const odd = card("Odd One");
+    expect(within(odd).getByText("experiment")).toHaveClass("text-horchata-700");
+    // Zero stars are hidden like missing ones
+    expect(within(odd).getByText("Jan 2020 – Jun 2021").tagName).toBe("P");
+    expect(within(odd).queryByText("0")).not.toBeInTheDocument();
 
     expect(screen.queryByRole("link", { name: "Side 11" })).not.toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "2" }));
@@ -114,9 +118,12 @@ describe("ProjectsGridClient", () => {
     expect(screen.getAllByRole("link")).toHaveLength(12);
   });
 
-  it("shows a single page of featured-free results without a page count", () => {
-    renderGrid({ projects: [featuredA, ...others.slice(0, 3)], featuredSlugs: ["featured-a"] });
+  it("omits the page number when the rest fits on one page", () => {
+    const weird = project("weird", { title: "Weird", category: "experiment" as Project["category"] });
+    renderGrid({ projects: [weird, ...others.slice(0, 3)], featuredSlugs: ["weird"] });
     expect(screen.getByText("3 projects")).toBeInTheDocument();
+    // Featured rows fall back to the raw category key too
+    expect(within(card("Weird")).getByText("experiment")).toHaveClass("text-horchata-700");
   });
 
   it("filters by category tab", async () => {

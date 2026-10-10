@@ -70,7 +70,8 @@ describe("SessionsTable", () => {
     render(<SessionsTable />);
 
     await waitFor(() => expect(screen.getByText(`${historical.length + 4} sessions`)).toBeInTheDocument());
-    expect(statValue("Total sessions")).toBe(String(total + liveSessions.length));
+    // The live session that duplicates a historical one is counted once
+    expect(statValue("Total sessions")).toBe(String(total + 4));
     expect(yearBar("2027")).toBe("4");
     expect(screen.getByRole("option", { name: "2027" })).toBeInTheDocument();
 

@@ -1,17 +1,8 @@
-import { afterAll, afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-
-// Vite's client (jsdom) transform refuses to resolve the build-time
-// "/pagefind/pagefind.js" import, so this file runs in the node environment
-// and installs the jsdom globals itself before anything else is imported
-const dom = await vi.hoisted(async () => {
-  const { builtinEnvironments } = await import("vitest/environments");
-  return builtinEnvironments.jsdom.setup(globalThis, {});
-});
-afterAll(() => dom.teardown(globalThis));
-
+// @vitest-environment jsdom
 import "@testing-library/jest-dom/vitest";
 import { act, cleanup, fireEvent, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 const { pagefind, push } = vi.hoisted(() => ({
   pagefind: { init: vi.fn(), search: vi.fn() },

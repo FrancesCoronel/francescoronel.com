@@ -18,19 +18,19 @@ export function Lightbox({ children, className }: { children: React.ReactNode; c
 
   // Collect all images and open at the clicked index
   const open = useCallback((clickedSrc: string) => {
-    if (!containerRef.current) return;
-    const imgs = Array.from(containerRef.current.querySelectorAll("img")).filter(
+    // Only called from the container's own click listener, so the ref is set
+    // and the clicked image is one of these
+    const imgs = Array.from(containerRef.current!.querySelectorAll("img")).filter(
       (el) => !el.closest("a") // skip linked images that should navigate
     );
     const images = imgs.map((el) => ({ src: el.src, alt: el.alt || "" }));
     const index = imgs.findIndex((el) => el.src === clickedSrc);
-    if (images.length > 0) setLb({ images, index: index >= 0 ? index : 0 });
+    setLb({ images, index });
   }, []);
 
   // Event delegation — one listener on the container
   useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
+    const el = containerRef.current!;
     const handler = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const img = target.closest("img");
