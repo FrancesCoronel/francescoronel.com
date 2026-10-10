@@ -69,4 +69,4 @@ source: "nextjs"
 
 - Remind the user to add a `featuredImage` (upload image to Vercel Blob first)
 - Run `/commit` then `/deploy` when ready to publish
-- The post will appear at `/blog/<slug>` after the next build
+- The post will appear at `/posts/<slug>` after the next build

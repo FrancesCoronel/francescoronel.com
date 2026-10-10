@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "content/blog/**/*.mdx"
+      - "content/posts/**/*.mdx"
 
 jobs:
   crosspost:
@@ -29,7 +29,7 @@ jobs:
         id: new-posts
         run: |
           # Only pick up files that were ADDED (A), not modified (M)
-          NEW=$(git diff --name-status HEAD~1 HEAD -- 'content/blog/*.mdx' \
+          NEW=$(git diff --name-status HEAD~1 HEAD -- 'content/posts/*.mdx' \
             | awk '$1 == "A" { print $2 }' \
             | tr '\n' ' ')
           echo "files=$NEW" >> "$GITHUB_OUTPUT"

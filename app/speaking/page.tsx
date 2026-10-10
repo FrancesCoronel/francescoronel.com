@@ -103,7 +103,7 @@ export default function SpeakingPage() {
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {featuredWithLogos.map((talk) => {
               const href = talk.postSlug
-                ? `/blog/${talk.postSlug}`
+                ? `/posts/${talk.postSlug}`
                 : talk.orgUrl || `/organizations/${talk.orgSlug}`;
 
               return (

@@ -85,7 +85,7 @@ export function BlogPostJsonLd({
     headline: title,
     description,
     datePublished: date,
-    url: `${siteConfig.siteUrl}/blog/${slug}`,
+    url: `${siteConfig.siteUrl}/posts/${slug}`,
     author: {
       "@type": "Person",
       name: siteConfig.author,
@@ -98,7 +98,7 @@ export function BlogPostJsonLd({
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${siteConfig.siteUrl}/blog/${slug}`,
+      "@id": `${siteConfig.siteUrl}/posts/${slug}`,
     },
     ...(image && { image }),
   };
