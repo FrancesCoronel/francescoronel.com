@@ -18,6 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
+          persist-credentials: false
           fetch-depth: 0
 
       - uses: anthropics/claude-code-action@1d6de8cb0c237e7c15e9e1bdf973826ebae490cc  # v1.0.248
@@ -37,4 +38,4 @@ jobs:
             Post inline comments on specific lines where issues are found.
             Be concise — only flag real issues, not style preferences already enforced by ESLint.
           claude_args: |
-            --model claude-sonnet-5
+            --model claude-sonnet-5-5
