@@ -5,13 +5,20 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import { siteConfig } from "@/lib/metadata";
 
-export function AnalyticsProviders() {
+// Vercel Analytics and Speed Insights scripts are served by Vercel, so they
+// 404 anywhere else (local builds, CI). The layout passes `vercel` from the
+// server, where process.env.VERCEL is set.
+export function AnalyticsProviders({ vercel = false }: { vercel?: boolean }) {
   const gaId = siteConfig.ga4MeasurementId;
 
   return (
     <>
-      <Analytics />
-      <SpeedInsights />
+      {vercel && (
+        <>
+          <Analytics />
+          <SpeedInsights />
+        </>
+      )}
       {gaId && (
         <>
           <Script
