@@ -37,7 +37,7 @@ describe("app/speaking/page", () => {
   it("links featured talks to their blog posts, with topics", () => {
     const html = renderToStaticMarkup(<SpeakingPage />);
     expect(html).toContain("Featured Talks 🎤");
-    expect(html).toContain('href="/blog/speaking-at-dreamforce-exploring-ai-agents-in-slack"');
+    expect(html).toContain('href="/posts/speaking-at-dreamforce-exploring-ai-agents-in-slack"');
     expect(html).toContain("Exploring AI Agents in Slack");
     expect(html).toContain(">Future of Work</span>");
   });

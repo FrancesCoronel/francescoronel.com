@@ -44,10 +44,10 @@ describe("BlogPostJsonLd", () => {
       headline: "Hello",
       description: "Desc",
       datePublished: "2024-01-01",
-      url: "https://francescoronel.com/blog/hello",
+      url: "https://francescoronel.com/posts/hello",
       author: { "@type": "Person", name: "Frances Coronel", url: "https://francescoronel.com" },
       publisher: { "@type": "Person", name: "Frances Coronel", url: "https://francescoronel.com" },
-      mainEntityOfPage: { "@type": "WebPage", "@id": "https://francescoronel.com/blog/hello" },
+      mainEntityOfPage: { "@type": "WebPage", "@id": "https://francescoronel.com/posts/hello" },
       image: "https://x.y/a.png",
     });
   });
