@@ -20,10 +20,19 @@ jobs:
       run-build: false # e2e and Lighthouse already build the site
       extra-scripts: lint:md
 
+  e2e:
+    uses: ./.github/workflows/e2e.yml
+    permissions:
+      contents: read
+      pull-requests: write # screenshot comment
+
+  # Majors auto-merge too: CI + e2e have to pass first, so regressions block it
   dependabot:
-    needs: ci
+    needs: [ci, e2e]
     if: github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot[bot]'
     uses: FrancesCoronel/workflows/.github/workflows/dependabot-automerge.yml@v1
+    with:
+      allow-major: true
     permissions:
       contents: write
       pull-requests: write

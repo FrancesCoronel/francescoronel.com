@@ -1,14 +1,9 @@
 name: E2E tests
 
+# Called from pr.yml so the Dependabot auto-merge job can wait on it.
+# Concurrency is handled by the caller.
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-
-concurrency:
-  group: e2e-${{ github.ref }}
-  cancel-in-progress: true
+  workflow_call:
 
 jobs:
   # ── Smoke + component tests (fast, every PR) ──────────────────────────────
