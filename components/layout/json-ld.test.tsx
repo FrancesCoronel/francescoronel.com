@@ -27,7 +27,7 @@ describe("PersonJsonLd", () => {
       expect.arrayContaining([
         "https://github.com/FrancesCoronel",
         "https://linkedin.com/in/francescoronel",
-        "https://twitter.com/faborel",
+        "https://twitter.com/FrancesCoronel",
       ]),
     );
   });

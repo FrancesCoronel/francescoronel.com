@@ -5,7 +5,7 @@ import { getBlogPostsByCategory, getOrganizations, getTestimonials, getCategoryM
 import { SpeakingListClient } from "@/components/ui/speaking-list-client";
 import { OrgLogo } from "@/components/ui/org-logo";
 import { UpcomingEvents } from "@/components/ui/upcoming-events";
-import { buildMetadata } from "@/lib/metadata";
+import { buildMetadata, YEARS_OF_EXPERIENCE } from "@/lib/metadata";
 import { PageHeader } from "@/components/ui/page-header";
 import { TestimonialsPreview } from "@/components/sections/testimonials-preview";
 import { ConnectCTA } from "@/components/sections/connect-cta";
@@ -75,7 +75,7 @@ export default function SpeakingPage() {
       <PageHeader
         label="Events"
         heading="Speaking 🎤"
-        description="Senior Software Engineer at Slack with 8+ years in frontend engineering. Speaker and mentor, with a focus on helping underrepresented engineers grow into technical leadership."
+        description={`Senior Software Engineer at Slack with ${YEARS_OF_EXPERIENCE}+ years in frontend engineering. Speaker and mentor, with a focus on helping underrepresented engineers grow into technical leadership.`}
         aside={
           <Image
             src="/images/assets/speaking-microphone.png"

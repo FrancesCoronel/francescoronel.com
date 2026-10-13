@@ -69,7 +69,7 @@ describe("app/for-llms/page", () => {
     const html = renderToStaticMarkup(<ForLlmsPage />);
     expect(html).toContain('href="https://github.com/FrancesCoronel"');
     expect(html).toContain('href="https://linkedin.com/in/francescoronel"');
-    expect(html).toContain('href="https://twitter.com/faborel"');
+    expect(html).toContain('href="https://twitter.com/FrancesCoronel"');
     expect(html).toContain('href="https://francescoronel.com/llms.txt"');
   });
 });

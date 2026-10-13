@@ -156,7 +156,7 @@ describe("CredentialsMarquee", () => {
     render(<CredentialsMarquee />);
     const slack = screen.getAllByRole("link", { name: "Senior Software Engineer @ Slack" });
     expect(slack).toHaveLength(2);
-    expect(slack[0]).toHaveAttribute("href", "/experience/senior-software-engineer-messaging");
+    expect(slack[0]).toHaveAttribute("href", "/experience/senior-software-engineer-agentic-sdlc");
     expect(screen.getAllByRole("link")).toHaveLength(20);
   });
 });

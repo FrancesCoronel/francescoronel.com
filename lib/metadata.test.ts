@@ -44,7 +44,7 @@ describe("buildMetadata", () => {
     });
     expect(meta.twitter).toMatchObject({
       card: "summary_large_image",
-      creator: "@faborel",
+      creator: "@FrancesCoronel",
       title: "Frances Coronel",
     });
     expect(meta.robots).toEqual({ index: true, follow: true });
