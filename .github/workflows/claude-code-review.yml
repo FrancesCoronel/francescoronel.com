@@ -37,4 +37,4 @@ jobs:
             Post inline comments on specific lines where issues are found.
             Be concise — only flag real issues, not style preferences already enforced by ESLint.
           claude_args: |
-            --model claude-sonnet-5
+            --model claude-sonnet-5-5
