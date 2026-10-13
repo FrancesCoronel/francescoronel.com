@@ -3,7 +3,7 @@
  * Cross-post a blog post to dev.to.
  *
  * Usage:
- *   node scripts/crosspost-devto.js content/blog/my-post.mdx
+ *   node scripts/crosspost-devto.js content/posts/my-post.mdx
  *
  * Required env vars:
  *   DEVTO_API_KEY — your dev.to API key (Settings → Account → DEV API Keys)
@@ -98,7 +98,7 @@ async function crosspost(filePath) {
   }
 
   const postSlug = slug || path.basename(filePath, path.extname(filePath));
-  const canonicalUrl = `${SITE_URL}/blog/${postSlug}`;
+  const canonicalUrl = `${SITE_URL}/posts/${postSlug}`;
   const bodyMarkdown = mdxToMarkdown(content);
   const devtoTags = buildDevToTags(categories, tags);
 
@@ -143,13 +143,17 @@ async function crosspost(filePath) {
   console.log(`  Add "devto_id: ${data.id}" to frontmatter to enable future updates.`);
 }
 
-const filePath = process.argv[2];
-if (!filePath) {
-  console.error("Usage: node scripts/crosspost-devto.js <path-to-post.mdx>");
-  process.exit(1);
-}
+module.exports = { mdxToMarkdown };
 
-crosspost(filePath).catch((err) => {
-  console.error("Unexpected error:", err);
-  process.exit(1);
-});
+if (require.main === module) {
+  const filePath = process.argv[2];
+  if (!filePath) {
+    console.error("Usage: node scripts/crosspost-devto.js <path-to-post.mdx>");
+    process.exit(1);
+  }
+
+  crosspost(filePath).catch((err) => {
+    console.error("Unexpected error:", err);
+    process.exit(1);
+  });
+}
