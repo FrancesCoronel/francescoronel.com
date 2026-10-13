@@ -25,19 +25,19 @@ jobs:
   # run in their own workflow; their browser coverage doesn't merge cleanly
   # with the unit project's, so it isn't counted here.
   coverage:
-    uses: FrancesCoronel/workflows/.github/workflows/coverage.yml@claude/quality-gates
+    uses: FrancesCoronel/workflows/.github/workflows/coverage.yml@v1
     with:
       node-version: "22"
       min: 100
 
   security:
-    uses: FrancesCoronel/workflows/.github/workflows/security.yml@claude/quality-gates
+    uses: FrancesCoronel/workflows/.github/workflows/security.yml@v1
 
   # Zero axe violations (WCAG 2 AA) and Lighthouse 90+ performance,
   # 100 accessibility, best practices and SEO on the key pages.
   # /testimonials is left out: it is noindex on purpose, so its SEO score is always 66.
   web-quality:
-    uses: FrancesCoronel/workflows/.github/workflows/web-quality.yml@claude/quality-gates
+    uses: FrancesCoronel/workflows/.github/workflows/web-quality.yml@v1
     with:
       node-version: "22"
       # Starts at 85: post, tag and speaking pages score 86-96 on CI runners today.
