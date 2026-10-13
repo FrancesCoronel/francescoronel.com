@@ -91,7 +91,7 @@ export function AwardsSection({ awards, blogPostMap = {} }: AwardsSectionProps) 
   return (
     <section className="py-16 md:py-20">
       <div className="mx-auto max-w-[var(--container-max)] px-6">
-        <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+        <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
           Recognition
         </p>
         <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">

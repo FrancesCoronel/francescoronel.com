@@ -9,7 +9,7 @@ function SafeTweet({ id }: { id: string }) {
       href={`https://twitter.com/i/status/${id}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1 text-horchata-600 hover:text-horchata-800 underline"
+      className="inline-flex items-center gap-1 text-horchata-600 hover:text-horchata-800 underline dark:text-accent-light dark:hover:text-horchata-200"
     >
       View on X/Twitter ↗
     </a>

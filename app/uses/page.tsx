@@ -394,7 +394,7 @@ export default function UsesPage() {
       {/* Hero */}
       <section className="bg-horchata-50 py-16 dark:bg-navy-900">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Setup
           </p>
           <h1 className="mt-2 text-2xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl md:text-4xl lg:text-5xl">
@@ -410,7 +410,7 @@ export default function UsesPage() {
       {/* Tools by Category */}
       <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Software
           </p>
           <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">
@@ -475,7 +475,7 @@ export default function UsesPage() {
       {/* Claude Code Section */}
       <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             AI Workflow
           </p>
           <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">

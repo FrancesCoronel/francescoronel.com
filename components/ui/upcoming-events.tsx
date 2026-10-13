@@ -36,7 +36,7 @@ export function UpcomingEvents({ events }: UpcomingEventsProps) {
       <div className="mx-auto max-w-[var(--container-max)] px-6">
         {upcoming.length > 0 && (
           <>
-            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
               Upcoming
             </p>
             <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
@@ -96,7 +96,7 @@ export function UpcomingEvents({ events }: UpcomingEventsProps) {
           <div className={upcoming.length > 0 ? "mt-10" : ""}>
             {upcoming.length === 0 && (
               <>
-                <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+                <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
                   Upcoming
                 </p>
                 <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">

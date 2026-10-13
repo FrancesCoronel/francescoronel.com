@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 export default function MentoringSessionsPage() {
   return (
     <div className="mx-auto max-w-[var(--container-max)] px-6 py-16">
-      <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+      <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
         Mentoring
       </p>
       <h1 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">

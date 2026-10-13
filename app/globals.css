@@ -35,6 +35,9 @@
 
   --color-accent: #ca2e55;
   --color-accent-dark: #9e2b25;
+  /* Raspberry tint for dark mode — horchata-600+ all fail AA on navy surfaces.
+     #e7a7b7 hits 4.7:1 on navy-700, 5.7:1 on navy-800, 6.7:1 on navy-900, 8.3:1 on navy-950 */
+  --color-accent-light: #e7a7b7;
 
   /* Typography — Latina Essential for everything */
   --font-latina: "Latina Essential", sans-serif;
