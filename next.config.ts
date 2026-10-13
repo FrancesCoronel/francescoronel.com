@@ -18,8 +18,9 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
-      // Next.js requires unsafe-inline for hydration scripts; unsafe-eval only for dev HMR
-      `script-src 'self' 'unsafe-inline'${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""} https://www.googletagmanager.com https://www.google-analytics.com https://app.cal.com https://va.vercel-scripts.com`,
+      // Next.js requires unsafe-inline for hydration scripts; wasm-unsafe-eval lets Pagefind
+      // search compile its WebAssembly; full unsafe-eval only for dev HMR
+      `script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""} https://www.googletagmanager.com https://www.google-analytics.com https://app.cal.com https://va.vercel-scripts.com`,
       "style-src 'self' 'unsafe-inline'",
       // Images come from many external CDNs across 665 blog posts
       "img-src 'self' data: https:",
