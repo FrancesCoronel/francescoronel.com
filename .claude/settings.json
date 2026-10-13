@@ -6,7 +6,9 @@
       "Bash(npm run lint)",
       "Bash(npm run lint:md)",
       "Bash(npm run build)",
-      "Bash(npx tsc --noEmit)"
+      "Bash(npx tsc --noEmit)",
+      "Bash(npm run typecheck)",
+      "Bash(npm run test:coverage)"
     ]
   },
   "hooks": {

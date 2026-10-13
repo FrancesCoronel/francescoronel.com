@@ -11,13 +11,13 @@
  * 6. Mentoring/people posts → category fallback
  * 7. All others → category-based fallback image
  *
- * Usage: node scripts/assign-fallback-images.js [--fix]
+ * Usage: node scripts/migrations/assign-fallback-images.js [--fix]
  */
 
 const fs = require("fs");
 const path = require("path");
 
-const contentDir = path.join(__dirname, "..", "content");
+const contentDir = path.join(__dirname, "..", "..", "content");
 const blogDir = path.join(contentDir, "blog");
 
 // Load data
@@ -64,7 +64,7 @@ const categoryImages = {
 };
 
 // Check which category images actually exist
-const publicDir = path.join(__dirname, "..", "public");
+const publicDir = path.join(__dirname, "..", "..", "public");
 const existingCatImages = {};
 for (const [cat, imgPath] of Object.entries(categoryImages)) {
   const fullPath = path.join(publicDir, imgPath);

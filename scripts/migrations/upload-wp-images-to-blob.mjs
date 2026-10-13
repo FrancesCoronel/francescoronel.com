@@ -6,7 +6,7 @@
  *  2. Remaining //fvcproductions.files.wordpress.com URLs — find in export, upload + rewrite
  *
  * Usage:
- *   BLOB_READ_WRITE_TOKEN="..." node scripts/upload-wp-images-to-blob.mjs
+ *   BLOB_READ_WRITE_TOKEN="..." node scripts/migrations/upload-wp-images-to-blob.mjs
  */
 
 import { readFileSync, writeFileSync, existsSync, readdirSync } from "fs";

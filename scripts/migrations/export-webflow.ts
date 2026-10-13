@@ -7,7 +7,7 @@
  * Prerequisites:
  *   1. Set WEBFLOW_API_TOKEN in .env.local
  *   2. Set WEBFLOW_SITE_ID in .env.local
- *   3. Run: npx tsx scripts/export-webflow.ts
+ *   3. Run: npx tsx scripts/migrations/export-webflow.ts
  *
  * The script will:
  *   - Fetch all CMS collections and their items

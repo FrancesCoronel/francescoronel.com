@@ -5,7 +5,7 @@
  * De-duplicates against existing Webflow-exported posts by slug.
  *
  * Usage:
- *   npx tsx scripts/import-wordpress.ts <path-to-export-directory-or-xml-file>
+ *   npx tsx scripts/migrations/import-wordpress.ts <path-to-export-directory-or-xml-file>
  *
  * Supports:
  *   - Single XML file
@@ -159,7 +159,7 @@ function main() {
   const inputPath = process.argv[2];
   if (!inputPath) {
     console.error(
-      "Usage: npx tsx scripts/import-wordpress.ts <path-to-export-dir-or-xml>"
+      "Usage: npx tsx scripts/migrations/import-wordpress.ts <path-to-export-dir-or-xml>"
     );
     process.exit(1);
   }

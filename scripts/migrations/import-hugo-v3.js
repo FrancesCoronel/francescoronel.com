@@ -1,7 +1,7 @@
 /**
  * Import missing posts from personal-website-v3 (Hugo) into the Next.js site.
  *
- * Usage: node scripts/import-hugo-v3.js <path-to-v3-content-posts-dir>
+ * Usage: node scripts/migrations/import-hugo-v3.js <path-to-v3-content-posts-dir>
  *
  * - Parses Hugo YAML frontmatter
  * - Skips posts that already exist (by slug)
@@ -13,7 +13,7 @@ const fs = require("fs");
 const path = require("path");
 
 const BLOG_DIR = path.join(process.cwd(), "content", "blog");
-const REDIRECTS_OUT = path.join(process.cwd(), "scripts", "hugo-v3-aliases.json");
+const REDIRECTS_OUT = path.join(process.cwd(), "scripts", "migrations", "hugo-v3-aliases.json");
 
 // ─── YAML frontmatter parser (simple, no deps) ────────────────
 
@@ -121,7 +121,7 @@ function sanitizeForMdx(content) {
 
 const postsDir = process.argv[2];
 if (!postsDir) {
-  console.error("Usage: node scripts/import-hugo-v3.js <path-to-v3-content-posts-dir>");
+  console.error("Usage: node scripts/migrations/import-hugo-v3.js <path-to-v3-content-posts-dir>");
   process.exit(1);
 }
 

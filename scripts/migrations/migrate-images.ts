@@ -6,7 +6,7 @@
  *
  * Prerequisites:
  *   1. Set BLOB_READ_WRITE_TOKEN in .env.local
- *   2. Run: npx tsx --env-file=.env.local scripts/migrate-images.ts
+ *   2. Run: npx tsx --env-file=.env.local scripts/migrations/migrate-images.ts
  *
  * Blob folder structure:
  *   blog/          — Blog featured + inline images

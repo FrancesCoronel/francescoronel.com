@@ -3,7 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const dir = path.join(__dirname, "..", "content", "blog");
+const dir = path.join(__dirname, "..", "..", "content", "blog");
 const files = fs.readdirSync(dir).filter((f) => f.endsWith(".mdx"));
 
 let promoted = 0;

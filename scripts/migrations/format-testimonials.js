@@ -9,13 +9,13 @@
  * - Every 2-3 sentences for very long blocks
  * - Before "In what ways" type review questions
  *
- * Usage: node scripts/format-testimonials.js [--fix]
+ * Usage: node scripts/migrations/format-testimonials.js [--fix]
  */
 
 const fs = require("fs");
 const path = require("path");
 
-const filePath = path.join(__dirname, "..", "content", "testimonials.json");
+const filePath = path.join(__dirname, "..", "..", "content", "testimonials.json");
 const testimonials = JSON.parse(fs.readFileSync(filePath, "utf8"));
 
 const fix = process.argv.includes("--fix");

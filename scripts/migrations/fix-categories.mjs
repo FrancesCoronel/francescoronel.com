@@ -1,6 +1,6 @@
 /**
  * Fix blog post categories to match canonical list.
- * Usage: node scripts/fix-categories.mjs
+ * Usage: node scripts/migrations/fix-categories.mjs
  */
 import { readFileSync, writeFileSync, readdirSync } from "fs";
 import { join } from "path";

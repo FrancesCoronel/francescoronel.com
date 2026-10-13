@@ -4,14 +4,14 @@
  * Download organization logos from Webflow CDN to local files
  * and update organizations.json with local paths.
  *
- * Usage: node scripts/download-org-logos.mjs
+ * Usage: node scripts/migrations/download-org-logos.mjs
  */
 
 import fs from 'node:fs';
 import path from 'node:path';
 import { execSync } from 'node:child_process';
 
-const ROOT = path.resolve(import.meta.dirname, '..');
+const ROOT = path.resolve(import.meta.dirname, '..', '..');
 const JSON_PATH = path.join(ROOT, 'content/organizations.json');
 const OUTPUT_DIR = path.join(ROOT, 'public/images/organizations');
 
