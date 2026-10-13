@@ -30,9 +30,9 @@ const CATEGORY_LABELS: Record<string, string> = {
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
-  mentoring: "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400",
-  "interview-prep": "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-400",
-  community: "bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-400",
+  mentoring: "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300",
+  "interview-prep": "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300",
+  community: "bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300",
 };
 
 const SOURCE_LABELS: Record<string, string> = {
@@ -43,10 +43,10 @@ const SOURCE_LABELS: Record<string, string> = {
 };
 
 const SOURCE_COLORS: Record<string, string> = {
-  "cal.com": "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400",
-  formation: "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-400",
+  "cal.com": "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300",
+  formation: "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300",
   calendly: "bg-horchata-100 text-horchata-700 dark:bg-navy-700 dark:text-horchata-300",
-  leland: "bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-400",
+  leland: "bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300",
 };
 
 const SOURCE_LOGOS: Record<string, string> = {

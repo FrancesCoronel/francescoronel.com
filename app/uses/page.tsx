@@ -517,7 +517,7 @@ export default function UsesPage() {
                     <p className="mt-1 text-sm text-navy-600 dark:text-white/70">
                       {server.description}
                     </p>
-                    <span className="mt-3 inline-flex items-center rounded-full bg-horchata-200 px-2.5 py-0.5 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-white/70">
+                    <span className="mt-3 inline-flex items-center rounded-full bg-horchata-200 px-2.5 py-0.5 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-horchata-100">
                       {server.tools} tool{server.tools !== 1 ? "s" : ""}
                     </span>
                   </div>
@@ -566,7 +566,7 @@ export default function UsesPage() {
                     <p className="mt-1 text-sm text-navy-600 dark:text-white/70">
                       {plugin.description}
                     </p>
-                    <span className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-horchata-200 px-2.5 py-0.5 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-white/70">
+                    <span className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-horchata-200 px-2.5 py-0.5 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-horchata-100">
                       {plugin.source === "claude-plugins-official" ? (
                         <Image
                           src="/images/tools/claude.png"
@@ -613,7 +613,7 @@ export default function UsesPage() {
                     <code className="rounded-lg bg-horchata-100 px-2.5 py-1 text-xs font-medium text-navy-700 dark:bg-navy-700 dark:text-white/70">
                       {skill.command}
                     </code>
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-horchata-200 px-2.5 py-0.5 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-white/70">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-horchata-200 px-2.5 py-0.5 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-horchata-100">
                       {categoryIcons[skill.category]?.image ? (
                         <Image
                           src={categoryIcons[skill.category].image!}
@@ -651,7 +651,7 @@ export default function UsesPage() {
                 className="group flex items-center gap-4 p-5 transition-colors hover:bg-horchata-50 first:rounded-t-2xl last:rounded-b-2xl dark:hover:bg-navy-700"
               >
                 <span className="text-xl">{hook.icon}</span>
-                <span className="inline-flex flex-shrink-0 items-center rounded-full bg-horchata-200 px-2.5 py-1 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-white/70">
+                <span className="inline-flex flex-shrink-0 items-center rounded-full bg-horchata-200 px-2.5 py-1 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-horchata-100">
                   {hook.event}
                 </span>
                 <code className="flex-shrink-0 text-xs text-navy-600 dark:text-horchata-400">

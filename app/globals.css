@@ -95,6 +95,11 @@ input, textarea, select {
   --tw-prose-links: var(--color-horchata-700);
 }
 
+/* dark:prose-invert can't override the link color above, so set it here */
+.dark .prose {
+  --tw-prose-links: var(--color-accent-light);
+}
+
 .prose a {
   word-break: break-word;
   overflow-wrap: break-word;
