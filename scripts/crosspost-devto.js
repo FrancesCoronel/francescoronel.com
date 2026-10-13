@@ -143,13 +143,17 @@ async function crosspost(filePath) {
   console.log(`  Add "devto_id: ${data.id}" to frontmatter to enable future updates.`);
 }
 
-const filePath = process.argv[2];
-if (!filePath) {
-  console.error("Usage: node scripts/crosspost-devto.js <path-to-post.mdx>");
-  process.exit(1);
-}
+module.exports = { mdxToMarkdown };
 
-crosspost(filePath).catch((err) => {
-  console.error("Unexpected error:", err);
-  process.exit(1);
-});
+if (require.main === module) {
+  const filePath = process.argv[2];
+  if (!filePath) {
+    console.error("Usage: node scripts/crosspost-devto.js <path-to-post.mdx>");
+    process.exit(1);
+  }
+
+  crosspost(filePath).catch((err) => {
+    console.error("Unexpected error:", err);
+    process.exit(1);
+  });
+}

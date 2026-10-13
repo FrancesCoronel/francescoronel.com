@@ -28,7 +28,7 @@ export function PostsListClient({ posts, categoryImages, hideSearch }: PostsList
 
   const filtered = useMemo(() => {
     if (!search.trim()) return posts;
-    const q = search.toLowerCase();
+    const q = search.trim().toLowerCase();
     return posts.filter(
       (p) =>
         p.title.toLowerCase().includes(q) ||

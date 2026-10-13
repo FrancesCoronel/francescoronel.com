@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { getTestimonials } from "@/lib/content";
 import { TestimonialsPreview } from "@/components/sections/testimonials-preview";
-import { buildMetadata } from "@/lib/metadata";
+import { buildMetadata, YEARS_OF_EXPERIENCE } from "@/lib/metadata";
 import { CalEmbed } from "@/components/ui/cal-embed";
 import { PageHeader } from "@/components/ui/page-header";
 import { ConnectCTA } from "@/components/sections/connect-cta";
@@ -18,7 +18,6 @@ export const metadata: Metadata = buildMetadata({
 
 type PricingTier = {
   price: string;
-  original?: string;
   label: string;
   description: string;
   href: string;
@@ -115,7 +114,7 @@ export default function MentoringPage() {
       <PageHeader
         label="1-on-1 Coaching"
         heading="Mentoring 💬"
-        description={`${totalSessions}+ sessions and ${hoursDisplay}+ hours in. I help software engineers land roles, get promoted, negotiate better offers, and build careers they're proud of. Real talk from someone who's been in the industry for 8+ years.`}
+        description={`${totalSessions}+ sessions and ${hoursDisplay}+ hours in. I help software engineers land roles, get promoted, negotiate better offers, and build careers they're proud of. Real talk from someone who's been in the industry for ${YEARS_OF_EXPERIENCE}+ years.`}
         aside={
           <Image
             src="/images/assets/speaking-hero-image.webp"
@@ -124,6 +123,7 @@ export default function MentoringPage() {
             height={400}
             className="h-auto w-[200px] object-contain drop-shadow-lg sm:w-[260px] md:w-[360px]"
             priority
+            fetchPriority="high"
           />
         }
       >
@@ -171,11 +171,6 @@ export default function MentoringPage() {
                     <span className="text-3xl font-bold text-navy-900 dark:text-horchata-100">
                       {tier.price}
                     </span>
-                    {"original" in tier && tier.original && (
-                      <span className="text-sm text-navy-600 line-through dark:text-horchata-500">
-                        {tier.original}
-                      </span>
-                    )}
                   </div>
                   <p className="mt-1 text-sm font-medium text-navy-700 dark:text-horchata-200">
                     {tier.label}
