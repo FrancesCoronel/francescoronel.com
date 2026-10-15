@@ -26,6 +26,8 @@ interface OrgLogoProps {
   className?: string;
   /** Extra classes for the letter-avatar div fallback */
   avatarClassName?: string;
+  /** Set when the org name is already shown next to the logo, so screen readers don't hear it twice */
+  decorative?: boolean;
 }
 
 export function OrgLogo({
@@ -35,6 +37,7 @@ export function OrgLogo({
   size = 64,
   className,
   avatarClassName,
+  decorative = false,
 }: OrgLogoProps) {
   const clearbitUrl = getClearbitLogoUrl(orgUrl);
   const resolvedSrc = src ?? null;
@@ -59,7 +62,7 @@ export function OrgLogo({
       <div
         className={`flex items-center justify-center rounded-full bg-horchata-100 font-bold text-horchata-700 dark:bg-navy-700 dark:text-horchata-400 ${avatarClassName ?? ""}`}
         style={{ width: size, height: size, fontSize: Math.round(size * 0.375) }}
-        aria-label={name}
+        {...(decorative ? { "aria-hidden": true } : { "aria-label": name })}
       >
         {name.charAt(0)}
       </div>
@@ -71,7 +74,7 @@ export function OrgLogo({
   return (
     <Image
       src={imgSrc}
-      alt={name}
+      alt={decorative ? "" : name}
       width={size}
       height={size}
       className={className}
