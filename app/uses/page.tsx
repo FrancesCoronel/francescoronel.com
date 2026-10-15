@@ -441,7 +441,7 @@ export default function UsesPage() {
                         />
                       ) : (
                         <span className="mt-0.5 text-2xl">
-                          {"icon" in item ? item.icon : ""}
+                          {"icon" in item && item.icon}
                         </span>
                       )}
                       <div className="flex-1">
@@ -523,7 +523,7 @@ export default function UsesPage() {
                   </div>
                 </div>
               );
-              return server.url ? (
+              return (
                 <a
                   key={server.name}
                   href={server.url}
@@ -533,13 +533,6 @@ export default function UsesPage() {
                 >
                   {inner}
                 </a>
-              ) : (
-                <div
-                  key={server.name}
-                  className="flex items-start gap-4 rounded-2xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800"
-                >
-                  {inner}
-                </div>
               );
             })}
           </div>
@@ -624,11 +617,11 @@ export default function UsesPage() {
                           aria-hidden="true"
                           unoptimized
                         />
-                      ) : categoryIcons[skill.category]?.emoji ? (
+                      ) : (
                         <span className="text-[10px] leading-none" aria-hidden="true">
-                          {categoryIcons[skill.category].emoji}
+                          {categoryIcons[skill.category]?.emoji}
                         </span>
-                      ) : null}
+                      )}
                       {skill.category}
                     </span>
                   </div>
