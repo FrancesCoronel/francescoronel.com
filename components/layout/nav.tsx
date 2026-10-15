@@ -1,10 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { SearchModal } from "@/components/ui/search-modal";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import icon from "@/app/icon.png";
 
 const navLinks = [
   { href: "/about", label: "About" },
@@ -25,10 +27,11 @@ export function Nav() {
           href="/"
           className="flex items-center gap-2 text-sm font-bold tracking-tight text-navy-900 transition-colors hover:text-horchata-700 dark:text-horchata-100 dark:hover:text-horchata-400 sm:text-base md:text-lg"
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/icon.png"
+          <Image
+            src={icon}
             alt=""
+            width={32}
+            height={32}
             className="h-8 w-8"
             aria-hidden="true"
           />
