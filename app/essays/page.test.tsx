@@ -5,7 +5,10 @@ import { getBlogPostsByCategory } from "@/lib/content";
 
 vi.mock("@/lib/content", async (importOriginal) => {
   const actual = await importOriginal<typeof import("@/lib/content")>();
-  return { ...actual, getBlogPostsByCategory: vi.fn(actual.getBlogPostsByCategory) };
+  return {
+    ...actual,
+    getBlogPostsByCategory: vi.fn(actual.getBlogPostsByCategory),
+  };
 });
 
 afterEach(() => {
@@ -15,7 +18,9 @@ afterEach(() => {
 describe("app/essays/page", () => {
   it("exports metadata for the essays listing", () => {
     expect(metadata.title).toBe("Essays");
-    expect(metadata.alternates?.canonical).toBe("https://francescoronel.com/essays");
+    expect(metadata.alternates?.canonical).toBe(
+      "https://francescoronel.com/essays",
+    );
   });
 
   it("renders the header, essay count and every essay", () => {
