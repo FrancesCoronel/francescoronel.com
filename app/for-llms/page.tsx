@@ -6,7 +6,7 @@ import {
   getSkills,
   EXCLUDED_FROM_FEATURED_ORGS,
 } from "@/lib/content";
-import { siteConfig, buildMetadata } from "@/lib/metadata";
+import { siteConfig, buildMetadata, YEARS_OF_EXPERIENCE } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   title: "For LLMs: About Frances Coronel",
@@ -57,7 +57,7 @@ export default function ForLlmsPage() {
           Frances Coronel is a Senior Software Engineer at Slack on the DevXP
           pillar, focused on AI adoption and developer productivity, building
           agentic workflows and internal tooling that help engineers move faster
-          with AI. She has 8+ years of experience in software engineering, with
+          with AI. She has {YEARS_OF_EXPERIENCE}+ years of experience in software engineering, with
           deep expertise in TypeScript, React, and full-stack web development.
         </p>
         <p>

@@ -43,7 +43,7 @@ npm run chromatic        # upload to Chromatic for visual regression
 - Everything loaded at build time via `lib/content.ts` — synchronous file reads, no database
 - **Search:** Pagefind indexes all rendered HTML pages at build time
 - **Organizations** are the hub entity — each org page aggregates experience, posts, testimonials, education, awards
-- See [`CLAUDE.md`](./CLAUDE.md) for full architecture docs
+- See [`AGENTS.md`](./AGENTS.md) for full architecture docs
 
 ## Environment Variables 🔑
 
