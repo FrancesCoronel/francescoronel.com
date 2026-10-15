@@ -33,6 +33,7 @@ export function OrgGridClient({ organizations }: { organizations: OrgSummary[] }
                 size={64}
                 className="h-16 w-16 rounded-xl object-contain"
                 avatarClassName="h-16 w-16 text-xl"
+                decorative
               />
               <p className="text-sm font-medium text-navy-900 dark:text-horchata-100">
                 {org.name}
