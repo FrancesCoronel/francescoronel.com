@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { preload } from "react-dom";
 import { Nav } from "@/components/layout/nav";
 import { Footer } from "@/components/layout/footer";
@@ -8,6 +8,10 @@ import { PersonJsonLd, WebSiteJsonLd } from "@/components/layout/json-ld";
 import { buildMetadata } from "@/lib/metadata";
 import { BackToTop } from "@/components/ui/back-to-top";
 import "./globals.css";
+
+// Latina Essential is declared in globals.css. Only the three weights above the fold are
+// preloaded: preloading all eight files (~260 KB) delayed the hero image by 2-3 s on mobile.
+const PRELOADED_FONTS = ["medium", "bold", "heavy"];
 
 export const metadata: Metadata = {
   ...buildMetadata(),
@@ -31,14 +35,25 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f9f5f3" },
+    { media: "(prefers-color-scheme: dark)", color: "#253137" },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Preload only the faces used above the fold: medium (body text) and bold (headings)
-  preload("/fonts/latina-essential-medium.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
-  preload("/fonts/latina-essential-bold.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
+  for (const weight of PRELOADED_FONTS) {
+    preload(`/fonts/latina-essential-${weight}.woff2`, {
+      as: "font",
+      type: "font/woff2",
+      crossOrigin: "anonymous",
+    });
+  }
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -58,7 +73,7 @@ export default function RootLayout({
           <main id="main-content" className="flex-1">{children}</main>
           <Footer />
           <BackToTop />
-          <AnalyticsProviders />
+          <AnalyticsProviders vercel={Boolean(process.env.VERCEL)} />
         </ThemeProvider>
       </body>
     </html>

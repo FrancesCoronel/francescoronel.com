@@ -19,7 +19,7 @@ export function Hero() {
       <div className="relative mx-auto max-w-[var(--container-max)] px-6">
         <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12 lg:gap-16">
           {/* Text content */}
-          <div className="flex-1 text-center md:text-left">
+          <div className="w-full flex-1 text-center md:text-left">
             <h1 className="text-2xl font-black leading-[1.1] tracking-tight text-navy-900 dark:text-horchata-100 sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl">
               Hi, I&apos;m Frances! 👋🏽
             </h1>
@@ -51,6 +51,7 @@ export function Hero() {
                 className="h-full w-full rounded-full object-cover ring-4 ring-horchata-200 drop-shadow-lg dark:ring-navy-600"
                 sizes="(max-width: 640px) 224px, (max-width: 768px) 256px, (max-width: 1024px) 288px, (max-width: 1280px) 320px, 384px"
                 priority
+                fetchPriority="high"
               />
             </div>
           </div>
