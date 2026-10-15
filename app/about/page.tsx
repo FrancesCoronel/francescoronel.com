@@ -241,6 +241,7 @@ export default function AboutPage() {
               height={384}
               className="h-full w-full object-cover"
               priority
+              fetchPriority="high"
             />
           </div>
         }
