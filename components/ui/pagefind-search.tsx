@@ -86,9 +86,8 @@ export function PagefindSearch() {
       setLoading(false);
     }, 200);
 
-    return () => {
-      if (debounceRef.current) clearTimeout(debounceRef.current);
-    };
+    // The timer above is always set by the time this cleanup runs
+    return () => clearTimeout(debounceRef.current!);
   }, [query, pagefind]);
 
   return (
