@@ -17,7 +17,7 @@ vi.mock("next-themes", () => ({ useTheme: () => ({ theme: "light", setTheme: vi.
 
 import { Nav } from "./nav";
 
-const LINKS = ["About", "Mentoring", "Posts", "Speaking", "Work"];
+const LINKS = ["Writing", "Speaking", "Work", "About"];
 
 function desktopNav() {
   return screen.getAllByRole("list")[0];
@@ -35,7 +35,7 @@ describe("Nav", () => {
     expect(screen.getByRole("link", { name: "Frances Coronel" })).toHaveAttribute("href", "/");
     const links = within(desktopNav()).getAllByRole("link");
     expect(links.map((l) => l.textContent)).toEqual(LINKS);
-    expect(links.map((l) => l.getAttribute("href"))).toEqual(["/about", "/mentoring", "/posts", "/speaking", "/work"]);
+    expect(links.map((l) => l.getAttribute("href"))).toEqual(["/posts", "/speaking", "/work", "/about"]);
     expect(screen.getByRole("link", { name: "Contact" })).toHaveAttribute("href", "/contact");
     expect(screen.getAllByRole("button", { name: "Search" })).toHaveLength(1);
     expect(screen.getByRole("button", { name: "Switch to dark mode" })).toBeInTheDocument();
@@ -44,8 +44,20 @@ describe("Nav", () => {
   it("highlights the link for the current page", () => {
     nav.pathname = "/posts";
     render(<Nav />);
-    expect(within(desktopNav()).getByRole("link", { name: "Posts" })).toHaveClass("bg-horchata-200");
+    expect(within(desktopNav()).getByRole("link", { name: "Writing" })).toHaveClass("bg-horchata-200");
     expect(within(desktopNav()).getByRole("link", { name: "About" })).not.toHaveClass("bg-horchata-200");
+  });
+
+  it("keeps Writing highlighted on individual posts and the essays page", () => {
+    for (const pathname of ["/posts/some-post", "/essays"]) {
+      nav.pathname = pathname;
+      render(<Nav />);
+      expect(within(desktopNav()).getByRole("link", { name: "Writing" })).toHaveClass("bg-horchata-200");
+      cleanup();
+    }
+    nav.pathname = "/postscript";
+    render(<Nav />);
+    expect(within(desktopNav()).getByRole("link", { name: "Writing" })).not.toHaveClass("bg-horchata-200");
   });
 
   it("toggles the mobile menu and closes it when a link is chosen", async () => {
