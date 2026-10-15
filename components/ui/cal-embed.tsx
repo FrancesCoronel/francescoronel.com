@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 declare global {
   interface Window {
@@ -15,8 +15,28 @@ declare global {
 
 export function CalEmbed() {
   const [loaded, setLoaded] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // The embed is heavy and sets third-party cookies, so wait until the
+  // calendar is close to the viewport before loading it
+  useEffect(() => {
+    const el = containerRef.current!;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "400px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
+    if (!visible) return;
     // Load Cal.com embed script
     (function (C: Window, A: string, L: string) {
       const p = function (a: { q: unknown[] }, ar: unknown) {
@@ -85,10 +105,10 @@ export function CalEmbed() {
     // Mark as loaded once the embed script fires
     const timer = setTimeout(() => setLoaded(true), 1200);
     return () => clearTimeout(timer);
-  }, []);
+  }, [visible]);
 
   return (
-    <div className="relative min-h-[600px] rounded-2xl">
+    <div ref={containerRef} className="relative min-h-[600px] rounded-2xl">
       {!loaded && (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 rounded-2xl border border-horchata-200 bg-horchata-50 dark:border-navy-700 dark:bg-navy-800">
           <div className="h-10 w-10 animate-spin rounded-full border-4 border-horchata-200 border-t-horchata-500 dark:border-navy-600 dark:border-t-horchata-400" />
