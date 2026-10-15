@@ -404,7 +404,7 @@ export default async function PostPage({ params }: PageProps) {
                     {orgData?.logo && (
                       <Image
                         src={orgData.logo}
-                        alt={orgData.name}
+                        alt=""
                         width={32}
                         height={32}
                         className="h-8 w-8 rounded object-contain"
@@ -521,20 +521,21 @@ export default async function PostPage({ params }: PageProps) {
           )}
         </header>
 
-        {/* Featured image */}
+        {/* Featured image: alt is empty because the title is the h1 right above it */}
         {imgSrc &&
           (canOptimize(imgSrc) ? (
             <Image
               src={imgSrc}
-              alt={post.title}
+              alt=""
               width={800}
               height={450}
               className="mx-auto mb-10 rounded-xl"
               priority
+              fetchPriority="high"
             />
           ) : (
             /* eslint-disable @next/next/no-img-element */
-            <img src={imgSrc} alt={post.title} className="mx-auto mb-10 max-w-full rounded-xl" />
+            <img src={imgSrc} alt="" className="mx-auto mb-10 max-w-full rounded-xl" />
           ))}
 
         {/* MDX content */}
@@ -584,14 +585,14 @@ export default async function PostPage({ params }: PageProps) {
                     {isOptimizable ? (
                       <Image
                         src={logoSrc}
-                        alt={org.name}
+                        alt=""
                         width={32}
                         height={32}
                         className="h-8 w-8 rounded object-contain"
                       />
                     ) : (
                       /* eslint-disable @next/next/no-img-element */
-                      <img src={logoSrc} alt={org.name} className="h-8 w-8 rounded object-contain" />
+                      <img src={logoSrc} alt="" className="h-8 w-8 rounded object-contain" />
                     )}
                     {org.name}
                   </Link>
