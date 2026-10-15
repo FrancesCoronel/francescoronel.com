@@ -118,16 +118,14 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
       setLoading(false);
     }, 150);
 
-    return () => {
-      if (debounceRef.current) clearTimeout(debounceRef.current);
-    };
+    // The timer above is always set by the time this cleanup runs
+    return () => clearTimeout(debounceRef.current!);
   }, [query, pagefind]);
 
   function handleKeyDown(e: React.KeyboardEvent) {
     if (e.key === "Tab") {
-      if (!modalRef.current) return;
       const focusable = Array.from(
-        modalRef.current.querySelectorAll<HTMLElement>(
+        modalRef.current!.querySelectorAll<HTMLElement>(
           'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
         )
       );
@@ -190,7 +188,6 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
               placeholder="Search all content..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              onKeyDown={handleKeyDown}
               className="flex-1 bg-transparent px-3 py-4 text-sm text-navy-900 placeholder-navy-400 outline-none dark:text-horchata-100 dark:placeholder-horchata-500"
             />
             {loading && (
