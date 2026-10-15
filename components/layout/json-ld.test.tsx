@@ -19,7 +19,7 @@ describe("PersonJsonLd", () => {
       "@type": "Person",
       name: "Frances Coronel",
       url: "https://francescoronel.com",
-      jobTitle: "Senior Software Engineer",
+      jobTitle: "Senior Software Engineer, Agentic SDLC",
       worksFor: { name: "Slack", parentOrganization: { name: "Salesforce" } },
     });
     expect(data.alumniOf.map((a: { name: string }) => a.name)).toEqual(["Cornell Tech", "Hampton University"]);
