@@ -6,13 +6,14 @@ export interface Heading {
 
 /**
  * Slugifies a heading text to match the IDs produced by rehype-slug + github-slugger.
- * Algorithm: lowercase → remove non-word/non-space/non-hyphen chars → collapse spaces → replace spaces with hyphens.
+ * Algorithm: lowercase → remove non-word/non-space/non-hyphen chars → replace each space with a hyphen
+ * (github-slugger keeps runs, so "A & B" becomes "a--b").
  */
 function slugify(text: string): string {
   return text
     .toLowerCase()
     .replace(/[^\w\s-]/g, "")
-    .replace(/\s+/g, "-");
+    .replace(/ /g, "-");
 }
 
 /** Tracks duplicate headings so their slugs get a numeric suffix, matching github-slugger behavior. */
