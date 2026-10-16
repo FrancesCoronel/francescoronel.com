@@ -17,7 +17,8 @@ import { getRepoData } from "@/lib/github";
 import { formatDate, formatDateRange, canOptimize } from "@/lib/utils";
 import { sanitizeMdxContent } from "@/lib/sanitize-mdx";
 import { mdxComponents } from "@/components/mdx/mdx-components";
-import { buildMetadata } from "@/lib/metadata";
+import { buildMetadata, siteConfig } from "@/lib/metadata";
+import { BlogPostJsonLd, BreadcrumbJsonLd } from "@/components/layout/json-ld";
 import { PrevNextNav } from "@/components/ui/prev-next-nav";
 import { BlogCard } from "@/components/ui/blog-card";
 import { ReadingProgress } from "@/components/ui/reading-progress";
@@ -73,6 +74,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     path: `/posts/${slug}`,
     ogType: "article",
     publishedTime: post.date,
+    modifiedTime: post.updated,
     ogImage: post.featuredImage
       ? post.featuredImage
       : undefined,
@@ -479,6 +481,22 @@ export default async function PostPage({ params }: PageProps) {
 
   return (
     <>
+      <BlogPostJsonLd
+        title={post.title}
+        description={post.excerpt}
+        date={post.date}
+        updated={post.updated}
+        slug={post.slug}
+        image={imgSrc ? new URL(imgSrc, siteConfig.siteUrl).toString() : undefined}
+        keywords={[...post.categories, ...post.tags]}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: siteConfig.siteUrl },
+          { name: "Posts", url: `${siteConfig.siteUrl}/posts` },
+          { name: post.title, url: `${siteConfig.siteUrl}/posts/${post.slug}` },
+        ]}
+      />
       <ReadingProgress />
       <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
         <div className={headings.length >= 3 ? "xl:grid xl:grid-cols-[minmax(0,1fr)_220px] xl:gap-14" : ""}>
@@ -487,6 +505,14 @@ export default async function PostPage({ params }: PageProps) {
         <header className="mb-10">
           <div className="mb-4 flex items-center gap-3 text-sm text-navy-600 dark:text-horchata-400">
             <time dateTime={post.date}>{formatDate(post.date)}</time>
+            {post.updated && post.updated !== post.date && (
+              <>
+                <span>&middot;</span>
+                <span>
+                  Updated <time dateTime={post.updated}>{formatDate(post.updated)}</time>
+                </span>
+              </>
+            )}
             <span>&middot;</span>
             <span>{post.readingTime}</span>
           </div>

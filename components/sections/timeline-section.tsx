@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Timeline } from "@/components/ui/timeline";
 
 interface TimelineItem {
@@ -18,6 +19,8 @@ interface TimelineSectionProps {
   heading: string;
   items: TimelineItem[];
   dark?: boolean;
+  /** Extra content rendered inside the same section, below the timeline */
+  children?: ReactNode;
 }
 
 export function TimelineSection({
@@ -26,6 +29,7 @@ export function TimelineSection({
   heading,
   items,
   dark = false,
+  children,
 }: TimelineSectionProps) {
   if (items.length === 0) return null;
 
@@ -48,6 +52,7 @@ export function TimelineSection({
         <div className="mt-8">
           <Timeline items={items} />
         </div>
+        {children}
       </div>
     </section>
   );
