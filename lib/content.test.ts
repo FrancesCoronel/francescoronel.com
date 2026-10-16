@@ -49,6 +49,7 @@ describe("content loaders with a fixture content directory", () => {
         "title: Alpha",
         "slug: alpha-custom",
         "date: 2024-03-01",
+        "updated: 2024-04-01",
         "excerpt: Hand-written excerpt",
         "featuredImage: /images/alpha.png",
         "categories: [web]",
@@ -81,7 +82,7 @@ describe("content loaders with a fixture content directory", () => {
         "",
         "Some **bold** text with `code` and a [link](https://x.y).",
       ].join("\n"),
-      "content/posts/gamma.mdx": ["---", "title: Gamma", "date: 2020-01-01", "---", ""].join("\n"),
+      "content/posts/gamma.mdx": ["---", "title: Gamma", "date: 2020-01-01", 'updated: "2020-02-02"', "---", ""].join("\n"),
       "content/posts/secret.mdx": ["---", "title: Secret", "date: 2023-01-01", "draft: true", "---", "Hidden"].join("\n"),
       "content/posts/notes.txt": "not a post",
       "content/projects.json": json([
@@ -211,6 +212,12 @@ describe("content loaders with a fixture content directory", () => {
       github: "someone/beta",
       organization: "acme",
     });
+  });
+
+  it("normalizes the optional updated date and omits it when absent", () => {
+    expect(content.getBlogPost("alpha")?.updated).toBe("2024-04-01");
+    expect(content.getBlogPost("gamma")?.updated).toBe("2020-02-02");
+    expect(content.getBlogPost("beta")).not.toHaveProperty("updated");
   });
 
   it("falls back to empty excerpt and image when there is nothing to use", () => {
