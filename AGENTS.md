@@ -189,6 +189,7 @@ Colors follow a **teal/charcoal + linen/raspberry** palette defined in `app/glob
 - `horchata-50` through `horchata-500` — linen/warm neutral ramp for warm backgrounds and borders
 - `horchata-600` through `horchata-950` — raspberry/crimson ramp for accent, links, and CTAs
 - Accent (links, CTAs): `horchata-600` (#ca2e55, raspberry)
+- Dark-mode accent: `accent-light` (#e7a7b7, raspberry tint) — the raspberry ramp (`horchata-600`+) fails WCAG AA on every navy surface, so any `text-horchata-600`–`900` needs a dark override: `dark:text-accent-light` for red labels, `dark:text-horchata-400` for links
 - Light mode bg: `horchata-50` (#f9f5f3), warm section bg: `horchata-100` (#f0ebe9)
 - Dark mode bg: `navy-900` (#253137, dark teal/charcoal)
 - Primary ink: `navy-900` (#253137)
@@ -243,7 +244,7 @@ Always use **medium-brown skin tone** (🏽, modifier U+1F3FD) for ANY emoji tha
 Every section must have BOTH a subheader label AND an emoji in the main heading. No exceptions.
 
 ```tsx
-<p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+<p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
   Events                          {/* short category label, no emoji */}
 </p>
 <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
@@ -251,7 +252,7 @@ Every section must have BOTH a subheader label AND an emoji in the main heading.
 </h2>
 ```
 
-- Subheader: short, uppercase, `text-horchata-700`, no emoji
+- Subheader: short, uppercase, `text-horchata-700 dark:text-accent-light`, no emoji
 - Main heading: title case, emoji at the end, `dark:text-horchata-100`
 - Never use a heading without the subheader label above it
 
