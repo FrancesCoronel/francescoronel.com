@@ -22,7 +22,7 @@ describe("ActionCards", () => {
   it("renders the four default cards linking to the main pages", () => {
     render(<ActionCards />);
     const links = screen.getAllByRole("link");
-    expect(links.map((l) => l.getAttribute("href"))).toEqual(["/essays", "/speaking", "/work", "/about"]);
+    expect(links.map((l) => l.getAttribute("href"))).toEqual(["/essays", "/speaking", "/work", "/#newsletter"]);
     expect(screen.queryByText("Book a 1:1 session with me")).not.toBeInTheDocument();
   });
 
