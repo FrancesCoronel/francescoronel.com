@@ -9,12 +9,18 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 import icon from "@/app/icon.png";
 
 const navLinks = [
-  { href: "/about", label: "About" },
-  { href: "/mentoring", label: "Mentoring" },
-  { href: "/posts", label: "Posts" },
+  { href: "/posts", label: "Writing", match: ["/posts", "/essays"] },
   { href: "/speaking", label: "Speaking" },
   { href: "/work", label: "Work" },
+  { href: "/about", label: "About" },
 ];
+
+function isLinkActive(pathname: string, link: { href: string; match?: string[] }) {
+  if (pathname === link.href) return true;
+  return (link.match ?? []).some(
+    (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`),
+  );
+}
 
 export function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -42,7 +48,7 @@ export function Nav() {
         <div className="hidden items-center gap-1 lg:flex">
           <ul className="flex items-center gap-1">
             {navLinks.map((link) => {
-              const isActive = pathname === link.href;
+              const isActive = isLinkActive(pathname, link);
               return (
                 <li key={link.href}>
                   <Link
@@ -110,7 +116,7 @@ export function Nav() {
         <div className="border-t border-horchata-200 bg-horchata-50 px-6 py-4 dark:border-navy-700 dark:bg-navy-900 lg:hidden">
           <ul className="flex flex-col gap-1">
             {navLinks.map((link) => {
-              const isActive = pathname === link.href;
+              const isActive = isLinkActive(pathname, link);
               return (
                 <li key={link.href}>
                   <Link
