@@ -62,6 +62,16 @@
   font-display: swap;
 }
 
+/* Metric-matched Arial fallback (values next/font generated) to avoid layout shift on swap */
+@font-face {
+  font-family: "Latina Essential Fallback";
+  src: local("Arial");
+  ascent-override: 90.39%;
+  descent-override: 18.08%;
+  line-gap-override: 0%;
+  size-adjust: 110.63%;
+}
+
 @theme {
   /* Colors — teal/charcoal + linen/raspberry palette (Frances Coronel Design System) */
 
@@ -95,7 +105,7 @@
   --color-accent-dark: #9e2b25;
 
   /* Typography — Latina Essential for everything */
-  --font-latina: "Latina Essential", sans-serif;
+  --font-latina: "Latina Essential", "Latina Essential Fallback", sans-serif;
   --font-sans: var(--font-latina);
 
   /* Font size scale — 20px minimum baseline, aggressive heading scale */

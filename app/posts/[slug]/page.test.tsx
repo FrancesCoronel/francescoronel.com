@@ -154,6 +154,13 @@ describe("app/posts/[slug]/page", () => {
       expect(html).not.toContain("whitespace-pre-wrap font-mono");
     });
 
+    it("shows the updated date only when it differs from the publish date", async () => {
+      servePost({ ...basePost, updated: "2024-06-01" });
+      expect(await render(basePost.slug)).toContain('Updated <time dateTime="2024-06-01">');
+      servePost({ ...basePost, updated: basePost.date });
+      expect(await render(basePost.slug)).not.toContain("Updated <time");
+    });
+
     it("treats a missing featured image as no image", async () => {
       servePost({ ...basePost, featuredImage: undefined as unknown as string });
       const html = await render(basePost.slug);
