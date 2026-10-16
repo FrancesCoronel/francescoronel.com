@@ -2,10 +2,10 @@ import Image from "next/image";
 import { ActionCards } from "./action-cards";
 
 const descriptors = [
-  { text: "Senior Software Engineer @ Slack", emoji: "👩🏽‍💻" },
-  { text: "Speaker & Mentor", emoji: "🚀" },
+  { text: "Senior Software Engineer, Agentic SDLC @ Slack", emoji: "👩🏽‍💻" },
+  { text: "Writer & Speaker on AI Adoption", emoji: "🎤" },
+  { text: "Former Engineering Manager @ Slack", emoji: "🧭" },
   { text: "Proud Peruvian-American", emoji: "🇵🇪" },
-  { text: "Corgi Mom to Luna & Sueño", emoji: "🐾" },
   { text: "Latinos 40 Under 40, SF/Silicon Valley", emoji: "🌉" },
 ];
 
@@ -23,6 +23,13 @@ export function Hero() {
             <h1 className="text-2xl font-black leading-[1.1] tracking-tight text-navy-900 dark:text-horchata-100 sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl">
               Hi, I&apos;m Frances! 👋🏽
             </h1>
+
+            <p className="mt-4 text-lg font-semibold leading-snug text-navy-800 dark:text-horchata-200 md:text-xl lg:text-2xl">
+              I help whole companies build with AI agents, engineers and everyone else.{" "}
+              <span className="inline-block" aria-hidden="true">
+                🚀
+              </span>
+            </p>
 
             {/* Emoji descriptors */}
             <div className="mt-6 flex flex-col gap-2">
