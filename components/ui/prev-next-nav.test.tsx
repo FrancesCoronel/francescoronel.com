@@ -41,7 +41,7 @@ describe("PrevNextNav", () => {
 
   it("falls back to 'All' at the root and omits the pager without neighbours", () => {
     const { container } = render(<PrevNextNav basePath="/" prev={null} next={null} />);
-    expect(screen.getByRole("link")).toHaveTextContent(/^All All$/);
+    expect(screen.getByRole("link").textContent?.replace(/\s+/g, " ").trim()).toBe("All All");
     expect(container.querySelector(".border-t")).toBeNull();
   });
 });
