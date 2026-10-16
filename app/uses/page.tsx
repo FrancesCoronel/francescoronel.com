@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const REPO_BASE =
-  "https://github.com/FrancesCoronel/francescoronel.com/blob/main/claude";
+  "https://github.com/FrancesCoronel/francescoronel.com/blob/main/content/claude-config";
 
 const tools = [
   {
@@ -486,7 +486,7 @@ export default function UsesPage() {
             skills, and hooks that automate formatting, notifications, and
             communication workflows.{" "}
             <a
-              href={`${REPO_BASE}/CLAUDE.md`}
+              href={`${REPO_BASE}/global-CLAUDE.md`}
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-horchata-700 hover:text-horchata-800 dark:text-horchata-400 dark:hover:text-horchata-200"
