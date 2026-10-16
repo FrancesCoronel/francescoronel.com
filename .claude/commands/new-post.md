@@ -40,6 +40,6 @@ Remind the user:
 - Add an excerpt (shows in blog listing cards)
 - Add a featured image URL
 - Pick categories and tags from the available options
-- The post will appear at `/blog/<slug>` after the next build
+- The post will appear at `/posts/<slug>` after the next build
 
 > **Tip:** If you have source material (a Claude artifact, notes, transcript, or outline), use `/draft-post` instead — it writes the full post body for you.
