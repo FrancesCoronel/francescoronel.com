@@ -29,8 +29,13 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default async function HomePage() {
-  const recentPosts = getAllBlogPosts().slice(0, 4);
   const allPosts = getAllBlogPosts();
+  const FEATURED_ESSAYS = [
+    "ai-is-fertilizer-learn-to-prune",
+    "i-think-im-becoming-a-cracked-engineer",
+    "how-claude-helped-me-navigate-a-travel-nightmare",
+  ];
+  const featuredEssays = FEATURED_ESSAYS.map((slug) => allPosts.find((p) => p.slug === slug)).filter(Boolean) as typeof allPosts;
   const roundDown = (n: number) => n >= 1000 ? Math.floor(n / 1000) * 1000 : n >= 100 ? Math.floor(n / 100) * 100 : Math.floor(n / 10) * 10;
   const mentoringSessionCount = roundDown((mentoringData as { _meta: { totalSessions: number } })._meta.totalSessions);
   const speakingCount = roundDown(getBlogPostsByCategory("speaking").length);
@@ -72,28 +77,36 @@ export default async function HomePage() {
         </div>
       </div>
 
-      {/* Recent Blog Posts */}
-      {recentPosts.length > 0 && (
+      {/* Featured Essays */}
+      {featuredEssays.length > 0 && (
         <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
           <div className="mx-auto max-w-[var(--container-max)] px-6">
             <div className="mb-10 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
-                  Blog
+                  Essays
                 </p>
                 <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">
-                  Latest Posts ✍🏽
+                  AI is fertilizer. I help teams learn to prune. 🌳
                 </h2>
               </div>
-              <Link
-                href="/posts"
-                className="text-sm font-medium text-horchata-800 hover:text-horchata-700 dark:text-horchata-400 dark:hover:text-horchata-200"
-              >
-                Browse all posts →
-              </Link>
+              <div className="flex gap-4">
+                <Link
+                  href="/essays"
+                  className="text-sm font-medium text-horchata-800 hover:text-horchata-700 dark:text-horchata-400 dark:hover:text-horchata-200"
+                >
+                  All essays →
+                </Link>
+                <Link
+                  href="/posts"
+                  className="text-sm font-medium text-horchata-800 hover:text-horchata-700 dark:text-horchata-400 dark:hover:text-horchata-200"
+                >
+                  Latest posts →
+                </Link>
+              </div>
             </div>
-            <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
-              {recentPosts.map((post) => (
+            <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {featuredEssays.map((post) => (
                 <BlogCard key={post.slug} post={post} categoryImages={categoryImages} basePath="/posts" />
               ))}
             </div>
