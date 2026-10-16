@@ -95,9 +95,10 @@ const bioVariants = [
           GitHub Universe. Before that, I led a team as an Engineering Manager on Slack Lists.
         </p>
         <p>
-          Honestly, I love this work. The tools change every few months and the job keeps
-          getting more fun. I&apos;ve spoken at 100+ events, lately on AI adoption, and I&apos;ve
-          mentored hundreds of engineers along the way.
+          Honestly, I love this work. The industry is a roller coaster right now, and you just
+          have to be willing to have fun on the ride. Lifting up my community matters just as
+          much to me: I&apos;ve mentored hundreds of engineers and spoken at 100+ events, lately
+          on AI adoption.
         </p>
         <p>
           As a proud Peruvian-American from Norfolk, Virginia, I care about making technical
@@ -129,8 +130,8 @@ const bioVariants = [
           Universe. Before that, she led a team as an Engineering Manager on Slack Lists.
         </p>
         <p>
-          Frances has spoken at 100+ events, most recently on AI adoption, and has mentored
-          hundreds of engineers along the way.
+          Lifting up her community matters just as much to Frances: she has mentored hundreds
+          of engineers and spoken at 100+ events, most recently on AI adoption.
         </p>
         <p>
           As a proud Peruvian-American from Norfolk, Virginia, Frances cares about making
