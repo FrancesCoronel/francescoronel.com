@@ -78,25 +78,29 @@ const bioVariants = [
     content: (
       <>
         <p>
-          Hi! I&apos;m Frances Coronel, a Senior Software Engineer at Slack, speaker,
-          mentor, and proud Corgi mom.
+          Hi! I&apos;m Frances Coronel, a Senior Software Engineer on Slack&apos;s Agentic
+          SDLC team, a speaker, and a proud Corgi mom.
         </p>
         <p>
           I hold a Bachelor&apos;s in Computer Science from Hampton University and a Master&apos;s
           in Computer Science from Cornell Tech. I&apos;ve been working full-time as a software
-          engineer since 2017, specializing in frontend engineering with React and TypeScript.
+          engineer since 2017, starting in frontend engineering with React and TypeScript.
         </p>
         <p>
           I&apos;m currently on Slack&apos;s Agentic SDLC team, bringing AI agents into
           every step of how software gets built, from idea to production. I help engineers
           work through semi-autonomous coding agents, and I help PMs, designers, and everyone
-          else confidently use those same tools alongside them. Before that, I led a team as
-          an Engineering Manager on Slack Lists.
+          else confidently use those same tools alongside them. I also work on how agents show
+          up in Slack and on the infrastructure underneath, like our model gateway, token costs,
+          and new model rollouts. I led Tidepool Day, a full day
+          of AI tooling with Anthropic for 350+ people, and I&apos;m speaking about AI at
+          GitHub Universe. Before that, I led a team as an Engineering Manager on Slack Lists.
         </p>
         <p>
-          Beyond Slack, I enjoy mentoring other engineers and I&apos;ve logged 250+ hours of
-          technical and behavioral interview prep. I&apos;ve also spoken at 100+ events on
-          frontend engineering topics and building a career in tech with intention.
+          Honestly, I love this work. The industry is a roller coaster right now, and you just
+          have to be willing to have fun on the ride. Lifting up my community matters just as
+          much to me: I&apos;ve mentored hundreds of engineers and spoken at 100+ events, lately
+          on AI adoption.
         </p>
         <p>
           As a proud Peruvian-American from Norfolk, Virginia, I care about making technical
@@ -111,25 +115,27 @@ const bioVariants = [
     content: (
       <>
         <p>
-          Frances Coronel is a Senior Software Engineer at Slack,
-          speaker, mentor, and proud Corgi mom.
+          Frances Coronel is a Senior Software Engineer on Slack&apos;s Agentic
+          SDLC team, a speaker, and a proud Corgi mom.
         </p>
         <p>
           She holds a Bachelor&apos;s in Computer Science from Hampton University and a Master&apos;s
           in Computer Science from Cornell Tech. She has been working full-time as a software
-          engineer since 2017, specializing in frontend engineering with React and TypeScript.
+          engineer since 2017, starting in frontend engineering with React and TypeScript.
         </p>
         <p>
           She currently works on Slack&apos;s Agentic SDLC team, bringing AI agents into
           every step of how software gets built, from idea to production. She helps engineers
           work through semi-autonomous coding agents, and helps PMs, designers, and everyone
-          else confidently use those same tools alongside them. Before that, she led a team as
-          an Engineering Manager on Slack Lists.
+          else confidently use those same tools alongside them. She also works on how agents
+          show up in Slack and on the infrastructure underneath, like the model gateway, token
+          costs, and new model rollouts. She led Tidepool Day, a full
+          day of AI tooling with Anthropic for 350+ people, and is speaking about AI at GitHub
+          Universe. Before that, she led a team as an Engineering Manager on Slack Lists.
         </p>
         <p>
-          Beyond Slack, Frances enjoys mentoring other engineers and has logged 250+ hours of
-          technical and behavioral interview prep. She has also spoken at 100+ events on
-          frontend engineering topics and building a career in tech with intention.
+          Lifting up her community matters just as much to Frances: she has mentored hundreds
+          of engineers and spoken at 100+ events, most recently on AI adoption.
         </p>
         <p>
           As a proud Peruvian-American from Norfolk, Virginia, Frances cares about making
