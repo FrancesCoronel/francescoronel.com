@@ -17,6 +17,7 @@ import mentoringData from "@/content/mentoring-sessions.json";
 import { buildMetadata, YEARS_OF_EXPERIENCE } from "@/lib/metadata";
 import { PageHeader } from "@/components/ui/page-header";
 import { BioSection } from "@/components/sections/bio-section";
+import { Timeline } from "@/components/ui/timeline";
 import { TimelineSection } from "@/components/sections/timeline-section";
 import { LanguagesSection } from "@/components/sections/languages-section";
 import { MemojiSection } from "@/components/sections/memoji-section";
@@ -29,7 +30,7 @@ import { ConnectCTA } from "@/components/sections/connect-cta";
 export const metadata: Metadata = buildMetadata({
   title: "About",
   description:
-    `Frances Coronel is a Senior Software Engineer at Slack with ${YEARS_OF_EXPERIENCE}+ years of experience in frontend engineering and AI adoption. Speaker, mentor, and proud Peruvian-American. 👩🏽‍💻`,
+    "Frances Coronel is a Senior Software Engineer on Slack's Agentic SDLC team, writing and speaking about how companies adopt agentic AI. Former engineering manager and proud Peruvian-American. 👩🏽‍💻",
   path: "/about",
   ogImage: "/images/og/about.jpg",
 });
@@ -55,10 +56,10 @@ const bioVariants = [
     label: "Short Bio",
     content: (
       <p>
-        Senior Software Engineer at Slack with {YEARS_OF_EXPERIENCE}+ years in frontend engineering
-        and an MS in Computer Science from Cornell Tech. Speaker at 100+ events
-        and mentor focused on helping underrepresented engineers grow into
-        technical leadership.
+        Senior Software Engineer on Slack&apos;s Agentic SDLC team, helping engineers
+        and non-engineers build with AI agents across the whole software lifecycle.
+        {YEARS_OF_EXPERIENCE}+ years in industry, former engineering manager, MS in
+        Computer Science from Cornell Tech, and speaker at 100+ events.
       </p>
     ),
   },
@@ -66,9 +67,9 @@ const bioVariants = [
     label: "Social Media",
     content: (
       <p>
-        Senior Software Engineer @ Slack 👩🏽‍💻 | Speaker &amp; Mentor 🚀 |
-        Corgi Mom 🐕 | 40 Under 40 Latinos in Bay Area 🌉 | Empowering
-        the next generation of engineers 💛
+        Agentic SDLC @ Slack 👩🏽‍💻 | Writing &amp; speaking on AI adoption 🎤 |
+        AI is fertilizer, so learn to prune 🌳 | 40 Under 40 Latinos in Bay Area 🌉 |
+        Corgi Mom 🐕
       </p>
     ),
   },
@@ -86,10 +87,11 @@ const bioVariants = [
           engineer since 2017, specializing in frontend engineering with React and TypeScript.
         </p>
         <p>
-          I&apos;m currently on Slack&apos;s DevXP pillar, focused on AI adoption
-          and developer productivity, building agentic workflows and tooling that help engineers
-          move faster with AI, and helping non-engineers confidently use those same tools
-          alongside them.
+          I&apos;m currently on Slack&apos;s Agentic SDLC team, bringing AI agents into
+          every step of how software gets built, from idea to production. I help engineers
+          work through semi-autonomous coding agents, and I help PMs, designers, and everyone
+          else confidently use those same tools alongside them. Before that, I led a team as
+          an Engineering Manager on Slack Lists.
         </p>
         <p>
           Beyond Slack, I enjoy mentoring other engineers and I&apos;ve logged 250+ hours of
@@ -118,10 +120,11 @@ const bioVariants = [
           engineer since 2017, specializing in frontend engineering with React and TypeScript.
         </p>
         <p>
-          She currently works on Slack&apos;s DevXP pillar, focused on AI adoption
-          and developer productivity, building agentic workflows and tooling that help engineers
-          move faster with AI, and helping non-engineers confidently use those same tools
-          alongside them.
+          She currently works on Slack&apos;s Agentic SDLC team, bringing AI agents into
+          every step of how software gets built, from idea to production. She helps engineers
+          work through semi-autonomous coding agents, and helps PMs, designers, and everyone
+          else confidently use those same tools alongside them. Before that, she led a team as
+          an Engineering Manager on Slack Lists.
         </p>
         <p>
           Beyond Slack, Frances enjoys mentoring other engineers and has logged 250+ hours of
@@ -143,10 +146,11 @@ const bioVariants = [
     content: (
       <>
         <p>
-          Frances Coronel is a Senior Software Engineer at Slack, where she works
-          on the DevXP pillar focused on AI adoption and developer productivity,
-          building agentic workflows and internal tooling that help engineers move
-          faster with AI.
+          Frances Coronel is a Senior Software Engineer on Slack&apos;s Agentic SDLC
+          team, where she brings AI agents into every step of how software gets
+          built, for engineers and non-engineers alike. She writes and speaks about
+          how companies adopt agentic AI at scale, including her essay
+          &ldquo;AI Is Fertilizer. Now We Have to Learn to Prune.&rdquo;
         </p>
         <p>
           With {YEARS_OF_EXPERIENCE}+ years of experience in frontend engineering, Frances specializes
@@ -207,7 +211,7 @@ export default function AboutPage() {
     };
   });
 
-  const educationItems = education.map((edu) => {
+  const toEducationItem = (edu: (typeof education)[number]) => {
     const org = getOrganizationByName(edu.institution);
     return {
       title: edu.degree || edu.institution,
@@ -220,15 +224,17 @@ export default function AboutPage() {
       description: edu.description,
       linkPrefix: "/education",
     };
-  });
+  };
+  const educationItems = education.filter((edu) => edu.type !== "program").map(toEducationItem);
+  const programItems = education.filter((edu) => edu.type === "program").map(toEducationItem);
 
   return (
     <>
       {/* Hero */}
       <PageHeader
-        label="Engineer, Speaker & Mentor"
+        label="Engineer, Writer & Speaker"
         heading="About 👩🏽‍💻"
-        description={`I'm Frances Coronel, a Senior Software Engineer at Slack with ${YEARS_OF_EXPERIENCE}+ years in frontend engineering. I build AI-powered developer tooling, speak at conferences, and mentor engineers at all levels. I care deeply about making technical leadership more accessible, especially for Latinas and underrepresented engineers in tech.`}
+        description={`I'm Frances Coronel, a Senior Software Engineer on Slack's Agentic SDLC team with ${YEARS_OF_EXPERIENCE}+ years in industry. I help whole companies build with AI agents, engineers and everyone else, and I write and speak about what that takes. I care deeply about making technical leadership more accessible, especially for Latinas and underrepresented people in tech.`}
         aside={
           <div className="h-56 w-56 overflow-hidden rounded-full bg-horchata-100 ring-4 ring-horchata-200 dark:bg-navy-700 dark:ring-navy-600 sm:h-72 sm:w-72 md:h-96 md:w-96">
             <Image
@@ -275,7 +281,21 @@ export default function AboutPage() {
         heading="Education 🎓"
         items={educationItems}
         dark
-      />
+      >
+        {programItems.length > 0 && (
+          <div id="programs" className="mt-16 scroll-mt-20">
+            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+              Programs
+            </p>
+            <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
+              Leadership &amp; Learning 🚀
+            </h2>
+            <div className="mt-8">
+              <Timeline items={programItems} />
+            </div>
+          </div>
+        )}
+      </TimelineSection>
 
       {/* Languages */}
       <LanguagesSection />
@@ -339,12 +359,12 @@ export default function AboutPage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { stat: `${mentoringSessionCount}+`, label: "Mentoring sessions", sublabel: "logged on Cal.com & Calendly", icon: "💬", href: "/mentoring" },
               { stat: `${allPostsCount}+`, label: "Blog posts", sublabel: "published since 2014", icon: "✍🏽", href: "/posts" },
               { stat: `${speakingCount}+`, label: "Speaking events", sublabel: "at conferences since 2015", icon: "🎤", href: "/speaking" },
               { stat: `${yearsOfExperience}+`, label: "Years of experience", sublabel: "full-time in industry", icon: "💼", href: "#experience" },
               { stat: `${awardsCount}+`, label: "Awards & recognition", sublabel: "from organizations & publications", icon: "🏆", href: "/awards" },
               { stat: `${testimonialsCount}+`, label: "Testimonials", sublabel: "from mentees, peers & leaders", icon: "⭐", href: "/testimonials" },
+              { stat: `${mentoringSessionCount}+`, label: "Mentoring sessions", sublabel: "logged on Cal.com & Calendly", icon: "💬", href: "/mentoring" },
             ].map(({ stat, label, sublabel, icon, href }) => (
               <Link
                 key={label}

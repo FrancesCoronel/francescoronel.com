@@ -8,8 +8,8 @@ export function PersonJsonLd() {
     givenName: "Frances",
     familyName: "Coronel",
     url: siteConfig.siteUrl,
-    image: `${siteConfig.siteUrl}/images/avatar-placeholder.svg`,
-    jobTitle: "Senior Software Engineer",
+    image: `${siteConfig.siteUrl}/images/headshot.png`,
+    jobTitle: "Senior Software Engineer, Agentic SDLC",
     worksFor: {
       "@type": "Organization",
       name: "Slack",
@@ -33,13 +33,15 @@ export function PersonJsonLd() {
       },
     ],
     knowsAbout: [
+      "Agentic AI",
+      "AI Adoption",
+      "AI Agents",
+      "Developer Experience",
+      "Engineering Leadership",
       "Software Engineering",
       "TypeScript",
       "React",
-      "JavaScript",
-      "Web Development",
       "Public Speaking",
-      "Mentoring",
     ],
     nationality: {
       "@type": "Country",
@@ -70,22 +72,28 @@ export function BlogPostJsonLd({
   title,
   description,
   date,
+  updated,
   slug,
   image,
+  keywords,
 }: {
   title: string;
   description: string;
   date: string;
+  updated?: string;
   slug: string;
   image?: string;
+  keywords?: string[];
 }) {
+  const url = `${siteConfig.siteUrl}/posts/${slug}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: title,
     description,
     datePublished: date,
-    url: `${siteConfig.siteUrl}/posts/${slug}`,
+    dateModified: updated ?? date,
+    url,
     author: {
       "@type": "Person",
       name: siteConfig.author,
@@ -98,9 +106,10 @@ export function BlogPostJsonLd({
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${siteConfig.siteUrl}/posts/${slug}`,
+      "@id": url,
     },
     ...(image && { image }),
+    ...(keywords?.length && { keywords: keywords.join(", ") }),
   };
 
   return (

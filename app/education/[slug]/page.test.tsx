@@ -16,6 +16,8 @@ vi.mock("@/lib/content", async (importOriginal) => {
 
 const params = (slug: string) => ({ params: Promise.resolve({ slug }) });
 
+const elcWithoutLogo = () => ({ ...getEducation().find((e) => e.slug === "elc-peer-group-2025")!, logo: "" });
+
 afterEach(() => {
   vi.mocked(getEducationBySlug).mockReset();
 });
@@ -37,6 +39,7 @@ describe("app/education/[slug]/page", () => {
   });
 
   it("uses the default OG image when the entry has no logo", async () => {
+    vi.mocked(getEducationBySlug).mockReturnValue(elcWithoutLogo());
     const meta = await generateMetadata(params("elc-peer-group-2025"));
     expect(meta.openGraph?.images).toEqual([
       expect.objectContaining({ url: "https://francescoronel.com/images/og/home.jpg" }),
@@ -60,6 +63,7 @@ describe("app/education/[slug]/page", () => {
   });
 
   it("renders a plain institution label and no honors when data is missing", async () => {
+    vi.mocked(getEducationBySlug).mockReturnValue(elcWithoutLogo());
     const html = renderToStaticMarkup(await EducationPage(params("elc-peer-group-2025")));
     expect(html).toContain("Peer Group Program — Engineering Leadership");
     expect(html).toContain(
@@ -67,6 +71,12 @@ describe("app/education/[slug]/page", () => {
     );
     expect(html).not.toContain("Honors &amp; Activities");
     expect(html).not.toContain('alt="ELC (Engineering Leadership Community)"');
+  });
+
+  it("links programs back to the Programs section on About", async () => {
+    const html = renderToStaticMarkup(await EducationPage(params("deep-atlas-mli-cohort-21")));
+    expect(html).toContain('href="/about#programs"');
+    expect(html).toContain('alt="Deep Atlas"');
   });
 
   it("omits the institution link when there is no url", async () => {

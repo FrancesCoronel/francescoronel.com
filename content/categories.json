@@ -18,6 +18,15 @@
     "description": ""
   },
   {
+    "name": "Essays",
+    "slug": "essays",
+    "color": "#ca2e55",
+    "fontColor": "#ffffff",
+    "emoji": "🌳",
+    "image": "",
+    "description": "Long-form thinking on how companies adopt agentic AI, engineering leadership, and building a career with intention."
+  },
+  {
     "name": "Events",
     "slug": "events",
     "color": "#365c71",
