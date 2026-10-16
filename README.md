@@ -52,7 +52,8 @@ Copy `.env.local.example` to `.env.local` and fill in:
 ```bash
 NEXT_PUBLIC_GA4_MEASUREMENT_ID=   # Google Analytics 4
 CAL_COM_API_KEY=                  # Cal.com mentoring sessions
-BUTTONDOWN_API_KEY=               # Newsletter (Buttondown)
+RESEND_API_KEY=                   # Newsletter (Resend)
+RESEND_SEGMENT_ID=                # Resend segment new subscribers join
 BLOB_READ_WRITE_TOKEN=            # Vercel Blob storage
 ```
 
