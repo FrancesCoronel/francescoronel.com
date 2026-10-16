@@ -90,7 +90,9 @@ const bioVariants = [
           I&apos;m currently on Slack&apos;s Agentic SDLC team, bringing AI agents into
           every step of how software gets built, from idea to production. I help engineers
           work through semi-autonomous coding agents, and I help PMs, designers, and everyone
-          else confidently use those same tools alongside them. I led Tidepool Day, a full day
+          else confidently use those same tools alongside them. I also work on how agents show
+          up in Slack and on the infrastructure underneath, like our model gateway, token costs,
+          and new model rollouts. I led Tidepool Day, a full day
           of AI tooling with Anthropic for 350+ people, and I&apos;m speaking about AI at
           GitHub Universe. Before that, I led a team as an Engineering Manager on Slack Lists.
         </p>
@@ -125,7 +127,9 @@ const bioVariants = [
           She currently works on Slack&apos;s Agentic SDLC team, bringing AI agents into
           every step of how software gets built, from idea to production. She helps engineers
           work through semi-autonomous coding agents, and helps PMs, designers, and everyone
-          else confidently use those same tools alongside them. She led Tidepool Day, a full
+          else confidently use those same tools alongside them. She also works on how agents
+          show up in Slack and on the infrastructure underneath, like the model gateway, token
+          costs, and new model rollouts. She led Tidepool Day, a full
           day of AI tooling with Anthropic for 350+ people, and is speaking about AI at GitHub
           Universe. Before that, she led a team as an Engineering Manager on Slack Lists.
         </p>
