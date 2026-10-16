@@ -6,7 +6,7 @@
  *   2. Deletes the shorter duplicates
  *   3. Outputs redirect entries for deleted slugs → kept slug
  *
- * Usage: node scripts/dedup-posts.js [--dry-run]
+ * Usage: node scripts/migrations/dedup-posts.js [--dry-run]
  */
 
 const fs = require("fs");

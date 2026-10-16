@@ -2,7 +2,7 @@
  * Find all external image URLs in MDX and JSON content files,
  * download them, upload to Vercel Blob, and rewrite the source files.
  *
- * Usage: BLOB_READ_WRITE_TOKEN="..." node scripts/upload-external-images-to-blob.mjs
+ * Usage: BLOB_READ_WRITE_TOKEN="..." node scripts/migrations/upload-external-images-to-blob.mjs
  */
 
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from "fs";

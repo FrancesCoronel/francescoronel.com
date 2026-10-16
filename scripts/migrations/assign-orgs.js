@@ -13,22 +13,22 @@
 const fs = require("fs");
 const path = require("path");
 
-const BLOG_DIR = path.join(__dirname, "..", "content", "blog");
+const BLOG_DIR = path.join(__dirname, "..", "..", "content", "blog");
 const orgs = JSON.parse(
   fs.readFileSync(
-    path.join(__dirname, "..", "content", "organizations.json"),
+    path.join(__dirname, "..", "..", "content", "organizations.json"),
     "utf-8"
   )
 );
 const exps = JSON.parse(
   fs.readFileSync(
-    path.join(__dirname, "..", "content", "experience.json"),
+    path.join(__dirname, "..", "..", "content", "experience.json"),
     "utf-8"
   )
 );
 const edus = JSON.parse(
   fs.readFileSync(
-    path.join(__dirname, "..", "content", "education.json"),
+    path.join(__dirname, "..", "..", "content", "education.json"),
     "utf-8"
   )
 );

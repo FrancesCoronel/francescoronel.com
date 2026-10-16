@@ -1,7 +1,7 @@
 /**
  * Fix broken WordPress images in blog posts using the WP media export.
  *
- * Usage: node scripts/fix-wp-images.mjs
+ * Usage: node scripts/migrations/fix-wp-images.mjs
  *
  * Reads the WP media export from ~/Downloads, copies matching images to
  * public/images/wp-uploads/, and rewrites MDX file URLs.

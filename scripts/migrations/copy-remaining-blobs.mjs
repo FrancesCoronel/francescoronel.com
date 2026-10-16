@@ -7,7 +7,7 @@ const NEW_BASE = "https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com";
 const NEW_TOKEN = process.env.NEW_BLOB_READ_WRITE_TOKEN;
 const CONTENT_DIR = join(process.cwd(), "content");
 
-const missing = readFileSync("scripts/missing-images.txt", "utf-8")
+const missing = readFileSync("scripts/migrations/missing-images.txt", "utf-8")
   .trim().split("\n").filter(Boolean);
 
 function mime(f) {
