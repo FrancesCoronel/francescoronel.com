@@ -19,18 +19,11 @@ import { TimelineSection } from "./timeline-section";
 afterEach(cleanup);
 
 describe("ActionCards", () => {
-  it("renders the six default cards linking to the main pages", () => {
+  it("renders the four default cards linking to the main pages", () => {
     render(<ActionCards />);
     const links = screen.getAllByRole("link");
-    expect(links.map((l) => l.getAttribute("href"))).toEqual([
-      "/about",
-      "/mentoring",
-      "/posts",
-      "/speaking",
-      "/work",
-      "/contact",
-    ]);
-    expect(screen.getByText("Book a 1:1 session with me")).toBeInTheDocument();
+    expect(links.map((l) => l.getAttribute("href"))).toEqual(["/essays", "/speaking", "/work", "/about"]);
+    expect(screen.queryByText("Book a 1:1 session with me")).not.toBeInTheDocument();
   });
 
   it("renders custom cards", () => {
@@ -113,10 +106,11 @@ describe("ConnectCTA", () => {
     expect(screen.getByRole("heading")).toHaveTextContent("Let’s Connect 👋🏽");
     expect(screen.getByRole("link", { name: /Get in Touch/ })).toHaveAttribute("href", "/contact");
     expect(screen.getByRole("link", { name: /Get in Touch/ })).not.toHaveAttribute("target");
-    expect(screen.getByRole("link", { name: /Book Mentoring/ })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Read the Essays/ })).toHaveAttribute(
       "href",
-      "/mentoring"
+      "/essays"
     );
+    expect(screen.queryByRole("link", { name: /Book Mentoring/ })).not.toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Follow on LinkedIn" })).toHaveAttribute(
       "href",
       "https://www.linkedin.com/in/francescoronel"
@@ -154,7 +148,7 @@ describe("ConnectCTA", () => {
 describe("CredentialsMarquee", () => {
   it("renders the credential links twice for a seamless loop", () => {
     render(<CredentialsMarquee />);
-    const slack = screen.getAllByRole("link", { name: "Senior Software Engineer @ Slack" });
+    const slack = screen.getAllByRole("link", { name: "Agentic SDLC @ Slack" });
     expect(slack).toHaveLength(2);
     expect(slack[0]).toHaveAttribute("href", "/experience/senior-software-engineer-agentic-sdlc");
     expect(screen.getAllByRole("link")).toHaveLength(20);
@@ -167,7 +161,7 @@ describe("Hero", () => {
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Hi, I'm Frances! 👋🏽");
     expect(screen.getByText(/Proud Peruvian-American/)).toBeInTheDocument();
     expect(screen.getByAltText("Frances Coronel")).toBeInTheDocument();
-    expect(screen.getAllByRole("link")).toHaveLength(6);
+    expect(screen.getAllByRole("link")).toHaveLength(4);
   });
 });
 

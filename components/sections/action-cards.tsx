@@ -14,26 +14,14 @@ interface ActionCardsProps {
 
 const defaultCards: CtaCard[] = [
   {
-    label: "About",
-    description: "Learn more about me and my story",
-    href: "/about",
-    image: "/images/assets/memoji-laptop.png",
-  },
-  {
-    label: "Mentoring",
-    description: "Book a 1:1 session with me",
-    href: "/mentoring",
-    image: "/images/assets/speaking-hero-image.webp",
-  },
-  {
-    label: "Posts",
-    description: "Read my latest posts and insights",
-    href: "/posts",
+    label: "Essays",
+    description: "How companies adopt agentic AI, for everyone",
+    href: "/essays",
     image: "/images/assets/newsletter-cta.webp",
   },
   {
     label: "Speaking",
-    description: "Hire me for your next event",
+    description: "Book me for your next event",
     href: "/speaking",
     image: "/images/assets/speaking-microphone.png",
   },
@@ -44,10 +32,10 @@ const defaultCards: CtaCard[] = [
     image: "/images/assets/rocket-illustration.webp",
   },
   {
-    label: "Contact",
-    description: "Get in touch with me",
-    href: "/contact",
-    image: "/images/assets/heart-chat-bubble.webp",
+    label: "About",
+    description: "Learn more about me and my story",
+    href: "/about",
+    image: "/images/assets/memoji-laptop.png",
   },
 ];
 
