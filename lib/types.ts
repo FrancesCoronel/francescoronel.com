@@ -11,7 +11,7 @@ export interface BlogPost {
   organizations: string[];
   skills: string[];
   externalUrl?: string;
-  source?: "webflow" | "wordpress";
+  source?: "webflow" | "wordpress" | "nextjs";
   readingTime: string;
   content: string;
 }
@@ -28,7 +28,7 @@ export interface BlogPostFrontmatter {
   organizations: string[];
   skills: string[];
   externalUrl?: string;
-  source?: "webflow" | "wordpress";
+  source?: "webflow" | "wordpress" | "nextjs";
   draft?: boolean;
   // Project fields — present when type === "project"
   type?: "project";
