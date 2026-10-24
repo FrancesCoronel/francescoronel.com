@@ -290,6 +290,8 @@ describe("content loaders with a fixture content directory", () => {
     expect(content.getAwardBySlug("older")?.title).toBe("Older Award");
     expect(content.getCategoryBySlug("uncategorized")?.count).toBe(2);
     expect(content.getTagBySlug("react")?.count).toBe(1);
+    expect(content.getTagName("vue")).toBe("Vue");
+    expect(content.getTagName("ai-tools")).toBe("AI Tools");
     expect(content.getTestimonialBySlug("sam")?.name).toBe("Sam");
     expect(content.getOrganizationBySlug("acme")?.name).toBe("Acme Corp");
     expect(content.getProjectBySlug("proj-old")?.title).toBe("Old Project");

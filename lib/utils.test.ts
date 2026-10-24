@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { canOptimize, cn, formatDate, formatDateRange, OPTIMIZED_HOSTS, slugify, truncate } from "./utils";
+import { canOptimize, cn, formatDate, formatDateRange, formatSlugLabel, OPTIMIZED_HOSTS, slugify, truncate } from "./utils";
 
 describe("canOptimize", () => {
   it("accepts local raster images", () => {
@@ -64,5 +64,24 @@ describe("slugify", () => {
     expect(slugify("  Hello, World! ")).toBe("hello-world");
     expect(slugify("snake_case and  spaces")).toBe("snake-case-and-spaces");
     expect(slugify("--Leading & trailing--")).toBe("leading-trailing");
+  });
+});
+
+describe("formatSlugLabel", () => {
+  it("keeps acronyms and brand names in their proper case", () => {
+    expect(formatSlugLabel("ai")).toBe("AI");
+    expect(formatSlugLabel("ai-agents")).toBe("AI Agents");
+    expect(formatSlugLabel("llm")).toBe("LLM");
+    expect(formatSlugLabel("ux-design")).toBe("UX Design");
+    expect(formatSlugLabel("css")).toBe("CSS");
+    expect(formatSlugLabel("javascript")).toBe("JavaScript");
+    expect(formatSlugLabel("github-actions")).toBe("GitHub Actions");
+  });
+
+  it("title-cases other words and keeps minor words lowercase mid-label", () => {
+    expect(formatSlugLabel("open-source")).toBe("Open Source");
+    expect(formatSlugLabel("diversity-and-inclusion")).toBe("Diversity and Inclusion");
+    expect(formatSlugLabel("the-end")).toBe("The End");
+    expect(formatSlugLabel("blog")).toBe("Blog");
   });
 });

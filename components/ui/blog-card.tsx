@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { formatDate, canOptimize } from "@/lib/utils";
+import { formatDate, canOptimize, formatSlugLabel } from "@/lib/utils";
 import type { BlogPost } from "@/lib/types";
 
 interface BlogCardProps {
@@ -66,7 +66,7 @@ export function BlogCard({ post, categoryImages, hideReadingTime, basePath = "/b
                 key={cat}
                 className="flex items-center gap-1.5 rounded-full bg-horchata-100 px-3 py-1 text-xs font-medium text-horchata-800 dark:bg-navy-700 dark:text-white/70"
               >
-                {cat.charAt(0).toUpperCase() + cat.slice(1)}
+                {formatSlugLabel(cat)}
                 {categoryImages?.[cat] && (
                   <img
                     src={categoryImages[cat]}
