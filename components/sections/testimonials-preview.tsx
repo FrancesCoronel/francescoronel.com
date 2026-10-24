@@ -20,7 +20,7 @@ export function TestimonialsPreview({
       <div className="mx-auto max-w-[var(--container-max)] px-6">
         <div className="mb-10 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
               Testimonials
             </p>
             <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">

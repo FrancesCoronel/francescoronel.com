@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const REPO_BASE =
-  "https://github.com/FrancesCoronel/francescoronel.com/blob/main/claude";
+  "https://github.com/FrancesCoronel/francescoronel.com/blob/main/content/claude-config";
 
 const tools = [
   {
@@ -394,7 +394,7 @@ export default function UsesPage() {
       {/* Hero */}
       <section className="bg-horchata-50 py-16 dark:bg-navy-900">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Setup
           </p>
           <h1 className="mt-2 text-2xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl md:text-4xl lg:text-5xl">
@@ -410,7 +410,7 @@ export default function UsesPage() {
       {/* Tools by Category */}
       <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Software
           </p>
           <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">
@@ -475,7 +475,7 @@ export default function UsesPage() {
       {/* Claude Code Section */}
       <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             AI Workflow
           </p>
           <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">
@@ -486,7 +486,7 @@ export default function UsesPage() {
             skills, and hooks that automate formatting, notifications, and
             communication workflows.{" "}
             <a
-              href={`${REPO_BASE}/CLAUDE.md`}
+              href={`${REPO_BASE}/global-CLAUDE.md`}
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-horchata-700 hover:text-horchata-800 dark:text-horchata-400 dark:hover:text-horchata-200"
@@ -517,7 +517,7 @@ export default function UsesPage() {
                     <p className="mt-1 text-sm text-navy-600 dark:text-white/70">
                       {server.description}
                     </p>
-                    <span className="mt-3 inline-flex items-center rounded-full bg-horchata-200 px-2.5 py-0.5 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-white/70">
+                    <span className="mt-3 inline-flex items-center rounded-full bg-horchata-200 px-2.5 py-0.5 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-horchata-100">
                       {server.tools} tool{server.tools !== 1 ? "s" : ""}
                     </span>
                   </div>
@@ -559,7 +559,7 @@ export default function UsesPage() {
                     <p className="mt-1 text-sm text-navy-600 dark:text-white/70">
                       {plugin.description}
                     </p>
-                    <span className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-horchata-200 px-2.5 py-0.5 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-white/70">
+                    <span className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-horchata-200 px-2.5 py-0.5 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-horchata-100">
                       {plugin.source === "claude-plugins-official" ? (
                         <Image
                           src="/images/tools/claude.png"
@@ -606,7 +606,7 @@ export default function UsesPage() {
                     <code className="rounded-lg bg-horchata-100 px-2.5 py-1 text-xs font-medium text-navy-700 dark:bg-navy-700 dark:text-white/70">
                       {skill.command}
                     </code>
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-horchata-200 px-2.5 py-0.5 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-white/70">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-horchata-200 px-2.5 py-0.5 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-horchata-100">
                       {categoryIcons[skill.category]?.image ? (
                         <Image
                           src={categoryIcons[skill.category].image!}
@@ -644,7 +644,7 @@ export default function UsesPage() {
                 className="group flex items-center gap-4 p-5 transition-colors hover:bg-horchata-50 first:rounded-t-2xl last:rounded-b-2xl dark:hover:bg-navy-700"
               >
                 <span className="text-xl">{hook.icon}</span>
-                <span className="inline-flex flex-shrink-0 items-center rounded-full bg-horchata-200 px-2.5 py-1 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-white/70">
+                <span className="inline-flex flex-shrink-0 items-center rounded-full bg-horchata-200 px-2.5 py-1 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-horchata-100">
                   {hook.event}
                 </span>
                 <code className="flex-shrink-0 text-xs text-navy-600 dark:text-horchata-400">

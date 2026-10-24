@@ -17,7 +17,7 @@ export function PageHeader({
 }: PageHeaderProps) {
   const textContent = (
     <>
-      <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+      <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
         {label}
       </p>
       <h1 className="mt-2 text-2xl font-black text-navy-900 dark:text-horchata-100 sm:text-3xl md:text-4xl lg:text-5xl">

@@ -290,7 +290,7 @@ export default function AboutPage() {
       >
         {programItems.length > 0 && (
           <div id="programs" className="mt-16 scroll-mt-20">
-            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
               Programs
             </p>
             <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
@@ -317,7 +317,7 @@ export default function AboutPage() {
       {/* Skills */}
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Expertise
           </p>
           <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
@@ -356,7 +356,7 @@ export default function AboutPage() {
       <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <div className="mb-10 text-center">
-            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
               By the Numbers
             </p>
             <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">

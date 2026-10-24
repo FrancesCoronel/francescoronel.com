@@ -19,18 +19,20 @@ No more vendor lock-in, full data ownership, prompt-driven editing ⚡
 | Content | MDX blog posts + JSON data files |
 | MDX | `next-mdx-remote/rsc` with remark-gfm, rehype-slug, rehype-autolink-headings, rehype-pretty-code |
 | Search | Pagefind (static binary search index, zero client payload) |
-| Images | Webflow CDN (current), planned migration to Cloudflare R2 |
+| Images | Vercel Blob (new images), legacy external hosts via `remotePatterns` |
 | Analytics | Vercel Analytics + Speed Insights + Google Analytics 4 |
 | Hosting | Vercel |
-| Fonts | Cabin (placeholder for Latina Essential) via `next/font/google` |
+| Fonts | Latina Essential via `next/font/local` (`public/fonts/`) |
 | Perf/A11y | Lighthouse CI in GitHub Actions, pa11y-ci for WCAG2AA |
+| Errors | Sentry (`instrumentation.ts`, `instrumentation-client.ts`, `sentry.*.config.ts`) |
+| Tests | Playwright (`e2e/`), Storybook + Vitest component tests (`*.stories.tsx`) |
 
 ## Architecture 🏗️
 
 ### Content System 📝
 
-- **665 blog posts** as individual MDX files in `content/blog/`
-- Each has YAML frontmatter — title, date, excerpt, featuredImage, categories, tags, organizations, skills, source
+- **~700 blog posts** as individual MDX files in `content/posts/`
+- Each has YAML frontmatter — title, date, optional `updated` (set it when you meaningfully revise a post; it feeds dateModified and the sitemap), excerpt, featuredImage, categories, tags, organizations, skills, source
 - **Structured data** in JSON files: testimonials, organizations, skills, awards, experience, education, categories, tags
 - Everything loaded at build time via `lib/content.ts` — synchronous file reads, no database
 
@@ -41,13 +43,15 @@ Posts consolidated from 5 platform eras:
 - **WordPress**
 - **Hugo v3, v2, v1** (Jekyll)
 
-Dedup script (`scripts/dedup-posts.js`) keeps the Webflow version when duplicates exist and generates redirect entries in `scripts/dedup-redirects.json`
+Dedup script (`scripts/migrations/dedup-posts.js`) keeps the Webflow version when duplicates exist and generates redirect entries in `scripts/dedup-redirects.json`
 
 ### Routing 🗺️
 
-- **Static pages**: `/`, `/about`, `/blog`, `/contact`, `/speaking`, `/mentoring`, `/portfolio`, `/testimonials`, `/organizations`, `/for-llms`, `/tags`, `/experience`, `/education`, `/design-system`
-- **Dynamic SSG**: `/blog/[slug]`, `/categories/[slug]`, `/tags/[slug]`, `/experience/[slug]`, `/education/[slug]`, `/awards/[slug]`, `/organizations/[slug]`, `/testimonials/[slug]`
-- **API routes**: `/feed` (RSS), `/robots.txt`, `/sitemap.xml`
+- **Static pages**: `/`, `/about`, `/posts`, `/categories`, `/contact`, `/speaking`, `/mentoring`, `/mentoring/sessions`, `/now`, `/portfolio`, `/work`, `/uses`, `/testimonials`, `/organizations`, `/for-llms`, `/tags`, `/design-system`
+- **Dynamic SSG**: `/posts/[slug]`, `/categories/[slug]`, `/tags/[slug]`, `/experience/[slug]`, `/education/[slug]`, `/awards/[slug]`, `/organizations/[slug]`, `/testimonials/[slug]`
+- **Route handlers**: `/feed` (RSS), `/api/newsletter`, `/api/mentoring-sessions`
+- **Metadata routes**: `/robots.txt` (`app/robots.ts`), `/sitemap.xml` (`app/sitemap.ts`)
+- Old `/blog/...` URLs redirect to `/posts/...` in `next.config.ts`. Always link to `/posts/<slug>`.
 
 ### Cross-Linking 🔗
 
@@ -108,13 +112,44 @@ Zero client-side content payload — works great even on 3G
 | `app/globals.css` | Tailwind v4 theme tokens (colors, fonts, spacing) |
 | `lighthouserc.json` | Lighthouse CI thresholds (90+ perf/a11y/best-practices, 95+ SEO) |
 
+## Where Things Live 🗂️
+
+| Path | What's there |
+|---|---|
+| `app/` | App Router pages, route handlers, `layout.tsx`, `globals.css`, metadata routes |
+| `components/layout/` | Site chrome: nav, footer, analytics, JSON-LD, theme provider |
+| `components/sections/` | Page sections composed by pages (hero, CTAs, previews) |
+| `components/ui/` | Reusable UI pieces; files marked `"use client"` (including every `*-client.tsx`) are client components |
+| `components/mdx/` | MDX component overrides |
+| `lib/` | Content loading, metadata, types, helpers (no React) |
+| `content/posts/` | Blog posts (MDX). Written content, © Frances: don't rewrite posts unless asked |
+| `content/*.json` | Structured data (experience, orgs, testimonials, ...) |
+| `public/` | Static assets and fonts; `public/llms.txt` is hand-maintained |
+| `e2e/` | Playwright specs |
+| `.storybook/` | Storybook config; stories sit next to their components |
+| `scripts/` | Scripts that CI, `package.json` or a scheduled job runs (`build-search-index.mjs`, `crosspost-*.js`, `notify-slack.js`, `check-broken-links.js`, `suggest-page-updates.js`, `sync-claude-config.mjs`), maintenance tools you run by hand (`sync-calendly.mjs`, `sync-github-projects.js`, `audit-orgs.js`, `validate-orgs.js`, `generate-project-mdx.js`) and `dedup-redirects.json`, which `next.config.ts` imports |
+| `scripts/migrations/` | One-off scripts from the Webflow/WordPress/Hugo move and the blob store migration. Kept for reference; don't run them, they rewrite content and blob storage |
+| `content/claude-config/` | Generated by `scripts/sync-claude-config.mjs` from Frances's local Claude Code setup for the `/uses` page. Not instructions for this repo; don't edit by hand |
+| `.claude/commands/` | Project slash commands |
+
+## Before Opening a PR ✅
+
+- Run `npm run lint`, `npm run typecheck` and `npm run test:coverage`. Run `npm run build` when you touch routing, `next.config.ts`, content loading or MDX.
+- Keep PRs to one concern. Workflows come from [FrancesCoronel/workflows](https://github.com/FrancesCoronel/workflows); don't copy that logic into this repo.
+- Don't add em dashes to site copy (see `content/claude-config/memory/feedback_em_dash.md`).
+
 ## Commands 💻
 
 ```bash
+npm ci                   # install (npm only; package-lock.json is the lockfile)
 npm run dev              # start dev server
 npm run build            # build + pagefind index (postbuild)
 npm run start            # serve production build
 npm run lint             # eslint
+npm run typecheck        # tsc --noEmit
+npm run lint:md          # markdownlint on content/posts
+npm run test:coverage    # Vitest unit tests with coverage (CI enforces the floor)
+npm run test:e2e         # Playwright; starts `npm run start`, so run `npm run build` first
 npm run lighthouse       # run lighthouse CI (uses lighthouserc.json)
 npm run lighthouse:local # single-page lighthouse report (HTML output)
 npm run audit:a11y       # pa11y-ci accessibility audit
@@ -129,14 +164,14 @@ npm run chromatic        # upload to Chromatic for visual regression
 
 ### Writing (iA Writer)
 
-**Mac:** Open iA Writer → Library → Add Location → select `content/blog/` inside this repo. New posts appear immediately in the file system.
+**Mac:** Open iA Writer → Library → Add Location → select `content/posts/` inside this repo. New posts appear immediately in the file system.
 
 **Android:** Use [Working Copy](https://workingcopyapp.com/) to clone the repo, then in iA Writer → Library → Add Location → Working Copy. After writing, open Working Copy to commit and push.
 
 ### From draft to live
 
-1. **Write** in iA Writer — save as `content/blog/<slug>.mdx`
-2. **Tell Claude** (phone or desktop): _"Here's my new post at `content/blog/<slug>.mdx` — set it up for publication"_
+1. **Write** in iA Writer — save as `content/posts/<slug>.mdx`
+2. **Tell Claude** (phone or desktop): _"Here's my new post at `content/posts/<slug>.mdx` — set it up for publication"_
    - Claude will: fill missing frontmatter (excerpt, slug, date), suggest categories/tags, upload any local images to Vercel Blob, ensure MDX is valid
 3. **Commit** with `/commit`
 4. **Deploy** with `/deploy` (pushes to main → Vercel auto-deploys)
@@ -167,7 +202,10 @@ Each platform is skipped when its secret isn't set, and one failing doesn't bloc
 
 ### Newsletter
 
-Buttondown is wired up at `/api/newsletter` — subscribers sign up on the site. Send new issues directly from [buttondown.email](https://buttondown.email) dashboard.
+Resend is wired up at `/api/newsletter` — subscribers sign up on the site and are added as Resend contacts in the `RESEND_SEGMENT_ID` segment
+
+When a new post lands on main, `.github/workflows/newsletter-broadcast.yml` runs `scripts/newsletter-broadcast.js`, waits for the post to go live, and creates a **draft** broadcast in Resend (title, excerpt, featured image, link) — review and send it from the [Resend dashboard](https://resend.com/broadcasts)
+- Requires secrets: `RESEND_API_KEY`, `RESEND_SEGMENT_ID`, `RESEND_FROM` (a sender on a verified domain)
 
 ## Custom Slash Commands 🔧
 
@@ -186,6 +224,7 @@ Colors follow a **teal/charcoal + linen/raspberry** palette defined in `app/glob
 - `horchata-50` through `horchata-500` — linen/warm neutral ramp for warm backgrounds and borders
 - `horchata-600` through `horchata-950` — raspberry/crimson ramp for accent, links, and CTAs
 - Accent (links, CTAs): `horchata-600` (#ca2e55, raspberry)
+- Dark-mode accent: `accent-light` (#e7a7b7, raspberry tint) — the raspberry ramp (`horchata-600`+) fails WCAG AA on every navy surface, so any `text-horchata-600`–`900` needs a dark override: `dark:text-accent-light` for red labels, `dark:text-horchata-400` for links
 - Light mode bg: `horchata-50` (#f9f5f3), warm section bg: `horchata-100` (#f0ebe9)
 - Dark mode bg: `navy-900` (#253137, dark teal/charcoal)
 - Primary ink: `navy-900` (#253137)
@@ -204,7 +243,7 @@ const { put } = require('@vercel/blob');
 const fs = require('fs');
 async function main() {
   const buf = fs.readFileSync('/path/to/image.png');
-  const blob = await put('folder/filename.png', buf, { access: 'public', contentType: 'image/png', token: process.env.IMAGES_BLOB_READ_WRITE_TOKEN });
+  const blob = await put('folder/filename.png', buf, { access: 'public', contentType: 'image/png', token: process.env.BLOB_READ_WRITE_TOKEN });
   console.log(blob.url);
 }
 main();
@@ -240,7 +279,7 @@ Always use **medium-brown skin tone** (🏽, modifier U+1F3FD) for ANY emoji tha
 Every section must have BOTH a subheader label AND an emoji in the main heading. No exceptions.
 
 ```tsx
-<p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+<p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
   Events                          {/* short category label, no emoji */}
 </p>
 <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
@@ -248,7 +287,7 @@ Every section must have BOTH a subheader label AND an emoji in the main heading.
 </h2>
 ```
 
-- Subheader: short, uppercase, `text-horchata-700`, no emoji
+- Subheader: short, uppercase, `text-horchata-700 dark:text-accent-light`, no emoji
 - Main heading: title case, emoji at the end, `dark:text-horchata-100`
 - Never use a heading without the subheader label above it
 

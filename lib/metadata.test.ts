@@ -77,4 +77,9 @@ describe("buildMetadata", () => {
     expect(meta.twitter).toMatchObject({ title: "My Post", description: "About my post", images: [image] });
     expect(meta.robots).toEqual({ index: false, follow: false });
   });
+
+  it("adds modifiedTime to article metadata when given", () => {
+    const meta = buildMetadata({ path: "/posts/p", ogType: "article", publishedTime: "2024-01-01", modifiedTime: "2024-06-01" });
+    expect(meta.openGraph).toMatchObject({ publishedTime: "2024-01-01", modifiedTime: "2024-06-01" });
+  });
 });

@@ -23,7 +23,7 @@ export function BioSection({ variants }: BioSectionProps) {
                 variant.colSpan === 2 ? " md:col-span-2" : ""
               }`}
             >
-              <h3 className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+              <h3 className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
                 {variant.label}
               </h3>
               <div className="mt-3 space-y-3 text-sm leading-relaxed text-navy-600 dark:text-white/70">

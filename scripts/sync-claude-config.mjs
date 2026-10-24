@@ -2,15 +2,15 @@
 /**
  * sync-claude-config.mjs
  *
- * Syncs local Claude Code config files into the repo's claude/ directory,
+ * Syncs local Claude Code config files into the repo's content/claude-config/ directory,
  * then commits and pushes so Vercel rebuilds the /uses page automatically.
  *
  * What gets synced:
- *   ~/.claude/settings.json     → claude/settings.json  (sanitized)
- *   ~/.claude/CLAUDE.md         → claude/CLAUDE.md
- *   .claude/commands/*.md       → claude/skills/*.md
- *   ~/.claude/projects/.../memory/ → claude/memory/
- *   settings.enabledPlugins     → claude/plugins.json   (merged with display metadata)
+ *   ~/.claude/settings.json     → content/claude-config/settings.json  (sanitized)
+ *   ~/.claude/CLAUDE.md         → content/claude-config/global-CLAUDE.md
+ *   .claude/commands/*.md       → content/claude-config/skills/*.md
+ *   ~/.claude/projects/.../memory/ → content/claude-config/memory/
+ *   settings.enabledPlugins     → content/claude-config/plugins.json   (merged with display metadata)
  *
  * Run manually:  node scripts/sync-claude-config.mjs
  * Run via cron:  see scripts/install-claude-sync-cron.sh
@@ -30,7 +30,9 @@ import { homedir } from "os";
 
 const HOME = homedir();
 const REPO = new URL("..", import.meta.url).pathname;
-const CLAUDE_DIR = join(REPO, "claude");
+// Not named CLAUDE.md, and kept under content/, so Claude Code never loads
+// this synced copy as instructions for the repo.
+const CLAUDE_DIR = join(REPO, "content", "claude-config");
 const MEMORY_SRC = join(
   HOME,
   ".claude/projects/-Users-francescoronel-Documents-GitHub-francescoronel-com/memory"
@@ -82,11 +84,11 @@ function syncSettings() {
 function syncClaudeMd() {
   const src = join(HOME, ".claude/CLAUDE.md");
   if (!existsSync(src)) return log("CLAUDE.md not found, skipping");
-  copyFileSync(src, join(CLAUDE_DIR, "CLAUDE.md"));
+  copyFileSync(src, join(CLAUDE_DIR, "global-CLAUDE.md"));
   log("✓ CLAUDE.md");
 }
 
-// ─── 3. Project skill files (.claude/commands/ → claude/skills/) ────────────
+// ─── 3. Project skill files (.claude/commands/ → content/claude-config/skills/) ────────────
 
 function syncSkills() {
   const commandsDir = join(REPO, ".claude/commands");
@@ -154,9 +156,9 @@ function syncPlugins() {
 
 function gitPush() {
   try {
-    execSync(`git -C "${REPO}" add claude/`, { stdio: "pipe" });
+    execSync(`git -C "${REPO}" add content/claude-config/`, { stdio: "pipe" });
 
-    const status = execSync(`git -C "${REPO}" status --porcelain claude/`)
+    const status = execSync(`git -C "${REPO}" status --porcelain content/claude-config/`)
       .toString()
       .trim();
 

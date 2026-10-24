@@ -66,3 +66,8 @@ storybook-static
 tailwindplus-components-*.json
 .env*.local
 test-results/
+
+# vale packages (downloaded by `vale sync`; only the vocabulary is ours)
+.vale/styles/*
+!.vale/styles/Vocab/
+!.vale/styles/config/

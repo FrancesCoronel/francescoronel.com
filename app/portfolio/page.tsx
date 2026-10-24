@@ -75,7 +75,7 @@ export default function PortfolioPage() {
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <div className="flex items-baseline justify-between">
             <div>
-              <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+              <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
                 Built & Shipped
               </p>
               <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
@@ -149,7 +149,7 @@ export default function PortfolioPage() {
       {/* Blog posts (portfolio category) */}
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Writing & Case Studies
           </p>
           <h2 className="mt-1 mb-6 text-2xl font-bold text-navy-900 dark:text-horchata-100">
