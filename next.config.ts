@@ -37,6 +37,11 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  // Inline Vercel's environment (production, preview, development) into the
+  // browser bundle so client-side Sentry events carry the right environment.
+  env: {
+    NEXT_PUBLIC_VERCEL_ENV: process.env.VERCEL_ENV ?? "",
+  },
   async headers() {
     return [
       { source: "/(.*)", headers: securityHeaders },

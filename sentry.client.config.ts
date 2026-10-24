@@ -2,9 +2,9 @@ import * as Sentry from "@sentry/nextjs";
 
 Sentry.init({
   dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
-  // Vercel sets this to production, preview or development, so alerts can
-  // target production without preview deploys tripping them.
-  environment: process.env.NEXT_PUBLIC_VERCEL_ENV ?? process.env.NODE_ENV,
+  // Inlined from VERCEL_ENV in next.config.ts (production, preview or
+  // development), so production-only alerts skip preview deploys.
+  environment: process.env.NEXT_PUBLIC_VERCEL_ENV || process.env.NODE_ENV,
   tracesSampleRate: 0.1,
   // Session Replay is off: it shipped a large bundle to every visitor and recorded
   // unmasked page text. Error events and traces still report as before.
