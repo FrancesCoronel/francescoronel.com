@@ -12,6 +12,7 @@ import {
   getAllPosts,
   getOrganizationBySlug,
   getCategoryMaps,
+  getTagName,
 } from "@/lib/content";
 import { getRepoData } from "@/lib/github";
 import { formatDate, formatDateRange, canOptimize } from "@/lib/utils";
@@ -584,7 +585,7 @@ export default async function PostPage({ params }: PageProps) {
                   href={`/tags/${tag}`}
                   className="inline-flex items-center rounded-full bg-horchata-100 px-2.5 py-0.5 text-xs font-medium text-navy-700 transition-colors hover:bg-horchata-500 hover:text-navy-900 dark:bg-navy-600 dark:text-white dark:hover:bg-navy-500 dark:hover:text-white"
                 >
-                  #{tag.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")}
+                  #{getTagName(tag)}
                 </Link>
               ))}
             </div>

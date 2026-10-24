@@ -279,6 +279,11 @@ describe("content loaders with a fixture content directory", () => {
     ]);
   });
 
+  it("names tags from tags.json and title-cases unknown slugs", () => {
+    expect(content.getTagName("react")).toBe("React");
+    expect(content.getTagName("event-recap")).toBe("Event Recap");
+  });
+
   it("orders organizations by how many posts reference them", () => {
     expect(content.getOrganizationsByActivity().map((o) => o.slug)).toEqual(["acme", "other", "quiet"]);
     expect(content.EXCLUDED_FROM_FEATURED_ORGS.has("accenture")).toBe(true);

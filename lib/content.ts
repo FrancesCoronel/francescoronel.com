@@ -255,6 +255,12 @@ export function getCategoryBySlug(slug: string): Category | undefined {
   return getCategories().find((c) => c.slug === slug);
 }
 
+/** Display name for a tag slug: its name in tags.json (keeps casing like "AI"), else the slug title-cased */
+export function getTagName(slug: string): string {
+  const tag = loadJSON<Tag>("tags.json").find((t) => t.slug === slug);
+  return tag?.name ?? slug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+}
+
 export function getTagBySlug(slug: string): Tag | undefined {
   return getTags().find((t) => t.slug === slug);
 }
