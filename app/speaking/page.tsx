@@ -95,7 +95,7 @@ export default function SpeakingPage() {
       {/* Featured Talks Grid */}
       <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Highlights
           </p>
           <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
@@ -104,7 +104,7 @@ export default function SpeakingPage() {
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {featuredWithLogos.map((talk) => {
               const href = talk.postSlug
-                ? `/blog/${talk.postSlug}`
+                ? `/posts/${talk.postSlug}`
                 : talk.orgUrl || `/organizations/${talk.orgSlug}`;
 
               return (
@@ -152,7 +152,7 @@ export default function SpeakingPage() {
       {/* Past Events */}
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Archive
           </p>
           <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">

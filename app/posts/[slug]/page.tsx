@@ -689,7 +689,7 @@ export default async function PostPage({ params }: PageProps) {
       {relatedPosts.length > 0 && (
         <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
           <div className="mx-auto max-w-[var(--container-max)] px-6">
-            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
               Keep Reading
             </p>
             <h2 className="mb-8 mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">

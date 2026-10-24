@@ -24,6 +24,8 @@ user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
 
 # Exclude URL patterns that are known to block bots or require auth
 exclude = [
+  # Links to files in this repo on main; a PR that moves a file would 404 until it merges
+  "github\\.com/FrancesCoronel/francescoronel\\.com/blob/main",
   # Social / auth-walled
   "linkedin\\.com",
   "twitter\\.com",

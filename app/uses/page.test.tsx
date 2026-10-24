@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { renderToStaticMarkup } from "react-dom/server";
 import UsesPage, { metadata } from "./page";
 
-const REPO_BASE = "https://github.com/FrancesCoronel/francescoronel.com/blob/main/claude";
+const REPO_BASE = "https://github.com/FrancesCoronel/francescoronel.com/blob/main/content/claude-config";
 
 describe("app/uses/page", () => {
   it("exports metadata for the uses page", () => {

@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "content/blog/**"
+      - "content/posts/**"
   workflow_dispatch:
     inputs:
       days:

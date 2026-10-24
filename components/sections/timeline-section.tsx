@@ -43,7 +43,7 @@ export function TimelineSection({
       }`}
     >
       <div className="mx-auto max-w-[var(--container-max)] px-6">
-        <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+        <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
           {label}
         </p>
         <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">

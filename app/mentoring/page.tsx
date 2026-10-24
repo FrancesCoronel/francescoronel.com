@@ -141,7 +141,7 @@ export default function MentoringPage() {
       {/* Pricing Tiers — dark */}
       <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-center text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-center text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Coaching
           </p>
           <h2 className="mt-1 text-center text-2xl font-bold text-navy-900 dark:text-horchata-100">
@@ -189,7 +189,7 @@ export default function MentoringPage() {
       {/* Calendar Embed — light */}
       <section className="bg-horchata-50 py-16 dark:bg-navy-900">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Availability
           </p>
           <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
@@ -217,7 +217,7 @@ export default function MentoringPage() {
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <div className="flex items-center gap-4">
             <div>
-              <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+              <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
                 Mentoring
               </p>
               <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">How I Can Help 🚀</h2>
@@ -240,7 +240,7 @@ export default function MentoringPage() {
       {/* Topic Expertise — light */}
       <section className="bg-horchata-50 py-16 md:py-20 dark:bg-navy-900">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Topics
           </p>
           <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
@@ -282,7 +282,7 @@ export default function MentoringPage() {
       {/* Refund Policy — dark */}
       <section className="border-y border-horchata-200 bg-horchata-100 py-16 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Policies
           </p>
           <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100">

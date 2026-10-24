@@ -17,8 +17,8 @@ function subscribeRequest(body: unknown, ip: string | null = nextIp()) {
   });
 }
 
-function buttondownResponse(status: number, json: () => Promise<unknown> = async () => ({})) {
-  return { status, json } as unknown as Response;
+function resendResponse(status: number, json: () => Promise<unknown> = async () => ({})) {
+  return { status, ok: status >= 200 && status < 300, json } as unknown as Response;
 }
 
 afterEach(() => {
@@ -34,29 +34,30 @@ describe("POST /api/newsletter", () => {
     }
   });
 
-  it("returns 500 when Buttondown is not configured", async () => {
-    vi.stubEnv("BUTTONDOWN_API_KEY", "");
+  it("returns 500 when Resend is not configured", async () => {
+    vi.stubEnv("RESEND_API_KEY", "");
     const res = await POST(subscribeRequest({ email: "a@example.com" }, null));
     expect(res.status).toBe(500);
     expect(await res.json()).toEqual({ error: "Newsletter not configured" });
   });
 
   it("subscribes the email and pings Slack on success", async () => {
-    vi.stubEnv("BUTTONDOWN_API_KEY", "bd-key");
+    vi.stubEnv("RESEND_API_KEY", "re-key");
+    vi.stubEnv("RESEND_SEGMENT_ID", "seg-1");
     vi.stubEnv("SLACK_WEBHOOK_URL", "https://hooks.slack.test/abc");
     const fetchMock = vi
       .fn()
-      .mockResolvedValueOnce(buttondownResponse(201))
+      .mockResolvedValueOnce(resendResponse(201))
       .mockRejectedValueOnce(new Error("slack down"));
     vi.stubGlobal("fetch", fetchMock);
 
     const res = await POST(subscribeRequest({ email: "new@example.com" }));
     expect(res.status).toBe(200);
     expect(await res.json()).toEqual({ success: true });
-    expect(fetchMock).toHaveBeenNthCalledWith(1, "https://api.buttondown.email/v1/subscribers", {
+    expect(fetchMock).toHaveBeenNthCalledWith(1, "https://api.resend.com/contacts", {
       method: "POST",
-      headers: { Authorization: "Token bd-key", "Content-Type": "application/json" },
-      body: JSON.stringify({ email_address: "new@example.com" }),
+      headers: { Authorization: "Bearer re-key", "Content-Type": "application/json" },
+      body: JSON.stringify({ email: "new@example.com", unsubscribed: false, segments: [{ id: "seg-1" }] }),
     });
     expect(fetchMock).toHaveBeenNthCalledWith(2, "https://hooks.slack.test/abc", {
       method: "POST",
@@ -66,9 +67,9 @@ describe("POST /api/newsletter", () => {
   });
 
   it("skips the Slack ping when no webhook is configured", async () => {
-    vi.stubEnv("BUTTONDOWN_API_KEY", "bd-key");
+    vi.stubEnv("RESEND_API_KEY", "re-key");
     vi.stubEnv("SLACK_WEBHOOK_URL", "");
-    const fetchMock = vi.fn().mockResolvedValue(buttondownResponse(201));
+    const fetchMock = vi.fn().mockResolvedValue(resendResponse(201));
     vi.stubGlobal("fetch", fetchMock);
 
     const res = await POST(subscribeRequest({ email: "quiet@example.com" }));
@@ -76,14 +77,14 @@ describe("POST /api/newsletter", () => {
     expect(fetchMock).toHaveBeenCalledTimes(1);
   });
 
-  it("treats 409 and 'already subscribed' 400s as success", async () => {
-    vi.stubEnv("BUTTONDOWN_API_KEY", "bd-key");
+  it("treats 409 and 'already exists' errors as success", async () => {
+    vi.stubEnv("RESEND_API_KEY", "re-key");
     vi.stubGlobal(
       "fetch",
       vi
         .fn()
-        .mockResolvedValueOnce(buttondownResponse(409))
-        .mockResolvedValueOnce(buttondownResponse(400, async () => ({ detail: "This email is Already Subscribed." }))),
+        .mockResolvedValueOnce(resendResponse(409))
+        .mockResolvedValueOnce(resendResponse(400, async () => ({ message: "Contact Already Exists." }))),
     );
 
     for (let i = 0; i < 2; i++) {
@@ -93,16 +94,16 @@ describe("POST /api/newsletter", () => {
     }
   });
 
-  it("passes through other errors with their detail or a fallback message", async () => {
-    vi.stubEnv("BUTTONDOWN_API_KEY", "bd-key");
+  it("passes through other errors with their message or a fallback", async () => {
+    vi.stubEnv("RESEND_API_KEY", "re-key");
     vi.stubGlobal(
       "fetch",
       vi
         .fn()
-        .mockResolvedValueOnce(buttondownResponse(400, async () => ({ detail: "Email is invalid" })))
-        .mockResolvedValueOnce(buttondownResponse(400, async () => ({ detail: { code: 1 } })))
-        .mockResolvedValueOnce(buttondownResponse(502, async () => { throw new Error("not json"); }))
-        .mockResolvedValueOnce(buttondownResponse(500, async () => null)),
+        .mockResolvedValueOnce(resendResponse(400, async () => ({ message: "Email is invalid" })))
+        .mockResolvedValueOnce(resendResponse(400, async () => ({ message: { code: 1 } })))
+        .mockResolvedValueOnce(resendResponse(502, async () => { throw new Error("not json"); }))
+        .mockResolvedValueOnce(resendResponse(500, async () => null)),
     );
 
     const results = [];

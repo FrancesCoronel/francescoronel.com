@@ -103,6 +103,9 @@
 
   --color-accent: #ca2e55;
   --color-accent-dark: #9e2b25;
+  /* Raspberry tint for dark mode — horchata-600+ all fail AA on navy surfaces.
+     #e7a7b7 hits 4.7:1 on navy-700, 5.7:1 on navy-800, 6.7:1 on navy-900, 8.3:1 on navy-950 */
+  --color-accent-light: #e7a7b7;
 
   /* Typography — Latina Essential for everything */
   --font-latina: "Latina Essential", "Latina Essential Fallback", sans-serif;
@@ -158,6 +161,11 @@ input, textarea, select {
   --tw-prose-body: var(--foreground);
   --tw-prose-headings: var(--foreground);
   --tw-prose-links: var(--color-horchata-700);
+}
+
+/* dark:prose-invert can't override the link color above, so set it here */
+.dark .prose {
+  --tw-prose-links: var(--color-accent-light);
 }
 
 .prose a {
