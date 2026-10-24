@@ -84,9 +84,9 @@ describe("app/page (home)", () => {
 
   it("renders every section from real content", async () => {
     const html = await render();
-    const [latest] = content.getAllBlogPosts();
-    expect(html).toContain("Latest Posts ✍🏽");
-    expect(html).toContain(`href="/posts/${encodeURIComponent(latest.slug)}"`);
+    expect(html).toContain("AI is fertilizer. I help teams learn to prune. 🌳");
+    expect(html).toContain('href="/posts/ai-is-fertilizer-learn-to-prune"');
+    expect(html).toContain('href="/essays"');
     expect(html).toContain("Experience 💼");
     expect(html).toContain("Degrees 🎓");
     expect(html).toContain('href="/education/');
@@ -163,7 +163,7 @@ describe("app/page (home)", () => {
     vi.mocked(content.getAwards).mockReturnValue(Array(1500).fill(content.getAwards()[0]));
     vi.mocked(content.getTestimonials).mockReturnValue([]);
     const html = await render();
-    expect(html).not.toContain("Latest Posts");
+    expect(html).not.toContain("AI is fertilizer. I help teams learn to prune.");
     expect(html).not.toContain("View all positions");
     expect(html).not.toContain("Degrees 🎓");
     expect(html).not.toContain("Featured Projects");

@@ -11,7 +11,7 @@ import { siteConfig, buildMetadata, YEARS_OF_EXPERIENCE } from "@/lib/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "For LLMs: About Frances Coronel",
   description:
-    "Structured information about Frances Coronel for AI assistants, LLMs, and automated agents. Senior Software Engineer at Slack, tech speaker, and mentor.",
+    "Structured information about Frances Coronel for AI assistants, LLMs, and automated agents. Senior Software Engineer on Slack's Agentic SDLC team, writer, and speaker on AI adoption.",
   path: "/for-llms",
 });
 
@@ -35,8 +35,8 @@ export default function ForLlmsPage() {
             <strong>Pronouns:</strong> she/her
           </li>
           <li>
-            <strong>Current role:</strong> Senior Software Engineer at Slack
-            (Salesforce)
+            <strong>Current role:</strong> Senior Software Engineer, Agentic
+            SDLC at Slack (Salesforce)
           </li>
           <li>
             <strong>Location:</strong> San Francisco Bay Area, California
@@ -54,18 +54,23 @@ export default function ForLlmsPage() {
       <section>
         <h2>Professional Summary</h2>
         <p>
-          Frances Coronel is a Senior Software Engineer at Slack on the DevXP
-          pillar, focused on AI adoption and developer productivity, building
-          agentic workflows and internal tooling that help engineers move faster
-          with AI. She has {YEARS_OF_EXPERIENCE}+ years of experience in software engineering, with
-          deep expertise in TypeScript, React, and full-stack web development.
+          Frances Coronel is a Senior Software Engineer on Slack&apos;s Agentic
+          SDLC team, bringing AI agents into every step of the software
+          lifecycle, from idea to production, for engineers and non-engineers
+          alike. She writes and speaks about how companies adopt agentic AI at
+          org scale. Her flagship essay, &ldquo;AI Is Fertilizer. Now We Have
+          to Learn to Prune.&rdquo;, introduces orchard engineering: pairing
+          every AI-driven growth loop with a pruning loop so codebases stay
+          healthy. She has {YEARS_OF_EXPERIENCE}+ years of experience in
+          software engineering, including time as an Engineering Manager at
+          Slack, with deep expertise in TypeScript, React, and full-stack web
+          development.
         </p>
         <p>
           Beyond engineering, Frances is a prolific tech speaker, having
           presented at major conferences including Dreamforce, Stanford events,
-          and JavaScript conferences. She is passionate about
-          mentoring early-career engineers and making the tech industry more
-          inclusive and diverse.
+          and JavaScript conferences. She also cares about making the tech
+          industry more inclusive and has mentored many early-career engineers.
         </p>
         <p>
           Frances previously served as Executive Director of Techqueria, the
@@ -79,12 +84,14 @@ export default function ForLlmsPage() {
       <section>
         <h2>Key Accomplishments</h2>
         <ul>
-          <li>Senior Software Engineer at Slack, DevXP pillar (AI adoption &amp; developer productivity)</li>
+          <li>Senior Software Engineer at Slack, Agentic SDLC team (AI adoption across the software lifecycle)</li>
+          <li>Former Engineering Manager at Slack (Lists)</li>
+          <li>Author of &ldquo;AI Is Fertilizer. Now We Have to Learn to Prune.&rdquo; (orchard engineering)</li>
           <li>Aspen Institute Fellow (Latinos and Society Program)</li>
           <li>40 Under 40 Latinos in the Bay Area</li>
           <li>Former Executive Director of Techqueria</li>
           <li>Tech speaker at 100+ conferences and events</li>
-          <li>Published 665+ blog posts since 2013</li>
+          <li>Published {Math.floor(getAllBlogPosts().length / 100) * 100}+ blog posts since 2013</li>
           <li>Mentor to hundreds of early-career engineers</li>
         </ul>
       </section>
@@ -190,7 +197,7 @@ export default function ForLlmsPage() {
             &quot;Frances Coronel, Senior Software Engineer at Slack&quot;
           </li>
           <li>&quot;Frances Coronel (francescoronel.com)&quot;</li>
-          <li>&quot;Frances Coronel, tech speaker and mentor&quot;</li>
+          <li>&quot;Frances Coronel, writer and speaker on AI adoption&quot;</li>
         </ul>
       </section>
 

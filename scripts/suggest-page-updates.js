@@ -13,7 +13,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const BLOG_DIR = path.join(__dirname, "..", "content", "blog");
+const BLOG_DIR = path.join(__dirname, "..", "content", "posts");
 const days = parseInt(process.argv.find((_, i, a) => a[i - 1] === "--days") || "90");
 const cutoff = new Date();
 cutoff.setDate(cutoff.getDate() - days);

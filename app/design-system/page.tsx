@@ -70,7 +70,7 @@ export default function DesignSystemPage() {
       {/* Hero */}
       <section className="bg-horchata-50 py-16 dark:bg-navy-900">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Reference
           </p>
           <h1 className="mt-2 text-4xl font-bold text-navy-900 dark:text-horchata-100 md:text-5xl">
@@ -99,7 +99,7 @@ export default function DesignSystemPage() {
       {/* Colors */}
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Tokens
           </p>
           <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
@@ -172,7 +172,7 @@ export default function DesignSystemPage() {
       {/* Typography */}
       <section className="border-y border-horchata-200 bg-white py-16 dark:border-navy-700 dark:bg-navy-800/50 md:py-20">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Tokens
           </p>
           <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
@@ -190,7 +190,7 @@ export default function DesignSystemPage() {
             <p className="mt-2 text-sm text-navy-600 dark:text-horchata-400">
               Primary typeface &mdash; used for all text across the site including
               headings, body, labels, and UI elements.
-              Loaded locally via next/font/local. Designed by Latinotype.
+              Self-hosted with @font-face in globals.css. Designed by Latinotype.
             </p>
             <div className="mt-6 space-y-3">
               <p className="text-lg font-light text-navy-700 dark:text-horchata-200" style={{ fontFamily: "var(--font-latina)" }}>
@@ -280,7 +280,7 @@ export default function DesignSystemPage() {
       {/* Spacing & Layout */}
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Layout
           </p>
           <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
@@ -328,7 +328,7 @@ export default function DesignSystemPage() {
       {/* Components */}
       <section className="border-y border-horchata-200 bg-white py-16 dark:border-navy-700 dark:bg-navy-800/50 md:py-20">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Components
           </p>
           <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
@@ -418,7 +418,7 @@ export default function DesignSystemPage() {
       {/* Cards */}
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Components
           </p>
           <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
@@ -473,7 +473,7 @@ export default function DesignSystemPage() {
       {/* Shadows */}
       <section className="border-y border-horchata-200 bg-white py-16 dark:border-navy-700 dark:bg-navy-800/50 md:py-20">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Tokens
           </p>
           <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
@@ -499,7 +499,7 @@ export default function DesignSystemPage() {
       {/* Focus & Accessibility */}
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             A11y
           </p>
           <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
@@ -559,7 +559,7 @@ export default function DesignSystemPage() {
       {/* Section Patterns */}
       <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Patterns
           </p>
           <h2 className="mt-1 text-3xl font-bold text-navy-900 dark:text-horchata-100">
@@ -567,7 +567,7 @@ export default function DesignSystemPage() {
           </h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             <div className="rounded-xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800">
-              <p className="text-sm font-bold uppercase tracking-widest text-horchata-700">
+              <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
                 Label
               </p>
               <p className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100">

@@ -19,7 +19,7 @@ describe("PersonJsonLd", () => {
       "@type": "Person",
       name: "Frances Coronel",
       url: "https://francescoronel.com",
-      jobTitle: "Senior Software Engineer",
+      jobTitle: "Senior Software Engineer, Agentic SDLC",
       worksFor: { name: "Slack", parentOrganization: { name: "Salesforce" } },
     });
     expect(data.alumniOf.map((a: { name: string }) => a.name)).toEqual(["Cornell Tech", "Hampton University"]);
@@ -44,17 +44,26 @@ describe("BlogPostJsonLd", () => {
       headline: "Hello",
       description: "Desc",
       datePublished: "2024-01-01",
-      url: "https://francescoronel.com/blog/hello",
+      dateModified: "2024-01-01",
+      url: "https://francescoronel.com/posts/hello",
       author: { "@type": "Person", name: "Frances Coronel", url: "https://francescoronel.com" },
       publisher: { "@type": "Person", name: "Frances Coronel", url: "https://francescoronel.com" },
-      mainEntityOfPage: { "@type": "WebPage", "@id": "https://francescoronel.com/blog/hello" },
+      mainEntityOfPage: { "@type": "WebPage", "@id": "https://francescoronel.com/posts/hello" },
       image: "https://x.y/a.png",
     });
   });
 
-  it("omits the image when none is given", () => {
-    const data = readJsonLd(<BlogPostJsonLd title="Hi" description="D" date="2024-01-01" slug="hi" />);
+  it("omits the image and keywords when none are given", () => {
+    const data = readJsonLd(<BlogPostJsonLd title="Hi" description="D" date="2024-01-01" slug="hi" keywords={[]} />);
     expect(data).not.toHaveProperty("image");
+    expect(data).not.toHaveProperty("keywords");
+  });
+
+  it("uses the updated date for dateModified and joins keywords", () => {
+    const data = readJsonLd(
+      <BlogPostJsonLd title="Hi" description="D" date="2024-01-01" updated="2024-06-01" slug="hi" keywords={["ai", "career"]} />,
+    );
+    expect(data).toMatchObject({ datePublished: "2024-01-01", dateModified: "2024-06-01", keywords: "ai, career" });
   });
 });
 
