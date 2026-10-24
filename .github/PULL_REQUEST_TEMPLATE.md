@@ -11,6 +11,8 @@ Closes #
 ## Testing
 
 - [ ] `npm run lint` passes
+- [ ] `npm run typecheck` passes
+- [ ] `npm run test:coverage` passes
 - [ ] `npm run build` passes
 - [ ] Tested in browser (dev server or production build)
 - [ ] No regressions in Lighthouse scores (if touching layout or performance-critical code)
