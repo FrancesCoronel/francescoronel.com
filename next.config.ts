@@ -1,5 +1,5 @@
 import type { NextConfig } from "next";
-import { withSentryConfig } from "@sentry/nextjs";
+import { withSentryConfig } from "@sentry/nextjs/config";
 import dedupRedirects from "./scripts/dedup-redirects.json";
 
 const securityHeaders = [
@@ -475,5 +475,5 @@ export default withSentryConfig(nextConfig, {
   // Upload source maps to Sentry for readable stack traces in production
   widenClientFileUpload: true,
   // Automatically tree-shake Sentry logger statements
-  disableLogger: true,
+  bundleSizeOptimizations: { excludeDebugStatements: true },
 });
