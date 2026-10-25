@@ -91,6 +91,16 @@ Zero client-side content payload — works great even on 3G
 - RSS feed aliases, old page paths
 - 242 dedup redirects from `scripts/dedup-redirects.json`
 
+### Error Monitoring 🚨
+
+Sentry org `fvcproductions`, project `fvcproductions`. Events are tagged with the Vercel environment (`production`, `preview`, `development`) and the commit SHA as the release, and every alert below only looks at `production`:
+- **New issues**: an error the site has never thrown before
+- **Regression in production**: a resolved issue comes back, or an archived one reappears
+- **Issue spiking in production**: one issue passes 25 events in an hour
+- **Site down or error surge**: the homepage uptime check fails twice in a row (checked every 5 minutes), or the whole site passes 50 errors in an hour
+
+Noise from browser extensions and link scanners is filtered in `sentry.client.config.ts` (`ignoreErrors`, `denyUrls`). Add to that list rather than muting alerts.
+
 ### SEO & AI Discoverability 🤖
 
 - `generateMetadata()` on every page
