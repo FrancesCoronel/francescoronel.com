@@ -103,3 +103,63 @@ export function slugify(str: string): string {
     .replace(/[\s_]+/g, "-")
     .replace(/^-+|-+$/g, "");
 }
+
+// Words that plain title casing gets wrong (acronyms and brand names), keyed by lowercase slug word
+export const LABEL_OVERRIDES: Record<string, string> = {
+  ai: "AI",
+  api: "API",
+  apis: "APIs",
+  aws: "AWS",
+  cli: "CLI",
+  css: "CSS",
+  erg: "ERG",
+  github: "GitHub",
+  gitlab: "GitLab",
+  graphql: "GraphQL",
+  html: "HTML",
+  https: "HTTPS",
+  ios: "iOS",
+  javascript: "JavaScript",
+  json: "JSON",
+  linkedin: "LinkedIn",
+  llm: "LLM",
+  llms: "LLMs",
+  macos: "macOS",
+  mdx: "MDX",
+  nextjs: "Next.js",
+  nodejs: "Node.js",
+  npm: "npm",
+  openai: "OpenAI",
+  php: "PHP",
+  qa: "QA",
+  sdk: "SDK",
+  seo: "SEO",
+  sql: "SQL",
+  stem: "STEM",
+  typescript: "TypeScript",
+  ui: "UI",
+  url: "URL",
+  ux: "UX",
+  wordpress: "WordPress",
+  youtube: "YouTube",
+};
+
+// Short words kept lowercase unless they start the label
+const MINOR_WORDS = new Set(["a", "an", "and", "as", "at", "by", "for", "in", "of", "on", "or", "the", "to", "vs"]);
+
+/**
+ * Turn a slug like "ai-agents" into a display label like "AI Agents",
+ * respecting LABEL_OVERRIDES for acronyms and brand names.
+ */
+export function formatSlugLabel(slug: string): string {
+  return slug
+    .split(/[-_\s]+/)
+    .filter(Boolean)
+    .map((word, i) => {
+      const lower = word.toLowerCase();
+      if (LABEL_OVERRIDES[lower]) return LABEL_OVERRIDES[lower];
+      if (i > 0 && MINOR_WORDS.has(lower)) return lower;
+      return lower.charAt(0).toUpperCase() + lower.slice(1);
+    })
+    .join(" ");
+}

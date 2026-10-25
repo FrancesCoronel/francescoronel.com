@@ -13,6 +13,9 @@
       "Enabling engineers to work through powerful, semi-autonomous coding agents with tools to understand, iterate, test, and verify their work",
       "Democratizing agentic development beyond engineering: empowering PMs, designers, TPMs, and all employees to automate work and build prototypes",
       "Driving AI adoption and enablement across the organization, reducing the time from idea to working prototype",
+      "Led Tidepool Day, a full day of AI tooling with Anthropic for 350+ people at Salesforce Tower, run with 25 volunteers",
+      "Designing the UI/UX of how agents show up and work inside Slack",
+      "Working on the model gateway, token cost optimization, and new model rollouts",
       "Establishing best practices, guardrails, and training for agentic development across web, mobile, and backend platforms",
       "Collaborating closely with the DevXP AI enablement team"
     ],

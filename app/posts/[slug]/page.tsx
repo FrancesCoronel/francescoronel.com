@@ -12,9 +12,10 @@ import {
   getAllPosts,
   getOrganizationBySlug,
   getCategoryMaps,
+  getTagName,
 } from "@/lib/content";
 import { getRepoData } from "@/lib/github";
-import { formatDate, formatDateRange, canOptimize } from "@/lib/utils";
+import { formatDate, formatDateRange, canOptimize, formatSlugLabel } from "@/lib/utils";
 import { sanitizeMdxContent } from "@/lib/sanitize-mdx";
 import { mdxComponents } from "@/components/mdx/mdx-components";
 import { buildMetadata, siteConfig } from "@/lib/metadata";
@@ -488,7 +489,7 @@ export default async function PostPage({ params }: PageProps) {
         updated={post.updated}
         slug={post.slug}
         image={imgSrc ? new URL(imgSrc, siteConfig.siteUrl).toString() : undefined}
-        keywords={[...post.categories, ...post.tags]}
+        keywords={[...post.categories.map(formatSlugLabel), ...post.tags.map(getTagName)]}
       />
       <BreadcrumbJsonLd
         items={[
@@ -532,7 +533,7 @@ export default async function PostPage({ params }: PageProps) {
                   href={`/categories/${cat}`}
                   className="relative z-20 flex cursor-pointer items-center gap-1.5 rounded-full bg-horchata-100 px-3 py-1 text-xs font-medium text-horchata-800 transition-colors hover:bg-horchata-200 dark:bg-navy-700 dark:text-white/70 dark:hover:bg-navy-600 dark:hover:text-white"
                 >
-                  {cat.charAt(0).toUpperCase() + cat.slice(1)}
+                  {formatSlugLabel(cat)}
                   {categoryImages[cat] && (
                     <img
                       src={categoryImages[cat]}
@@ -584,7 +585,7 @@ export default async function PostPage({ params }: PageProps) {
                   href={`/tags/${tag}`}
                   className="inline-flex items-center rounded-full bg-horchata-100 px-2.5 py-0.5 text-xs font-medium text-navy-700 transition-colors hover:bg-horchata-500 hover:text-navy-900 dark:bg-navy-600 dark:text-white dark:hover:bg-navy-500 dark:hover:text-white"
                 >
-                  #{tag.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")}
+                  #{getTagName(tag)}
                 </Link>
               ))}
             </div>

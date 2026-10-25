@@ -8,17 +8,58 @@
       "Bash(npm run build)",
       "Bash(npx tsc --noEmit)",
       "Bash(npm run typecheck)",
-      "Bash(npm run test:coverage)"
+      "Bash(npm run test:coverage)",
+      "Bash(npm run test:storybook)",
+      "Bash(npm run test:e2e:smoke)",
+      "Bash(npm run test:e2e:components)",
+      "Bash(npm run start)",
+      "Bash(npx playwright install chromium)"
+    ],
+    "deny": [
+      "Read(./.env.local)",
+      "Read(./.env.*.local)",
+      "Edit(./package-lock.json)",
+      "Edit(./content/claude-config/**)",
+      "Edit(./scripts/migrations/**)",
+      "Bash(node scripts/migrations/*)",
+      "Bash(npx tsx scripts/migrations/*)",
+      "Bash(npm run export:webflow*)",
+      "Bash(npm run import:wordpress*)",
+      "Bash(npm run migrate:images*)",
+      "Bash(git push --force*)",
+      "Bash(git push -f*)"
     ]
   },
   "hooks": {
     "SessionStart": [
       {
-        "matcher": "startup",
+        "matcher": "startup|resume",
         "hooks": [
           {
             "type": "command",
             "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/session-start.sh"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/guard.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/lint-edited.sh"
           }
         ]
       }

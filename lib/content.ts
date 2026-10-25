@@ -16,6 +16,7 @@ import type {
   Project,
   Post,
 } from "./types";
+import { formatSlugLabel } from "./utils";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
 const BLOG_DIR = path.join(CONTENT_DIR, "posts");
@@ -257,6 +258,11 @@ export function getCategoryBySlug(slug: string): Category | undefined {
 
 export function getTagBySlug(slug: string): Tag | undefined {
   return getTags().find((t) => t.slug === slug);
+}
+
+/** Display name for a tag slug: the name in tags.json, else the slug title-cased with acronym overrides */
+export function getTagName(slug: string): string {
+  return loadJSON<Tag>("tags.json").find((t) => t.slug === slug)?.name ?? formatSlugLabel(slug);
 }
 
 export function getTestimonialBySlug(
