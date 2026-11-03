@@ -16,6 +16,7 @@ describe("app/posts/page", () => {
     expect(html).toContain("newsletter-cta.webp");
     const [newest] = getAllPosts();
     expect(html).toContain(`href="/posts/${encodeURIComponent(newest.slug)}"`);
-    expect(html).toContain(newest.title.replace(/&/g, "&amp;"));
+    // Escape the title the same way React does (&, ', ", <, >)
+    expect(html).toContain(renderToStaticMarkup(<>{newest.title}</>));
   });
 });
