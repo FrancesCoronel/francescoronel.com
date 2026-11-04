@@ -9,7 +9,10 @@ on:
   push:
     branches-ignore: [main, master]
     paths:
+      # Posts too, so an image pushed before the post that references it
+      # still gets moved on the later push
       - "public/images/**"
+      - "content/posts/**"
 
 concurrency:
   group: upload-post-images-${{ github.ref }}
