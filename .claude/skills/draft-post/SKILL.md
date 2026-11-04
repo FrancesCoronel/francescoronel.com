@@ -48,7 +48,7 @@ Turn an artifact URL, notes, outline or transcript into a complete, publish-read
    ```
 
    Optional fields: `crosspost: false` skips dev.to, Hashnode and Buffer; `social: "..."` sets custom intro text for the Buffer drafts. Leave `updated` out of a new post.
-8. **Remind Frances** to add a `featuredImage` (upload to Vercel Blob first; the snippet is in AGENTS.md "Image Hosting").
+8. **Remind Frances** to add a `featuredImage` (upload to Vercel Blob first with the snippet in AGENTS.md "Image Hosting", or commit it under `public/images/<folder>/` and let the upload-post-images workflow move it).
 
 ## Site rules
 
