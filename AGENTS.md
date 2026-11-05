@@ -190,14 +190,14 @@ npm run chromatic        # upload to Chromatic for visual regression
 
 ### Cross-posting setup
 
-Each platform is skipped when its secret isn't set, and one failing doesn't block the others. Set `crosspost: false` in a post's frontmatter to skip it everywhere.
+Each platform is skipped when its secret isn't set, and one failing doesn't block the others. Set `crosspost: false` in a post's frontmatter to skip it everywhere. To retry a post, run the **Cross-post new posts** workflow by hand (Actions → Run workflow) with the post's path. Image paths like `/images/...` are turned into full site URLs before sending (`scripts/site-url.js`).
 
 **dev.to**
 - Secret: `DEVTO_API_KEY` (dev.to → Settings → Extensions → DEV Community API Keys)
 - Script: `scripts/crosspost-devto.js` — strips MDX syntax, sets canonical URL, maps tags
 
 **Hashnode**
-- Secret: `HASHNODE_TOKEN` (hashnode.com/settings/developer); optional variable `HASHNODE_PUBLICATION_ID` (defaults to your first publication)
+- Secret: `HASHNODE_TOKEN` (hashnode.com/settings/developer); optional variables `HASHNODE_PUBLICATION_ID` (defaults to your first publication) and `HASHNODE_API_URL` (defaults to `https://gql-beta.hashnode.com/`, the endpoint that replaced the retired `gql.hashnode.com`; Hashnode may require a Pro plan for API access)
 - Script: `scripts/crosspost-hashnode.js` — sets `originalArticleURL` to the canonical post URL
 
 **LinkedIn, Bluesky, Threads (via Buffer)**

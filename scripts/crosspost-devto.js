@@ -21,6 +21,7 @@
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
+const { absoluteUrl, absolutizeMarkdown } = require("./site-url");
 
 const SITE_URL = "https://www.francescoronel.com";
 const DEVTO_API = "https://dev.to/api/articles";
@@ -46,7 +47,7 @@ const TAG_MAP = {
 };
 
 function mdxToMarkdown(content) {
-  return content
+  const markdown = content
     // Remove import statements
     .replace(/^import\s+.*from\s+['"][^'"]+['"]\s*;?\s*$/gm, "")
     // Remove export statements
@@ -64,6 +65,8 @@ function mdxToMarkdown(content) {
     // Clean up multiple blank lines left by removals
     .replace(/\n{3,}/g, "\n\n")
     .trim();
+  // Site paths like /images/a.jpeg don't load off-site
+  return absolutizeMarkdown(markdown);
 }
 
 function buildDevToTags(categories = [], tags = []) {
@@ -110,7 +113,7 @@ async function crosspost(filePath) {
       canonical_url: canonicalUrl,
       description: excerpt || "",
       tags: devtoTags,
-      ...(featuredImage ? { main_image: featuredImage } : {}),
+      ...(featuredImage ? { main_image: absoluteUrl(featuredImage) } : {}),
     },
   };
 

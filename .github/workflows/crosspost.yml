@@ -5,6 +5,11 @@ on:
     branches: [main]
     paths:
       - "content/posts/**/*.mdx"
+  workflow_dispatch:
+    inputs:
+      file:
+        description: "Post to cross-post again, e.g. content/posts/my-post.mdx"
+        required: true
 
 jobs:
   crosspost:
@@ -28,7 +33,13 @@ jobs:
 
       - name: Detect newly added blog posts
         id: new-posts
+        env:
+          MANUAL_FILE: ${{ inputs.file }}
         run: |
+          if [ -n "$MANUAL_FILE" ]; then
+            echo "files=$MANUAL_FILE" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           # Only pick up files that were ADDED (A), not modified (M)
           NEW=$(git diff --name-status HEAD~1 HEAD -- 'content/posts/*.mdx' \
             | awk '$1 == "A" { print $2 }' \
@@ -41,10 +52,11 @@ jobs:
         if: steps.new-posts.outputs.files != ''
         continue-on-error: true
         env:
+          FILES: ${{ steps.new-posts.outputs.files }}
           DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
         run: |
           if [ -z "$DEVTO_API_KEY" ]; then echo "DEVTO_API_KEY not set, skipping"; exit 0; fi
-          for file in ${{ steps.new-posts.outputs.files }}; do
+          for file in $FILES; do
             echo "→ Processing $file"
             node scripts/crosspost-devto.js "$file"
           done
@@ -53,11 +65,12 @@ jobs:
         if: steps.new-posts.outputs.files != ''
         continue-on-error: true
         env:
+          FILES: ${{ steps.new-posts.outputs.files }}
           HASHNODE_TOKEN: ${{ secrets.HASHNODE_TOKEN }}
           HASHNODE_PUBLICATION_ID: ${{ vars.HASHNODE_PUBLICATION_ID }}
         run: |
           if [ -z "$HASHNODE_TOKEN" ]; then echo "HASHNODE_TOKEN not set, skipping"; exit 0; fi
-          for file in ${{ steps.new-posts.outputs.files }}; do
+          for file in $FILES; do
             echo "→ Processing $file"
             node scripts/crosspost-hashnode.js "$file"
           done
@@ -66,12 +79,13 @@ jobs:
         if: steps.new-posts.outputs.files != ''
         continue-on-error: true
         env:
+          FILES: ${{ steps.new-posts.outputs.files }}
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
           BUFFER_SERVICES: ${{ vars.BUFFER_SERVICES }}
           BUFFER_MODE: ${{ vars.BUFFER_MODE }}
         run: |
           if [ -z "$BUFFER_API_KEY" ]; then echo "BUFFER_API_KEY not set, skipping"; exit 0; fi
-          for file in ${{ steps.new-posts.outputs.files }}; do
+          for file in $FILES; do
             echo "→ Processing $file"
             node scripts/crosspost-social.js "$file"
           done
@@ -80,9 +94,10 @@ jobs:
         if: steps.new-posts.outputs.files != ''
         continue-on-error: true
         env:
+          FILES: ${{ steps.new-posts.outputs.files }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
           if [ -z "$SLACK_WEBHOOK_URL" ]; then echo "SLACK_WEBHOOK_URL not set, skipping"; exit 0; fi
-          for file in ${{ steps.new-posts.outputs.files }}; do
+          for file in $FILES; do
             node scripts/notify-slack.js "$file"
           done

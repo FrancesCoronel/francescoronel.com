@@ -9,10 +9,11 @@
  *   HASHNODE_TOKEN          — Personal access token (hashnode.com/settings/developer)
  *
  * Optional env vars:
- *   HASHNODE_PUBLICATION_ID — Publication to post to (defaults to your first one)
+ *   HASHNODE_PUBLICATION_ID: Publication to post to (defaults to your first one)
+ *   HASHNODE_API_URL: GraphQL endpoint (defaults to https://gql-beta.hashnode.com/)
  *
  * The script:
- *   1. Reads frontmatter (title, excerpt, tags, featuredImage)
+ *   1. Reads frontmatter (title, excerpt, tags)
  *   2. Strips MDX-specific syntax for plain Markdown
  *   3. Publishes to Hashnode with originalArticleURL pointing back to francescoronel.com
  *   4. Prints the published URL on success
@@ -24,7 +25,10 @@ const matter = require("gray-matter");
 const { mdxToMarkdown } = require("./crosspost-devto");
 
 const SITE_URL = "https://www.francescoronel.com";
-const HASHNODE_API = "https://gql.hashnode.com/";
+// gql.hashnode.com was retired and now redirects to an HTML announcement page.
+// The dashboard lists the current endpoint under "Your GraphQL API endpoint";
+// override it with HASHNODE_API_URL if it moves again.
+const HASHNODE_API = process.env.HASHNODE_API_URL || "https://gql-beta.hashnode.com/";
 
 async function gql(token, query, variables = {}) {
   const res = await fetch(HASHNODE_API, {
@@ -38,7 +42,11 @@ async function gql(token, query, variables = {}) {
   try {
     data = JSON.parse(body);
   } catch {
-    throw new Error(`Hashnode ${res.status}: ${body.slice(0, 200)}`);
+    throw new Error(
+      `Hashnode ${res.status} from ${res.url || HASHNODE_API} was not JSON. The API endpoint may have moved ` +
+        `(set HASHNODE_API_URL) or the publication may need a Hashnode Pro plan for API access. ` +
+        `Response starts: ${body.slice(0, 120)}`
+    );
   }
   if (!res.ok || data.errors) {
     throw new Error(`Hashnode ${res.status}: ${JSON.stringify(data.errors || data)}`);
@@ -71,7 +79,7 @@ async function crosspost(filePath) {
   }
 
   const { data: frontmatter, content } = matter(fs.readFileSync(filePath, "utf8"));
-  const { title, excerpt, slug, categories = [], tags = [], featuredImage, crosspost: enabled } = frontmatter;
+  const { title, excerpt, slug, categories = [], tags = [], crosspost: enabled } = frontmatter;
 
   if (enabled === false) {
     console.log(`Skipping ${filePath}: crosspost is false in frontmatter.`);
@@ -102,7 +110,8 @@ async function crosspost(filePath) {
     originalArticleURL: canonicalUrl,
     tags: buildTags(categories, tags),
     ...(excerpt ? { subtitle: excerpt.slice(0, 150) } : {}),
-    ...(featuredImage ? { coverImageOptions: { coverImageURL: featuredImage } } : {}),
+    // No cover image: coverImageOptions left PublishPostInput in Hashnode's current
+    // schema. Inline images still come through with full URLs.
   };
 
   console.log(`Publishing "${title}" to Hashnode...`);
