@@ -246,6 +246,8 @@ Colors follow a **teal/charcoal + linen/raspberry** palette defined in `app/glob
 
 All new images must be uploaded to Vercel Blob storage before use. Never reference external image CDNs (AWS S3, Webflow CDN, imgix, etc.) directly.
 
+**No Blob token (cloud or phone sessions):** commit the image under `public/images/<folder>/` and reference it as `/images/<folder>/<file>` in the post. On a branch push, `.github/workflows/upload-post-images.yml` runs `scripts/upload-post-images.js`, which uploads new images that posts reference to Blob, swaps in the Blob URLs and removes the local copies. It needs the `BLOB_READ_WRITE_TOKEN` repo secret. Pull before editing again, since the workflow pushes a commit to the branch.
+
 **Store ID:** `store_GZQhCZL3EhDy3Foa`
 **Public base URL:** `https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/`
 

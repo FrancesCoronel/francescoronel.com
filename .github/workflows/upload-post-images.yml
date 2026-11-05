@@ -1,0 +1,64 @@
+name: Upload post images to Blob
+
+# Lets a post's images be committed under public/images/ from anywhere
+# (including Claude Code on a phone, which can't reach Vercel Blob). On a
+# branch push, new images that posts reference are uploaded to Vercel Blob,
+# the posts are pointed at the Blob URLs, and the local copies are removed.
+
+on:
+  push:
+    branches-ignore: [main, master]
+    paths:
+      # Posts too, so an image pushed before the post that references it
+      # still gets moved on the later push
+      - "public/images/**"
+      - "content/posts/**"
+
+concurrency:
+  group: upload-post-images-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  upload:
+    name: Move new post images to Vercel Blob
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1  # v7.1.0
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Upload images and update posts
+        env:
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+        run: |
+          if [ -z "$BLOB_READ_WRITE_TOKEN" ]; then
+            echo "::warning::BLOB_READ_WRITE_TOKEN secret isn't set, so images stay in public/images/."
+            exit 0
+          fi
+          node scripts/upload-post-images.js --base origin/main
+
+      - name: Commit the changes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          if git diff --quiet HEAD; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "content: move post images to Vercel Blob"
+          git push "https://x-access-token:${GH_TOKEN}@github.com/${REPO}.git" "HEAD:refs/heads/${BRANCH}"
