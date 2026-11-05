@@ -190,7 +190,7 @@ npm run chromatic        # upload to Chromatic for visual regression
 
 ### Cross-posting setup
 
-Each platform is skipped when its secret isn't set, and one failing doesn't block the others. Set `crosspost: false` in a post's frontmatter to skip it everywhere. To retry a post, run the **Cross-post new posts** workflow by hand (Actions → Run workflow) with the post's path. Image paths like `/images/...` are turned into full site URLs before sending (`scripts/site-url.js`).
+Each platform is skipped when its secret isn't set, and one failing doesn't block the others. Set `crosspost: false` in a post's frontmatter to skip it everywhere. To retry a post, run the **Cross-post new posts** workflow by hand (Actions → Run workflow) with the post's path, and pick only the platform that failed (the others would get a duplicate). Image paths like `/images/...` are turned into full site URLs before sending (`scripts/site-url.js`).
 
 **dev.to**
 - Secret: `DEVTO_API_KEY` (dev.to → Settings → Extensions → DEV Community API Keys)

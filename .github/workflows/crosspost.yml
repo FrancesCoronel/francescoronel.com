@@ -10,6 +10,11 @@ on:
       file:
         description: "Post to cross-post again, e.g. content/posts/my-post.mdx"
         required: true
+      platform:
+        description: "Where to send it. Pick only the ones that failed, since the others would get a duplicate."
+        type: choice
+        required: true
+        options: [devto, hashnode, buffer, slack, all]
 
 jobs:
   crosspost:
@@ -49,7 +54,7 @@ jobs:
       # Each platform is skipped when its secret isn't set, and one failing doesn't block the others
 
       - name: Cross-post to dev.to
-        if: steps.new-posts.outputs.files != ''
+        if: steps.new-posts.outputs.files != '' && (github.event_name != 'workflow_dispatch' || inputs.platform == 'devto' || inputs.platform == 'all')
         continue-on-error: true
         env:
           FILES: ${{ steps.new-posts.outputs.files }}
@@ -62,12 +67,13 @@ jobs:
           done
 
       - name: Cross-post to Hashnode
-        if: steps.new-posts.outputs.files != ''
+        if: steps.new-posts.outputs.files != '' && (github.event_name != 'workflow_dispatch' || inputs.platform == 'hashnode' || inputs.platform == 'all')
         continue-on-error: true
         env:
           FILES: ${{ steps.new-posts.outputs.files }}
           HASHNODE_TOKEN: ${{ secrets.HASHNODE_TOKEN }}
           HASHNODE_PUBLICATION_ID: ${{ vars.HASHNODE_PUBLICATION_ID }}
+          HASHNODE_API_URL: ${{ vars.HASHNODE_API_URL }}
         run: |
           if [ -z "$HASHNODE_TOKEN" ]; then echo "HASHNODE_TOKEN not set, skipping"; exit 0; fi
           for file in $FILES; do
@@ -76,7 +82,7 @@ jobs:
           done
 
       - name: Share on social via Buffer
-        if: steps.new-posts.outputs.files != ''
+        if: steps.new-posts.outputs.files != '' && (github.event_name != 'workflow_dispatch' || inputs.platform == 'buffer' || inputs.platform == 'all')
         continue-on-error: true
         env:
           FILES: ${{ steps.new-posts.outputs.files }}
@@ -91,7 +97,7 @@ jobs:
           done
 
       - name: Remind me in Slack about the manual steps
-        if: steps.new-posts.outputs.files != ''
+        if: steps.new-posts.outputs.files != '' && (github.event_name != 'workflow_dispatch' || inputs.platform == 'slack' || inputs.platform == 'all')
         continue-on-error: true
         env:
           FILES: ${{ steps.new-posts.outputs.files }}
