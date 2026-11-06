@@ -93,7 +93,7 @@ const bioVariants = [
           else confidently use those same tools alongside them. I also work on how agents show
           up in Slack and on the infrastructure underneath, like our model gateway, token costs,
           and new model rollouts. I led Tidepool Day, a full day
-          of AI tooling with Anthropic for 350+ people, and I&apos;m speaking about AI at
+          of AI tooling with Anthropic for 350+ people, and I spoke about AI at
           GitHub Universe. Before that, I led a team as an Engineering Manager on Slack Lists.
         </p>
         <p>
@@ -130,7 +130,7 @@ const bioVariants = [
           else confidently use those same tools alongside them. She also works on how agents
           show up in Slack and on the infrastructure underneath, like the model gateway, token
           costs, and new model rollouts. She led Tidepool Day, a full
-          day of AI tooling with Anthropic for 350+ people, and is speaking about AI at GitHub
+          day of AI tooling with Anthropic for 350+ people, and spoke about AI at GitHub
           Universe. Before that, she led a team as an Engineering Manager on Slack Lists.
         </p>
         <p>
