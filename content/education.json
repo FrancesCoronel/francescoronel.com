@@ -3,12 +3,12 @@
     "institution": "Deep Atlas",
     "slug": "deep-atlas-mli-cohort-21",
     "type": "program",
-    "degree": "Machine Learning Intensive (MLI) — Cohort 21",
+    "degree": "Machine Learning Intensive (MLI) — Cohort 20",
     "field": "AI/ML Engineering",
     "logo": "/images/organizations/deep-atlas.svg",
     "url": "https://www.deepatlas.ai/",
     "startDate": "2026-02-28T00:00:00.000Z",
-    "endDate": "2026-03-05T00:00:00.000Z",
+    "endDate": "2026-03-04T00:00:00.000Z",
     "description": "One-week, full-time immersive AI/ML bootcamp in San Francisco compressing roughly 6 months of learning into 5 days — math foundations, classical ML, deep learning, pretrained models, and modern AI engineering (RAG, agents, evals). Rallied 12 fellow Slack engineers to join the cohort and gave a lightning talk on my AI workflow and tooling.",
     "honors": [
       "Completed 95 hours of coursework in Agentic AI Systems, Machine Learning & AI (Feb 28 – Mar 4, 2026)"
