@@ -73,7 +73,7 @@ A very heavy lecture day, but I learned a lot, especially about the transformer 
 
 ### Day 2: RAG in Practice
 
-I finished the newsletter expert project. Mine was **Substack in Slack**, which applies RAG to analyze my Substack subscriptions. I also volunteered to give the first lightning talk of the week! 🙋🏽‍♀️
+I finished the newsletter expert project. Mine was **Substack in Slack**, which indexes 18+ of my Substack subscriptions and lets me ask questions about them from a Slack agent. Answers come back grounded in the actual posts with citations, streamed into a Block Kit UI, and retrieval is time-aware, so asking about "this week" actually means this week. I also volunteered to give the first lightning talk of the week! 🙋🏽‍♀️
 
 ### Day 3: Agent Orchestration
 
@@ -87,11 +87,19 @@ This was mostly project time, so I kept thinking about what a UI could look like
 
 Project presentations! I demoed Herd (more below 👇🏽), and we wrapped the week with a real group photo plus an AI-generated one that a classmate made from our pictures.
 
+![The Deep Atlas MLI Cohort 20 group photo on Demo Day](/images/blog/deep-atlas/group-photo.jpg)
+
 ---
 
 ## My Lightning Talk
 
 On Day 2, I gave the first lightning talk of the week, on how I turned Claude Code into my engineering co-pilot. I walked the cohort through my personal Claude Code setup and how I use AI in my day-to-day work as a senior engineer at Slack.
+
+The core idea: build a system, not just use a tool. Before, every PR came with 15+ minutes of overhead (context gathering, writing descriptions, chasing conventions). Now that overhead is mostly handled by three layers:
+
+- **CLAUDE.md is the brain**: the project context and conventions Claude reads every session
+- **Skills are the muscle memory**: repeatable workflows I'd otherwise redo by hand
+- **MCPs are the hands**: connections to the tools I actually work in
 
 The response was genuinely overwhelming. Multiple people came up to me afterward and during the week to say it changed how they thought about integrating AI into their own work. A few shoutouts called it out directly (see below 👇).
 
@@ -100,6 +108,18 @@ The response was genuinely overwhelming. Multiple people came up to me afterward
 ## My Final Demo: Herd
 
 Being the only frontend engineer in the program had me thinking about the UI/UX of how an engineer can orchestrate a slew of agents. So for demo day I built **Herd**, a dashboard that lets a shepherd (you) orchestrate AI coding agents working on your team's Jira backlog. Each ticket flows through a pipeline from backlog to merged PR, with the agent doing the coding and the human staying in control. 🐑
+
+![Herd's About screen explaining the shepherd and agent workflow](/images/blog/deep-atlas/herd-about.png)
+
+Click into any ticket and you can watch the agent work in real time, with the model, cost, tokens and cache hit rate right at the top:
+
+![A Herd ticket's Chat tab showing an agent investigating a context menu bug](/images/blog/deep-atlas/herd-agent-chat.png)
+
+The Timeline tab traces a ticket from creation to agent start, PR opened, review, approval and merge, and the Release tab follows it out through staging, canary and production:
+
+![Herd's orchestration timeline for a completed ticket](/images/blog/deep-atlas/herd-timeline.png)
+
+![Herd's deploy pipeline showing a release live in staging, canary and production](/images/blog/deep-atlas/herd-release.png)
 
 After working on this proof of concept UI, I realized that having Slack as the surface layer for all of this would be much nicer, actually. 😅
 
