@@ -23,11 +23,26 @@
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
+const { absoluteUrl } = require("./site-url");
 
 const SITE_URL = "https://www.francescoronel.com";
 const RESEND_API = "https://api.resend.com/broadcasts";
 const LIVE_TIMEOUT_MS = 15 * 60 * 1000;
 const LIVE_POLL_MS = 30 * 1000;
+
+// Resend caps a broadcast's name at 70 characters. Cut on whole code points so
+// an emoji at the end isn't split in half.
+const MAX_NAME = 70;
+function broadcastName(title) {
+  const full = `New post: ${title}`;
+  if (full.length <= MAX_NAME) return full;
+  let out = "";
+  for (const ch of full) {
+    if ((out + ch).length + 1 > MAX_NAME) break;
+    out += ch;
+  }
+  return out.trimEnd() + "…";
+}
 
 function escapeHtml(str = "") {
   return String(str)
@@ -109,8 +124,8 @@ async function createBroadcast(filePath) {
       segment_id: segmentId,
       from,
       subject: title,
-      name: `New post: ${title}`,
-      html: buildHtml({ title, excerpt: fm.excerpt, featuredImage: fm.featuredImage, url }),
+      name: broadcastName(title),
+      html: buildHtml({ title, excerpt: fm.excerpt, featuredImage: absoluteUrl(fm.featuredImage), url }),
       send,
     }),
   });
