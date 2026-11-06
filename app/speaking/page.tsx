@@ -21,6 +21,7 @@ export const metadata: Metadata = buildMetadata({
 const upcomingEvents: { org: string; talk: string; date: string; url: string; description: string; links?: { label: string; url: string }[] }[] = [];
 
 const featuredTalks = [
+  { org: "GitHub Universe", orgSlug: "github", talk: "How a Shared AI Config Became Slack's Internal Tool Platform", postSlug: "github-universe-2026-ship-and-tell", image: "/images/speaking/github-universe-2026.jpeg", topics: ["AI", "Developer Productivity"] },
 { org: "Dreamforce", orgSlug: "dreamforce", talk: "Exploring AI Agents in Slack", postSlug: "speaking-at-dreamforce-exploring-ai-agents-in-slack", image: "/images/speaking/dreamforce.jpg", topics: ["AI", "Slack"] },
   { org: "Ripple", orgSlug: "ripple", talk: "Mujeres Fuertes: Honoring Latina Leadership in Tech", postSlug: "mujeres-fuertes-honoring-latina-leadership-in-tech-at-ripples-fireside-chat", image: "", topics: ["Latinx Leadership", "Diversity"] },
   { org: "Doximity", orgSlug: "doximity", talk: "Women of Color in Engineering Fireside Chat", postSlug: "reflections-on-my-fireside-chat-with-doximity-women-of-color-in-engineering", image: "", topics: ["Diversity", "Women in Engineering"] },
