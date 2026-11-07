@@ -23,4 +23,3 @@ Closes #
 ## Notes for review
 
 - [ ] This change fits [what the site accepts](.github/CONTRIBUTING.md#what-i-wont-accept)
-- [ ] If I used AI tools, I reviewed every change myself and I can explain it
