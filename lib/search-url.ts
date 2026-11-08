@@ -7,9 +7,8 @@
  * to go too or every result links to a 404.
  */
 export function pagefindUrlToRoute(url: string): string {
-  const path = url
+  return url
     .replace(/(\.prerender-fallback)?\.html$/, "")
     .replace(/(^|\/)index$/, "")
     .replace(/^\/?/, "/");
-  return path === "" ? "/" : path;
 }
