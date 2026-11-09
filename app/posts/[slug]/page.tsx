@@ -23,6 +23,7 @@ import { BlogPostJsonLd, BreadcrumbJsonLd } from "@/components/layout/json-ld";
 import { PrevNextNav } from "@/components/ui/prev-next-nav";
 import { BlogCard } from "@/components/ui/blog-card";
 import { ReadingProgress } from "@/components/ui/reading-progress";
+import { TrackPostRead } from "@/components/ui/track-post-read";
 import { TableOfContents } from "@/components/ui/table-of-contents";
 import { extractHeadings } from "@/lib/extract-headings";
 import { Lightbox } from "@/components/ui/lightbox";
@@ -499,6 +500,7 @@ export default async function PostPage({ params }: PageProps) {
         ]}
       />
       <ReadingProgress />
+      <TrackPostRead page={`/posts/${post.slug}`} />
       <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
         <div className={headings.length >= 3 ? "xl:grid xl:grid-cols-[minmax(0,1fr)_220px] xl:gap-14" : ""}>
       <article>

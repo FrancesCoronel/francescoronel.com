@@ -20,13 +20,13 @@ const securityHeaders = [
       "default-src 'self'",
       // Next.js requires unsafe-inline for hydration scripts; wasm-unsafe-eval lets Pagefind
       // search compile its WebAssembly; full unsafe-eval only for dev HMR
-      `script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""} https://www.googletagmanager.com https://www.google-analytics.com https://app.cal.com https://va.vercel-scripts.com`,
+      `script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""} https://app.cal.com https://va.vercel-scripts.com`,
       "style-src 'self' 'unsafe-inline'",
       // Images come from many external CDNs across 665 blog posts
       "img-src 'self' data: https:",
       "font-src 'self'",
-      // API calls: Vercel Analytics/Speed Insights, GA4, Buttondown newsletter
-      "connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://formspree.io https://o188643.ingest.us.sentry.io",
+      // API calls: Vercel Analytics/Speed Insights, Buttondown newsletter
+      "connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://formspree.io https://o188643.ingest.us.sentry.io",
       // Cal.com booking embed + YouTube/Instagram MDX embeds
       "frame-src https://cal.com https://app.cal.com https://www.youtube.com https://www.instagram.com",
       "object-src 'none'",

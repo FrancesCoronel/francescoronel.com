@@ -1,39 +1,24 @@
 import { test, expect, type Page } from "@playwright/test";
 
 /**
- * Custom analytics events reach gtag in a real browser. CI builds without a
- * GA4 id, so gtag isn't loaded and a stand-in records what would be sent.
- * Vercel Analytics gets the same calls through @vercel/analytics, covered by
- * unit tests.
+ * Custom analytics events reach Vercel Analytics in a real browser. Off Vercel
+ * (local builds, CI) its script isn't loaded, so events wait in the queue
+ * trackEvent sets up, window.vaq, which is what the script reads once it loads.
+ * The tests read that queue.
  */
 
-type Sent = [string, string, Record<string, unknown>];
-
-async function recordEvents(page: Page) {
-  await page.addInitScript(() => {
-    const w = window as unknown as { __events: unknown[]; gtag: (...args: unknown[]) => void };
-    w.__events = [];
-    w.gtag = (...args: unknown[]) => w.__events.push(args);
-  });
-}
+type Queued = [string, { name: string; data?: Record<string, unknown> }];
 
 async function events(page: Page, name: string) {
-  const all = await page.evaluate(() => (window as unknown as { __events: Sent[] }).__events);
-  return all.filter(([command, event]) => command === "event" && event === name).map(([, , props]) => props);
+  const queued = await page.evaluate(() => (window as unknown as { vaq?: Queued[] }).vaq ?? []);
+  return queued.filter(([kind, e]) => kind === "event" && e.name === name).map(([, e]) => e.data ?? {});
 }
-
-test.beforeEach(async ({ page }) => {
-  await recordEvents(page);
-});
 
 test("404 pages log the missing path", async ({ page }) => {
   await page.goto("/posts/this-post-does-not-exist");
   await expect.poll(() => events(page, "page_not_found")).toEqual([
     { path: "/posts/this-post-does-not-exist" },
   ]);
-  // It fires on load, before Vercel's script exists, so it must wait in the queue
-  const queued = await page.evaluate(() => (window as unknown as { vaq?: [string, { name: string }][] }).vaq ?? []);
-  expect(queued.map(([kind, e]) => `${kind}:${e.name}`)).toContain("event:page_not_found");
 });
 
 test("searching and picking a result logs one search", async ({ page }) => {
@@ -77,15 +62,25 @@ test("outbound links are logged", async ({ page }) => {
   );
 });
 
-test("scrolling a post logs scroll depth", async ({ page }) => {
+test("reading a post to the end logs it once", async ({ page }) => {
   await page.goto("/posts");
   await page.locator("a[href^='/posts/']").first().click();
   await page.waitForURL(/\/posts\/.+/);
+  const path = new URL(page.url()).pathname;
   // Lazy images can grow the page after the first jump, so keep going to the bottom
   await expect
     .poll(async () => {
       await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
-      return (await events(page, "scroll_depth")).map((e) => e.percent);
+      return events(page, "post_read");
     })
-    .toEqual([25, 50, 75, 100]);
+    .toEqual([{ page: path }]);
+});
+
+test("project pages under /posts don't count as reads", async ({ page }) => {
+  await page.goto("/posts/latina-dev");
+  for (let i = 0; i < 4; i++) {
+    await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
+    await page.waitForTimeout(250);
+  }
+  expect(await events(page, "post_read")).toEqual([]);
 });

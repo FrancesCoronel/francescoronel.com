@@ -1,21 +1,9 @@
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 import { buildMetadata, siteConfig, YEARS_OF_EXPERIENCE } from "./metadata";
 
 describe("siteConfig", () => {
   it("computes years of experience from 2017", () => {
     expect(YEARS_OF_EXPERIENCE).toBe(new Date().getFullYear() - 2017);
-  });
-
-  it("reads the GA4 id from the environment, defaulting to empty", async () => {
-    vi.stubEnv("NEXT_PUBLIC_GA4_MEASUREMENT_ID", "G-TEST123");
-    vi.resetModules();
-    const withId = await import("./metadata");
-    expect(withId.siteConfig.ga4MeasurementId).toBe("G-TEST123");
-
-    vi.stubEnv("NEXT_PUBLIC_GA4_MEASUREMENT_ID", "");
-    vi.resetModules();
-    const withoutId = await import("./metadata");
-    expect(withoutId.siteConfig.ga4MeasurementId).toBe("");
   });
 });
 

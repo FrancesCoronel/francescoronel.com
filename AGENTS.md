@@ -20,7 +20,7 @@ No more vendor lock-in, full data ownership, prompt-driven editing ⚡
 | MDX | `next-mdx-remote/rsc` with remark-gfm, rehype-slug, rehype-autolink-headings, rehype-pretty-code |
 | Search | Pagefind (static binary search index, zero client payload) |
 | Images | Vercel Blob (new images), legacy external hosts via `remotePatterns` |
-| Analytics | Vercel Analytics + Speed Insights + Google Analytics 4 |
+| Analytics | Vercel Analytics + Speed Insights (custom events via `lib/analytics.ts`) |
 | Hosting | Vercel |
 | Fonts | Latina Essential via `next/font/local` (`public/fonts/`) |
 | Perf/A11y | axe-core and Lighthouse via the shared `web-quality.yml` (URLs in `.github/workflows/pr.yml`) |
@@ -100,6 +100,21 @@ Sentry org `fvcproductions`, project `fvcproductions`. Events are tagged with th
 - **Site down or error surge**: the homepage uptime check fails twice in a row (checked every 5 minutes), or the whole site passes 50 errors in an hour
 
 Noise from browser extensions and link scanners is filtered in `sentry.client.config.ts` (`ignoreErrors`, `denyUrls`). Add to that list rather than muting alerts.
+
+### Analytics 📊
+
+Vercel Analytics (pageviews and custom events) and Speed Insights (Core Web Vitals), loaded in `components/layout/analytics.tsx` only on Vercel. There is no Google Analytics; it was removed to save ~190 KB of script per page. Custom events go through `trackEvent()` in `lib/analytics.ts`, which queues them until Vercel's script loads and never throws.
+
+| Event | Fired by |
+|---|---|
+| `search` | Search overlay, once per search (picked result or closed) |
+| `outbound_click`, `contact_click`, `file_download` | Any link on the site (`components/layout/analytics-events.tsx`) |
+| `newsletter_signup`, `contact_form_submit` | The forms, with `status` |
+| `page_not_found` | `app/not-found.tsx` |
+| `theme_change`, `filter_posts` | Theme toggle, category filter |
+| `post_read` | Scrolling 90% of the way through a blog post (`components/ui/track-post-read.tsx`, article layout only, so project pages at `/posts/<slug>` don't count) |
+
+Custom events count against the Vercel plan's event quota, so don't add per-scroll or per-keystroke events. New interactive features should call `trackEvent()`. `e2e/analytics.spec.ts` checks the events in a real browser.
 
 ### SEO & AI Discoverability 🤖
 

@@ -13,7 +13,6 @@ export const siteConfig = {
     github: "FrancesCoronel",
     linkedin: "francescoronel",
   },
-  ga4MeasurementId: process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || "",
 };
 
 const defaultOgImage = {
