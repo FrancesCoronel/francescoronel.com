@@ -5,6 +5,9 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { ThemeToggle } from "./theme-toggle";
 
+const { trackEvent } = vi.hoisted(() => ({ trackEvent: vi.fn() }));
+vi.mock("@/lib/analytics", () => ({ trackEvent }));
+
 const theme = vi.hoisted(() => ({ current: "light" as string | undefined, setTheme: vi.fn() }));
 
 vi.mock("next-themes", () => ({
@@ -27,6 +30,7 @@ describe("ThemeToggle", () => {
     render(<ThemeToggle />);
     fireEvent.click(screen.getByRole("button", { name: "Switch to dark mode" }));
     expect(theme.setTheme).toHaveBeenCalledWith("dark");
+    expect(trackEvent).toHaveBeenLastCalledWith("theme_change", { theme: "dark" });
   });
 
   it("switches from dark to light and shows the sun icon", () => {
@@ -36,5 +40,6 @@ describe("ThemeToggle", () => {
     expect(button.querySelector("path")?.getAttribute("d")).toMatch(/^M12 3v1/);
     fireEvent.click(button);
     expect(theme.setTheme).toHaveBeenCalledWith("light");
+    expect(trackEvent).toHaveBeenLastCalledWith("theme_change", { theme: "light" });
   });
 });

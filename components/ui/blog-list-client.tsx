@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import { BlogCard } from "./blog-card";
 import type { Category } from "@/lib/types";
 import { PaginationNav } from "./pagination-nav";
+import { trackEvent } from "@/lib/analytics";
 
 interface PostSummary {
   slug: string;
@@ -47,6 +48,7 @@ export function BlogListClient({
   );
 
   function handleCategoryClick(slug: string) {
+    if (activeCategory !== slug) trackEvent("filter_posts", { category: slug });
     setActiveCategory(activeCategory === slug ? null : slug);
     setPage(1);
   }

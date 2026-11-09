@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { trackEvent } from "@/lib/analytics";
 
 interface NewsletterFormProps {
   variant?: "footer" | "section" | "dark";
@@ -36,6 +37,10 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
 
       if (res.ok) {
         setStatus("success");
+        trackEvent("newsletter_signup", {
+          status: data.alreadySubscribed ? "already_subscribed" : "success",
+          form: variant,
+        });
         setMessage(
           data.alreadySubscribed
             ? "You're already subscribed, thanks for being here! 🎉"
@@ -44,10 +49,12 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
         setEmail("");
       } else {
         setStatus("error");
+        trackEvent("newsletter_signup", { status: "error", form: variant });
         setMessage(data.error || "Something went wrong. Please try again.");
       }
     } catch {
       setStatus("error");
+      trackEvent("newsletter_signup", { status: "error", form: variant });
       setMessage("Something went wrong. Please try again.");
     }
   }

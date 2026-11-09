@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { trackEvent } from "@/lib/analytics";
 
 const FORMSPREE_URL = "https://formspree.io/f/mqkogqjn";
 
@@ -31,16 +32,19 @@ export function ContactForm() {
 
       if (res.ok) {
         setStatus("success");
+        trackEvent("contact_form_submit", { status: "success" });
         setName("");
         setEmail("");
         setMessage("");
       } else {
         const data = await res.json().catch(() => ({}));
         setStatus("error");
+        trackEvent("contact_form_submit", { status: "error" });
         setErrorMessage(data?.error || "Something went wrong. Please try again.");
       }
     } catch {
       setStatus("error");
+      trackEvent("contact_form_submit", { status: "error" });
       setErrorMessage("Something went wrong. Please try again.");
     }
   }

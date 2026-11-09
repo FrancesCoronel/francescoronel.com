@@ -2,9 +2,12 @@
 import "@testing-library/jest-dom/vitest";
 import { cleanup, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { afterEach, describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import type { Category } from "@/lib/types";
 import { BlogListClient } from "./blog-list-client";
+
+const { trackEvent } = vi.hoisted(() => ({ trackEvent: vi.fn() }));
+vi.mock("@/lib/analytics", () => ({ trackEvent }));
 
 const posts = Array.from({ length: 20 }, (_, i) => {
   const n = i + 1;
@@ -76,7 +79,10 @@ describe("BlogListClient", () => {
     expect(cardTitles()).toEqual(["Post 5", "Post 10", "Post 15", "Post 20"]);
     expect(screen.queryByRole("navigation")).not.toBeInTheDocument();
 
+    expect(trackEvent).toHaveBeenCalledWith("filter_posts", { category: "career" });
     await user.click(career);
+    // Turning a filter off isn't a new filter
+    expect(trackEvent).toHaveBeenCalledTimes(1);
     expect(screen.getByText("Showing 18 of 20 posts")).toBeInTheDocument();
 
     await user.click(screen.getByRole("button", { name: "Design (10)" }));

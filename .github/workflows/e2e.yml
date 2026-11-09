@@ -54,6 +54,12 @@ jobs:
           CI: true
           BASE_URL: http://localhost:3000
 
+      - name: Run analytics tests
+        run: npm run test:e2e:analytics
+        env:
+          CI: true
+          BASE_URL: http://localhost:3000
+
       - name: Run component tests
         run: npm run test:e2e:components
         env:
