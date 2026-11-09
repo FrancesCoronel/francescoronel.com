@@ -112,7 +112,7 @@ Vercel Analytics (pageviews and custom events) and Speed Insights (Core Web Vita
 | `newsletter_signup`, `contact_form_submit` | The forms, with `status` |
 | `page_not_found` | `app/not-found.tsx` |
 | `theme_change`, `filter_posts` | Theme toggle, category filter |
-| `post_read` | Scrolling 90% of the way through a blog post |
+| `post_read` | Scrolling 90% of the way through a blog post (`components/ui/track-post-read.tsx`, article layout only, so project pages at `/posts/<slug>` don't count) |
 
 Custom events count against the Vercel plan's event quota, so don't add per-scroll or per-keystroke events. New interactive features should call `trackEvent()`. `e2e/analytics.spec.ts` checks the events in a real browser.
 

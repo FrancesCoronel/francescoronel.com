@@ -75,3 +75,12 @@ test("reading a post to the end logs it once", async ({ page }) => {
     })
     .toEqual([{ page: path }]);
 });
+
+test("project pages under /posts don't count as reads", async ({ page }) => {
+  await page.goto("/posts/latina-dev");
+  for (let i = 0; i < 4; i++) {
+    await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
+    await page.waitForTimeout(250);
+  }
+  expect(await events(page, "post_read")).toEqual([]);
+});
