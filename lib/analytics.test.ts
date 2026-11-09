@@ -36,10 +36,84 @@ describe("trackEvent", () => {
     expect(gtag).toHaveBeenCalledWith("event", "scroll_depth", { percent: 50 });
   });
 
-  it("works without gtag", () => {
-    vi.stubGlobal("window", {});
-    expect(() => trackEvent("ping")).not.toThrow();
-    expect(track).toHaveBeenCalledOnce();
+  describe("before gtag loads", () => {
+    beforeEach(() => {
+      vi.useFakeTimers();
+      vi.stubGlobal("window", {});
+    });
+    afterEach(() => {
+      // Let any held events time out so the next test starts clean
+      vi.advanceTimersByTime(10_000);
+      vi.useRealTimers();
+    });
+
+    it("still sends to Vercel", () => {
+      expect(() => trackEvent("ping")).not.toThrow();
+      expect(track).toHaveBeenCalledOnce();
+    });
+
+    it("holds GA4 events and sends them in order once gtag exists", () => {
+      trackEvent("page_not_found", { path: "/x" });
+      trackEvent("web_vitals", { metric_name: "TTFB" }, { vercel: false });
+      vi.advanceTimersByTime(500);
+
+      const late = vi.fn();
+      (window as unknown as { gtag: typeof late }).gtag = late;
+      vi.advanceTimersByTime(250);
+      expect(late.mock.calls).toEqual([
+        ["event", "page_not_found", { path: "/x" }],
+        ["event", "web_vitals", { metric_name: "TTFB" }],
+      ]);
+
+      // Later events go straight through, and nothing is sent twice
+      trackEvent("search");
+      vi.advanceTimersByTime(1_000);
+      expect(late).toHaveBeenCalledTimes(3);
+      expect(late).toHaveBeenLastCalledWith("event", "search", {});
+    });
+
+    it("gives up after 10 seconds without gtag", () => {
+      trackEvent("ping");
+      vi.advanceTimersByTime(10_000);
+      const late = vi.fn();
+      (window as unknown as { gtag: typeof late }).gtag = late;
+      vi.advanceTimersByTime(1_000);
+      expect(late).not.toHaveBeenCalled();
+    });
+
+    it("keeps going if gtag throws while flushing", () => {
+      trackEvent("a");
+      trackEvent("b");
+      const late = vi.fn(() => {
+        throw new Error("blocked");
+      });
+      (window as unknown as { gtag: typeof late }).gtag = late;
+      expect(() => vi.advanceTimersByTime(250)).not.toThrow();
+      expect(late).toHaveBeenCalledTimes(2);
+    });
+  });
+
+  it("creates the Vercel queue so events sent before the script loads aren't lost", () => {
+    const w = window as unknown as { va: (...p: unknown[]) => void; vaq: unknown[][] };
+    trackEvent("page_not_found");
+    w.va("event", { name: "a" });
+    w.va("event", { name: "b" });
+    expect(w.vaq).toEqual([
+      ["event", { name: "a" }],
+      ["event", { name: "b" }],
+    ]);
+  });
+
+  it("keeps an existing Vercel queue or loaded script", () => {
+    const va = vi.fn();
+    vi.stubGlobal("window", { gtag, va });
+    trackEvent("ping");
+    expect((window as unknown as { va: unknown }).va).toBe(va);
+  });
+
+  it("leaves the Vercel queue alone for GA4-only events", () => {
+    trackEvent("scroll_depth", {}, { vercel: false });
+    expect((window as unknown as { va?: unknown }).va).toBeUndefined();
   });
 
   it("never throws when either backend fails", () => {

@@ -31,6 +31,9 @@ test("404 pages log the missing path", async ({ page }) => {
   await expect.poll(() => events(page, "page_not_found")).toEqual([
     { path: "/posts/this-post-does-not-exist" },
   ]);
+  // It fires on load, before Vercel's script exists, so it must wait in the queue
+  const queued = await page.evaluate(() => (window as unknown as { vaq?: [string, { name: string }][] }).vaq ?? []);
+  expect(queued.map(([kind, e]) => `${kind}:${e.name}`)).toContain("event:page_not_found");
 });
 
 test("searching and picking a result logs one search", async ({ page }) => {
