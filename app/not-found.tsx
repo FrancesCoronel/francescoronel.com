@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { TrackNotFound } from "@/components/ui/track-not-found";
 
 export default function NotFound() {
   return (
     <div className="flex min-h-[60vh] flex-col items-center justify-center px-6 text-center">
+      <TrackNotFound />
       <Image
         src="/images/assets/memoji-thinking.png"
         alt=""

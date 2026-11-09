@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { createPortal } from "react-dom";
+import { trackEvent } from "@/lib/analytics";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { pagefindUrlToRoute } from "@/lib/search-url";
@@ -47,6 +48,28 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
   const modalRef = useRef<HTMLDivElement>(null);
   const debounceRef = useRef<ReturnType<typeof setTimeout>>(null);
   const router = useRouter();
+  // The search the user ended on, logged once when they pick a result or close
+  const lastSearch = useRef({ query: "", results: 0, tracked: false });
+
+  function trackSearch(selected?: { url: string; position: number }) {
+    const { query: term, results: count, tracked } = lastSearch.current;
+    if (tracked || !term) return;
+    lastSearch.current.tracked = true;
+    trackEvent("search", {
+      search_term: term,
+      results: count,
+      selected_url: selected?.url,
+      selected_position: selected?.position,
+    });
+  }
+
+  function selectResult(index: number) {
+    trackSearch({ url: results[index].url, position: index + 1 });
+    onClose();
+  }
+
+  // Closing without picking a result still counts as a search
+  useEffect(() => () => trackSearch(), []);
 
   // Load Pagefind
   useEffect(() => {
@@ -110,6 +133,7 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
           }))
         );
         setSelectedIndex(0);
+        lastSearch.current = { query: query.trim(), results: data.length, tracked: false };
       } catch {
         setResults([]);
       }
@@ -150,7 +174,7 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
     } else if (e.key === "Enter" && results[selectedIndex]) {
       e.preventDefault();
       router.push(results[selectedIndex].url);
-      onClose();
+      selectResult(selectedIndex);
     }
   }
 
@@ -209,7 +233,7 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
                     <li key={`${r.url}-${i}`}>
                       <Link
                         href={r.url}
-                        onClick={onClose}
+                        onClick={() => selectResult(i)}
                         className={`block border-b border-horchata-100 px-4 py-3 transition-colors last:border-b-0 dark:border-navy-700 ${
                           i === selectedIndex
                             ? "bg-horchata-50 dark:bg-navy-700"

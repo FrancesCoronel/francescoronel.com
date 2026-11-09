@@ -5,6 +5,9 @@ import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { ContactForm } from "./contact-form";
 
+const { trackEvent } = vi.hoisted(() => ({ trackEvent: vi.fn() }));
+vi.mock("@/lib/analytics", () => ({ trackEvent }));
+
 const GENERIC_ERROR = "Something went wrong. Please try again.";
 
 function stubFetch(impl: () => Promise<unknown>) {
@@ -58,6 +61,7 @@ describe("ContactForm", () => {
 
     await act(async () => resolve({ ok: true }));
     expect(screen.getByText("Message sent! 🎉")).toBeInTheDocument();
+    expect(trackEvent).toHaveBeenLastCalledWith("contact_form_submit", { status: "success" });
     expect(screen.getByText(/Thanks for reaching out/)).toBeInTheDocument();
 
     await user.click(screen.getByRole("button", { name: "Send another message" }));
@@ -79,6 +83,7 @@ describe("ContactForm", () => {
     await user.click(screen.getByRole("button", { name: "Send Message" }));
 
     expect(await screen.findByText(expected)).toBeInTheDocument();
+    expect(trackEvent).toHaveBeenLastCalledWith("contact_form_submit", { status: "error" });
     // Input is kept so the visitor can retry
     expect(screen.getByLabelText(/^Name/)).toHaveValue("Ada Lovelace");
     expect(screen.getByRole("button", { name: "Send Message" })).toBeEnabled();

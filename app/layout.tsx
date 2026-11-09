@@ -3,6 +3,7 @@ import { preload } from "react-dom";
 import { Nav } from "@/components/layout/nav";
 import { Footer } from "@/components/layout/footer";
 import { AnalyticsProviders } from "@/components/layout/analytics";
+import { AnalyticsEvents } from "@/components/layout/analytics-events";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import { PersonJsonLd, WebSiteJsonLd } from "@/components/layout/json-ld";
 import { buildMetadata } from "@/lib/metadata";
@@ -74,6 +75,7 @@ export default function RootLayout({
           <Footer />
           <BackToTop />
           <AnalyticsProviders vercel={Boolean(process.env.VERCEL)} />
+          <AnalyticsEvents />
         </ThemeProvider>
       </body>
     </html>

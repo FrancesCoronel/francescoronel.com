@@ -4,10 +4,13 @@ import { act, cleanup, fireEvent, render, screen, waitFor } from "@testing-libra
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-const { pagefind, push } = vi.hoisted(() => ({
+const { pagefind, push, trackEvent } = vi.hoisted(() => ({
   pagefind: { init: vi.fn(), search: vi.fn() },
   push: vi.fn(),
+  trackEvent: vi.fn(),
 }));
+
+vi.mock("@/lib/analytics", () => ({ trackEvent }));
 
 vi.mock("/pagefind/pagefind.js", () => pagefind);
 vi.mock("next/navigation", () => ({ useRouter: () => ({ push }) }));
@@ -42,6 +45,7 @@ beforeEach(() => {
     results: [hit("/blog/first-post.html", "First Post"), hit("/about/index.html", "About")],
   });
   push.mockReset();
+  trackEvent.mockReset();
 });
 
 afterEach(cleanup);
@@ -248,5 +252,43 @@ describe("SearchModal", () => {
     escButton.setAttribute("disabled", "");
     const modal = input.closest(".rounded-2xl") as HTMLElement;
     expect(fireEvent.keyDown(modal, { key: "Tab" })).toBe(true);
+  });
+
+  describe("analytics", () => {
+    it("logs one search with the picked result", async () => {
+      const { user, input } = await openModal();
+      await user.type(input, "first");
+      await screen.findByRole("link", { name: /First Post/ });
+      await user.click(screen.getAllByRole("link")[1]);
+      expect(trackEvent).toHaveBeenCalledTimes(1);
+      expect(trackEvent).toHaveBeenCalledWith("search", {
+        search_term: "first",
+        results: 2,
+        selected_url: "/about",
+        selected_position: 2,
+      });
+    });
+
+    it("logs a search with no pick when the overlay closes", async () => {
+      pagefind.search.mockResolvedValue({ results: [] });
+      const { user, input } = await openModal();
+      await user.type(input, "zzz");
+      await waitFor(() => expect(pagefind.search).toHaveBeenCalledWith("zzz"));
+      await act(async () => {});
+      await user.keyboard("{Escape}");
+      expect(trackEvent).toHaveBeenCalledTimes(1);
+      expect(trackEvent).toHaveBeenCalledWith("search", {
+        search_term: "zzz",
+        results: 0,
+        selected_url: undefined,
+        selected_position: undefined,
+      });
+    });
+
+    it("logs nothing when the overlay closes without a search", async () => {
+      const { user } = await openModal();
+      await user.keyboard("{Escape}");
+      expect(trackEvent).not.toHaveBeenCalled();
+    });
   });
 });

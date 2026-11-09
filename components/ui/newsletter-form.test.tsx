@@ -5,6 +5,9 @@ import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { NewsletterForm } from "./newsletter-form";
 
+const { trackEvent } = vi.hoisted(() => ({ trackEvent: vi.fn() }));
+vi.mock("@/lib/analytics", () => ({ trackEvent }));
+
 const GENERIC_ERROR = "Something went wrong. Please try again.";
 
 function stubFetch(impl: () => Promise<unknown>) {
@@ -59,6 +62,7 @@ describe("NewsletterForm", () => {
       await act(async () => resolve({ ok: true, json: () => Promise.resolve({}) }));
       expect(screen.getByText("You're in! Check your inbox to confirm. 🎉")).toBeInTheDocument();
       expect(screen.queryByLabelText("Email address")).not.toBeInTheDocument();
+      expect(trackEvent).toHaveBeenLastCalledWith("newsletter_signup", { status: "success", form: variant });
     });
 
     it("thanks people who are already subscribed", async () => {
@@ -66,6 +70,7 @@ describe("NewsletterForm", () => {
       render(<NewsletterForm variant={variant} />);
       await subscribe();
       expect(await screen.findByText("You're already subscribed, thanks for being here! 🎉")).toBeInTheDocument();
+      expect(trackEvent).toHaveBeenLastCalledWith("newsletter_signup", { status: "already_subscribed", form: variant });
     });
 
     it("shows the API error and keeps the email for a retry", async () => {
@@ -73,6 +78,7 @@ describe("NewsletterForm", () => {
       render(<NewsletterForm variant={variant} />);
       await subscribe();
       expect(await screen.findByText("Invalid email")).toBeInTheDocument();
+      expect(trackEvent).toHaveBeenLastCalledWith("newsletter_signup", { status: "error", form: variant });
       expect(screen.getByLabelText("Email address")).toHaveValue("ada@example.com");
       expect(screen.getByRole("button", { name: "Subscribe" })).toBeEnabled();
     });
