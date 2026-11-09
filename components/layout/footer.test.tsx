@@ -20,7 +20,7 @@ describe("Footer", () => {
       "href",
       "/design-system"
     );
-    expect(within(nav).getAllByRole("link")).toHaveLength(17);
+    expect(within(nav).getAllByRole("link")).toHaveLength(18);
   });
 
   it("renders the brand link, newsletter form and copyright year", () => {

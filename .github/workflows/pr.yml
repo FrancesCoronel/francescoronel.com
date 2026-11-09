@@ -43,6 +43,7 @@ jobs:
       urls: |
         /
         /about
+        /giving
         /contact
         /speaking
         /mentoring

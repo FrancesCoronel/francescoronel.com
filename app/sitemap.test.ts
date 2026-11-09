@@ -47,6 +47,6 @@ describe("sitemap", () => {
     for (const [url, priority] of expected) {
       expect(byUrl.get(url as string)?.priority).toBe(priority);
     }
-    expect(entries).toHaveLength(13 + getAllPosts().length + expected.length);
+    expect(entries).toHaveLength(14 + getAllPosts().length + expected.length);
   });
 });
