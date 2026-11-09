@@ -33,6 +33,10 @@ const DARK_SECTION =
   "border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950";
 const LIGHT_SECTION = "bg-horchata-50 py-16 md:py-20 dark:bg-navy-900";
 
+/** Sections after the page header alternate dark, light, dark, ... */
+const sectionClass = (index: number) =>
+  index % 2 === 0 ? DARK_SECTION : LIGHT_SECTION;
+
 function GivingCard({ org }: { org: GivingOrg }) {
   return (
     <article className="flex flex-col gap-3 rounded-2xl border border-horchata-200 bg-white p-6 dark:border-navy-700 dark:bg-navy-800">
@@ -90,7 +94,7 @@ export default function GivingPage() {
       {groups.map((group, i) => (
         <section
           key={group.label}
-          className={i % 2 === 0 ? DARK_SECTION : LIGHT_SECTION}
+          className={sectionClass(i)}
         >
           <div className="mx-auto max-w-[var(--container-max)] px-6">
             <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
@@ -113,7 +117,7 @@ export default function GivingPage() {
         </section>
       ))}
 
-      <section className={groups.length % 2 === 0 ? DARK_SECTION : LIGHT_SECTION}>
+      <section className={sectionClass(groups.length)}>
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
             Your Turn
