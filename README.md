@@ -16,7 +16,7 @@ My personal website, fully self-owned and prompt-driven. Migrated from Webflow t
 | MDX | `next-mdx-remote/rsc` with remark-gfm, rehype-slug, rehype-autolink-headings, rehype-pretty-code |
 | Search | Pagefind (static index, zero client payload) |
 | Images | Vercel Blob |
-| Analytics | Vercel Analytics + Speed Insights + Google Analytics 4 |
+| Analytics | Vercel Analytics + Speed Insights |
 | Hosting | Vercel Pro |
 | Fonts | Cabin via `next/font/google` |
 
@@ -50,7 +50,6 @@ npm run chromatic        # upload to Chromatic for visual regression
 Copy `.env.local.example` to `.env.local` and fill in:
 
 ```bash
-NEXT_PUBLIC_GA4_MEASUREMENT_ID=   # Google Analytics 4
 CAL_COM_API_KEY=                  # Cal.com mentoring sessions
 RESEND_API_KEY=                   # Newsletter (Resend)
 RESEND_SEGMENT_ID=                # Resend segment new subscribers join

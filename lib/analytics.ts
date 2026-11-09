@@ -2,81 +2,29 @@ import { track } from "@vercel/analytics";
 
 export type EventProps = Record<string, string | number | boolean | null | undefined>;
 
-declare global {
-  interface Window {
-    gtag?: (command: "event", name: string, params: Record<string, unknown>) => void;
-  }
-}
-
 /**
- * Sends one custom event to Vercel Analytics and Google Analytics 4.
+ * Sends one custom event to Vercel Analytics.
  *
- * Pass `{ vercel: false }` for high-volume events (scroll depth, web vitals)
- * that only GA4 should get: Vercel counts custom events against the plan's
- * quota, and Speed Insights already covers vitals there.
- *
- * Never throws: analytics must not break the page, and either backend may be
- * missing (no GA4 id, not on Vercel, an ad blocker).
+ * Never throws: analytics must not break the page, and the script may be
+ * missing (not on Vercel, an ad blocker).
  */
-export function trackEvent(
-  name: string,
-  props: EventProps = {},
-  { vercel = true }: { vercel?: boolean } = {},
-) {
+export function trackEvent(name: string, props: EventProps = {}) {
   const clean: Record<string, string | number | boolean | null> = {};
   for (const [key, value] of Object.entries(props)) {
     if (value !== undefined) clean[key] = value;
   }
 
-  if (vercel) {
-    // The same queue @vercel/analytics sets up when its component mounts.
-    // Creating it here keeps events fired before then (a 404 logged on load)
-    // until the script arrives, instead of dropping them.
-    window.va ??= (event, properties) => {
-      (window.vaq ??= []).push([event, properties]);
-    };
-    try {
-      track(name, clean);
-    } catch {
-      // Vercel Analytics not loaded
-    }
-  }
-  sendToGA(name, clean);
-}
-
-// gtag is defined by an afterInteractive script, so events logged on mount
-// (a 404, the first web vitals) can arrive before it. Hold them and send them
-// once it exists; give up after GA_WAIT_MS (no GA4 id, or gtag blocked).
-const GA_POLL_MS = 250;
-const GA_WAIT_MS = 10_000;
-const pendingGA: [string, Record<string, unknown>][] = [];
-let gaTimer: ReturnType<typeof setInterval> | undefined;
-
-function gtagEvent(name: string, params: Record<string, unknown>) {
+  // The same queue @vercel/analytics sets up when its component mounts.
+  // Creating it here keeps events fired before then (a 404 logged on load)
+  // until the script arrives, instead of dropping them.
+  window.va ??= (event, properties) => {
+    (window.vaq ??= []).push([event, properties]);
+  };
   try {
-    window.gtag!("event", name, params);
+    track(name, clean);
   } catch {
-    // gtag blocked or failed
+    // Vercel Analytics not loaded
   }
-}
-
-function sendToGA(name: string, params: Record<string, unknown>) {
-  if (window.gtag) {
-    gtagEvent(name, params);
-    return;
-  }
-  pendingGA.push([name, params]);
-  if (gaTimer) return;
-  const started = Date.now();
-  gaTimer = setInterval(() => {
-    const ready = Boolean(window.gtag);
-    if (ready) for (const [n, p] of pendingGA) gtagEvent(n, p);
-    if (ready || Date.now() - started >= GA_WAIT_MS) {
-      clearInterval(gaTimer);
-      gaTimer = undefined;
-      pendingGA.length = 0;
-    }
-  }, GA_POLL_MS);
 }
 
 const DOWNLOAD_EXT = /\.(pdf|zip|docx?|xlsx?|pptx?|csv|key|dmg|epub)$/i;
