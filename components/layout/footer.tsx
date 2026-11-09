@@ -87,6 +87,7 @@ const footerNav = [
     links: [
       { href: "/categories", label: "Categories" },
       { href: "/design-system", label: "Design System" },
+      { href: "/giving", label: "Giving" },
       { href: "/mentoring", label: "Mentoring" },
       { href: "/organizations", label: "Organizations" },
       { href: "/tags", label: "Tags" },

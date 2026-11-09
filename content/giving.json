@@ -1,0 +1,142 @@
+[
+  {
+    "label": "Community",
+    "heading": "Latinos in Tech, Education & Open Source 👩🏽‍💻",
+    "orgs": [
+      {
+        "name": "Techqueria",
+        "logo": "/images/organizations/techqueria.png",
+        "url": "https://techqueria.org",
+        "cta": "Donate to Techqueria",
+        "status": "Recurring donor",
+        "description": "The largest community of Latinx professionals in tech. I used to run it as Executive Director, and I still give every year because I know exactly where the money goes."
+      },
+      {
+        "name": "Hispanic Foundation of Silicon Valley",
+        "url": "https://www.hfsv.org",
+        "cta": "Donate to HFSV",
+        "status": "Donor · 2026 Ball",
+        "description": "Invests in Latino students, families and leaders across the Bay Area, from scholarships to civic leadership programs."
+      },
+      {
+        "name": "Latino Community Foundation",
+        "url": "https://latinocf.org",
+        "cta": "Donate to LCF",
+        "status": "Past monthly donor",
+        "description": "Funds Latino-led nonprofits and builds civic power across California."
+      },
+      {
+        "name": "Code Nation",
+        "logo": "/images/organizations/code-nation.jpeg",
+        "url": "https://codenation.org",
+        "cta": "Donate to Code Nation",
+        "status": "Past donor",
+        "description": "Teaches coding to students in under-resourced high schools and connects them to tech careers."
+      },
+      {
+        "name": "docsify",
+        "url": "https://opencollective.com/docsify",
+        "cta": "Sponsor docsify",
+        "status": "Past monthly sponsor",
+        "description": "A free, open source documentation site generator. Open source runs on volunteers, so I sponsored it monthly through Open Collective."
+      }
+    ]
+  },
+  {
+    "label": "Animals & Planet",
+    "heading": "For the Dogs, the Reefs & the Wild 🐾",
+    "orgs": [
+      {
+        "name": "Humane World for Animals",
+        "url": "https://www.humaneworld.org",
+        "cta": "Donate to Humane World",
+        "status": "Past monthly donor",
+        "description": "Formerly the Humane Society of the United States. They rescue dogs from puppy mills and the dog meat trade, and help animals caught in disasters. As a corgi mom to Luna and Sueño, this one is personal."
+      },
+      {
+        "name": "ReefCI",
+        "url": "https://reefci.com",
+        "cta": "Support ReefCI",
+        "status": "Volunteer · Donor",
+        "description": "Reef Conservation International runs volunteer dive trips from Tom Owens Caye, a tiny island on the Belize Barrier Reef near Placencia. Volunteers hunt invasive lionfish and help protect sea turtle hatchlings. I joined through Salesforce's volunteer program. 🤿"
+      },
+      {
+        "name": "Sierra Club",
+        "url": "https://www.sierraclub.org",
+        "cta": "Support the Sierra Club",
+        "status": "Member since 2009",
+        "description": "Protects wild places and endangered species, and fights for clean energy."
+      },
+      {
+        "name": "World Wildlife Fund",
+        "url": "https://www.worldwildlife.org",
+        "cta": "Support WWF",
+        "status": "Past supporter",
+        "description": "Protects endangered species and the places they live. It was my AmazonSmile charity, so every order chipped in."
+      },
+      {
+        "name": "Virginia Zoo",
+        "url": "https://virginiazoo.org",
+        "cta": "Support the Virginia Zoo",
+        "status": "Past donor",
+        "description": "Norfolk's zoo, home to 700+ animals and a big part of the city's conservation education. 🦒"
+      }
+    ]
+  },
+  {
+    "label": "Rights & Justice",
+    "heading": "Protecting People's Rights ⚖️",
+    "orgs": [
+      {
+        "name": "RAICES",
+        "url": "https://www.raicestexas.org",
+        "cta": "Donate to RAICES",
+        "status": "Past donor",
+        "description": "Free and low-cost legal services for immigrant and refugee families in Texas, including kids facing court alone."
+      },
+      {
+        "name": "TIME'S UP Legal Defense Fund",
+        "url": "https://nwlc.org/times-up-legal-defense-fund/",
+        "cta": "Support the fund",
+        "status": "Past donor",
+        "description": "Legal help for workers facing sexual harassment and retaliation, housed at the National Women's Law Center."
+      },
+      {
+        "name": "ACLU",
+        "url": "https://www.aclu.org",
+        "cta": "Donate to the ACLU",
+        "status": "Past monthly donor",
+        "description": "Defends civil rights and civil liberties in courts, legislatures and communities."
+      },
+      {
+        "name": "NPR",
+        "url": "https://www.npr.org/donations/support",
+        "cta": "Support NPR",
+        "status": "Donor",
+        "description": "Independent public media, and the home of Tiny Desk. 🎶"
+      }
+    ]
+  },
+  {
+    "label": "Political Giving",
+    "heading": "Organizing for an Economy That Works for All of Us ✊🏽",
+    "description": "Political contributions aren't tax-deductible, and that's fine. Some change only happens through elections and organizing.",
+    "orgs": [
+      {
+        "name": "Democratic Socialists of America",
+        "url": "https://www.dsausa.org",
+        "cta": "Learn about DSA",
+        "status": "Dues-paying member",
+        "description": "A member-funded organization working on labor, housing and economic justice campaigns."
+      },
+      {
+        "name": "Bernie, Our Revolution & Beyond",
+        "emoji": "🗳️",
+        "url": "https://ourrevolution.com",
+        "cta": "Learn about Our Revolution",
+        "status": "Small-dollar donor since 2016",
+        "description": "I chipped in to Bernie Sanders in 2016 and again in 2020 (yes, the famous $27 🙌🏽), to the Democratic Coalition in 2018, and to Our Revolution and the Harris Victory Fund in 2024."
+      }
+    ]
+  }
+]
