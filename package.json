@@ -29,7 +29,8 @@
     "test:e2e:components": "playwright test e2e/components.spec.ts",
     "test:e2e:visual": "VISUAL=1 playwright test e2e/visual.spec.ts --project=visual-desktop",
     "test:e2e:visual:mobile": "VISUAL=1 playwright test e2e/visual.spec.ts --project=visual-mobile",
-    "test:e2e:smoke": "playwright test e2e/smoke.spec.ts"
+    "test:e2e:smoke": "playwright test e2e/smoke.spec.ts",
+    "test:e2e:search": "playwright test e2e/search.spec.ts"
   },
   "dependencies": {
     "@sentry/nextjs": "^11.10.0",

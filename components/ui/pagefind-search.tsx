@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import Link from "next/link";
+import { pagefindUrlToRoute } from "@/lib/search-url";
 
 interface PagefindResult {
   id: string;
@@ -72,10 +73,7 @@ export function PagefindSearch() {
         );
         setResults(
           data.map((d) => ({
-            url: d.url
-              .replace(/\.html$/, "")
-              .replace(/\/index$/, "")
-              .replace(/^\/?/, "/"),
+            url: pagefindUrlToRoute(d.url),
             title: d.meta?.title || d.url,
             excerpt: d.excerpt,
           }))

@@ -32,7 +32,7 @@ jobs:
       - name: Build
         run: |
           npx next build
-          npx pagefind --site .next/server/app --output-path public/pagefind || true
+          node scripts/build-search-index.mjs
 
       - name: Start server
         run: npm run start &
@@ -44,6 +44,12 @@ jobs:
 
       - name: Run smoke tests
         run: npm run test:e2e:smoke
+        env:
+          CI: true
+          BASE_URL: http://localhost:3000
+
+      - name: Run search tests
+        run: npm run test:e2e:search
         env:
           CI: true
           BASE_URL: http://localhost:3000

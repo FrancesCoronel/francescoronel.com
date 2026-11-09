@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { pagefindUrlToRoute } from "@/lib/search-url";
 
 interface PagefindResult {
   id: string;
@@ -103,10 +104,7 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
         );
         setResults(
           data.map((d) => ({
-            url: d.url
-              .replace(/\.html$/, "")
-              .replace(/\/index$/, "")
-              .replace(/^\/?/, "/"),
+            url: pagefindUrlToRoute(d.url),
             title: d.meta?.title || d.url,
             excerpt: d.excerpt,
           }))
