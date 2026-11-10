@@ -10,7 +10,7 @@ vi.mock("next/script", () => ({
   ),
 }));
 
-import { GOOGLE_TAG_ID, GoogleAdsTag, googleAdsTagEnabled } from "./google-ads-tag";
+import { BOOKING_PARAMS_SCRUB, BookingParamsScrub, GOOGLE_TAG_ID, GoogleAdsTag, googleAdsTagEnabled } from "./google-ads-tag";
 
 afterEach(() => {
   vi.unstubAllEnvs();
@@ -19,7 +19,7 @@ afterEach(() => {
 describe("GoogleAdsTag", () => {
   it("renders nothing unless enabled", () => {
     expect(renderToStaticMarkup(<GoogleAdsTag />)).toBe("");
-    expect(renderToStaticMarkup(<GoogleAdsTag purchaseValue={30} />)).toBe("");
+    expect(renderToStaticMarkup(<GoogleAdsTag purchase={{ halfHour: 30, hour: 65 }} />)).toBe("");
   });
 
   it("loads the Google tag lazily without a purchase event on the landing page", () => {
@@ -30,11 +30,17 @@ describe("GoogleAdsTag", () => {
     expect(html).not.toContain("purchase");
   });
 
-  it("reports a purchase with the booking value on the thank-you page", () => {
-    const html = renderToStaticMarkup(<GoogleAdsTag enabled purchaseValue={30} />);
+  it("reports a purchase priced by session length on the thank-you page", () => {
+    const html = renderToStaticMarkup(<GoogleAdsTag enabled purchase={{ halfHour: 30, hour: 65 }} />);
     expect(html).toContain("gtag('event','purchase'");
-    expect(html).toContain("value:30,currency:'USD'");
+    expect(html).toContain("value:b.minutes>=60?65:30,currency:'USD'");
     expect(html).toContain("sessionStorage");
+  });
+
+  it("renders the scrub as an inline script that removes the query string", () => {
+    expect(renderToStaticMarkup(<BookingParamsScrub />)).toBe(`<script>${BOOKING_PARAMS_SCRUB}</script>`);
+    expect(BOOKING_PARAMS_SCRUB).toContain("history.replaceState(history.state,'',location.pathname)");
+    expect(BOOKING_PARAMS_SCRUB).not.toContain("email");
   });
 
   it("is enabled only on the Vercel production deployment", () => {

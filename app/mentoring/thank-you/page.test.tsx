@@ -25,4 +25,10 @@ describe("app/mentoring/thank-you/page", () => {
     expect(html).toContain('data-pagefind-ignore="all"');
     expect(html).not.toContain("—");
   });
+
+  it("strips booking details from the URL before anything else renders", () => {
+    const html = renderToStaticMarkup(<MentoringThankYouPage />);
+    expect(html.indexOf("history.replaceState")).toBeGreaterThan(-1);
+    expect(html.indexOf("history.replaceState")).toBeLessThan(html.indexOf("Booking Confirmed"));
+  });
 });
