@@ -4,9 +4,7 @@
 
 ## Why?
 
-<!-- Link the issue or explain the motivation. -->
-
-Closes #
+<!-- Explain the motivation. -->
 
 ## Testing
 

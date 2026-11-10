@@ -14,10 +14,10 @@ This is a personal website. External contributions are welcome for:
 
 ## How to contribute
 
-1. [Open an issue](../../issues/new/choose) first for anything beyond a one-line fix
+1. [Get in touch](https://francescoronel.com/contact) first for anything beyond a one-line fix
 2. Fork the repo and create a branch off `main`
 3. Make your change, run `npm run lint` and `npm run build` locally
-4. Open a pull request — describe what and why, link the issue
+4. Open a pull request — describe what and why
 
 ## Local setup
 
@@ -33,7 +33,7 @@ npm run lint      # ESLint + Markdown lint
 - TypeScript everywhere (strict mode)
 - Tailwind CSS 4 utility classes — no new CSS files
 - Follow the existing component patterns in `components/`
-- No new dependencies without discussion in an issue first
+- No new dependencies without discussing it first
 
 ## License
 
