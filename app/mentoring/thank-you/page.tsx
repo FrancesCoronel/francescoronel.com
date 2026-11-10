@@ -4,6 +4,7 @@ import Link from "next/link";
 import { buildMetadata } from "@/lib/metadata";
 import { PageHeader } from "@/components/ui/page-header";
 import { ConnectCTA } from "@/components/sections/connect-cta";
+import { GoogleAdsTag, googleAdsTagEnabled } from "@/components/layout/google-ads-tag";
 
 // Where cal.com (and the payment provider) send people once a mentoring session is
 // booked and paid for. Only reachable from that redirect, so it stays out of search
@@ -110,6 +111,8 @@ export default function MentoringThankYouPage() {
       </section>
 
       <ConnectCTA variant="follow" />
+      {/* Reports the booking to Google Ads. $30 is the 30-minute price; cal.com does not tell us which session was booked. */}
+      <GoogleAdsTag enabled={googleAdsTagEnabled()} purchaseValue={30} />
     </div>
   );
 }
