@@ -35,6 +35,9 @@ describe("GoogleAdsTag", () => {
     expect(html).toContain("gtag('event','purchase'");
     expect(html).toContain("value:b.minutes>=60?65:30,currency:'USD'");
     expect(html).toContain("sessionStorage");
+    // No booking uid means no purchase: direct visits must not count as sales
+    expect(html).toContain("if(!uid)return;");
+    expect(html).not.toContain("Date.now()");
   });
 
   it("renders the scrub as an inline script that removes the query string", () => {

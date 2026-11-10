@@ -20,11 +20,12 @@ export function BookingParamsScrub() {
   return <script dangerouslySetInnerHTML={{ __html: BOOKING_PARAMS_SCRUB }} />;
 }
 
-// Fires once per booking: the booking `uid` is the transaction ID, and sessionStorage
-// stops a reload from counting the same booking twice. A session of an hour or more
+// Fires once per booking, and only when cal.com sent a booking `uid`, so opening the
+// page directly is never counted as a sale. The `uid` is the transaction ID, and
+// sessionStorage stops a reload from counting the same booking twice. A session of an hour or more
 // is reported at the hourly price.
 function purchaseScript({ halfHour, hour }: BookingPrices) {
-  return `(function(){var b=window.__fcBooking||{},uid=b.uid,key=uid||'no-uid';try{if(sessionStorage.getItem('fc_booking')===key)return;sessionStorage.setItem('fc_booking',key);}catch(e){}gtag('event','purchase',{transaction_id:uid||'booking-'+Date.now(),value:b.minutes>=60?${hour}:${halfHour},currency:'USD'});})();`;
+  return `(function(){var b=window.__fcBooking||{},uid=b.uid;if(!uid)return;try{if(sessionStorage.getItem('fc_booking')===uid)return;sessionStorage.setItem('fc_booking',uid);}catch(e){}gtag('event','purchase',{transaction_id:uid,value:b.minutes>=60?${hour}:${halfHour},currency:'USD'});})();`;
 }
 
 interface BookingPrices {
