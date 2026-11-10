@@ -2,6 +2,35 @@ import type { NextConfig } from "next";
 import { withSentryConfig } from "@sentry/nextjs/config";
 import dedupRedirects from "./scripts/dedup-redirects.json";
 
+// The Google tag (Google Ads conversion tracking) only runs on the mentoring pages,
+// so only those pages get the extra Google hosts.
+const GOOGLE_TAG_HOSTS = {
+  script: " https://www.googletagmanager.com https://www.googleadservices.com https://www.google.com https://googleads.g.doubleclick.net",
+  connect:
+    " https://www.googletagmanager.com https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://ad.doubleclick.net https://pagead2.googlesyndication.com https://*.google-analytics.com https://*.analytics.google.com",
+  frame: " https://www.googletagmanager.com https://td.doubleclick.net https://bid.g.doubleclick.net",
+};
+
+function contentSecurityPolicy({ googleTag = false } = {}) {
+  const google = googleTag ? GOOGLE_TAG_HOSTS : { script: "", connect: "", frame: "" };
+  return [
+    "default-src 'self'",
+    // Next.js requires unsafe-inline for hydration scripts; wasm-unsafe-eval lets Pagefind
+    // search compile its WebAssembly; full unsafe-eval only for dev HMR
+    `script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""} https://app.cal.com https://va.vercel-scripts.com${google.script}`,
+    "style-src 'self' 'unsafe-inline'",
+    // Images come from many external CDNs across 665 blog posts
+    "img-src 'self' data: https:",
+    "font-src 'self'",
+    // API calls: Vercel Analytics/Speed Insights, Buttondown newsletter
+    `connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://formspree.io https://o188643.ingest.us.sentry.io${google.connect}`,
+    // Cal.com booking embed + YouTube/Instagram MDX embeds
+    `frame-src https://cal.com https://app.cal.com https://www.youtube.com https://www.instagram.com${google.frame}`,
+    "object-src 'none'",
+    "base-uri 'self'",
+  ].join("; ");
+}
+
 const securityHeaders = [
   { key: "X-Frame-Options", value: "DENY" },
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -14,25 +43,7 @@ const securityHeaders = [
     key: "Strict-Transport-Security",
     value: "max-age=63072000; includeSubDomains; preload",
   },
-  {
-    key: "Content-Security-Policy",
-    value: [
-      "default-src 'self'",
-      // Next.js requires unsafe-inline for hydration scripts; wasm-unsafe-eval lets Pagefind
-      // search compile its WebAssembly; full unsafe-eval only for dev HMR
-      `script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""} https://app.cal.com https://va.vercel-scripts.com`,
-      "style-src 'self' 'unsafe-inline'",
-      // Images come from many external CDNs across 665 blog posts
-      "img-src 'self' data: https:",
-      "font-src 'self'",
-      // API calls: Vercel Analytics/Speed Insights, Buttondown newsletter
-      "connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://formspree.io https://o188643.ingest.us.sentry.io",
-      // Cal.com booking embed + YouTube/Instagram MDX embeds
-      "frame-src https://cal.com https://app.cal.com https://www.youtube.com https://www.instagram.com",
-      "object-src 'none'",
-      "base-uri 'self'",
-    ].join("; "),
-  },
+  { key: "Content-Security-Policy", value: contentSecurityPolicy() },
 ];
 
 const nextConfig: NextConfig = {
@@ -45,6 +56,11 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       { source: "/(.*)", headers: securityHeaders },
+      // Later entries win, so the mentoring pages get the policy that allows the Google tag
+      ...["/mentoring", "/mentoring/thank-you"].map((source) => ({
+        source,
+        headers: [{ key: "Content-Security-Policy", value: contentSecurityPolicy({ googleTag: true }) }],
+      })),
       // Font files never change in place; rename the file if a font is ever updated
       {
         source: "/fonts/:file*",

@@ -7,6 +7,7 @@ import { CalEmbed } from "@/components/ui/cal-embed";
 import { PageHeader } from "@/components/ui/page-header";
 import { ConnectCTA } from "@/components/sections/connect-cta";
 import { MentoringSessionsFeed } from "@/components/ui/mentoring-sessions-feed";
+import { GoogleAdsTag, googleAdsTagEnabled } from "@/components/layout/google-ads-tag";
 
 export const metadata: Metadata = buildMetadata({
   title: "Mentoring",
@@ -310,6 +311,8 @@ export default function MentoringPage() {
       </section>
 
       <ConnectCTA variant="mentoring" />
+      {/* Records the ad click so a later booking can be credited to the Google Ads campaign */}
+      <GoogleAdsTag enabled={googleAdsTagEnabled()} />
     </>
   );
 }
