@@ -47,7 +47,7 @@ Dedup script (`scripts/migrations/dedup-posts.js`) keeps the Webflow version whe
 
 ### Routing 🗺️
 
-- **Static pages**: `/`, `/about`, `/posts`, `/categories`, `/contact`, `/speaking`, `/mentoring`, `/mentoring/sessions`, `/now`, `/portfolio`, `/work`, `/uses`, `/testimonials`, `/organizations`, `/for-llms`, `/tags`, `/design-system`, `/essays`
+- **Static pages**: `/`, `/about`, `/posts`, `/categories`, `/contact`, `/speaking`, `/mentoring`, `/mentoring/sessions`, `/mentoring/thank-you` (noindex page cal.com redirects to after a paid booking), `/now`, `/portfolio`, `/work`, `/uses`, `/testimonials`, `/organizations`, `/for-llms`, `/tags`, `/design-system`, `/essays`
 - **Dynamic SSG**: `/posts/[slug]`, `/categories/[slug]`, `/tags/[slug]`, `/experience/[slug]`, `/education/[slug]`, `/awards/[slug]`, `/organizations/[slug]`, `/testimonials/[slug]`
 - **Route handlers**: `/feed` (RSS), `/api/newsletter`, `/api/mentoring-sessions`, `/api/social-upload`
 - **Metadata routes**: `/robots.txt` (`app/robots.ts`), `/sitemap.xml` (`app/sitemap.ts`)
@@ -103,7 +103,7 @@ Noise from browser extensions and link scanners is filtered in `sentry.client.co
 
 ### Analytics 📊
 
-Vercel Analytics (pageviews and custom events) and Speed Insights (Core Web Vitals), loaded in `components/layout/analytics.tsx` only on Vercel. There is no Google Analytics; it was removed to save ~190 KB of script per page. Custom events go through `trackEvent()` in `lib/analytics.ts`, which queues them until Vercel's script loads and never throws.
+Vercel Analytics (pageviews and custom events) and Speed Insights (Core Web Vitals), loaded in `components/layout/analytics.tsx` only on Vercel. There is no Google Analytics; it was removed to save ~190 KB of script per page. The one exception is the Google tag for the Google Ads mentoring campaign (`components/layout/google-ads-tag.tsx`): it loads only on `/mentoring` and `/mentoring/thank-you`, only on the production deployment, and those two paths get a wider Content-Security-Policy in `next.config.ts`. Custom events go through `trackEvent()` in `lib/analytics.ts`, which queues them until Vercel's script loads and never throws.
 
 | Event | Fired by |
 |---|---|
