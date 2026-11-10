@@ -1,0 +1,130 @@
+---
+title: "Madrina: A Career Coach for Women Engineers 💛"
+slug: "madrina-career-coach-for-women-engineers"
+date: "2026-11-09"
+excerpt: "I built Madrina, a career coach in Slack for women software engineers, in about 2 hours at Anthropic's Code with Claude: Women in AI Hackathon. Here's why, how, and what I'd do differently."
+featuredImage: "/images/blog/madrina-app-home.png"
+categories: ["events"]
+tags: ["hackathon", "ai-agents", "career-advice", "women-of-color-in-tech", "open-source", "event-recap"]
+organizations: ["latina-dev"]
+skills: []
+source: "nextjs"
+social: "When Grace Hopper was cancelled 2 weeks out, I kept thinking about where women engineers get career advice now 💭 So I built Madrina, a career coach in Slack for women software engineers. Madrina means godmother in Spanish: the woman who vouches for you 💛"
+---
+
+## Why I built a godmother for women engineers 💛
+
+Last Friday I spent one morning at Anthropic's Code with Claude: Women in AI Hackathon and built [Madrina](https://github.com/FrancesCoronel/madrina), a career coach in Slack for women software engineers. *Madrina* means godmother in Spanish: the woman who vouches for you.
+
+The idea started with a loss. A few weeks earlier, the [Grace Hopper Celebration was cancelled 14 days before it opened](https://hackernoon.com/anitaborg-cancels-grace-hopper-celebration-14-days-out-after-losing-%24146m-and-half-its-attendees). Eleven of my Slack teammates were set to go. For a lot of women, that week was the one time a year they got career advice from people who looked like them.
+
+So I asked myself: if our stages keep disappearing, what would it look like to bring that advice into the place we already work every day?
+
+---
+
+## The leak is after the hire 📉
+
+We talk a lot about the pipeline. The bigger problem is what happens after a woman gets the job.
+
+- **She stops moving up.** When surveys ask women why they left tech, the top answer is limited career advancement: 28% in [Indeed's US survey](https://venturebeat.com/2018/11/06/indeed-career-stagnation-drives-women-out-of-tech-jobs) and 25% in the [2025 Lovelace Report](https://www.computing.co.uk/feature/2025/80-percent-women-in-tech-looking-for-exit). Childcare comes in at 2 to 3%.
+- **She gets handed the glue work.** In the [research behind *The No Club*](https://www.utimes.pitt.edu/node/5529), women were 44% more likely than men to be asked to take on non-promotable tasks. That work keeps teams running and rarely shows up in a promo packet.
+- **She learns from a single story.** Chimamanda Ngozi Adichie warned about the danger of a single story. Engineering career advice has one. The biggest engineering newsletters are written by men, and fewer than 1 in 5 guests on the Pragmatic Engineer podcast are women.
+
+Promotion is an economic mobility lever. Your level sets your pay, your equity and who gets the next big project.
+
+---
+
+## Meet Madrina ✨
+
+Madrina lives in Slack, because that's where the work, the asks and the 1:1 follow-ups already happen. Meet Ana Rivera, a synthetic Senior engineer aiming for Staff. Everything in the demo is made up, including Ana.
+
+![Madrina's App Home in Slack, showing Ana's path from Senior to Staff, her top 3 gaps, a recommended resource and her logged wins](/images/blog/madrina-app-home.png)
+
+| Feature | What happens |
+|---|---|
+| 🏠 App Home dashboard | Ana sees her current and target level, her top 3 gaps against a career ladder, one resource by a woman author for her biggest gap, her logged wins, and which support slots (mentor, sponsor, advocate, coach) are still empty |
+| 🧭 Weekly focus check | Her manager said Gateway matters most. This week, 7 of her 9 pull requests went to Billing, and 6 of those asks came in by DM. Madrina notices and asks: redirect, or let your manager know about the competing asks? |
+| ✍🏽 Draft a note to my manager | Claude drafts it in the thread. Madrina never sends anything to your manager: she drafts, you decide |
+| 🏆 Log a win | Ana replies with one line, and Claude turns it into a promo-ready bullet mapped to a ladder competency |
+| 💬 Coach | Ask Madrina anything. Answers use only a curated shelf of books, talks and newsletters by women |
+| 🔌 MCP connector | Your own Claude can read your Madrina profile, gaps and wins, so "am I on track for Staff?" works outside Slack too |
+
+![Madrina's weekly focus check in a Slack DM, pointing out that 7 of Ana's 9 pull requests went to Billing instead of Gateway](/images/blog/madrina-focus-check.png)
+
+![Madrina drafting a note to Ana's manager in a Slack thread, then turning a one-line win into a promo-ready bullet](/images/blog/madrina-draft-and-win.png)
+
+Two choices mattered most to me. First, the IC track to Staff and Principal is treated as a real destination, not a consolation prize for skipping management. Second, every resource is by someone who publicly identifies as a woman: Tanya Reilly, Camille Fournier, Lara Hogan, Sarah Drasner, Cate Huston, Jean Hsu, Julia Evans, Charity Majors and more. Madrina never guesses anyone's gender.
+
+---
+
+## How I built it in 2 hours 🤖
+
+Hacking opened at 10 AM, but I had a meeting first, so I didn't start until 10:44 AM. Submissions closed at 12:45 PM. I built Madrina solo with Claude Code, starting from Vercel's Slack Agent Template: Bolt for JS on Nitro, Claude Opus 5.5 through the AI SDK, and synthetic JSON instead of a database.
+
+| By the numbers | |
+|---|---|
+| Build time | About 2 hours |
+| Claude Code sessions | 12: one main session plus 11 running in parallel |
+| Commits | 26 during the hackathon |
+| Code | About 2,960 lines across 57 files |
+| Claude Code cost | About $53 at list price |
+
+Almost all of that cost went to agents re-reading their own context, which is what long agent sessions cost.
+
+The core flow came together fast, about one feature every 3 to 5 minutes:
+
+1. **10:47** Swapped the template's AI layer for direct Claude calls
+2. **11:03** App Home dashboard
+3. **11:06** Focus check DM with its three buttons
+4. **11:11** Log a win
+5. **11:19** The @mention coach
+
+Then I fanned out. Side sessions handled branding (an owl with her *ahijada*, her godchild, tucked under her wing), synthetic Slack seed data, Block Kit formatting and the demo script. In the last hour, three more sessions built the MCP connector, a brag doc export and a live glue work flag.
+
+---
+
+## What I'd do differently 🎬
+
+Madrina didn't place in the top 6, and I know the biggest reason: the demo. Here's what I'd tell anyone walking into a timed build:
+
+- **Record a rough demo at the halfway point.** Judges watch the video. A feature that never makes it on camera doesn't count.
+- **Lock the video 30 minutes early.** I recorded my final take with about 10 minutes left, and the cleaner cut finished after the deadline.
+- **Say no to late side quests.** The MCP connector, brag doc and glue work flag all work. Most of them never made it into the video.
+- **Freeze your checkout before you record.** Pulling 8 commits from side sessions mid-demo added a dependency I hadn't installed, and every Slack request failed until I ran `pnpm install`.
+- **Give each parallel session a file boundary, and let one session own commits.** Parallel agents are fast, but you pay an integration tax at the worst moment.
+- **Check the rules early.** I spent minutes trimming the video to 2:00 before realizing there was no length limit.
+
+What worked: a written spec with "cut from the bottom" priorities, and one synthetic persona with a clear story. The full list of gotchas is in [LEARNINGS.md](https://github.com/FrancesCoronel/madrina/blob/main/docs/LEARNINGS.md).
+
+---
+
+## Builder, not beneficiary 🌶️
+
+Here's my spicy take. I love that this hackathon existed, and I'd go again. But I could count the Latina and Black women in the room on one hand. Most of the builders were white and Asian women.
+
+Meanwhile, a lot of the projects were built for domestic violence survivors, immigrant communities and communities of color. Those are real problems that deserve real tools. It was still strange to sit in a room where my family was the target user, and I was the exception among the builders.
+
+Representation in the problem statements isn't the same as representation in the room. Building *for* a community is different from building *with* it. That's the single story again: when the same people decide what counts as a "women's problem," the solutions come out shaped like their view of everyone else.
+
+That's part of why I built Madrina for women like me, the ones already writing the code. If you run events like this, here's what I'd love to see:
+
+- **Recruit through the communities you want in the room**, like Latina.dev, Techqueria and groups for Black women in tech, not just your usual channels.
+- **Put those communities on the judging panel and the mentor list**, not only in the challenge statements.
+- **Ask builders what they need for themselves.** Some of the best ideas come from people solving their own problems.
+
+---
+
+## What's next 🚀
+
+Madrina is moving into [Latina.dev](https://latina.dev). The hackathon version was a demo with a made-up engineer. The next version gets built with real members of the Latina.dev Slack community, right next to the directory of mentors and resources it depends on. Next on the list:
+
+- **Real onboarding and saved data**, so every member gets her own coach, plus a clear promise: your data is yours, never your manager's or HR's.
+- **Live glue work flags**, so Madrina catches the ask the moment it lands, not a week later.
+- **Mentor, sponsor and coach matching** across Latina.dev, to fill the support slots no single employer can.
+- **Per-user sign-in for the MCP connector**, so you can connect your own Claude, claude.ai included.
+
+We'll measure success by how much people like using Madrina and how quickly they get their next promotion.
+
+The hackathon version stays up as an open source snapshot under MIT: [github.com/FrancesCoronel/madrina](https://github.com/FrancesCoronel/madrina). New work happens in the [Latina.dev repo](https://github.com/Latina-Dev/latina-dev).
+
+*Star it, try it, or tell me which nudge you wish you'd gotten earlier in your career. If our stages keep disappearing, let's build our own.* 💛
