@@ -97,6 +97,25 @@ describe("app/experience/[slug]/page", () => {
     expect(html).not.toContain(">Skills<");
   });
 
+  it("shows a skill with no tag page as plain text", async () => {
+    vi.mocked(getExperienceBySlug).mockReturnValue({
+      title: "Consultant",
+      slug: "untagged",
+      company: "Unknown Co",
+      companyLogo: "",
+      companyUrl: "",
+      location: "",
+      startDate: "2019-01-01",
+      endDate: null,
+      description: "",
+      highlights: [],
+      skills: ["not-a-real-skill"],
+    });
+    const html = renderToStaticMarkup(await ExperiencePage(params("untagged")));
+    expect(html).toContain(`>${getTagName("not-a-real-skill")}</span>`);
+    expect(html).not.toContain('href="/tags/not-a-real-skill"');
+  });
+
   it("calls notFound for an unknown slug", async () => {
     await expect(ExperiencePage(params("nope"))).rejects.toThrow("NEXT_NOT_FOUND");
   });
