@@ -12,17 +12,10 @@ on:
       - "tailwind.config.*"
       - "package.json"
       - "package-lock.json"
+  # No paths filter here: `lighthouse` is a required check on main, and a
+  # workflow skipped by a paths filter never reports, which blocks the PR.
   pull_request:
     branches: [main]
-    paths:
-      - "app/**"
-      - "components/**"
-      - "lib/**"
-      - "public/**"
-      - "next.config.ts"
-      - "tailwind.config.*"
-      - "package.json"
-      - "package-lock.json"
 
 concurrency:
   group: lighthouse-${{ github.ref }}
