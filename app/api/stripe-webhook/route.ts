@@ -1,5 +1,6 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
 import { NextResponse } from "next/server";
+import { prepaidBookingEmail } from "@/lib/emails/prepaid-booking";
 
 // Stripe payment links that sell prepaid mentoring packages. Buyers of these
 // get the booking link by email, in case they close the tab before the
@@ -9,7 +10,6 @@ const PREPAID_PAYMENT_LINK_IDS = new Set([
   "plink_1QvPpCJOE15tvMHYKP5LdkZ0", // 6 x 1-Hour Mentoring Calls
 ]);
 
-const BOOKING_URL = "https://cal.com/francescoronel/mentoring-hour-prepaid";
 const REPLY_TO = "hello@francescoronel.com";
 const SIGNATURE_TOLERANCE_SECONDS = 300;
 
@@ -54,26 +54,6 @@ function isValidSignature(payload: string, header: string, secret: string): bool
   });
 }
 
-function bookingEmail(name: string | null | undefined) {
-  const firstName = name?.trim().split(/\s+/)[0];
-  const greeting = firstName ? `Hi ${firstName},` : "Hi there,";
-  const lines = [
-    greeting,
-    "Thank you for booking a mentoring package with me! 🎉",
-    "You can schedule your sessions whenever you're ready using this link:",
-    BOOKING_URL,
-    "Keep this email handy, since the same link works for every session in your package.",
-    "Reply here if you have any questions. Excited to chat soon!",
-    "Frances",
-  ];
-  const html = lines
-    .map((line) =>
-      line === BOOKING_URL ? `<p><a href="${BOOKING_URL}">${BOOKING_URL}</a></p>` : `<p>${line}</p>`
-    )
-    .join("");
-  return { subject: "Book your mentoring sessions 🗓️", text: lines.join("\n\n"), html };
-}
-
 export async function POST(request: Request) {
   const secret = process.env.STRIPE_WEBHOOK_SECRET;
   const apiKey = process.env.RESEND_API_KEY;
@@ -113,7 +93,7 @@ export async function POST(request: Request) {
       from,
       to: [email],
       reply_to: REPLY_TO,
-      ...bookingEmail(session.customer_details?.name),
+      ...prepaidBookingEmail(session.customer_details?.name),
     }),
   });
 

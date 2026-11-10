@@ -96,7 +96,8 @@ describe("POST /api/stripe-webhook", () => {
     });
     expect(body.text).toContain("Hi Ada,");
     expect(body.text).toContain("https://cal.com/francescoronel/mentoring-hour-prepaid");
-    expect(body.html).toContain('<a href="https://cal.com/francescoronel/mentoring-hour-prepaid">');
+    expect(body.html).toContain('href="https://cal.com/francescoronel/mentoring-hour-prepaid"');
+    expect(body.html).toContain("Hi Ada,");
   });
 
   it("also sends when a delayed payment clears", async () => {
