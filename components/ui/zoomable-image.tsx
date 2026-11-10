@@ -37,6 +37,7 @@ export function ZoomableImage({
     <>
       <span
         className={`group relative inline-block cursor-zoom-in ${className ?? ""}`}
+        data-zoom-src={src}
         onClick={() => setOpen(true)}
         role="button"
         tabIndex={0}
@@ -45,7 +46,7 @@ export function ZoomableImage({
       >
         {children}
         {/* Zoom hint badge */}
-        <span className="pointer-events-none absolute right-2 bottom-2 rounded bg-black/50 px-1.5 py-0.5 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
+        <span className="pointer-events-none absolute right-2 bottom-2 rounded bg-black/50 px-1.5 py-0.5 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 [@media(hover:none)]:opacity-100">
           🔍 zoom
         </span>
       </span>
