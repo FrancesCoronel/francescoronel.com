@@ -54,16 +54,23 @@ describe("app/about/page", () => {
     expect(html).toContain(`href="/experience/${employment.slug}"`);
   });
 
-  it("renders skills as internal links, external links or plain chips", () => {
-    const internal = skills.find((s) => actualGetSkillUrl(s.slug)?.startsWith("/"))!;
-    const external = skills.find((s) => actualGetSkillUrl(s.slug)?.startsWith("http"))!;
-    const plain = skills.find((s) => s !== internal && s !== external)!;
-    vi.mocked(skillIcon.getSkillUrl).mockImplementation((slug) =>
-      slug === plain.slug ? null : actualGetSkillUrl(slug),
-    );
+  it("links skills to their tag page, else an internal or external link, else a plain chip", () => {
+    const hasTagPage = (slug: string) => content.getTagHref(slug) !== null;
+    const tagged = skills.find((s) => hasTagPage(s.slug))!;
+    const untagged = skills.filter((s) => !hasTagPage(s.slug));
+    const external = untagged.find((s) => actualGetSkillUrl(s.slug)?.startsWith("http"))!;
+    const internal = untagged.find((s) => s !== external)!;
+    const plain = untagged.find((s) => s !== internal && s !== external)!;
+    vi.mocked(skillIcon.getSkillUrl).mockImplementation((slug) => {
+      if (slug === plain.slug) return null;
+      if (slug === internal.slug) return "/speaking";
+      return actualGetSkillUrl(slug);
+    });
     const html = render();
-    expect(html).toContain(`href="${actualGetSkillUrl(internal.slug)}"`);
-    expect(html).toContain(`href="${actualGetSkillUrl(external.slug)}" target="_blank" rel="noopener noreferrer"`);
+    const chips = html.slice(html.indexOf("Skills &amp; Technologies"));
+    expect(chips).toContain(`href="/tags/${tagged.slug}"`);
+    expect(chips).toContain('href="/speaking"');
+    expect(chips).toContain(`href="${actualGetSkillUrl(external.slug)}" target="_blank" rel="noopener noreferrer"`);
     const chip = html.slice(html.indexOf("cursor-default"));
     expect(chip.slice(0, chip.indexOf("inline-flex"))).toContain(`${plain.name.replace(/&/g, "&amp;")}</span>`);
     expect(html.match(/cursor-default/g)).toHaveLength(1);

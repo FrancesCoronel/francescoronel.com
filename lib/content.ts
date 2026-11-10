@@ -209,13 +209,47 @@ export function getCategoryMaps() {
   return { categoryImages };
 }
 
+/**
+ * Posts and projects for a tag. Skills are tags too: a post matches on its
+ * `tags` or its `skills`, and projects carry their skills as tags.
+ */
+export function getPostsByTag(tagSlug: string): Post[] {
+  return getAllPosts().filter(
+    (post) => post.tags.includes(tagSlug) || post.skills.includes(tagSlug)
+  );
+}
+
+/** Roles (experience.json) that list a skill */
+export function getExperiencesBySkill(skillSlug: string): WorkExperience[] {
+  return getExperiences().filter((exp) => (exp.skills ?? []).includes(skillSlug));
+}
+
+/**
+ * Every tag with its count of posts, projects and roles: the tags in
+ * tags.json, then the skills in skills.json that aren't already a tag. A skill
+ * only becomes a tag once a post, project or role uses it, so there are no
+ * empty tag pages.
+ */
+let _tagsCache: Tag[] | null = null;
+
 export function getTags(): Tag[] {
+  if (_tagsCache) return _tagsCache;
   const tags = loadJSON<Tag>("tags.json");
-  const posts = getAllBlogPosts();
-  return tags.map((tag) => ({
+  const tagSlugs = new Set(tags.map((t) => t.slug));
+  const skillTags = getSkills()
+    .filter((skill) => !tagSlugs.has(skill.slug))
+    .map(({ name, slug }) => ({ name, slug }));
+  const withCount = (tag: Tag): Tag => ({
     ...tag,
-    count: posts.filter((p) => p.tags.includes(tag.slug)).length,
-  }));
+    count: getPostsByTag(tag.slug).length + getExperiencesBySkill(tag.slug).length,
+  });
+  _tagsCache = [...tags.map(withCount), ...skillTags.map(withCount).filter((tag) => tag.count! > 0)];
+  return _tagsCache;
+}
+
+/** `/tags/<slug>` when the tag or skill has a tag page, else null */
+export function getTagHref(slug: string): string | null {
+  return getTags().some((t) => t.slug === slug) ? `/tags/${slug}` : null;
 }
 
 /** Organizations excluded from featured/preview sections (still exist for detail pages) */
@@ -260,9 +294,13 @@ export function getTagBySlug(slug: string): Tag | undefined {
   return getTags().find((t) => t.slug === slug);
 }
 
-/** Display name for a tag slug: the name in tags.json, else the slug title-cased with acronym overrides */
+/** Display name for a tag slug: the name in tags.json or skills.json, else the slug title-cased with acronym overrides */
 export function getTagName(slug: string): string {
-  return loadJSON<Tag>("tags.json").find((t) => t.slug === slug)?.name ?? formatSlugLabel(slug);
+  return (
+    loadJSON<Tag>("tags.json").find((t) => t.slug === slug)?.name ??
+    getSkills().find((s) => s.slug === slug)?.name ??
+    formatSlugLabel(slug)
+  );
 }
 
 export function getTestimonialBySlug(

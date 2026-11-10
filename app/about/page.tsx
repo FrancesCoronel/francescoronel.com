@@ -10,6 +10,7 @@ import {
   getTestimonials,
   getAllBlogPosts,
   getBlogPostsByCategory,
+  getTagHref,
   EXCLUDED_FROM_FEATURED_ORGS,
 } from "@/lib/content";
 import skills from "@/content/skills.json";
@@ -325,7 +326,8 @@ export default function AboutPage() {
           </h2>
           <div className="mt-8 flex flex-wrap gap-2">
             {skills.map((skill) => {
-              const url = getSkillUrl(skill.slug);
+              // Skills are tags: link to the tag page when one exists
+              const url = getTagHref(skill.slug) ?? getSkillUrl(skill.slug);
               const emoji = getSkillEmoji(skill.slug);
               const isInternal = url?.startsWith("/");
               const inner = (
