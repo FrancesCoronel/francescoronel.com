@@ -10,8 +10,12 @@ function sign(payload: string, timestamp = Math.floor(Date.now() / 1000), secret
   return `t=${timestamp},v1=${digest}`;
 }
 
-function event(session: Record<string, unknown>, type = "checkout.session.completed") {
-  return JSON.stringify({ id: "evt_123", type, data: { object: session } });
+function event(
+  session: Record<string, unknown>,
+  type = "checkout.session.completed",
+  created = Math.floor(Date.now() / 1000)
+) {
+  return JSON.stringify({ id: "evt_123", type, created, data: { object: session } });
 }
 
 function paidSession(overrides: Record<string, unknown> = {}) {
@@ -132,6 +136,21 @@ describe("POST /api/stripe-webhook", () => {
       expect(await res.json()).toEqual({ received: true, sent: false });
     }
     expect(fetchMock).not.toHaveBeenCalled();
+  });
+
+  it("skips retries of events older than Resend's idempotency window", async () => {
+    const fetchMock = stubFetch();
+    const now = Math.floor(Date.now() / 1000);
+
+    const stale = event(paidSession(), undefined, now - 24 * 60 * 60);
+    const res = await POST(webhookRequest(stale));
+    expect(res.status).toBe(200);
+    expect(await res.json()).toEqual({ received: true, sent: false, reason: "event too old" });
+    expect(fetchMock).not.toHaveBeenCalled();
+
+    const recent = event(paidSession(), undefined, now - 22 * 60 * 60);
+    expect(await (await POST(webhookRequest(recent))).json()).toEqual({ received: true, sent: true });
+    expect(fetchMock).toHaveBeenCalledTimes(1);
   });
 
   it("returns 502 so Stripe retries when Resend fails", async () => {

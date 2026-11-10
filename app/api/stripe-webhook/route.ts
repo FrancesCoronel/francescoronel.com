@@ -13,6 +13,12 @@ const PREPAID_PAYMENT_LINK_IDS = new Set([
 const REPLY_TO = "hello@francescoronel.com";
 const SIGNATURE_TOLERANCE_SECONDS = 300;
 
+// Resend remembers an Idempotency-Key for 24 hours, but Stripe keeps retrying a
+// failed delivery for up to three days. Past this age a retry could no longer be
+// deduplicated, so the event is acknowledged without sending: a buyer missing
+// the email (they were also redirected to the booking page) beats a duplicate.
+const MAX_EVENT_AGE_SECONDS = 23 * 60 * 60;
+
 // Fired when a checkout is paid right away, or when a delayed payment method clears
 const PAID_EVENTS = new Set([
   "checkout.session.completed",
@@ -28,6 +34,7 @@ interface CheckoutSession {
 interface StripeEvent {
   id: string;
   type: string;
+  created: number;
   data: { object: CheckoutSession };
 }
 
@@ -81,12 +88,18 @@ export async function POST(request: Request) {
     return NextResponse.json({ received: true, sent: false });
   }
 
+  // `created` is when Stripe first generated the event; it stays the same across retries
+  if (Date.now() / 1000 - event.created > MAX_EVENT_AGE_SECONDS) {
+    return NextResponse.json({ received: true, sent: false, reason: "event too old" });
+  }
+
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
       // Stripe retries deliveries; this keeps a retry from sending a second email
+      // for as long as Resend remembers the key (see MAX_EVENT_AGE_SECONDS)
       "Idempotency-Key": `prepaid-booking/${event.id}`,
     },
     body: JSON.stringify({
