@@ -4,6 +4,8 @@ My personal website, fully self-owned and prompt-driven. Migrated from Webflow t
 
 **Live:** [francescoronel.com](https://francescoronel.com) · **Hosted on:** Vercel · **Project Board:** [GitHub Projects](https://github.com/users/FrancesCoronel/projects/3/)
 
+[![Screenshot of the francescoronel.com homepage](.github/img/screenshot.png)](https://francescoronel.com)
+
 ---
 
 ## Tech Stack 🛠️
