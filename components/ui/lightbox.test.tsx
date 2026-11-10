@@ -4,6 +4,7 @@ import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it } from "vitest";
 import { Lightbox } from "./lightbox";
+import { ZoomableImage } from "./zoomable-image";
 
 /* eslint-disable @next/next/no-img-element */
 function Gallery() {
@@ -97,6 +98,64 @@ describe("Lightbox", () => {
     await user.click(screen.getByAltText("First photo"));
     await user.click(screen.getByRole("dialog"));
     expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+  });
+
+  it("toggles between fitted and full size from the image or the button, and resets on navigation", async () => {
+    const user = userEvent.setup();
+    render(<Gallery />);
+    await user.click(screen.getByAltText("First photo"));
+
+    const toggle = screen.getByRole("button", { name: "Full size" });
+    expect(toggle).toHaveAttribute("aria-pressed", "false");
+    expect(viewerImage()).toHaveClass("max-w-[90vw]", "cursor-zoom-in");
+
+    // Tapping the image shows it at full size and hides the caption that would cover it
+    await user.click(viewerImage());
+    expect(viewerImage()).toHaveClass("max-w-none", "cursor-zoom-out");
+    expect(screen.getByRole("button", { name: "Fit to screen" })).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByRole("dialog")).not.toHaveTextContent("First photo");
+
+    await user.click(screen.getByRole("button", { name: "Fit to screen" }));
+    expect(viewerImage()).toHaveClass("max-w-[90vw]");
+    expect(screen.getByRole("dialog")).toBeInTheDocument();
+
+    // Moving to another image always starts fitted
+    await user.click(screen.getByRole("button", { name: "Full size" }));
+    await user.click(screen.getByRole("button", { name: "Next image" }));
+    expect(viewerImage()).toHaveClass("max-w-[90vw]");
+    await user.click(viewerImage());
+    await user.click(screen.getByRole("button", { name: "Previous image" }));
+    expect(viewerImage()).toHaveClass("max-w-[90vw]");
+  });
+
+  it("shows the full-size file of a ZoomableImage and opens only one viewer", async () => {
+    const user = userEvent.setup();
+    render(
+      <Lightbox>
+        <ZoomableImage src="https://example.com/full.png" alt="Screenshot">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="https://example.com/thumb.png" alt="Screenshot" />
+        </ZoomableImage>
+      </Lightbox>
+    );
+    await user.click(screen.getByAltText("Screenshot"));
+
+    expect(screen.getAllByRole("dialog")).toHaveLength(1);
+    expect(viewerImage()).toHaveAttribute("src", "https://example.com/full.png");
+  });
+
+  it("prefers the srcset candidate the browser picked over the plain src", async () => {
+    const user = userEvent.setup();
+    render(
+      <Lightbox>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="https://example.com/small.png" alt="Responsive" />
+      </Lightbox>
+    );
+    const img = screen.getByAltText("Responsive");
+    Object.defineProperty(img, "currentSrc", { value: "https://example.com/large.png" });
+    await user.click(img);
+    expect(viewerImage()).toHaveAttribute("src", "https://example.com/large.png");
   });
 
   it("hides navigation, counter and caption for a single image without alt text", async () => {
