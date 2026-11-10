@@ -49,7 +49,7 @@ Dedup script (`scripts/migrations/dedup-posts.js`) keeps the Webflow version whe
 
 - **Static pages**: `/`, `/about`, `/posts`, `/categories`, `/contact`, `/speaking`, `/mentoring`, `/mentoring/sessions`, `/now`, `/portfolio`, `/work`, `/uses`, `/testimonials`, `/organizations`, `/for-llms`, `/tags`, `/design-system`, `/essays`
 - **Dynamic SSG**: `/posts/[slug]`, `/categories/[slug]`, `/tags/[slug]`, `/experience/[slug]`, `/education/[slug]`, `/awards/[slug]`, `/organizations/[slug]`, `/testimonials/[slug]`
-- **Route handlers**: `/feed` (RSS), `/api/newsletter`, `/api/mentoring-sessions`
+- **Route handlers**: `/feed` (RSS), `/api/newsletter`, `/api/mentoring-sessions`, `/api/social-upload`
 - **Metadata routes**: `/robots.txt` (`app/robots.ts`), `/sitemap.xml` (`app/sitemap.ts`)
 - Old `/blog/...` URLs redirect to `/posts/...` in `next.config.ts`. Always link to `/posts/<slug>`.
 
@@ -280,7 +280,19 @@ main();
 "
 ```
 
+**Social media graphics (for Buffer posts):** `POST /api/social-upload` stores an image in the `social/` folder and returns its public Blob URL, so a Claude session never needs the Blob token. Pass that URL to Buffer as the post's image asset.
+
+```bash
+curl -sS -X POST "https://francescoronel.com/api/social-upload?name=my-graphic" -H "x-upload-token: $SOCIAL_UPLOAD_TOKEN" --data-binary @my-graphic.png
+```
+
+- Response: `{ "url": "https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/social/<date>-my-graphic-<suffix>.png", ... }`
+- PNG, JPEG, GIF or WebP only (checked from the file's bytes), 4 MB at most, so no video
+- Needs `SOCIAL_UPLOAD_TOKEN` in the Vercel project's env. In a Claude Code cloud session the token is a network secret for `francescoronel.com` that the proxy adds as the `x-upload-token` header; send any placeholder value for it and never ask for the real one in chat
+- Code: `app/api/social-upload/route.ts`
+
 Folder conventions:
+- `social/` — social media graphics uploaded through `/api/social-upload`
 - `speaking/` — speaking event photos
 - `awards/` — award images
 - `projects/` — project screenshots/logos

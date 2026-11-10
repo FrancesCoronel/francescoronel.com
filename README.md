@@ -54,6 +54,7 @@ CAL_COM_API_KEY=                  # Cal.com mentoring sessions
 RESEND_API_KEY=                   # Newsletter (Resend)
 RESEND_SEGMENT_ID=                # Resend segment new subscribers join
 BLOB_READ_WRITE_TOKEN=            # Vercel Blob storage
+SOCIAL_UPLOAD_TOKEN=              # Shared secret for POST /api/social-upload
 ```
 
 ## Contributing 🤝🏽
