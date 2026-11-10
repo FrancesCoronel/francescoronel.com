@@ -36,14 +36,34 @@ export function Lightbox({ children, className }: { children: React.ReactNode; c
       const img = target.closest("img");
       if (!img || img.closest("a")) return;
       e.preventDefault();
+      // MDX images are also wrapped in ZoomableImage, whose own single-image
+      // viewer would open underneath this one. React listens at the root, so
+      // stopping the native event here keeps it to one viewer.
+      e.stopPropagation();
+      open(img.src);
+    };
+    // Keyboard users reach images through ZoomableImage's focusable wrapper:
+    // open the same carousel for them instead of the single-image viewer
+    const keyHandler = (e: KeyboardEvent) => {
+      if (e.key !== "Enter" && e.key !== " ") return;
+      const target = e.target as HTMLElement;
+      if (target.closest("a")) return;
+      const img = target.querySelector("img");
+      if (!img) return;
+      e.preventDefault();
+      e.stopPropagation();
       open(img.src);
     };
     el.addEventListener("click", handler);
+    el.addEventListener("keydown", keyHandler);
     // Add cursor pointer to all non-linked images
     el.querySelectorAll("img").forEach((img) => {
       if (!img.closest("a")) img.style.cursor = "zoom-in";
     });
-    return () => el.removeEventListener("click", handler);
+    return () => {
+      el.removeEventListener("click", handler);
+      el.removeEventListener("keydown", keyHandler);
+    };
   }, [open]);
 
   const close = useCallback(() => setLb(null), []);

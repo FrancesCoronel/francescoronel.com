@@ -4,6 +4,7 @@ import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it } from "vitest";
 import { Lightbox } from "./lightbox";
+import { ZoomableImage } from "./zoomable-image";
 
 /* eslint-disable @next/next/no-img-element */
 function Gallery() {
@@ -113,5 +114,57 @@ describe("Lightbox", () => {
     expect(screen.queryByRole("button", { name: "Next image" })).not.toBeInTheDocument();
     expect(screen.queryByRole("button", { name: "Previous image" })).not.toBeInTheDocument();
     expect(screen.queryByText(/\d+ \/ \d+/)).not.toBeInTheDocument();
+  });
+
+  it("opens one viewer, not two, for images wrapped in ZoomableImage (as MDX renders them)", async () => {
+    const user = userEvent.setup();
+    render(
+      <Lightbox>
+        {/* eslint-disable @next/next/no-img-element */}
+        <ZoomableImage src="https://example.com/one.png" alt="First photo">
+          <img src="https://example.com/one.png" alt="First photo" />
+        </ZoomableImage>
+        <ZoomableImage src="https://example.com/two.png" alt="Second photo">
+          <img src="https://example.com/two.png" alt="Second photo" />
+        </ZoomableImage>
+        {/* eslint-enable @next/next/no-img-element */}
+      </Lightbox>
+    );
+
+    await user.click(screen.getByAltText("Second photo"));
+    expect(screen.getAllByRole("dialog")).toHaveLength(1);
+    expect(screen.getByText("2 / 2")).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Close" }));
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+
+    // Keyboard: Enter or Space on the focusable wrapper opens the same carousel
+    screen.getByRole("button", { name: "Zoom: First photo" }).focus();
+    await user.keyboard("{Enter}");
+    expect(screen.getAllByRole("dialog")).toHaveLength(1);
+    expect(screen.getByText("1 / 2")).toBeInTheDocument();
+    await user.keyboard("{Escape}");
+
+    screen.getByRole("button", { name: "Zoom: Second photo" }).focus();
+    await user.keyboard(" ");
+    expect(screen.getByText("2 / 2")).toBeInTheDocument();
+  });
+
+  it("ignores Enter on links and on elements without an image", async () => {
+    const user = userEvent.setup();
+    render(
+      <Lightbox>
+        <a href="#x">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="https://example.com/linked.png" alt="Linked photo" />
+        </a>
+        <button type="button">Plain button</button>
+      </Lightbox>
+    );
+    screen.getByRole("link").focus();
+    await user.keyboard("{Enter}");
+    screen.getByRole("button", { name: "Plain button" }).focus();
+    await user.keyboard("{Enter}");
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
   });
 });
