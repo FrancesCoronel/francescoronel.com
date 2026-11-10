@@ -56,7 +56,11 @@ function slugify(name: string): string {
 
 export async function POST(request: Request) {
   const expected = process.env.SOCIAL_UPLOAD_TOKEN;
-  if (!expected || !process.env.BLOB_READ_WRITE_TOKEN) {
+  // Vercel names the connected store's token IMAGES_BLOB_READ_WRITE_TOKEN (the
+  // store is linked with the IMAGES prefix) and keeps it current. The unprefixed
+  // name is the fallback for local runs
+  const blobToken = process.env.IMAGES_BLOB_READ_WRITE_TOKEN || process.env.BLOB_READ_WRITE_TOKEN;
+  if (!expected || !blobToken) {
     return NextResponse.json({ error: "Social upload not configured" }, { status: 503 });
   }
 
@@ -89,6 +93,7 @@ export async function POST(request: Request) {
       access: "public",
       contentType: type.contentType,
       addRandomSuffix: true,
+      token: blobToken,
     });
     return NextResponse.json({
       url: blob.url,
