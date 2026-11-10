@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: write   # needed to post screenshot comment
 
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
@@ -94,47 +93,16 @@ jobs:
           path: test-results/screenshots/
           retention-days: 14
 
-      # Post a summary comment on PRs linking to the screenshot artifacts
-      - name: Comment screenshot links on PR
-        if: github.event_name == 'pull_request' && always()
-        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3  # v9.0.0
-        with:
-          script: |
-            const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
-            const artifactUrl = `${runUrl}#artifacts`;
-
-            const body = [
-              '## 📸 Visual snapshots',
-              '',
-              `Screenshots captured for this PR — [view all artifacts](${artifactUrl}).`,
-              '',
-              '| Page | Desktop | Mobile |',
-              '|------|---------|--------|',
-              ...['home','about','posts','speaking','contact','portfolio','testimonials','organizations','experience','education'].map(p =>
-                `| \`/${p === 'home' ? '' : p}\` | [desktop](${artifactUrl}) | [mobile](${artifactUrl}) |`
-              ),
-              '',
-              `> Full Playwright HTML report: [open report](${runUrl})`,
-            ].join('\n');
-
-            // Delete previous bot comment if it exists
-            const { data: comments } = await github.rest.issues.listComments({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-            });
-            const prev = comments.find(c => c.user?.type === 'Bot' && c.body?.includes('Visual snapshots'));
-            if (prev) {
-              await github.rest.issues.deleteComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                comment_id: prev.id,
-              });
-            }
-
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-              body,
-            });
+      # Goes to the run's summary page (linked from the PR's checks), not the PR thread
+      - name: Add screenshot links to job summary
+        if: always()
+        env:
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          {
+            echo "## 📸 Visual snapshots"
+            echo ""
+            echo "Desktop and mobile screenshots of /, /about, /posts, /speaking, /contact, /portfolio, /testimonials, /organizations, /experience and /education are in the [screenshots artifact]($RUN_URL#artifacts)."
+            echo ""
+            echo "The full Playwright HTML report is in the [playwright-report artifact]($RUN_URL#artifacts)."
+          } >> "$GITHUB_STEP_SUMMARY"
