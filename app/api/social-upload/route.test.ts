@@ -27,6 +27,7 @@ function uploadRequest(
 beforeEach(() => {
   vi.stubEnv("SOCIAL_UPLOAD_TOKEN", TOKEN);
   vi.stubEnv("BLOB_READ_WRITE_TOKEN", "blob-token");
+  vi.stubEnv("IMAGES_BLOB_READ_WRITE_TOKEN", "");
   vi.useFakeTimers({ now: new Date("2026-11-10T12:00:00Z") });
   putMock.mockImplementation(
     async (pathname) =>
@@ -96,7 +97,22 @@ describe("POST /api/social-upload", () => {
       access: "public",
       contentType: "image/png",
       addRandomSuffix: true,
+      token: "blob-token",
     });
+  });
+
+  it("prefers the connected store's token over the unprefixed one", async () => {
+    vi.stubEnv("IMAGES_BLOB_READ_WRITE_TOKEN", "images-token");
+    for (const fallback of ["stale-token", ""]) {
+      vi.stubEnv("BLOB_READ_WRITE_TOKEN", fallback);
+      const res = await POST(uploadRequest(PNG));
+      expect(res.status).toBe(200);
+      expect(putMock).toHaveBeenLastCalledWith(
+        expect.any(String),
+        expect.anything(),
+        expect.objectContaining({ token: "images-token" })
+      );
+    }
   });
 
   it("takes the extension and content type from the bytes for every supported format", async () => {
