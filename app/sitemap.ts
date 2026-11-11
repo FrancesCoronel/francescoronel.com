@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAllPosts, getCategories, getTags, getExperiences, getEducation, getAwards, getOrganizations } from "@/lib/content";
+import { getAllPosts, getCategories, getTags, getPostsByTag, getExperiences, getEducation, getAwards, getOrganizations } from "@/lib/content";
 import { siteConfig } from "@/lib/metadata";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -42,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const tags = getTags().map((tag) => ({
     url: `${baseUrl}/tags/${tag.slug}`,
-    lastModified: latestDate(allPosts.filter((p) => p.tags.includes(tag.slug))),
+    lastModified: latestDate(getPostsByTag(tag.slug)),
     changeFrequency: "weekly" as const,
     priority: 0.4,
   }));

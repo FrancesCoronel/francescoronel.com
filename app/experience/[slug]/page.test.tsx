@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { renderToStaticMarkup } from "react-dom/server";
-import { getExperienceBySlug, getExperiences } from "@/lib/content";
+import { getExperienceBySlug, getExperiences, getTagName } from "@/lib/content";
 import ExperiencePage, { generateMetadata, generateStaticParams } from "./page";
 
 vi.mock("next/navigation", () => ({
@@ -60,7 +60,11 @@ describe("app/experience/[slug]/page", () => {
     expect(html).toContain(` · ${exp.location}`);
     expect(html).toContain("Overview");
     expect(html).toContain("Highlights");
-    for (const skill of exp.skills) expect(html).toContain(`>${skill}</span>`);
+    // Skills show their display name and link to their tag page
+    for (const skill of exp.skills) {
+      expect(html).toContain(`href="/tags/${skill}"`);
+      expect(html).toContain(`>${getTagName(skill).replace(/&/g, "&amp;")}</a>`);
+    }
   });
 
   it("renders the company as plain text when it has no organization page", async () => {
@@ -91,6 +95,25 @@ describe("app/experience/[slug]/page", () => {
     expect(html).not.toContain("Overview");
     expect(html).not.toContain(">Highlights<");
     expect(html).not.toContain(">Skills<");
+  });
+
+  it("shows a skill with no tag page as plain text", async () => {
+    vi.mocked(getExperienceBySlug).mockReturnValue({
+      title: "Consultant",
+      slug: "untagged",
+      company: "Unknown Co",
+      companyLogo: "",
+      companyUrl: "",
+      location: "",
+      startDate: "2019-01-01",
+      endDate: null,
+      description: "",
+      highlights: [],
+      skills: ["not-a-real-skill"],
+    });
+    const html = renderToStaticMarkup(await ExperiencePage(params("untagged")));
+    expect(html).toContain(`>${getTagName("not-a-real-skill")}</span>`);
+    expect(html).not.toContain('href="/tags/not-a-real-skill"');
   });
 
   it("calls notFound for an unknown slug", async () => {

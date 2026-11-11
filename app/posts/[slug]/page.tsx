@@ -13,6 +13,7 @@ import {
   getOrganizationBySlug,
   getCategoryMaps,
   getTagName,
+  getTagHref,
 } from "@/lib/content";
 import { getRepoData } from "@/lib/github";
 import { formatDate, formatDateRange, canOptimize, formatSlugLabel } from "@/lib/utils";
@@ -385,10 +386,10 @@ export default async function PostPage({ params }: PageProps) {
                     {post.skills.map((skill) => (
                       <Link
                         key={skill}
-                        href={`/projects?skill=${encodeURIComponent(skill)}`}
+                        href={getTagHref(skill) ?? `/projects?skill=${encodeURIComponent(skill)}`}
                         className="rounded-full border border-horchata-200 bg-horchata-50 px-3 py-1 text-xs font-medium text-navy-600 transition-colors hover:border-horchata-400 hover:bg-horchata-100 hover:text-navy-900 dark:border-navy-600 dark:bg-navy-700 dark:text-horchata-300 dark:hover:border-navy-400"
                       >
-                        {skill}
+                        {getTagName(skill)}
                       </Link>
                     ))}
                   </div>

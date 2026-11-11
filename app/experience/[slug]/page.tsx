@@ -7,6 +7,8 @@ import {
   getExperienceBySlug,
   getExperiences,
   getOrganizationByName,
+  getTagHref,
+  getTagName,
 } from "@/lib/content";
 import { ConnectCTA } from "@/components/sections/connect-cta";
 import { NewsletterCTA } from "@/components/sections/newsletter-cta";
@@ -132,14 +134,24 @@ export default async function ExperiencePage({ params }: PageProps) {
                 Skills
               </p>
               <div className="mt-3 flex flex-wrap gap-2">
-                {exp.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-full border border-horchata-200 bg-white px-3 py-1 text-xs font-medium text-navy-700 dark:border-navy-600 dark:bg-navy-800 dark:text-horchata-300"
-                  >
-                    {skill}
-                  </span>
-                ))}
+                {exp.skills.map((skill) => {
+                  const href = getTagHref(skill);
+                  const cls =
+                    "rounded-full border border-horchata-200 bg-white px-3 py-1 text-xs font-medium text-navy-700 dark:border-navy-600 dark:bg-navy-800 dark:text-horchata-300";
+                  return href ? (
+                    <Link
+                      key={skill}
+                      href={href}
+                      className={`${cls} transition-colors hover:border-horchata-400 dark:hover:border-navy-400`}
+                    >
+                      {getTagName(skill)}
+                    </Link>
+                  ) : (
+                    <span key={skill} className={cls}>
+                      {getTagName(skill)}
+                    </span>
+                  );
+                })}
               </div>
             </div>
           )}
