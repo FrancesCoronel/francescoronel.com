@@ -1,0 +1,175 @@
+---
+title: "Madrina: A Career Coach for Women Engineers 💛"
+slug: "madrina-career-coach-for-women-engineers"
+date: "2026-11-09"
+excerpt: "I built Madrina, a career coach in Slack for women software engineers, in about 2 hours at Anthropic's Code with Claude: Women in AI Hackathon. Here's why, how, and what I'd do differently."
+featuredImage: "https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/blog/madrina-app-home-dashboard-L0iWoXt9jVqIprnhHfUeMpDy1V3EKa.png"
+categories: ["events"]
+tags: ["hackathon", "ai-agents", "career-advice", "women-of-color-in-tech", "open-source", "event-recap"]
+organizations: ["latina-dev"]
+skills: []
+source: "nextjs"
+social: "When Grace Hopper was cancelled 2 weeks out, I kept thinking about where women engineers get career advice now 💭 So I built Madrina, a career coach in Slack for women software engineers. Madrina means godmother in Spanish: the woman who vouches for you 💛"
+---
+
+## Why I built a godmother for women engineers 💛
+
+Last Friday I spent one morning at Anthropic's Code with Claude: Women in AI Hackathon and built [Madrina](https://github.com/FrancesCoronel/madrina), a career coach in Slack for women software engineers. *Madrina* means godmother in Spanish: the woman who vouches for you.
+
+The idea started with a loss. A few weeks earlier, the [Grace Hopper Celebration was cancelled 14 days before it opened](https://hackernoon.com/anitaborg-cancels-grace-hopper-celebration-14-days-out-after-losing-%24146m-and-half-its-attendees). Eleven of my Slack teammates were set to go. For a lot of women, that week was the one time a year they got career advice from people who looked like them.
+
+So I asked myself: if our stages keep disappearing, what would it look like to bring that advice into the place we already work every day?
+
+---
+
+## The leak is after the hire 📉
+
+We talk a lot about the pipeline. The bigger problem is what happens after a woman gets the job.
+
+- **She stops moving up.** When surveys ask women why they left tech, the top answer is limited career advancement: 28% in [Indeed's US survey](https://venturebeat.com/2018/11/06/indeed-career-stagnation-drives-women-out-of-tech-jobs) and 25% in the [2025 Lovelace Report](https://www.computing.co.uk/feature/2025/80-percent-women-in-tech-looking-for-exit). Childcare comes in at 2 to 3%.
+- **She gets handed the glue work.** In the [research behind *The No Club*](https://www.utimes.pitt.edu/node/5529), women were 44% more likely than men to be asked to take on non-promotable tasks. That work keeps teams running and rarely shows up in a promo packet.
+- **She learns from a single story.** Chimamanda Ngozi Adichie warned about [the danger of a single story](https://www.ted.com/talks/chimamanda_ngozi_adichie_the_danger_of_a_single_story). Engineering career advice has one. The biggest engineering newsletters are written by men. The Pragmatic Engineer is one of my favorite newsletters on Substack, and even on [its podcast](https://newsletter.pragmaticengineer.com/podcast) fewer than 1 in 5 guests are women.
+
+Promotion is an economic mobility lever. Your level sets your pay, your equity and who gets the next big project.
+
+---
+
+## Meet Madrina ✨
+
+Madrina lives in Slack, because that's where the work, the asks and the 1:1 follow-ups already happen. Meet Ana Rivera, a synthetic Senior engineer aiming for Staff. Everything in the demo is made up, including Ana.
+
+![Madrina's App Home in Slack, showing Ana's path from Senior to Staff, her top 3 gaps, a recommended resource and her logged wins](https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/blog/madrina-app-home-hd-K2edRd1RT5F27xJn9Vzyc6PwiDLiwy.png)
+
+| Feature | What happens |
+|---|---|
+| 🏠 App Home dashboard | Ana sees her current and target level, her top 3 gaps against a career ladder, one resource by a woman author for her biggest gap, her logged wins, and which support slots (mentor, sponsor, advocate, coach) are still empty |
+| 🧭 Weekly focus check | Her manager said Gateway matters most. This week, 7 of her 9 pull requests went to Billing, and 6 of those asks came in by DM. Madrina notices and asks: redirect, or let your manager know about the competing asks? |
+| ✍🏽 Draft a note to my manager | Claude drafts it in the thread. Madrina never sends anything to your manager: she drafts, you decide |
+| 🏆 Log a win | Ana replies with one line, and Claude turns it into a promo-ready bullet mapped to a ladder competency |
+| 💬 Coach | Ask Madrina anything. Answers use only a curated shelf of books, talks and newsletters by women |
+| 🗺️ Plan next week | A Monday-to-Friday plan around the priority, with each day tied to a Staff competency |
+| 🧶 Glue work flag | When someone asks Ana for non-promotable work, Madrina flags it privately and offers to draft a hand-off reply |
+| 📄 Brag doc export | Her logged wins grouped by competency, with the gaps called out, in a doc she owns |
+| 🔌 MCP connector | Your own Claude can read your Madrina profile, gaps and wins, so "am I on track for Staff?" works outside Slack too |
+
+![Madrina's weekly focus check in a Slack DM, pointing out that 7 of Ana's 9 pull requests went to Billing instead of Gateway](https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/blog/madrina-focus-check-hd-zpmY14zvMvGJ6ZdVmSOZucYGK1FQvt.png)
+
+![Madrina drafting a note to Ana's manager in a Slack thread, then turning a one-line win into a promo-ready bullet](https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/blog/madrina-draft-and-win-hd-gTV0Y3NVh3jAFhhPdiWSTJscyTcyaj.png)
+
+Ask her a question and she answers from Ana's profile, her gaps and the curated shelf:
+
+![Madrina answering "what should I do this week to strengthen my Staff case?" with three next steps and a reply Ana can send to the next DM](https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/blog/madrina-coach-hd-0M8KOxX8XPZrev80y0lmVxccS53wtr.png)
+
+Tap "Plan next week around Gateway" and she lays out the week, one competency per day:
+
+![Madrina's Monday-to-Friday plan for Ana, with each day tied to Influence, Technical scope or Direction](https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/blog/madrina-plan-next-week-KPtgfCoXsG1jg6ypJzIvaQqfPSdeea.png)
+
+And when it's time to make the case, she turns the logged wins into a brag doc:
+
+![Madrina's message that Ana's brag doc is ready, with 8 wins grouped by competency and Direction listed as a gap](https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/blog/madrina-brag-doc-hd-O0T7bcLImamUFERLIOtqoWJJhNO6lR.png)
+
+Two choices mattered most to me. First, the IC track to Staff and Principal is treated as a real destination, not a consolation prize for skipping management. Second, every resource is by someone who publicly identifies as a woman: [Tanya Reilly](https://noidea.dog/glue), [Camille Fournier](https://www.oreilly.com/library/view/the-managers-path/9781491973882/), [Lara Hogan](https://larahogan.me), [Sarah Drasner](https://www.engmanagement.dev), [Cate Huston and Jean Hsu](https://driyourcareer.com/), [Julia Evans](https://jvns.ca/blog/brag-documents/), [Charity Majors](https://charity.wtf/2017/05/11/the-engineer-manager-pendulum/) and more. Madrina never guesses anyone's gender.
+
+---
+
+## The glue work moment 🧶
+
+A coach needs a workplace to react to, so the demo workspace is seeded with synthetic teammates. Each one has a name, a role and an avatar: Ana's manager Dana, Priya and Marcus from Billing, Tess from Support, Rafael from the Identity team and Sam, the new hire. Their messages fill four channels.
+
+In the Billing channel, the asks pile up on Ana:
+
+![The team-billing demo channel, where Priya, Marcus and Tess each ask Ana for Billing fixes](https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/blog/madrina-demo-team-billing-hd-iuGuuQw5Y8B6nOlELBXOoZZXmCpHEG.png)
+
+Meanwhile, the Gateway migration is the work her manager said matters for Staff:
+
+![The proj-gateway-migration demo channel, where Dana kicks off the migration, Ana shares her RFC draft and Rafael asks a question from Identity](https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/blog/madrina-demo-gateway-hd-rxPk36OHozDbl53MPQr7HkiTaK6VEo.png)
+
+Ana is also the one welcoming the new hire and writing the on-call handoff:
+
+![The team-payments-platform demo channel, where Ana welcomes Sam and posts the on-call handoff](https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/blog/madrina-demo-payments-hd-o9oEVb3FL8QnuFRphm50J6j64vUMRx.png)
+
+Then, in Ana's 1:1 channel, right after her manager's notes say Gateway is the priority, this lands:
+
+![Ana's 1:1 channel with her manager Dana: notes naming Gateway as the Staff priority, followed by Dana asking Ana to coordinate the team swag for the offsite](https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/blog/madrina-glue-work-ask-hd-cOEXv0Z2XAT2BG7oKAM3eLYcYkxnTD.png)
+
+"You're always so good at this stuff." Madrina catches the ask the moment it lands and sends Ana a flag only she can see:
+
+![Dana's swag ask followed by a message from Madrina marked "Only visible to you": "Quick flag: this one is glue work", a note that it maps to no Staff competency and would be Ana's 4th glue task on record, and three buttons: Draft a hand-off reply, Trade it for something visible, Happy to do it](https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/blog/madrina-glue-work-flag-lUfr2FEy3owgX8G9yXMIqhj2MsFoRR.png)
+
+The flag names the ask as glue work, useful and non-promotable, and keeps count of how often it happens. Then it gives Ana three choices: draft a hand-off reply, trade it for something visible, or happily do it. The decision stays hers.
+
+---
+
+## How I built it in 2 hours 🤖
+
+Hacking opened at 10 AM, but I had a meeting first, so I didn't start until 10:44 AM. Submissions closed at 12:45 PM. I built Madrina solo with Claude Code, starting from Vercel's [Slack Agent Template](https://github.com/vercel-partner-solutions/slack-agent-template): Bolt for JS on Nitro, Claude Opus 5.5 through the AI SDK, and synthetic JSON instead of a database.
+
+| By the numbers | |
+|---|---|
+| Build time | About 2 hours |
+| Claude Code sessions | 12: one main session plus 11 running in parallel |
+| Commits | 26 during the hackathon |
+| Code | About 2,960 lines across 57 files |
+| Claude Code cost | About $53 at list price |
+
+Almost all of that cost went to agents re-reading their own context, which is what long agent sessions cost.
+
+The core flow came together fast, about one feature every 3 to 5 minutes:
+
+1. **10:47** Swapped the template's AI layer for direct Claude calls
+2. **11:03** App Home dashboard
+3. **11:06** Focus check DM with its three buttons
+4. **11:11** Log a win
+5. **11:19** The @mention coach
+
+Then I fanned out. Side sessions handled branding (an owl with her *ahijada*, her godchild, tucked under her wing), synthetic Slack seed data, Block Kit formatting and the demo script. In the last hour, three more sessions built the MCP connector, a brag doc export and a live glue work flag.
+
+---
+
+## What I'd do differently 🎬
+
+Madrina didn't place in the top 6, and I know the biggest reason: the demo. Here's what I'd tell anyone walking into a timed build:
+
+- **Record a rough demo at the halfway point.** Judges watch the video. A feature that never makes it on camera doesn't count.
+- **Lock the video 30 minutes early.** I recorded my final take with about 10 minutes left, and the cleaner cut finished after the deadline.
+- **Say no to late side quests.** The MCP connector, brag doc and glue work flag all work. Most of them never made it into the video.
+- **Freeze your checkout before you record.** Pulling 8 commits from side sessions mid-demo added a dependency I hadn't installed, and every Slack request failed until I ran `pnpm install`.
+- **Give each parallel session a file boundary, and let one session own commits.** Parallel agents are fast, but you pay an integration tax at the worst moment.
+- **Check the rules early.** I spent minutes trimming the video to 2:00 before realizing there was no length limit.
+
+What worked: a written spec with "cut from the bottom" priorities, and one synthetic persona with a clear story. The full list of gotchas is in [LEARNINGS.md](https://github.com/FrancesCoronel/madrina/blob/main/docs/LEARNINGS.md).
+
+---
+
+## Building with, not just for 🤝🏽
+
+I love that this hackathon existed, and I'd go again. A room full of women shipping working software in two hours is rare.
+
+One thing stayed with me. I was one of only a few Latinas in the room, which is true of most tech rooms I walk into, not only this one. At the same time, many of the projects were built for immigrant families, domestic violence survivors and communities of color. Those are real problems that deserve real tools, and I was glad to see so many people care about them.
+
+It reminded me of something years of community work have taught me: building *for* a community goes further when you're also building *with* it. The people closest to a problem notice things the rest of us miss.
+
+That's part of why I built Madrina for women like me, the ones already writing the code. It's also a challenge I take on myself as someone who organizes communities. A few things I've seen work for any event, mine included:
+
+- **Recruit through the communities you want in the room**, like [Latina.dev](https://latina.dev), [Techqueria](https://techqueria.org) and groups for Black women in tech, alongside your usual channels.
+- **Invite people from those communities to judge and mentor too.**
+- **Ask builders what they need for themselves.** Some of the best ideas come from people solving their own problems.
+
+---
+
+## What's next 🚀
+
+The hackathon version was a demo with a made-up engineer. My dream is to bring Madrina to the [Latina.dev](https://latina.dev) Slack community someday, right next to the directory of mentors and resources it would depend on. That's a hope, not a launch date. Madrina is a side project, and I'd rather be honest about that than promise a timeline.
+
+If I keep building, here's what I'd want first:
+
+- **Real onboarding and saved data**, so every member gets her own coach, plus a clear promise: your data is yours, never your manager's or HR's.
+- **Live glue work flags**, so Madrina catches the ask the moment it lands, not a week later.
+- **Mentor, sponsor and coach matching**, to fill the support slots no single employer can.
+- **Per-user sign-in for the MCP connector**, so you can connect your own Claude, claude.ai included.
+
+If it ships, I'd measure success by how much people like using Madrina and how quickly they get their next promotion.
+
+The hackathon version stays up as an open source snapshot under MIT: [github.com/FrancesCoronel/madrina](https://github.com/FrancesCoronel/madrina).
+
+*Star it, try it, or tell me which nudge you wish you'd gotten earlier in your career. If our stages keep disappearing, let's build our own.* 💛
