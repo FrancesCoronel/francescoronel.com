@@ -55,9 +55,11 @@ Copy `.env.local.example` to `.env.local` and fill in:
 CAL_COM_API_KEY=                  # Cal.com mentoring sessions
 RESEND_API_KEY=                   # Newsletter (Resend)
 RESEND_SEGMENT_ID=                # Resend segment new subscribers join
-BLOB_READ_WRITE_TOKEN=            # Vercel Blob storage
+BLOB_READ_WRITE_TOKEN=            # Vercel Blob storage (on Vercel: IMAGES_BLOB_READ_WRITE_TOKEN)
 SOCIAL_UPLOAD_TOKEN=              # Shared secret for POST /api/social-upload
 ```
+
+Setting `SOCIAL_UPLOAD_TOKEN` in production is covered in [`AGENTS.md`](./AGENTS.md) under Image Hosting.
 
 ## Contributing 🤝🏽
 
