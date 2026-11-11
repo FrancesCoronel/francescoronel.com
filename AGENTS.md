@@ -261,7 +261,7 @@ Colors follow a **teal/charcoal + linen/raspberry** palette defined in `app/glob
 
 All new images must be uploaded to Vercel Blob storage before use. Never reference external image CDNs (AWS S3, Webflow CDN, imgix, etc.) directly.
 
-**No Blob token (cloud or phone sessions):** commit the image under `public/images/<folder>/` and reference it as `/images/<folder>/<file>` in the post. On a branch push, `.github/workflows/upload-post-images.yml` runs `scripts/upload-post-images.js`, which uploads new images that posts reference to Blob, swaps in the Blob URLs and removes the local copies. It needs the `BLOB_READ_WRITE_TOKEN` repo secret. Pull before editing again, since the workflow pushes a commit to the branch.
+**No Blob token (cloud or phone sessions):** commit the image under `public/images/<folder>/` and reference it as `/images/<folder>/<file>` in the post. On a branch push, `.github/workflows/upload-post-images.yml` runs `scripts/upload-post-images.js`, which uploads new images that posts reference to Blob, swaps in the Blob URLs and removes the local copies. It needs the `BLOB_READ_WRITE_TOKEN` repo secret (a token for the current store below). Pull before editing again, since the workflow pushes a commit to the branch.
 
 **Store ID:** `store_GZQhCZL3EhDy3Foa`
 **Public base URL:** `https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/`
@@ -289,7 +289,21 @@ curl -sS -X POST "https://francescoronel.com/api/social-upload?name=my-graphic" 
 - Response: `{ "url": "https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/social/<date>-my-graphic-<suffix>.png", ... }`
 - PNG, JPEG, GIF or WebP only (checked from the file's bytes), 4 MB at most, so no video
 - Needs `SOCIAL_UPLOAD_TOKEN` in the Vercel project's env. In a Claude Code cloud session the token is a network secret for `francescoronel.com` that the proxy adds as the `x-upload-token` header; send any placeholder value for it and never ask for the real one in chat
+- On a local machine, read the token from a private file (`-H "x-upload-token: $(cat ~/.social-upload-token)"`) and have Frances run the command. Don't route it through the clipboard, since copying the next command replaces it
+- Blob token: the route uses `IMAGES_BLOB_READ_WRITE_TOKEN` first and falls back to `BLOB_READ_WRITE_TOKEN`. The `francescoronel-images` store is connected to the Vercel project with the `IMAGES` prefix, so Vercel keeps the prefixed one current. The project's unprefixed `BLOB_READ_WRITE_TOKEN` was left over from the store deleted in the blob migration, so don't rely on it in new server code
+- Errors: `503` means `SOCIAL_UPLOAD_TOKEN` or the Blob token is missing from the deployment, `401` a wrong or missing `x-upload-token`, `413` over 4 MB, `415` not an image, `502` the Blob upload itself failed (read the cause with `vercel logs --environment production --scope latina-dev -q social-upload`)
 - Code: `app/api/social-upload/route.ts`
+
+Setting or rotating `SOCIAL_UPLOAD_TOKEN` (Vercel team `latina-dev`, project `francescoronel`; run `vercel link` once per checkout). Vercel hides a Secret after saving, so keep the value in the file until it's also saved as the cloud network secret or in a password manager:
+
+```bash
+printf %s "$(openssl rand -hex 32)" > ~/.social-upload-token && chmod 600 ~/.social-upload-token
+vercel env rm SOCIAL_UPLOAD_TOKEN production -y   # only when replacing an existing value
+vercel env add SOCIAL_UPLOAD_TOKEN production --sensitive < ~/.social-upload-token
+vercel redeploy <latest production deployment URL> --environment production --scope latina-dev
+```
+
+An env change only reaches the endpoint after a production redeploy. Use `vercel redeploy`, not `vercel --prod`, which would deploy whatever is checked out locally.
 
 Folder conventions:
 - `social/` — social media graphics uploaded through `/api/social-upload`
