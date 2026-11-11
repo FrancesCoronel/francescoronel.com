@@ -200,7 +200,7 @@ npm run chromatic        # upload to Chromatic for visual regression
    - Claude will (`/publish-post`): fill missing frontmatter (excerpt, slug, date), suggest categories/tags, upload any local images to Vercel Blob, ensure MDX is valid
 3. **Commit** with `/commit`
 4. **Deploy** with `/deploy` (pushes to main → Vercel auto-deploys)
-5. **Cross-post** automatically fires via `.github/workflows/crosspost.yml` on push to main for newly added `content/posts/*.mdx` files → dev.to, Hashnode, and Buffer drafts for LinkedIn/Bluesky/Threads
+5. **Cross-post** automatically fires via `.github/workflows/crosspost.yml` on push to main for newly added `content/posts/*.mdx` files → dev.to, Hashnode, and Buffer drafts for LinkedIn and Substack
    - A Slack reminder lists the manual steps: review the Buffer drafts, republish flagship essays as a LinkedIn Newsletter issue, share on Reddit by hand
 
 ### Cross-posting setup
@@ -215,11 +215,12 @@ Each platform is skipped when its secret isn't set, and one failing doesn't bloc
 - Secret: `HASHNODE_TOKEN` (hashnode.com/settings/developer); optional variables `HASHNODE_PUBLICATION_ID` (defaults to your first publication) and `HASHNODE_API_URL` (defaults to `https://gql-beta.hashnode.com/`, the endpoint that replaced the retired `gql.hashnode.com`; Hashnode may require a Pro plan for API access)
 - Script: `scripts/crosspost-hashnode.js` — sets `originalArticleURL` to the canonical post URL
 
-**LinkedIn, Bluesky, Threads (via Buffer)**
+**LinkedIn and Substack (via Buffer)**
 - Secret: `BUFFER_API_KEY` (publish.buffer.com/settings/api); connect the channels in Buffer once
-- Optional variables: `BUFFER_SERVICES` (default `linkedin,bluesky,threads`), `BUFFER_MODE` (`draft` by default; `queue` to skip review)
+- Optional variables: `BUFFER_SERVICES` (default `linkedin,substack`; the repo variable overrides it), `BUFFER_MODE` (`draft` by default; `queue` to skip review)
 - Script: `scripts/crosspost-social.js` — writes a per-network post (title + excerpt + link, fit to each character limit); add `social: "..."` to frontmatter to use custom intro text instead of the excerpt
-- Preview without posting: `node scripts/crosspost-social.js content/posts/<slug>.mdx --dry-run`
+- Attaches the post's `featuredImage` (as a full URL, title as alt text) when it has one; Substack posts go out as Notes, kept to 500 characters
+- Preview without posting (also prints the image URL): `node scripts/crosspost-social.js content/posts/<slug>.mdx --dry-run`
 
 **Slack reminder**
 - Secret: `SLACK_WEBHOOK_URL` (a Slack incoming webhook to the channel or DM you want)

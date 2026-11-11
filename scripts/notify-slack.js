@@ -23,7 +23,7 @@ function buildMessage(filePath) {
     `📣 *New post is live:* <${url}|${data.title || slug}>`,
     "",
     "Your manual sharing steps:",
-    "• Review and schedule the Buffer drafts (LinkedIn, Bluesky, Threads): https://publish.buffer.com",
+    "• Review and schedule the Buffer drafts (LinkedIn, Substack): https://publish.buffer.com",
     "• If it's a flagship essay, republish it as a LinkedIn Newsletter issue",
     "• Share it on Reddit in a relevant subreddit, in your own words",
   ].join("\n");

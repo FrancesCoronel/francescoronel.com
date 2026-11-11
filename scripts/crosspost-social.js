@@ -11,15 +11,16 @@
  *
  * Optional env vars:
  *   BUFFER_SERVICES — comma-separated networks to post to
- *                     (default: "linkedin,bluesky,threads")
+ *                     (default: "linkedin,substack")
  *   BUFFER_MODE     — "draft" (default) saves posts as Buffer drafts to review;
  *                     "queue" adds them straight to the posting queue
  *
  * The script:
- *   1. Reads frontmatter (title, excerpt, slug, social, crosspost)
+ *   1. Reads frontmatter (title, excerpt, slug, featuredImage, social, crosspost)
  *   2. Writes a short post per network that fits its character limit
  *   3. Finds the connected Buffer channels for those networks
- *   4. Creates a draft (or queued post) on each channel
+ *   4. Creates a draft (or queued post) on each channel, with the featured
+ *      image attached when the post has one
  *
  * Frontmatter controls:
  *   social: "Custom intro text"  — used instead of the excerpt
@@ -29,16 +30,19 @@
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
+const { SITE_URL, absoluteUrl } = require("./site-url");
 
-const SITE_URL = "https://www.francescoronel.com";
+const DEFAULT_SERVICES = "linkedin,substack";
 const BUFFER_API = "https://api.buffer.com";
 
-// Max characters per network (links count toward the limit on all three)
+// Max characters per network (links count toward the limit)
 const CHAR_LIMITS = {
   bluesky: 300,
   threads: 500,
   linkedin: 3000,
   mastodon: 500,
+  // Buffer's Substack channel posts Notes, so keep it short
+  substack: 500,
   twitter: 280,
 };
 const DEFAULT_LIMIT = 500;
@@ -57,6 +61,14 @@ function buildText(service, { title, intro, url }) {
   const room = limit - head.length - tail.length;
   const body = intro && room > 20 ? truncate(intro, room) : "";
   return body ? `${head}${body}${tail}` : truncate(title, limit - tail.length) + tail;
+}
+
+// Buffer CreatePostInput.assets: [AssetInput!]!, where AssetInput is
+// { image: { url: String!, metadata: { altText: String! } } }
+function buildAssets({ featuredImage, title }) {
+  const url = absoluteUrl(typeof featuredImage === "string" ? featuredImage.trim() : "");
+  if (!url) return [];
+  return [{ image: { url, metadata: { altText: title } } }];
 }
 
 async function buffer(apiKey, query, variables = {}) {
@@ -91,7 +103,7 @@ async function getChannels(apiKey, services) {
   return channels.filter((c) => services.includes(String(c.service).toLowerCase()));
 }
 
-async function createPost(apiKey, { channelId, text, saveToDraft }) {
+async function createPost(apiKey, { channelId, text, saveToDraft, assets }) {
   const data = await buffer(
     apiKey,
     `mutation CreatePost($input: CreatePostInput!) {
@@ -107,7 +119,7 @@ async function createPost(apiKey, { channelId, text, saveToDraft }) {
         schedulingType: "automatic",
         mode: "addToQueue",
         saveToDraft,
-        assets: [],
+        assets,
       },
     }
   );
@@ -123,7 +135,7 @@ async function crosspost(filePath, { dryRun }) {
   }
 
   const { data: frontmatter } = matter(fs.readFileSync(filePath, "utf8"));
-  const { title, excerpt, slug, social, crosspost: enabled } = frontmatter;
+  const { title, excerpt, slug, featuredImage, social, crosspost: enabled } = frontmatter;
 
   if (enabled === false) {
     console.log(`Skipping ${filePath}: crosspost is false in frontmatter.`);
@@ -137,13 +149,15 @@ async function crosspost(filePath, { dryRun }) {
   const postSlug = slug || path.basename(filePath, path.extname(filePath));
   const url = `${SITE_URL}/posts/${postSlug}`;
   const intro = (social || excerpt || "").trim();
-  const services = (process.env.BUFFER_SERVICES || "linkedin,bluesky,threads")
+  const assets = buildAssets({ featuredImage, title });
+  const services = (process.env.BUFFER_SERVICES || DEFAULT_SERVICES)
     .split(",")
     .map((s) => s.trim().toLowerCase())
     .filter(Boolean);
   const saveToDraft = (process.env.BUFFER_MODE || "draft") !== "queue";
 
   if (dryRun) {
+    console.log(`Image: ${assets.length ? assets[0].image.url : "no image"}\n`);
     for (const service of services) {
       const text = buildText(service, { title, intro, url });
       console.log(`--- ${service} (${text.length} chars) ---\n${text}\n`);
@@ -169,7 +183,7 @@ async function crosspost(filePath, { dryRun }) {
     const service = String(channel.service).toLowerCase();
     const text = buildText(service, { title, intro, url });
     try {
-      const post = await createPost(apiKey, { channelId: channel.id, text, saveToDraft });
+      const post = await createPost(apiKey, { channelId: channel.id, text, saveToDraft, assets });
       console.log(`✓ ${service} (${channel.name}): ${post.id}${post.dueAt ? ` due ${post.dueAt}` : ""}`);
     } catch (err) {
       failed++;
@@ -179,14 +193,18 @@ async function crosspost(filePath, { dryRun }) {
   if (failed) process.exit(1);
 }
 
-const args = process.argv.slice(2);
-const filePath = args.find((a) => !a.startsWith("--"));
-if (!filePath) {
-  console.error("Usage: node scripts/crosspost-social.js <path-to-post.mdx> [--dry-run]");
-  process.exit(1);
-}
+module.exports = { CHAR_LIMITS, DEFAULT_SERVICES, buildText, buildAssets };
 
-crosspost(filePath, { dryRun: args.includes("--dry-run") }).catch((err) => {
-  console.error("Unexpected error:", err);
-  process.exit(1);
-});
+if (require.main === module) {
+  const args = process.argv.slice(2);
+  const filePath = args.find((a) => !a.startsWith("--"));
+  if (!filePath) {
+    console.error("Usage: node scripts/crosspost-social.js <path-to-post.mdx> [--dry-run]");
+    process.exit(1);
+  }
+
+  crosspost(filePath, { dryRun: args.includes("--dry-run") }).catch((err) => {
+    console.error("Unexpected error:", err);
+    process.exit(1);
+  });
+}
