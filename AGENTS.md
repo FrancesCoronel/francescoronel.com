@@ -49,7 +49,7 @@ Dedup script (`scripts/migrations/dedup-posts.js`) keeps the Webflow version whe
 
 - **Static pages**: `/`, `/about`, `/posts`, `/categories`, `/contact`, `/speaking`, `/mentoring`, `/mentoring/sessions`, `/mentoring/thank-you` (noindex page cal.com redirects to after a paid booking), `/now`, `/portfolio`, `/work`, `/uses`, `/testimonials`, `/organizations`, `/for-llms`, `/tags`, `/design-system`, `/essays`
 - **Dynamic SSG**: `/posts/[slug]`, `/categories/[slug]`, `/tags/[slug]`, `/experience/[slug]`, `/education/[slug]`, `/awards/[slug]`, `/organizations/[slug]`, `/testimonials/[slug]`
-- **Route handlers**: `/feed` (RSS), `/api/newsletter`, `/api/mentoring-sessions`, `/api/social-upload`
+- **Route handlers**: `/feed` (RSS), `/api/newsletter`, `/api/mentoring-sessions`, `/api/social-upload`, `/api/stripe-webhook` (emails the cal.com booking link to prepaid mentoring package buyers through Resend; needs `STRIPE_WEBHOOK_SECRET`, `RESEND_API_KEY` and `RESEND_FROM`, and its payment link IDs are listed in the route)
 - **Metadata routes**: `/robots.txt` (`app/robots.ts`), `/sitemap.xml` (`app/sitemap.ts`)
 - Old `/blog/...` URLs redirect to `/posts/...` in `next.config.ts`. Always link to `/posts/<slug>`.
 
