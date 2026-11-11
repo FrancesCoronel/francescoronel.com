@@ -20,6 +20,8 @@ describe("ZoomableImage", () => {
   it("wraps the thumbnail in a zoom trigger", () => {
     const trigger = setup("my-6");
     expect(trigger).toHaveClass("cursor-zoom-in", "my-6");
+    // The Lightbox on post pages reads this to show the full-size file
+    expect(trigger).toHaveAttribute("data-zoom-src", "/full.png");
     expect(trigger).toContainElement(screen.getByAltText("thumb"));
     expect(screen.queryByRole("dialog")).toBeNull();
   });

@@ -49,7 +49,7 @@ Dedup script (`scripts/migrations/dedup-posts.js`) keeps the Webflow version whe
 
 - **Static pages**: `/`, `/about`, `/posts`, `/categories`, `/contact`, `/speaking`, `/mentoring`, `/mentoring/sessions`, `/mentoring/thank-you` (noindex page cal.com redirects to after a paid booking), `/now`, `/portfolio`, `/work`, `/uses`, `/testimonials`, `/organizations`, `/for-llms`, `/tags`, `/design-system`, `/essays`
 - **Dynamic SSG**: `/posts/[slug]`, `/categories/[slug]`, `/tags/[slug]`, `/experience/[slug]`, `/education/[slug]`, `/awards/[slug]`, `/organizations/[slug]`, `/testimonials/[slug]`
-- **Route handlers**: `/feed` (RSS), `/api/newsletter`, `/api/mentoring-sessions`, `/api/social-upload`
+- **Route handlers**: `/feed` (RSS), `/api/newsletter`, `/api/mentoring-sessions`, `/api/social-upload`, `/api/stripe-webhook` (emails the cal.com booking link to prepaid mentoring package buyers through Resend; needs `STRIPE_WEBHOOK_SECRET`, `RESEND_API_KEY` and `RESEND_FROM`, and its payment link IDs are listed in the route)
 - **Metadata routes**: `/robots.txt` (`app/robots.ts`), `/sitemap.xml` (`app/sitemap.ts`)
 - Old `/blog/...` URLs redirect to `/posts/...` in `next.config.ts`. Always link to `/posts/<slug>`.
 
@@ -200,7 +200,7 @@ npm run chromatic        # upload to Chromatic for visual regression
    - Claude will (`/publish-post`): fill missing frontmatter (excerpt, slug, date), suggest categories/tags, upload any local images to Vercel Blob, ensure MDX is valid
 3. **Commit** with `/commit`
 4. **Deploy** with `/deploy` (pushes to main → Vercel auto-deploys)
-5. **Cross-post** automatically fires via `.github/workflows/crosspost.yml` on push to main for newly added `content/posts/*.mdx` files → dev.to, Hashnode, and Buffer drafts for LinkedIn/Bluesky/Threads
+5. **Cross-post** automatically fires via `.github/workflows/crosspost.yml` on push to main for newly added `content/posts/*.mdx` files → dev.to, Hashnode, and Buffer drafts for LinkedIn and Substack
    - A Slack reminder lists the manual steps: review the Buffer drafts, republish flagship essays as a LinkedIn Newsletter issue, share on Reddit by hand
 
 ### Cross-posting setup
@@ -215,11 +215,12 @@ Each platform is skipped when its secret isn't set, and one failing doesn't bloc
 - Secret: `HASHNODE_TOKEN` (hashnode.com/settings/developer); optional variables `HASHNODE_PUBLICATION_ID` (defaults to your first publication) and `HASHNODE_API_URL` (defaults to `https://gql-beta.hashnode.com/`, the endpoint that replaced the retired `gql.hashnode.com`; Hashnode may require a Pro plan for API access)
 - Script: `scripts/crosspost-hashnode.js` — sets `originalArticleURL` to the canonical post URL
 
-**LinkedIn, Bluesky, Threads (via Buffer)**
+**LinkedIn and Substack (via Buffer)**
 - Secret: `BUFFER_API_KEY` (publish.buffer.com/settings/api); connect the channels in Buffer once
-- Optional variables: `BUFFER_SERVICES` (default `linkedin,bluesky,threads`), `BUFFER_MODE` (`draft` by default; `queue` to skip review)
+- Optional variables: `BUFFER_SERVICES` (default `linkedin,substack`; the repo variable overrides it), `BUFFER_MODE` (`draft` by default; `queue` to skip review)
 - Script: `scripts/crosspost-social.js` — writes a per-network post (title + excerpt + link, fit to each character limit); add `social: "..."` to frontmatter to use custom intro text instead of the excerpt
-- Preview without posting: `node scripts/crosspost-social.js content/posts/<slug>.mdx --dry-run`
+- Attaches the post's `featuredImage` (as a full URL, title as alt text) when it has one; Substack posts go out as Notes, kept to 500 characters
+- Preview without posting (also prints the image URL): `node scripts/crosspost-social.js content/posts/<slug>.mdx --dry-run`
 
 **Slack reminder**
 - Secret: `SLACK_WEBHOOK_URL` (a Slack incoming webhook to the channel or DM you want)
@@ -261,7 +262,7 @@ Colors follow a **teal/charcoal + linen/raspberry** palette defined in `app/glob
 
 All new images must be uploaded to Vercel Blob storage before use. Never reference external image CDNs (AWS S3, Webflow CDN, imgix, etc.) directly.
 
-**No Blob token (cloud or phone sessions):** commit the image under `public/images/<folder>/` and reference it as `/images/<folder>/<file>` in the post. On a branch push, `.github/workflows/upload-post-images.yml` runs `scripts/upload-post-images.js`, which uploads new images that posts reference to Blob, swaps in the Blob URLs and removes the local copies. It needs the `BLOB_READ_WRITE_TOKEN` repo secret. Pull before editing again, since the workflow pushes a commit to the branch.
+**No Blob token (cloud or phone sessions):** commit the image under `public/images/<folder>/` and reference it as `/images/<folder>/<file>` in the post. On a branch push, `.github/workflows/upload-post-images.yml` runs `scripts/upload-post-images.js`, which uploads new images that posts reference to Blob, swaps in the Blob URLs and removes the local copies. It needs the `BLOB_READ_WRITE_TOKEN` repo secret (a token for the current store below). Pull before editing again, since the workflow pushes a commit to the branch.
 
 **Store ID:** `store_GZQhCZL3EhDy3Foa`
 **Public base URL:** `https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/`
@@ -289,7 +290,21 @@ curl -sS -X POST "https://francescoronel.com/api/social-upload?name=my-graphic" 
 - Response: `{ "url": "https://gzqhczl3ehdy3foa.public.blob.vercel-storage.com/social/<date>-my-graphic-<suffix>.png", ... }`
 - PNG, JPEG, GIF or WebP only (checked from the file's bytes), 4 MB at most, so no video
 - Needs `SOCIAL_UPLOAD_TOKEN` in the Vercel project's env. In a Claude Code cloud session the token is a network secret for `francescoronel.com` that the proxy adds as the `x-upload-token` header; send any placeholder value for it and never ask for the real one in chat
+- On a local machine, read the token from a private file (`-H "x-upload-token: $(cat ~/.social-upload-token)"`) and have Frances run the command. Don't route it through the clipboard, since copying the next command replaces it
+- Blob token: the route uses `IMAGES_BLOB_READ_WRITE_TOKEN` first and falls back to `BLOB_READ_WRITE_TOKEN`. The `francescoronel-images` store is connected to the Vercel project with the `IMAGES` prefix, so Vercel keeps the prefixed one current. The project's unprefixed `BLOB_READ_WRITE_TOKEN` was left over from the store deleted in the blob migration, so don't rely on it in new server code
+- Errors: `503` means `SOCIAL_UPLOAD_TOKEN` or the Blob token is missing from the deployment, `401` a wrong or missing `x-upload-token`, `413` over 4 MB, `415` not an image, `502` the Blob upload itself failed (read the cause with `vercel logs --environment production --scope latina-dev -q social-upload`)
 - Code: `app/api/social-upload/route.ts`
+
+Setting or rotating `SOCIAL_UPLOAD_TOKEN` (Vercel team `latina-dev`, project `francescoronel`; run `vercel link` once per checkout). Vercel hides a Secret after saving, so keep the value in the file until it's also saved as the cloud network secret or in a password manager:
+
+```bash
+printf %s "$(openssl rand -hex 32)" > ~/.social-upload-token && chmod 600 ~/.social-upload-token
+vercel env rm SOCIAL_UPLOAD_TOKEN production -y   # only when replacing an existing value
+vercel env add SOCIAL_UPLOAD_TOKEN production --sensitive < ~/.social-upload-token
+vercel redeploy <latest production deployment URL> --environment production --scope latina-dev
+```
+
+An env change only reaches the endpoint after a production redeploy. Use `vercel redeploy`, not `vercel --prod`, which would deploy whatever is checked out locally.
 
 Folder conventions:
 - `social/` — social media graphics uploaded through `/api/social-upload`

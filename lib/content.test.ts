@@ -145,7 +145,7 @@ describe("content loaders with a fixture content directory", () => {
       ]),
       "content/experience.json": json([
         { title: "Engineer", slug: "eng-old", company: "Acme Corp", startDate: "2015-01-01", endDate: "2016-01-01" },
-        { title: "Lead", slug: "lead-new", company: "Other Org", startDate: "2020-01-01", endDate: null },
+        { title: "Lead", slug: "lead-new", company: "Other Org", startDate: "2020-01-01", endDate: null, skills: ["vue"] },
       ]),
       "content/education.json": json([
         { institution: "acme corp", slug: "acme-academy", startDate: "2010-01-01", endDate: "2012-01-01" },
@@ -272,11 +272,18 @@ describe("content loaders with a fixture content directory", () => {
     expect(content.getCategoryMaps()).toEqual({ categoryImages: { web: "/images/web.png" } });
   });
 
-  it("adds post counts to tags", () => {
+  it("counts posts, projects and roles for each tag", () => {
+    // react: the Alpha post and the proj-new project. vue: the Lead role
     expect(content.getTags()).toEqual([
-      { name: "React", slug: "react", count: 1 },
-      { name: "Vue", slug: "vue", count: 0 },
+      { name: "React", slug: "react", count: 2 },
+      { name: "Vue", slug: "vue", count: 1 },
     ]);
+    expect(content.getTags()).toBe(content.getTags());
+    expect(content.getPostsByTag("react").map((p) => p.slug)).toEqual(["proj-new", "alpha-custom"]);
+    expect(content.getExperiencesBySkill("vue").map((e) => e.slug)).toEqual(["lead-new"]);
+    expect(content.getExperiencesBySkill("react")).toEqual([]);
+    expect(content.getTagHref("react")).toBe("/tags/react");
+    expect(content.getTagHref("python")).toBeNull();
   });
 
   it("orders organizations by how many posts reference them", () => {
@@ -289,7 +296,7 @@ describe("content loaders with a fixture content directory", () => {
     expect(content.getEducationBySlug("state-u")?.institution).toBe("State U");
     expect(content.getAwardBySlug("older")?.title).toBe("Older Award");
     expect(content.getCategoryBySlug("uncategorized")?.count).toBe(2);
-    expect(content.getTagBySlug("react")?.count).toBe(1);
+    expect(content.getTagBySlug("react")?.count).toBe(2);
     expect(content.getTagName("vue")).toBe("Vue");
     expect(content.getTagName("ai-tools")).toBe("AI Tools");
     expect(content.getTestimonialBySlug("sam")?.name).toBe("Sam");

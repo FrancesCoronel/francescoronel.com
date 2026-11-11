@@ -8,7 +8,7 @@ import { ConnectCTA } from "@/components/sections/connect-cta";
 export const metadata: Metadata = buildMetadata({
   title: "Tags",
   description:
-    "Browse blog posts by tag.",
+    "Browse posts, projects and roles by tag.",
   path: "/tags",
 });
 
@@ -22,7 +22,7 @@ export default function TagsPage() {
       <PageHeader
         label="Blog"
         heading="Tags 🏷️"
-        description="Browse blog posts by tag."
+        description="Browse posts, projects and roles by tag."
       />
 
       <section className="bg-horchata-100 py-16 md:py-20 dark:bg-navy-800">
