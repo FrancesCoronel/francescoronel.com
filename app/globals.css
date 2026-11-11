@@ -173,6 +173,23 @@ input, textarea, select {
   overflow-wrap: break-word;
 }
 
+/* Inline code: the typography plugin wraps it in literal backticks. Show a soft chip instead. */
+.prose :where(code):not(:where(pre *, [class~="not-prose"] *))::before,
+.prose :where(code):not(:where(pre *, [class~="not-prose"] *))::after {
+  content: none;
+}
+
+.prose :where(code):not(:where(pre *, [class~="not-prose"] *)) {
+  border-radius: 0.25rem;
+  background-color: var(--color-horchata-100);
+  padding: 0.125rem 0.375rem;
+  overflow-wrap: break-word;
+}
+
+.dark .prose :where(code):not(:where(pre *, [class~="not-prose"] *)) {
+  background-color: var(--color-navy-800);
+}
+
 /* Marquee animation */
 @keyframes marquee {
   from {
