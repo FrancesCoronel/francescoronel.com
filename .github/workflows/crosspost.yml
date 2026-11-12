@@ -14,7 +14,7 @@ on:
         description: "Where to send it. Pick only the ones that failed, since the others would get a duplicate."
         type: choice
         required: true
-        options: [devto, hashnode, buffer, slack, all]
+        options: [devto, buffer, slack, all]
 
 jobs:
   crosspost:
@@ -64,21 +64,6 @@ jobs:
           for file in $FILES; do
             echo "→ Processing $file"
             node scripts/crosspost-devto.js "$file"
-          done
-
-      - name: Cross-post to Hashnode
-        if: steps.new-posts.outputs.files != '' && (github.event_name != 'workflow_dispatch' || inputs.platform == 'hashnode' || inputs.platform == 'all')
-        continue-on-error: true
-        env:
-          FILES: ${{ steps.new-posts.outputs.files }}
-          HASHNODE_TOKEN: ${{ secrets.HASHNODE_TOKEN }}
-          HASHNODE_PUBLICATION_ID: ${{ vars.HASHNODE_PUBLICATION_ID }}
-          HASHNODE_API_URL: ${{ vars.HASHNODE_API_URL }}
-        run: |
-          if [ -z "$HASHNODE_TOKEN" ]; then echo "HASHNODE_TOKEN not set, skipping"; exit 0; fi
-          for file in $FILES; do
-            echo "→ Processing $file"
-            node scripts/crosspost-hashnode.js "$file"
           done
 
       - name: Share on social via Buffer

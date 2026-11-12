@@ -200,7 +200,7 @@ npm run chromatic        # upload to Chromatic for visual regression
    - Claude will (`/publish-post`): fill missing frontmatter (excerpt, slug, date), suggest categories/tags, upload any local images to Vercel Blob, ensure MDX is valid
 3. **Commit** with `/commit`
 4. **Deploy** with `/deploy` (pushes to main → Vercel auto-deploys)
-5. **Cross-post** automatically fires via `.github/workflows/crosspost.yml` on push to main for newly added `content/posts/*.mdx` files → dev.to, Hashnode, and Buffer drafts for LinkedIn and Substack
+5. **Cross-post** automatically fires via `.github/workflows/crosspost.yml` on push to main for newly added `content/posts/*.mdx` files → dev.to and Buffer drafts for LinkedIn and Substack
    - A Slack reminder lists the manual steps: review the Buffer drafts, republish flagship essays as a LinkedIn Newsletter issue, share on Reddit by hand
 
 ### Cross-posting setup
@@ -210,10 +210,6 @@ Each platform is skipped when its secret isn't set, and one failing doesn't bloc
 **dev.to**
 - Secret: `DEVTO_API_KEY` (dev.to → Settings → Extensions → DEV Community API Keys)
 - Script: `scripts/crosspost-devto.js` — strips MDX syntax, sets canonical URL, maps tags
-
-**Hashnode**
-- Secret: `HASHNODE_TOKEN` (hashnode.com/settings/developer); optional variables `HASHNODE_PUBLICATION_ID` (defaults to your first publication) and `HASHNODE_API_URL` (defaults to `https://gql-beta.hashnode.com/`, the endpoint that replaced the retired `gql.hashnode.com`; Hashnode may require a Pro plan for API access)
-- Script: `scripts/crosspost-hashnode.js` — sets `originalArticleURL` to the canonical post URL
 
 **LinkedIn and Substack (via Buffer)**
 - Secret: `BUFFER_API_KEY` (publish.buffer.com/settings/api); connect the channels in Buffer once

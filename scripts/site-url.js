@@ -1,6 +1,6 @@
 /**
  * Shared helpers for scripts that send post content off-site (dev.to,
- * Hashnode, Resend). Posts can reference their images by site path
+ * Resend). Posts can reference their images by site path
  * ("/images/speaking/a.jpeg"), which other platforms can't load, so these
  * turn site paths into full URLs.
  */
