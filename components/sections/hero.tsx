@@ -9,6 +9,22 @@ const descriptors = [
   { text: "Latinos 40 Under 40, SF/Silicon Valley", emoji: "🌉" },
 ];
 
+/** Keeps the emoji on the same line as the last word, so it never wraps alone. */
+function withTrailingEmoji(text: string, emoji: string) {
+  const i = text.lastIndexOf(" ");
+  return (
+    <>
+      {text.slice(0, i + 1)}
+      <span className="whitespace-nowrap">
+        {text.slice(i + 1)}{" "}
+        <span className="inline-block" aria-hidden="true">
+          {emoji}
+        </span>
+      </span>
+    </>
+  );
+}
+
 export function Hero() {
   return (
     <section className="relative overflow-hidden pb-16 pt-12 md:pb-24 md:pt-20">
@@ -19,15 +35,18 @@ export function Hero() {
       <div className="relative mx-auto max-w-[var(--container-max)] px-6">
         <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12 lg:gap-16">
           {/* Text content */}
-          <div className="w-full flex-1 text-center md:text-left">
+          <div className="w-full flex-1 text-left">
             <h1 className="text-2xl font-black leading-[1.1] tracking-tight text-navy-900 dark:text-horchata-100 sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl">
-              Hi, I&apos;m Frances! 👋🏽
+              Hi, I&apos;m <span className="whitespace-nowrap">Frances! 👋🏽</span>
             </h1>
 
             <p className="mt-4 text-lg font-semibold leading-snug text-navy-800 dark:text-horchata-200 md:text-xl lg:text-2xl">
-              I help whole companies build with AI agents, engineers and everyone else.{" "}
-              <span className="inline-block" aria-hidden="true">
-                🚀
+              I help whole companies build with AI agents, engineers and everyone{" "}
+              <span className="whitespace-nowrap">
+                else.{" "}
+                <span className="inline-block" aria-hidden="true">
+                  🚀
+                </span>
               </span>
             </p>
 
@@ -38,10 +57,7 @@ export function Hero() {
                   key={d.text}
                   className="text-sm text-navy-600 dark:text-white/70 md:text-base lg:text-lg"
                 >
-                  {d.text}{" "}
-                  <span className="inline-block" aria-hidden="true">
-                    {d.emoji}
-                  </span>
+                  {withTrailingEmoji(d.text, d.emoji)}
                 </p>
               ))}
             </div>

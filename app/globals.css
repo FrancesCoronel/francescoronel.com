@@ -112,6 +112,8 @@
   --font-sans: var(--font-latina);
 
   /* Font size scale — 20px minimum baseline, aggressive heading scale */
+  --text-2xs: 1rem;           /* 16px — pill badges only (status, category); the one exception to the 20px floor */
+  --text-2xs--line-height: 1.5rem;
   --text-xs: 1.25rem;         /* 20px (floor) — dates, meta, badges */
   --text-xs--line-height: 1.75rem;
   --text-sm: 1.25rem;         /* 20px (floor) — card body, captions */
@@ -207,6 +209,16 @@ input, textarea, select {
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
+}
+
+/* Respect the OS "reduce motion" setting: stop the marquee and jump-scroll instead of gliding */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 /* Pointer cursor on all interactive elements */
