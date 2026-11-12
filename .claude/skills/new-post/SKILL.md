@@ -29,7 +29,7 @@ Create a new MDX blog post with the frontmatter template.
    ---
    ```
 
-   Optional fields: `crosspost: false` skips dev.to, Hashnode and Buffer; `social: "..."` sets custom intro text for the Buffer drafts. `updated` is only for revising an older post.
+   Optional fields: `crosspost: false` skips dev.to and Buffer; `social: "..."` sets custom intro text for the Buffer drafts. `updated` is only for revising an older post.
 4. Show the available categories and tags from `content/categories.json` and `content/tags.json` so Frances can pick.
 5. Show the available organizations from `content/organizations.json` for cross-linking.
 6. Open the file for editing.

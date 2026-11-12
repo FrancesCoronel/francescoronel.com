@@ -12,7 +12,7 @@ Get a post Frances wrote ready to merge. The words are hers: fix frontmatter and
 2. Fill missing frontmatter and leave existing values alone:
    - `title`, `slug` (matches the file name), `date` (YYYY-MM-DD, today if unset), `excerpt` (1 to 2 sentences, shows on listing cards), `source: "nextjs"`.
    - `featuredImage`: a Vercel Blob URL. Ask Frances for an image if there isn't one.
-   - Optional: `updated` (only for a meaningful revision of an older post), `crosspost: false` (skip dev.to, Hashnode and Buffer), `social: "..."` (custom intro text for the Buffer drafts).
+   - Optional: `updated` (only for a meaningful revision of an older post), `crosspost: false` (skip dev.to and Buffer), `social: "..."` (custom intro text for the Buffer drafts).
 3. Pick `categories`, `tags` and `organizations` only from `content/categories.json`, `content/tags.json` and `content/organizations.json`. Suggest new values to Frances instead of inventing them.
 4. Upload local images to Vercel Blob with the snippet in AGENTS.md "Image Hosting" and swap in the blob URLs. Without a Blob token (cloud or phone sessions), commit them under `public/images/<folder>/` instead and let the upload-post-images workflow move them on push. Never link external CDNs.
 5. Site rules for anything you write (frontmatter, alt text, headings): no em dashes, and skin-tone emoji always use 🏽.
