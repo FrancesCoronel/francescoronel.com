@@ -159,7 +159,10 @@ describe("Hero", () => {
   it("renders the heading, descriptors, photo and action cards", () => {
     render(<Hero />);
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Hi, I'm Frances! 👋🏽");
-    expect(screen.getByText(/Proud Peruvian-American/)).toBeInTheDocument();
+    // The last word and emoji sit in their own nowrap span, so match the whole line
+    expect(
+      screen.getByText((_, el) => el?.tagName === "P" && el.textContent?.startsWith("Proud Peruvian-American") === true),
+    ).toBeInTheDocument();
     expect(screen.getByAltText("Frances Coronel")).toBeInTheDocument();
     expect(screen.getAllByRole("link")).toHaveLength(4);
   });
