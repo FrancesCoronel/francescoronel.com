@@ -14,7 +14,7 @@ describe("manifest", () => {
       start_url: "/",
       display: "standalone",
       background_color: "#f9f5f3",
-      theme_color: "#ca2e55",
+      theme_color: "#9e2b25",
     });
   });
 

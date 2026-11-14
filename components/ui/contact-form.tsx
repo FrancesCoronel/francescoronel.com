@@ -147,7 +147,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={!isValid || status === "loading"}
-        className="w-full rounded-full bg-horchata-700 px-8 py-3.5 text-base font-medium text-white transition-colors hover:bg-horchata-800 disabled:cursor-not-allowed disabled:opacity-40 dark:bg-horchata-500 dark:text-navy-900 dark:hover:bg-horchata-400"
+        className="w-full rounded-full bg-horchata-700 px-8 py-3.5 text-base font-medium text-white transition-colors hover:bg-horchata-800 disabled:cursor-not-allowed disabled:opacity-40 dark:bg-accent-light dark:text-navy-950 dark:hover:bg-accent-pale"
       >
         {status === "loading" ? "Sending…" : "Send Message"}
       </button>

@@ -128,7 +128,7 @@ export default async function EducationPage({ params }: PageProps) {
               href={edu.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-horchata-700 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-horchata-800 dark:bg-horchata-500 dark:text-navy-900 dark:hover:bg-horchata-400"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-horchata-700 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-horchata-800 dark:bg-accent-light dark:text-navy-950 dark:hover:bg-accent-pale"
             >
               Visit institution
               <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>

@@ -124,7 +124,7 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="w-full rounded-lg bg-horchata-700 px-3 py-2.5 text-sm font-medium text-white transition-colors hover:bg-horchata-800 disabled:opacity-60 dark:bg-horchata-500 dark:text-navy-900 dark:hover:bg-horchata-400 sm:w-auto"
+              className="w-full rounded-lg bg-horchata-700 px-3 py-2.5 text-sm font-medium text-white transition-colors hover:bg-horchata-800 disabled:opacity-60 dark:bg-accent-light dark:text-navy-950 dark:hover:bg-accent-pale sm:w-auto"
             >
               {status === "loading" ? "..." : "Subscribe"}
             </button>
@@ -162,7 +162,7 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="w-full rounded-xl bg-horchata-700 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-horchata-800 disabled:opacity-60 dark:bg-horchata-500 dark:text-navy-900 dark:hover:bg-horchata-400 sm:w-auto"
+            className="w-full rounded-xl bg-horchata-700 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-horchata-800 disabled:opacity-60 dark:bg-accent-light dark:text-navy-950 dark:hover:bg-accent-pale sm:w-auto"
           >
             {status === "loading" ? "Subscribing…" : "Subscribe"}
           </button>

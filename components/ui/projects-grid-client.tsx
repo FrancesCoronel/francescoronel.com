@@ -245,7 +245,7 @@ export function ProjectsGridClient({
             {skillFilter && (
               <button
                 onClick={handleSkillClear}
-                className="flex items-center gap-1.5 rounded-full bg-horchata-700 px-3.5 py-1.5 text-sm font-medium text-white dark:bg-horchata-500 dark:text-navy-900"
+                className="flex items-center gap-1.5 rounded-full bg-horchata-700 px-3.5 py-1.5 text-sm font-medium text-white dark:bg-accent-light dark:text-navy-950"
               >
                 {skillFilter}
                 <svg className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>

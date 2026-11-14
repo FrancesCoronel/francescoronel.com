@@ -244,15 +244,16 @@ Repo skills don't load in Claude Code Project threads, so their key rules also l
 
 ## Design Tokens 🎨
 
-Colors follow a **teal/charcoal + linen/raspberry** palette defined in `app/globals.css` under `@theme` (Frances Coronel Design System):
+Colors follow a **teal/charcoal + linen/brick red** palette defined in `app/globals.css` under `@theme` (Frances Coronel Design System). `/design-system` shows every token:
 - `navy-50` through `navy-950` — teal-charcoal ramp for text, backgrounds, and dark surfaces
 - `horchata-50` through `horchata-500` — linen/warm neutral ramp for warm backgrounds and borders
-- `horchata-600` through `horchata-950` — raspberry/crimson ramp for accent, links, and CTAs
-- Accent (links, CTAs): `horchata-600` (#ca2e55, raspberry)
-- Dark-mode accent: `accent-light` (#e7a7b7, raspberry tint) — the raspberry ramp (`horchata-600`+) fails WCAG AA on every navy surface, so any `text-horchata-600`–`900` needs a dark override: `dark:text-accent-light` for red labels, `dark:text-horchata-400` for links
+- `horchata-600` through `horchata-950` — one brick red hue for accent, links, and CTAs
+- Accent (links, labels, CTAs): `horchata-700` / `accent` (#9e2b25, brick red). Primary buttons are `bg-horchata-700` with white text
+- Dark-mode accent: `accent-light` (#f0b0a8, brick tint) — the brick ramp (`horchata-600`+) fails WCAG AA on every navy surface, so any `text-horchata-600`–`900` needs a dark override: `dark:text-accent-light` for red labels, `dark:text-horchata-400` for links. Dark-mode primary buttons are `dark:bg-accent-light dark:text-navy-950 dark:hover:bg-accent-pale`
 - Light mode bg: `horchata-50` (#f9f5f3), warm section bg: `horchata-100` (#f0ebe9)
 - Dark mode bg: `navy-900` (#253137, dark teal/charcoal)
 - Primary ink: `navy-900` (#253137)
+- **Semantic tokens** flip with the theme on their own, so they need no `dark:` pair: `surface`, `surface-muted`, `surface-raised`, `ink`, `ink-muted`, `line`, `brand`, `brand-fill`, `on-brand` (e.g. `bg-surface-raised text-ink border-line`). Prefer them in new code; older code still uses the raw ramps with `dark:` pairs
 
 ## Image Hosting 🖼️
 

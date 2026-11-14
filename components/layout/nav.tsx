@@ -72,7 +72,7 @@ export function Nav() {
             <ThemeToggle />
             <Link
               href="/contact"
-              className="rounded-full bg-horchata-700 px-4 py-2 text-xs font-medium text-white shadow-sm transition-all hover:bg-horchata-800 hover:shadow-md dark:bg-horchata-500 dark:text-navy-900 dark:hover:bg-horchata-400"
+              className="rounded-full bg-horchata-700 px-4 py-2 text-xs font-medium text-white shadow-sm transition-all hover:bg-horchata-800 hover:shadow-md dark:bg-accent-light dark:text-navy-950 dark:hover:bg-accent-pale"
             >
               Contact
             </Link>
@@ -141,7 +141,7 @@ export function Nav() {
             </div>
             <Link
               href="/contact"
-              className="block rounded-full bg-horchata-700 py-2 text-center text-sm font-medium text-white shadow-sm transition-all hover:bg-horchata-800 hover:shadow-md dark:bg-horchata-500 dark:text-navy-900 dark:hover:bg-horchata-400"
+              className="block rounded-full bg-horchata-700 py-2 text-center text-sm font-medium text-white shadow-sm transition-all hover:bg-horchata-800 hover:shadow-md dark:bg-accent-light dark:text-navy-950 dark:hover:bg-accent-pale"
               onClick={() => setMobileOpen(false)}
             >
               Contact
