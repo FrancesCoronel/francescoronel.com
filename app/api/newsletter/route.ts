@@ -51,7 +51,9 @@ export async function POST(request: Request) {
 
   if (res.ok) {
     const webhookUrl = process.env.SLACK_WEBHOOK_URL;
-    if (webhookUrl) {
+    // resend.dev is Resend's test domain (used by e2e/newsletter-live.spec.ts)
+    const isTestAddress = email.toLowerCase().endsWith("@resend.dev");
+    if (webhookUrl && !isTestAddress) {
       fetch(webhookUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },

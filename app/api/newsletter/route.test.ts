@@ -77,6 +77,18 @@ describe("POST /api/newsletter", () => {
     expect(fetchMock).toHaveBeenCalledTimes(1);
   });
 
+  it("skips the Slack ping for resend.dev test addresses", async () => {
+    vi.stubEnv("RESEND_API_KEY", "re-key");
+    vi.stubEnv("SLACK_WEBHOOK_URL", "https://hooks.slack.test/abc");
+    const fetchMock = vi.fn().mockResolvedValue(resendResponse(201));
+    vi.stubGlobal("fetch", fetchMock);
+
+    const res = await POST(subscribeRequest({ email: "delivered+e2e-1@Resend.dev" }));
+    expect(await res.json()).toEqual({ success: true });
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(fetchMock).toHaveBeenCalledWith("https://api.resend.com/contacts", expect.anything());
+  });
+
   it("treats 409 and 'already exists' errors as success", async () => {
     vi.stubEnv("RESEND_API_KEY", "re-key");
     vi.stubGlobal(

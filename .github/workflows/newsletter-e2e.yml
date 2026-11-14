@@ -1,0 +1,58 @@
+name: Newsletter signup (live)
+
+# Signs up on the deployed site with a resend.dev test address, checks the
+# contact reached the Resend segment, then deletes it.
+on:
+  schedule:
+    - cron: "0 15 * * 1"  # Mondays 15:00 UTC
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "Site to test"
+        required: false
+        default: "https://www.francescoronel.com"
+
+concurrency:
+  group: newsletter-e2e
+  cancel-in-progress: false
+
+jobs:
+  newsletter:
+    name: Live newsletter signup test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1  # v7.1.0
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run live newsletter test
+        run: npx playwright test --config playwright.newsletter.config.ts
+        env:
+          CI: true
+          NEWSLETTER_E2E_URL: ${{ inputs.url || 'https://www.francescoronel.com' }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_SEGMENT_ID: ${{ secrets.RESEND_SEGMENT_ID }}
+
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9  # v7.0.2
+        if: failure()
+        with:
+          name: newsletter-e2e-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14

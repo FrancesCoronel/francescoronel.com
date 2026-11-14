@@ -229,6 +229,10 @@ Resend is wired up at `/api/newsletter` — subscribers sign up on the site and 
 When a new post lands on main, `.github/workflows/newsletter-broadcast.yml` runs `scripts/newsletter-broadcast.js`, waits for the post to go live, and creates a **draft** broadcast in Resend (title, excerpt, featured image, link) — review and send it from the [Resend dashboard](https://resend.com/broadcasts)
 - Requires secrets: `RESEND_API_KEY`, `RESEND_SEGMENT_ID`, `RESEND_FROM` (a sender on a verified domain)
 
+`.github/workflows/newsletter-e2e.yml` checks the whole signup path every Monday: `e2e/newsletter-live.spec.ts` subscribes on the live site with a `delivered+e2e-<timestamp>@resend.dev` address, polls the Resend API until the contact is in the `RESEND_SEGMENT_ID` segment, then deletes it. The API route skips the Slack ping for `@resend.dev` addresses
+- Run it by hand: Actions → **Newsletter signup (live)** → Run workflow (optionally with another site URL)
+- Locally: `NEWSLETTER_E2E_URL=https://www.francescoronel.com RESEND_API_KEY=... RESEND_SEGMENT_ID=... npx playwright test --config playwright.newsletter.config.ts`. Without `NEWSLETTER_E2E_URL` and `RESEND_API_KEY` it skips, and `npm run test:e2e` never runs it
+
 ## Custom Slash Commands 🔧
 
 Skills in `.claude/skills/<name>/SKILL.md`, invoked with `/name`. Claude only runs `/commit` and `/deploy` when you ask.
