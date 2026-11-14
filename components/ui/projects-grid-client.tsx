@@ -302,7 +302,7 @@ export function ProjectsGridClient({
           {featured.length > 0 && (
             <section className="bg-horchata-50 py-16 md:py-20 dark:bg-navy-900">
               <div className="mx-auto max-w-[var(--container-max)] px-6">
-                <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
+                <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
                   Pinned
                 </p>
                 <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
@@ -325,7 +325,7 @@ export function ProjectsGridClient({
             <div className="mx-auto max-w-[var(--container-max)] px-6">
               {featured.length > 0 && (
                 <>
-                  <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
+                  <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
                     All Work
                   </p>
                   <h2 className="mt-1 mb-4 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
