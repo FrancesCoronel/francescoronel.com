@@ -16,9 +16,8 @@ const color = {
   horchata100: "#f0ebe9",
   horchata200: "#e8e1de",
   horchata400: "#dacec8",
-  horchata600: "#ca2e55",
   horchata700: "#9e2b25",
-  accentLight: "#e7a7b7",
+  accentLight: "#f0b0a8",
   white: "#ffffff",
 };
 
@@ -80,13 +79,13 @@ function buildHtml(greeting: string): string {
                 <p class="body" style="margin:0 0 28px;font-size:18px;line-height:28px;color:${color.navy900};">You can schedule your sessions whenever you're ready.</p>
                 <table role="presentation" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td style="border-radius:12px;background-color:${color.horchata600};">
+                    <td style="border-radius:12px;background-color:${color.horchata700};">
                       <a href="${BOOKING_URL}" style="display:inline-block;padding:14px 28px;font-family:${FONT_STACK};font-size:18px;line-height:24px;font-weight:700;color:${color.white};text-decoration:none;border-radius:12px;">Schedule a session</a>
                     </td>
                   </tr>
                 </table>
                 <p class="muted" style="margin:28px 0 0;font-size:16px;line-height:24px;color:${color.navy600};">Keep this email handy, since the same link works for every session in your package:</p>
-                <p style="margin:4px 0 0;font-size:16px;line-height:24px;"><a class="link" href="${BOOKING_URL}" style="color:${color.horchata600};word-break:break-all;">${BOOKING_URL}</a></p>
+                <p style="margin:4px 0 0;font-size:16px;line-height:24px;"><a class="link" href="${BOOKING_URL}" style="color:${color.horchata700};word-break:break-all;">${BOOKING_URL}</a></p>
                 <hr class="rule" style="margin:32px 0;border:0;border-top:1px solid ${color.horchata200};" />
                 <p class="body" style="margin:0 0 16px;font-size:18px;line-height:28px;color:${color.navy900};">Reply here if you have any questions. Excited to chat soon!</p>
                 <table role="presentation" cellpadding="0" cellspacing="0">
@@ -96,7 +95,7 @@ function buildHtml(greeting: string): string {
                     </td>
                     <td>
                       <p class="heading" style="margin:0;font-size:18px;line-height:24px;font-weight:700;color:${color.navy900};">Frances Coronel</p>
-                      <p style="margin:0;font-size:16px;line-height:22px;"><a class="link" href="${SITE_URL}/mentoring" style="color:${color.horchata600};">francescoronel.com/mentoring</a></p>
+                      <p style="margin:0;font-size:16px;line-height:22px;"><a class="link" href="${SITE_URL}/mentoring" style="color:${color.horchata700};">francescoronel.com/mentoring</a></p>
                     </td>
                   </tr>
                 </table>

@@ -104,7 +104,7 @@ export async function LinkPreview({ url }: { url: string }) {
         />
       )}
       <div className="flex min-w-0 flex-col justify-center gap-1 p-4">
-        <span className="text-xs font-semibold uppercase tracking-wide text-horchata-600 dark:text-horchata-500">
+        <span className="text-xs font-semibold uppercase tracking-wide text-horchata-600 dark:text-accent-light">
           {og.siteName}
         </span>
         <p className="truncate text-sm font-semibold text-navy-900 dark:text-horchata-100">

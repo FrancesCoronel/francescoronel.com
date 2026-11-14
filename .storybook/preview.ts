@@ -23,9 +23,8 @@ const preview: Preview = {
     (Story, context) => {
       const isDark = context.globals.darkMode === "dark";
       document.documentElement.classList.toggle("dark", isDark);
-      document.documentElement.style.backgroundColor = isDark
-        ? "#141726"
-        : "#fdf8f3";
+      // Same page background as the site: the surface token flips with .dark
+      document.documentElement.style.backgroundColor = "var(--color-surface)";
       return Story();
     },
   ],

@@ -61,7 +61,7 @@ export default function MentoringThankYouPage() {
         <div className="mt-8 flex flex-wrap gap-4">
           <Link
             href="/mentoring"
-            className="rounded-full bg-horchata-700 px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-horchata-800 dark:bg-horchata-500 dark:text-navy-900 dark:hover:bg-horchata-400"
+            className="rounded-full bg-horchata-700 px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-horchata-800 dark:bg-accent-light dark:text-navy-950 dark:hover:bg-accent-pale"
           >
             Back to Mentoring <span aria-hidden="true">&rarr;</span>
           </Link>

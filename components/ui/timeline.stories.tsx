@@ -99,7 +99,7 @@ export const Education: Story = {
         style={{
           maxWidth: 600,
           padding: "2rem",
-          backgroundColor: "#141726",
+          backgroundColor: "#253137" /* navy-900 */,
           borderRadius: "1rem",
         }}
       >
