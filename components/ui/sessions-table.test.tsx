@@ -120,7 +120,10 @@ describe("SessionsTable", () => {
     await user.click(screen.getByRole("button", { name: "2" }));
     expect(screen.getByRole("button", { name: "2" })).toHaveClass("bg-horchata-500");
 
-    const [yearSelect, categorySelect, sourceSelect] = screen.getAllByRole("combobox");
+    // Each filter has an accessible name, so screen readers say what it filters
+    const yearSelect = screen.getByRole("combobox", { name: "Filter by year" });
+    const categorySelect = screen.getByRole("combobox", { name: "Filter by category" });
+    const sourceSelect = screen.getByRole("combobox", { name: "Filter by source" });
     await user.selectOptions(yearSelect, "2015");
     expect(screen.getByText("1 sessions")).toBeInTheDocument();
     expect(screen.queryByRole("button", { name: "Next" })).not.toBeInTheDocument();

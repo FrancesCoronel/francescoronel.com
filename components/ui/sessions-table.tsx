@@ -198,6 +198,7 @@ export function SessionsTable() {
       {/* Filters */}
       <div className="mt-8 flex flex-wrap gap-3">
         <select
+          aria-label="Filter by year"
           value={yearFilter}
           onChange={(e) => { setYearFilter(e.target.value); resetPage(); }}
           className="rounded-lg border border-horchata-200 bg-white px-3 py-1.5 text-sm text-navy-700 dark:border-navy-700 dark:bg-navy-800 dark:text-horchata-200"
@@ -209,6 +210,7 @@ export function SessionsTable() {
         </select>
 
         <select
+          aria-label="Filter by category"
           value={categoryFilter}
           onChange={(e) => { setCategoryFilter(e.target.value); resetPage(); }}
           className="rounded-lg border border-horchata-200 bg-white px-3 py-1.5 text-sm text-navy-700 dark:border-navy-700 dark:bg-navy-800 dark:text-horchata-200"
@@ -220,6 +222,7 @@ export function SessionsTable() {
         </select>
 
         <select
+          aria-label="Filter by source"
           value={sourceFilter}
           onChange={(e) => { setSourceFilter(e.target.value); resetPage(); }}
           className="rounded-lg border border-horchata-200 bg-white px-3 py-1.5 text-sm text-navy-700 dark:border-navy-700 dark:bg-navy-800 dark:text-horchata-200"
