@@ -71,6 +71,8 @@ const typographyScale = [
   { name: "text-3xl", size: "46px (2.875rem)", lineHeight: "54px", usage: "Page titles" },
   { name: "text-4xl", size: "56px (3.5rem)", lineHeight: "64px", usage: "Hero headings" },
   { name: "text-5xl", size: "68px (4.25rem)", lineHeight: "76px", usage: "Large hero text" },
+  { name: "text-6xl", size: "72px (4.5rem)", lineHeight: "80px", usage: "Hero heading, laptops" },
+  { name: "text-7xl", size: "76px (4.75rem)", lineHeight: "84px", usage: "Hero heading, wide screens" },
 ];
 
 function ColorSwatch({ name, hex }: { name: string; hex: string }) {

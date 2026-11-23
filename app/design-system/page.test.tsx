@@ -36,5 +36,6 @@ describe("app/design-system/page", () => {
     expect(html).toContain("text-5xl");
     expect(html).toContain("68px (4.25rem)");
     expect(html).toContain("Large hero text");
+    expect(html).toContain("76px (4.75rem)");
   });
 });
