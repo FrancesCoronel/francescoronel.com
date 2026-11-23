@@ -179,7 +179,7 @@ export function SessionsTable() {
             const count = byYear[year];
             const heightPct = Math.round((count / maxCount) * 100);
             return (
-              <div key={year} className="flex flex-1 flex-col items-center gap-1">
+              <div key={year} className="flex min-w-0 flex-1 flex-col items-center gap-1">
                 <span className="text-xs text-navy-600 dark:text-white/60">
                   {count}
                 </span>
@@ -188,7 +188,8 @@ export function SessionsTable() {
                   style={{ height: `${Math.max(4, heightPct * 0.6)}px` }}
                 />
                 <span className="text-[10px] text-navy-600 dark:text-white/60">
-                  {year}
+                  <span className="sm:hidden">&rsquo;{year.slice(2)}</span>
+                  <span className="hidden sm:inline">{year}</span>
                 </span>
               </div>
             );

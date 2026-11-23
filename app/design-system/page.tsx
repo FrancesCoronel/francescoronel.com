@@ -292,14 +292,14 @@ export default function DesignSystemPage() {
             {typographyScale.map((t) => (
               <div
                 key={t.name}
-                className="flex items-center gap-6 p-4"
+                className="flex flex-wrap items-center gap-x-6 gap-y-1 p-4 sm:flex-nowrap"
               >
-                <div className="w-28 flex-shrink-0">
+                <div className="w-24 flex-shrink-0 sm:w-28">
                   <p className="font-mono text-sm font-medium text-horchata-700 dark:text-horchata-400">
                     {t.name}
                   </p>
                 </div>
-                <div className="w-40 flex-shrink-0">
+                <div className="flex-shrink-0 sm:w-40">
                   <p className="text-sm text-navy-600 dark:text-horchata-400">
                     {t.size}
                   </p>
@@ -308,7 +308,7 @@ export default function DesignSystemPage() {
                   </p>
                 </div>
                 <p
-                  className="flex-1 font-bold text-navy-900 dark:text-horchata-100"
+                  className="min-w-0 basis-full font-bold text-navy-900 dark:text-horchata-100 sm:flex-1 sm:basis-auto"
                   style={{ fontSize: t.size.split(" ")[0] }}
                 >
                   Aa

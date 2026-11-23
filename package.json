@@ -31,7 +31,8 @@
     "test:e2e:visual:mobile": "VISUAL=1 playwright test e2e/visual.spec.ts --project=visual-mobile",
     "test:e2e:smoke": "playwright test e2e/smoke.spec.ts",
     "test:e2e:search": "playwright test e2e/search.spec.ts",
-    "test:e2e:analytics": "playwright test e2e/analytics.spec.ts"
+    "test:e2e:analytics": "playwright test e2e/analytics.spec.ts",
+    "test:e2e:layout": "playwright test e2e/mobile-layout.spec.ts --project=chromium"
   },
   "dependencies": {
     "@sentry/nextjs": "^11.11.0",

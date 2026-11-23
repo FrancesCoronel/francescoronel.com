@@ -70,7 +70,7 @@ export function MentoringSessionsFeed() {
               const count = byYear[year];
               const heightPct = Math.round((count / maxCount) * 100);
               return (
-                <div key={year} className="flex flex-1 flex-col items-center gap-1">
+                <div key={year} className="flex min-w-0 flex-1 flex-col items-center gap-1">
                   <span className="text-xs text-navy-600 dark:text-white/60">
                     {count}
                   </span>
