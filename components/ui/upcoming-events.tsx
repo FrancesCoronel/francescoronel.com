@@ -52,7 +52,7 @@ export function UpcomingEvents({ events }: UpcomingEventsProps) {
                   className="group flex flex-col rounded-2xl border border-horchata-300 bg-white p-5 transition-all hover:border-horchata-500 hover:shadow-lg dark:border-navy-600 dark:bg-navy-800 dark:hover:border-navy-500"
                 >
                   <div className="flex items-center gap-2">
-                    <span className="rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">
+                    <span className="rounded-full bg-success-soft px-2.5 py-0.5 text-xs font-medium text-success">
                       Upcoming
                     </span>
                     <span className="text-xs text-navy-600 dark:text-white/60">{event.org}</span>

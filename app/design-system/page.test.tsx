@@ -24,6 +24,13 @@ describe("app/design-system/page", () => {
     }
   });
 
+  it("renders a pill for every status color", () => {
+    const html = renderToStaticMarkup(<DesignSystemPage />);
+    for (const status of ["success", "info", "warning", "danger"]) {
+      expect(html).toContain(`bg-${status}-soft text-${status}"`);
+    }
+  });
+
   it("renders the typography scale", () => {
     const html = renderToStaticMarkup(<DesignSystemPage />);
     expect(html).toContain("text-5xl");
