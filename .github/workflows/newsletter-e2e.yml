@@ -1,7 +1,8 @@
 name: Newsletter signup (live)
 
-# Signs up on the deployed site with a resend.dev test address, checks the
-# contact reached the Resend segment, then deletes it.
+# Signs up on the deployed site with a resend.dev test address, opens the
+# double opt-in link from the confirmation email, checks the contact reached
+# the Resend segment, then deletes it.
 on:
   schedule:
     - cron: "0 15 * * 1"  # Mondays 15:00 UTC

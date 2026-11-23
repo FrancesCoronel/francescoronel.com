@@ -47,9 +47,9 @@ Dedup script (`scripts/migrations/dedup-posts.js`) keeps the Webflow version whe
 
 ### Routing 🗺️
 
-- **Static pages**: `/`, `/about`, `/posts`, `/categories`, `/contact`, `/speaking`, `/mentoring`, `/mentoring/sessions`, `/mentoring/thank-you` (noindex page cal.com redirects to after a paid booking), `/now`, `/portfolio`, `/work`, `/uses`, `/testimonials`, `/organizations`, `/for-llms`, `/tags`, `/design-system`, `/essays`
+- **Static pages**: `/`, `/about`, `/posts`, `/categories`, `/contact`, `/speaking`, `/mentoring`, `/mentoring/sessions`, `/mentoring/thank-you` (noindex page cal.com redirects to after a paid booking), `/newsletter/confirmed` (noindex page the newsletter confirm link lands on), `/now`, `/portfolio`, `/work`, `/uses`, `/testimonials`, `/organizations`, `/for-llms`, `/tags`, `/design-system`, `/essays`
 - **Dynamic SSG**: `/posts/[slug]`, `/categories/[slug]`, `/tags/[slug]`, `/experience/[slug]`, `/education/[slug]`, `/awards/[slug]`, `/organizations/[slug]`, `/testimonials/[slug]`
-- **Route handlers**: `/feed` (RSS), `/api/newsletter`, `/api/mentoring-sessions`, `/api/social-upload`, `/api/stripe-webhook` (emails the cal.com booking link to prepaid mentoring package buyers through Resend; needs `STRIPE_WEBHOOK_SECRET`, `RESEND_API_KEY` and `RESEND_FROM`, and its payment link IDs are listed in the route)
+- **Route handlers**: `/feed` (RSS), `/api/newsletter` and `/api/newsletter/confirm` (double opt-in, see Newsletter), `/api/mentoring-sessions`, `/api/social-upload`, `/api/stripe-webhook` (emails the cal.com booking link to prepaid mentoring package buyers through Resend; needs `STRIPE_WEBHOOK_SECRET`, `RESEND_API_KEY` and `RESEND_FROM`, and its payment link IDs are listed in the route)
 - **Metadata routes**: `/robots.txt` (`app/robots.ts`), `/sitemap.xml` (`app/sitemap.ts`)
 - Old `/blog/...` URLs redirect to `/posts/...` in `next.config.ts`. Always link to `/posts/<slug>`.
 
@@ -224,12 +224,15 @@ Each platform is skipped when its secret isn't set, and one failing doesn't bloc
 
 ### Newsletter
 
-Resend is wired up at `/api/newsletter` — subscribers sign up on the site and are added as Resend contacts in the `RESEND_SEGMENT_ID` segment
+Resend is wired up with double opt-in. Signing up on the site (`POST /api/newsletter`) stores nothing: it emails a confirmation link from `RESEND_FROM` (`lib/emails/newsletter-confirm.ts`). Opening the link (`GET /api/newsletter/confirm`) adds the address as a Resend contact in the `RESEND_SEGMENT_ID` segment (or resubscribes an existing contact), pings Slack for new subscribers, and redirects to `/newsletter/confirmed` (`?status=invalid` for a bad or expired link, `?status=error` when Resend fails)
+- The link carries a stateless signed token (`lib/newsletter-token.ts`: the email and a 7-day expiry, HMAC-SHA256). The key is `NEWSLETTER_CONFIRM_SECRET` when set, otherwise derived from `RESEND_API_KEY`, so no extra env var is required. Changing either one voids links already sent
+- The link uses the signup request's own origin, so preview deployments confirm against themselves
+- Requires `RESEND_API_KEY` and `RESEND_FROM` (signup returns 500 "Newsletter not configured" without them); `RESEND_SEGMENT_ID` and `NEWSLETTER_CONFIRM_SECRET` are optional
 
 When a new post lands on main, `.github/workflows/newsletter-broadcast.yml` runs `scripts/newsletter-broadcast.js`, waits for the post to go live, and creates a **draft** broadcast in Resend (title, excerpt, featured image, link) — review and send it from the [Resend dashboard](https://resend.com/broadcasts)
 - Requires secrets: `RESEND_API_KEY`, `RESEND_SEGMENT_ID`, `RESEND_FROM` (a sender on a verified domain)
 
-`.github/workflows/newsletter-e2e.yml` checks the whole signup path every Monday: `e2e/newsletter-live.spec.ts` subscribes on the live site with a `delivered+e2e-<timestamp>@resend.dev` address, polls the Resend API until the contact is in the `RESEND_SEGMENT_ID` segment, then deletes it. The API route skips the Slack ping for `@resend.dev` addresses
+`.github/workflows/newsletter-e2e.yml` checks the whole signup path every Monday: `e2e/newsletter-live.spec.ts` subscribes on the live site with a `delivered+e2e-<timestamp>@resend.dev` address, finds the confirmation email through the Resend API (`GET /emails`, then `GET /emails/{id}` for its HTML), checks no contact exists yet, opens the confirm link and checks the confirmed page, then polls until the contact is in the `RESEND_SEGMENT_ID` segment, and deletes it. The confirm route skips the Slack ping for `@resend.dev` addresses. `RESEND_API_KEY` there needs full access (it reads sent emails and contacts)
 - Run it by hand: Actions → **Newsletter signup (live)** → Run workflow (optionally with another site URL)
 - Locally: `NEWSLETTER_E2E_URL=https://www.francescoronel.com RESEND_API_KEY=... RESEND_SEGMENT_ID=... npx playwright test --config playwright.newsletter.config.ts`. Without `NEWSLETTER_E2E_URL` and `RESEND_API_KEY` it skips, and `npm run test:e2e` never runs it
 
