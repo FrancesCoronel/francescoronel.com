@@ -74,7 +74,7 @@ describe("POST /api/newsletter", () => {
     // The link points back at this deployment and carries a token for the address
     const link = sent.text.match(/https:\/\/\S+/)[0];
     const confirmUrl = new URL(link);
-    expect(confirmUrl.origin + confirmUrl.pathname).toBe("https://francescoronel.com/api/newsletter/confirm");
+    expect(confirmUrl.origin + confirmUrl.pathname).toBe("https://francescoronel.com/newsletter/confirmed");
     const token = confirmUrl.searchParams.get("token")!;
     expect(verifyConfirmToken(token, confirmTokenKey()!)).toBe("new@example.com");
     expect(sent.html).toContain(link.replace(/&/g, "&amp;"));
@@ -93,7 +93,7 @@ describe("POST /api/newsletter", () => {
     });
     await POST(req);
     const sent = JSON.parse(fetchMock.mock.calls[0][1].body);
-    expect(sent.text).toContain("https://preview-123.vercel.app/api/newsletter/confirm?token=");
+    expect(sent.text).toContain("https://preview-123.vercel.app/newsletter/confirmed?token=");
   });
 
   it("passes through Resend errors with their message or a fallback", async () => {

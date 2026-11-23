@@ -3,9 +3,12 @@ import { test, expect } from "@playwright/test";
 /**
  * Signs up on the deployed site with a Resend test address and walks the double
  * opt-in through the Resend API: no contact exists after the signup, the
- * confirmation email was sent, opening its link shows the confirmed page, and
- * only then is the contact in the newsletter segment. Deletes it afterwards. Runs from .github/workflows/newsletter-e2e.yml with
- * playwright.newsletter.config.ts; the normal e2e run ignores this file.
+ * confirmation email was sent, opening its link shows the confirm page and
+ * still creates no contact (so link scanners that prefetch it can't subscribe
+ * anyone), clicking "Yes, subscribe me" shows the confirmed page, and only
+ * then is the contact in the newsletter segment. Deletes it afterwards. Runs
+ * from .github/workflows/newsletter-e2e.yml with playwright.newsletter.config.ts;
+ * the normal e2e run ignores this file.
  */
 
 const RESEND_API = "https://api.resend.com";
@@ -42,9 +45,9 @@ async function findConfirmationEmail(): Promise<SentEmail | undefined> {
 
 /** Pulls the confirm link out of a sent email's HTML (or its text as a fallback). */
 function confirmLink(html = "", text = ""): string | undefined {
-  const fromHtml = html.match(/href="([^"]*\/api\/newsletter\/confirm\?token=[^"]+)"/)?.[1];
+  const fromHtml = html.match(/href="([^"]*\/newsletter\/confirmed\?token=[^"]+)"/)?.[1];
   if (fromHtml) return fromHtml.replace(/&amp;/g, "&");
-  return text.match(/https?:\/\/\S+\/api\/newsletter\/confirm\?token=\S+/)?.[0];
+  return text.match(/https?:\/\/\S+\/newsletter\/confirmed\?token=\S+/)?.[0];
 }
 
 test.describe("newsletter signup (live)", () => {
@@ -96,7 +99,16 @@ test.describe("newsletter signup (live)", () => {
     const link = confirmLink(full.html, full.text);
     expect(link, "confirm link in the email").toBeTruthy();
 
+    // Opening the link only asks for a click
     await page.goto(link!);
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Confirm Your Subscription ✉️");
+    await expect(page.getByText(email)).toBeVisible();
+
+    // Still no contact: opening (or a scanner prefetching) the link changes nothing
+    const opened = await resend(`/contacts/${encodeURIComponent(email)}`);
+    expect(opened.status, `no contact for ${email} after only opening the link`).toBe(404);
+
+    await page.getByRole("button", { name: "Yes, subscribe me" }).click();
     await expect(page).toHaveURL(/\/newsletter\/confirmed$/);
     await expect(page.getByRole("heading", { level: 1 })).toHaveText("You're In 🎉");
 

@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { newsletterConfirmEmail } from "./newsletter-confirm";
 
-const CONFIRM_URL = "https://francescoronel.com/api/newsletter/confirm?token=abc.def";
+const CONFIRM_URL = "https://francescoronel.com/newsletter/confirmed?token=abc.def";
 
 describe("newsletterConfirmEmail", () => {
   it("links the confirm button and the fallback text to the confirm URL", () => {

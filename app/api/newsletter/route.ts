@@ -40,11 +40,13 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Newsletter not configured" }, { status: 500 });
   }
 
-  // Double opt-in: nothing is stored yet. The contact is only created when the
-  // link in this email is opened (app/api/newsletter/confirm/route.ts). The
-  // link uses this request's origin so preview deployments confirm against
-  // themselves.
-  const confirmUrl = new URL("/api/newsletter/confirm", new URL(request.url).origin);
+  // Double opt-in: nothing is stored yet. The link in this email opens
+  // /newsletter/confirmed, where a click on "Yes, subscribe me" POSTs the token
+  // to app/api/newsletter/confirm/route.ts, which creates the contact. Opening
+  // the link alone changes nothing, so mail scanners that prefetch it can't
+  // subscribe anyone. The link uses this request's origin so preview
+  // deployments confirm against themselves.
+  const confirmUrl = new URL("/newsletter/confirmed", new URL(request.url).origin);
   confirmUrl.searchParams.set("token", createConfirmToken(email, key));
 
   const res = await fetch("https://api.resend.com/emails", {

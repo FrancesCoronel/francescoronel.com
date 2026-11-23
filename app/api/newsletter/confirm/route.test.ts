@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { confirmTokenKey, createConfirmToken } from "@/lib/newsletter-token";
-import { GET } from "./route";
+import { GET, POST } from "./route";
 
 const ORIGIN = "https://preview-1.vercel.app";
 const CONFIRMED = `${ORIGIN}/newsletter/confirmed`;
@@ -13,10 +13,13 @@ function tokenFor(email: string, now = Date.now()) {
   return createConfirmToken(email, confirmTokenKey()!, now);
 }
 
+const CONFIRM_API = `${ORIGIN}/api/newsletter/confirm`;
+
+/** Submits the confirm page's form (application/x-www-form-urlencoded). */
 function confirm(token: string | null) {
-  const url = new URL("/api/newsletter/confirm", ORIGIN);
-  if (token !== null) url.searchParams.set("token", token);
-  return GET(new Request(url));
+  const body = new URLSearchParams();
+  if (token !== null) body.set("token", token);
+  return POST(new Request(CONFIRM_API, { method: "POST", body }));
 }
 
 function expectRedirect(res: Response, location: string) {
@@ -38,6 +41,22 @@ afterEach(() => {
 });
 
 describe("GET /api/newsletter/confirm", () => {
+  it("only redirects to the click-to-confirm page, keeping the token", async () => {
+    const fetchMock = vi.fn();
+    vi.stubGlobal("fetch", fetchMock);
+    const token = tokenFor("a+b@example.com");
+    const res = await GET(new Request(`${CONFIRM_API}?token=${encodeURIComponent(token)}`));
+    expectRedirect(res, `${CONFIRMED}?token=${encodeURIComponent(token)}`);
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
+
+  it("sends a link without a token to the invalid state", async () => {
+    expectRedirect(await GET(new Request(CONFIRM_API)), `${CONFIRMED}?status=invalid`);
+    expectRedirect(await GET(new Request(`${CONFIRM_API}?token=`)), `${CONFIRMED}?status=invalid`);
+  });
+});
+
+describe("POST /api/newsletter/confirm", () => {
   it("creates the contact in the segment, pings Slack and shows the confirmed page", async () => {
     vi.stubEnv("SLACK_WEBHOOK_URL", "https://hooks.slack.test/abc");
     const fetchMock = vi
@@ -150,6 +169,20 @@ describe("GET /api/newsletter/confirm", () => {
     for (const token of [null, "", "garbage", `${tokenFor("a@example.com")}x`, tokenFor("a@example.com", eightDaysAgo)]) {
       expectRedirect(await confirm(token), `${CONFIRMED}?status=invalid`);
     }
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
+
+  it("treats a body that isn't form data as invalid", async () => {
+    const fetchMock = vi.fn();
+    vi.stubGlobal("fetch", fetchMock);
+    const res = await POST(
+      new Request(CONFIRM_API, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ token: tokenFor("a@example.com") }),
+      }),
+    );
+    expectRedirect(res, `${CONFIRMED}?status=invalid`);
     expect(fetchMock).not.toHaveBeenCalled();
   });
 
