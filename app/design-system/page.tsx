@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/metadata";
 import { ConnectCTA } from "@/components/sections/connect-cta";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = buildMetadata({
   title: "Design System",
@@ -382,16 +384,31 @@ export default function DesignSystemPage() {
           <h3 className="mt-10 text-xl font-bold text-navy-900 dark:text-horchata-100">
             Buttons
           </h3>
+          <p className="mt-2 text-sm text-navy-600 dark:text-white/70">
+            <code>{"<Button>"}</code> and <code>{"<ButtonLink>"}</code> from{" "}
+            <code>components/ui/button.tsx</code>, in sizes sm, md and lg.
+          </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
-            <button className="rounded-full bg-navy-900 px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-navy-800 dark:bg-horchata-500 dark:text-navy-900 dark:hover:bg-horchata-400">
-              Primary Button
-            </button>
-            <button className="rounded-full border border-navy-300 px-8 py-3 text-sm font-medium text-navy-900 transition-colors hover:border-navy-400 hover:bg-white dark:border-horchata-600 dark:text-horchata-200 dark:hover:bg-navy-700">
-              Secondary Button
-            </button>
-            <button className="rounded-full bg-horchata-500 px-8 py-3 text-sm font-medium text-navy-900 transition-colors hover:bg-horchata-400">
-              Accent Button
-            </button>
+            <Button size="lg">Primary Button</Button>
+            <Button>Primary, md</Button>
+            <Button size="sm">Primary, sm</Button>
+            <Button variant="secondary" size="lg">Secondary Button</Button>
+          </div>
+
+          {/* Badges */}
+          <h3 className="mt-10 text-xl font-bold text-navy-900 dark:text-horchata-100">
+            Badges
+          </h3>
+          <p className="mt-2 text-sm text-navy-600 dark:text-white/70">
+            <code>{"<Badge tone>"}</code> uses the status colors, plus neutral.
+          </p>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <Badge tone="success">Active</Badge>
+            <Badge tone="info">Hackathon</Badge>
+            <Badge tone="warning">Podcast</Badge>
+            <Badge tone="danger">Error</Badge>
+            <Badge>Side Project</Badge>
+            <Badge tone="success" size="md">Upcoming</Badge>
           </div>
 
           {/* Links */}

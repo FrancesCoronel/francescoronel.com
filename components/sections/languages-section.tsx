@@ -29,7 +29,7 @@ export function LanguagesSection({
           {languages.map((lang) => (
             <div
               key={lang.name}
-              className="flex items-center gap-4 rounded-2xl border border-horchata-200 bg-white px-6 py-5 dark:border-navy-700 dark:bg-navy-800"
+              className="flex items-center gap-4 rounded-2xl border border-line bg-surface-raised px-6 py-5"
             >
               <span className="text-2xl sm:text-4xl">{lang.flag}</span>
               <div>

@@ -32,6 +32,8 @@ import { NewsletterCTA } from "@/components/sections/newsletter-cta";
 import { ConnectCTA } from "@/components/sections/connect-cta";
 import nailedItEpisodes from "@/content/nailed-it-episodes.json";
 import nailedItContestants from "@/content/nailed-it-contestants.json";
+import { SectionHeader } from "@/components/ui/section-header";
+import { Badge, CATEGORY_TONES } from "@/components/ui/badge";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -43,14 +45,6 @@ const CATEGORY_LABELS: Record<string, string> = {
   hackathon: "Hackathon",
   "work-project": "Work Project",
   "side-project": "Side Project",
-};
-
-const CATEGORY_COLORS: Record<string, string> = {
-  "open-source": "bg-success-soft text-success",
-  podcast: "bg-warning-soft text-warning",
-  hackathon: "bg-info-soft text-info",
-  "work-project": "bg-horchata-100 text-horchata-800 dark:bg-navy-700 dark:text-horchata-300",
-  "side-project": "bg-horchata-100 text-horchata-800 dark:bg-navy-700 dark:text-horchata-300",
 };
 
 export async function generateStaticParams() {
@@ -131,7 +125,7 @@ export default async function PostPage({ params }: PageProps) {
             <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-8">
               {/* Logo / Emoji */}
               {post.logo ? (
-                <div className="flex-shrink-0 overflow-hidden rounded-2xl border border-horchata-200 bg-white p-3 shadow-sm dark:border-navy-700 dark:bg-navy-800">
+                <div className="flex-shrink-0 overflow-hidden rounded-2xl border border-line bg-surface-raised p-3 shadow-sm">
                   <Image
                     src={post.logo}
                     alt={post.title}
@@ -141,7 +135,7 @@ export default async function PostPage({ params }: PageProps) {
                   />
                 </div>
               ) : (
-                <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-2xl border border-horchata-200 bg-white text-4xl shadow-sm dark:border-navy-700 dark:bg-navy-800 sm:h-24 sm:w-24 sm:text-5xl">
+                <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-2xl border border-line bg-surface-raised text-4xl shadow-sm sm:h-24 sm:w-24 sm:text-5xl">
                   {post.emoji ?? "🛠️"}
                 </div>
               )}
@@ -150,16 +144,14 @@ export default async function PostPage({ params }: PageProps) {
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-center gap-2">
                   {post.projectCategory && (
-                    <span
-                      className={`rounded-full px-3 py-1 text-xs font-semibold ${CATEGORY_COLORS[post.projectCategory] ?? CATEGORY_COLORS["side-project"]}`}
-                    >
+                    <Badge tone={CATEGORY_TONES[post.projectCategory]} size="md">
                       {CATEGORY_LABELS[post.projectCategory] ?? post.projectCategory}
-                    </span>
+                    </Badge>
                   )}
                   {post.status === "active" && (
-                    <span className="rounded-full bg-success-soft px-3 py-1 text-xs font-semibold text-success">
+                    <Badge tone="success" size="md">
                       Active
-                    </span>
+                    </Badge>
                   )}
                 </div>
 
@@ -315,7 +307,7 @@ export default async function PostPage({ params }: PageProps) {
             <div className="mt-6 space-y-5 border-t border-horchata-200 pt-10 dark:border-navy-700">
               {/* GitHub card */}
               {post.github && (
-                <div className="overflow-hidden rounded-2xl border border-horchata-200 bg-white dark:border-navy-700 dark:bg-navy-800">
+                <div className="overflow-hidden rounded-2xl border border-line bg-surface-raised">
                   <div className="flex items-center gap-2 border-b border-horchata-100 px-4 py-3 dark:border-navy-700">
                     <svg className="h-4 w-4 shrink-0 fill-current text-navy-600 dark:text-horchata-300" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" /></svg>
                     <span className="text-xs font-bold uppercase tracking-widest text-navy-600 dark:text-horchata-500">GitHub 🐙</span>
@@ -378,7 +370,7 @@ export default async function PostPage({ params }: PageProps) {
 
               {/* Skills */}
               {post.skills.length > 0 && (
-                <div className="rounded-2xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800">
+                <div className="rounded-2xl border border-line bg-surface-raised p-5">
                   <p className="text-xs font-bold uppercase tracking-widest text-navy-600 dark:text-horchata-500">
                     Skills & Tags 🏷️
                   </p>
@@ -398,7 +390,7 @@ export default async function PostPage({ params }: PageProps) {
 
               {/* Organization */}
               {post.organization && (
-                <div className="rounded-2xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800">
+                <div className="rounded-2xl border border-line bg-surface-raised p-5">
                   <p className="text-xs font-bold uppercase tracking-widest text-navy-600 dark:text-horchata-500">
                     Organization 🏢
                   </p>
@@ -693,12 +685,7 @@ export default async function PostPage({ params }: PageProps) {
       {relatedPosts.length > 0 && (
         <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
           <div className="mx-auto max-w-[var(--container-max)] px-6">
-            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-              Keep Reading
-            </p>
-            <h2 className="mb-8 mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
-              Related Posts
-            </h2>
+            <SectionHeader label="Keep Reading" title="Related Posts" size="md" className="mb-8" />
             <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
               {relatedPosts.map((p) => (
                 <BlogCard key={p.slug} post={p} categoryImages={categoryImages} basePath="/posts" />

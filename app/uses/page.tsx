@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata } from "@/lib/metadata";
 import { ConnectCTA } from "@/components/sections/connect-cta";
+import { SectionHeader } from "@/components/ui/section-header";
 
 export const metadata: Metadata = buildMetadata({
   title: "Uses",
@@ -429,7 +430,7 @@ export default function UsesPage() {
                       href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex cursor-pointer items-start gap-4 rounded-2xl border border-horchata-200 bg-white p-5 transition-all hover:border-horchata-400 hover:shadow-lg dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
+                      className="group flex cursor-pointer items-start gap-4 rounded-2xl border border-line bg-surface-raised p-5 transition-all hover:border-horchata-400 hover:shadow-lg dark:hover:border-navy-500"
                     >
                       {"image" in item && item.image ? (
                         <Image
@@ -475,12 +476,7 @@ export default function UsesPage() {
       {/* Claude Code Section */}
       <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-            AI Workflow
-          </p>
-          <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">
-            Claude Code Setup
-          </h2>
+          <SectionHeader label="AI Workflow" title="Claude Code Setup" />
           <p className="mt-4 max-w-2xl text-sm text-navy-600 dark:text-white/70">
             My Claude Code configuration includes MCP servers, plugins, custom
             skills, and hooks that automate formatting, notifications, and
@@ -529,7 +525,7 @@ export default function UsesPage() {
                   href={server.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex cursor-pointer items-start gap-4 rounded-2xl border border-horchata-200 bg-white p-5 transition-all hover:border-horchata-400 hover:shadow-lg dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
+                  className="group flex cursor-pointer items-start gap-4 rounded-2xl border border-line bg-surface-raised p-5 transition-all hover:border-horchata-400 hover:shadow-lg dark:hover:border-navy-500"
                 >
                   {inner}
                 </a>
@@ -548,7 +544,7 @@ export default function UsesPage() {
                 href={plugin.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group rounded-2xl border border-horchata-200 bg-white p-5 transition-all hover:border-horchata-400 hover:shadow-lg dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
+                className="group rounded-2xl border border-line bg-surface-raised p-5 transition-all hover:border-horchata-400 hover:shadow-lg dark:hover:border-navy-500"
               >
                 <div className="flex items-start gap-4">
                   <span className="mt-0.5 text-2xl">{plugin.icon}</span>
@@ -585,7 +581,7 @@ export default function UsesPage() {
           <h3 className="mt-12 text-xl font-bold text-navy-900 dark:text-horchata-100">
             Custom Skills ⚡
           </h3>
-          <div className="mt-4 space-y-0 divide-y divide-horchata-200 rounded-2xl border border-horchata-200 bg-white dark:divide-navy-700 dark:border-navy-700 dark:bg-navy-800">
+          <div className="mt-4 space-y-0 divide-y divide-horchata-200 rounded-2xl border border-line bg-surface-raised dark:divide-navy-700">
             {skills.map((skill) => (
               <a
                 key={skill.name}
@@ -634,7 +630,7 @@ export default function UsesPage() {
           <h3 className="mt-12 text-xl font-bold text-navy-900 dark:text-horchata-100">
             Hooks 🪝
           </h3>
-          <div className="mt-4 space-y-0 divide-y divide-horchata-200 rounded-2xl border border-horchata-200 bg-white dark:divide-navy-700 dark:border-navy-700 dark:bg-navy-800">
+          <div className="mt-4 space-y-0 divide-y divide-horchata-200 rounded-2xl border border-line bg-surface-raised dark:divide-navy-700">
             {hooks.map((hook, i) => (
               <a
                 key={i}

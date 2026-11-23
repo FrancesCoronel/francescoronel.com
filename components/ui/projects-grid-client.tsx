@@ -6,6 +6,8 @@ import Link from "next/link";
 import type { Project } from "@/lib/types";
 import { formatDateRange } from "@/lib/utils";
 import { PaginationNav } from "./pagination-nav";
+import { SectionHeader } from "@/components/ui/section-header";
+import { Badge } from "@/components/ui/badge";
 
 const PAGE_SIZE = 12;
 
@@ -80,9 +82,9 @@ function ProjectCard({
             {project.title}
           </h2>
           {project.status === "active" && (
-            <span className="shrink-0 rounded-full bg-success-soft px-2 py-0.5 text-2xs font-semibold text-success">
+            <Badge tone="success" className="shrink-0">
               Active
-            </span>
+            </Badge>
           )}
         </div>
 
@@ -138,9 +140,9 @@ function FeaturedProjectRow({
             {project.title}
           </h2>
           {project.status === "active" && (
-            <span className="shrink-0 rounded-full bg-success-soft px-2 py-0.5 text-2xs font-semibold text-success">
+            <Badge tone="success" className="shrink-0">
               Active
-            </span>
+            </Badge>
           )}
         </div>
         <p className={`mt-0.5 text-xs font-medium ${categoryColor}`}>
@@ -302,12 +304,7 @@ export function ProjectsGridClient({
           {featured.length > 0 && (
             <section className="bg-horchata-50 py-16 md:py-20 dark:bg-navy-900">
               <div className="mx-auto max-w-[var(--container-max)] px-6">
-                <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-                  Pinned
-                </p>
-                <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
-                  Featured Projects ⭐
-                </h2>
+                <SectionHeader label="Pinned" title="Featured Projects ⭐" size="sm" />
                 <div className="mt-4">
                   {featured.map((project) => (
                     <FeaturedProjectRow
@@ -325,12 +322,7 @@ export function ProjectsGridClient({
             <div className="mx-auto max-w-[var(--container-max)] px-6">
               {featured.length > 0 && (
                 <>
-                  <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-                    All Work
-                  </p>
-                  <h2 className="mt-1 mb-4 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
-                    All Projects 🛠️
-                  </h2>
+                  <SectionHeader label="All Work" title="All Projects 🛠️" size="sm" className="mb-4" />
                   <p className="mb-10 text-sm text-navy-600 dark:text-white/60">
                     {rest.length} projects
                     {restTotalPages > 1 && ` · page ${restPage} of ${restTotalPages}`}

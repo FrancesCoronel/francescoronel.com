@@ -22,6 +22,8 @@ import Link from "next/link";
 import Image from "next/image";
 import mentoringData from "@/content/mentoring-sessions.json";
 import { getMultipleRepoStars } from "@/lib/github";
+import { SectionHeader } from "@/components/ui/section-header";
+import { Badge } from "@/components/ui/badge";
 
 export const metadata: Metadata = buildMetadata({
   path: "/",
@@ -84,12 +86,7 @@ export default async function HomePage() {
           <div className="mx-auto max-w-[var(--container-max)] px-6">
             <div className="mb-10 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-                  Essays
-                </p>
-                <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">
-                  AI is fertilizer. I help teams learn to prune. 🌳
-                </h2>
+                <SectionHeader label="Essays" title="AI is fertilizer. I help teams learn to prune. 🌳" />
               </div>
               <div className="flex gap-4">
                 <Link
@@ -181,7 +178,7 @@ export default async function HomePage() {
                 <Link
                   key={edu.slug}
                   href={`/education/${edu.slug}`}
-                  className="group flex cursor-pointer flex-col gap-3 rounded-2xl border border-horchata-200 bg-white p-3 transition-all hover:border-horchata-400 hover:shadow-lg sm:flex-row sm:items-start sm:gap-5 sm:p-6 dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
+                  className="group flex cursor-pointer flex-col gap-3 rounded-2xl border border-line bg-surface-raised p-3 transition-all hover:border-horchata-400 hover:shadow-lg sm:flex-row sm:items-start sm:gap-5 sm:p-6 dark:hover:border-navy-500"
                 >
                   {edu.logo && (
                     <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-horchata-50 sm:h-14 sm:w-14 dark:bg-navy-700">
@@ -223,12 +220,7 @@ export default async function HomePage() {
           <div className="mx-auto max-w-[var(--container-max)] px-6">
             <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-                  Pinned
-                </p>
-                <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">
-                  Featured Projects ⭐
-                </h2>
+                <SectionHeader label="Pinned" title="Featured Projects ⭐" />
               </div>
               <Link
                 href="/projects"
@@ -257,9 +249,9 @@ export default async function HomePage() {
                           {project.title}
                         </h3>
                         {project.status === "active" && (
-                          <span className="shrink-0 rounded-full bg-success-soft px-2 py-0.5 text-2xs font-semibold text-success">
+                          <Badge tone="success" className="shrink-0">
                             Active
-                          </span>
+                          </Badge>
                         )}
                       </div>
                       <p className="mt-1.5 text-sm text-navy-600 dark:text-white/60">{project.tagline}</p>
@@ -290,12 +282,7 @@ export default async function HomePage() {
       <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <div className="mb-10 text-center">
-            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-              By the Numbers
-            </p>
-            <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">
-              Impact at a Glance 📊
-            </h2>
+            <SectionHeader label="By the Numbers" title="Impact at a Glance 📊" />
           </div>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
             {[
@@ -309,7 +296,7 @@ export default async function HomePage() {
               <Link
                 key={label}
                 href={href}
-                className="group flex items-center gap-4 rounded-2xl border border-horchata-200 bg-white px-4 py-3 transition-all hover:border-horchata-400 hover:shadow-md sm:gap-5 sm:px-6 sm:py-5 dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
+                className="group flex items-center gap-4 rounded-2xl border border-line bg-surface-raised px-4 py-3 transition-all hover:border-horchata-400 hover:shadow-md sm:gap-5 sm:px-6 sm:py-5 dark:hover:border-navy-500"
               >
                 <span className="hidden text-3xl sm:inline" aria-hidden="true">{icon}</span>
                 <div className="min-w-0 flex-1">

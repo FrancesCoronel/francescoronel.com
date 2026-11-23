@@ -323,7 +323,8 @@ Always use **medium-brown skin tone** (🏽, modifier U+1F3FD) for ANY emoji tha
 
 - All pages use `max-w-[var(--container-max)]` (1200px) with `px-6` padding
 - Section headings use uppercase tracking-widest labels above the main heading
-- Cards: `rounded-2xl border border-horchata-200 bg-white` (dark: `border-navy-700 bg-navy-800`)
+- Shared components in `components/ui/`: `<Button>` / `<ButtonLink>` (or `buttonClasses()`), `<Badge tone>`, `<Card>` (or `cardClasses`) and `<SectionHeader>`. Use them in new code instead of copying class strings
+- Cards: `<Card>`, which is `rounded-2xl border border-line bg-surface-raised` (white on linen, navy-800 in dark mode)
 - Links: `text-horchata-600 hover:text-horchata-800` styling
 - Nav has active page detection via `usePathname()`
 - Testimonial cards truncate to 280 chars with "Read more" expand/collapse
@@ -332,6 +333,8 @@ Always use **medium-brown skin tone** (🏽, modifier U+1F3FD) for ANY emoji tha
 ## Section Header Format 🏷️
 
 Every section must have BOTH a subheader label AND an emoji in the main heading. No exceptions.
+
+Use `<SectionHeader label="Events" title="Speaking 🎤" />` (`size` sm, md or lg, `as` h2 by default). It renders the markup below:
 
 ```tsx
 <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">

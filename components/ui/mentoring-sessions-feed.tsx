@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import mentoringData from "@/content/mentoring-sessions.json";
 import { MentoringStats } from "@/components/ui/mentoring-stats";
+import { SectionHeader } from "@/components/ui/section-header";
 
 interface Session {
   date: string;
@@ -52,12 +53,7 @@ export function MentoringSessionsFeed() {
   return (
     <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
       <div className="mx-auto max-w-[var(--container-max)] px-6">
-        <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-          Track Record
-        </p>
-        <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
-          Mentoring Sessions 📈
-        </h2>
+        <SectionHeader label="Track Record" title="Mentoring Sessions 📈" size="md" />
 
         {/* Stats row */}
         <div className="mt-6">
