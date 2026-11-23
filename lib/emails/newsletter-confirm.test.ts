@@ -8,7 +8,7 @@ describe("newsletterConfirmEmail", () => {
     const { subject, text, html } = newsletterConfirmEmail(CONFIRM_URL);
     expect(subject).toBe("Confirm your subscription 📬");
     expect(text).toContain(CONFIRM_URL);
-    expect(html.match(new RegExp(`href="${CONFIRM_URL.replace(/[.?]/g, "\\$&")}"`, "g"))).toHaveLength(2);
+    expect(html.split(`href="${CONFIRM_URL}"`)).toHaveLength(3);
     expect(html).toContain("Confirm subscription</a>");
   });
 

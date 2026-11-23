@@ -1,4 +1,4 @@
-import { createHash, createHmac, timingSafeEqual } from "node:crypto";
+import { createHmac, timingSafeEqual } from "node:crypto";
 
 // Signed, stateless tokens for the newsletter double opt-in. The confirmation
 // link carries the address and an expiry, signed with HMAC-SHA256, so nothing
@@ -15,14 +15,14 @@ interface TokenPayload {
 }
 
 /**
- * The HMAC key: NEWSLETTER_CONFIRM_SECRET when set, otherwise derived from
+ * The HMAC key: NEWSLETTER_CONFIRM_SECRET when set, otherwise an HMAC of a fixed label keyed with
  * RESEND_API_KEY so no extra env var is required. Rotating either one voids
  * the links already sent. Returns null when neither is set.
  */
 export function confirmTokenKey(env: Record<string, string | undefined> = process.env): Buffer | null {
   if (env.NEWSLETTER_CONFIRM_SECRET) return Buffer.from(env.NEWSLETTER_CONFIRM_SECRET);
   if (env.RESEND_API_KEY) {
-    return createHash("sha256").update(`newsletter-confirm:${env.RESEND_API_KEY}`).digest();
+    return createHmac("sha256", env.RESEND_API_KEY).update("newsletter-confirm").digest();
   }
   return null;
 }
