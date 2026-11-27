@@ -57,6 +57,7 @@ const validRoutes = new Set([
   "/",
   "/about",
   "/blog",
+  "/posts",
   "/contact",
   "/speaking",
   "/mentoring",
@@ -77,6 +78,7 @@ const validRoutes = new Set([
 
 // Add dynamic routes
 for (const slug of blogSlugs) validRoutes.add(`/blog/${slug}`);
+for (const slug of blogSlugs) validRoutes.add(`/posts/${slug}`);
 for (const slug of orgSlugs) validRoutes.add(`/organizations/${slug}`);
 for (const slug of categorySlugs) validRoutes.add(`/categories/${slug}`);
 for (const slug of tagSlugs) validRoutes.add(`/tags/${slug}`);
