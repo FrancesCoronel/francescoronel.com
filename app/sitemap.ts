@@ -34,14 +34,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Empty taxonomy pages read as soft 404s to Google, so only list ones with posts.
-  const categories = getCategories().filter((cat) => (cat.count ?? 0) > 0).map((cat) => ({
+  const categories = getCategories().filter((cat) => cat.count! > 0).map((cat) => ({
     url: `${baseUrl}/categories/${cat.slug}`,
     lastModified: latestDate(allPosts.filter((p) => p.categories.includes(cat.slug))),
     changeFrequency: "weekly" as const,
     priority: 0.5,
   }));
 
-  const tags = getTags().filter((tag) => (tag.count ?? 0) > 0).map((tag) => ({
+  const tags = getTags().filter((tag) => tag.count! > 0).map((tag) => ({
     url: `${baseUrl}/tags/${tag.slug}`,
     lastModified: latestDate(getPostsByTag(tag.slug)),
     changeFrequency: "weekly" as const,
