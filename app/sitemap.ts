@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAllPosts, getCategories, getTags, getPostsByTag, getExperiences, getEducation, getAwards, getOrganizations } from "@/lib/content";
+import { getAllPosts, getCategories, getTags, getPostsByTag, getExperiences, getEducation, getOrganizations } from "@/lib/content";
 import { siteConfig } from "@/lib/metadata";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -33,14 +33,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: post.postType === "project" ? 0.7 : 0.6,
   }));
 
-  const categories = getCategories().map((cat) => ({
+  // Empty taxonomy pages read as soft 404s to Google, so only list ones with posts.
+  const categories = getCategories().filter((cat) => (cat.count ?? 0) > 0).map((cat) => ({
     url: `${baseUrl}/categories/${cat.slug}`,
     lastModified: latestDate(allPosts.filter((p) => p.categories.includes(cat.slug))),
     changeFrequency: "weekly" as const,
     priority: 0.5,
   }));
 
-  const tags = getTags().map((tag) => ({
+  const tags = getTags().filter((tag) => (tag.count ?? 0) > 0).map((tag) => ({
     url: `${baseUrl}/tags/${tag.slug}`,
     lastModified: latestDate(getPostsByTag(tag.slug)),
     changeFrequency: "weekly" as const,
@@ -59,12 +60,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  const awards = getAwards().map((award) => ({
-    url: `${baseUrl}/awards/${award.slug}`,
-    changeFrequency: "yearly" as const,
-    priority: 0.5,
-  }));
-
   const organizations = getOrganizations().map((org) => ({
     url: `${baseUrl}/organizations/${org.slug}`,
     changeFrequency: "monthly" as const,
@@ -78,7 +73,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...tags,
     ...experiences,
     ...education,
-    ...awards,
     ...organizations,
   ];
 }
