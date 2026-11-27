@@ -363,6 +363,18 @@ const nextConfig: NextConfig = {
       { source: "/posts/smash-academy-at-stanford-%f0%9f%8e%93", destination: "/posts/smash-academy-at-stanford", permanent: true },
       { source: "/posts/smash-academy-at-stanford-f0-9f-8e-93", destination: "/posts/smash-academy-at-stanford", permanent: true },
 
+      // ── Old Hugo/Webflow bootcamp interview slugs (404s in Search Console) ──
+      // /blog/... and /blog/:year/:month/:day/... already forward to /posts/:slug, so match there.
+      { source: "/posts/my-experience-with-fullstack-academy-of-code", destination: "/posts/interview-with-fullstack-academy-of-code", permanent: true },
+      { source: "/posts/experience-with-devleague", destination: "/posts/interview-with-devleague", permanent: true },
+      { source: "/posts/interview-devleague", destination: "/posts/interview-with-devleague", permanent: true },
+      { source: "/posts/interview-hack-reactor", destination: "/posts/interview-with-hack-reactor", permanent: true },
+      { source: "/posts/interview-maker-square", destination: "/posts/interview-with-makersquare", permanent: true },
+      { source: "/posts/interview-coding-dojo", destination: "/posts/interview-with-coding-dojo", permanent: true },
+      // Retired category slugs
+      { source: "/categories/tech-queens-podcast", destination: "/categories/podcast", permanent: true },
+      { source: "/categories/education", destination: "/categories", permanent: true },
+
       // ── Blog posts migrated to projects ──────────────────
       { source: "/blog/fullstack-academy-3", destination: "/projects/fullstack-academy", permanent: true },
       // Slack work projects
