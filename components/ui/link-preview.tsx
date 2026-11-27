@@ -62,12 +62,22 @@ async function fetchOgData(url: string): Promise<OgData | null> {
           getMeta("name", "description") ??
           ""
       ),
-      image: getMeta("property", "og:image") ?? getMeta("name", "twitter:image"),
+      image: absoluteUrl(getMeta("property", "og:image") ?? getMeta("name", "twitter:image"), res.url || url),
       siteName: decodeHtmlEntities(
         getMeta("property", "og:site_name") ??
           new URL(url).hostname.replace(/^www\./, "")
       ),
     };
+  } catch {
+    return null;
+  }
+}
+
+/** Sites sometimes give a relative og:image; resolve it against the page so it doesn't point at our own domain. */
+function absoluteUrl(src: string | null, base: string): string | null {
+  if (!src) return null;
+  try {
+    return new URL(src, base).href;
   } catch {
     return null;
   }

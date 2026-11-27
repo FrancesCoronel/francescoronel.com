@@ -45,6 +45,17 @@ describe("LinkPreview", () => {
     expect(container.querySelector("img")).toHaveAttribute("src", "https://img.example.com/og.png");
   });
 
+  it("resolves a relative og:image against the page, and drops one that can't be parsed", async () => {
+    mockHtml(`<meta property="og:title" content="Rel"><meta property="og:image" content="/img/og.png">`);
+    const { container, unmount } = await renderPreview();
+    expect(container.querySelector("img")).toHaveAttribute("src", "https://www.example.com/img/og.png");
+    unmount();
+
+    mockHtml(`<meta property="og:title" content="Bad"><meta property="og:image" content="http://[bad">`);
+    const bad = await renderPreview();
+    expect(bad.container.querySelector("img")).toBeNull();
+  });
+
   it("reads content-first meta tags and Twitter fallbacks", async () => {
     mockHtml(`
       <meta content="Tweet title" name="twitter:title">
