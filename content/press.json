@@ -1,0 +1,199 @@
+[
+  {
+    "label": "Listen",
+    "heading": "Podcasts 🎙️",
+    "items": [
+      {
+        "title": "From the Source: Software Engineer Frances Coronel",
+        "outlet": "Michelle Brenner",
+        "date": "2020-12",
+        "url": "https://www.michellebrenner.com/podcast/from-the-source-software-engineer-frances-coronel/",
+        "description": "A conversation about my path into software engineering and what I've learned along the way.",
+        "post": "from-the-source-podcast"
+      },
+      {
+        "title": "Frances Coronel on Being a Latinx Tech Queen",
+        "outlet": "LatinxAmerica",
+        "date": "2019-04",
+        "url": "https://latinxamerica.libsyn.com/frances-coronel-on-being-a-latinx-tech-queen",
+        "description": "Growing up Peruvian American, finding my way into tech and building community for Latinx engineers.",
+        "post": "latinxamerica-podcast"
+      },
+      {
+        "title": "What Are Progressive Web Apps?",
+        "outlet": "CodeNewbie Podcast",
+        "date": "2019-02",
+        "url": "https://www.codenewbie.org/podcast/what-are-progressive-web-apps",
+        "description": "Breaking down progressive web apps for people who are new to code.",
+        "post": "codenewbie-podcast-what-are-progressive-web-apps"
+      }
+    ]
+  },
+  {
+    "label": "Press",
+    "heading": "Interviews & Features 📰",
+    "items": [
+      {
+        "title": "USF Diversineers Visit Slack",
+        "outlet": "Instagram",
+        "date": "2020-02",
+        "url": "https://www.instagram.com/p/B9ATbWSD1NG/",
+        "description": "Hosting University of San Francisco students for a tour of Slack's office.",
+        "post": "usf-diversineers-tour-at-slack"
+      },
+      {
+        "title": "ABC7 Celebrates Latino Heritage Month",
+        "outlet": "ABC7 News",
+        "date": "2019-10",
+        "url": "https://abc7news.com/post/abc7-celebrates-latino-heritage-month-2019/5538011/",
+        "description": "Featured as part of ABC7's 2019 Latino Heritage Month coverage in the Bay Area.",
+        "post": "abc7-news-latino-heritage-month"
+      },
+      {
+        "title": "Frances Coronel, Software Engineer at Slack",
+        "outlet": "People of Color in Tech",
+        "date": "2018-09",
+        "url": "https://peopleofcolorintech.com/interview/frances-coronel-software-engineer-at-slack/",
+        "description": "An interview about my day to day at Slack, how I got there and advice for people starting out.",
+        "post": "people-of-color-in-tech-interview"
+      },
+      {
+        "title": "6 Must-Read Bootcamp Blogs",
+        "outlet": "Course Report",
+        "date": "2015-10",
+        "url": "https://www.coursereport.com/blog/6-must-read-bootcamp-blogs",
+        "description": "My bootcamp blog made Course Report's list of blogs worth reading before you join a coding bootcamp.",
+        "post": "course-report-6-must-read-bootcamp-blogs"
+      }
+    ]
+  },
+  {
+    "label": "Mentions",
+    "heading": "Cited & Quoted 💬",
+    "items": [
+      {
+        "title": "My First Open Source Contribution",
+        "outlet": "Isabel Costa",
+        "date": "2020-07",
+        "url": "https://isabelcosta.github.io/posts/my-first-open-source-contribution/",
+        "description": "Isabel's first open source pull request went to my hire-me repo of job search resources."
+      },
+      {
+        "title": "Meet Madelyn: A Software Engineer, Sharer of Knowledge, Mentor and World Traveler",
+        "outlet": "TekWomen",
+        "date": "2019-02",
+        "url": "https://www.tekwomen.com/post/meet-madelyn-a-software-engineer-sharer-of-knowledge-mentor-and-world-traveler",
+        "description": "Recommends my apprenticeships list to anyone getting ready to apply."
+      },
+      {
+        "title": "Feedback on My NationJS Talk",
+        "outlet": "X (Twitter)",
+        "date": "2018-05",
+        "url": "https://x.com/editingemily/status/997541764973191168",
+        "description": "Kind words from an attendee after my talk at NationJS.",
+        "post": "nationjs"
+      },
+      {
+        "title": "Coding Bootcamps: A Strategy for Youth Employment",
+        "outlet": "International Telecommunication Union (ITU)",
+        "date": "2016-04",
+        "url": "https://www.itu.int/en/itu-d/digital-inclusion/youth-and-children/documents/codingbootcamps_e.pdf#page=10",
+        "description": "The UN agency's report on coding bootcamps uses my Bootcamp.me map as its Figure 1 on page 10.",
+        "post": "map-of-coding-bootcamps"
+      }
+    ]
+  },
+  {
+    "label": "Bylines",
+    "heading": "Writing Elsewhere ✍🏽",
+    "items": [
+      {
+        "title": "What is TypeScript?",
+        "outlet": "freeCodeCamp",
+        "date": "2020-01",
+        "url": "https://www.freecodecamp.org/news/what-is-typescript/",
+        "description": "Built from the TypeScript pages I wrote for the freeCodeCamp Guide. The live article no longer lists me as the author, so the archived copy shows it the way it ran.",
+        "post": "freecodecamp-what-is-typescript",
+        "links": [
+          {
+            "label": "Archived copy with my byline",
+            "url": "https://web.archive.org/web/20220518190407/https://www.freecodecamp.org/news/what-is-typescript/"
+          },
+          {
+            "label": "How I got credited",
+            "url": "https://forum.freecodecamp.org/t/getting-credit-for-a-blog-post-from-open-source-contributions/487859"
+          }
+        ]
+      },
+      {
+        "title": "Stories on Medium",
+        "outlet": "Medium",
+        "url": "https://medium.com/@francescoronel",
+        "description": "Older posts and cross-posts from this blog."
+      },
+      {
+        "title": "FVCproductions on Quora",
+        "outlet": "Quora",
+        "url": "https://fvcproductions.quora.com/",
+        "description": "My Quora Space of coding bootcamp guides and learn-to-code resource lists."
+      }
+    ]
+  },
+  {
+    "label": "Elsewhere",
+    "heading": "Find Me Online 🌐",
+    "items": [
+      {
+        "title": "YouTube",
+        "outlet": "Talks and videos",
+        "url": "https://www.youtube.com/c/FrancesVCoronel",
+        "description": "Recorded talks, panels and videos."
+      },
+      {
+        "title": "CodePen",
+        "outlet": "Front-end experiments",
+        "url": "https://codepen.io/francescoronel",
+        "description": "Small demos, like rendering emoji with Twemoji.",
+        "post": "twemoji-tutorial"
+      },
+      {
+        "title": "Codewars",
+        "outlet": "Coding challenges",
+        "url": "https://www.codewars.com/users/fvcproductions",
+        "description": "The kata I solved and created while learning to code.",
+        "post": "codewars-kata"
+      },
+      {
+        "title": "freeCodeCamp Forum",
+        "outlet": "Community",
+        "url": "https://forum.freecodecamp.org/u/francescoronel/summary",
+        "description": "Where I've posted in the freeCodeCamp community."
+      },
+      {
+        "title": "Hugo Discourse",
+        "outlet": "Community",
+        "url": "https://discourse.gohugo.io/u/fvcproductions/summary",
+        "description": "Questions and answers from back when this site ran on Hugo."
+      },
+      {
+        "title": "Applications Tracker",
+        "outlet": "Side project",
+        "url": "https://fvcproductions-applications.netlify.app/#/",
+        "description": "Where I kept track of hackathons, conferences and scholarships I applied to.",
+        "post": "applications"
+      },
+      {
+        "title": "DeviantArt",
+        "outlet": "Art",
+        "url": "https://www.deviantart.com/fvcproductions",
+        "description": "Digital art and icons from my early days making things online."
+      },
+      {
+        "title": "Pixilart",
+        "outlet": "Pixel art",
+        "url": "https://www.pixilart.com/fvcproductions",
+        "description": "A few pixel art drawings and GIFs."
+      }
+    ]
+  }
+]

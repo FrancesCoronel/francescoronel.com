@@ -20,6 +20,7 @@ describe("sitemap", () => {
     expect(entries[0]).toMatchObject({ url: base, priority: 1.0, changeFrequency: "weekly" });
     expect(byUrl.get(`${base}/about`)).toMatchObject({ priority: 0.8, changeFrequency: "weekly" });
     expect(byUrl.has(`${base}/now`)).toBe(true);
+    expect(byUrl.has(`${base}/press`)).toBe(true);
   });
 
   it("lists every post, ranking projects above blog posts", () => {
@@ -47,6 +48,6 @@ describe("sitemap", () => {
     for (const [url, priority] of expected) {
       expect(byUrl.get(url as string)?.priority).toBe(priority);
     }
-    expect(entries).toHaveLength(14 + getAllPosts().length + expected.length);
+    expect(entries).toHaveLength(15 + getAllPosts().length + expected.length);
   });
 });
