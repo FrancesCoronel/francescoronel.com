@@ -25,6 +25,10 @@ export default defineConfig({
         // public/ is served by Next, not imported; without this Vite rejects the
         // Pagefind import once a build has generated public/pagefind
         publicDir: false,
+        // Unit tests never check styles. An inline PostCSS config stops Vite from
+        // loading postcss.config.mjs (Tailwind), whose require() of an ES module
+        // can race on Node and fail whichever test imports app/globals.css
+        css: { postcss: {} },
         resolve: {
           alias: {
             "@": dirname,
