@@ -90,7 +90,6 @@ const footerNav = [
       { href: "/giving", label: "Giving" },
       { href: "/mentoring", label: "Mentoring" },
       { href: "/organizations", label: "Organizations" },
-      { href: "/press", label: "Press" },
       { href: "/tags", label: "Tags" },
       { href: "/testimonials", label: "Testimonials" },
     ],
