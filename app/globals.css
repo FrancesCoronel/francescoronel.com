@@ -137,20 +137,6 @@
   --color-danger: var(--danger);               /* errors and required marks */
   --color-danger-soft: var(--danger-soft);
 
-  /* Status colors, tuned to the palette. Pair the text color with its -soft
-     background (bg-success-soft text-success). Every pair is 5.2:1 or better
-     in light mode and 7:1 or better in dark mode, and each text color also
-     passes AA on every surface. They double as the three category hues:
-     success = green, info = teal, warning = ochre */
-  --color-success: var(--success);
-  --color-success-soft: var(--success-soft);
-  --color-info: var(--info);
-  --color-info-soft: var(--info-soft);
-  --color-warning: var(--warning);
-  --color-warning-soft: var(--warning-soft);
-  --color-danger: var(--danger);               /* errors and required marks */
-  --color-danger-soft: var(--danger-soft);
-
   /* Typography — Latina Essential for everything */
   --font-latina: "Latina Essential", "Latina Essential Fallback", sans-serif;
   --font-sans: var(--font-latina);
