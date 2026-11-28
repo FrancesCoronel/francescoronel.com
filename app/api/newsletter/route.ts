@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import { newsletterConfirmEmail } from "@/lib/emails/newsletter-confirm";
+import { confirmTokenKey, createConfirmToken } from "@/lib/newsletter-token";
 
 // Simple in-memory rate limiter: max 3 requests per IP per 60 seconds
 const rateLimit = new Map<string, { count: number; resetAt: number }>();
@@ -24,52 +26,47 @@ export async function POST(request: Request) {
       { status: 429 }
     );
   }
-  const { email } = await request.json();
+  const body = await request.json();
+  const email = typeof body?.email === "string" ? body.email.trim() : "";
 
-  if (!email || typeof email !== "string" || !email.includes("@")) {
+  if (!email || !email.includes("@")) {
     return NextResponse.json({ error: "Valid email required" }, { status: 400 });
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
+  const from = process.env.RESEND_FROM;
+  const key = confirmTokenKey();
+  if (!apiKey || !from || !key) {
     return NextResponse.json({ error: "Newsletter not configured" }, { status: 500 });
   }
 
-  const segmentId = process.env.RESEND_SEGMENT_ID;
-  const res = await fetch("https://api.resend.com/contacts", {
+  // Double opt-in: nothing is stored yet. The link in this email opens
+  // /newsletter/confirmed, where a click on "Yes, subscribe me" POSTs the token
+  // to app/api/newsletter/confirm/route.ts, which creates the contact. Opening
+  // the link alone changes nothing, so mail scanners that prefetch it can't
+  // subscribe anyone. The link uses this request's origin so preview
+  // deployments confirm against themselves.
+  const confirmUrl = new URL("/newsletter/confirmed", new URL(request.url).origin);
+  confirmUrl.searchParams.set("token", createConfirmToken(email, key));
+
+  const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      email,
-      unsubscribed: false,
-      ...(segmentId ? { segments: [{ id: segmentId }] } : {}),
+      from,
+      to: [email],
+      ...newsletterConfirmEmail(confirmUrl.toString()),
     }),
   });
 
   if (res.ok) {
-    const webhookUrl = process.env.SLACK_WEBHOOK_URL;
-    if (webhookUrl) {
-      fetch(webhookUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          text: `📬 New newsletter subscriber: *${email}*`,
-        }),
-      }).catch(() => {});
-    }
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, pending: true });
   }
 
   const data = await res.json().catch(() => ({}));
-
-  // 409 or an "already exists" message — treat as success
-  if (res.status === 409 || (typeof data?.message === "string" && data.message.toLowerCase().includes("already exists"))) {
-    return NextResponse.json({ success: true, alreadySubscribed: true });
-  }
-
   return NextResponse.json(
     { error: data?.message || "Failed to subscribe" },
     { status: res.status }
