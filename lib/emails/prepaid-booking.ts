@@ -12,6 +12,7 @@ const color = {
   navy700: "#344a50",
   navy800: "#2b3e43",
   navy900: "#253137",
+  navy950: "#182126",
   horchata50: "#f9f5f3",
   horchata100: "#f0ebe9",
   horchata200: "#e8e1de",
@@ -60,6 +61,8 @@ function buildHtml(greeting: string): string {
         .heading, .body { color: ${color.horchata100} !important; }
         .muted { color: ${color.horchata400} !important; }
         .link { color: ${color.horchata400} !important; }
+        .cta { background-color: ${color.accentLight} !important; }
+        .cta-link { color: ${color.navy950} !important; }
         .rule { border-color: ${color.navy700} !important; }
       }
     </style>
@@ -79,8 +82,8 @@ function buildHtml(greeting: string): string {
                 <p class="body" style="margin:0 0 28px;font-size:18px;line-height:28px;color:${color.navy900};">You can schedule your sessions whenever you're ready.</p>
                 <table role="presentation" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td style="border-radius:12px;background-color:${color.horchata700};">
-                      <a href="${BOOKING_URL}" style="display:inline-block;padding:14px 28px;font-family:${FONT_STACK};font-size:18px;line-height:24px;font-weight:700;color:${color.white};text-decoration:none;border-radius:12px;">Schedule a session</a>
+                    <td class="cta" style="border-radius:12px;background-color:${color.horchata700};">
+                      <a class="cta-link" href="${BOOKING_URL}" style="display:inline-block;padding:14px 28px;font-family:${FONT_STACK};font-size:18px;line-height:24px;font-weight:700;color:${color.white};text-decoration:none;border-radius:12px;">Schedule a session</a>
                     </td>
                   </tr>
                 </table>
