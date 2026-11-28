@@ -36,16 +36,11 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
       const data = await res.json();
 
       if (res.ok) {
+        // Double opt-in: the API emails a confirmation link, and the
+        // subscription only starts once it's opened
         setStatus("success");
-        trackEvent("newsletter_signup", {
-          status: data.alreadySubscribed ? "already_subscribed" : "success",
-          form: variant,
-        });
-        setMessage(
-          data.alreadySubscribed
-            ? "You're already subscribed, thanks for being here! 🎉"
-            : "You're in! Check your inbox to confirm. 🎉"
-        );
+        trackEvent("newsletter_signup", { status: "success", form: variant });
+        setMessage("Almost there! Check your inbox to confirm. 🎉");
         setEmail("");
       } else {
         setStatus("error");

@@ -31,7 +31,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function CategoryPage({ params }: PageProps) {
   const { slug } = await params;
   const category = getCategoryBySlug(slug);
-  if (!category) notFound();
+  // An empty category (usually "uncategorized") would be a soft 404, so serve a real one.
+  if (!category || category.count === 0) notFound();
 
   const posts = getBlogPostsByCategory(slug).map((p) => ({
     slug: p.slug,

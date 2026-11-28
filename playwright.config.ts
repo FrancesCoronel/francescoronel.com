@@ -1,5 +1,8 @@
 import { defineConfig, devices } from "@playwright/test";
 
+// Runs against the live site with its own config (playwright.newsletter.config.ts)
+const LIVE_ONLY = ["**/newsletter-live.spec.ts"];
+
 export default defineConfig({
   testDir: "./e2e",
   fullyParallel: true,
@@ -21,12 +24,12 @@ export default defineConfig({
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
       // Exclude visual tests from default run; run them explicitly
-      testIgnore: process.env.VISUAL ? [] : ["**/visual.spec.ts"],
+      testIgnore: process.env.VISUAL ? LIVE_ONLY : [...LIVE_ONLY, "**/visual.spec.ts"],
     },
     {
       name: "Mobile Chrome",
       use: { ...devices["Pixel 5"] },
-      testIgnore: process.env.VISUAL ? [] : ["**/visual.spec.ts"],
+      testIgnore: process.env.VISUAL ? LIVE_ONLY : [...LIVE_ONLY, "**/visual.spec.ts"],
     },
     // Dedicated project for visual screenshots — desktop 1280×800
     {
