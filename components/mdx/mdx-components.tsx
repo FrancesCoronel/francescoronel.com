@@ -217,9 +217,9 @@ function Callout({
   type?: "info" | "warning" | "tip";
 }) {
   const styles = {
-    info: "border-blue-400 bg-blue-50 dark:bg-blue-950/30",
-    warning: "border-amber-400 bg-amber-50 dark:bg-amber-950/30",
-    tip: "border-green-400 bg-green-50 dark:bg-green-950/30",
+    info: "border-info bg-info-soft",
+    warning: "border-warning bg-warning-soft",
+    tip: "border-success bg-success-soft",
   };
 
   return (

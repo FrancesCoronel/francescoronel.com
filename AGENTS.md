@@ -262,6 +262,7 @@ Colors follow a **teal/charcoal + linen/brick red** palette defined in `app/glob
 - Dark mode bg: `navy-900` (#253137, dark teal/charcoal)
 - Primary ink: `navy-900` (#253137)
 - **Semantic tokens** flip with the theme on their own, so they need no `dark:` pair: `surface`, `surface-muted`, `surface-raised`, `ink`, `ink-muted`, `line`, `brand`, `brand-fill`, `on-brand` (e.g. `bg-surface-raised text-ink border-line`). Prefer them in new code; older code still uses the raw ramps with `dark:` pairs
+- **Status colors** also flip on their own: `success` (green), `info` (teal), `warning` (ochre), `danger` (brick), each with a `-soft` background (`bg-success-soft text-success`). They are also the three category hues (open source, hackathon, podcast). Don't use Tailwind's stock green, blue, purple or red
 
 ## Image Hosting 🖼️
 

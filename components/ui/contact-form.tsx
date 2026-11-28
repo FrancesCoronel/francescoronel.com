@@ -77,12 +77,12 @@ export function ContactForm() {
       <input type="text" name="_gotcha" toolparamdescription="Spam trap. Always leave empty." style={{ display: "none" }} tabIndex={-1} autoComplete="off" aria-hidden="true" />
 
       <p className="text-xs text-navy-600 dark:text-white/60">
-        Fields marked with <span className="text-red-500" aria-hidden="true">*</span> are required.
+        Fields marked with <span className="text-danger" aria-hidden="true">*</span> are required.
       </p>
 
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-navy-700 dark:text-white/70">
-          Name <span className="text-red-500" aria-hidden="true">*</span>
+          Name <span className="text-danger" aria-hidden="true">*</span>
         </label>
         <input
           type="text"
@@ -102,7 +102,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="email" className="block text-sm font-medium text-navy-700 dark:text-white/70">
-          Email Address <span className="text-red-500" aria-hidden="true">*</span>
+          Email Address <span className="text-danger" aria-hidden="true">*</span>
         </label>
         <input
           type="email"
@@ -123,7 +123,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-navy-700 dark:text-white/70">
-          Message <span className="text-red-500" aria-hidden="true">*</span>
+          Message <span className="text-danger" aria-hidden="true">*</span>
         </label>
         <textarea
           id="message"
@@ -141,7 +141,7 @@ export function ContactForm() {
       </div>
 
       {status === "error" && (
-        <p className="text-sm text-red-600 dark:text-red-400">{errorMessage}</p>
+        <p className="text-sm text-danger">{errorMessage}</p>
       )}
 
       <button

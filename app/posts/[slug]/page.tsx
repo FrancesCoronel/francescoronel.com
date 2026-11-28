@@ -46,9 +46,9 @@ const CATEGORY_LABELS: Record<string, string> = {
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
-  "open-source": "bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300",
-  podcast: "bg-purple-100 text-purple-800 dark:bg-purple-900/40 dark:text-purple-300",
-  hackathon: "bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300",
+  "open-source": "bg-success-soft text-success",
+  podcast: "bg-warning-soft text-warning",
+  hackathon: "bg-info-soft text-info",
   "work-project": "bg-horchata-100 text-horchata-800 dark:bg-navy-700 dark:text-horchata-300",
   "side-project": "bg-horchata-100 text-horchata-800 dark:bg-navy-700 dark:text-horchata-300",
 };
@@ -157,7 +157,7 @@ export default async function PostPage({ params }: PageProps) {
                     </span>
                   )}
                   {post.status === "active" && (
-                    <span className="rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700 dark:bg-green-900/30 dark:text-green-400">
+                    <span className="rounded-full bg-success-soft px-3 py-1 text-xs font-semibold text-success">
                       Active
                     </span>
                   )}

@@ -87,7 +87,7 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
           </form>
         )}
         {status === "error" && (
-          <p className="mt-2 text-sm text-red-400">{message}</p>
+          <p className="mt-2 text-sm text-accent-light">{message}</p>
         )}
       </div>
     );
@@ -126,7 +126,7 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
           </form>
         )}
         {status === "error" && (
-          <p className="mt-1 text-xs text-red-600 dark:text-red-400">{message}</p>
+          <p className="mt-1 text-xs text-danger">{message}</p>
         )}
       </div>
     );
@@ -164,7 +164,7 @@ export function NewsletterForm({ variant = "section" }: NewsletterFormProps) {
         </form>
       )}
       {status === "error" && (
-        <p className="mt-2 text-sm text-red-600 dark:text-red-400">{message}</p>
+        <p className="mt-2 text-sm text-danger">{message}</p>
       )}
     </div>
   );

@@ -18,9 +18,9 @@ const CATEGORY_LABELS: Record<string, string> = {
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
-  "open-source": "text-emerald-600 dark:text-emerald-400",
-  "podcast": "text-violet-600 dark:text-violet-400",
-  "hackathon": "text-sky-600 dark:text-sky-400",
+  "open-source": "text-success",
+  "podcast": "text-warning",
+  "hackathon": "text-info",
   "work-project": "text-horchata-700 dark:text-horchata-400",
   "side-project": "text-horchata-700 dark:text-horchata-400",
 };
@@ -80,7 +80,7 @@ function ProjectCard({
             {project.title}
           </h2>
           {project.status === "active" && (
-            <span className="shrink-0 rounded-full bg-emerald-100 px-2 py-0.5 text-2xs font-semibold text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">
+            <span className="shrink-0 rounded-full bg-success-soft px-2 py-0.5 text-2xs font-semibold text-success">
               Active
             </span>
           )}
@@ -138,7 +138,7 @@ function FeaturedProjectRow({
             {project.title}
           </h2>
           {project.status === "active" && (
-            <span className="shrink-0 rounded-full bg-emerald-100 px-2 py-0.5 text-2xs font-semibold text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">
+            <span className="shrink-0 rounded-full bg-success-soft px-2 py-0.5 text-2xs font-semibold text-success">
               Active
             </span>
           )}

@@ -51,6 +51,15 @@ const semanticColors = [
   { name: "on-brand", swatch: "bg-on-brand", light: "white", dark: "navy-950", usage: "Text on primary buttons" },
 ];
 
+// Status colors: a text color plus a -soft background, each flipping with the theme.
+// They are also the three category hues (open source, hackathon, podcast)
+const statusColors = [
+  { name: "success", pill: "bg-success-soft text-success", light: "#2e6b45 on #e2efe4", dark: "#9fd4ae on #1f3d2c", usage: "Active, tips, open source" },
+  { name: "info", pill: "bg-info-soft text-info", light: "#2d5f73 on #dfecf1", dark: "#a3cfde on #1c3a45", usage: "Notes, hackathons" },
+  { name: "warning", pill: "bg-warning-soft text-warning", light: "#8a5410 on #f7ead2", dark: "#efc685 on #45361a", usage: "Cautions, podcasts" },
+  { name: "danger", pill: "bg-danger-soft text-danger", light: "#9e2b25 on #f8e3e0", dark: "#f0b0a8 on #4a2421", usage: "Errors, required fields" },
+];
+
 const typographyScale = [
   { name: "text-2xs", size: "16px (1rem)", lineHeight: "24px", usage: "Small pill badges only (status, category)" },
   { name: "text-xs", size: "20px (1.25rem)", lineHeight: "28px", usage: "Dates, meta (floor)" },
@@ -62,6 +71,8 @@ const typographyScale = [
   { name: "text-3xl", size: "46px (2.875rem)", lineHeight: "54px", usage: "Page titles" },
   { name: "text-4xl", size: "56px (3.5rem)", lineHeight: "64px", usage: "Hero headings" },
   { name: "text-5xl", size: "68px (4.25rem)", lineHeight: "76px", usage: "Large hero text" },
+  { name: "text-6xl", size: "72px (4.5rem)", lineHeight: "80px", usage: "Hero heading, laptops" },
+  { name: "text-7xl", size: "76px (4.75rem)", lineHeight: "84px", usage: "Hero heading, wide screens" },
 ];
 
 function ColorSwatch({ name, hex }: { name: string; hex: string }) {
@@ -171,6 +182,30 @@ export default function DesignSystemPage() {
                 <p className="text-sm text-ink-muted">
                   {c.light} / {c.dark}
                 </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Status */}
+          <h3 className="mt-14 text-xl font-bold text-navy-900 dark:text-horchata-100">
+            Status Colors
+          </h3>
+          <p className="mt-2 text-sm text-navy-600 dark:text-white/70">
+            Pair each text color with its soft background, like{" "}
+            <code>bg-success-soft text-success</code>. They also flip with the theme.
+          </p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {statusColors.map((c) => (
+              <div
+                key={c.name}
+                className="rounded-xl border border-line bg-surface-raised p-5"
+              >
+                <span className={`rounded-full px-2 py-0.5 text-2xs font-semibold ${c.pill}`}>
+                  {c.name}
+                </span>
+                <p className="mt-3 text-sm text-ink-muted">{c.usage}</p>
+                <p className="text-sm text-ink-muted">Light: {c.light}</p>
+                <p className="text-sm text-ink-muted">Dark: {c.dark}</p>
               </div>
             ))}
           </div>

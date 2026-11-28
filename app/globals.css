@@ -122,6 +122,20 @@
   --color-brand-fill: var(--brand-fill);       /* primary button background */
   --color-on-brand: var(--on-brand);           /* text on a brand-fill button */
 
+  /* Status colors, tuned to the palette. Pair the text color with its -soft
+     background (bg-success-soft text-success). Every pair is 5.2:1 or better
+     in light mode and 7:1 or better in dark mode, and each text color also
+     passes AA on every surface. They double as the three category hues:
+     success = green, info = teal, warning = ochre */
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger);               /* errors and required marks */
+  --color-danger-soft: var(--danger-soft);
+
   /* Typography — Latina Essential for everything */
   --font-latina: "Latina Essential", "Latina Essential Fallback", sans-serif;
   --font-sans: var(--font-latina);
@@ -131,7 +145,7 @@
   --text-2xs--line-height: 1.5rem;
   --text-xs: 1.25rem;         /* 20px (floor) — dates, meta, badges */
   --text-xs--line-height: 1.75rem;
-  --text-sm: 1.25rem;         /* 20px (floor) — card body, captions */
+  --text-sm: 1.25rem;         /* 20px (floor) — card body, captions; same size as text-xs on purpose */
   --text-sm--line-height: 1.75rem;
   --text-base: 1.375rem;      /* 22px — standard body text */
   --text-base--line-height: 2rem;
@@ -147,6 +161,10 @@
   --text-4xl--line-height: 4rem;
   --text-5xl: 4.25rem;        /* 68px — large hero text */
   --text-5xl--line-height: 4.75rem;
+  --text-6xl: 4.5rem;          /* 72px — hero heading on laptops */
+  --text-6xl--line-height: 5rem;
+  --text-7xl: 4.75rem;        /* 76px — hero heading on wide screens (largest that keeps it on one line) */
+  --text-7xl--line-height: 5.25rem;
 
   /* Spacing / sizing tokens */
   --container-max: 1200px;
@@ -162,6 +180,14 @@
   --brand: var(--color-accent);
   --brand-fill: var(--color-accent);
   --on-brand: #ffffff;
+  --success: #2e6b45;
+  --success-soft: #e2efe4;
+  --info: #2d5f73;
+  --info-soft: #dfecf1;
+  --warning: #8a5410;
+  --warning-soft: #f7ead2;
+  --danger: var(--color-accent);
+  --danger-soft: #f8e3e0;
 
   /* Older names, kept for the prose styles below */
   --background: var(--surface);
@@ -178,6 +204,14 @@
   --brand: var(--color-accent-light);
   --brand-fill: var(--color-accent-light);
   --on-brand: var(--color-navy-950);
+  --success: #9fd4ae;
+  --success-soft: #1f3d2c;
+  --info: #a3cfde;
+  --info-soft: #1c3a45;
+  --warning: #efc685;
+  --warning-soft: #45361a;
+  --danger: var(--color-accent-light);
+  --danger-soft: #4a2421;
 }
 
 body {
