@@ -38,7 +38,8 @@ const horchatColors = [
 ];
 
 const typographyScale = [
-  { name: "text-xs", size: "20px (1.25rem)", lineHeight: "28px", usage: "Dates, meta, badges (floor)" },
+  { name: "text-2xs", size: "16px (1rem)", lineHeight: "24px", usage: "Small pill badges only (status, category)" },
+  { name: "text-xs", size: "20px (1.25rem)", lineHeight: "28px", usage: "Dates, meta (floor)" },
   { name: "text-sm", size: "20px (1.25rem)", lineHeight: "28px", usage: "Card body, captions (floor)" },
   { name: "text-base", size: "22px (1.375rem)", lineHeight: "32px", usage: "Standard body text" },
   { name: "text-lg", size: "28px (1.75rem)", lineHeight: "36px", usage: "Card titles, sub-headings" },

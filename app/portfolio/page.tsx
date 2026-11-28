@@ -123,12 +123,12 @@ export default function PortfolioPage() {
                 <div className="flex flex-1 flex-col p-5">
                   <div className="flex items-center gap-2">
                     <span
-                      className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${CATEGORY_COLORS[project.category] ?? CATEGORY_COLORS["side-project"]}`}
+                      className={`rounded-full px-2 py-0.5 text-2xs font-medium ${CATEGORY_COLORS[project.category] ?? CATEGORY_COLORS["side-project"]}`}
                     >
                       {CATEGORY_LABELS[project.category] ?? project.category}
                     </span>
                     {project.status === "active" && (
-                      <span className="rounded-full bg-green-100 px-2 py-0.5 text-[10px] font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">
+                      <span className="rounded-full bg-green-100 px-2 py-0.5 text-2xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">
                         Active
                       </span>
                     )}
