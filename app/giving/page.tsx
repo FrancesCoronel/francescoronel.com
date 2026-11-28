@@ -4,6 +4,7 @@ import { buildMetadata } from "@/lib/metadata";
 import { PageHeader } from "@/components/ui/page-header";
 import { OrgLogo } from "@/components/ui/org-logo";
 import { ConnectCTA } from "@/components/sections/connect-cta";
+import { SectionHeader } from "@/components/ui/section-header";
 
 export const metadata: Metadata = buildMetadata({
   title: "Where I Give",
@@ -39,7 +40,7 @@ const sectionClass = (index: number) =>
 
 function GivingCard({ org }: { org: GivingOrg }) {
   return (
-    <article className="flex flex-col gap-3 rounded-2xl border border-horchata-200 bg-white p-6 dark:border-navy-700 dark:bg-navy-800">
+    <article className="flex flex-col gap-3 rounded-2xl border border-line bg-surface-raised p-6">
       <div className="flex items-center gap-4">
         {org.emoji ? (
           <span
@@ -119,12 +120,7 @@ export default function GivingPage() {
 
       <section className={sectionClass(groups.length)}>
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-            Your Turn
-          </p>
-          <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">
-            Make Your Giving Go Further 🙌🏽
-          </h2>
+          <SectionHeader label="Your Turn" title="Make Your Giving Go Further 🙌🏽" />
           <p className="mt-4 max-w-2xl text-base text-navy-600 dark:text-white/70">
             Small monthly gifts help nonprofits plan ahead. And if your employer
             matches donations, use it. It doubles your impact for free.

@@ -9,6 +9,7 @@ import { buildMetadata, YEARS_OF_EXPERIENCE } from "@/lib/metadata";
 import { PageHeader } from "@/components/ui/page-header";
 import { TestimonialsPreview } from "@/components/sections/testimonials-preview";
 import { ConnectCTA } from "@/components/sections/connect-cta";
+import { SectionHeader } from "@/components/ui/section-header";
 
 export const metadata: Metadata = buildMetadata({
   title: "Speaking",
@@ -96,12 +97,7 @@ export default function SpeakingPage() {
       {/* Featured Talks Grid */}
       <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-            Highlights
-          </p>
-          <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
-            Featured Talks 🎤
-          </h2>
+          <SectionHeader label="Highlights" title="Featured Talks 🎤" size="sm" />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {featuredWithLogos.map((talk) => {
               const href = talk.postSlug
@@ -112,7 +108,7 @@ export default function SpeakingPage() {
                 <Link
                   key={talk.org + talk.talk}
                   href={href}
-                  className="group cursor-pointer overflow-hidden rounded-2xl border border-horchata-200 bg-white transition-all hover:border-horchata-400 hover:shadow-lg dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
+                  className="group cursor-pointer overflow-hidden rounded-2xl border border-line bg-surface-raised transition-all hover:border-horchata-400 hover:shadow-lg dark:hover:border-navy-500"
                 >
                   <div className="flex items-start gap-4 p-5">
                     <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg bg-horchata-50 dark:bg-navy-700">

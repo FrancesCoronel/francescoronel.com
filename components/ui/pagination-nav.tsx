@@ -22,13 +22,15 @@ export function PaginationNav({ page, totalPages, onPage }: PaginationNavProps) 
     }, []);
 
   return (
-    <nav className="mt-10 flex items-center justify-center gap-2">
+    <nav aria-label="Pagination" className="mt-10 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
       <button
         onClick={() => onPage(Math.max(1, page - 1))}
         disabled={page === 1}
         className="cursor-pointer rounded-lg border border-horchata-200 px-3 py-2 text-sm font-medium text-navy-700 transition-all hover:border-horchata-500 hover:bg-horchata-500 hover:text-navy-900 disabled:cursor-not-allowed disabled:opacity-40 dark:border-navy-600 dark:text-white/70 dark:hover:border-horchata-500 dark:hover:bg-horchata-500 dark:hover:text-navy-900"
+        aria-label="Previous"
       >
-        Previous
+        <span aria-hidden="true" className="sm:hidden">&larr;</span>
+        <span aria-hidden="true" className="hidden sm:inline">Previous</span>
       </button>
 
       {pages.map((item, i) =>
@@ -55,8 +57,10 @@ export function PaginationNav({ page, totalPages, onPage }: PaginationNavProps) 
         onClick={() => onPage(Math.min(totalPages, page + 1))}
         disabled={page === totalPages}
         className="cursor-pointer rounded-lg border border-horchata-200 px-3 py-2 text-sm font-medium text-navy-700 transition-all hover:border-horchata-500 hover:bg-horchata-500 hover:text-navy-900 disabled:cursor-not-allowed disabled:opacity-40 dark:border-navy-600 dark:text-white/70 dark:hover:border-horchata-500 dark:hover:bg-horchata-500 dark:hover:text-navy-900"
+        aria-label="Next"
       >
-        Next
+        <span aria-hidden="true" className="sm:hidden">&rarr;</span>
+        <span aria-hidden="true" className="hidden sm:inline">Next</span>
       </button>
     </nav>
   );

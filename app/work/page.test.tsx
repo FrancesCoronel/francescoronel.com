@@ -85,7 +85,7 @@ describe("app/work/page", () => {
     expect(html).toContain('alt="Latina Dev"');
     expect(html).toContain('dark:bg-navy-700">🛠️</div>');
     expect(html).toContain(">Open Source</span>");
-    expect(html).toContain('dark:text-horchata-300">mystery</span>');
+    expect(html).toMatch(/bg-horchata-100[^"]*">mystery<\/span>/);
     expect(html.match(/>Active<\/span>/g)).toHaveLength(1);
     expect(html).not.toContain("Not Featured");
   });

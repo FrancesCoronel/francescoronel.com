@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import mentoringData from "@/content/mentoring-sessions.json";
 import { MentoringStats } from "@/components/ui/mentoring-stats";
 import { PaginationNav } from "@/components/ui/pagination-nav";
+import { Badge, type BadgeTone } from "@/components/ui/badge";
 
 interface Session {
   date: string;
@@ -29,10 +30,10 @@ const CATEGORY_LABELS: Record<string, string> = {
   community: "Community",
 };
 
-const CATEGORY_COLORS: Record<string, string> = {
-  mentoring: "bg-success-soft text-success",
-  "interview-prep": "bg-info-soft text-info",
-  community: "bg-warning-soft text-warning",
+const CATEGORY_TONES: Record<string, BadgeTone> = {
+  mentoring: "success",
+  "interview-prep": "info",
+  community: "warning",
 };
 
 const SOURCE_LABELS: Record<string, string> = {
@@ -42,11 +43,11 @@ const SOURCE_LABELS: Record<string, string> = {
   leland: "Leland",
 };
 
-const SOURCE_COLORS: Record<string, string> = {
-  "cal.com": "bg-success-soft text-success",
-  formation: "bg-info-soft text-info",
-  calendly: "bg-horchata-100 text-horchata-700 dark:bg-navy-700 dark:text-horchata-300",
-  leland: "bg-warning-soft text-warning",
+const SOURCE_TONES: Record<string, BadgeTone> = {
+  "cal.com": "success",
+  formation: "info",
+  calendly: "neutral",
+  leland: "warning",
 };
 
 const SOURCE_LOGOS: Record<string, string> = {
@@ -178,7 +179,7 @@ export function SessionsTable() {
             const count = byYear[year];
             const heightPct = Math.round((count / maxCount) * 100);
             return (
-              <div key={year} className="flex flex-1 flex-col items-center gap-1">
+              <div key={year} className="flex min-w-0 flex-1 flex-col items-center gap-1">
                 <span className="text-xs text-navy-600 dark:text-white/60">
                   {count}
                 </span>
@@ -187,7 +188,8 @@ export function SessionsTable() {
                   style={{ height: `${Math.max(4, heightPct * 0.6)}px` }}
                 />
                 <span className="text-[10px] text-navy-600 dark:text-white/60">
-                  {year}
+                  <span className="sm:hidden">&rsquo;{year.slice(2)}</span>
+                  <span className="hidden sm:inline">{year}</span>
                 </span>
               </div>
             );
@@ -268,15 +270,15 @@ export function SessionsTable() {
                     {session.durationMinutes ? `${session.durationMinutes}m` : <span className="text-navy-600 dark:text-white/60">—</span>}
                   </td>
                   <td className="whitespace-nowrap px-4 py-2.5">
-                    <span className={`whitespace-nowrap rounded-full px-3 py-1 text-xs font-semibold ${CATEGORY_COLORS[category]}`}>
+                    <Badge tone={CATEGORY_TONES[category]} size="md" className="whitespace-nowrap">
                       {CATEGORY_LABELS[category]}
-                    </span>
+                    </Badge>
                   </td>
                   <td className="whitespace-nowrap px-4 py-2.5">
-                    <span className={`inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-1 text-xs font-semibold ${SOURCE_COLORS[src] ?? SOURCE_COLORS["calendly"]}`}>
+                    <Badge tone={SOURCE_TONES[src]} size="md" className="inline-flex items-center gap-1.5 whitespace-nowrap">
                       <SourceLogo source={src} />
                       {SOURCE_LABELS[src] ?? src}
-                    </span>
+                    </Badge>
                   </td>
                 </tr>
               );

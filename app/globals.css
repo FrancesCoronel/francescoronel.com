@@ -121,6 +121,7 @@
   --color-brand: var(--brand);                 /* accent text: links, section labels */
   --color-brand-fill: var(--brand-fill);       /* primary button background */
   --color-on-brand: var(--on-brand);           /* text on a brand-fill button */
+  --color-brand-fill-hover: var(--brand-fill-hover); /* primary button hover */
 
   /* Status colors, tuned to the palette. Pair the text color with its -soft
      background (bg-success-soft text-success). Every pair is 5.2:1 or better
@@ -179,6 +180,7 @@
   --line: var(--color-horchata-200);
   --brand: var(--color-accent);
   --brand-fill: var(--color-accent);
+  --brand-fill-hover: var(--color-accent-dark);
   --on-brand: #ffffff;
   --success: #2e6b45;
   --success-soft: #e2efe4;
@@ -203,6 +205,7 @@
   --line: var(--color-navy-700);
   --brand: var(--color-accent-light);
   --brand-fill: var(--color-accent-light);
+  --brand-fill-hover: var(--color-accent-pale);
   --on-brand: var(--color-navy-950);
   --success: #9fd4ae;
   --success-soft: #1f3d2c;

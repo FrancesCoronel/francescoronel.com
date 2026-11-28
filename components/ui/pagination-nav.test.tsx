@@ -6,7 +6,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { PaginationNav } from "./pagination-nav";
 
 function labels() {
-  return Array.from(screen.getByRole("navigation").children).map((el) => el.textContent);
+  return Array.from(screen.getByRole("navigation").children).map((el) => el.getAttribute("aria-label") ?? el.textContent);
 }
 
 afterEach(cleanup);

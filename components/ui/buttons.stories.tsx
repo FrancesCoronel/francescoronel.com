@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 /**
- * Button styles used across the site. There is no shared Button component —
- * buttons are styled with Tailwind utility classes. This documents the
+ * Button styles used across the site. New code should use `<Button>` and
+ * `<ButtonLink>` from `components/ui/button.tsx` (see UI/Shared Components);
+ * this page documents the class strings older code still uses. It shows the
  * four main variants: Primary, Secondary, Outline, and Text. Use the Dark Mode
  * toolbar toggle to check the dark versions; they match the live site.
  */

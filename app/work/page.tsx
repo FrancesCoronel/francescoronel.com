@@ -7,6 +7,8 @@ import { PageHeader } from "@/components/ui/page-header";
 import { ConnectCTA } from "@/components/sections/connect-cta";
 import { PostsListClient } from "@/components/ui/posts-list-client";
 import { getMultipleRepoStars } from "@/lib/github";
+import { SectionHeader } from "@/components/ui/section-header";
+import { Badge, CATEGORY_TONES } from "@/components/ui/badge";
 
 const FEATURED_SLUGS = ["latina-dev", "apprenticeships-me", "hire-me"];
 
@@ -16,14 +18,6 @@ const CATEGORY_LABELS: Record<string, string> = {
   "hackathon": "Hackathon",
   "work-project": "Work Project",
   "side-project": "Side Project",
-};
-
-const CATEGORY_COLORS: Record<string, string> = {
-  "open-source": "bg-success-soft text-success",
-  "podcast": "bg-warning-soft text-warning",
-  "hackathon": "bg-info-soft text-info",
-  "work-project": "bg-horchata-100 text-horchata-700 dark:bg-navy-700 dark:text-horchata-300",
-  "side-project": "bg-horchata-100 text-horchata-700 dark:bg-navy-700 dark:text-horchata-300",
 };
 
 export const metadata: Metadata = buildMetadata({
@@ -100,18 +94,13 @@ export default async function ProjectsPage() {
       {/* Featured projects grid */}
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-            Featured
-          </p>
-          <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
-            Featured Projects ⭐
-          </h2>
+          <SectionHeader label="Featured" title="Featured Projects ⭐" size="md" />
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {projects.filter((p) => FEATURED_SLUGS.includes(p.slug)).map((project) => (
               <Link
                 key={project.slug}
                 href={`/posts/${project.slug}`}
-                className="group flex flex-col rounded-2xl border border-horchata-200 bg-white p-5 transition-shadow hover:shadow-lg dark:border-navy-700 dark:bg-navy-800"
+                className="group flex flex-col rounded-2xl border border-line bg-surface-raised p-5 transition-shadow hover:shadow-lg"
               >
                 <div className="flex items-start justify-between gap-3">
                   {project.logo ? (
@@ -128,13 +117,13 @@ export default async function ProjectsPage() {
                     </div>
                   )}
                   <div className="flex flex-col items-end gap-1">
-                    <span className={`shrink-0 rounded-full px-2 py-0.5 text-2xs font-medium ${CATEGORY_COLORS[project.category] ?? CATEGORY_COLORS["side-project"]}`}>
+                    <Badge tone={CATEGORY_TONES[project.category]} weight="medium" className="shrink-0">
                       {CATEGORY_LABELS[project.category] ?? project.category}
-                    </span>
+                    </Badge>
                     {project.status === "active" && (
-                      <span className="rounded-full bg-success-soft px-2 py-0.5 text-2xs font-medium text-success">
+                      <Badge tone="success" weight="medium">
                         Active
-                      </span>
+                      </Badge>
                     )}
                   </div>
                 </div>

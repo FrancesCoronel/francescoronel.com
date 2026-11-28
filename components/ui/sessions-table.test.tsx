@@ -47,7 +47,7 @@ function statValue(label: string) {
 
 function yearBar(year: string) {
   const label = screen.getAllByText(year).find((el) => el.tagName === "SPAN")!;
-  return label.parentElement!.firstElementChild!.textContent;
+  return label.closest("div")!.firstElementChild!.textContent;
 }
 
 afterEach(cleanup);
