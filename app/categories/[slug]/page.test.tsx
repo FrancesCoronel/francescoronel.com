@@ -56,6 +56,11 @@ describe("app/categories/[slug]/page", () => {
       await expect(CategoryPage(params("nope"))).rejects.toThrow("NEXT_NOT_FOUND");
     });
 
+    it("calls notFound for a category with no posts", async () => {
+      // "uncategorized" has zero posts in the real content
+      await expect(CategoryPage(params("uncategorized"))).rejects.toThrow("NEXT_NOT_FOUND");
+    });
+
     it("renders a category with an image, fallback description and post list", async () => {
       const html = renderToStaticMarkup(await CategoryPage(params("speaking")));
       const posts = content.getBlogPostsByCategory("speaking");

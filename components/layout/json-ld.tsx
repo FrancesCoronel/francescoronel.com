@@ -57,6 +57,14 @@ export function PersonJsonLd() {
       "https://www.producthunt.com/@francescoronel",
       "https://discord.com/users/151169028696571904",
       "https://indieweb.org/User:Www.francescoronel.com",
+      "https://www.instagram.com/fvcproductions",
+      "https://medium.com/@francescoronel",
+      "https://codepen.io/francescoronel",
+      "https://www.codewars.com/users/fvcproductions",
+      "https://www.deviantart.com/fvcproductions",
+      "https://www.pixilart.com/fvcproductions",
+      "https://forum.freecodecamp.org/u/francescoronel",
+      "https://discourse.gohugo.io/u/fvcproductions",
     ],
   };
 
