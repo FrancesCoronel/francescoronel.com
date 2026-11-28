@@ -161,6 +161,14 @@ describe("app/posts/[slug]/page", () => {
       expect(await render(basePost.slug)).not.toContain("Updated <time");
     });
 
+    it("links only tags that have a page and shows the rest as plain labels", async () => {
+      servePost({ ...basePost, tags: ["ai", "not-a-tag-page"] });
+      const html = await render(basePost.slug);
+      expect(html).toContain('href="/tags/ai"');
+      expect(html).not.toContain('href="/tags/not-a-tag-page"');
+      expect(html).toContain(">#Not a Tag Page</span>");
+    });
+
     it("treats a missing featured image as no image", async () => {
       servePost({ ...basePost, featuredImage: undefined as unknown as string });
       const html = await render(basePost.slug);

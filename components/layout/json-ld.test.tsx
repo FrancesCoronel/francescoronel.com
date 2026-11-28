@@ -28,6 +28,8 @@ describe("PersonJsonLd", () => {
         "https://github.com/FrancesCoronel",
         "https://linkedin.com/in/francescoronel",
         "https://twitter.com/FrancesCoronel",
+        "https://medium.com/@francescoronel",
+        "https://codepen.io/francescoronel",
       ]),
     );
   });

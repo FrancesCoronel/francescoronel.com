@@ -582,15 +582,26 @@ export default async function PostPage({ params }: PageProps) {
               Tags 🏷️
             </p>
             <div className="flex flex-wrap gap-2">
-              {post.tags.map((tag) => (
-                <Link
-                  key={tag}
-                  href={`/tags/${tag}`}
-                  className="inline-flex items-center rounded-full bg-horchata-100 px-2.5 py-0.5 text-xs font-medium text-navy-700 transition-colors hover:bg-horchata-500 hover:text-navy-900 dark:bg-navy-600 dark:text-white dark:hover:bg-navy-500 dark:hover:text-white"
-                >
-                  #{getTagName(tag)}
-                </Link>
-              ))}
+              {post.tags.map((tag) => {
+                // Only tags with their own page get a link; the rest would 404.
+                const href = getTagHref(tag);
+                return href ? (
+                  <Link
+                    key={tag}
+                    href={href}
+                    className="inline-flex items-center rounded-full bg-horchata-100 px-2.5 py-0.5 text-xs font-medium text-navy-700 transition-colors hover:bg-horchata-500 hover:text-navy-900 dark:bg-navy-600 dark:text-white dark:hover:bg-navy-500 dark:hover:text-white"
+                  >
+                    #{getTagName(tag)}
+                  </Link>
+                ) : (
+                  <span
+                    key={tag}
+                    className="inline-flex items-center rounded-full bg-horchata-100 px-2.5 py-0.5 text-xs font-medium text-navy-700 dark:bg-navy-600 dark:text-white"
+                  >
+                    #{getTagName(tag)}
+                  </span>
+                );
+              })}
             </div>
           </div>
         )}
