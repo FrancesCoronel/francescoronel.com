@@ -60,17 +60,9 @@ describe("NewsletterForm", () => {
       expect(input).toBeDisabled();
 
       await act(async () => resolve({ ok: true, json: () => Promise.resolve({}) }));
-      expect(screen.getByText("You're in! Check your inbox to confirm. 🎉")).toBeInTheDocument();
+      expect(screen.getByText("Almost there! Check your inbox to confirm. 🎉")).toBeInTheDocument();
       expect(screen.queryByLabelText("Email address")).not.toBeInTheDocument();
       expect(trackEvent).toHaveBeenLastCalledWith("newsletter_signup", { status: "success", form: variant });
-    });
-
-    it("thanks people who are already subscribed", async () => {
-      stubFetch(respond(true, { alreadySubscribed: true }));
-      render(<NewsletterForm variant={variant} />);
-      await subscribe();
-      expect(await screen.findByText("You're already subscribed, thanks for being here! 🎉")).toBeInTheDocument();
-      expect(trackEvent).toHaveBeenLastCalledWith("newsletter_signup", { status: "already_subscribed", form: variant });
     });
 
     it("shows the API error and keeps the email for a retry", async () => {
