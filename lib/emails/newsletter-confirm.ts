@@ -10,6 +10,7 @@ const color = {
   navy700: "#344a50",
   navy800: "#2b3e43",
   navy900: "#253137",
+  navy950: "#182126",
   horchata50: "#f9f5f3",
   horchata100: "#f0ebe9",
   horchata200: "#e8e1de",
@@ -58,6 +59,8 @@ function buildHtml(confirmUrl: string): string {
         .heading, .body { color: ${color.horchata100} !important; }
         .muted { color: ${color.horchata400} !important; }
         .link { color: ${color.horchata400} !important; }
+        .cta { background-color: ${color.accentLight} !important; }
+        .cta-link { color: ${color.navy950} !important; }
       }
     </style>
   </head>
@@ -74,8 +77,8 @@ function buildHtml(confirmUrl: string): string {
                 <p class="body" style="margin:0 0 28px;font-size:18px;line-height:28px;color:${color.navy900};">Thanks for signing up! Click the button below to confirm your email and start getting new posts in your inbox.</p>
                 <table role="presentation" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td style="border-radius:12px;background-color:${color.horchata600};">
-                      <a href="${url}" style="display:inline-block;padding:14px 28px;font-family:${FONT_STACK};font-size:18px;line-height:24px;font-weight:700;color:${color.white};text-decoration:none;border-radius:12px;">Confirm subscription</a>
+                    <td class="cta" style="border-radius:12px;background-color:${color.horchata600};">
+                      <a class="cta-link" href="${url}" style="display:inline-block;padding:14px 28px;font-family:${FONT_STACK};font-size:18px;line-height:24px;font-weight:700;color:${color.white};text-decoration:none;border-radius:12px;">Confirm subscription</a>
                     </td>
                   </tr>
                 </table>
