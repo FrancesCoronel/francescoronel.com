@@ -5,6 +5,8 @@ import { buildMetadata } from "@/lib/metadata";
 import { PageHeader } from "@/components/ui/page-header";
 import { ConnectCTA } from "@/components/sections/connect-cta";
 import { BookingParamsScrub, GoogleAdsTag, googleAdsTagEnabled } from "@/components/layout/google-ads-tag";
+import { buttonClasses } from "@/components/ui/button";
+import { SectionHeader } from "@/components/ui/section-header";
 
 // Where cal.com (and the payment provider) send people once a mentoring session is
 // booked and paid for. Only reachable from that redirect, so it stays out of search
@@ -61,7 +63,7 @@ export default function MentoringThankYouPage() {
         <div className="mt-8 flex flex-wrap gap-4">
           <Link
             href="/mentoring"
-            className="rounded-full bg-horchata-700 px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-horchata-800 dark:bg-horchata-500 dark:text-navy-900 dark:hover:bg-horchata-400"
+            className={buttonClasses({ size: "lg" })}
           >
             Back to Mentoring <span aria-hidden="true">&rarr;</span>
           </Link>
@@ -77,17 +79,12 @@ export default function MentoringThankYouPage() {
       {/* What happens next — dark */}
       <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-            Next Steps
-          </p>
-          <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
-            What Happens Next 🗓️
-          </h2>
+          <SectionHeader label="Next Steps" title="What Happens Next 🗓️" size="md" />
           <ol className="mt-10 grid gap-6 md:grid-cols-3">
             {nextSteps.map((step) => (
               <li
                 key={step.title}
-                className="rounded-2xl border border-horchata-200 bg-white p-6 dark:border-navy-700 dark:bg-navy-800"
+                className="rounded-2xl border border-line bg-surface-raised p-6"
               >
                 <span className="text-2xl leading-none" aria-hidden="true">
                   {step.emoji}

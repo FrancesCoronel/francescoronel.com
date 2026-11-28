@@ -157,9 +157,9 @@ describe("other MDX components", () => {
 
   it("styles Callout by type, defaulting to info", () => {
     const Callout = c.Callout;
-    expect(html(<Callout>note</Callout>)).toContain("border-blue-400");
-    expect(html(<Callout type="warning">careful</Callout>)).toContain("border-amber-400");
-    expect(html(<Callout type="tip">hint</Callout>)).toContain("border-green-400");
+    expect(html(<Callout>note</Callout>)).toContain("border-info");
+    expect(html(<Callout type="warning">careful</Callout>)).toContain("border-warning");
+    expect(html(<Callout type="tip">hint</Callout>)).toContain("border-success");
     expect(html(<Callout>note</Callout>)).toContain(">note</div>");
   });
 

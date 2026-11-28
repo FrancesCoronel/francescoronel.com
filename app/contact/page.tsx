@@ -6,6 +6,7 @@ import { ContactForm } from "@/components/ui/contact-form";
 import { PageHeader } from "@/components/ui/page-header";
 import { getAllBlogPosts, getBlogPostsByCategory, getAwards, getTestimonials } from "@/lib/content";
 import mentoringData from "@/content/mentoring-sessions.json";
+import { SectionHeader } from "@/components/ui/section-header";
 
 export const metadata: Metadata = buildMetadata({
   title: "Contact",
@@ -58,19 +59,14 @@ export default function ContactPage() {
       <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
           <div className="mb-10 text-center">
-            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-              By the Numbers
-            </p>
-            <h2 className="mt-1 text-xl font-bold text-navy-900 dark:text-horchata-100 sm:text-3xl">
-              Impact at a Glance 📊
-            </h2>
+            <SectionHeader label="By the Numbers" title="Impact at a Glance 📊" />
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {stats.map(({ stat, label, sublabel, icon, href }) => (
               <Link
                 key={label}
                 href={href}
-                className="group flex items-center gap-5 rounded-2xl border border-horchata-200 bg-white px-6 py-5 transition-all hover:border-horchata-400 hover:shadow-md dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
+                className="group flex items-center gap-5 rounded-2xl border border-line bg-surface-raised px-6 py-5 transition-all hover:border-horchata-400 hover:shadow-md dark:hover:border-navy-500"
               >
                 <span className="text-3xl" aria-hidden="true">{icon}</span>
                 <div className="min-w-0">

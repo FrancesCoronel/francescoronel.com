@@ -6,6 +6,8 @@ import Link from "next/link";
 import type { Project } from "@/lib/types";
 import { formatDateRange } from "@/lib/utils";
 import { PaginationNav } from "./pagination-nav";
+import { SectionHeader } from "@/components/ui/section-header";
+import { Badge } from "@/components/ui/badge";
 
 const PAGE_SIZE = 12;
 
@@ -18,9 +20,9 @@ const CATEGORY_LABELS: Record<string, string> = {
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
-  "open-source": "text-emerald-600 dark:text-emerald-400",
-  "podcast": "text-violet-600 dark:text-violet-400",
-  "hackathon": "text-sky-600 dark:text-sky-400",
+  "open-source": "text-success",
+  "podcast": "text-warning",
+  "hackathon": "text-info",
   "work-project": "text-horchata-700 dark:text-horchata-400",
   "side-project": "text-horchata-700 dark:text-horchata-400",
 };
@@ -80,9 +82,9 @@ function ProjectCard({
             {project.title}
           </h2>
           {project.status === "active" && (
-            <span className="shrink-0 rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">
+            <Badge tone="success" className="shrink-0">
               Active
-            </span>
+            </Badge>
           )}
         </div>
 
@@ -138,9 +140,9 @@ function FeaturedProjectRow({
             {project.title}
           </h2>
           {project.status === "active" && (
-            <span className="shrink-0 rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">
+            <Badge tone="success" className="shrink-0">
               Active
-            </span>
+            </Badge>
           )}
         </div>
         <p className={`mt-0.5 text-xs font-medium ${categoryColor}`}>
@@ -245,7 +247,7 @@ export function ProjectsGridClient({
             {skillFilter && (
               <button
                 onClick={handleSkillClear}
-                className="flex items-center gap-1.5 rounded-full bg-horchata-700 px-3.5 py-1.5 text-sm font-medium text-white dark:bg-horchata-500 dark:text-navy-900"
+                className="flex items-center gap-1.5 rounded-full bg-horchata-700 px-3.5 py-1.5 text-sm font-medium text-white dark:bg-accent-light dark:text-navy-950"
               >
                 {skillFilter}
                 <svg className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
@@ -302,12 +304,7 @@ export function ProjectsGridClient({
           {featured.length > 0 && (
             <section className="bg-horchata-50 py-16 md:py-20 dark:bg-navy-900">
               <div className="mx-auto max-w-[var(--container-max)] px-6">
-                <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
-                  Pinned
-                </p>
-                <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
-                  Featured Projects ⭐
-                </h2>
+                <SectionHeader label="Pinned" title="Featured Projects ⭐" size="sm" />
                 <div className="mt-4">
                   {featured.map((project) => (
                     <FeaturedProjectRow
@@ -325,12 +322,7 @@ export function ProjectsGridClient({
             <div className="mx-auto max-w-[var(--container-max)] px-6">
               {featured.length > 0 && (
                 <>
-                  <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-horchata-500">
-                    All Work
-                  </p>
-                  <h2 className="mt-1 mb-4 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
-                    All Projects 🛠️
-                  </h2>
+                  <SectionHeader label="All Work" title="All Projects 🛠️" size="sm" className="mb-4" />
                   <p className="mb-10 text-sm text-navy-600 dark:text-white/60">
                     {rest.length} projects
                     {restTotalPages > 1 && ` · page ${restPage} of ${restTotalPages}`}

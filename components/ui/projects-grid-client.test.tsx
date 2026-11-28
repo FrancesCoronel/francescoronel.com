@@ -73,7 +73,7 @@ describe("ProjectsGridClient", () => {
     expect(screen.getByRole("link", { name: "Featured A" })).toHaveAttribute("href", "/posts/featured-a");
     expect(within(a).getByRole("img", { name: "Featured A" })).toBeInTheDocument();
     expect(within(a).getByText("Active")).toBeInTheDocument();
-    expect(within(a).getByText("Open Source")).toHaveClass("text-emerald-600");
+    expect(within(a).getByText("Open Source")).toHaveClass("text-success");
     expect(within(a).getByText("Jan 2020 – Present")).toBeInTheDocument();
     expect(within(a).getByText("1,234")).toBeInTheDocument();
 
@@ -88,7 +88,7 @@ describe("ProjectsGridClient", () => {
     const hack = card("Hack Day");
     expect(within(hack).getByText("⚡")).toBeInTheDocument();
     expect(within(hack).getByText("Active")).toBeInTheDocument();
-    expect(within(hack).getByText("Hackathon")).toHaveClass("text-sky-600");
+    expect(within(hack).getByText("Hackathon")).toHaveClass("text-info");
     expect(within(hack).getByText("42")).toBeInTheDocument();
     expect(within(hack).getByText("Jan 2020 – Jun 2021")).toBeInTheDocument();
 

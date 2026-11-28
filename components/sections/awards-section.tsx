@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { formatDate } from "@/lib/utils";
+import { SectionHeader } from "@/components/ui/section-header";
 
 interface Award {
   slug: string;
@@ -84,12 +85,7 @@ export function AwardsSection({ awards, blogPostMap = {} }: AwardsSectionProps) 
   return (
     <section className="py-16 md:py-20">
       <div className="mx-auto max-w-[var(--container-max)] px-6">
-        <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-          Recognition
-        </p>
-        <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
-          Awards 🏆
-        </h2>
+        <SectionHeader label="Recognition" title="Awards 🏆" size="md" />
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {awards.map((award) => (
             <AwardCard

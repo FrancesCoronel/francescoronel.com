@@ -46,7 +46,7 @@ export function ActionCards({ cards = defaultCards }: ActionCardsProps) {
         <Link
           key={cta.label}
           href={cta.href}
-          className="group flex flex-col items-center gap-3 rounded-2xl border border-horchata-200 bg-white px-4 py-4 text-center transition-all hover:border-horchata-400 hover:shadow-md sm:flex-row sm:items-center sm:gap-4 sm:px-6 sm:py-5 sm:text-left dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
+          className="group flex flex-col items-center gap-3 rounded-2xl border border-line bg-surface-raised px-4 py-4 text-center transition-all hover:border-horchata-400 hover:shadow-md sm:flex-row sm:items-center sm:gap-4 sm:px-6 sm:py-5 sm:text-left dark:hover:border-navy-500"
         >
           <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center sm:h-24 sm:w-24">
             <Image

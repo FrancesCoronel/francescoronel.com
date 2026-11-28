@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/metadata";
 import { ConnectCTA } from "@/components/sections/connect-cta";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = buildMetadata({
   title: "Design System",
@@ -9,36 +11,60 @@ export const metadata: Metadata = buildMetadata({
   path: "/design-system",
 });
 
+// Keep in sync with @theme in app/globals.css
 const navyColors = [
-  { name: "navy-50", hex: "#f0f1f5" },
-  { name: "navy-100", hex: "#d9dce6" },
-  { name: "navy-200", hex: "#b3b9cd" },
-  { name: "navy-300", hex: "#8d96b4" },
-  { name: "navy-400", hex: "#67739b" },
-  { name: "navy-500", hex: "#4a5578" },
-  { name: "navy-600", hex: "#3b4461" },
-  { name: "navy-700", hex: "#2c334a" },
-  { name: "navy-800", hex: "#1e2233" },
-  { name: "navy-900", hex: "#141726" },
-  { name: "navy-950", hex: "#0b0d17" },
+  { name: "navy-50", hex: "#f1f4f5" },
+  { name: "navy-100", hex: "#e1e7ea" },
+  { name: "navy-200", hex: "#c3d0d5" },
+  { name: "navy-300", hex: "#9db3bb" },
+  { name: "navy-400", hex: "#7897a1" },
+  { name: "navy-500", hex: "#557880" },
+  { name: "navy-600", hex: "#415c63" },
+  { name: "navy-700", hex: "#344a50" },
+  { name: "navy-800", hex: "#2b3e43" },
+  { name: "navy-900", hex: "#253137" },
+  { name: "navy-950", hex: "#182126" },
 ];
 
 const horchatColors = [
-  { name: "horchata-50", hex: "#fdf8f3" },
-  { name: "horchata-100", hex: "#f9ede0" },
-  { name: "horchata-200", hex: "#f3dbc1" },
-  { name: "horchata-300", hex: "#ecc9a2" },
-  { name: "horchata-400", hex: "#e5b783" },
-  { name: "horchata-500", hex: "#dfa564" },
-  { name: "horchata-600", hex: "#c98e4e" },
-  { name: "horchata-700", hex: "#a6743f" },
-  { name: "horchata-800", hex: "#835b31" },
-  { name: "horchata-900", hex: "#604223" },
-  { name: "horchata-950", hex: "#3d2a16" },
+  { name: "horchata-50", hex: "#f9f5f3" },
+  { name: "horchata-100", hex: "#f0ebe9" },
+  { name: "horchata-200", hex: "#e8e1de" },
+  { name: "horchata-300", hex: "#e1d7d3" },
+  { name: "horchata-400", hex: "#dacec8" },
+  { name: "horchata-500", hex: "#c7b8b1" },
+  { name: "horchata-600", hex: "#b8352d" },
+  { name: "horchata-700", hex: "#9e2b25" },
+  { name: "horchata-800", hex: "#7a1e1a" },
+  { name: "horchata-900", hex: "#591512" },
+  { name: "horchata-950", hex: "#38090a" },
+];
+
+// Semantic colors flip with the theme, so each swatch is drawn with the live token
+const semanticColors = [
+  { name: "surface", swatch: "bg-surface", light: "horchata-50", dark: "navy-900", usage: "Page background" },
+  { name: "surface-muted", swatch: "bg-surface-muted", light: "horchata-100", dark: "navy-950", usage: "Alternating sections" },
+  { name: "surface-raised", swatch: "bg-surface-raised", light: "white", dark: "navy-800", usage: "Cards" },
+  { name: "ink", swatch: "bg-ink", light: "navy-900", dark: "horchata-100", usage: "Headings and body text" },
+  { name: "ink-muted", swatch: "bg-ink-muted", light: "navy-600", dark: "horchata-300", usage: "Secondary text" },
+  { name: "line", swatch: "bg-line", light: "horchata-200", dark: "navy-700", usage: "Borders and dividers" },
+  { name: "brand", swatch: "bg-brand", light: "accent #9e2b25", dark: "accent-light #f0b0a8", usage: "Links and section labels" },
+  { name: "brand-fill", swatch: "bg-brand-fill", light: "accent #9e2b25", dark: "accent-light #f0b0a8", usage: "Primary buttons" },
+  { name: "on-brand", swatch: "bg-on-brand", light: "white", dark: "navy-950", usage: "Text on primary buttons" },
+];
+
+// Status colors: a text color plus a -soft background, each flipping with the theme.
+// They are also the three category hues (open source, hackathon, podcast)
+const statusColors = [
+  { name: "success", pill: "bg-success-soft text-success", light: "#2e6b45 on #e2efe4", dark: "#9fd4ae on #1f3d2c", usage: "Active, tips, open source" },
+  { name: "info", pill: "bg-info-soft text-info", light: "#2d5f73 on #dfecf1", dark: "#a3cfde on #1c3a45", usage: "Notes, hackathons" },
+  { name: "warning", pill: "bg-warning-soft text-warning", light: "#8a5410 on #f7ead2", dark: "#efc685 on #45361a", usage: "Cautions, podcasts" },
+  { name: "danger", pill: "bg-danger-soft text-danger", light: "#9e2b25 on #f8e3e0", dark: "#f0b0a8 on #4a2421", usage: "Errors, required fields" },
 ];
 
 const typographyScale = [
-  { name: "text-xs", size: "20px (1.25rem)", lineHeight: "28px", usage: "Dates, meta, badges (floor)" },
+  { name: "text-2xs", size: "16px (1rem)", lineHeight: "24px", usage: "Small pill badges only (status, category)" },
+  { name: "text-xs", size: "20px (1.25rem)", lineHeight: "28px", usage: "Dates, meta (floor)" },
   { name: "text-sm", size: "20px (1.25rem)", lineHeight: "28px", usage: "Card body, captions (floor)" },
   { name: "text-base", size: "22px (1.375rem)", lineHeight: "32px", usage: "Standard body text" },
   { name: "text-lg", size: "28px (1.75rem)", lineHeight: "36px", usage: "Card titles, sub-headings" },
@@ -47,6 +73,8 @@ const typographyScale = [
   { name: "text-3xl", size: "46px (2.875rem)", lineHeight: "54px", usage: "Page titles" },
   { name: "text-4xl", size: "56px (3.5rem)", lineHeight: "64px", usage: "Hero headings" },
   { name: "text-5xl", size: "68px (4.25rem)", lineHeight: "76px", usage: "Large hero text" },
+  { name: "text-6xl", size: "72px (4.5rem)", lineHeight: "80px", usage: "Hero heading, laptops" },
+  { name: "text-7xl", size: "76px (4.75rem)", lineHeight: "84px", usage: "Hero heading, wide screens" },
 ];
 
 function ColorSwatch({ name, hex }: { name: string; hex: string }) {
@@ -108,10 +136,10 @@ export default function DesignSystemPage() {
 
           {/* Navy */}
           <h3 className="mt-10 text-xl font-bold text-navy-900 dark:text-horchata-100">
-            Navy (Primary)
+            Navy (Teal Charcoal)
           </h3>
           <p className="mt-2 text-sm text-navy-600 dark:text-white/70">
-            Dark blues used for text, backgrounds, and elevated surfaces.
+            Teal charcoal for text, dark mode backgrounds, and elevated surfaces.
           </p>
           <div className="mt-6 grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-11">
             {navyColors.map((c) => (
@@ -121,11 +149,13 @@ export default function DesignSystemPage() {
 
           {/* Horchata */}
           <h3 className="mt-14 text-xl font-bold text-navy-900 dark:text-horchata-100">
-            Horchata (Accent)
+            Horchata (Linen + Brick Red)
           </h3>
           <p className="mt-2 text-sm text-navy-600 dark:text-white/70">
-            Warm beige and tan tones for accents, highlights, and interactive
-            elements.
+            Linen neutrals (50 to 500) for warm backgrounds and borders, then
+            one brick red hue (600 to 950) for the accent. The accent is
+            horchata-700 (#9e2b25) in light mode and accent-light (#f0b0a8) in
+            dark mode.
           </p>
           <div className="mt-6 grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-11">
             {horchatColors.map((c) => (
@@ -135,36 +165,51 @@ export default function DesignSystemPage() {
 
           {/* Semantic */}
           <h3 className="mt-14 text-xl font-bold text-navy-900 dark:text-horchata-100">
-            Semantic Usage
+            Semantic Tokens
           </h3>
+          <p className="mt-2 text-sm text-navy-600 dark:text-white/70">
+            These switch values in dark mode on their own, so{" "}
+            <code>bg-surface-raised text-ink border-line</code> needs no{" "}
+            <code>dark:</code> pair. Toggle the theme to see them change.
+          </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800">
-              <div className="h-10 w-10 rounded-lg bg-horchata-50 dark:bg-navy-900" />
-              <p className="mt-3 font-medium text-navy-900 dark:text-horchata-100">
-                Light Background
-              </p>
-              <p className="text-sm text-navy-600 dark:text-horchata-400">
-                horchata-50 / navy-900
-              </p>
-            </div>
-            <div className="rounded-xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800">
-              <div className="h-10 w-10 rounded-lg bg-navy-900 dark:bg-navy-950" />
-              <p className="mt-3 font-medium text-navy-900 dark:text-horchata-100">
-                Dark Section
-              </p>
-              <p className="text-sm text-navy-600 dark:text-horchata-400">
-                navy-900 / navy-950
-              </p>
-            </div>
-            <div className="rounded-xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800">
-              <div className="h-10 w-10 rounded-lg bg-horchata-400" />
-              <p className="mt-3 font-medium text-navy-900 dark:text-horchata-100">
-                Accent
-              </p>
-              <p className="text-sm text-navy-600 dark:text-horchata-400">
-                horchata-400 (#e5b783)
-              </p>
-            </div>
+            {semanticColors.map((c) => (
+              <div
+                key={c.name}
+                className="rounded-xl border border-line bg-surface-raised p-5"
+              >
+                <div className={`h-10 w-10 rounded-lg border border-line ${c.swatch}`} />
+                <p className="mt-3 font-medium text-ink">{c.name}</p>
+                <p className="text-sm text-ink-muted">{c.usage}</p>
+                <p className="text-sm text-ink-muted">
+                  {c.light} / {c.dark}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Status */}
+          <h3 className="mt-14 text-xl font-bold text-navy-900 dark:text-horchata-100">
+            Status Colors
+          </h3>
+          <p className="mt-2 text-sm text-navy-600 dark:text-white/70">
+            Pair each text color with its soft background, like{" "}
+            <code>bg-success-soft text-success</code>. They also flip with the theme.
+          </p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {statusColors.map((c) => (
+              <div
+                key={c.name}
+                className="rounded-xl border border-line bg-surface-raised p-5"
+              >
+                <span className={`rounded-full px-2 py-0.5 text-2xs font-semibold ${c.pill}`}>
+                  {c.name}
+                </span>
+                <p className="mt-3 text-sm text-ink-muted">{c.usage}</p>
+                <p className="text-sm text-ink-muted">Light: {c.light}</p>
+                <p className="text-sm text-ink-muted">Dark: {c.dark}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -247,14 +292,14 @@ export default function DesignSystemPage() {
             {typographyScale.map((t) => (
               <div
                 key={t.name}
-                className="flex items-center gap-6 p-4"
+                className="flex flex-wrap items-center gap-x-6 gap-y-1 p-4 sm:flex-nowrap"
               >
-                <div className="w-28 flex-shrink-0">
+                <div className="w-24 flex-shrink-0 sm:w-28">
                   <p className="font-mono text-sm font-medium text-horchata-700 dark:text-horchata-400">
                     {t.name}
                   </p>
                 </div>
-                <div className="w-40 flex-shrink-0">
+                <div className="flex-shrink-0 sm:w-40">
                   <p className="text-sm text-navy-600 dark:text-horchata-400">
                     {t.size}
                   </p>
@@ -263,7 +308,7 @@ export default function DesignSystemPage() {
                   </p>
                 </div>
                 <p
-                  className="flex-1 font-bold text-navy-900 dark:text-horchata-100"
+                  className="min-w-0 basis-full font-bold text-navy-900 dark:text-horchata-100 sm:flex-1 sm:basis-auto"
                   style={{ fontSize: t.size.split(" ")[0] }}
                 >
                   Aa
@@ -339,16 +384,31 @@ export default function DesignSystemPage() {
           <h3 className="mt-10 text-xl font-bold text-navy-900 dark:text-horchata-100">
             Buttons
           </h3>
+          <p className="mt-2 text-sm text-navy-600 dark:text-white/70">
+            <code>{"<Button>"}</code> and <code>{"<ButtonLink>"}</code> from{" "}
+            <code>components/ui/button.tsx</code>, in sizes sm, md and lg.
+          </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
-            <button className="rounded-full bg-navy-900 px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-navy-800 dark:bg-horchata-500 dark:text-navy-900 dark:hover:bg-horchata-400">
-              Primary Button
-            </button>
-            <button className="rounded-full border border-navy-300 px-8 py-3 text-sm font-medium text-navy-900 transition-colors hover:border-navy-400 hover:bg-white dark:border-horchata-600 dark:text-horchata-200 dark:hover:bg-navy-700">
-              Secondary Button
-            </button>
-            <button className="rounded-full bg-horchata-500 px-8 py-3 text-sm font-medium text-navy-900 transition-colors hover:bg-horchata-400">
-              Accent Button
-            </button>
+            <Button size="lg">Primary Button</Button>
+            <Button>Primary, md</Button>
+            <Button size="sm">Primary, sm</Button>
+            <Button variant="secondary" size="lg">Secondary Button</Button>
+          </div>
+
+          {/* Badges */}
+          <h3 className="mt-10 text-xl font-bold text-navy-900 dark:text-horchata-100">
+            Badges
+          </h3>
+          <p className="mt-2 text-sm text-navy-600 dark:text-white/70">
+            <code>{"<Badge tone>"}</code> uses the status colors, plus neutral.
+          </p>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <Badge tone="success">Active</Badge>
+            <Badge tone="info">Hackathon</Badge>
+            <Badge tone="warning">Podcast</Badge>
+            <Badge tone="danger">Error</Badge>
+            <Badge>Side Project</Badge>
+            <Badge tone="success" size="md">Upcoming</Badge>
           </div>
 
           {/* Links */}

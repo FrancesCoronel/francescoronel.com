@@ -6,6 +6,7 @@ import { buildMetadata } from "@/lib/metadata";
 import { PageHeader } from "@/components/ui/page-header";
 import { ConnectCTA } from "@/components/sections/connect-cta";
 import { PostsListClient } from "@/components/ui/posts-list-client";
+import { Badge, CATEGORY_TONES } from "@/components/ui/badge";
 
 export const metadata: Metadata = buildMetadata({
   title: "Portfolio",
@@ -20,14 +21,6 @@ const CATEGORY_LABELS: Record<string, string> = {
   "hackathon": "Hackathon",
   "work-project": "Work Project",
   "side-project": "Side Project",
-};
-
-const CATEGORY_COLORS: Record<string, string> = {
-  "open-source": "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400",
-  "podcast": "bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-400",
-  "hackathon": "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-400",
-  "work-project": "bg-horchata-100 text-horchata-700 dark:bg-navy-700 dark:text-horchata-300",
-  "side-project": "bg-horchata-100 text-horchata-700 dark:bg-navy-700 dark:text-horchata-300",
 };
 
 const CATEGORY_HERO_BG: Record<string, string> = {
@@ -94,7 +87,7 @@ export default function PortfolioPage() {
               <Link
                 key={project.slug}
                 href={`/posts/${project.slug}`}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-horchata-200 bg-white transition-shadow hover:shadow-lg dark:border-navy-700 dark:bg-navy-800"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-surface-raised transition-shadow hover:shadow-lg"
               >
                 {/* Featured image */}
                 <div
@@ -122,15 +115,13 @@ export default function PortfolioPage() {
                 {/* Card content */}
                 <div className="flex flex-1 flex-col p-5">
                   <div className="flex items-center gap-2">
-                    <span
-                      className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${CATEGORY_COLORS[project.category] ?? CATEGORY_COLORS["side-project"]}`}
-                    >
+                    <Badge tone={CATEGORY_TONES[project.category]} weight="medium">
                       {CATEGORY_LABELS[project.category] ?? project.category}
-                    </span>
+                    </Badge>
                     {project.status === "active" && (
-                      <span className="rounded-full bg-green-100 px-2 py-0.5 text-[10px] font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">
+                      <Badge tone="success" weight="medium">
                         Active
-                      </span>
+                      </Badge>
                     )}
                   </div>
                   <h3 className="mt-3 font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">

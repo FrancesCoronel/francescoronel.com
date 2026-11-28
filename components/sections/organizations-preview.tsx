@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { OrgLogo } from "@/components/ui/org-logo";
+import { SectionHeader } from "@/components/ui/section-header";
 
 interface OrgPreview {
   slug: string;
@@ -22,12 +23,7 @@ export function OrganizationsPreview({
       <div className="mx-auto max-w-[var(--container-max)] px-6">
         <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-              Network
-            </p>
-            <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
-              Organizations 🏢
-            </h2>
+            <SectionHeader label="Network" title="Organizations 🏢" size="sm" />
           </div>
           <Link
             href="/organizations"

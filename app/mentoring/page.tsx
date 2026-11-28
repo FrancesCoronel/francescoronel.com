@@ -90,6 +90,7 @@ const expertiseAreas = [
 ];
 
 import mentoringData from "@/content/mentoring-sessions.json";
+import { SectionHeader } from "@/components/ui/section-header";
 
 export default function MentoringPage() {
   const { totalSessions, totalHours } = (mentoringData as { _meta: { totalSessions: number; totalHours: number } })._meta;
@@ -163,7 +164,7 @@ export default function MentoringPage() {
                 }`}
               >
                 {tier.featured && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-horchata-700 px-4 py-1 text-xs font-bold text-white shadow-md dark:bg-horchata-500 dark:text-navy-900">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-horchata-700 px-4 py-1 text-xs font-bold text-white shadow-md dark:bg-accent-light dark:text-navy-950">
                     Most Popular
                   </span>
                 )}
@@ -190,12 +191,7 @@ export default function MentoringPage() {
       {/* Calendar Embed — light */}
       <section className="bg-horchata-50 py-16 dark:bg-navy-900">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-            Availability
-          </p>
-          <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
-            Book a Session 📅
-          </h2>
+          <SectionHeader label="Availability" title="Book a Session 📅" size="md" />
           <div className="mt-8">
             <CalEmbed />
           </div>
@@ -241,12 +237,7 @@ export default function MentoringPage() {
       {/* Topic Expertise — light */}
       <section className="bg-horchata-50 py-16 md:py-20 dark:bg-navy-900">
         <div className="mx-auto max-w-[var(--container-max)] px-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-            Topics
-          </p>
-          <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
-            Areas of Expertise 🎯
-          </h2>
+          <SectionHeader label="Topics" title="Areas of Expertise 🎯" size="md" />
           <div className="mt-10 grid gap-6 md:gap-8 md:grid-cols-3">
             {expertiseAreas.map((area) => (
               <div key={area.title}>

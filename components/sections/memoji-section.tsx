@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SectionHeader } from "@/components/ui/section-header";
 
 interface Memoji {
   src: string;
@@ -28,12 +29,7 @@ export function MemojiSection({ memojis = defaultMemojis }: MemojiSectionProps) 
     <section className="border-y border-horchata-200 bg-horchata-100 py-16 md:py-20 dark:border-navy-700 dark:bg-navy-950">
       <div className="mx-auto max-w-[var(--container-max)] px-6">
         <div className="mb-10 text-center">
-          <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-            My Memoji
-          </p>
-          <h2 className="mt-1 text-lg font-bold text-navy-900 dark:text-horchata-100 sm:text-2xl">
-            Many Moods of Frances 🎭
-          </h2>
+          <SectionHeader label="My Memoji" title="Many Moods of Frances 🎭" size="sm" />
         </div>
         <div className="grid grid-cols-2 place-items-center gap-4 pb-8 sm:grid-cols-3 md:grid-cols-5 md:gap-6">
           {memojis.map((memoji) => (

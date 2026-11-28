@@ -16,7 +16,7 @@ export function TestimonialCard({
   return (
     <Link
       href={`/testimonials/${testimonial.slug}`}
-      className="group flex flex-col rounded-2xl border border-horchata-200 bg-white p-6 transition-all hover:border-horchata-400 hover:shadow-lg dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
+      className="group flex flex-col rounded-2xl border border-line bg-surface-raised p-6 transition-all hover:border-horchata-400 hover:shadow-lg dark:hover:border-navy-500"
     >
       <p className="flex-1 text-sm italic leading-relaxed text-navy-700 dark:text-horchata-200">
         &ldquo;{displayQuote}&rdquo;

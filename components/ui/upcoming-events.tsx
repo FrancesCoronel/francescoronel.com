@@ -1,4 +1,6 @@
 "use client";
+import { SectionHeader } from "@/components/ui/section-header";
+import { Badge } from "@/components/ui/badge";
 
 interface UpcomingEvent {
   org: string;
@@ -36,12 +38,7 @@ export function UpcomingEvents({ events }: UpcomingEventsProps) {
       <div className="mx-auto max-w-[var(--container-max)] px-6">
         {upcoming.length > 0 && (
           <>
-            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-              Upcoming
-            </p>
-            <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
-              Next Up 📅
-            </h2>
+            <SectionHeader label="Upcoming" title="Next Up 📅" size="md" />
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {upcoming.map((event) => (
                 <a
@@ -52,9 +49,9 @@ export function UpcomingEvents({ events }: UpcomingEventsProps) {
                   className="group flex flex-col rounded-2xl border border-horchata-300 bg-white p-5 transition-all hover:border-horchata-500 hover:shadow-lg dark:border-navy-600 dark:bg-navy-800 dark:hover:border-navy-500"
                 >
                   <div className="flex items-center gap-2">
-                    <span className="rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">
+                    <Badge tone="success" size="md" weight="medium">
                       Upcoming
-                    </span>
+                    </Badge>
                     <span className="text-xs text-navy-600 dark:text-white/60">{event.org}</span>
                   </div>
                   <p className="mt-3 font-bold text-navy-900 group-hover:text-horchata-700 dark:text-horchata-100">
@@ -96,12 +93,7 @@ export function UpcomingEvents({ events }: UpcomingEventsProps) {
           <div className={upcoming.length > 0 ? "mt-10" : ""}>
             {upcoming.length === 0 && (
               <>
-                <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-                  Upcoming
-                </p>
-                <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
-                  Next Up 📅
-                </h2>
+                <SectionHeader label="Upcoming" title="Next Up 📅" size="md" />
               </>
             )}
             <p className={`text-sm font-semibold text-navy-600 dark:text-horchata-400 ${upcoming.length > 0 ? "mt-6 mb-3" : "mt-4 mb-3"}`}>

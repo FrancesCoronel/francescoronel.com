@@ -14,6 +14,7 @@ import { PageHeader } from "@/components/ui/page-header";
 import { buildMetadata } from "@/lib/metadata";
 import { ConnectCTA } from "@/components/sections/connect-cta";
 import { NewsletterCTA } from "@/components/sections/newsletter-cta";
+import { SectionHeader } from "@/components/ui/section-header";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -84,18 +85,13 @@ export default async function TagPage({ params }: PageProps) {
           }
         >
           <div className="mx-auto max-w-[var(--container-max)] px-6">
-            <p className="text-sm font-bold uppercase tracking-widest text-horchata-700 dark:text-accent-light">
-              Experience
-            </p>
-            <h2 className="mt-1 text-2xl font-bold text-navy-900 dark:text-horchata-100">
-              Where I Used It 💼
-            </h2>
+            <SectionHeader label="Experience" title="Where I Used It 💼" size="md" />
             <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {roles.map((role) => (
                 <li key={role.slug}>
                   <Link
                     href={`/experience/${role.slug}`}
-                    className="block h-full rounded-2xl border border-horchata-200 bg-white p-5 transition-colors hover:border-horchata-400 dark:border-navy-700 dark:bg-navy-800 dark:hover:border-navy-500"
+                    className="block h-full rounded-2xl border border-line bg-surface-raised p-5 transition-colors hover:border-horchata-400 dark:hover:border-navy-500"
                   >
                     <p className="font-bold text-navy-900 dark:text-horchata-100">{role.title}</p>
                     <p className="mt-1 text-sm text-navy-700 dark:text-horchata-300">{role.company}</p>
