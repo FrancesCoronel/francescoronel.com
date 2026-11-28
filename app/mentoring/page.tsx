@@ -163,7 +163,7 @@ export default function MentoringPage() {
                 }`}
               >
                 {tier.featured && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-horchata-700 px-4 py-1 text-xs font-bold text-white shadow-md dark:bg-horchata-500 dark:text-navy-900">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-horchata-700 px-4 py-1 text-xs font-bold text-white shadow-md dark:bg-accent-light dark:text-navy-950">
                     Most Popular
                   </span>
                 )}

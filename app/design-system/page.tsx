@@ -9,32 +9,46 @@ export const metadata: Metadata = buildMetadata({
   path: "/design-system",
 });
 
+// Keep in sync with @theme in app/globals.css
 const navyColors = [
-  { name: "navy-50", hex: "#f0f1f5" },
-  { name: "navy-100", hex: "#d9dce6" },
-  { name: "navy-200", hex: "#b3b9cd" },
-  { name: "navy-300", hex: "#8d96b4" },
-  { name: "navy-400", hex: "#67739b" },
-  { name: "navy-500", hex: "#4a5578" },
-  { name: "navy-600", hex: "#3b4461" },
-  { name: "navy-700", hex: "#2c334a" },
-  { name: "navy-800", hex: "#1e2233" },
-  { name: "navy-900", hex: "#141726" },
-  { name: "navy-950", hex: "#0b0d17" },
+  { name: "navy-50", hex: "#f1f4f5" },
+  { name: "navy-100", hex: "#e1e7ea" },
+  { name: "navy-200", hex: "#c3d0d5" },
+  { name: "navy-300", hex: "#9db3bb" },
+  { name: "navy-400", hex: "#7897a1" },
+  { name: "navy-500", hex: "#557880" },
+  { name: "navy-600", hex: "#415c63" },
+  { name: "navy-700", hex: "#344a50" },
+  { name: "navy-800", hex: "#2b3e43" },
+  { name: "navy-900", hex: "#253137" },
+  { name: "navy-950", hex: "#182126" },
 ];
 
 const horchatColors = [
-  { name: "horchata-50", hex: "#fdf8f3" },
-  { name: "horchata-100", hex: "#f9ede0" },
-  { name: "horchata-200", hex: "#f3dbc1" },
-  { name: "horchata-300", hex: "#ecc9a2" },
-  { name: "horchata-400", hex: "#e5b783" },
-  { name: "horchata-500", hex: "#dfa564" },
-  { name: "horchata-600", hex: "#c98e4e" },
-  { name: "horchata-700", hex: "#a6743f" },
-  { name: "horchata-800", hex: "#835b31" },
-  { name: "horchata-900", hex: "#604223" },
-  { name: "horchata-950", hex: "#3d2a16" },
+  { name: "horchata-50", hex: "#f9f5f3" },
+  { name: "horchata-100", hex: "#f0ebe9" },
+  { name: "horchata-200", hex: "#e8e1de" },
+  { name: "horchata-300", hex: "#e1d7d3" },
+  { name: "horchata-400", hex: "#dacec8" },
+  { name: "horchata-500", hex: "#c7b8b1" },
+  { name: "horchata-600", hex: "#b8352d" },
+  { name: "horchata-700", hex: "#9e2b25" },
+  { name: "horchata-800", hex: "#7a1e1a" },
+  { name: "horchata-900", hex: "#591512" },
+  { name: "horchata-950", hex: "#38090a" },
+];
+
+// Semantic colors flip with the theme, so each swatch is drawn with the live token
+const semanticColors = [
+  { name: "surface", swatch: "bg-surface", light: "horchata-50", dark: "navy-900", usage: "Page background" },
+  { name: "surface-muted", swatch: "bg-surface-muted", light: "horchata-100", dark: "navy-950", usage: "Alternating sections" },
+  { name: "surface-raised", swatch: "bg-surface-raised", light: "white", dark: "navy-800", usage: "Cards" },
+  { name: "ink", swatch: "bg-ink", light: "navy-900", dark: "horchata-100", usage: "Headings and body text" },
+  { name: "ink-muted", swatch: "bg-ink-muted", light: "navy-600", dark: "horchata-300", usage: "Secondary text" },
+  { name: "line", swatch: "bg-line", light: "horchata-200", dark: "navy-700", usage: "Borders and dividers" },
+  { name: "brand", swatch: "bg-brand", light: "accent #9e2b25", dark: "accent-light #f0b0a8", usage: "Links and section labels" },
+  { name: "brand-fill", swatch: "bg-brand-fill", light: "accent #9e2b25", dark: "accent-light #f0b0a8", usage: "Primary buttons" },
+  { name: "on-brand", swatch: "bg-on-brand", light: "white", dark: "navy-950", usage: "Text on primary buttons" },
 ];
 
 const typographyScale = [
@@ -109,10 +123,10 @@ export default function DesignSystemPage() {
 
           {/* Navy */}
           <h3 className="mt-10 text-xl font-bold text-navy-900 dark:text-horchata-100">
-            Navy (Primary)
+            Navy (Teal Charcoal)
           </h3>
           <p className="mt-2 text-sm text-navy-600 dark:text-white/70">
-            Dark blues used for text, backgrounds, and elevated surfaces.
+            Teal charcoal for text, dark mode backgrounds, and elevated surfaces.
           </p>
           <div className="mt-6 grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-11">
             {navyColors.map((c) => (
@@ -122,11 +136,13 @@ export default function DesignSystemPage() {
 
           {/* Horchata */}
           <h3 className="mt-14 text-xl font-bold text-navy-900 dark:text-horchata-100">
-            Horchata (Accent)
+            Horchata (Linen + Brick Red)
           </h3>
           <p className="mt-2 text-sm text-navy-600 dark:text-white/70">
-            Warm beige and tan tones for accents, highlights, and interactive
-            elements.
+            Linen neutrals (50 to 500) for warm backgrounds and borders, then
+            one brick red hue (600 to 950) for the accent. The accent is
+            horchata-700 (#9e2b25) in light mode and accent-light (#f0b0a8) in
+            dark mode.
           </p>
           <div className="mt-6 grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-11">
             {horchatColors.map((c) => (
@@ -136,36 +152,27 @@ export default function DesignSystemPage() {
 
           {/* Semantic */}
           <h3 className="mt-14 text-xl font-bold text-navy-900 dark:text-horchata-100">
-            Semantic Usage
+            Semantic Tokens
           </h3>
+          <p className="mt-2 text-sm text-navy-600 dark:text-white/70">
+            These switch values in dark mode on their own, so{" "}
+            <code>bg-surface-raised text-ink border-line</code> needs no{" "}
+            <code>dark:</code> pair. Toggle the theme to see them change.
+          </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800">
-              <div className="h-10 w-10 rounded-lg bg-horchata-50 dark:bg-navy-900" />
-              <p className="mt-3 font-medium text-navy-900 dark:text-horchata-100">
-                Light Background
-              </p>
-              <p className="text-sm text-navy-600 dark:text-horchata-400">
-                horchata-50 / navy-900
-              </p>
-            </div>
-            <div className="rounded-xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800">
-              <div className="h-10 w-10 rounded-lg bg-navy-900 dark:bg-navy-950" />
-              <p className="mt-3 font-medium text-navy-900 dark:text-horchata-100">
-                Dark Section
-              </p>
-              <p className="text-sm text-navy-600 dark:text-horchata-400">
-                navy-900 / navy-950
-              </p>
-            </div>
-            <div className="rounded-xl border border-horchata-200 bg-white p-5 dark:border-navy-700 dark:bg-navy-800">
-              <div className="h-10 w-10 rounded-lg bg-horchata-400" />
-              <p className="mt-3 font-medium text-navy-900 dark:text-horchata-100">
-                Accent
-              </p>
-              <p className="text-sm text-navy-600 dark:text-horchata-400">
-                horchata-400 (#e5b783)
-              </p>
-            </div>
+            {semanticColors.map((c) => (
+              <div
+                key={c.name}
+                className="rounded-xl border border-line bg-surface-raised p-5"
+              >
+                <div className={`h-10 w-10 rounded-lg border border-line ${c.swatch}`} />
+                <p className="mt-3 font-medium text-ink">{c.name}</p>
+                <p className="text-sm text-ink-muted">{c.usage}</p>
+                <p className="text-sm text-ink-muted">
+                  {c.light} / {c.dark}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

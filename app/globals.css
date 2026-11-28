@@ -88,24 +88,39 @@
   --color-navy-900: #253137;
   --color-navy-950: #182126;
 
-  /* horchata-* → linen/warm neutrals (50–500) + raspberry accent (600+) */
+  /* horchata-* → linen/warm neutrals (50–500) + brick red accent (600+), one hue (~3°) stepping in lightness */
   --color-horchata-50: #f9f5f3;
   --color-horchata-100: #f0ebe9;
   --color-horchata-200: #e8e1de;
   --color-horchata-300: #e1d7d3;
   --color-horchata-400: #dacec8;
   --color-horchata-500: #c7b8b1;
-  --color-horchata-600: #ca2e55;
+  --color-horchata-600: #b8352d;
   --color-horchata-700: #9e2b25;
   --color-horchata-800: #7a1e1a;
   --color-horchata-900: #591512;
   --color-horchata-950: #38090a;
 
-  --color-accent: #ca2e55;
-  --color-accent-dark: #9e2b25;
-  /* Raspberry tint for dark mode — horchata-600+ all fail AA on navy surfaces.
-     #e7a7b7 hits 4.7:1 on navy-700, 5.7:1 on navy-800, 6.7:1 on navy-900, 8.3:1 on navy-950 */
-  --color-accent-light: #e7a7b7;
+  /* Accent — brick red, the one accent hue (links, labels, primary buttons) */
+  --color-accent: #9e2b25;      /* = horchata-700; 6.9:1 on horchata-50, 7.4:1 under white text */
+  --color-accent-dark: #7a1e1a; /* = horchata-800, hover */
+  /* Brick tint for dark mode — horchata-600+ all fail AA on navy surfaces.
+     #f0b0a8 hits 5.1:1 on navy-700, 6.1:1 on navy-800, 7.3:1 on navy-900, 8.9:1 on navy-950;
+     navy-950 text on it is 8.9:1, so it also works as the dark mode button fill */
+  --color-accent-light: #f0b0a8;
+  --color-accent-pale: #f5c4bd; /* dark mode button hover */
+
+  /* Semantic colors — they flip with the theme (values in :root and .dark below),
+     so components can use bg-surface / text-ink / border-line without a dark: pair */
+  --color-surface: var(--surface);             /* page background */
+  --color-surface-muted: var(--surface-muted); /* alternating "dark" sections */
+  --color-surface-raised: var(--surface-raised); /* cards */
+  --color-ink: var(--ink);                     /* headings and body text */
+  --color-ink-muted: var(--ink-muted);         /* secondary text */
+  --color-line: var(--line);                   /* borders and dividers */
+  --color-brand: var(--brand);                 /* accent text: links, section labels */
+  --color-brand-fill: var(--brand-fill);       /* primary button background */
+  --color-on-brand: var(--on-brand);           /* text on a brand-fill button */
 
   /* Typography — Latina Essential for everything */
   --font-latina: "Latina Essential", "Latina Essential Fallback", sans-serif;
@@ -138,18 +153,36 @@
 }
 
 :root {
-  --background: #f6f2f0;
-  --foreground: #253137;
+  --surface: var(--color-horchata-50);
+  --surface-muted: var(--color-horchata-100);
+  --surface-raised: #ffffff;
+  --ink: var(--color-navy-900);
+  --ink-muted: var(--color-navy-600);
+  --line: var(--color-horchata-200);
+  --brand: var(--color-accent);
+  --brand-fill: var(--color-accent);
+  --on-brand: #ffffff;
+
+  /* Older names, kept for the prose styles below */
+  --background: var(--surface);
+  --foreground: var(--ink);
 }
 
 .dark {
-  --background: #253137;
-  --foreground: #f0ebe9;
+  --surface: var(--color-navy-900);
+  --surface-muted: var(--color-navy-950);
+  --surface-raised: var(--color-navy-800);
+  --ink: var(--color-horchata-100);
+  --ink-muted: var(--color-horchata-300);
+  --line: var(--color-navy-700);
+  --brand: var(--color-accent-light);
+  --brand-fill: var(--color-accent-light);
+  --on-brand: var(--color-navy-950);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--surface);
+  color: var(--ink);
   font-family: var(--font-latina);
 }
 

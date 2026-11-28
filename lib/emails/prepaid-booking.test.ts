@@ -29,7 +29,7 @@ describe("prepaidBookingEmail", () => {
 
   it("uses design system colors and has no em dashes", () => {
     const { text, html } = prepaidBookingEmail("Ada");
-    for (const token of ["#f9f5f3", "#253137", "#ca2e55", "#9e2b25"]) expect(html).toContain(token);
+    for (const token of ["#f9f5f3", "#253137", "#9e2b25", "#f0b0a8"]) expect(html).toContain(token);
     expect(html + text).not.toContain("—");
   });
 });

@@ -181,7 +181,7 @@ export default async function PostPage({ params }: PageProps) {
                       href={post.projectUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full bg-horchata-700 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-horchata-800 dark:bg-horchata-500 dark:text-navy-900 dark:hover:bg-horchata-400"
+                      className="inline-flex items-center gap-2 rounded-full bg-horchata-700 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-horchata-800 dark:bg-accent-light dark:text-navy-950 dark:hover:bg-accent-pale"
                     >
                       View Project
                       <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10" /></svg>
